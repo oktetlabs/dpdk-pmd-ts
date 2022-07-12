@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. */
+/**
+
+@defgroup usecases Reliability in Normal Use
+@ingroup dpdk_pmd
+@{
+
+Various usecases that don't belong to other packages
+
+@author Andrew Rybchenko <Andrew.Rybchenko@oktetlabs.ru>
+
+@} usecases
+
+*/

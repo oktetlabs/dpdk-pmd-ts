@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. */
+/**
+
+@defgroup filters Filters
+@ingroup dpdk_pmd
+@{
+
+Test suite intended for testing DPDK PMD filters
+
+@author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
+
+@} filters
+
+*/

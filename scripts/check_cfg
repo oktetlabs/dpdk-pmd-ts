@@ -1,0 +1,191 @@
+#! /bin/bash
+# SPDX-License-Identifier: Apache-2.0
+# (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved.
+#
+# Helper script to check if configuration is busy and occupy it
+#
+# Author: Andrew Rybchenko <Andrew.Rybchenko@oktetlabs.ru>
+#
+
+# Check it item exists
+# $1 - the item
+item_exists() {
+    item -i "$1" >/dev/null 2>&1
+}
+
+# Get item user that occupies it
+# $1 - the item
+# $2 - the name of env var to write item user to
+# $3 - the name of env var to write error description if any
+get_item_user() {
+    if [ "$(dnsdomainname)" = "oktetlabs.ru" ] ; then
+        [ "x$1" != 'x' ] && {
+            local user
+
+            user="$(item -i "$1" 2>&1)" && {
+                [ "x$user" = 'xNOBODY' ] && user='-'
+                [ "x$2" != 'x' ] && eval $2='"$user"'
+            } || {
+                rc=$?
+                [ "x$3" != 'x' ] && eval $3='"$user"'
+            return $rc
+            }
+        }
+    else
+        eval $2='"$USER"'
+        return 0
+    fi
+}
+
+# Set item user (occupy an item)
+# $1 - the item
+# $2 - the user
+# $3 - steal the item if non-empty
+# $4 - the name of env var to write error description if any
+set_item_user() {
+    [ "x$1" != 'x' ] && [ "x$2" != 'x' ] && {
+        local answer
+
+        answer="$(item ${3:+--force} -a set -i "$1" -o "$2" 2>&1)" || {
+            rc=$?
+            [ "x$4" != 'x' ] && eval $4='"$answer"'
+            return $rc
+        }
+    }
+}
+
+# Check one item
+check_item() {
+    local item="$1"
+    local user="$2"
+    local item_user
+    local err
+
+    test -n "${item}" || return 0
+
+    if ! get_item_user "${item}" item_user err; then
+        echo "Error checking the '${item}' configuration: ${err}" >&2
+        return 1
+    fi
+
+    if test "x${item_user}" != 'x-' && test "x${item_user}" != "x${user}" ; then
+        echo "The test configuration '${cfg}' element '${item}' is busy," \
+             "since the item '${item}' is taken by the user '${item_user}'" >&2
+        return 1
+    fi
+
+    return 0
+}
+
+# Check user for a list of items
+check_items() {
+    local user="$1"; shift
+    local item
+
+    for item ; do
+        check_item "${item}" "${user}" || return 1
+    done
+
+    return 0
+}
+
+# Set user for a list of items
+set_items_user() {
+    local user="$1"; shift
+    local steal="$1"; shift
+    local item err
+    local set_items=""
+
+    for item ; do
+        if ! set_item_user "${item}" "${user}" "${steal}" err; then
+            echo "Error taking item '${item}': ${err}" >&2
+            for item in ${set_items} ; do
+                set_item_user "${item}" "-" "" err ||
+                    echo "Cannot free item '${item}': ${err}" >&2
+            done
+            return 1
+        fi
+        set_items="${set_items} ${item}"
+    done
+}
+
+# Get item pair
+cfg_item_pair() {
+    local item="$1"
+
+    item -v -i "${item}" | grep pair- | sed -n '${ s/.*pair-//; p }'
+}
+
+# Build list of items to be booked by the configuration
+cfg_to_book_items() {
+    local cfg="$1"
+    local item="${cfg}"
+
+    echo "${item} $(cfg_item_pair "${item}")"
+}
+
+# Build list of items by the configuration
+cfg_to_check_items() {
+    local cfg="$1"
+    local item="${cfg}"
+    local items
+    local p item_p
+
+    items="$(cfg_to_book_items "${cfg}")"
+
+    if test "${item%-p?}" != "${item}" ; then
+        item="${item%-p?}"
+        items="${items} ${item} $(cfg_item_pair "${item}")"
+    else
+        for p in 0 1 ; do
+            item_p="${item}-p${p}"
+            item_exists "${item_p}" &&
+                items="${items} ${item_p} $(cfg_item_pair "${item_p}")"
+        done
+    fi
+
+    echo "${items}"
+}
+
+# Check item
+# $1 - test configuration name
+check_cfg () {
+    local cfg="$1"
+    local user="$2"
+    local steal="$3"
+    local items
+
+    if ! which item >/dev/null 2>&1 ; then
+        if test "$(dnsdomainname)" = "oktetlabs.ru"; then
+            msg="\"item\" command is not found. Probably, "
+            msg="$msg you need to install oktetlabs-item package"
+            echo $msg >&2
+            return 1
+        fi
+        return 0
+    fi
+
+    # Cut various VF modifiers since parent configuraiton should be checked
+    cfg="${cfg%-vf-vf}"
+    cfg="${cfg%-vf-pf}"
+    cfg="${cfg%-vf}"
+
+    test -n "${user}" || user="$(id -nu)"
+
+    test -n ${steal} \
+        || check_items "${user}" $(cfg_to_check_items "${cfg}") || return 1
+
+    if ! set_items_user "${user}" "${steal}" $(cfg_to_book_items "${cfg}") ; then
+        echo "Cannot take configuration '${cfg}'" >&2
+        return 1
+    fi
+
+    return 0
+}
+
+# Configurations that are not checked
+no_check_cfg=("virtio_tap")
+
+for i in "${no_check_cfg[@]}"; do [ "$i" == "$1" ] && exit 0; done
+
+check_cfg "$@"

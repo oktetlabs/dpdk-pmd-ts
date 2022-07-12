@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<package version="1.0">
+    <description>Representors</description>
+
+    <author mailto="Igor.Romanov@oktetlabs.ru"/>
+
+    <session track_conf="silent" track_conf_handdown="descendants">
+        <!--- @autogroupprefix representors- -->
+
+        <prologue>
+            <script name="rep_prologue"/>
+            <arg name="env" ref="env.peer2peer"/>
+        </prologue>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="hotplug"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.any.eth"/>
+            </arg>
+            <arg name="remove_port" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_port_id">
+                <req id="BROKEN"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.any.eth"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="hw_offload_simulate"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.ethertype"/>
+                <value ref="flow_rule_pattern.ethertype.arp"/>
+                <value ref="flow_rule_pattern.ethertype.pppoed"/>
+                <value ref="flow_rule_pattern.ethertype.pppoes"/>
+                <value ref="flow_rule_pattern.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.ethertype.ip6"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid.inner_vid"/>
+                <value ref="flow_rule_pattern.outer_vid.ip_proto"/>
+                <value ref="flow_rule_pattern.ip_proto"/>
+                <value ref="flow_rule_pattern.ip_proto.icmp4"/>
+                <value ref="flow_rule_pattern.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.ip_proto.tcp"/>
+                <value ref="flow_rule_pattern.3tuple.udp"/>
+                <value ref="flow_rule_pattern.3tuple.udp6"/>
+                <value ref="flow_rule_pattern.5tuple.udp"/>
+                <value ref="flow_rule_pattern.5tuple.udp6"/>
+                <value ref="flow_rule_pattern.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.5tuple.tcp"/>
+            </arg>
+            <arg name="count" type="boolean"/>
+            <arg name="use_dpdk_driver" type="boolean">
+                <value reqs="BROKEN">FALSE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="nb_pkts">
+              <value>3</value>
+            </arg>
+            <arg name="iut_client" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="ovs_decap_hw_offload"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="encap_tunnel_type">
+                <value>VXLAN</value>
+            </arg>
+            <arg name="jump_flow_rule_pattern">
+                <value>{
+                  eth:{
+                    dst-addr plain:'00 0f 53 65 97 12'H,
+                    src-addr plain:'00 0f 53 65 53 40'H,
+                  },
+                  ip4:{
+                    dst-addr plain:'c0 a8 01 02'H,
+                    protocol plain: 17
+                  },
+                  udp:{
+                    dst-port plain:4789
+                  }
+                }</value>
+            </arg>
+            <arg name="decap_flow_rule_pattern">
+                <value>{
+                  ip4:{
+                    dst-addr plain:'c0 a8 01 02'H,
+                    protocol plain: 17
+                  },
+                  udp:{
+                    dst-port plain:4789
+                  },
+                  vxlan:{
+                    vni plain:55
+                  },
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 06'H,
+                    src-addr plain:'00 01 02 03 04 08'H
+                  }
+                }</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>3</value>
+            </arg>
+        </run>
+
+    </session>
+</package>

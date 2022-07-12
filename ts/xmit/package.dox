@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. */
+/**
+
+@defgroup xmit Transmit Functionality
+@ingroup dpdk_pmd
+@{
+
+Test suite intended for testing DPDK PMD transmit functionality regarding
+various aspects (reliability, certain features viability, operational integrity).
+
+This specific suite has super-intensive internal iteration that helps to
+check various permutations of the parameters. So to understand the full scope
+of the testing you will have to look into package.xml
+
+@author Ivan Malov <Ivan.Malov@oktetlabs.ru>
+
+@} xmit
+
+*/

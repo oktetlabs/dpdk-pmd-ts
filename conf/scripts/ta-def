@@ -1,0 +1,24 @@
+#!/bin/bash
+# SPDX-License-Identifier: Apache-2.0
+# (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved.
+export TE_IUT_TA_NAME="DPDK"
+export TE_TST1_TA_NAME="Peer"
+export TE_HYPERVISOR_TA_NAME="Hypervisor"
+export TE_LOG_LISTENER_TA_NAME="LogListener"
+
+# Linux CPU flags to include in the TA signature
+#
+# avx512bw - Intel AVX-256 byte and word instructions
+#
+# bmi2 - Intel 2nd group advanced bit manipulation extensions (BZHI, MULX,
+#        PDEP, PEXT, RORX, SARX, SHLX, SHRX)
+te_signature_field_flags="cpu-flags-avx512bw cpu-flags-bmi2"
+
+export TE_TA_SIGNATURE_FIELDS="gcc-target libc-version kernel-version \
+     ${te_signature_field_flags}"
+
+source "${TE_BASE}"/engine/builder/te_ta_ssh_helper
+
+: ${TS_TEST_AGENTS:=TE_IUT TE_TST1 TE_HYPERVISOR TE_LOG_LISTENER}
+
+te_ta_list_detect_type_with_signature ${TS_TEST_AGENTS}

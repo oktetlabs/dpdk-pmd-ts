@@ -1,0 +1,2353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<test name="perf" type="package">
+  <objective>DPDK PMD Performance</objective>
+  <notes/>
+  <iter result="PASSED">
+    <notes/>
+
+    <test name="perf_prologue" type="script" auxiliary="true">
+      <objective/>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <notes/>
+      </iter>
+    </test>
+
+    <test name="testpmd_loopback" type="script">
+      <objective>Test dpdk-testpmd performance in loopback mode</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_tx_first"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_command_loopback_mode">3</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03|pci-10ee-0100" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_tx_first"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_command_loopback_mode">27</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03|pci-10ee-0100" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_tx_first"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_command_loopback_mode">29</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
+
+    <test name="testpmd_txonly" type="script">
+      <objective>Test dpdk-testpmd performance in Tx only mode</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">60</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">60</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">60</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">60</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">124</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">124</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">124</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">124</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">252</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">252</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">252</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">252</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">508</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">508</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">508</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">508</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1020</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1020</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1020</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1020</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1514</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1514</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1514</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1514</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42,1472</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42,1472</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42,1472</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">42,1472</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">2044</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">2044</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">2044</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">2044</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">4092</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">4092</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">4092</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">4092</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1700,1700,500</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1700,1700,500</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1700,1700,500</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1700,1700,500</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">9014</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">9014</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">9014</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">9014</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1728,1728,1728,1728,1728,374</arg>
+        <arg name="testpmd_arg_txq">1</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1728,1728,1728,1728,1728,374</arg>
+        <arg name="testpmd_arg_txq">2</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1728,1728,1728,1728,1728,374</arg>
+        <arg name="testpmd_arg_txq">4</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">1728,1728,1728,1728,1728,374</arg>
+        <arg name="testpmd_arg_txq">8</arg>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="max_tx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
+    <test name="testpmd_txonly_tso" type="script">
+      <objective>Test dpdk-testpmd performance in Tx only mode with TSO</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">54,1460</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">4096</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not report TSO support">
+          <result value="SKIPPED">
+            <verdict>TSO is not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">54,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">54,2920,2920,2920,2920,2920,2920,2920,2920,2920,2920</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">54,4096,4096,4096,4096,4096,4096,4096,528</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">29254</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not report TSO support">
+          <result value="SKIPPED">
+            <verdict>TSO is not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts">54,4096,4096,4096,4096,4096,4096,4096,4096,4096,4096</arg>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" notes="ef10_simple does not support Tx multi-segment offload">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;22030015">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
+    <test name="testpmd_rxonly" type="script">
+      <objective>Test dpdk-testpmd performance in rxonly mode</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">42</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">42</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">42</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">42</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">60</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">60</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">60</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">60</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">124</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">124</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">124</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">124</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">252</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">252</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">252</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">252</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">508</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">508</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">508</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">508</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1020</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1020</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1020</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1020</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1514</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1514</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1514</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">1514</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">2044</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">2044</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">2044</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">2044</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">4092</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">4092</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">4092</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">4092</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">9014</arg>
+        <arg name="testpmd_arg_rxq">1</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">9014</arg>
+        <arg name="testpmd_arg_rxq">2</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">9014</arg>
+        <arg name="testpmd_arg_rxq">4</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size">9014</arg>
+        <arg name="testpmd_arg_rxq">8</arg>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Required MTU is out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
+
+    <test name="l2fwd_simple" type="script">
+      <objective>Test l2fwd perfomance</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <arg name="n_l2fwd_fwd_cores"/>
+        <arg name="packet_size"/>
+        <notes/>
+      </iter>
+    </test>
+  </iter>
+</test>

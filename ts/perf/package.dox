@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. */
+/**
+
+@defgroup perf Performance
+@ingroup dpdk_pmd
+@{
+
+Test suite intended for testing DPDK PMD Performance
+
+@author Igor Romanov <Igor.Romanov@oktetlabs.ru>
+
+@} perf
+
+*/

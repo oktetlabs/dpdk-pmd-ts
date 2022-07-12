@@ -1,0 +1,1170 @@
+<?xml version="1.0"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<package version="1.0">
+    <description>Transmit Functionality</description>
+
+    <author mailto="Ivan.Malov@oktetlabs.ru"/>
+
+    <session track_conf="silent" track_conf_handdown="descendants">
+        <!--- @autogroupprefix xmit- -->
+        <!--- @defgroup xmit-one_packet_all Iteration details for the package
+            @ingroup xmit
+        @{
+        XMIT package uses intensive iteration that runs a number of tests
+        with external iteration of the parameters. Each @c session below means
+        every run in the session body should be iterated based on the parameters.
+        @code
+        -->
+        <run name="one_packet_all">
+            <session track_conf="silent" track_conf_handdown="descendants">>
+                <enum name="payload_len_pkt">
+                    <value>0</value>
+                    <value>1</value>
+                    <value>10</value>
+                    <value>50</value>
+                    <value>727</value>
+                    <value>999</value>
+                    <value>1400</value>
+                    <value>4000</value>
+                    <value>7787</value>
+                    <value>8900</value>
+                </enum>
+                <enum name="payload_len_tso">
+                    <value>10</value>
+                    <value>727</value>
+                    <value>1400</value>
+                    <value>6000</value>
+                    <value>10023</value>
+                    <value>27334</value>
+                    <value>61437</value>
+                    <value>63000</value>
+                </enum>
+                <enum name="tso_segsz">
+                    <value>177</value>
+                    <value>512</value>
+                    <value>1201</value>
+                    <value>1400</value>
+                    <value>1440</value>
+                    <value>4000</value>
+                    <value>8900</value>
+                </enum>
+                <enum name="encap_tso_segsz">
+                    <value>1367</value>
+                </enum>
+                <!--- @endcode -->
+                <!--- @} -->
+
+                <!--- @autogroup -->
+                <run name="one_packet_tunnel">
+                    <script name="one_packet"/>
+                    <arg name="env">
+                        <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="tmpl">
+                        <value ref="tmpl.iut2tst.vxlan4.tcp4"/>
+                        <value ref="tmpl.iut2tst.geneve4.tcp4"/>
+                        <value ref="tmpl.iut2tst.nvgre4.tcp4"/>
+                    </arg>
+                    <arg name="payload_len">
+                        <value>50</value>
+                    </arg>
+                    <arg name="inner_ip_cksum_offload" type="boolean"/>
+                    <arg name="l4_cksum_offload" type="boolean"/>
+                    <arg name="vlan_id">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="tso_segsz">
+                        <value>0</value>
+                    </arg>
+                    <arg name="segmentation">
+                        <value> </value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="one_packet_ip4">
+                    <session track_conf="silent"
+                        track_conf_handdown="descendants">>
+                        <enum name="segmentation_ip4_pkt">
+                            <value>1*14, 2*20, 1*0xffff</value>
+                            <value>1*14, 1*40, 1*0xffff</value>
+                            <value>1*54, 1*0xffff</value>
+                            <value>1*128, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip4_pkt_many_seg">
+                            <value>0xff*48</value>
+                            <value>0xff*256</value>
+                            <value>0xfe*1, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip4_tso">
+                            <value>1*14, 2*20, 1*0xffff</value>
+                            <value>1*14, 1*40, 1*0xffff</value>
+                            <value>1*54, 1*0xffff</value>
+                            <value>1*128, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip4_tso_many_seg">
+                            <value>1*54, 0xf0*0x256</value>
+                            <value>1*54, 0xf0*0x1024</value>
+                            <value>1*54, 0xf0*0x2048</value>
+                            <value>1*54, 1*57, 0xf0*333</value>
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip4_inner_ip4_tso">
+                            <value>1*50, 1*54, 1*0xffff</value>
+                            <value>1*104, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip4_inner_ip4_tso_many_seg">
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip4_inner_ip6_tso">
+                            <value>1*50, 1*74, 1*0xffff</value>
+                            <value>1*124, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip4_inner_ip6_tso_many_seg">
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <arg name="env"/>
+                        <arg name="vlan_id"/>
+
+                        <run name="one_packet_ip4">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.udp4"/>
+                                    <value ref="tmpl.iut2tst.tcp4"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_pkt"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean"/>
+                                <arg name="l4_cksum_offload" type="boolean"/>
+                                <arg name="tso_segsz">
+                                    <value>0</value>
+                                </arg>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip4_contig">
+                                    <script name="one_packet"/>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip4_seg">
+                                    <script name="one_packet">
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip4_pkt"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip4_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip4_pkt_many_seg"/>
+                                </run>
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip4">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.tcp4_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="tso_segsz"/>
+
+                                <run name="tso_packet_ip4_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip4_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip4_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip4_encap_ip4">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.vxlan4.tcp4_fin_psh_cwr"/>
+                                    <value ref="tmpl.iut2tst.geneve4.tcp4_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="encap_tso_segsz"/>
+
+                                <run name="tso_packet_ip4_encap_ip4_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_encap_ip4_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip4_inner_ip4_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_encap_ip4_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip4_inner_ip4_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip6_encap_ip4">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.vxlan4.tcp6_fin_psh_cwr"/>
+                                    <value ref="tmpl.iut2tst.geneve4.tcp6_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="encap_tso_segsz"/>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip4_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip4_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip4_inner_ip6_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip4_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip4_inner_ip6_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                    </session>
+                    <arg name="env">
+                        <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="vlan_id">
+                        <value>-1</value>
+                        <value reqs="VLAN_INSERT">[1,4094]</value>
+                    </arg>
+                </run>
+
+                <run name="one_packet_ip6">
+                    <session track_conf="silent"
+                        track_conf_handdown="descendants">>
+                        <enum name="segmentation_ip6_pkt">
+                            <value>1*14, 1*40, 1*20, 1*0xffff</value>
+                            <value>1*14, 1*60, 1*0xffff</value>
+                            <value>1*74, 1*0xffff</value>
+                            <value>1*128, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip6_pkt_many_seg">
+                            <value>0xff*48</value>
+                            <value>0xff*256</value>
+                            <value>0xfe*1, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip6_tso">
+                            <value>1*14, 1*40, 1*20, 1*0xffff</value>
+                            <value>1*14, 1*60, 1*0xffff</value>
+                            <value>1*74, 1*0xffff</value>
+                            <value>1*128, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_ip6_tso_many_seg">
+                            <value>1*74, 0xf0*0x256</value>
+                            <value>1*74, 0xf0*0x1024</value>
+                            <value>1*74, 0xf0*0x2048</value>
+                            <value>1*74, 1*57, 0xf0*333</value>
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip6_inner_ip4_tso">
+                            <value>1*70, 1*54, 1*0xffff</value>
+                            <value>1*124, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip6_inner_ip4_tso_many_seg">
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip6_inner_ip6_tso">
+                            <value>1*70, 1*74, 1*0xffff</value>
+                            <value>1*144, 1*0xffff</value>
+                        </enum>
+                        <enum name="segmentation_encap_ip6_inner_ip6_tso_many_seg">
+                            <value>0xff*2048</value>
+                            <value>0xff*411</value>
+                        </enum>
+                        <arg name="env"/>
+                        <arg name="vlan_id"/>
+
+                        <run name="one_packet_ip6">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.udp6"/>
+                                    <value ref="tmpl.iut2tst.tcp6"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_pkt"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>FALSE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean"/>
+                                <arg name="tso_segsz">
+                                    <value>0</value>
+                                </arg>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip6_contig">
+                                    <script name="one_packet"/>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip6_seg">
+                                    <script name="one_packet">
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip6_pkt"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="one_packet_ip6_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip6_pkt_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip6">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.tcp6_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>FALSE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="tso_segsz"/>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip6_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_ip6_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip4_encap_ip6">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.vxlan6.tcp4_fin_psh_cwr"/>
+                                    <value ref="tmpl.iut2tst.geneve6.tcp4_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="encap_tso_segsz"/>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_encap_ip6_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_encap_ip6_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip6_inner_ip4_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip4_encap_ip6_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip6_inner_ip4_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                        <run name="tso_packet_ip6_encap_ip6">
+                            <session track_conf="silent"
+                                track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="vlan_id"/>
+                                <arg name="tmpl">
+                                    <value ref="tmpl.iut2tst.vxlan6.tcp6_fin_psh_cwr"/>
+                                    <value ref="tmpl.iut2tst.geneve6.tcp6_fin_psh_cwr"/>
+                                </arg>
+                                <arg name="payload_len" type="payload_len_tso"/>
+                                <arg name="inner_ip_cksum_offload" type="boolean">
+                                    <value>FALSE</value>
+                                </arg>
+                                <arg name="l4_cksum_offload" type="boolean">
+                                    <value>TRUE</value>
+                                </arg>
+                                <arg name="tso_segsz" type="encap_tso_segsz"/>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip6_contig">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                    </script>
+                                    <arg name="segmentation">
+                                        <value> </value>
+                                    </arg>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip6_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip6_inner_ip6_tso"/>
+                                </run>
+
+                                <!--- @autogroup -->
+                                <run name="tso_packet_ip6_encap_ip6_many_seg">
+                                    <script name="one_packet">
+                                        <req id="TSO"/>
+                                        <req id="TSO_ENCAP"/>
+                                        <req id="TX_MULTI_SEG"/>
+                                    </script>
+                                    <arg name="segmentation"
+                                        type="segmentation_encap_ip6_inner_ip6_tso_many_seg"/>
+                                </run>
+
+                            </session>
+                        </run>
+
+                    </session>
+                    <arg name="env">
+                        <value ref="env.peer2peer_ip6"/>
+                    </arg>
+                    <arg name="vlan_id">
+                        <value>-1</value>
+                        <value reqs="VLAN_INSERT">[1,4094]</value>
+                    </arg>
+                </run>
+            </session>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="alternate_vlan">
+                <req id="VLAN_INSERT"/>
+            </script>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.iut2tst.eth"/>
+                <value ref="tmpl.iut2tst.udp4"/>
+                <value ref="tmpl.iut2tst.tcp4"/>
+            </arg>
+            <arg name="payload_len">
+                <value>103</value>
+                <value>420</value>
+            </arg>
+            <arg name="vlan_id_first" list="vlan_id">
+                <value>-1</value>
+                <value>45</value>
+                <value>45</value>
+                <value>45</value>
+            </arg>
+            <arg name="vlan_id_second" list="vlan_id">
+                <value>45</value>
+                <value>-1</value>
+                <value>239</value>
+                <value>45</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="alternate_vlan">
+                <req id="VLAN_INSERT"/>
+            </script>
+            <arg name="env">
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.iut2tst.udp6"/>
+                <value ref="tmpl.iut2tst.tcp6"/>
+            </arg>
+            <arg name="payload_len">
+                <value>103</value>
+                <value>420</value>
+            </arg>
+            <arg name="vlan_id_first" list="vlan_id">
+                <value>-1</value>
+                <value>45</value>
+                <value>45</value>
+                <value>45</value>
+            </arg>
+            <arg name="vlan_id_second" list="vlan_id">
+                <value>45</value>
+                <value>-1</value>
+                <value>239</value>
+                <value>45</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="vlan_on_port_restart">
+                <req id="VLAN_INSERT"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="template" list="env_template">
+                <value ref="tmpl.iut2tst.eth"/>
+                <value ref="tmpl.iut2tst.udp4"/>
+                <value ref="tmpl.iut2tst.tcp4"/>
+                <value ref="tmpl.iut2tst.udp6"/>
+                <value ref="tmpl.iut2tst.tcp6"/>
+            </arg>
+            <arg name="vlan_id">
+                <value>-1</value>
+                <value>[1,4094]</value>
+            </arg>
+            <arg name="deferred_txq_start" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="vlan_on_packet_drop"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+        </run>
+
+
+        <!--- @autogroup -->
+        <run>
+            <script name="vlan_txqs_interference">
+                <req id="VLAN_INSERT"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="template" list="env_template">
+                <value ref="tmpl.iut2tst.eth"/>
+                <value ref="tmpl.iut2tst.udp4"/>
+                <value ref="tmpl.iut2tst.tcp4"/>
+                <value ref="tmpl.iut2tst.udp6"/>
+                <value ref="tmpl.iut2tst.tcp6"/>
+            </arg>
+            <arg name="burst_size_per_txq">
+                <value>1</value>
+                <value>10</value>
+            </arg>
+            <arg name="nb_tx_queues">
+                <value>1</value>
+                <value>5</value>
+                <value>16</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="reap_on_stop"/>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="template" list="env_template">
+                <value ref="tmpl.iut2tst.eth"/>
+                <value ref="tmpl.iut2tst.udp4"/>
+                <value ref="tmpl.iut2tst.tcp4"/>
+                <value ref="tmpl.iut2tst.udp6"/>
+                <value ref="tmpl.iut2tst.tcp6"/>
+            </arg>
+            <arg name="multi_mempool" type="boolean"/>
+            <arg name="update_refcnt" type="boolean"/>
+            <arg name="ring_size_multiplier">
+                <value>1</value>
+                <value>2</value>
+                <value>8</value>
+            </arg>
+        </run>
+
+        <run name="one_packet_with_dpdk_rx_all">
+            <session track_conf="silent" track_conf_handdown="descendants">>
+                <prologue>
+                    <script name="one_packet_with_dpdk_rx_prologue"/>
+                    <arg name="env" ref="env.peer2peer"/>
+                </prologue>
+
+                <epilogue>
+                    <script name="one_packet_with_dpdk_rx_epilogue"/>
+                    <arg name="env" ref="env.peer2peer"/>
+                </epilogue>
+
+                <run>
+                    <session track_conf="silent" track_conf_handdown="descendants">>
+                        <arg name="pld_size"/>
+                        <arg name="vlan"/>
+                        <arg name="segmentation"/>
+
+                        <run name="one_packet_with_dpdk_rx_cksum_offloads">
+                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                <arg name="pld_size"/>
+                                <arg name="vlan"/>
+                                <arg name="tso"/>
+                                <arg name="segmentation"/>
+
+                                <run name="one_packet_with_dpdk_rx_cksum_offloads_plain">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="outer_ip_cksum"/>
+                                        <arg name="outer_udp_cksum"/>
+                                        <arg name="tso"/>
+                                        <arg name="segmentation"/>
+
+                                        <!--- @autogroup -->
+                                        <run name="one_packet_with_dpdk_rx_cksum_offloads_plain_ip4">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="env">
+                                                <value ref="env.peer2peer"/>
+                                            </arg>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp4"/>
+                                                <value ref="tmpl.iut2tst.udp4"/>
+                                            </arg>
+                                            <arg name="innermost_ip_cksum" type="boolean"/>
+                                            <arg name="innermost_l4_cksum" type="boolean"/>
+                                        </run>
+
+                                        <!--- @autogroup -->
+                                        <run name="one_packet_with_dpdk_rx_cksum_offloads_plain_ip6">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="env">
+                                                <value ref="env.peer2peer_ip6"/>
+                                            </arg>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp6"/>
+                                                <value ref="tmpl.iut2tst.udp6"/>
+                                            </arg>
+                                            <arg name="innermost_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="innermost_l4_cksum" type="boolean"/>
+                                        </run>
+                                    </session>
+
+                                    <arg name="outer_ip_cksum" type="boolean">
+                                        <value>FALSE</value>
+                                    </arg>
+                                    <arg name="outer_udp_cksum" type="boolean">
+                                        <value>FALSE</value>
+                                    </arg>
+                                </run>
+
+                                <run name="one_packet_with_dpdk_rx_cksum_offloads_encap">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="outer_udp_cksum"/>
+                                        <arg name="tso"/>
+                                        <arg name="segmentation"/>
+
+                                        <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip4">
+                                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                                <arg name="env"/>
+                                                <arg name="pld_size"/>
+                                                <arg name="vlan"/>
+                                                <arg name="outer_ip_cksum"/>
+                                                <arg name="outer_udp_cksum"/>
+                                                <arg name="tso"/>
+                                                <arg name="segmentation"/>
+
+                                                <!--- @autogroup -->
+                                                <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip4_inner_ip4">
+                                                    <script name="one_packet_with_dpdk_rx"/>
+                                                    <arg name="tmpl">
+                                                        <value ref="tmpl.iut2tst.vxlan4.tcp4"/>
+                                                    </arg>
+                                                    <arg name="innermost_ip_cksum" type="boolean"/>
+                                                    <arg name="innermost_l4_cksum" type="boolean"/>
+                                                </run>
+
+                                                <!--- @autogroup -->
+                                                <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip4_inner_ip6">
+                                                    <script name="one_packet_with_dpdk_rx"/>
+                                                    <arg name="tmpl">
+                                                        <value ref="tmpl.iut2tst.vxlan4.tcp6"/>
+                                                    </arg>
+                                                    <arg name="innermost_ip_cksum" type="boolean">
+                                                        <value>FALSE</value>
+                                                    </arg>
+                                                    <arg name="innermost_l4_cksum" type="boolean"/>
+                                                </run>
+                                            </session>
+
+                                            <arg name="env">
+                                                <value ref="env.peer2peer"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean"/>
+                                        </run>
+
+                                        <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip6">
+                                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                                <arg name="env"/>
+                                                <arg name="pld_size"/>
+                                                <arg name="vlan"/>
+                                                <arg name="outer_ip_cksum"/>
+                                                <arg name="outer_udp_cksum"/>
+                                                <arg name="tso"/>
+                                                <arg name="segmentation"/>
+
+                                                <!--- @autogroup -->
+                                                <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip6_inner_ip4">
+                                                    <script name="one_packet_with_dpdk_rx"/>
+                                                    <arg name="tmpl">
+                                                        <value ref="tmpl.iut2tst.vxlan6.tcp4"/>
+                                                    </arg>
+                                                    <arg name="innermost_ip_cksum" type="boolean"/>
+                                                    <arg name="innermost_l4_cksum" type="boolean"/>
+                                                </run>
+
+                                                <!--- @autogroup -->
+                                                <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip6_inner_ip6">
+                                                    <script name="one_packet_with_dpdk_rx"/>
+                                                    <arg name="tmpl">
+                                                        <value ref="tmpl.iut2tst.vxlan6.tcp6"/>
+                                                    </arg>
+                                                    <arg name="innermost_ip_cksum" type="boolean">
+                                                        <value>FALSE</value>
+                                                    </arg>
+                                                    <arg name="innermost_l4_cksum" type="boolean"/>
+                                                </run>
+                                            </session>
+
+                                            <arg name="env">
+                                                <value ref="env.peer2peer_ip6"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                        </run>
+                                    </session>
+
+                                    <arg name="outer_udp_cksum" type="boolean"/>
+                                </run>
+                            </session>
+
+                            <arg name="tso">
+                                <value>0</value>
+                            </arg>
+                        </run>
+
+                        <run name="tso_packet_with_dpdk_rx_corner_cases">
+                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                <arg name="env"/>
+                                <arg name="pld_size"/>
+                                <arg name="vlan"/>
+                                <arg name="innermost_ip_cksum"/>
+                                <arg name="innermost_l4_cksum"/>
+                                <arg name="tso"/>
+                                <arg name="segmentation"/>
+
+                                <run name="tso_packet_with_dpdk_rx_too_many_outgoing_frames">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="env"/>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="innermost_ip_cksum"/>
+                                        <arg name="innermost_l4_cksum"/>
+                                        <arg name="tso"/>
+                                        <arg name="segmentation"/>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_outgoing_frames_plain">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                        </run>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_outgoing_frames_encap">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.vxlan4.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                        </run>
+                                    </session>
+
+                                    <arg name="pld_size">
+                                        <value>8193</value>
+                                    </arg>
+                                    <arg name="tso">
+                                        <value reqs="TSO">239</value>
+                                        <value reqs="TSO">1</value>
+                                    </arg>
+                                </run>
+
+                                <run name="tso_packet_with_dpdk_rx_too_many_header_segments">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="env"/>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="innermost_ip_cksum"/>
+                                        <arg name="innermost_l4_cksum"/>
+                                        <arg name="tso"/>
+                                        <arg name="segmentation"/>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_header_segments_plain">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                        </run>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_header_segments_encap">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.vxlan4.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                        </run>
+                                    </session>
+
+                                    <arg name="pld_size">
+                                        <value>239</value>
+                                    </arg>
+                                    <arg name="tso">
+                                        <value reqs="TSO">1</value>
+                                    </arg>
+                                    <arg name="segmentation">
+                                        <value>1*14, 1*20, 1*8, 1*0xffff</value>
+                                        <value>1*14, 1*20, 1*4, 1*4, 1*0xffff</value>
+                                    </arg>
+                                </run>
+
+                                <run name="tso_packet_with_dpdk_rx_too_many_payload_segments">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="env"/>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="innermost_ip_cksum"/>
+                                        <arg name="innermost_l4_cksum"/>
+                                        <arg name="tso"/>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_payload_segments_plain">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="segmentation">
+                                                <value>1*54, 0x3fd*1, 1*0xffff</value>
+                                                <value>1*54, 0x3fe*1, 1*0xffff</value>
+                                                <value>1*54, 0x3ff*1, 1*0xffff</value>
+                                            </arg>
+                                        </run>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_many_payload_segments_encap">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.vxlan4.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                            <arg name="segmentation">
+                                                <value>1*104, 0x3fd*1, 1*0xffff</value>
+                                                <value>1*104, 0x3fe*1, 1*0xffff</value>
+                                                <value>1*104, 0x3ff*1, 1*0xffff</value>
+                                            </arg>
+                                        </run>
+                                    </session>
+
+                                    <arg name="tso">
+                                        <value reqs="TSO">239</value>
+                                    </arg>
+                                </run>
+
+                                <run name="tso_packet_with_dpdk_rx_too_long_payload">
+                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                        <arg name="env"/>
+                                        <arg name="pld_size"/>
+                                        <arg name="vlan"/>
+                                        <arg name="innermost_ip_cksum"/>
+                                        <arg name="innermost_l4_cksum"/>
+                                        <arg name="tso"/>
+                                        <arg name="segmentation"/>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_long_payload_plain">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>FALSE</value>
+                                            </arg>
+                                        </run>
+
+                                        <!--- @autogroup -->
+                                        <run name="tso_packet_with_dpdk_rx_too_long_payload_encap">
+                                            <script name="one_packet_with_dpdk_rx"/>
+                                            <arg name="tmpl">
+                                                <value ref="tmpl.iut2tst.vxlan4.tcp4_fin_psh_cwr"/>
+                                            </arg>
+                                            <arg name="outer_ip_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                            <arg name="outer_udp_cksum" type="boolean">
+                                                <value>TRUE</value>
+                                            </arg>
+                                        </run>
+                                    </session>
+
+                                    <arg name="pld_size">
+                                        <value>0x3fffff</value>
+                                        <value>0x400000</value>
+                                    </arg>
+                                    <arg name="tso">
+                                        <value reqs="TSO">1300</value>
+                                    </arg>
+                                </run>
+                            </session>
+
+                            <arg name="env">
+                                <value ref="env.peer2peer"/>
+                            </arg>
+                            <arg name="innermost_ip_cksum" type="boolean">
+                                <value>TRUE</value>
+                            </arg>
+                            <arg name="innermost_l4_cksum" type="boolean">
+                                <value>TRUE</value>
+                            </arg>
+                        </run>
+                    </session>
+
+                    <arg name="pld_size">
+                        <value>1024</value>
+                    </arg>
+                    <arg name="vlan">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="segmentation">
+                        <value> </value>
+                    </arg>
+                </run>
+            </session>
+        </run>
+    </session>
+</package>
+

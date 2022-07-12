@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<package version="1.0">
+    <description>Filters</description>
+
+    <author mailto="Roman.Zhukov@oktetlabs.ru"/>
+
+    <session track_conf="silent" track_conf_handdown="descendants">
+
+        <!--- @autogroupprefix filters- -->
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_in2q"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="isolated" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="promisc" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+            <arg name="is_ip6_inner_frame">
+                <value>FALSE</value>
+            </arg>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.ethertype"/>
+                <value ref="flow_rule_pattern.ethertype.arp"/>
+                <value ref="flow_rule_pattern.ethertype.pppoed"/>
+                <value ref="flow_rule_pattern.ethertype.pppoes"/>
+                <value ref="flow_rule_pattern.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid.inner_vid"/>
+                <value ref="flow_rule_pattern.dst_mac"/>
+                <value ref="flow_rule_pattern.unknown_ucast_dst_mac"/>
+                <value ref="flow_rule_pattern.unknown_mcast_dst_mac"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.ip_proto"/>
+                <value ref="flow_rule_pattern.ip_proto.icmp4"/>
+                <value ref="flow_rule_pattern.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.ip_proto.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.3tuple.udp"/>
+                <value ref="flow_rule_pattern.5tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.udp"/>
+                <value ref="flow_rule_pattern.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.5tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="flow_rule_in2q_ip6">
+            <script name="flow_rule_in2q"/>
+            <arg name="env">
+              <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="isolated" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="promisc" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+            <arg name="is_ip6_inner_frame">
+                <value>FALSE</value>
+            </arg>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.3tuple.udp6"/>
+                <value ref="flow_rule_pattern.5tuple.udp6"/>
+                <value ref="flow_rule_pattern.ethertype.ip6"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="flow_rule_in2q_tunnel">
+            <script name="flow_rule_in2q"/>
+            <arg name="env" list="env_rule">
+              <value ref="env.peer2peer"/>
+              <value ref="env.peer2peer"/>
+              <value ref="env.peer2peer"/>
+              <value ref="env.peer2peer_ip6"/>
+              <value ref="env.peer2peer"/>
+              <value ref="env.peer2peer_ip6"/>
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="isolated" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="promisc" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+            <arg name="is_ip6_inner_frame" type="boolean"/>
+            <arg name="flow_rule_pattern" list="env_rule">
+              <value ref="flow_rule_pattern.vsid.vxlan"/>
+              <value ref="flow_rule_pattern.vsid.ifrm_dst_mac.vxlan"/>
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan"/>
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6"/>
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve"/>
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6"/>
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_rss">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_rule_rss">
+              <value ref="flow_rule.rss.3tuple.tcp.default"/>
+              <value ref="flow_rule.rss.3tuple.tcp.custom"/>
+            </arg>
+            <arg name="isolated" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="promiscuous" list="isolated_promisc">
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_drop"/>
+            <arg name="count">
+                <value>FALSE</value>
+            </arg>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.ethertype"/>
+                <value ref="flow_rule_pattern.ethertype.arp"/>
+                <value ref="flow_rule_pattern.ethertype.pppoed"/>
+                <value ref="flow_rule_pattern.ethertype.pppoes"/>
+                <value ref="flow_rule_pattern.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid.inner_vid"/>
+                <value ref="flow_rule_pattern.dst_mac"/>
+                <value ref="flow_rule_pattern.unknown_ucast_dst_mac"/>
+                <value ref="flow_rule_pattern.unknown_mcast_dst_mac"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.ip_proto"/>
+                <value ref="flow_rule_pattern.ip_proto.icmp4"/>
+                <value ref="flow_rule_pattern.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.ip_proto.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.3tuple.udp"/>
+                <value ref="flow_rule_pattern.5tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.udp"/>
+                <value ref="flow_rule_pattern.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.5tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+            </arg>
+            <arg name="ingress">
+                <value>TRUE</value>
+            </arg>
+            <arg name="promisc" type="boolean"/>
+            <arg name="transfer">
+                <value>FALSE</value>
+            </arg>
+            <arg name="isolated">
+                <value>FALSE</value>
+            </arg>
+            <arg name="is_ip6_inner_frame">
+                <value>FALSE</value>
+            </arg>
+        </run>
+
+        <run name="flow_rule_drop_and_count">
+            <session track_conf="silent" track_conf_handdown="descendants">
+                <arg name="count">
+                    <value>TRUE</value>
+                </arg>
+                <arg name="ingress" list="ingress_promisc_isolated">
+                    <value>TRUE</value>
+                    <value>TRUE</value>
+                    <value>FALSE</value>
+                    <value>TRUE</value>
+                    <value>FALSE</value>
+                </arg>
+                <arg name="promisc" list="ingress_promisc_isolated">
+                    <value>FALSE</value>
+                    <value>TRUE</value>
+                    <value>FALSE</value>
+                    <value>FALSE</value>
+                    <value>FALSE</value>
+                </arg>
+                <arg name="isolated" list="ingress_promisc_isolated">
+                    <value>FALSE</value>
+                    <value>FALSE</value>
+                    <value>FALSE</value>
+                    <value>TRUE</value>
+                    <value>TRUE</value>
+                </arg>
+                <arg name="transfer">
+                    <value>TRUE</value>
+                </arg>
+
+                <!--- @autogroup -->
+                <run name="flow_rule_drop_and_count_ip4">
+                    <script name="flow_rule_drop"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="flow_rule_pattern">
+                        <value ref="flow_rule_pattern.ethertype"/>
+                        <value ref="flow_rule_pattern.ethertype.arp"/>
+                        <value ref="flow_rule_pattern.ethertype.pppoed"/>
+                        <value ref="flow_rule_pattern.ethertype.pppoes"/>
+                        <value ref="flow_rule_pattern.ethertype.ip4"/>
+                        <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                        <value ref="flow_rule_pattern.ethertype.outer_vid.inner_vid"/>
+                        <value ref="flow_rule_pattern.dst_mac"/>
+                        <value ref="flow_rule_pattern.unknown_ucast_dst_mac"/>
+                        <value ref="flow_rule_pattern.unknown_mcast_dst_mac"/>
+                        <value ref="flow_rule_pattern.dst_mac.ethertype"/>
+                        <value ref="flow_rule_pattern.dst_mac.ethertype.ip4"/>
+                        <value ref="flow_rule_pattern.ip_proto"/>
+                        <value ref="flow_rule_pattern.ip_proto.icmp4"/>
+                        <value ref="flow_rule_pattern.ip_proto.udp"/>
+                        <value ref="flow_rule_pattern.ip_proto.tcp"/>
+                        <value ref="flow_rule_pattern.dst_mac.ip_proto"/>
+                        <value ref="flow_rule_pattern.dst_mac.ip_proto.udp"/>
+                        <value ref="flow_rule_pattern.3tuple.udp"/>
+                        <value ref="flow_rule_pattern.5tuple.udp"/>
+                        <value ref="flow_rule_pattern.dst_mac.3tuple.udp"/>
+                        <value ref="flow_rule_pattern.dst_mac.5tuple.udp"/>
+                        <value ref="flow_rule_pattern.3tuple.tcp"/>
+                        <value ref="flow_rule_pattern.5tuple.tcp"/>
+                        <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                        <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+                    </arg>
+                    <arg name="is_ip6_inner_frame">
+                        <value>FALSE</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_rule_drop_and_count_ip6">
+                    <script name="flow_rule_drop"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer_ip6"/>
+                    </arg>
+                    <arg name="flow_rule_pattern">
+                        <value ref="flow_rule_pattern.3tuple.udp6"/>
+                        <value ref="flow_rule_pattern.5tuple.udp6"/>
+                        <value ref="flow_rule_pattern.ethertype.ip6"/>
+                    </arg>
+                    <arg name="is_ip6_inner_frame">
+                        <value>FALSE</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_rule_drop_and_count_tunnel">
+                    <script name="flow_rule_drop"/>
+                    <arg name="env" list="env_rule">
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer_ip6"/>
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer_ip6"/>
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer_ip6"/>
+                      <value ref="env.peer2peer"/>
+                      <value ref="env.peer2peer_ip6"/>
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="flow_rule_pattern" list="env_rule">
+                      <value ref="flow_rule_pattern.vsid.vxlan"/>
+                      <value ref="flow_rule_pattern.ip4.udp_dst.vsid.vxlan"/>
+                      <value ref="flow_rule_pattern.ip6.udp_dst.vsid.vxlan"/>
+                      <value ref="flow_rule_pattern.vsid.ifrm_dst_mac.vxlan"/>
+                      <value ref="flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan"/>
+                      <value ref="flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan"/>
+                      <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan"/>
+                      <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6"/>
+                      <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve"/>
+                      <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6"/>
+                      <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre"/>
+                    </arg>
+                    <arg name="is_ip6_inner_frame" type="boolean"/>
+                </run>
+            </session>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_vlan"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="promisc" type="boolean"/>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                <value ref="flow_rule_pattern.dst_mac.outer_vid"/>
+            </arg>
+        </run>
+
+         <run name="flow_rule_mark_and_flag">
+            <session track_conf="silent" track_conf_handdown="descendants">
+                <enum name="mark_values">
+                    <value>0</value>
+                    <value>1</value>
+                    <value>255</value>
+                    <value>256</value>
+                </enum>
+                <enum name="flow_rule_patterns">
+                    <value ref="flow_rule_pattern.dst_mac"/>
+                    <value ref="flow_rule_pattern.ethertype"/>
+                    <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                    <value ref="flow_rule_pattern.outer_vid.ip_proto"/>
+                    <value ref="flow_rule_pattern.3tuple.udp"/>
+                </enum>
+
+                <!--- @autogroup -->
+                <run name="flow_rule_flag">
+                    <script name="flow_rule_mark_and_flag"/>
+                    <arg name="env">
+                        <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="mark_value">
+                        <value>0</value>
+                    </arg>
+                    <arg name="flow_rule_pattern" type="flow_rule_patterns"/>
+                    <arg name="flow_rule_actions">
+                        <value ref="flow_rule_actions.flag"/>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_rule_mark">
+                    <script name="flow_rule_mark_and_flag"/>
+                    <arg name="env">
+                        <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="mark_value" type="mark_values"/>
+                    <arg name="flow_rule_pattern" type="flow_rule_patterns"/>
+                    <arg name="flow_rule_actions">
+                        <value ref="flow_rule_actions.mark"/>
+                    </arg>
+                </run>
+
+            </session>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_counters"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_rule_pattern" list="pattern">
+                <value ref="flow_rule_pattern.ethertype"/>
+                <value ref="flow_rule_pattern.ethertype.pppoed"/>
+                <value ref="flow_rule_pattern.ethertype.pppoes"/>
+                <value ref="flow_rule_pattern.ethertype.outer_vid"/>
+                <value ref="flow_rule_pattern.dst_mac"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype"/>
+                <value ref="flow_rule_pattern.dst_mac.ethertype.ip4"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto"/>
+                <value ref="flow_rule_pattern.dst_mac.ip_proto.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.udp"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+            </arg>
+            <arg name="field_path" list="pattern">
+                <value>0.#eth.length-type.#plain</value>
+                <value>0.#eth.length-type.#plain</value>
+                <value>0.#eth.length-type.#plain</value>
+                <value>0.#eth.tagged.#tagged.vlan-id.#plain</value>
+                <value>0.#eth.dst-addr.#plain</value>
+                <value>0.#eth.dst-addr.#plain</value>
+                <value>0.#eth.dst-addr.#plain</value>
+                <value>0.#eth.dst-addr.#plain</value>
+                <value>0.#eth.dst-addr.#plain</value>
+                <value>2.#udp.dst-port.#plain</value>
+                <value>2.#udp.dst-port.#plain</value>
+                <value>2.#tcp.dst-port.#plain</value>
+                <value>2.#tcp.dst-port.#plain</value>
+            </arg>
+            <arg name="n_counters">
+                <value>1</value>
+                <value>2</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_encap_on_egress"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tunnel_type">
+              <value>VXLAN</value>
+            </arg>
+            <arg name="flow_rule_pattern" list="pattern">
+                <value>{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 06'H,
+                    src-addr plain:'00 01 02 03 04 07'H
+                  },
+                  ip4:{
+                    src-addr plain:'43 43 43 43'H
+                  },
+                  udp:{
+                    dst-port plain:11,
+                    src-port plain:10
+                  }
+                }</value>
+                <value>{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 06'H,
+                    src-addr plain:'00 01 02 03 04 07'H
+                  }
+                }</value>
+            </arg>
+            <arg name="encap_header" list="pattern">
+                <value>{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 08'H,
+                    src-addr plain:'00 01 02 03 04 09'H
+                  },
+                  ip4:{
+                    dst-addr plain:'08 08 08 08'H,
+                    src-addr plain:'08 08 08 08'H
+                  },
+                  udp:{
+                    dst-port plain:4789,
+                    src-port plain:55761
+                  },
+                  vxlan:{
+                    vni plain:13
+                  }
+                }</value>
+                <value>{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 08'H,
+                    src-addr plain:'00 01 02 03 04 09'H
+                  },
+                  ip4:{
+                    dst-addr plain:'08 08 08 08'H,
+                    src-addr plain:'08 08 08 08'H
+                  },
+                  udp:{
+                    dst-port plain:4789,
+                    src-port plain:49152
+                  },
+                  vxlan:{
+                    vni plain:13
+                  }
+                }</value>
+            </arg>
+            <arg name="count" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_decap_on_ingress"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tunnel_type">
+              <value>VXLAN</value>
+            </arg>
+            <arg name="flow_rule_pattern">
+              <value ref="flow_rule_pattern.ethertype.4tuple.vxlan"/>
+            </arg>
+            <arg name="count" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_vlan_push"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ingress" type="boolean"/>
+            <arg name="flow_rule_pattern" list="vlan_tag">
+              <value ref="flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan"/>
+              <value ref="flow_rule_pattern.outer_vid.ip_proto"/>
+              <value ref="flow_rule_pattern.dst_mac.ethertype.ip4"/>
+              <value ref="flow_rule_pattern.dst_mac.ethertype"/>
+            </arg>
+            <arg name="ethertype_first" list="vlan_tag">
+              <value>0x8100</value>
+              <value>0x88A8</value>
+              <value>0x8100</value>
+              <value>0x8100</value>
+            </arg>
+            <arg name="ethertype_second" list="vlan_tag">
+              <value>0x88A8</value>
+              <value>0</value>
+              <value>0x88A8</value>
+              <value>0</value>
+            </arg>
+            <arg name="vlan_id_first">
+              <value>15</value>
+            </arg>
+            <arg name="vlan_id_second">
+              <value>53</value>
+            </arg>
+            <arg name="count" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_multi_count"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ingress" list="ingress_promisc_isolated">
+                <value>TRUE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+            <arg name="promisc" list="ingress_promisc_isolated">
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>FALSE</value>
+            </arg>
+            <arg name="isolated" list="ingress_promisc_isolated">
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="transfer">
+                <value>TRUE</value>
+            </arg>
+            <arg name="flow_rule_pattern" list="vlan_tag">
+                <value ref="flow_rule_pattern.dst_mac"/>
+                <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+            </arg>
+            <arg name="counter_ids">
+                <value>0,1</value>
+                <value>0,0</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_rule_reflect"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_pattern_ndn">
+                <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
+                <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_tunnel"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tunnel_rule_ptrn_ndn" list="rule_ptrn_ndn">
+              <value>{
+                eth:{
+                  dst-addr plain:'00 00 5e 00 03 04'H,
+                  src-addr plain:'00 00 5e 00 03 03'H,
+                  length-type plain:2048
+                },
+                ip4:{
+                  dst-addr plain:'c0 a8 ef 02'H,
+                  protocol plain:17
+                },
+                udp:{
+                  dst-port plain:4789
+                }
+              }</value>
+            </arg>
+            <arg name="switch_rule_ptrn_ndn" list="rule_ptrn_ndn">
+              <value>{
+                eth:{
+                  dst-addr plain:'00 00 5e 00 03 04'H,
+                  src-addr plain:'00 00 5e 00 03 03'H,
+                  length-type plain:2048
+                },
+                ip4:{
+                  dst-addr plain:'c0 a8 ef 02'H,
+                  protocol plain:17,
+                },
+                udp:{
+                  dst-port plain:4789
+                },
+                vxlan:{
+                  vni plain:239
+                },
+                eth:{
+                  dst-addr plain:'00 00 5e 00 03 02'H,
+                  src-addr plain:'00 00 5e 00 03 01'H,
+                  length-type plain:34525
+                }
+              }</value>
+            </arg>
+            <arg name="tunnel_rule_do_count" type="boolean"/>
+            <arg name="switch_rule_do_count" type="boolean"/>
+        </run>
+    </session>
+</package>

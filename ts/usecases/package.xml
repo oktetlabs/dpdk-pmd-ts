@@ -1,0 +1,1201 @@
+<?xml version="1.0"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<package version="1.0">
+
+    <description>Main use cases of the PMD</description>
+
+    <author mailto="Andrew.Rybchenko@oktetlabs.ru"/>
+
+    <session track_conf="silent" track_conf_handdown="descendants">
+        <enum name="tmpl.tst2iut.ip4_all">
+            <value ref="tmpl.tst2iut.tcp4"/>
+            <value ref="tmpl.tst2iut.udp4"/>
+            <value ref="tmpl.tst2iut.eth"/>
+            <value ref="tmpl.tst2iut.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.arp4"/>
+            <value ref="tmpl.tst2iut.vlan.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan.udp4"/>
+            <value ref="tmpl.tst2iut.vlan.eth"/>
+            <value ref="tmpl.tst2iut.vlan.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan.arp4"/>
+            <value ref="tmpl.tst2iut.qinq.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq.udp4"/>
+            <value ref="tmpl.tst2iut.qinq.eth"/>
+            <value ref="tmpl.tst2iut.qinq.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq.arp4"/>
+            <value ref="tmpl.tst2iut.vxlan4.udp4"/>
+            <value ref="tmpl.tst2iut.vxlan4.tcp4"/>
+            <value ref="tmpl.tst2iut.vxlan4.eth"/>
+            <value ref="tmpl.tst2iut.vxlan4.vlan"/>
+            <value ref="tmpl.tst2iut.vxlan4.qinq"/>
+            <value ref="tmpl.tst2iut.vxlan4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vxlan4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vxlan4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vxlan4.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.eth"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan4.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.eth"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan4.arp4"/>
+            <value ref="tmpl.tst2iut.geneve4.udp4"/>
+            <value ref="tmpl.tst2iut.geneve4.tcp4"/>
+            <value ref="tmpl.tst2iut.geneve4.eth"/>
+            <value ref="tmpl.tst2iut.geneve4.vlan"/>
+            <value ref="tmpl.tst2iut.geneve4.qinq"/>
+            <value ref="tmpl.tst2iut.geneve4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.geneve4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.geneve4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.geneve4.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.eth"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_geneve4.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.eth"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_geneve4.arp4"/>
+            <value ref="tmpl.tst2iut.nvgre4.udp4"/>
+            <value ref="tmpl.tst2iut.nvgre4.tcp4"/>
+            <value ref="tmpl.tst2iut.nvgre4.eth"/>
+            <value ref="tmpl.tst2iut.nvgre4.vlan"/>
+            <value ref="tmpl.tst2iut.nvgre4.qinq"/>
+            <value ref="tmpl.tst2iut.nvgre4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.nvgre4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.nvgre4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.nvgre4.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.eth"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre4.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.eth"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre4.arp4"/>
+        </enum>
+
+        <enum name="tmpl.tst2iut.ip6_all">
+            <value ref="tmpl.tst2iut.tcp6"/>
+            <value ref="tmpl.tst2iut.udp6"/>
+            <value ref="tmpl.tst2iut.vlan.tcp6"/>
+            <value ref="tmpl.tst2iut.vlan.udp6"/>
+            <value ref="tmpl.tst2iut.qinq.tcp6"/>
+            <value ref="tmpl.tst2iut.qinq.udp6"/>
+            <value ref="tmpl.tst2iut.vxlan6.udp4"/>
+            <value ref="tmpl.tst2iut.vxlan6.tcp4"/>
+            <value ref="tmpl.tst2iut.vxlan6.eth"/>
+            <value ref="tmpl.tst2iut.vxlan6.vlan"/>
+            <value ref="tmpl.tst2iut.vxlan6.qinq"/>
+            <value ref="tmpl.tst2iut.vxlan6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vxlan6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vxlan6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vxlan6.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.eth"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_vxlan6.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.eth"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_vxlan6.arp4"/>
+            <value ref="tmpl.tst2iut.geneve6.udp4"/>
+            <value ref="tmpl.tst2iut.geneve6.tcp4"/>
+            <value ref="tmpl.tst2iut.geneve6.eth"/>
+            <value ref="tmpl.tst2iut.geneve6.vlan"/>
+            <value ref="tmpl.tst2iut.geneve6.qinq"/>
+            <value ref="tmpl.tst2iut.geneve6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.geneve6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.geneve6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.geneve6.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.eth"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_geneve6.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.eth"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_geneve6.arp4"/>
+            <value ref="tmpl.tst2iut.nvgre6.udp4"/>
+            <value ref="tmpl.tst2iut.nvgre6.tcp4"/>
+            <value ref="tmpl.tst2iut.nvgre6.eth"/>
+            <value ref="tmpl.tst2iut.nvgre6.vlan"/>
+            <value ref="tmpl.tst2iut.nvgre6.qinq"/>
+            <value ref="tmpl.tst2iut.nvgre6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.nvgre6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.nvgre6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.nvgre6.arp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.udp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.tcp4"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.eth"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.vlan"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.qinq"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.vlan_nvgre6.arp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.udp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.tcp4"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.eth"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.vlan"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.qinq"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.ip4_frag_first"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.ip4_frag_middle"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.ip4_frag_last"/>
+            <value ref="tmpl.tst2iut.qinq_nvgre6.arp4"/>
+        </enum>
+
+        <!--- @autogroupprefix usecases- -->
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tx_burst_simple"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+            <arg name="payload_len">
+                <value>512</value>
+                <value>999</value>
+                <value>1234</value>
+                <value>1600</value>
+                <value>4000</value>
+                <value>9000</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>1</value>
+                <value>3</value>
+                <value>5</value>
+                <value>9</value>
+                <value>11</value>
+                <value>15</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_burst_simple"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="payload_len">
+                <value>512</value>
+                <value>999</value>
+                <value>1234</value>
+                <value reqs="RX_JUMBO">1600</value>
+                <value reqs="RX_JUMBO">4000</value>
+                <value reqs="RX_JUMBO">9000</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>1</value>
+                <value>3</value>
+                <value>5</value>
+                <value>9</value>
+                <value>11</value>
+                <value>15</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="rx_one_packet_ip4">
+            <script name="rx_burst_simple"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl" type="tmpl.tst2iut.ip4_all"/>
+            <arg name="payload_len">
+                <value>[0,1200]</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>1</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="rx_one_packet_ip6">
+            <script name="rx_burst_simple"/>
+            <arg name="env">
+              <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" type="tmpl.tst2iut.ip6_all"/>
+            <arg name="payload_len">
+                <value>[0,1200]</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>1</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tx_multi_burst"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+            <arg name="payload_len">
+                <value>512</value>
+                <value>999</value>
+                <value>1234</value>
+                <value>1600</value>
+                <value>4000</value>
+                <value>9000</value>
+            </arg>
+            <arg name="nb_queues">
+                <value>1</value>
+                <value>3</value>
+                <value>8</value>
+                <value>11</value>
+            </arg>
+            <arg name="nb_pkts">
+                <value>1</value>
+                <value>3</value>
+                <value>8</value>
+                <value>15</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="promiscuous_mode"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="is_promiscuous_mode" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="all_multicast_mode"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2mcast.eth"/>
+            </arg>
+            <arg name="is_all_mcast_mode" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="get_mtu">
+                <req id="TEST_HARNESS_SANITY"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="set_mtu"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="mtu">
+                <value>512</value>
+                <value>999</value>
+                <value>1234</value>
+                <value reqs="RX_JUMBO">1600</value>
+                <value reqs="RX_JUMBO">4000</value>
+                <value reqs="RX_JUMBO">9000</value>
+            </arg>
+            <arg name="excess_mtu">
+                <value>128</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="set_default_mac_addr"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="test_detach"></script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="dev_conf_rss_adv">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rss">
+                <req id="RSS"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_template">
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>3</value>
+                <value>8</value>
+                <value>11</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rss_hash_info">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+            </arg>
+            <arg name="enable_offload" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rss_hash_conf_get">
+                <req id="TEST_HARNESS_SANITY"/>
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>2</value>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="update_rss_hash_conf">
+                <req id="RSS"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_template">
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>8</value>
+                <value>17</value>
+                <value>32</value>
+                <value>64</value>
+            </arg>
+            <arg name="rss_hash_protos">
+                <value>IP</value>
+                <value>TCP</value>
+                <value>UDP</value>
+                <value>IP,TCP</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rss_reta_query">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>3</value>
+                <value>8</value>
+                <value>11</value>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rss_reta_update">
+                <req id="RSS"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_template">
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+            </arg>
+            <arg name="nb_rx_queues">
+                <value>1</value>
+                <value>8</value>
+                <value>17</value>
+                <value>32</value>
+                <value>64</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="flow_ctrl_get">
+                <req id="TEST_HARNESS_SANITY"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_scatter">
+                <req id="RX_SCATTER"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="pre_rxq_setup_mtu">
+              <value>1500</value>
+            </arg>
+            <arg name="enable_scatter" list="sizes">
+              <value>FALSE</value>
+              <value>FALSE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+              <value>TRUE</value>
+            </arg>
+            <arg name="rx_buf_size" list="sizes">
+              <value>256</value>
+              <value>2048</value>
+              <value>512</value>
+              <value>256</value>
+              <value>256</value>
+              <value>256</value>
+              <value>512</value>
+              <value>512</value>
+              <value>512</value>
+              <value>1024</value>
+              <value>1024</value>
+              <value>1024</value>
+              <value>200</value>
+              <value>200</value>
+              <value>512</value>
+            </arg>
+            <arg name="payload_size" list="sizes">
+              <value>512</value>
+              <value>2048</value>
+              <value>4096</value>
+              <value>512</value>
+              <value>1024</value>
+              <value>2048</value>
+              <value>512</value>
+              <value>1024</value>
+              <value>2048</value>
+              <value>512</value>
+              <value>1024</value>
+              <value>2048</value>
+              <value>70</value>
+              <value>890</value>
+              <value>1450</value>
+            </arg>
+            <arg name="max_extra_size" list="sizes">
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>0</value>
+              <value>70</value>
+              <value>70</value>
+              <value>50</value>
+            </arg>
+            <arg name="packet_headers_size">
+                <value>128</value>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.udp4"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="link_up_down"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="deferred_start_rx_queue">
+                <req id="RSS"/>
+            </script>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_template">
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+            </arg>
+            <arg name="n_rxq">
+                <value>3</value>
+                <value>4</value>
+                <value>7</value>
+                <value>11</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="deferred_start_tx_queue"/>
+            <arg name="env" list="env_template">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_template">
+                <value ref="tmpl.iut2tst.icmp4"/>
+                <value ref="tmpl.iut2tst.udp4"/>
+                <value ref="tmpl.iut2tst.tcp4"/>
+                <value ref="tmpl.iut2tst.udp6"/>
+                <value ref="tmpl.iut2tst.tcp6"/>
+            </arg>
+            <arg name="n_txq">
+                <value>3</value>
+                <value>4</value>
+                <value>7</value>
+                <value>11</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="runtime_rx_queue_setup_with_flow"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="flow_rule_pattern">
+                <value ref="flow_rule_pattern.dst_mac"/>
+                <value ref="flow_rule_pattern.3tuple.udp"/>
+            </arg>
+            <arg name="nb_rxq" list="rx_queues">
+                <value>2</value>
+                <value>3</value>
+                <value>2</value>
+                <value>2</value>
+                <value>3</value>
+            </arg>
+            <arg name="rxq_runtime_setup_ids" list="rx_queues">
+                <value>1</value>
+                <value>1, 2</value>
+                <value>1</value>
+                <value>0</value>
+                <value>1</value>
+            </arg>
+            <arg name="deferred_start" list="rx_queues">
+                <value>TRUE</value>
+                <value>TRUE</value>
+                <value>FALSE</value>
+                <value>TRUE</value>
+                <value>TRUE</value>
+            </arg>
+            <arg name="isolated" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="runtime_rx_queue_setup_with_rss">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.icmp4"/>
+            </arg>
+            <arg name="nb_rxq" list="rx_queues">
+                <value>4</value>
+                <value>5</value>
+            </arg>
+            <arg name="rxq_runtime_setup_idx" list="rx_queues">
+                <value>2</value>
+                <value>4</value>
+            </arg>
+            <arg name="deferred_start" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="runtime_tx_queue_setup"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.iut2tst.icmp4"/>
+            </arg>
+            <arg name="nb_txq" list="tx_queues">
+                <value>2</value>
+                <value>3</value>
+                <value>5</value>
+                <value>2</value>
+                <value>2</value>
+                <value>3</value>
+            </arg>
+            <arg name="txq_runtime_setup_ids" list="tx_queues">
+                <value>1</value>
+                <value>1, 2</value>
+                <value>4</value>
+                <value>1</value>
+                <value>0</value>
+                <value>1</value>
+            </arg>
+            <arg name="txq_deferred_start_ids" list="tx_queues">
+                <value>1</value>
+                <value>1, 2</value>
+                <value>4</value>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_stats"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+                <value ref="tmpl.tst2mcast.eth"/>
+                <value ref="tmpl.tst2bcast.eth"/>
+            </arg>
+            <arg name="nb_pkts">
+                <value>5</value>
+            </arg>
+            <arg name="payload_len">
+                <value>46</value>
+                <value>100</value>
+                <value>200</value>
+                <value>400</value>
+                <value>800</value>
+                <value reqs="RX_JUMBO">1600</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tx_stats"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+                <value ref="tmpl.iut2mcast.eth"/>
+                <value ref="tmpl.iut2bcast.eth"/>
+            </arg>
+            <arg name="nb_pkts">
+                <value>5</value>
+            </arg>
+            <arg name="payload_len">
+                <value>46</value>
+                <value>100</value>
+                <value>200</value>
+                <value>400</value>
+                <value>800</value>
+                <value>1600</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="xstats_by_id"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="xstats_dev_state"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="payload_len">
+                <value>[0,1500]</value>
+            </arg>
+            <arg name="template" list="traffic_direction">
+                <value ref="tmpl.tst2iut.eth"/>
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+            <arg name="traffic_direction_rx" list="traffic_direction" type="boolean">
+                <value>TRUE</value>
+                <value>FALSE</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_descriptor_status"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_desc_nb"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="nb_rxd">
+                <value>1</value>
+                <value>8</value>
+                <value>32</value>
+                <value>64</value>
+                <value>128</value>
+                <value>256</value>
+                <value>496</value>
+                <value>502</value>
+                <value>512</value>
+                <value>1000</value>
+                <value>1024</value>
+                <value>2048</value>
+                <value>3584</value>
+                <value>4080</value>
+                <value>4096</value>
+                <value>8192</value>
+                <value>16384</value>
+                <value>32768</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tx_desc_nb"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="nb_txd">
+                <value>1</value>
+                <value>8</value>
+                <value>32</value>
+                <value>64</value>
+                <value>128</value>
+                <value>256</value>
+                <value>496</value>
+                <value>502</value>
+                <value>512</value>
+                <value>1000</value>
+                <value>1024</value>
+                <value>2048</value>
+                <value>3584</value>
+                <value>4080</value>
+                <value>4096</value>
+                <value>8192</value>
+                <value>16384</value>
+                <value>32768</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tunnel_udp_port_config"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="tunnel_type" type="udp_tunnel_type.all"/>
+            <arg name="nb_entries">
+                <value>5</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="tx_descriptor_status"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_offload_checksum"/>
+            <arg name="env" list="env_tmpl">
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer"/>
+                <value ref="env.peer2peer_ip6"/>
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" list="env_tmpl">
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.vxlan4.udp4"/>
+                <value ref="tmpl.tst2iut.geneve4.udp4"/>
+                <value ref="tmpl.tst2iut.nvgre4.udp4"/>
+                <value ref="tmpl.tst2iut.vxlan6.udp4"/>
+                <value ref="tmpl.tst2iut.geneve6.udp4"/>
+            </arg>
+            <arg name="rx_ol_cksum" type="boolean"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="rx_ptype_ip4">
+            <script name="rx_ptype"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl" type="tmpl.tst2iut.ip4_all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="rx_ptype_ip6">
+            <script name="rx_ptype"/>
+            <arg name="env">
+              <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl" type="tmpl.tst2iut.ip6_all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="set_mc_addr_list"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="mc_addr_list">
+                <value>01:0C:CD:04:00:00, 01:0C:CD:04:00:01</value>
+                <value>01:0C:CD:04:00:02, 01:0C:CD:04:00:03</value>
+                <value>01:0C:CD:04:00:00, 01:0C:CD:04:00:01, 01:0C:CD:04:00:02, 01:0C:CD:04:00:03</value>
+            </arg>
+            <arg name="mismatch_addr_list">
+                <value>01:0C:CD:04:00:05, 00:01:02:03:04:05</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="fw_version"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="dev_reconfigure">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="rx_tmpl">
+                <value ref="tmpl.tst2iut.udp4"/>
+            </arg>
+            <arg name="tx_tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+            <arg name="all_queues_reconf" type="boolean"/>
+            <arg name="nb_rx_queue" list="rx_queues_number">
+                <value>3</value>
+                <value>7</value>
+            </arg>
+            <arg name="nb_rx_queue_reconf" list="rx_queues_number">
+                <value>7</value>
+                <value>3</value>
+            </arg>
+            <arg name="nb_tx_queue" list="tx_queues_number">
+                <value>3</value>
+                <value>7</value>
+            </arg>
+            <arg name="nb_tx_queue_reconf" list="tx_queues_number">
+                <value>7</value>
+                <value>3</value>
+            </arg>
+        </run>
+
+<!--
+        <run>
+            <script name="multi_process"/>
+            <arg name="env">
+                <value>'net':IUT{'iut_host'{{'iut_rpcs':IUT,if:'iut_port'},{'iut_secondary':IUT,if:'iut_port'},addr:'iut_addr':inet:unicast},'tst_host'{{'tst_rpcs':tester},addr:'tst_addr':inet:unicast,if:'tst_if',addr:'tst_lladdr':ether:unicast}}</value>
+            </arg>
+            <arg name="rx_tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="tx_tmpl">
+                <value ref="tmpl.iut2tst.eth"/>
+            </arg>
+        </run>
+ -->
+
+        <!--- @autogroup -->
+        <run>
+            <script name="dev_info_persistence"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="init_ethdev_state" type="ethdev_state.all"/>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="rx_intr"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="scenario">
+                <value>intr_enable, send_packet, check_intr, receive_packet, intr_disable, send_packet, check_intr, receive_packet</value>
+                <value>send_packet, intr_enable, check_intr, receive_packet</value>
+                <value>intr_enable, send_packet, check_intr, receive_packet, send_packet, check_intr, receive_packet</value>
+                <value>intr_enable, send_packet, check_intr, receive_packet, intr_disable, send_packet, check_intr, receive_packet, send_packet, check_intr, receive_packet</value>
+                <value>intr_enable, intr_disable, intr_disable, send_packet, check_intr, receive_packet, send_packet, check_intr, receive_packet</value>
+                <value>intr_enable, intr_enable, send_packet, check_intr, receive_packet, intr_disable, send_packet, check_intr, receive_packet</value>
+                <value>intr_enable, send_packet, receive_packet, check_intr</value>
+                <value>intr_enable, send_packet, receive_packet, check_intr, receive_packet</value>
+                <value>send_packet, check_intr, intr_enable, check_intr, receive_packet</value>
+                <value>send_packet, receive_packet, intr_enable, check_intr, send_packet, check_intr, receive_packet</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="vlan_strip_ip4">
+            <script name="vlan_strip"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.vlan.tcp4"/>
+                <value ref="tmpl.tst2iut.vlan.udp4"/>
+                <value ref="tmpl.tst2iut.vlan.eth"/>
+                <value ref="tmpl.tst2iut.vlan.ip4_frag_first"/>
+                <value ref="tmpl.tst2iut.vlan.ip4_frag_middle"/>
+                <value ref="tmpl.tst2iut.vlan.ip4_frag_last"/>
+                <value ref="tmpl.tst2iut.vlan.arp4"/>
+                <value ref="tmpl.tst2iut.qinq.tcp4"/>
+                <value ref="tmpl.tst2iut.qinq.udp4"/>
+                <value ref="tmpl.tst2iut.qinq.eth"/>
+                <value ref="tmpl.tst2iut.qinq.ip4_frag_first"/>
+                <value ref="tmpl.tst2iut.qinq.ip4_frag_middle"/>
+                <value ref="tmpl.tst2iut.qinq.ip4_frag_last"/>
+                <value ref="tmpl.tst2iut.qinq.arp4"/>
+                <value ref="tmpl.tst2iut.vlan_vxlan4.udp4"/>
+                <value ref="tmpl.tst2iut.vlan_geneve4.tcp4"/>
+                <value ref="tmpl.tst2iut.vlan_nvgre4.vlan"/>
+                <value ref="tmpl.tst2iut.qinq_vxlan4.ip4_frag_first"/>
+                <value ref="tmpl.tst2iut.qinq_geneve4.ip4_frag_last"/>
+                <value ref="tmpl.tst2iut.qinq_nvgre4.tcp4"/>
+                <value ref="tmpl.tst2iut.udp4"/>
+                <value ref="tmpl.tst2iut.arp4"/>
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.eth"/>
+                <value ref="tmpl.tst2iut.icmp4"/>
+                <value ref="tmpl.tst2iut.ip4_frag_first"/>
+                <value ref="tmpl.tst2iut.ip4_frag_middle"/>
+                <value ref="tmpl.tst2iut.ip4_frag_last"/>
+            </arg>
+            <arg name="vlan_strip" type="boolean"/>
+            <arg name="qinq_strip" type="boolean"/>
+        </run>
+        <!--- @autogroup -->
+        <run name="vlan_strip_ip6">
+            <script name="vlan_strip"/>
+            <arg name="env">
+                <value ref="env.peer2peer_ip6"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.vlan.tcp6"/>
+                <value ref="tmpl.tst2iut.vlan.udp6"/>
+                <value ref="tmpl.tst2iut.qinq.tcp6"/>
+                <value ref="tmpl.tst2iut.qinq.udp6"/>
+                <value ref="tmpl.tst2iut.vlan_vxlan6.udp4"/>
+                <value ref="tmpl.tst2iut.vlan_geneve6.tcp4"/>
+                <value ref="tmpl.tst2iut.vlan_nvgre6.vlan"/>
+                <value ref="tmpl.tst2iut.qinq_vxlan6.ip4_frag_first"/>
+                <value ref="tmpl.tst2iut.qinq_geneve6.ip4_frag_last"/>
+                <value ref="tmpl.tst2iut.qinq_nvgre6.tcp4"/>
+                <value ref="tmpl.tst2iut.udp6"/>
+                <value ref="tmpl.tst2iut.tcp6"/>
+            </arg>
+            <arg name="vlan_strip" type="boolean"/>
+            <arg name="qinq_strip" type="boolean"/>
+        </run>
+
+    </session>
+</package>

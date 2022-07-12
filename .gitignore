@@ -1,0 +1,21 @@
+syntax: glob
+.reviewboardrc
+build
+import
+caps
+html
+log.txt
+log_plain.xml
+log_plain_ext.xml
+rules.xml
+ta.*
+te_tmp
+tmp_raw_log
+tmp_trc_db.xml
+trc-report.html
+ts/doc/doxygen_sqlite3.db
+ts/doc/html
+ts/doxygen.warn
+ts/package.dox
+vg.test.*
+ts/doc/generated

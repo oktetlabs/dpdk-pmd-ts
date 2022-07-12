@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
+<trc_db>
+  <test name="dpdk-pmd-ts" type="package">
+    <objective>DPDK PMD Test Suite</objective>
+    <xi:include href="globals.xml" parse="xml"
+                xmlns:xi="http://www.w3.org/2003/XInclude"/>
+    <iter result="PASSED">
+      <notes/>
+
+      <test name="prologue" type="script" auxiliary="true">
+        <objective/>
+        <notes/>
+        <iter result="PASSED">
+          <arg name="env"/>
+          <notes/>
+        </iter>
+      </test>
+
+      <xi:include href="usecases.xml" parse="xml"
+                  xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+      <xi:include href="xmit.xml" parse="xml"
+                  xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+      <xi:include href="filters.xml" parse="xml"
+                  xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+      <xi:include href="representors.xml" parse="xml"
+                  xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+      <xi:include href="perf.xml" parse="xml"
+                  xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+    </iter>
+  </test>
+</trc_db>

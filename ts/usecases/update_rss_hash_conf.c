@@ -219,11 +219,23 @@ main(int argc, char *argv[])
 
             rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[0]);
             if (rss_hash == packet_hash)
+            {
                 RING("Packet RSS hash matches expected hash value");
+            }
             else if (rss_hash == hash_symmetric)
+            {
                 RING("Packet RSS hash matches symmetric hash value");
+            }
             else
+            {
+                /*
+                 * Zero RSS hash typically means that the hash is not
+                 * actually calculated. Highlight it in test results.
+                 */
+                if (rss_hash == 0)
+                    RING_ARTIFACT("RSS hash value is 0");
                 TEST_VERDICT("Packet RSS hash does not match expected hash value");
+            }
         }
 
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);

@@ -74,7 +74,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare default config and mbuf pool");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     nb_pkts = nb_txd * TEST_PACKETS_TO_DESC_SCALE + 1;
-    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME "-xmit",
                                      MAX(nb_pkts,
                                          TEST_RTE_MEMPOOL_DEF_CACHE << 1),
                                      TEST_RTE_MEMPOOL_DEF_CACHE,
@@ -82,7 +82,6 @@ main(int argc, char *argv[])
                                      TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
                                      TEST_PAYLOAD_LEN,
                                      ethdev_config.socket_id);
-    ethdev_config.mp = mp;
     TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     tx_desc_lim = &ethdev_config.dev_info.tx_desc_lim;

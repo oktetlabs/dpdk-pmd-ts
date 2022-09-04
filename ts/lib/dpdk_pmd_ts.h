@@ -667,6 +667,20 @@ extern uint16_t test_tx_prepare_and_burst(rcf_rpc_server *rpcs,
                                           rpc_rte_mbuf_p *tx_pkts,
                                           uint16_t        nb_pkts);
 
+/**
+ * Wrapper for @b rpc_rte_pktmbuf_pool_create()
+ *
+ * It enforces minimum value restriction in @p data_room_size for AF_XDP.
+ */
+extern rpc_rte_mempool_p  test_rte_pktmbuf_pool_create(
+                                                rcf_rpc_server  *rpcs,
+                                                const char      *name,
+                                                uint32_t         n,
+                                                uint32_t         cache_size,
+                                                uint16_t         priv_size,
+                                                uint16_t         data_room_size,
+                                                int              socket_id);
+
 /** Wrapper for @b tapi_rpc_rte_eth_make_eth_conf(), with test workarounds */
 extern struct tarpc_rte_eth_conf *test_rpc_rte_eth_make_eth_conf(
                                           rcf_rpc_server             *rpcs,

@@ -242,7 +242,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Book a suitable mempool");
     mp_n_mbufs = te_round_up_pow2(nb_tx_queues * burst_size_per_txq + 1);
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, "vlan_txqs_interference",
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, "vlan_txqs_interference",
                                      mp_n_mbufs,
                                      mp_n_mbufs / 2,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

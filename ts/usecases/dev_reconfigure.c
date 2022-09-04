@@ -110,7 +110,7 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_CONFIGURED));
 
-    test_ethdev_config.mp = rpc_rte_pktmbuf_pool_create(iut_rpcs,
+    test_ethdev_config.mp = test_rte_pktmbuf_pool_create(iut_rpcs,
                                                         TEST_PKTS_MEMPOOL_NAME,
                                                         TEST_RTE_MEMPOOL_DEF_SIZE,
                                                         TEST_RTE_MEMPOOL_DEF_CACHE,

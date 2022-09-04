@@ -145,7 +145,7 @@ main(int argc, char *argv[])
         mp_name[0] = 'a' + i;
         mp_name[1] = '\0';
 
-        mp[i] = rpc_rte_pktmbuf_pool_create(iut_rpcs, mp_name, mp_size,
+        mp[i] = test_rte_pktmbuf_pool_create(iut_rpcs, mp_name, mp_size,
                                             TEST_RTE_MEMPOOL_DEF_CACHE,
                                             TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
                                             TEST_RTE_MEMPOOL_DEF_DATA_ROOM,

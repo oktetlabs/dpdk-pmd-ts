@@ -74,7 +74,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare default config and mbuf pool");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     nb_pkts = nb_txd * TEST_PACKETS_TO_DESC_SCALE + 1;
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                      MAX(nb_pkts,
                                          TEST_RTE_MEMPOOL_DEF_CACHE << 1),
                                      TEST_RTE_MEMPOOL_DEF_CACHE,

@@ -207,7 +207,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive all packets");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                         TEST_DEF_QUEUE_NB, mbufs, BURST_SIZE,
+                                         TEST_DEF_QUEUE_NB,
+                                         mbufs, TE_ARRAY_LEN(mbufs),
                                          transmitted, packet_patterns, TRUE));
     received += transmitted;
 

@@ -146,8 +146,8 @@ main(int argc, char *argv[])
               "Check that the first received packet matches the first sent and "
               "the second was dropped");
     CHECK_RC(test_rx_burst_match_pattern_custom_verdicts(
-                iut_rpcs, iut_port->if_index, 0, mbufs, BURST_SIZE, 1,
-                ptrn_with_mtu_sz, TRUE,
+                iut_rpcs, iut_port->if_index, 0, mbufs, TE_ARRAY_LEN(mbufs),
+                1, ptrn_with_mtu_sz, TRUE,
                 NULL,
                 "Packet larger than MTU is unexpectedly received"));
 

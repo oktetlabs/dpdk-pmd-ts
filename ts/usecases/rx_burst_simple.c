@@ -109,7 +109,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packets on @p iut_port");
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index, 0,
-                                          mbufs, BURST_SIZE, nb_pkts);
+                                          mbufs, TE_ARRAY_LEN(mbufs), nb_pkts);
 
     TEST_STEP("Check the number of received packet");
     CHECK_PACKETS_NUM(received, nb_pkts);

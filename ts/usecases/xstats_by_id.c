@@ -81,8 +81,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packets on @p iut_port and check that they match the sent ones");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         mbufs, BURST_SIZE, nb_pkts, ptrn,
-                                         TRUE));
+                                         mbufs, TE_ARRAY_LEN(mbufs),
+                                         nb_pkts, ptrn, TRUE));
 
     MSLEEP(TEST_STATS_UPDATE_WAIT_MS);
 

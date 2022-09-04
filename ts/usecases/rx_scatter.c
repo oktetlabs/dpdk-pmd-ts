@@ -54,7 +54,7 @@ main(int argc, char *argv[])
     uint16_t                               pre_rxq_setup_mtu;
     uint16_t                               iut_mtu;
     uint16_t                               packet_headers_size;
-    int                                    i;
+    unsigned int                           i;
 
     struct test_ethdev_config              test_ethdev_config;
     uint64_t                               offload;
@@ -264,8 +264,8 @@ main(int argc, char *argv[])
         TEST_SUBSTEP("Receive the packet on port @p iut_port and check that "
                      "the received packet matches the sent one.");
         CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                             mbufs, BURST_SIZE, 1,
-                                             ptrn, TRUE));
+                                             mbufs, TE_ARRAY_LEN(mbufs),
+                                             1, ptrn, TRUE));
 
         TEST_SUBSTEP("Get information about the number of segments in "
                      "the mbuf chain.");
@@ -278,7 +278,7 @@ main(int argc, char *argv[])
                          "segments are found in the mbuf chain");
         }
 
-        for (i = 0; i < BURST_SIZE; i++)
+        for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
         {
             rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
             mbufs[i] = RPC_NULL;
@@ -289,7 +289,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < BURST_SIZE; i++)
+    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
 
     TEST_END;

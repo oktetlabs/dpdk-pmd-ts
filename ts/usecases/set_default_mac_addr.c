@@ -125,12 +125,12 @@ main(int argc, char *argv[])
               "Check that the first received packet matches the first sent and "
               "the second was dropped.");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         mbufs, BURST_SIZE,
+                                         mbufs, TE_ARRAY_LEN(mbufs),
                                          1, ptrn_with_new_mac, TRUE));
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < BURST_SIZE; i++)
+    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
 
     TEST_END;

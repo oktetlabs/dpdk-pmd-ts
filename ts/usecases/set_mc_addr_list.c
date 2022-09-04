@@ -153,10 +153,10 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_aggregate_patterns(ptrns, nb_mc_addr, &ptrn));
 
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         mbufs, BURST_SIZE, nb_mc_addr,
+                                         mbufs, TE_ARRAY_LEN(mbufs), nb_mc_addr,
                                          ptrn, TRUE));
 
-    for (i = 0; i < BURST_SIZE; i++)
+    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
     {
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
         mbufs[i] = RPC_NULL;
@@ -181,7 +181,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packets on @p iut_port and check that the packets were dropped");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         mbufs, BURST_SIZE, 0, NULL, TRUE));
+                                         mbufs, TE_ARRAY_LEN(mbufs),
+                                         0, NULL, TRUE));
 
     TEST_STEP("Flush the set of filtered addresses");
     rpc_rte_eth_dev_set_mc_addr_list(iut_rpcs, iut_port->if_index,
@@ -195,12 +196,13 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packets on @p iut_port and check that the packets were dropped");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         mbufs, BURST_SIZE, 0, NULL, TRUE));
+                                         mbufs, TE_ARRAY_LEN(mbufs),
+                                         0, NULL, TRUE));
 
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < BURST_SIZE; i++)
+    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
 
     TEST_END;

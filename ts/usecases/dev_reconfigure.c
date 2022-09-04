@@ -223,7 +223,7 @@ main(int argc, char *argv[])
     for (i = 0; i < nb_rx_queue_reconf; i++)
     {
         CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, i,
-                                             rx_mbufs, BURST_SIZE,
+                                             rx_mbufs, TE_ARRAY_LEN(rx_mbufs),
                                              1, ptrns[i], TRUE));
 
         rpc_rte_pktmbuf_free(iut_rpcs, rx_mbufs[0]);
@@ -284,7 +284,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < BURST_SIZE; i++)
+    for (i = 0; i < TE_ARRAY_LEN(rx_mbufs); i++)
         rpc_rte_pktmbuf_free(iut_rpcs, rx_mbufs[i]);
 
     TEST_END;

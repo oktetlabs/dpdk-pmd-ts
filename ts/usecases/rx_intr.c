@@ -260,7 +260,8 @@ step_do_check_intr(struct scenario_step_context *ctx)
     TEST_SUBSTEP("Check that interrupt was caused or not");
 
     events_received = rpc_rte_epoll_wait(ctx->iut_rpcs, RPC_RTE_EPOLL_PER_THREAD,
-                                         events, BURST_SIZE, TEST_TIMEOUT);
+                                         events, TE_ARRAY_LEN(events),
+                                         TEST_TIMEOUT);
 
     if (!ctx->intr_expected)
     {

@@ -1756,4 +1756,17 @@ extern void test_check_rss_queues(rcf_rpc_server *rpcs, unsigned int port_id,
                 asn_value *ptrn,
                 uint32_t expected_hash, uint16_t expected_queue);
 
+/**
+ * Check RSS hash value provided in mbuf if available.
+ *
+ * @param[in] rpcs              RPC server handle
+ * @param[in] mbuf              Packet buffer handle
+ * @param[in] expected_hash     Expected RSS hash value
+ * @param[in] symmetric_hash    Symmetric RSS hash value
+ */
+extern void test_check_mbuf_rss_hash_value(rcf_rpc_server *rpcs,
+                                           rpc_rte_mbuf_p mbuf,
+                                           uint32_t expected_hash,
+                                           uint32_t symmetric_hash);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

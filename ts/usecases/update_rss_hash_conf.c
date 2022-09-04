@@ -204,39 +204,14 @@ main(int argc, char *argv[])
 
     if (received == 1)
     {
-        uint64_t    ol_flags;
-
         TEST_STEP("Make sure that the packet received matches the packet sent");
         rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, received, NULL,
                                    &matched_num);
         CHECK_MATCHED_PACKETS_NUM(matched_num, 1);
 
         TEST_STEP("Check RSS hash value if it is available");
-        ol_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, mbufs[0]);
-        if ((ol_flags & (1UL << TARPC_RTE_MBUF_F_RX_RSS_HASH)) != 0)
-        {
-            uint32_t    rss_hash;
-
-            rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[0]);
-            if (rss_hash == packet_hash)
-            {
-                RING("Packet RSS hash matches expected hash value");
-            }
-            else if (rss_hash == hash_symmetric)
-            {
-                RING("Packet RSS hash matches symmetric hash value");
-            }
-            else
-            {
-                /*
-                 * Zero RSS hash typically means that the hash is not
-                 * actually calculated. Highlight it in test results.
-                 */
-                if (rss_hash == 0)
-                    RING_ARTIFACT("RSS hash value is 0");
-                TEST_VERDICT("Packet RSS hash does not match expected hash value");
-            }
-        }
+        test_check_mbuf_rss_hash_value(iut_rpcs, mbufs[0],
+                                       packet_hash, hash_symmetric);
 
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 

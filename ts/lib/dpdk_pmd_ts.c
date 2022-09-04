@@ -6167,3 +6167,36 @@ test_check_rss_queues(rcf_rpc_server *rpcs, unsigned int port_id,
         }
     }
 }
+
+void
+test_check_mbuf_rss_hash_value(rcf_rpc_server *rpcs, rpc_rte_mbuf_p mbuf,
+                               uint32_t expected_hash, uint32_t symmetric_hash)
+{
+    uint64_t ol_flags;
+
+    ol_flags = rpc_rte_pktmbuf_get_flags(rpcs, mbuf);
+    if ((ol_flags & (1UL << TARPC_RTE_MBUF_F_RX_RSS_HASH)) != 0)
+    {
+        uint32_t    rss_hash;
+
+        rss_hash = rpc_rte_pktmbuf_get_rss_hash(rpcs, mbuf);
+        if (rss_hash == expected_hash)
+        {
+            RING("Packet RSS hash matches expected hash value");
+        }
+        else if (rss_hash == symmetric_hash)
+        {
+            RING("Packet RSS hash matches symmetric hash value");
+        }
+        else
+        {
+            /*
+             * Zero RSS hash typically means that the hash is not
+             * actually calculated. Highlight it in test results.
+             */
+            if (rss_hash == 0)
+                RING_ARTIFACT("RSS hash value is 0");
+            TEST_VERDICT("Packet RSS hash does not match expected hash value");
+        }
+    }
+}

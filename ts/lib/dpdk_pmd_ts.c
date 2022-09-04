@@ -647,8 +647,7 @@ test_setup_ethdev_initialized(struct test_ethdev_config *test_ethdev_config)
      * which often commence by looking at certain fields in this structure.
      *
      * Carry out a dummy configuration call to make RTE vdev inherit valid
-     * device information from its active slaves, retrieve the information
-     * and close vdev so that it becomes ready for bona fide configuration.
+     * device information from its back-ends and extract the information.
      */
     ret = strncmp(iut_port_tmp->if_name, prefix_tmp, strlen(prefix_tmp));
     if (ret == 0)
@@ -665,12 +664,6 @@ test_setup_ethdev_initialized(struct test_ethdev_config *test_ethdev_config)
     /* Update information about Ethernet device */
     rpc_rte_eth_dev_info_get(test_ethdev_config->rpcs, test_ethdev_config->port_id,
                              &test_ethdev_config->dev_info);
-
-    if (ret == 0)
-    {
-        rpc_rte_eth_dev_close(test_ethdev_config->rpcs,
-                              test_ethdev_config->port_id);
-    }
 }
 
 static void

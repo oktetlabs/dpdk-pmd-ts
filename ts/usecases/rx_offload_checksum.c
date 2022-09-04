@@ -134,10 +134,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_conf              eth_conf;
     asn_value                             *pattern = NULL;
     asn_value                             *pattern_bc = NULL;
-    rpc_rte_mbuf_p                         burst[1 << 1] = {
-                                               RPC_NULL,
-                                               RPC_NULL,
-                                           };
+    rpc_rte_mbuf_p                         burst[BURST_SIZE] = {};
     struct tarpc_rte_pktmbuf_packet_type   pt;
     struct tarpc_rte_pktmbuf_packet_type   pt_bc;
     uint64_t                               m_flags;

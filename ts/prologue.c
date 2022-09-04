@@ -20,6 +20,7 @@
 #endif
 
 #include "te_string.h"
+#include "te_defs.h"
 
 #include "tapi_cfg_base.h"
 #include "tapi_cfg_cpu.h"
@@ -391,6 +392,35 @@ prepare_vfio_module(const char *ta, void *cookie)
 }
 
 static te_errno
+detect_af_xdp(const char  *ta,
+              te_bool     *detectedp)
+{
+    cfg_handle    *handles = NULL;
+    unsigned int   count;
+    te_errno       rc;
+
+    *detectedp = FALSE;
+
+    rc = cfg_find_pattern_fmt(&count, &handles,
+                              "/local:%s/dpdk:/vdev:net_af_xdp*", ta);
+    if (rc != 0)
+    {
+        ERROR("Cannot query af_xdp in vdev registry");
+        goto exit;
+    }
+
+    if (count == 0)
+        goto exit;
+
+    *detectedp = TRUE;
+
+exit:
+    free(handles);
+
+    return rc;
+}
+
+static te_errno
 prepare_af_xdp(rcf_rpc_server  *rpcs)
 {
     te_string      iface_oid = TE_STRING_INIT;
@@ -459,14 +489,6 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
     if (rc != 0)
     {
         ERROR("Cannot get OID of PCI FN of sub-device of af_xdp port");
-        goto exit;
-    }
-
-    rc = tapi_cfg_net_bind_driver_by_node(NET_NODE_TYPE_NUT,
-                                          NET_DRIVER_TYPE_NET);
-    if (rc != 0)
-    {
-        ERROR("Cannot bind IUT to linux net driver");
         goto exit;
     }
 
@@ -555,6 +577,7 @@ main(int argc, char **argv)
 #undef TEST_END_SPECIFIC
 #define TEST_END_SPECIFIC
 
+    te_bool           xdp_detected = FALSE;
     unsigned int      service_core_count;
     rcf_rpc_server   *iut_rpcs = NULL;
     rcf_rpc_server   *tst_rpcs = NULL;
@@ -583,10 +606,19 @@ main(int argc, char **argv)
     if (rc != 0)
         TEST_VERDICT("Failed to bind net driver on agent net node");
 
-    rc = tapi_cfg_net_bind_driver_by_node(NET_NODE_TYPE_NUT,
-                                          NET_DRIVER_TYPE_DPDK);
+    /*
+     * There's no RPC server to query the agent name from at this
+     * stage, so pass a literal constant, which ought to be valid.
+     */
+    rc = detect_af_xdp("DPDK", &xdp_detected);
     if (rc != 0)
-        TEST_VERDICT("Failed to bind DPDK driver on nut net node");
+        TEST_VERDICT("Failed to detect AF_XDP configuration on agent DPDK");
+
+    rc = tapi_cfg_net_bind_driver_by_node(NET_NODE_TYPE_NUT,
+                                          xdp_detected ? NET_DRIVER_TYPE_NET :
+                                                         NET_DRIVER_TYPE_DPDK);
+    if (rc != 0)
+        TEST_VERDICT("Failed to bind driver on nut net node");
 
     /*
      * If a net driver was binded, synchronize configuration tree to discover

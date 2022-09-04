@@ -36,6 +36,7 @@
 static void
 receive_and_match(unsigned int nb_rxq, rcf_rpc_server *iut_rpcs,
                   unsigned int if_index, rpc_rte_mbuf_p *mbufs,
+                  unsigned int n_mbufs,
                   asn_value *ptrn, unsigned int rxq_runtime_setup_idx)
 {
     unsigned int i;
@@ -48,7 +49,7 @@ receive_and_match(unsigned int nb_rxq, rcf_rpc_server *iut_rpcs,
             continue;
 
         received = test_rx_burst_with_retries(iut_rpcs, if_index, i, mbufs,
-                                              1, 1);
+                                              n_mbufs, 1);
         if (received == 1)
             break;
     }
@@ -293,15 +294,15 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                         tst_if->if_name, tmpl, NULL, &ptrn));
 
-    receive_and_match(nb_rxq, iut_rpcs, iut_port->if_index, mbufs, ptrn,
-                      rxq_runtime_setup_idx);
+    receive_and_match(nb_rxq, iut_rpcs, iut_port->if_index, mbufs,
+                      TE_ARRAY_LEN(mbufs), ptrn, rxq_runtime_setup_idx);
     asn_free_value(ptrn);
 
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                 tst_if->if_name, tmpl_symm, NULL, &ptrn_symm));
 
-    receive_and_match(nb_rxq, iut_rpcs, iut_port->if_index, mbufs, ptrn_symm,
-                      rxq_runtime_setup_idx);
+    receive_and_match(nb_rxq, iut_rpcs, iut_port->if_index, mbufs,
+                      TE_ARRAY_LEN(mbufs), ptrn_symm, rxq_runtime_setup_idx);
     asn_free_value(ptrn_symm);
 
     TEST_STEP("Setup the @p rxq_runtime_setup_idx queue");
@@ -331,7 +332,8 @@ main(int argc, char *argv[])
                                         tst_if->if_name, tmpl, NULL, &ptrn));
 
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                          rxq_runtime_setup_idx, mbufs, 1, 1);
+                                          rxq_runtime_setup_idx, mbufs,
+                                          TE_ARRAY_LEN(mbufs), 1);
     if (received == 1)
     {
         rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, 1, NULL,
@@ -344,7 +346,8 @@ main(int argc, char *argv[])
                                 tst_if->if_name, tmpl_symm, NULL, &ptrn_symm));
 
         CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                             rxq_runtime_setup_idx, mbufs, 1,
+                                             rxq_runtime_setup_idx, mbufs,
+                                             TE_ARRAY_LEN(mbufs),
                                              1, ptrn_symm, TRUE));
     }
     rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);

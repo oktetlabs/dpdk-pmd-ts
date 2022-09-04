@@ -132,8 +132,8 @@ main(int argc, char *argv[])
     TEST_STEP("Try to receive the packet on @p expected_queue "
               "Make sure that the packet received matches the packet sent");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                         expected_queue, mbufs, 1,
-                                         1, ptrn, TRUE));
+                                         expected_queue, mbufs,
+                                         TE_ARRAY_LEN(mbufs), 1, ptrn, TRUE));
 
     rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 

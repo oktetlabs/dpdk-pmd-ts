@@ -109,7 +109,7 @@ main(int argc, char *argv[])
     tarpc_rte_flow_query_data            rule_counter_query;
     struct test_transceiver             *trsc_iut = NULL;
     struct test_transceiver             *trsc_tst = NULL;
-    rpc_rte_mbuf_p                       m = RPC_NULL;
+    rpc_rte_mbuf_p                       mbufs[BURST_SIZE] = {};
     uint32_t                             match_fields;
     struct tarpc_rte_flow_tunnel         tunnel = {};
     uint64_t                             metadata;
@@ -169,21 +169,21 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                                 tst_if->if_name, tmpl, NULL,
                                                 &ptrn));
-    test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0, &m, 1, 1, ptrn, TRUE);
-    if (m == RPC_NULL)
-        TEST_STOP;
+    test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0,
+                                mbufs, TE_ARRAY_LEN(mbufs), 1, ptrn, TRUE);
 
     RPC_AWAIT_ERROR(iut_rpcs);
 
     TEST_STEP("Make sure that the packet is not recognised as a tunnel one");
-    rc = rpc_rte_flow_get_restore_info(iut_rpcs, tec.port_id, m, &info, NULL);
+    rc = rpc_rte_flow_get_restore_info(iut_rpcs, tec.port_id, mbufs[0],
+                                       &info, NULL);
     if (rc == 0)
         TEST_VERDICT("Unexpectedly, the packet is recognised as a tunnel one");
     else if (rc == -TE_RC(TE_RPC, TE_ENOSYS))
         TEST_SKIP("Flow tunnel offload is unsupported");
 
-    rpc_rte_pktmbuf_free(iut_rpcs, m);
-    m = RPC_NULL;
+    rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
+    mbufs[0] = RPC_NULL;
 
     TEST_STEP("Prepare DPDK representation of the TUNNEL rule");
     tapi_rte_flow_make_attr(iut_rpcs, tunnel_rule_group_id, tunnel_rule_prio,
@@ -225,13 +225,11 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                                 tst_if->if_name, tmpl, NULL,
                                                 &ptrn));
-    test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0, &m, 1, 1,
-                                NULL, FALSE);
-    if (m == RPC_NULL)
-        TEST_STOP;
+    test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0, mbufs,
+                                TE_ARRAY_LEN(mbufs), 1, NULL, FALSE);
 
     TEST_STEP("Validate tunnel restore info operation for the packet");
-    rpc_rte_flow_get_restore_info(iut_rpcs, tec.port_id, m, &info, NULL);
+    rpc_rte_flow_get_restore_info(iut_rpcs, tec.port_id, mbufs[0], &info, NULL);
     if ((info.flags & (1ULL << TARPC_RTE_FLOW_RESTORE_INFO_TUNNEL_BIT)) == 0)
         TEST_VERDICT("Tunnel restore info does not indicate flag TUNNEL");
     if (memcmp(&info.tunnel, &tunnel, sizeof(tunnel)) != 0)
@@ -247,7 +245,7 @@ main(int argc, char *argv[])
     {
         ptrn = test_decap_tmpl_ptrn_pdus(ptrn, "0.pdus");
     }
-    rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, &m, 1, NULL, &ret);
+    rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, 1, NULL, &ret);
     if (ret != 1)
         TEST_VERDICT("Packet data mismatch");
 
@@ -348,8 +346,8 @@ cleanup:
     rpc_rte_free_flow_rule(iut_rpcs, tunnel_rule_attr, tunnel_rule_ptrn,
                            tunnel_rule_acts_app);
     rpc_rte_free_flow_rule(iut_rpcs, RPC_NULL, RPC_NULL, tunnel_rule_act_count);
-    if (m != RPC_NULL)
-        rpc_rte_pktmbuf_free(iut_rpcs, m);
+    if (mbufs[0] != RPC_NULL)
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 
     TEST_END;
 }

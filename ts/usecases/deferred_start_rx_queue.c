@@ -199,7 +199,8 @@ main(int argc, char *argv[])
               "Check that @p iut_port hasn't received any packets on "
               "@p deferred_queue queue");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                         deferred_queue, mbufs, 1,
+                                         deferred_queue, mbufs,
+                                         TE_ARRAY_LEN(mbufs),
                                          0, NULL, TRUE));
 
     TEST_STEP("Start @p deferred_queue RX queue");
@@ -207,7 +208,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Check that the @p deferred_queue RX queue have no packets received");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                         deferred_queue, mbufs, 1,
+                                         deferred_queue, mbufs,
+                                         TE_ARRAY_LEN(mbufs),
                                          0, NULL, TRUE));
 
     TEST_STEP("Transmit and sniff packet from @p tst_if");
@@ -216,7 +218,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packet on @p deferred_queue queue");
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                          deferred_queue, mbufs, 1, 1);
+                                          deferred_queue, mbufs,
+                                          TE_ARRAY_LEN(mbufs), 1);
 
     TEST_STEP("If the packet has not hit the target queue, consider symmetric RSS hash. "
               "Change the template so that it will produce a packet hitting the target "
@@ -246,7 +249,8 @@ main(int argc, char *argv[])
                                         tst_if->if_name, tmpl, NULL, &ptrn));
 
         CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                             deferred_queue, mbufs, 1,
+                                             deferred_queue, mbufs,
+                                             TE_ARRAY_LEN(mbufs),
                                              1, ptrn, TRUE));
     }
     else

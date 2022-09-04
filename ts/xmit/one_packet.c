@@ -301,7 +301,10 @@ main(int argc, char *argv[])
                                      TEST_RTE_MEMPOOL_DEF_SIZE,
                                      TEST_RTE_MEMPOOL_DEF_CACHE,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                     UINT16_MAX, ec.socket_id);
+                                     MAX(TEST_DEV_HEADER_SIZE +
+                                         MAX(payload_len, tso_segsz),
+                                         ETHER_HDR_LEN + ETHER_DATA_LEN),
+                                     ec.socket_id);
     ec.mp = mp;
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_RX_SETUP_DONE));
 

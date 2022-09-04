@@ -297,7 +297,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare TEST_ETHDEV_RX_SETUP_DONE state");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
 
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                      TEST_RTE_MEMPOOL_DEF_SIZE,
                                      TEST_RTE_MEMPOOL_DEF_CACHE,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

@@ -129,7 +129,7 @@ main(int argc, char *argv[])
         TEST_VERDICT("'rte_eth_dev_configure' operation failed (%d)", rc);
 
     test_ethdev_config.mp =
-        rpc_rte_pktmbuf_pool_create(iut_rpcs,
+        test_rte_pktmbuf_pool_create(iut_rpcs,
                                     TEST_PKTS_MEMPOOL_NAME,
                                     TEST_RTE_MEMPOOL_DEF_SIZE,
                                     TEST_RTE_MEMPOOL_DEF_CACHE,

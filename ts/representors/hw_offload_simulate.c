@@ -153,7 +153,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Create a big enough mempool for PF, VF and representor ports");
 
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                      TEST_RTE_MEMPOOL_DEF_SIZE,
                                      TEST_RTE_MEMPOOL_DEF_CACHE,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

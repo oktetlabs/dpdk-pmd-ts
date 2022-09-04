@@ -189,7 +189,7 @@ main(int argc, char *argv[])
     hash_functions &= ec.dev_info.flow_type_rss_offloads;
     test_setup_rss_configuration(hash_functions, FALSE, rss_conf);
 
-    ec.mp = rpc_rte_pktmbuf_pool_create(iut_rpcs,
+    ec.mp = test_rte_pktmbuf_pool_create(iut_rpcs,
                                         TEST_PKTS_MEMPOOL_NAME,
                                         TEST_RTE_MEMPOOL_DEF_SIZE,
                                         TEST_RTE_MEMPOOL_DEF_CACHE,

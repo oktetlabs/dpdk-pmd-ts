@@ -141,7 +141,7 @@ main(int argc, char *argv[])
         WARN_VERDICT("Bogus status for the non-existing descriptor");
 
     TEST_STEP("Prepare sufficient mempool");
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, "tx" TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, "tx" TEST_PKTS_MEMPOOL_NAME,
                                      MAX(nb_txd,
                                          TEST_RTE_MEMPOOL_DEF_CACHE << 1),
                                      TEST_RTE_MEMPOOL_DEF_CACHE,

@@ -119,7 +119,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state.");
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_CONFIGURED));
 
-    tec.mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    tec.mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                          TEST_RTE_MEMPOOL_DEF_SIZE,
                                          TEST_RTE_MEMPOOL_DEF_CACHE,
                                          TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

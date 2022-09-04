@@ -71,7 +71,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Setup Rx queue with the highest free threshold possible");
     nb_rxd = ethdev_config.dev_info.rx_desc_lim.nb_min;
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                      MAX(nb_rxd,
                                          TEST_RTE_MEMPOOL_DEF_CACHE << 1),
                                      TEST_RTE_MEMPOOL_DEF_CACHE,

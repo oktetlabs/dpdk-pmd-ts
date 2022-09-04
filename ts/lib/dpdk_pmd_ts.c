@@ -534,6 +534,38 @@ tapi_rte_setup_tx_queues(rcf_rpc_server *rpcs,
     }
 }
 
+rpc_rte_mempool_p
+test_rte_pktmbuf_pool_create(rcf_rpc_server  *rpcs,
+                             const char      *name,
+                             uint32_t         n,
+                             uint32_t         cache_size,
+                             uint16_t         priv_size,
+                             uint16_t         data_room_size,
+                             int              socket_id)
+{
+    unsigned int   handle_count;
+    cfg_handle    *handles;
+    te_errno       rc;
+
+    rc = cfg_find_pattern_fmt(&handle_count, &handles,
+                              "/local:%s/dpdk:/vdev:net_af_xdp*", rpcs->ta);
+    if (rc != 0)
+    {
+        ERROR("Cannot query af_xdp in vdev registry: %r", rc);
+        return RPC_NULL;
+    }
+
+    free(handles);
+
+    if (handle_count != 0)
+        data_room_size = MAX(data_room_size, 2048 /* AF_XDP constraint */);
+
+    return rpc_rte_pktmbuf_pool_create(rpcs, name, n, cache_size, priv_size,
+                                       MIN(TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD +
+                                           data_room_size, UINT16_MAX),
+                                       socket_id);
+}
+
 static void
 tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                          struct tarpc_rte_eth_dev_info *dev_info,
@@ -556,7 +588,7 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
         TEST_VERDICT("The number of rx queues is exceeded.");
 
     if (*mp == RPC_NULL)
-        *mp = rpc_rte_pktmbuf_pool_create(
+        *mp = test_rte_pktmbuf_pool_create(
                   rpcs, TEST_PKTS_MEMPOOL_NAME,
                   MAX(nb_rx_queue * rx_descs, TEST_RTE_MEMPOOL_DEF_CACHE * 2) +
                   TEST_RTE_MEMPOOL_DEF_EXTRA,
@@ -5633,7 +5665,7 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
 
     CHECK_RC(rpc_rte_eth_tx_queue_setup(tst_rpcs, port_id, 0, 0, sid, NULL));
 
-    mp = rpc_rte_pktmbuf_pool_create(tst_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp = test_rte_pktmbuf_pool_create(tst_rpcs, TEST_PKTS_MEMPOOL_NAME,
                      MAX(framecnt, TEST_RTE_MEMPOOL_DEF_CACHE * 2),
                      TEST_RTE_MEMPOOL_DEF_CACHE, TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
                      framesz + TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD, sid);

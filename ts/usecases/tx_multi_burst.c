@@ -98,7 +98,7 @@ main(int argc, char *argv[])
     mbufs = tapi_calloc(nb_queues, sizeof(*mbufs));
 
     mp_n_mbufs = te_round_up_pow2(nb_queues * nb_pkts + 1);
-    mp = rpc_rte_pktmbuf_pool_create(iut_rpcs, "tx_pool",
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, "tx_pool",
                                      mp_n_mbufs,
                                      mp_n_mbufs / 2,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

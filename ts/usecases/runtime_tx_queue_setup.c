@@ -110,7 +110,7 @@ main(int argc, char *argv[])
 
     ec.nb_tx_queue = nb_txq;
 
-    ec.mp = rpc_rte_pktmbuf_pool_create(iut_rpcs,
+    ec.mp = test_rte_pktmbuf_pool_create(iut_rpcs,
                                         TEST_PKTS_MEMPOOL_NAME,
                                         TEST_RTE_MEMPOOL_DEF_SIZE,
                                         TEST_RTE_MEMPOOL_DEF_CACHE,

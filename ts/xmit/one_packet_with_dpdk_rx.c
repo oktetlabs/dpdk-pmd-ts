@@ -226,7 +226,7 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_CONFIGURED));
 
     TEST_STEP("Prepare state TEST_ETHDEV_RX_SETUP_DONE");
-    mp_iut = rpc_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+    mp_iut = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
                                          TEST_RTE_MEMPOOL_DEF_SIZE,
                                          TEST_RTE_MEMPOOL_DEF_CACHE,
                                          TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
@@ -305,7 +305,7 @@ main(int argc, char *argv[])
                            UINT16_MAX);
     mp_tst_elt_count = TE_DIV_ROUND_UP(m_tx_size, mp_tst_data_room -
                                        TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD);
-    mp_tst = rpc_rte_pktmbuf_pool_create(tst_rpcs, "clone-mbuf-pool",
+    mp_tst = test_rte_pktmbuf_pool_create(tst_rpcs, "clone-mbuf-pool",
                                          mp_tst_elt_count, 0,
                                          TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
                                          mp_tst_data_room, 0);

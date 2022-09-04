@@ -52,6 +52,7 @@ main(int argc, char *argv[])
     rpc_rte_mbuf_p                         mbufs[BURST_SIZE] = {};
 
     uint32_t                               packet_hash;
+    uint32_t                               hash_symmetric;
     unsigned int                           nb_rx_queues;
     uint64_t                               rss_hash_protos;
     div_t                                  reta_group;
@@ -89,6 +90,14 @@ main(int argc, char *argv[])
                                       iut_rpcs, iut_port->if_index, &eth_conf);
     test_ethdev_config.nb_rx_queue = nb_rx_queues;
     test_ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
+
+    TEST_STEP("Enable RSS_HASH offload if it is supported");
+    if ((test_ethdev_config.dev_info.rx_offload_capa &
+         (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT)) != 0)
+    {
+        test_ethdev_config.eth_conf->rxmode.offloads |=
+            (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT);
+    }
 
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
@@ -167,7 +176,7 @@ main(int argc, char *argv[])
               "and the new hash key");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf.rss_hf, rss_conf.rss_key.rss_key_val,
-                tmpl, &packet_hash, NULL));
+                tmpl, &packet_hash, &hash_symmetric));
 
     TEST_STEP("Determine the queue index by means of the hash");
     reta_group = div(packet_hash % reta_size, RPC_RTE_RETA_GROUP_SIZE);
@@ -185,12 +194,6 @@ main(int argc, char *argv[])
     TEST_STEP("If the packet has not hit the target queue, consider symmetric RSS hash.");
     if (received == 0)
     {
-        uint32_t hash_symmetric;
-
-        CHECK_RC(test_calc_hash_by_tmpl_and_hf(rss_conf.rss_hf,
-                                               rss_conf.rss_key.rss_key_val,
-                                               tmpl, NULL, &hash_symmetric));
-
         reta_group = div(hash_symmetric % reta_size, RPC_RTE_RETA_GROUP_SIZE);
         expected_queue = reta_conf[reta_group.quot].reta[reta_group.rem];
 
@@ -201,10 +204,27 @@ main(int argc, char *argv[])
 
     if (received == 1)
     {
+        uint64_t    ol_flags;
+
         TEST_STEP("Make sure that the packet received matches the packet sent");
         rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, received, NULL,
                                    &matched_num);
         CHECK_MATCHED_PACKETS_NUM(matched_num, 1);
+
+        TEST_STEP("Check RSS hash value if it is available");
+        ol_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, mbufs[0]);
+        if ((ol_flags & (1UL << TARPC_RTE_MBUF_F_RX_RSS_HASH)) != 0)
+        {
+            uint32_t    rss_hash;
+
+            rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[0]);
+            if (rss_hash == packet_hash)
+                RING("Packet RSS hash matches expected hash value");
+            else if (rss_hash == hash_symmetric)
+                RING("Packet RSS hash matches symmetric hash value");
+            else
+                TEST_VERDICT("Packet RSS hash does not match expected hash value");
+        }
 
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 

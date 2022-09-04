@@ -6144,6 +6144,12 @@ test_check_rss_queues(rcf_rpc_server *rpcs, unsigned int port_id,
                 rss_hash = rpc_rte_pktmbuf_get_rss_hash(rpcs, mbufs[i]);
                 if (rss_hash == expected_hash)
                     RING("Packet %u RSS hash matches expected hash value", i);
+                /*
+                 * Zero RSS hash typically means that the hash is not
+                 * actually calculated. Highlight it in test results.
+                 */
+                else if (rss_hash == 0)
+                    RING_ARTIFACT("RSS hash value is 0");
                 else
                     RING("Packet %u RSS hash does not match expected hash value", i);
 

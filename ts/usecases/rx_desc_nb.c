@@ -172,10 +172,7 @@ main(int argc, char *argv[])
     CHECK_NOT_NULL(mbufs);
     TEST_STEP("Receive packets on @p iut_port");
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                          TEST_RXQ, mbufs, nb_rxd, nb_rxd);
-    /* See if there are extra packets exceeding Rx descriptors number */
-    received += rpc_rte_eth_rx_burst(iut_rpcs, iut_port->if_index, TEST_RXQ,
-                                     mbufs + received, nb_packets - received);
+                                          TEST_RXQ, mbufs, nb_packets, nb_rxd);
     if (received > nb_rxd)
         TEST_VERDICT("%u received packets are greater than setup Rx ring size",
                      received);

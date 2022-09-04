@@ -41,7 +41,7 @@ main(int argc, char *argv[])
 
     struct test_ethdev_config             ethdev_config;
     asn_value                            *pattern = NULL;
-    rpc_rte_mbuf_p                        m = RPC_NULL;
+    rpc_rte_mbuf_p                        mbufs[BURST_SIZE] = {};
     struct tarpc_rte_pktmbuf_packet_type  pt;
     uint32_t                              pt_mask;
     int                                   supp_count;
@@ -82,11 +82,12 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive the packet on port @p iut_port and check that the "
               "received packet matches the sent one");
-    CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0, &m, 1,
+    CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
+                                         mbufs, TE_ARRAY_LEN(mbufs),
                                          1, pattern, TRUE));
 
     TEST_STEP("Get packet type from the received mbuf");
-    rpc_rte_pktmbuf_get_packet_type(iut_rpcs, m, &pt);
+    rpc_rte_pktmbuf_get_packet_type(iut_rpcs, mbufs[0], &pt);
 
     TEST_STEP("Get supported packet types");
     pt_mask = TARPC_RTE_PTYPE_ALL_MASK;
@@ -131,8 +132,8 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    if (m != RPC_NULL)
-        rpc_rte_pktmbuf_free(iut_rpcs, m);
+    if (mbufs[0] != RPC_NULL)
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 
     TEST_END;
 }

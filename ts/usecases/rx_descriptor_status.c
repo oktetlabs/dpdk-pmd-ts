@@ -47,7 +47,7 @@ main(int argc, char *argv[])
     uint16_t                     nb_rxd_eff;
     struct tarpc_rte_eth_rxconf  rxq_config;
     int                          descriptor_status;
-    rpc_rte_mbuf_p               mbuf;
+    rpc_rte_mbuf_p               mbufs[BURST_SIZE] = {};
     unsigned int                 i;
     struct tarpc_rte_eth_rxq_info rx_qinfo;
 
@@ -181,8 +181,9 @@ main(int argc, char *argv[])
 
     TEST_STEP("Grab the packet from the ring");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         &mbuf, 1, 1, NULL, TRUE));
-    rpc_rte_pktmbuf_free(iut_rpcs, mbuf);
+                                         mbufs, TE_ARRAY_LEN(mbufs),
+                                         1, NULL, TRUE));
+    rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 
     TEST_STEP("Check that the first descriptor is now exposed to the HW");
     if (rpc_rte_eth_rx_descriptor_status(iut_rpcs, iut_port->if_index, 0, 0) !=

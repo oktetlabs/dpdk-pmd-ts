@@ -76,7 +76,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_conf              eth_conf;
     asn_value                             *pattern = NULL;
     receive_transform                      rx_transform = {0};
-    rpc_rte_mbuf_p                         m = RPC_NULL;
+    rpc_rte_mbuf_p                         mbufs[BURST_SIZE] = {};
     uint64_t                               m_flags;
     uint16_t                               vlan_tci = 0;
     uint16_t                               outer_vlan_tci = 0;
@@ -186,10 +186,11 @@ main(int argc, char *argv[])
 
     TEST_STEP("Receive packets on @p iut_port and match the pattern");
     CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, 0,
-                                         &m, BURST_SIZE, 1, pattern, TRUE));
+                                         mbufs, TE_ARRAY_LEN(mbufs),
+                                         1, pattern, TRUE));
 
     TEST_STEP("Obtain mbuf flags and check them");
-    m_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, m);
+    m_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, mbufs[0]);
 
 #define PENDING_FAIL(_msg)   \
     do {                     \
@@ -225,7 +226,7 @@ main(int argc, char *argv[])
     {
         if (rx_transform.effects & RX_XFRM_EFFECT_VLAN_TCI)
         {
-            vlan_tci = rpc_rte_pktmbuf_get_vlan_tci(iut_rpcs, m);
+            vlan_tci = rpc_rte_pktmbuf_get_vlan_tci(iut_rpcs, mbufs[0]);
             if (rx_transform.vlan_tci != vlan_tci)
                 PENDING_FAIL("Extracted VLAN TCI is invalid");
         }
@@ -239,7 +240,8 @@ main(int argc, char *argv[])
     {
         if (rx_transform.effects & RX_XFRM_EFFECT_OUTER_VLAN_TCI)
         {
-            outer_vlan_tci = rpc_rte_pktmbuf_get_vlan_tci_outer(iut_rpcs, m);
+            outer_vlan_tci = rpc_rte_pktmbuf_get_vlan_tci_outer(iut_rpcs,
+                                                                mbufs[0]);
             if (rx_transform.outer_vlan_tci != outer_vlan_tci)
                 PENDING_FAIL("Extracted outer VLAN TCI is invalid");
         }
@@ -369,8 +371,8 @@ main(int argc, char *argv[])
         TEST_SUCCESS;
 
 cleanup:
-    if (m != RPC_NULL)
-        rpc_rte_pktmbuf_free(iut_rpcs, m);
+    if (mbufs[0] != RPC_NULL)
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 
     TEST_END;
 }

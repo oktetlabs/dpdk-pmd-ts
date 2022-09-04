@@ -180,7 +180,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Try to receive the packet on @p expected_queue");
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                          expected_queue, mbufs, 1, 1);
+                                          expected_queue, mbufs,
+                                          TE_ARRAY_LEN(mbufs), 1);
 
     TEST_STEP("If the packet has not hit the target queue, consider symmetric RSS hash.");
     if (received == 0)
@@ -196,7 +197,8 @@ main(int argc, char *argv[])
         expected_queue = reta_conf[reta_group.quot].reta[reta_group.rem];
 
         received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                              expected_queue, mbufs, 1, 1);
+                                              expected_queue, mbufs,
+                                              TE_ARRAY_LEN(mbufs), 1);
     }
 
     CHECK_PACKETS_NUM(received, 1);

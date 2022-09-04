@@ -113,13 +113,14 @@ main(int argc, char *argv[])
         CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,           \
                                 tst_if->if_name, _tmpl, NULL, &__ptrn));       \
                                                                                \
-        rc = test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,         \
-                                             _queue, mbufs, BURST_SIZE,        \
+        rc = test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index, _queue, \
+                                             mbufs, TE_ARRAY_LEN(mbufs),       \
                                              _packet_expected, __ptrn, TRUE);  \
         if (rc == TE_EFAIL) {                                                  \
             CHECK_RC(test_rx_burst_match_pattern_custom_verdicts(iut_rpcs,     \
-                            iut_port->if_index, TEST_DEF_QUEUE_NB, mbufs,      \
-                            BURST_SIZE, _packet_expected, __ptrn, TRUE,        \
+                            iut_port->if_index, TEST_DEF_QUEUE_NB,             \
+                            mbufs, TE_ARRAY_LEN(mbufs),                        \
+                            _packet_expected, __ptrn, TRUE,                    \
                             "There are no packets on default queue",           \
                             "Unexpected packets on default queue"));           \
                                                                                \
@@ -137,7 +138,8 @@ main(int argc, char *argv[])
         {                                                                      \
             CHECK_RC(test_rx_burst_match_pattern_custom_verdicts(              \
                         iut_rpcs, iut_port->if_index, TEST_DEF_QUEUE_NB,       \
-                        &mbufs[received], BURST_SIZE - received,               \
+                        &mbufs[received],                                      \
+                        TE_ARRAY_LEN(mbufs) - received,                        \
                         _packet_expected, __ptrn, TRUE,                        \
                         "Duplicate packet is not received", NULL));            \
             received += _packet_expected;                                      \

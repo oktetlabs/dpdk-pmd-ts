@@ -1737,4 +1737,23 @@ extern void test_wait_stats_update();
 extern te_bool test_desc_nb_violates_limits(unsigned int desc_nb,
                                  const struct tarpc_rte_eth_desc_lim *desc_lim);
 
+/**
+ * Collect diagnostcs in the case of no packet delivery to the expected
+ * queue in accordance with RSS settings.
+ *
+ * @param[in] rpcs              RPC server handle
+ * @param[in] port_id           Port identifier
+ * @param[in] nb_rx_queues      Number of Rx queues
+ * @param[in] reta_size         Redirection table size
+ * @param[in] reta_conf         Redirection table
+ * @param[in] ptrn              Expected packet
+ * @param[in] expected_hash     Expected RSS hash value
+ * @param[in] expected_queue    Expected Rx queues
+ */
+extern void test_check_rss_queues(rcf_rpc_server *rpcs, unsigned int port_id,
+                uint16_t nb_rx_queues, uint16_t reta_size,
+                const struct tarpc_rte_eth_rss_reta_entry64 *reta_conf,
+                asn_value *ptrn,
+                uint32_t expected_hash, uint16_t expected_queue);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

@@ -150,65 +150,10 @@ main(int argc, char *argv[])
     }
     else
     {
-        uint16_t qid;
-
-        for (qid = 0; qid < nb_rx_queues; ++qid)
-        {
-            uint16_t nb_rx;
-            uint16_t i;
-
-            if (qid == expected_queue)
-                continue;
-
-            nb_rx = rpc_rte_eth_rx_burst(iut_rpcs, iut_port->if_index, qid,
-                                         mbufs, TE_ARRAY_LEN(mbufs));
-            if (nb_rx != 0)
-            {
-                unsigned int ret;
-
-                if (nb_rx != 1)
-                    ERROR("Too many packets received from unexpected queue");
-
-                rc = tapi_rte_mbuf_match_pattern_seq(iut_rpcs, ptrn,
-                                                     mbufs, nb_rx, NULL, &ret);
-                if (rc != 0)
-                {
-                    ERROR("Failed to match packet received from unexpected queue");
-                }
-                else if (ret == 0)
-                {
-                    ERROR("Unexpected packets from queue %u", qid);
-                }
-            }
-            for (i = 0; i < nb_rx; ++i)
-            {
-                uint64_t    ol_flags;
-
-                ol_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, mbufs[i]);
-                if ((ol_flags & (1UL << TARPC_RTE_MBUF_F_RX_RSS_HASH)) != 0)
-                {
-                    uint32_t    rss_hash;
-                    uint16_t    rss_qid;
-
-                    rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[i]);
-                    if (rss_hash == packet_hash)
-                        RING("Packet %u RSS hash matches expected hash value", i);
-                    else
-                        RING("Packet %u RSS hash does not match expected hash value", i);
-
-                    reta_nb = (rss_hash % reta_size) / RPC_RTE_RETA_GROUP_SIZE;
-                    reta_indx = (rss_hash % reta_size) % RPC_RTE_RETA_GROUP_SIZE;
-                    rss_qid = reta_conf[reta_nb].reta[reta_indx];
-                    if (rss_qid == qid)
-                        RING("Rx queue matches expected in accordance with RSS hash value and RETA");
-                    else
-                        ERROR("Rx queue %u does not match expected %u in accordance with RSS hash value and RETA",
-                              qid, rss_qid);
-                }
-                rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
-                mbufs[i] = RPC_NULL;
-            }
-        }
+        TEST_STEP("Check other Rx queues to collect diagnostics");
+        test_check_rss_queues(iut_rpcs, iut_port->if_index, nb_rx_queues,
+                              reta_size, reta_conf, ptrn,
+                              packet_hash, expected_queue);
         TEST_STOP;
     }
 

@@ -114,27 +114,29 @@ main(int argc, char *argv[])
               "the new configuration was successfully updated "
               "Skip this step, if RSS hash configuration query is not supported");
     rss_conf_tmp.rss_key.rss_key_val = rss_hash_key_tmp;
+    rss_conf_tmp.rss_key.rss_key_len = rss_conf.rss_key.rss_key_len;
+    rss_conf_tmp.rss_key_len = rss_conf.rss_key.rss_key_len;
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
     rc = rpc_rte_eth_dev_rss_hash_conf_get(iut_rpcs, iut_port->if_index,
                                            &rss_conf_tmp);
     if (rc == 0)
     {
-        if (memcmp(rss_conf.rss_key.rss_key_val, rss_conf_tmp.rss_key.rss_key_val,
-                    RPC_RSS_HASH_KEY_LEN_DEF) != 0)
-        {
-            TEST_VERDICT("Updating of RSS hash key was failed");
-        }
-
         if (rss_conf.rss_key_len != rss_conf_tmp.rss_key_len)
         {
-            TEST_VERDICT("Updating of RSS hash key len was failed, "
-                      "should be %hhu, but it is %hhu", rss_conf.rss_key_len,
-                      rss_conf_tmp.rss_key_len);
+            TEST_VERDICT("Read RSS hash key length does not match written, "
+                         "should be %hhu, but it is %hhu",
+                         rss_conf.rss_key_len, rss_conf_tmp.rss_key_len);
+        }
+
+        if (memcmp(rss_conf.rss_key.rss_key_val, rss_conf_tmp.rss_key.rss_key_val,
+                   rss_conf.rss_key_len) != 0)
+        {
+            TEST_VERDICT("Read RSS hash key does not match written one");
         }
 
         if (rss_conf.rss_hf != rss_conf_tmp.rss_hf)
         {
-            TEST_VERDICT("Updating of RSS hash functions was failed, should "
+            TEST_VERDICT("Updating of RSS hash functions failed, should "
                          "be 0x%x, but it is 0x%x",
                          rss_conf.rss_hf, rss_conf_tmp.rss_hf);
         }

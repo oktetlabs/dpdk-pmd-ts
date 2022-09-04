@@ -80,6 +80,14 @@ main(int argc, char *argv[])
     TEST_STEP("Initialise the port in order to obtain RSS capabilities");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
+    TEST_STEP("Enable RSS_HASH offload if it is supported");
+    if ((ethdev_config.dev_info.rx_offload_capa &
+         (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT)) != 0)
+    {
+        ethdev_config.eth_conf->rxmode.offloads |=
+            (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT);
+    }
+
     TEST_STEP("Check maximum number of Rx queues");
     if (nb_rx_queues > ethdev_config.dev_info.max_rx_queues)
         TEST_SKIP("So many Rx queues are not supported");
@@ -131,13 +139,78 @@ main(int argc, char *argv[])
 
     TEST_STEP("Try to receive the packet on @p expected_queue "
               "Make sure that the packet received matches the packet sent");
-    CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
-                                         expected_queue, mbufs,
-                                         TE_ARRAY_LEN(mbufs), 1, ptrn, TRUE));
+    rc = test_rx_burst_match_pattern(iut_rpcs, iut_port->if_index,
+                                     expected_queue,
+                                     mbufs, TE_ARRAY_LEN(mbufs),
+                                     1, ptrn, TRUE);
+    if (rc == 0)
+    {
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
+        TEST_SUCCESS;
+    }
+    else
+    {
+        uint16_t qid;
 
-    rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
+        for (qid = 0; qid < nb_rx_queues; ++qid)
+        {
+            uint16_t nb_rx;
+            uint16_t i;
 
-    TEST_SUCCESS;
+            if (qid == expected_queue)
+                continue;
+
+            nb_rx = rpc_rte_eth_rx_burst(iut_rpcs, iut_port->if_index, qid,
+                                         mbufs, TE_ARRAY_LEN(mbufs));
+            if (nb_rx != 0)
+            {
+                unsigned int ret;
+
+                if (nb_rx != 1)
+                    ERROR("Too many packets received from unexpected queue");
+
+                rc = tapi_rte_mbuf_match_pattern_seq(iut_rpcs, ptrn,
+                                                     mbufs, nb_rx, NULL, &ret);
+                if (rc != 0)
+                {
+                    ERROR("Failed to match packet received from unexpected queue");
+                }
+                else if (ret == 0)
+                {
+                    ERROR("Unexpected packets from queue %u", qid);
+                }
+            }
+            for (i = 0; i < nb_rx; ++i)
+            {
+                uint64_t    ol_flags;
+
+                ol_flags = rpc_rte_pktmbuf_get_flags(iut_rpcs, mbufs[i]);
+                if ((ol_flags & (1UL << TARPC_RTE_MBUF_F_RX_RSS_HASH)) != 0)
+                {
+                    uint32_t    rss_hash;
+                    uint16_t    rss_qid;
+
+                    rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[i]);
+                    if (rss_hash == packet_hash)
+                        RING("Packet %u RSS hash matches expected hash value", i);
+                    else
+                        RING("Packet %u RSS hash does not match expected hash value", i);
+
+                    reta_nb = (rss_hash % reta_size) / RPC_RTE_RETA_GROUP_SIZE;
+                    reta_indx = (rss_hash % reta_size) % RPC_RTE_RETA_GROUP_SIZE;
+                    rss_qid = reta_conf[reta_nb].reta[reta_indx];
+                    if (rss_qid == qid)
+                        RING("Rx queue matches expected in accordance with RSS hash value and RETA");
+                    else
+                        ERROR("Rx queue %u does not match expected %u in accordance with RSS hash value and RETA",
+                              qid, rss_qid);
+                }
+                rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+                mbufs[i] = RPC_NULL;
+            }
+        }
+        TEST_STOP;
+    }
 
 cleanup:
     TEST_END;

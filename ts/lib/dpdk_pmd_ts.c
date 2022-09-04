@@ -559,7 +559,7 @@ test_rte_pktmbuf_pool_create(rcf_rpc_server  *rpcs,
 
     if (handle_count != 0)
     {
-	/* FIXME: one should not hard code this; it should come from PMDs */
+        /* FIXME: one should not hard code this; it should come from PMDs */
         uint16_t data_room_size_max = 3560 /* MAX Rx packet size */ +
                                       256 /* XDP_PACKET_HEADROOM */ +
                                       128 /* RTE_PKTMBUF_HEADROOM */;

@@ -48,7 +48,7 @@ main(int argc, char *argv[])
     struct tarpc_ether_addr     temp_mac_addr;
     te_bool                     is_promiscuous_mode;
     test_ethdev_state           ethdev_state;
-
+    int                         ret;
     unsigned int                i;
 
     TEST_START;
@@ -86,9 +86,15 @@ main(int argc, char *argv[])
     CHECK_NOT_NULL(tmpl_with_new_mac);
 
     TEST_STEP("Set the default MAC address equal to @p iut_alien_mac.");
-    rpc_rte_eth_dev_default_mac_addr_set(
+    RPC_AWAIT_IUT_ERROR(iut_rpcs);
+    ret = rpc_rte_eth_dev_default_mac_addr_set(
         iut_rpcs, iut_port->if_index,
         (struct tarpc_ether_addr *)iut_alien_mac->sa_data);
+
+    if (-ret == TE_RC(TE_RPC, TE_EOPNOTSUPP))
+        TEST_VERDICT("Changing default MAC address is not supported");
+    else if (ret != 0)
+        TEST_STOP;
 
     TEST_STEP("Get MAC address and compare it with @p iut_alien_mac.");
     rpc_rte_eth_macaddr_get(iut_rpcs, iut_port->if_index, &temp_mac_addr);

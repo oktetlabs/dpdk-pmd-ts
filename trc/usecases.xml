@@ -6311,6 +6311,11 @@
             <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support changing default MAC address">
+          <result value="FAILED">
+            <verdict>Changing default MAC address is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="test_detach" type="script">

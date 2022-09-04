@@ -1303,7 +1303,7 @@ te_errno
 test_change_src_addr_by_reta_index(
     const te_toeplitz_hash_cache *toeplitz_hash_cache,
     unsigned int hash, uint8_t *src_addr, unsigned int addr_size,
-    const unsigned int *indexes, unsigned int nb_indexes)
+    uint16_t reta_size, const unsigned int *indexes, unsigned int nb_indexes)
 {
     unsigned int  part_hash[addr_size];
     unsigned int  index_hash;
@@ -1321,13 +1321,13 @@ test_change_src_addr_by_reta_index(
     {
         for (pos = 0; pos < addr_size; pos++)
         {
-            index_hash = (part_hash[pos] ^ indexes[i]) & TEST_HASH_RSS_MASK;
+            index_hash = (part_hash[pos] ^ indexes[i]) % reta_size;
 
             for (byte = 0; byte != UINT8_MAX; byte++)
             {
                 if ((te_toeplitz_hash_data(toeplitz_hash_cache,
-                                           &byte, pos, 1) &
-                    TEST_HASH_RSS_MASK) == index_hash)
+                                           &byte, pos, 1) % reta_size) ==
+                    index_hash)
                 {
                     src_addr[pos] = byte;
 
@@ -2373,7 +2373,7 @@ test_change_tmpl_ip_src_addr_by_queue_nb(
 
     hash_cache = te_toeplitz_cache_init(rss_conf->rss_key.rss_key_val);
     rc = test_change_src_addr_by_reta_index(hash_cache, packet_hash,
-                                            src_addr, addr_len,
+                                            src_addr, addr_len, reta_size,
                                             reta_indxs, nb_reta_indxs);
     te_toeplitz_hash_fini(hash_cache);
 

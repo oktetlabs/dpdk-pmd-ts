@@ -182,8 +182,8 @@ main(int argc, char *argv[])
                 tmpl, &packet_hash, NULL));
 
     TEST_STEP("Determine the queue index by means of the hash");
-    reta_nb = (packet_hash & TEST_HASH_RSS_MASK) / RPC_RTE_RETA_GROUP_SIZE;
-    reta_indx = (packet_hash & TEST_HASH_RSS_MASK) % RPC_RTE_RETA_GROUP_SIZE;
+    reta_nb = (packet_hash % reta_size) / RPC_RTE_RETA_GROUP_SIZE;
+    reta_indx = (packet_hash % reta_size) % RPC_RTE_RETA_GROUP_SIZE;
     expected_queue = reta_conf[reta_nb].reta[reta_indx];
 
     TEST_STEP("Transmit the packet from @p tst_if");

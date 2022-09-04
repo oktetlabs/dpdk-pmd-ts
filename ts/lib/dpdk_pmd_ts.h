@@ -115,11 +115,6 @@
  */
 #define TEST_IP6_ADDR_LEN 16
 
-/**
- * RSS mask for getting of queue number in RETA by hash
- */
-#define TEST_HASH_RSS_MASK 0x7F
-
 /** RSS hash protocols */
 #define TEST_ETH_RSS_IPV4               (1ULL << TARPC_RTE_ETH_FLOW_IPV4)
 #define TEST_ETH_RSS_FRAG_IPV4          (1ULL << TARPC_RTE_ETH_FLOW_FRAG_IPV4)
@@ -839,6 +834,7 @@ extern te_errno test_rss_get_hash_by_pattern_unit(
  * @param hash                       RSS hash value
  * @param src_addr                   Pointer to source address
  * @param addr_size                  Size of @p src_addr in bytes
+ * @param reta_size                  Redirection table size
  * @param indexes                    Array of required RETA indexes
  * @param nb_indexes                 Number of RETA indexes
  *
@@ -847,7 +843,7 @@ extern te_errno test_rss_get_hash_by_pattern_unit(
 extern te_errno test_change_src_addr_by_reta_index(
     const te_toeplitz_hash_cache *toeplitz_hash_cache,
     unsigned int hash, uint8_t *src_addr, unsigned int addr_size,
-    const unsigned int *indexes, unsigned int nb_indexes);
+    uint16_t reta_size, const unsigned int *indexes, unsigned int nb_indexes);
 
 /**
  * Convert the string with several RSS hash protocols separated by commas

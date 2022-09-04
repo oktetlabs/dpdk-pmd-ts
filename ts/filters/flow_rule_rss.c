@@ -220,7 +220,7 @@ main(int argc, char *argv[])
                                                    traffic_pattern,
                                                    i, &packet_hash, NULL));
 
-        reta_idx = packet_hash & TEST_HASH_RSS_MASK;
+        reta_idx = packet_hash % ethdev_config.dev_info.reta_size;
         rx_queue = rss_queues[reta_idx % nb_rss_queues];
 
 

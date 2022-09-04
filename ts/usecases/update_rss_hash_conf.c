@@ -170,8 +170,7 @@ main(int argc, char *argv[])
                 tmpl, &packet_hash, NULL));
 
     TEST_STEP("Determine the queue index by means of the hash");
-    reta_group = div(packet_hash & TEST_HASH_RSS_MASK,
-                     RPC_RTE_RETA_GROUP_SIZE);
+    reta_group = div(packet_hash % reta_size, RPC_RTE_RETA_GROUP_SIZE);
     expected_queue = reta_conf[reta_group.quot].reta[reta_group.rem];
 
     TEST_STEP("Transmit the packet from @p tst_if");
@@ -192,8 +191,7 @@ main(int argc, char *argv[])
                                                rss_conf.rss_key.rss_key_val,
                                                tmpl, NULL, &hash_symmetric));
 
-        reta_group = div(hash_symmetric & TEST_HASH_RSS_MASK,
-                         RPC_RTE_RETA_GROUP_SIZE);
+        reta_group = div(hash_symmetric % reta_size, RPC_RTE_RETA_GROUP_SIZE);
         expected_queue = reta_conf[reta_group.quot].reta[reta_group.rem];
 
         received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,

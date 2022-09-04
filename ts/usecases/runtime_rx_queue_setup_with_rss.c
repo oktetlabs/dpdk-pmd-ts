@@ -87,6 +87,7 @@ update_reta(rcf_rpc_server *iut_rpcs, unsigned int if_index,
 static void
 edit_tmpl_and_addr(te_bool symmetric, const te_toeplitz_hash_cache *hash_cache,
                    const struct tarpc_rte_eth_rss_conf *rss_conf,
+                   uint16_t reta_size,
                    const unsigned int *reta_indxs_q,
                    unsigned int nb_reta_indxs_q,
                    unsigned int addr_size, uint8_t *src_addr, asn_value *tmpl)
@@ -103,7 +104,7 @@ edit_tmpl_and_addr(te_bool symmetric, const te_toeplitz_hash_cache *hash_cache,
             hash_cache, hash,
             symmetric ? (src_addr + addr_size - TEST_IP4_ADDR_LEN) : src_addr,
             symmetric ? TEST_IP4_ADDR_LEN : addr_size,
-            reta_indxs_q, nb_reta_indxs_q);
+            reta_size, reta_indxs_q, nb_reta_indxs_q);
 
     if (rc != 0)
     {
@@ -264,12 +265,12 @@ main(int argc, char *argv[])
 
     hash_cache = te_toeplitz_cache_init(rss_conf->rss_key.rss_key_val);
 
-    edit_tmpl_and_addr(FALSE, hash_cache, rss_conf, reta_indxs_q,
+    edit_tmpl_and_addr(FALSE, hash_cache, rss_conf, reta_size, reta_indxs_q,
                        nb_reta_indxs_q, addr_size, src_addr, tmpl);
 
     tmpl_symm = asn_copy_value(tmpl);
 
-    edit_tmpl_and_addr(TRUE, hash_cache, rss_conf, reta_indxs_q,
+    edit_tmpl_and_addr(TRUE, hash_cache, rss_conf, reta_size, reta_indxs_q,
                        nb_reta_indxs_q, addr_size, src_addr, tmpl_symm);
 
     TEST_STEP("Configure RETA to redirect all packets to only setup queues");

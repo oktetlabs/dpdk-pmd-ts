@@ -178,7 +178,7 @@ main(int argc, char *argv[])
                 tmpl, &packet_hash, NULL));
 
     rc = test_change_src_addr_by_reta_index(hash_cache, packet_hash,
-                                            src_addr, addr_size,
+                                            src_addr, addr_size, reta_size,
                                             reta_indxs_q, nb_reta_indxs_q);
     if (rc != 0)
     {
@@ -236,7 +236,7 @@ main(int argc, char *argv[])
                                                     src_addr + addr_size -
                                                     TEST_IP4_ADDR_LEN,
                                                     TEST_IP4_ADDR_LEN,
-                                                    reta_indxs_q,
+                                                    reta_size, reta_indxs_q,
                                                     nb_reta_indxs_q));
 
         CHECK_RC(asn_write_value_field(tmpl, src_addr, addr_size,

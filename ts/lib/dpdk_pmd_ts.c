@@ -4273,6 +4273,8 @@ test_try_get_rss_hash_conf(rcf_rpc_server *rpcs, uint16_t port_id)
 
     rss_conf = tapi_malloc(sizeof(*rss_conf));
     rss_conf->rss_key.rss_key_val = tapi_malloc(RPC_RSS_HASH_KEY_LEN_DEF);
+    rss_conf->rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    rss_conf->rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
 
     RPC_AWAIT_IUT_ERROR(rpcs);
     rc = rpc_rte_eth_dev_rss_hash_conf_get(rpcs, port_id, rss_conf);

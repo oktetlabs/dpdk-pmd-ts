@@ -71,6 +71,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get configuration of RSS hash computation");
     rss_conf.rss_key.rss_key_val = tapi_malloc(RPC_RSS_HASH_KEY_LEN_DEF);
+    rss_conf.rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    rss_conf.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
 
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
     rc = rpc_rte_eth_dev_rss_hash_conf_get(iut_rpcs, iut_port->if_index,

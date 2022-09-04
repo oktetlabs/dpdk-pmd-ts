@@ -149,7 +149,11 @@ main(int argc, char *argv[])
     {
         TEST_STEP("Validate RSS hash value available from the mbuf");
         rss_hash = rpc_rte_pktmbuf_get_rss_hash(iut_rpcs, mbufs[0]);
-        if (rss_hash != rss_hash_regular && rss_hash != rss_hash_symmetric)
+        if (rss_hash == rss_hash_regular)
+            RING("RSS hash value matches regular variant");
+        else if (rss_hash == rss_hash_symmetric)
+            RING_VERDICT("RSS hash value matches symmetric variant");
+        else
             TEST_VERDICT("Invalid RSS hash value");
     }
     TEST_SUCCESS;

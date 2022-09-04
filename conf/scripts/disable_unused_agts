@@ -1,0 +1,5 @@
+# These variables must be unset, of parts of TE like RCF consistency check
+# will fail because these agents are not built.
+
+unset TE_TST2
+unset TE_TST3

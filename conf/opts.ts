@@ -7,3 +7,4 @@
 --tester-script=scripts/os-trc-tags
 --script=scripts/net-modules
 --script=scripts/iut-net-driver-loaded
+--script=scripts/disable_unused_agts

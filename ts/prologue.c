@@ -492,6 +492,20 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
         goto exit;
     }
 
+    /*
+     * The PMD does not support RSS controls. Set the number
+     * of channels on the backing NIC to 1 to disable RSS.
+     */
+    rc = cfg_set_instance_fmt(CFG_VAL(INTEGER, 1),
+                              "/agent:%s/interface:%s"
+                              "/channels:/combined:/current:",
+                              rpcs->ta, iface);
+    if (rc != 0)
+    {
+        ERROR("Cannot quit multi-queue on linux net interface of IUT: %r", rc);
+        goto exit;
+    }
+
     rc = tapi_cfg_base_if_up(rpcs->ta, iface);
     if (rc != 0)
         ERROR("Cannot start linux net interface of IUT");

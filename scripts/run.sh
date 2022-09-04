@@ -203,7 +203,7 @@ if test -n "${CFG}" ; then
     IFS=: ; process_cfg ${CFG} ; IFS=
 fi
 
-MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${SF_TS_CONFDIR}")
+MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TS_RIGSDIR}${TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
 
 MY_OPTS+=(--trc-db="${TE_TS_TRC_DB}")
 MY_OPTS+=(--trc-comparison=normalised)

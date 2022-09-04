@@ -296,6 +296,11 @@
  */
 #define TESTPMD_ARG_MAX_LEN 30
 
+/**
+ * Maximum header size
+ */
+#define TEST_DEV_HEADER_SIZE 256
+
 
 /** Template fields flags */
 enum test_tmpl_fields {

@@ -48,7 +48,7 @@ disalbe_offload(const char *iface, const char *offload)
 }
 
 static te_errno
-disalbe_offload_list(const char *iface, ...)
+disable_offload_list(const char *iface, ...)
 {
     te_errno rc;
     va_list ap;
@@ -79,7 +79,7 @@ disable_offloads(cfg_net_t *net, cfg_net_node_t *node,
         strcmp(cfg_oid_inst_subid(oid, 2), "interface") != 0)
         return 0;
 
-    return disalbe_offload_list(oid_str,
+    return disable_offload_list(oid_str,
                                 /* Want to see segments as they sent */
                                 "rx-gro",
                                 "rx-lro",

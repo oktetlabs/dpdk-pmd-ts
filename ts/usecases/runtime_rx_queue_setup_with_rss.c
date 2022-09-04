@@ -240,12 +240,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get default RETA configuration which implies that "
               "all queues are setup");
-    reta_size = dev_info.reta_size;
-    reta_conf = tapi_calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
-                            sizeof(*reta_conf));
-
-    test_get_rss_reta(iut_rpcs, iut_port->if_index,
-                      reta_size, nb_rxq, reta_conf);
+    test_get_rss_reta(iut_rpcs, iut_port->if_index, &reta_size, &reta_conf);
 
     TEST_STEP("Prepare template for packets which would have been received on "
               "@p rxq_runtime_setup_idx queue if RETA had been configured by default");

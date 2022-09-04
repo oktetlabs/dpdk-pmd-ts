@@ -155,12 +155,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get RSS Redirection Table. If the corresponding RPC is not supported, "
               "use default Redirection Table");
-    reta_size = ethdev_config.dev_info.reta_size;
-    reta_conf = tapi_calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
-                            sizeof(*reta_conf));
-
-    test_get_rss_reta(iut_rpcs, iut_port->if_index,
-                      reta_size, n_rxq, reta_conf);
+    test_get_rss_reta(iut_rpcs, iut_port->if_index, &reta_size, &reta_conf);
 
     TEST_STEP("Change @p tmpl to be sure that packet will be received "
               "on the @p deferred_queue queue using "

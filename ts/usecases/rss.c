@@ -106,12 +106,8 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get RSS Redirection Table. If the corresponding RPC is not supported, "
               "use default Redirection Table");
-    reta_size = ethdev_config.dev_info.reta_size;
-    CHECK_NOT_NULL(reta_conf = calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
-                                      sizeof(*reta_conf)));
+    test_get_rss_reta(iut_rpcs, iut_port->if_index, &reta_size, &reta_conf);
 
-    test_get_rss_reta(iut_rpcs, iut_port->if_index, reta_size, nb_rx_queues,
-                      reta_conf);
     TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
               "use previously requested configuration");
     actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs, iut_port->if_index);

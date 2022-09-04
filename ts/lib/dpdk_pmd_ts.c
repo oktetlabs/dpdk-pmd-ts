@@ -4170,34 +4170,50 @@ test_mk_rte_flow_action_queue(rcf_rpc_server *rpcs,
 void
 test_get_rss_reta(rcf_rpc_server *rpcs,
                   uint16_t port_id,
-                  uint64_t reta_size,
-                  unsigned int rxq_number,
-                  struct tarpc_rte_eth_rss_reta_entry64 *reta_conf)
+                  uint64_t *reta_size,
+                  struct tarpc_rte_eth_rss_reta_entry64 **reta_conf)
 {
+    struct tarpc_rte_eth_dev_info dev_info;
     unsigned int i;
     te_errno rc;
 
-    for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE); i++)
-        reta_conf[i].mask = ~0;
+    TEST_SUBSTEP("Refresh device info to pick up RSS reta size changes");
+    rpc_rte_eth_dev_info_get(rpcs, port_id, &dev_info);
+
+    TEST_SUBSTEP("Try to get entire RSS RETA");
+    *reta_conf = tapi_calloc(TE_DIV_ROUND_UP(dev_info.reta_size,
+                                             RPC_RTE_RETA_GROUP_SIZE),
+                             sizeof(**reta_conf));
+    for (i = 0;
+         i < TE_DIV_ROUND_UP(dev_info.reta_size, RPC_RTE_RETA_GROUP_SIZE);
+         i++)
+    {
+        (*reta_conf)[i].mask = ~0;
+    }
 
     RPC_AWAIT_IUT_ERROR(rpcs);
-    rc = rpc_rte_eth_dev_rss_reta_query(rpcs, port_id, reta_conf, reta_size);
+    rc = rpc_rte_eth_dev_rss_reta_query(rpcs, port_id, *reta_conf,
+                                        dev_info.reta_size);
 
     if (-rc == TE_RC(TE_RPC, TE_EOPNOTSUPP))
     {
-        for (i = 0; i < reta_size; i++)
+        WARN("RSS RETA query operation is not supported");
+        TEST_SUBSTEP("If RSS RETA query is not supported, fill in dummy table");
+        for (i = 0; i < dev_info.reta_size; i++)
         {
             unsigned int group_index = i / RPC_RTE_RETA_GROUP_SIZE;
             unsigned int entry_index = i % RPC_RTE_RETA_GROUP_SIZE;
 
-            reta_conf[group_index].reta[entry_index] = i % rxq_number;
+            (*reta_conf)[group_index].reta[entry_index] =
+                i % dev_info.nb_rx_queues;
         }
-        WARN("RSS RETA query operation is not supported");
     }
     else if (rc < 0)
     {
         TEST_VERDICT("Query RSS RETA operation failed");
     }
+
+    *reta_size = dev_info.reta_size;
 }
 
 extern void

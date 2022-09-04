@@ -161,12 +161,7 @@ main(int argc, char *argv[])
                                                   DPMD_TS_PAYLOAD_LEN_DEF));
 
     TEST_STEP("Query the RETA. Use default one if query operation is not supported");
-    reta_size = test_ethdev_config.dev_info.reta_size;
-    CHECK_NOT_NULL(reta_conf = calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
-                                      sizeof(*reta_conf)));
-
-    test_get_rss_reta(iut_rpcs, iut_port->if_index, reta_size,
-                      nb_rx_queues, reta_conf);
+    test_get_rss_reta(iut_rpcs, iut_port->if_index, &reta_size, &reta_conf);
 
     TEST_STEP("Calculate the packet hash, using the Toeplitz function "
               "and the new hash key");

@@ -1145,15 +1145,13 @@ extern te_errno test_mk_txmode_txconf(
  *
  * @param[in]  rpcs          RPC server handle
  * @param[in]  port_id       The port identifier of the device
- * @param[in]  reta_size     Length of RETA table
- * @param[in]  rxq_number    Number of RX queues
- * @param[out] reta_conf     RETA configuration
+ * @param[in]  reta_size     Location for length of RETA table
+ * @param[out] reta_conf     Location for RETA configuration
  */
 extern void test_get_rss_reta(rcf_rpc_server *rpcs,
                               uint16_t port_id,
-                              uint64_t reta_size,
-                              unsigned int rxq_number,
-                              struct tarpc_rte_eth_rss_reta_entry64 *reta_conf);
+                              uint64_t *reta_size,
+                              struct tarpc_rte_eth_rss_reta_entry64 **reta_conf);
 
 /**
  * Start Tx queue with specified @p queue_id using rx_queue_start() RPC

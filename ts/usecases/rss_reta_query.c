@@ -68,6 +68,13 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, ethdev_state));
 
+    if (ethdev_state != TEST_ETHDEV_INITIALIZED)
+    {
+        TEST_STEP("Refresh device info to pick up RSS reta size changes");
+        rpc_rte_eth_dev_info_get(iut_rpcs, iut_port->if_index,
+                                 &test_ethdev_config.dev_info);
+    }
+
     TEST_STEP("Query Redirection Table of RSS");
     reta_size = test_ethdev_config.dev_info.reta_size;
     reta_conf = tapi_calloc(TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE),

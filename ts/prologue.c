@@ -506,6 +506,18 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
         goto exit;
     }
 
+    rc = disable_offload_list(iface_oid.ptr,
+                              /* Want to receive all VLAN packets */
+                              "rx-vlan-filter",
+                              /* Want to retain TPID and TCI in packet data */
+                              "rx-vlan-hw-parse",
+                              NULL /* sentinel */);
+    if (rc != 0)
+    {
+        ERROR("Cannot disable offloads on linux net interface of IUT: %r", rc);
+        goto exit;
+    }
+
     rc = tapi_cfg_base_if_up(rpcs->ta, iface);
     if (rc != 0)
         ERROR("Cannot start linux net interface of IUT");

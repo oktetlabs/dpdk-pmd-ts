@@ -213,8 +213,6 @@ MY_OPTS+=(--trc-no-total --trc-no-unspec)
 MY_OPTS+=(--trc-keep-artifacts)
 MY_OPTS+=(--trc-key2html="${SF_TS_CONFDIR}"/trc.key2html)
 
-MY_OPTS+=(--build-meson)
-
 # Add to RUN_OPTS since it specified in user environment and should
 # override everything else
 test "$TE_NOBUILD" = "yes" &&

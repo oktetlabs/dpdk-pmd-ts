@@ -46,7 +46,6 @@ main(int argc, char *argv[])
     const struct if_nameindex      *tst_if   = NULL;
 
     asn_value                      *template = NULL;
-    asn_value                      *pattern = NULL;
     struct test_ethdev_config       ethdev_config;
     rpc_rte_mempool_p               mp;
     uint16_t                        received;
@@ -164,7 +163,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Transmit and sniff nb_packets packets from @p tst_if");
     tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0, tst_if->if_name,
-                                       template, NULL, &pattern);
+                                       template, NULL, NULL);
 
     te_motivated_usleep(100 * 1000 + 10 * nb_packets,
                         "Wait for packets to be transmitted");

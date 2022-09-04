@@ -154,6 +154,8 @@ check_cfg () {
     local user="$2"
     local steal="$3"
     local items
+    local item_user
+    local err
 
     if ! which item >/dev/null 2>&1 ; then
         if test "$(dnsdomainname)" = "oktetlabs.ru"; then
@@ -169,6 +171,37 @@ check_cfg () {
     cfg="${cfg%-vf-vf}"
     cfg="${cfg%-vf-pf}"
     cfg="${cfg%-vf}"
+
+    # Checkif such item exists, otherwise try to cut various modifiers
+    if ! get_item_user "${cfg}" item_user err ; then
+        local cfg_wo_port="${cfg%-p?}"
+        local port_modifier="${cfg#${cfg_wo_port}}"
+
+        if test -n "${port_modifier}" \
+                && get_item_user "${cfg_wo_port}" item_user err ; then
+            cfg="${cfg_wo_port}"
+        else
+            local cfg_wo_nic="${cfg_wo_port}"
+
+            cfg_wo_nic="${cfg_wo_nic%-mlx}"
+            cfg_wo_nic="${cfg_wo_nic%-sfc}"
+            cfg_wo_nic="${cfg_wo_nic%-x710}"
+            if test "${cfg_wo_nic}" != "${cfg_wo_port}" ; then
+                if get_item_user "${cfg_wo_nic}${port_modifier}" \
+                        item_user err ; then
+                    cfg="${cfg_wo_nic}${port_modifier}"
+                elif  get_item_user "${cfg_wo_nic}" item_user err ; then
+                    cfg="${cfg_wo_nic}"
+                else
+                    echo "Item for '${cfg_wo_nic}' not found" >&2
+                    exit 1
+                fi
+            else
+                echo "Item for '${cfg_wo_port}' not found" >&2
+                exit 1
+            fi
+        fi
+    fi
 
     test -n "${user}" || user="$(id -nu)"
 

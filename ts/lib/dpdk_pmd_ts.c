@@ -4177,7 +4177,7 @@ test_get_rss_reta(rcf_rpc_server *rpcs,
     unsigned int i;
     te_errno rc;
 
-    for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+    for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE); i++)
         reta_conf[i].mask = ~0;
 
     RPC_AWAIT_IUT_ERROR(rpcs);

@@ -101,10 +101,10 @@ main(int argc, char *argv[])
 
     TEST_STEP("Generate a new RETA randomly");
     reta_size = test_ethdev_config.dev_info.reta_size;
-    reta_conf = tapi_calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
+    reta_conf = tapi_calloc(TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE),
                             sizeof(*reta_conf));
 
-    for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+    for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE); i++)
     {
         for (j = 0; j < RPC_RTE_RETA_GROUP_SIZE; j++)
             reta_conf[i].reta[j] = rand_range(0, nb_rx_queues - 1);
@@ -130,10 +130,11 @@ main(int argc, char *argv[])
 
     TEST_STEP("Query the RETA and check that the new RETA was successfully "
               "updated. Skip this step if RETA query operation is not supported");
-    reta_conf_temp = tapi_calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
+    reta_conf_temp = tapi_calloc(TE_DIV_ROUND_UP(reta_size,
+                                                 RPC_RTE_RETA_GROUP_SIZE),
                                  sizeof(*reta_conf_temp));
 
-    for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+    for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE); i++)
         reta_conf_temp[i].mask = ~0;
 
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
@@ -142,7 +143,8 @@ main(int argc, char *argv[])
     if (rc == 0)
     {
         reta_query_supported = TRUE;
-        for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+        for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE);
+             i++)
         {
             if (memcmp(reta_conf[i].reta, reta_conf_temp[i].reta,
                        RPC_RTE_RETA_GROUP_SIZE) != 0)
@@ -209,7 +211,8 @@ main(int argc, char *argv[])
         rpc_rte_eth_dev_rss_reta_query(iut_rpcs, iut_port->if_index,
                                        reta_conf_temp, reta_size);
 
-        for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+        for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE);
+             i++)
         {
             if (memcmp(reta_conf[i].reta, reta_conf_temp[i].reta,
                        RPC_RTE_RETA_GROUP_SIZE) != 0)

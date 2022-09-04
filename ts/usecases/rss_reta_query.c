@@ -70,10 +70,10 @@ main(int argc, char *argv[])
 
     TEST_STEP("Query Redirection Table of RSS");
     reta_size = test_ethdev_config.dev_info.reta_size;
-    reta_conf = tapi_calloc(reta_size / RPC_RTE_RETA_GROUP_SIZE,
-                       sizeof(*reta_conf));
+    reta_conf = tapi_calloc(TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE),
+                            sizeof(*reta_conf));
 
-    for (i = 0; i < reta_size / RPC_RTE_RETA_GROUP_SIZE; i++)
+    for (i = 0; i < TE_DIV_ROUND_UP(reta_size, RPC_RTE_RETA_GROUP_SIZE); i++)
         reta_conf[i].mask = ~0;
 
     RPC_AWAIT_IUT_ERROR(iut_rpcs);

@@ -30,6 +30,7 @@
 #include "tapi_cfg_modules.h"
 #include "tapi_rpc_rte_eal.h"
 #include "tapi_sh_env.h"
+#include "tapi_cfg.h"
 
 #define VFIO_ENABLE_IOMMU_OID_FMT \
             "/agent:%s/module:vfio/parameter:enable_unsafe_noiommu_mode"
@@ -517,6 +518,9 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
         ERROR("Cannot disable offloads on linux net interface of IUT: %r", rc);
         goto exit;
     }
+
+    (void)tapi_cfg_sys_set_int(rpcs->ta, 1, NULL,
+                               "net/ipv6/conf/%s/disable_ipv6", iface);
 
     rc = tapi_cfg_base_if_up(rpcs->ta, iface);
     if (rc != 0)

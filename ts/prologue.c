@@ -406,7 +406,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
                               "/local:%s/dpdk:/vdev:net_af_xdp*", rpcs->ta);
     if (rc != 0)
     {
-        ERROR("cannot query af_xdp in vdev registry");
+        ERROR("Cannot query af_xdp in vdev registry");
         goto exit;
     }
 
@@ -415,7 +415,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
 
     if (count != 1)
     {
-        ERROR("cannot work with multiple af_xdp ports");
+        ERROR("Cannot work with multiple af_xdp ports");
         rc = TE_ETOOMANY;
         goto exit;
     }
@@ -423,7 +423,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
     rc = cfg_get_inst_name(handles[0], &vdev);
     if (rc != 0)
     {
-        ERROR("cannot get af_xdp port name");
+        ERROR("Cannot get af_xdp port name");
         goto exit;
     }
 
@@ -434,7 +434,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
                               rpcs->ta, vdev);
     if (rc != 0 || count == 0)
     {
-        ERROR("cannot get handle of sub-device of af_xdp port");
+        ERROR("Cannot get handle of sub-device of af_xdp port");
 	handles = NULL;
         rc = TE_ENODEV;
         goto exit;
@@ -442,7 +442,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
 
     if (count != 1)
     {
-        ERROR("cannot use more than 1 sub-device with af_xdp port");
+        ERROR("Cannot use more than 1 sub-device with af_xdp port");
         rc = TE_EINVAL;
         goto exit;
     }
@@ -450,14 +450,14 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
     rc = cfg_get_instance(handles[count - 1], &cvt, &slave_oid);
     if (rc != 0)
     {
-        ERROR("cannot get OID of sub-device of af_xdp port");
+        ERROR("Cannot get OID of sub-device of af_xdp port");
         goto exit;
     }
 
     rc = cfg_get_instance_string_fmt(&pci_oid, "%s", slave_oid);
     if (rc != 0)
     {
-        ERROR("cannot get OID of PCI FN of sub-device of af_xdp port");
+        ERROR("Cannot get OID of PCI FN of sub-device of af_xdp port");
         goto exit;
     }
 
@@ -465,14 +465,14 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
                                           NET_DRIVER_TYPE_NET);
     if (rc != 0)
     {
-        ERROR("cannot bind IUT to linux net driver");
+        ERROR("Cannot bind IUT to linux net driver");
         goto exit;
     }
 
     rc = cfg_get_instance_string_fmt(&iface, "%s/net:", pci_oid);
     if (rc != 0)
     {
-        ERROR("cannot get name of linux net interface of IUT");
+        ERROR("Cannot get name of linux net interface of IUT");
         goto exit;
     }
 
@@ -480,7 +480,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
                           rpcs->ta, iface);
     if (rc != 0)
     {
-        ERROR("cannot make OID of linux net interface of IUT");
+        ERROR("Cannot make OID of linux net interface of IUT");
         goto exit;
     }
 
@@ -488,13 +488,13 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
                               "/agent:%s/rsrc:%s", rpcs->ta, iface);
     if (rc != 0)
     {
-        ERROR("cannot reserve linux net interface of IUT");
+        ERROR("Cannot reserve linux net interface of IUT");
         goto exit;
     }
 
     rc = tapi_cfg_base_if_up(rpcs->ta, iface);
     if (rc != 0)
-        ERROR("cannot start linux net interface of IUT");
+        ERROR("Cannot start linux net interface of IUT");
 
 exit:
     te_string_free(&iface_oid);

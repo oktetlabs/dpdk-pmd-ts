@@ -138,6 +138,7 @@ function process_cfg() {
 
 CFG=
 declare -a RUN_OPTS
+declare -a MY_OPTS
 
 for opt ; do
     case "${opt}" in
@@ -178,6 +179,12 @@ for opt ; do
                 # Failsafe driver uses a service core for interrupts
                 export TE_IUT_REQUIRED_SERVICE_CORES="1"
             fi
+            if [[ $vdev = *"af_xdp"* ]]; then
+                # In prologue, the number of combined
+                # channels is set to 1 to disable RSS
+                MY_OPTS+=(--trc-tag="max_rx_queues:1")
+                MY_OPTS+=(--trc-tag="max_tx_queues:1")
+            fi
             ;;
         --iut-dpdk-drv=*)
             iut_dpdk_driver="${opt#--iut-dpdk-drv=}"
@@ -196,7 +203,6 @@ if test -n "${CFG}" ; then
     IFS=: ; process_cfg ${CFG} ; IFS=
 fi
 
-declare -a MY_OPTS
 MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${SF_TS_CONFDIR}")
 
 MY_OPTS+=(--trc-db="${TE_TS_TRC_DB}")

@@ -53,6 +53,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD confines the upper limit to default page size">
+          <result value="SKIPPED">
+            <verdict>Mbuf data room size is too large for AF_XDP</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -63,6 +68,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD confines the upper limit to default page size">
+          <result value="SKIPPED">
+            <verdict>Mbuf data room size is too large for AF_XDP</verdict>
           </result>
         </results>
       </iter>
@@ -588,6 +598,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -621,6 +636,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -662,6 +682,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -695,6 +720,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -736,6 +766,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -769,6 +804,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -810,6 +850,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -843,6 +888,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -884,6 +934,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -912,6 +967,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -953,6 +1013,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -986,6 +1051,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1027,6 +1097,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1060,6 +1135,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1101,6 +1181,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1134,6 +1219,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1175,6 +1265,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1212,6 +1307,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1240,6 +1340,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1281,6 +1386,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1314,6 +1424,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1355,6 +1470,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1388,6 +1508,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1429,6 +1554,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1462,6 +1592,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1503,6 +1638,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -1540,6 +1680,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1568,6 +1713,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1609,6 +1759,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1642,6 +1797,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1683,6 +1843,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1716,6 +1881,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1757,6 +1927,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1790,6 +1965,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1831,6 +2011,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1864,6 +2049,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1905,6 +2095,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1938,6 +2133,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1979,6 +2179,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2012,6 +2217,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2053,6 +2263,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2086,6 +2301,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2127,6 +2347,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2160,6 +2385,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2201,6 +2431,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2234,6 +2469,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2275,6 +2515,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2308,6 +2553,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2349,6 +2599,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2382,6 +2637,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2423,6 +2683,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2456,6 +2721,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2497,6 +2767,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2530,6 +2805,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2805,6 +3085,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -2838,6 +3123,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2879,6 +3169,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -2912,6 +3207,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2953,6 +3253,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -2986,6 +3291,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3027,6 +3337,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3060,6 +3375,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3101,6 +3421,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3129,6 +3454,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3170,6 +3500,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3203,6 +3538,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3244,6 +3584,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3277,6 +3622,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3318,6 +3668,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3351,6 +3706,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3392,6 +3752,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3429,6 +3794,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3457,6 +3827,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3498,6 +3873,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3531,6 +3911,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3572,6 +3957,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3605,6 +3995,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3646,6 +4041,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3679,6 +4079,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3720,6 +4125,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
             <verdict>0 packets have been received, but should be 1</verdict>
@@ -3757,6 +4167,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3785,6 +4200,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3826,6 +4246,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3859,6 +4284,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3900,6 +4330,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3933,6 +4368,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -3974,6 +4414,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4007,6 +4452,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4048,6 +4498,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4081,6 +4536,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4122,6 +4582,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4155,6 +4620,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4196,6 +4666,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4229,6 +4704,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4270,6 +4750,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4303,6 +4788,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4344,6 +4834,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4377,6 +4872,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4418,6 +4918,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4451,6 +4956,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4492,6 +5002,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4525,6 +5040,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4566,6 +5086,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4599,6 +5124,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4640,6 +5170,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4673,6 +5208,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4714,6 +5254,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4747,6 +5292,11 @@
         <arg name="nb_pkts"/>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support tunnel UDP port configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5019,6 +5569,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD confines the upper limit to default page size">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 68/3542</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5030,6 +5585,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD confines the upper limit to default page size">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 68/3542</verdict>
           </result>
         </results>
       </iter>
@@ -5461,6 +6021,11 @@
         <results tags="vdev-bonding">
           <result value="FAILED">
             <verdict>New all-multicast wasn't saved after start</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX" notes="The PMD does not support all-multicast mode">
+          <result value="FAILED">
+            <verdict>All multicast enable operation is not supported</verdict>
           </result>
         </results>
         <results tags="virtio-net-no-ctrl-q" key="NO-CTRL-Q" notes="Xilinx Virtio does not support control queue yet">
@@ -6349,6 +6914,11 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="PASSED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6363,6 +6933,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -6381,6 +6956,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6395,6 +6975,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -6413,6 +6998,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6429,6 +7019,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6443,6 +7038,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -6462,6 +7062,11 @@
           </result>
         </results>
         <results tags="sfc_efx">
+          <result value="PASSED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="PASSED">
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
@@ -6609,6 +7214,11 @@
           </result>
         </results>
         <results tags="sfc_efx">
+          <result value="PASSED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="PASSED">
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
@@ -6756,6 +7366,11 @@
           </result>
         </results>
         <results tags="sfc_efx">
+          <result value="PASSED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="PASSED">
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
@@ -6905,6 +7520,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="rss_hash_info" type="script">
@@ -6938,6 +7558,11 @@
             <verdict>Rx RSS hash offload is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>Rx RSS hash offload is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="SKIPPED">
             <verdict>Rx RSS hash offload is not supported</verdict>
@@ -6983,6 +7608,11 @@
           </result>
         </results>
         <results tags="rx-datapath-ef10_packed" key="WONTFIX FW-EF10-PS-NO-RSS-HASH" notes="Packed stream pseudo-header has no RSS hash">
+          <result value="SKIPPED">
+            <verdict>Rx RSS hash offload is not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="SKIPPED">
             <verdict>Rx RSS hash offload is not supported</verdict>
           </result>
@@ -7046,6 +7676,11 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>RSS hash config get not supported</verdict>
@@ -7058,6 +7693,11 @@
         <arg name="nb_rx_queues">1</arg>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="SKIPPED">
             <verdict>RSS hash config get not supported</verdict>
           </result>
@@ -7078,6 +7718,11 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
@@ -7090,6 +7735,11 @@
         <arg name="nb_rx_queues">1</arg>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="SKIPPED">
             <verdict>RSS hash config get not supported</verdict>
           </result>
@@ -7110,6 +7760,11 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
@@ -7122,6 +7777,11 @@
         <arg name="nb_rx_queues">1</arg>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="SKIPPED">
             <verdict>RSS hash config get not supported</verdict>
           </result>
@@ -7142,6 +7802,11 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
@@ -7154,6 +7819,11 @@
         <arg name="nb_rx_queues">2</arg>
         <notes/>
         <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="SKIPPED">
             <verdict>RSS hash config get not supported</verdict>
           </result>
@@ -8299,6 +8969,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
          </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+         <result value="FAILED">
+           <verdict>Query RSS RETA operation failed</verdict>
+         </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8700,6 +9375,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8708,6 +9388,11 @@
         <arg name="tmpl"/>
         <notes/>
         <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="FAILED">
             <verdict>Hash protocols configuration failed: EINVAL</verdict>
           </result>
@@ -8734,6 +9419,11 @@
             <verdict>Hash protocols configuration failed: EINVAL</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
@@ -8752,6 +9442,11 @@
         <arg name="tmpl"/>
         <notes/>
         <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="FAILED">
             <verdict>Hash protocols configuration failed: EINVAL</verdict>
           </result>
@@ -9218,6 +9913,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>RSS redirection table update failed: EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9320,6 +10020,11 @@
             <verdict>Set link down operation is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-LINK_UP_DOWN" notes="The PMD does not support link up/down operations">
+          <result value="SKIPPED">
+            <verdict>Set link down operation is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-15b3-1017">
           <result value="FAILED">
             <verdict>UP is unexpected link status for tester interface</verdict>
@@ -9346,7 +10051,7 @@
         <arg name="payload_len">46</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9406,7 +10111,7 @@
         <arg name="payload_len">100</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9466,7 +10171,7 @@
         <arg name="payload_len">200</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9526,7 +10231,7 @@
         <arg name="payload_len">400</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9586,7 +10291,7 @@
         <arg name="payload_len">800</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9646,7 +10351,7 @@
         <arg name="payload_len">1600</arg>
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -9753,6 +10458,11 @@
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
@@ -9814,6 +10524,11 @@
           </result>
         </results>
         <results tags="virtio-net-no-ctrl-q" key="NO-CTRL-Q" notes="Xilinx Virtio does not support control queue yet">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
           <result value="SKIPPED">
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
@@ -9883,6 +10598,11 @@
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
@@ -9944,6 +10664,11 @@
           </result>
         </results>
         <results tags="virtio-net-no-ctrl-q" key="NO-CTRL-Q" notes="Xilinx Virtio does not support control queue yet">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
           <result value="SKIPPED">
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
@@ -10013,6 +10738,11 @@
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
         </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
@@ -10074,6 +10804,11 @@
           </result>
         </results>
         <results tags="virtio-net-no-ctrl-q" key="NO-CTRL-Q" notes="Xilinx Virtio does not support control queue yet">
+          <result value="SKIPPED">
+            <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-MCAST_ENABLE_DISABLE" notes="The PMD does not support multicast enable/disable operations">
           <result value="SKIPPED">
             <verdict>'rte_eth_allmulticast_enable' operation is not supported</verdict>
           </result>
@@ -10106,7 +10841,7 @@
         <arg name="payload_len">46</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10166,7 +10901,7 @@
         <arg name="payload_len">100</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10226,7 +10961,7 @@
         <arg name="payload_len">200</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10286,7 +11021,7 @@
         <arg name="payload_len">400</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10346,7 +11081,7 @@
         <arg name="payload_len">800</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10406,7 +11141,7 @@
         <arg name="payload_len">1600</arg>
         <arg name="tmpl">VAR.tmpl.tst2bcast.eth</arg>
         <notes/>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -10486,7 +11221,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10557,7 +11292,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10628,7 +11363,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10699,7 +11434,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10770,7 +11505,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10841,7 +11576,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10912,7 +11647,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -10983,7 +11718,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11054,7 +11789,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11125,7 +11860,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11196,7 +11931,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11267,7 +12002,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11338,7 +12073,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11409,7 +12144,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11480,7 +12215,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11551,7 +12286,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11627,7 +12362,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -11703,7 +12438,7 @@
             <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="vdev-failsafe|vdev-bonding">
+        <results tags="vdev-failsafe|vdev-bonding|vdev-af_xdp">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -21811,6 +22546,11 @@
         <arg name="env"/>
         <notes/>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="virtio does not support RSS yet">
+          <result value="FAILED">
+            <verdict>Correct RSS configuration has been rejected on configuration stage</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="FAILED">
             <verdict>Correct RSS configuration has been rejected on configuration stage</verdict>
           </result>

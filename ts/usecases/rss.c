@@ -54,6 +54,7 @@ main(int argc, char *argv[])
 
     tarpc_rss_hash_protos_t                hash_functions;
     uint32_t                               packet_hash;
+    uint32_t                               hash_symmetric;
 
     rpc_rte_mbuf_p                         mbufs[BURST_SIZE] = {};
 
@@ -126,7 +127,7 @@ main(int argc, char *argv[])
               "and current hash key");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf->rss_hf, rss_conf->rss_key.rss_key_val,
-                tmpl, &packet_hash, NULL));
+                tmpl, &packet_hash, &hash_symmetric));
 
     TEST_STEP("Determine the queue index by means of the hash");
     reta_nb = (packet_hash % reta_size) / RPC_RTE_RETA_GROUP_SIZE;
@@ -145,6 +146,10 @@ main(int argc, char *argv[])
                                      1, ptrn, TRUE);
     if (rc == 0)
     {
+        TEST_STEP("Check RSS hash value if it is available");
+        test_check_mbuf_rss_hash_value(iut_rpcs, mbufs[0],
+                                       packet_hash, hash_symmetric);
+
         rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
         TEST_SUCCESS;
     }

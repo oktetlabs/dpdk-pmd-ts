@@ -199,16 +199,27 @@ main(int argc, char *argv[])
                                               TE_ARRAY_LEN(mbufs), 1);
     }
 
-    CHECK_PACKETS_NUM(received, 1);
+    if (received == 1)
+    {
+        TEST_STEP("Make sure that the packet received matches the packet sent");
+        rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, received, NULL,
+                                   &matched_num);
+        CHECK_MATCHED_PACKETS_NUM(matched_num, 1);
 
-    TEST_STEP("Make sure that the packet received matches the packet sent");
-    rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, received, NULL,
-                               &matched_num);
-    CHECK_MATCHED_PACKETS_NUM(matched_num, 1);
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
 
-    rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
+        TEST_SUCCESS;
+    }
+    else
+    {
+        TEST_STEP("Check other Rx queues to collect diagnostics");
+        test_check_rss_queues(iut_rpcs, iut_port->if_index, nb_rx_queues,
+                              reta_size, reta_conf, ptrn,
+                              packet_hash, expected_queue);
 
-    TEST_SUCCESS;
+        /* Fail with verdict after diagnostics */
+        CHECK_PACKETS_NUM(received, 1);
+    }
 
 cleanup:
     TEST_END;

@@ -89,7 +89,7 @@ main(int argc, char *argv[])
     rss_conf = &test_ethdev_config.eth_conf->rx_adv_conf.rss_conf;
     test_setup_rss_configuration(hash_functions, TRUE, rss_conf);
 
-    offload = (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT);
+    offload = (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT);
     offload_name = rpc_rte_eth_dev_rx_offload_name(iut_rpcs, offload);
 
     if (enable_offload)

@@ -126,19 +126,19 @@ main(int argc, char *argv[])
     if (vlan >= 0)
     {
         TEST_STEP("Enable VLAN offload in the PMD");
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VLAN_INSERT_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
     }
 
     if (outer_ip_cksum)
     {
         TEST_STEP("Enable outer IP checksum offload in the PMD");
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
     }
 
     if (outer_udp_cksum)
     {
         TEST_STEP("Enable outer UDP checksum offload in the PMD");
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_OUTER_UDP_CKSUM_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_UDP_CKSUM_BIT);
     }
 
     if (innermost_ip_cksum)
@@ -146,7 +146,7 @@ main(int argc, char *argv[])
         uint64_t ol_ipv4_cs_capa;
         uint64_t ol_ipv4_cs;
 
-        ol_ipv4_cs = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_IPV4_CKSUM_BIT);
+        ol_ipv4_cs = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_IPV4_CKSUM_BIT);
         ol_ipv4_cs_capa = test_ethdev.dev_info.tx_offload_capa & ol_ipv4_cs;
 
         if (tso != 0 && ol_ipv4_cs_capa == 0)
@@ -172,8 +172,8 @@ main(int argc, char *argv[])
     if (innermost_l4_cksum)
     {
         TEST_STEP("Enable innermost L4 checksum offload in the PMD");
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_CKSUM_BIT);
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_UDP_CKSUM_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_CKSUM_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_UDP_CKSUM_BIT);
     }
 
     if (tso != 0)
@@ -184,17 +184,17 @@ main(int argc, char *argv[])
         {
             case TE_PROTO_INVALID:
                 TEST_STEP("Enable non-tunnel TSO in the PMD");
-                ol_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_TSO_BIT);
+                ol_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT);
                 break;
 
             case TE_PROTO_VXLAN:
                 TEST_STEP("Enable VXLAN TSO in the PMD");
-                ol_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
+                ol_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
                 break;
 
             case TE_PROTO_GENEVE:
                 TEST_STEP("Enable Geneve TSO in the PMD");
-                ol_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
+                ol_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
                 break;
 
             default:
@@ -208,7 +208,7 @@ main(int argc, char *argv[])
     if (segmentation.nb_seg_groups > 0)
     {
         TEST_STEP("Enable multi-seg mbuf support in the PMD");
-        offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT);
+        offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
     }
 
     eth_txconfp = &eth_txconf;

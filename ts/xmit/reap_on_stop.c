@@ -109,13 +109,13 @@ main(int argc, char *argv[])
 
     nb_packets_to_send = ring_size_multiplier * nb_txd;
     multiseg_allowed = ((ethdev_config.dev_info.tx_offload_capa &
-                         (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT)) ==
-                        (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT));
+                         (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT)) ==
+                        (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT));
 
     if ((multi_mempool == TRUE) &&
         ((ethdev_config.dev_info.tx_offload_capa &
-          (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
-         (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
+          (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
+         (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
     {
         TEST_SKIP("Multi-mempool transmit is prohibited");
     }
@@ -124,8 +124,8 @@ main(int argc, char *argv[])
 
     if ((update_refcnt == TRUE) &&
         ((ethdev_config.dev_info.tx_offload_capa &
-          (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
-         (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
+          (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
+         (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
     {
         TEST_SKIP("It is prohibited to update reference counters");
     }

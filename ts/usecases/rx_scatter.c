@@ -101,7 +101,7 @@ main(int argc, char *argv[])
         TEST_STEP("Carry out a sophisticated check to detect the absence of Rx "
                   "scatter feature in the PMD, if DPDK release supports the "
                   "offload definition.");
-        offload = (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_SCATTER_BIT);
+        offload = (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_SCATTER_BIT);
         offload_name = rpc_rte_eth_dev_rx_offload_name(iut_rpcs, offload);
         if (offload_name != NULL && strcmp(offload_name, "SCATTER") == 0)
         {
@@ -112,7 +112,7 @@ main(int argc, char *argv[])
         test_ethdev_config.eth_conf->rxmode.flags |=
             (1 << TARPC_RTE_ETH_RXMODE_ENABLE_SCATTER_BIT);
         test_ethdev_config.eth_conf->rxmode.offloads |=
-                (1 << TARPC_RTE_DEV_RX_OFFLOAD_SCATTER_BIT);
+                (1 << TARPC_RTE_ETH_RX_OFFLOAD_SCATTER_BIT);
     }
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
     rc = rpc_rte_eth_dev_configure(test_ethdev_config.rpcs,

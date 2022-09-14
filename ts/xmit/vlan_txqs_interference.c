@@ -221,7 +221,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Verify the configuration requested");
     if ((ethdev_config.dev_info.tx_offload_capa &
-        (1U << TARPC_RTE_DEV_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
+        (1U << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
         TEST_SKIP("TX VLAN insertion is not available");
 
     TEST_STEP("Obtain the source Ethernet address");

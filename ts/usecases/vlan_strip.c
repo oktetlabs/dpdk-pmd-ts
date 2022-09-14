@@ -108,7 +108,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Check VLAN strip capability");
     if ((ethdev_config.dev_info.rx_offload_capa &
-        (1U << TARPC_RTE_DEV_RX_OFFLOAD_VLAN_STRIP_BIT)) == 0)
+        (1U << TARPC_RTE_ETH_RX_OFFLOAD_VLAN_STRIP_BIT)) == 0)
     {
         if (vlan_strip)
             TEST_SKIP("VLAN strip is requested but not available");
@@ -122,7 +122,7 @@ main(int argc, char *argv[])
         ethdev_config.eth_conf->rxmode.flags |=
                 (1ULL << TARPC_RTE_ETH_RXMODE_HW_VLAN_STRIP_BIT);
         ethdev_config.eth_conf->rxmode.offloads |=
-                (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_VLAN_STRIP_BIT);
+                (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_VLAN_STRIP_BIT);
 
     }
 
@@ -139,7 +139,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Check QinQ strip capability if @p qinq_strip is @c TRUE");
     if ((ethdev_config.dev_info.rx_offload_capa &
-         (1U << TARPC_RTE_DEV_RX_OFFLOAD_QINQ_STRIP_BIT)) == 0)
+         (1U << TARPC_RTE_ETH_RX_OFFLOAD_QINQ_STRIP_BIT)) == 0)
     {
         if (qinq_strip)
             TEST_SKIP("QinQ strip is requested but not available");
@@ -153,7 +153,7 @@ main(int argc, char *argv[])
         ethdev_config.eth_conf->rxmode.flags |=
                 (1ULL << TARPC_RTE_ETH_RXMODE_HW_VLAN_STRIP_BIT);
         ethdev_config.eth_conf->rxmode.offloads |=
-                (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_QINQ_STRIP_BIT);
+                (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_QINQ_STRIP_BIT);
 
         rx_transform.hw_flags |= RX_XFRM_HW_OFFL_QINQ_STRIP;
     }

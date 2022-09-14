@@ -85,14 +85,14 @@ main(int argc, char *argv[])
     }
 
     if (txpkts_len > 1 &&
-        !test_conf_tx_offload_supported(TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT))
+        !test_conf_tx_offload_supported(TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
     {
         TEST_SKIP("Iteration skipped due to unsupported multi seg offload");
     }
 
     tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
     if (tso_requested &&
-       !test_conf_tx_offload_supported(TARPC_RTE_DEV_TX_OFFLOAD_TCP_TSO_BIT))
+       !test_conf_tx_offload_supported(TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT))
     {
         TEST_SKIP("TSO is not supported");
     }

@@ -132,16 +132,16 @@ main(int argc, char *argv[])
 
     TEST_STEP("Learn about offload capabilities supported by the PMD");
     offloads_adv = ec.dev_info.tx_offload_capa;
-    outer_ip_cksum_ol = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
+    outer_ip_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
     outer_ip_cksum_offload_supported = (offloads_adv & outer_ip_cksum_ol);
-    inner_ip_cksum_ol = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_IPV4_CKSUM_BIT);
+    inner_ip_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_IPV4_CKSUM_BIT);
     inner_ip_cksum_offload_supported = (offloads_adv & inner_ip_cksum_ol);
 
-    inner_l4_cksum_ol = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_UDP_CKSUM_BIT) |
-                        (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_CKSUM_BIT);
-    vxlan_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
+    inner_l4_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_UDP_CKSUM_BIT) |
+                        (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_CKSUM_BIT);
+    vxlan_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
     vxlan_tso_supported = (offloads_adv & vxlan_tso);
-    geneve_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
+    geneve_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
     geneve_tso_supported = (offloads_adv & geneve_tso);
 
     /*
@@ -242,7 +242,7 @@ main(int argc, char *argv[])
     if (vlan_id >= 0)
     {
         TEST_STEP("Enable VLAN offload in the PMD");
-        test_offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VLAN_INSERT_BIT);
+        test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
     }
 
     if (outer_ip_cksum_offload && outer_ip_cksum_offload_supported &&
@@ -274,13 +274,13 @@ main(int argc, char *argv[])
         else if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_GENEVE)
             test_offloads |= geneve_tso;
         else
-            test_offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_TSO_BIT);
+            test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT);
     }
 
     if (segmentation.nb_seg_groups > 0)
     {
         TEST_STEP("Enable multisegment mbuf support in the PMD");
-        test_offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT);
+        test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
     }
 
     txconfp = &txconf;

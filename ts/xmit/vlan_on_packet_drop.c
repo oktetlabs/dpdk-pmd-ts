@@ -102,8 +102,8 @@ main(int argc, char *argv[])
               "capabilities are supported by the current RTE release or not. "
               "Preserve automatically added device offloads.");
     test_offloads = tec.eth_conf->txmode.offloads;
-    test_offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VLAN_INSERT_BIT);
-    test_offloads |= (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT);
+    test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
+    test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
 
     txconfp = &txconf;
     tec.tx_confs = &txconfp;

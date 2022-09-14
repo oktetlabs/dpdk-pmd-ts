@@ -93,10 +93,10 @@ main(int argc, char *argv[])
 
     TEST_STEP("Enable RSS_HASH offload if it is supported");
     if ((test_ethdev_config.dev_info.rx_offload_capa &
-         (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT)) != 0)
+         (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT)) != 0)
     {
         test_ethdev_config.eth_conf->rxmode.offloads |=
-            (1ULL << TARPC_RTE_DEV_RX_OFFLOAD_RSS_HASH_BIT);
+            (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT);
     }
 
     TEST_STEP("Start the Ethernet device");

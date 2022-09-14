@@ -187,10 +187,10 @@ main(int argc, char *argv[])
     TEST_STEP("Check the capabilities and adjust the expectations of checksum flags");
     {
         uint32_t caps = tec.dev_info.rx_offload_capa;
-        uint32_t ip = 1UL << TARPC_RTE_DEV_RX_OFFLOAD_IPV4_CKSUM_BIT;
-        uint32_t udp = 1UL << TARPC_RTE_DEV_RX_OFFLOAD_UDP_CKSUM_BIT;
-        uint32_t tcp = 1UL << TARPC_RTE_DEV_RX_OFFLOAD_TCP_CKSUM_BIT;
-        uint32_t eip = 1UL << TARPC_RTE_DEV_RX_OFFLOAD_OUTER_IPV4_CKSUM_BIT;
+        uint32_t ip = 1UL << TARPC_RTE_ETH_RX_OFFLOAD_IPV4_CKSUM_BIT;
+        uint32_t udp = 1UL << TARPC_RTE_ETH_RX_OFFLOAD_UDP_CKSUM_BIT;
+        uint32_t tcp = 1UL << TARPC_RTE_ETH_RX_OFFLOAD_TCP_CKSUM_BIT;
+        uint32_t eip = 1UL << TARPC_RTE_ETH_RX_OFFLOAD_OUTER_IPV4_CKSUM_BIT;
         te_bool  l4_unsupp_o = FALSE;
         te_bool  l4_unsupp_i = FALSE;
 

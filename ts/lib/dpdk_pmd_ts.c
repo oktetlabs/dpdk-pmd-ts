@@ -683,7 +683,7 @@ test_workaround_tx_fixed_offloads(rcf_rpc_server               *rpcs,
     /* Workaround for sfc-specific Tx fast free problem */
     if (strstr(eal_args, "tx_datapath=ef10_simple") != NULL)
     {
-        flag = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MBUF_FAST_FREE_BIT);
+        flag = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT);
         txmode->offloads |= flag;
     }
 
@@ -3994,20 +3994,20 @@ test_mk_txmode_txconf(struct test_ethdev_config   *tecp,
 
     novlan = (1U << TARPC_RTE_ETH_TXQ_FLAGS_NOVLANOFFL_BIT);
 
-    test_offload_vlan = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VLAN_INSERT_BIT);
-    test_offload_tso = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_TSO_BIT);
+    test_offload_vlan = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
+    test_offload_tso = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT);
     test_offload_vxlan_tso =
-                        (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
+                        (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VXLAN_TNL_TSO_BIT);
     test_offload_geneve_tso =
-                        (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
-    test_offload_multiseg = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_MULTI_SEGS_BIT);
-    test_offload_cksum_ip = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_IPV4_CKSUM_BIT);
-    test_offload_cksum_tcp = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_TCP_CKSUM_BIT);
-    test_offload_cksum_udp = (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_UDP_CKSUM_BIT);
+                        (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_GENEVE_TNL_TSO_BIT);
+    test_offload_multiseg = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
+    test_offload_cksum_ip = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_IPV4_CKSUM_BIT);
+    test_offload_cksum_tcp = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_TCP_CKSUM_BIT);
+    test_offload_cksum_udp = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_UDP_CKSUM_BIT);
     test_offload_cksum_ip_outer =
-                    (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
+                    (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
     test_offload_cksum_udp_outer =
-                    (1ULL << TARPC_RTE_DEV_TX_OFFLOAD_OUTER_UDP_CKSUM_BIT);
+                    (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_UDP_CKSUM_BIT);
 
     if ((test_offloads & test_offload_vlan) == 0)
     {

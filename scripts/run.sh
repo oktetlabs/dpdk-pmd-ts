@@ -9,6 +9,18 @@
 
 source "$(dirname "$(which "$0")")"/guess.sh
 
+source "${TE_BASE}/scripts/lib"
+source "${TE_BASE}/scripts/lib.grab_cfg"
+
+if [[ -n "${TS_RIGSDIR}" ]] ; then
+    source "${TS_RIGSDIR}/scripts/lib/grab_cfg_handlers"
+fi
+
+cleanup() {
+    call_if_defined grab_cfg_release
+}
+trap "cleanup" EXIT
+
 run_fail() {
     echo "$*" >&2
     exit 1
@@ -31,8 +43,12 @@ Options:
   --cfg=cmod-rhsim-virtio:[IUT]:[TST1]
                             Fully automated SN1022 C model configuration spec
 
-  --steal-cfg               Steal the configuration even if it is owned by
-                            someone else
+EOF
+
+    call_if_defined grab_cfg_print_help
+
+    cat <<EOF
+
   --dev-args=<ARGs>         Per-device parameters to be appended to whitelist opts
   --eal-args=<ARGs>         Extra EAL command-line arguments
   --reuse-pco               Do not restart RPC servers and re-init EAL in each test
@@ -105,6 +121,12 @@ function process_cfg() {
     local -a mod_opts
 
     case "${cfg}" in
+        *-vf-vf)    cfg=${cfg%-vf-vf} ; mod_opts=(--script=env/vf-vf) ;;
+        *-vf-pf)    cfg=${cfg%-vf-pf} ; mod_opts=(--script=env/vf-pf) ;;
+        *-vf)       cfg=${cfg%-vf} ;    mod_opts=(--script=env/vf)    ;;
+    esac
+
+    case "${cfg}" in
         cmod-rhsim-ef100|cmod-rhsim-virtio)
             process_cmod_vm "$@" ; CFG= ;;
         cmod-virtio-net)
@@ -116,14 +138,9 @@ function process_cfg() {
         virtio_virtio)
             process_virtio TE_HYPERVISOR "$@" ; CFG= ;;
         *)
-            "${TE_TS_TOPDIR}"/scripts/check_cfg "${cfg}" "" "${STEAL_CFG}" \
-                || exit 1 ;;
+            call_if_defined grab_cfg_process "${cfg}" || exit 1 ;;
     esac
-    case "${cfg}" in
-        *-vf-vf)    cfg=${cfg%-vf-vf} ; mod_opts=(--script=env/vf-vf) ;;
-        *-vf-pf)    cfg=${cfg%-vf-pf} ; mod_opts=(--script=env/vf-pf) ;;
-        *-vf)       cfg=${cfg%-vf} ;    mod_opts=(--script=env/vf)    ;;
-    esac
+
     if test "${cfg}" != "${cfg%-p[0-9]}" ; then
         run_conf="${cfg%-p[0-9]}"
         # VF modifiers must be applied after port modifiers
@@ -141,15 +158,17 @@ declare -a RUN_OPTS
 declare -a MY_OPTS
 
 for opt ; do
+    if call_if_defined grab_cfg_check_opt "${opt}" ; then
+        shift 1
+        continue
+    fi
+
     case "${opt}" in
         --help) usage ;;
         --cfg=*)
             test -z "${CFG}" ||
                 run_fail "Configuration is specified twice: ${CFG} vs ${opt#--cfg=}"
             CFG="${opt#--cfg=}"
-            ;;
-        --steal-cfg)
-            STEAL_CFG=steal
             ;;
         --dev-args=*)
             export TE_DPDK_DEV_ARGS="${opt#--dev-args=}"
@@ -227,10 +246,6 @@ rm -f trc-brief.html
 
 "${TE_BASE}"/dispatcher.sh "${MY_OPTS[@]}" "${RUN_OPTS[@]}"
 RESULT=$?
-
-if test -n "${STEAL_CFG}" -a -n "${CFG}" ; then
-    "${TE_TS_TOPDIR}"/scripts/check_cfg "${CFG}" "-" "${STEAL_CFG}"
-fi
 
 if test ${RESULT} -ne 0 ; then
     echo FAIL

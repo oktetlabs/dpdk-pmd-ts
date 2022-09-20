@@ -889,6 +889,11 @@
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;dpdk&lt;21050000" notes="net/sfc does not support PPPoEx items until version 21.05-rc15">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
@@ -920,6 +925,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;dpdk&lt;21050000" notes="net/sfc does not support PPPoEx items until version 21.05-rc15">
@@ -2241,6 +2251,11 @@
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;dpdk&lt;21050000" notes="net/sfc does not support PPPoEx items until version 21.05-rc15">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
@@ -2274,6 +2289,11 @@
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;dpdk&lt;21050000" notes="net/sfc does not support PPPoEx items until version 21.05-rc15">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
@@ -2305,6 +2325,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
@@ -2344,6 +2369,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
@@ -4010,6 +4040,11 @@
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
           <result value="FAILED">
             <verdict>'rpc_rte_flow_create' operation failed: Failed to insert the flow rule</verdict>
@@ -4041,6 +4076,11 @@
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
           <result value="FAILED">
             <verdict>'rpc_rte_flow_create' operation failed: Failed to insert the flow rule</verdict>
@@ -4070,6 +4110,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
@@ -4106,6 +4151,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03" notes="VF is not allowed to insert filters without specific destination MAC or destination IP address">
@@ -5366,6 +5416,11 @@
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
@@ -5390,6 +5445,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX PMD-FLOW-XFER-NO-PPPoE" notes="net/sfc flow rule MAE backend does not support PPPoEx items">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">
@@ -5932,6 +5992,11 @@
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
@@ -5956,6 +6021,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX PMD-FLOW-XFER-NO-PPPoE" notes="net/sfc flow rule MAE backend does not support PPPoEx items">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">
@@ -6503,6 +6573,11 @@
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
@@ -6527,6 +6602,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">
@@ -7179,6 +7259,11 @@
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
@@ -7203,6 +7288,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">
@@ -7850,6 +7940,11 @@
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
@@ -7874,6 +7969,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX PMD-FLOW-XFER-NO-PPPoE" notes="net/sfc flow rule MAE backend does not support PPPoEx items">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">
@@ -8416,6 +8516,11 @@
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
@@ -8440,6 +8545,11 @@
         <results tags="pci-10ee-0100" key="WONTFIX PMD-FLOW-XFER-NO-PPPoE" notes="net/sfc flow rule MAE backend does not support PPPoEx items">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern item</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: item not supported</verdict>
           </result>
         </results>
         <results tags="pci-1924">

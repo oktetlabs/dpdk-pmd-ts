@@ -484,6 +484,14 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare TEST_ETHDEV_STARTED state");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Validate Tx offloads for the packet");
+    nb_prep = rpc_rte_eth_tx_prepare(iut_rpcs, iut_port->if_index, 0, &m, 1);
+    if (nb_prep == 0)
+        TEST_VERDICT("Tx offloads for the packet were rejected");
+    else if (nb_prep != 1)
+        TEST_VERDICT("Wrong return value from Tx prepare API: "
+                     "expected 0 or 1, got %" PRIu16, nb_prep);
+
     TEST_STEP("Create an Rx CSAP on the TST host according to the template");
     CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
                                                 tst_if->if_name,
@@ -636,14 +644,6 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
                                    TAD_TIMEOUT_INF, 0,
                                    RCF_TRRECV_SEQ_MATCH | RCF_TRRECV_MISMATCH));
-
-    TEST_STEP("Validate Tx offloads for the packet");
-    nb_prep = rpc_rte_eth_tx_prepare(iut_rpcs, iut_port->if_index, 0, &m, 1);
-    if (nb_prep == 0)
-        TEST_VERDICT("Tx offloads for the packet were rejected");
-    else if (nb_prep != 1)
-        TEST_VERDICT("Wrong return value from Tx prepare API: "
-                     "expected 0 or 1, got %" PRIu16, nb_prep);
 
     TEST_STEP("Send the packet");
     if (rpc_rte_eth_tx_burst(iut_rpcs, iut_port->if_index, 0, &m, 1) != 1)

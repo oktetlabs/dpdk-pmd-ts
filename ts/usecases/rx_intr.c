@@ -131,6 +131,11 @@ main(int argc, char *argv[])
     TEST_STEP("Start the device");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Prepare the packet template");
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                                   &test_params,

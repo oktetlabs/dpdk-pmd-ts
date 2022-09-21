@@ -148,6 +148,11 @@ main(int argc, char *argv[])
                                    RCF_TRRECV_PACKETS | RCF_TRRECV_SEQ_MATCH |
                                    RCF_TRRECV_MISMATCH));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Validate and send the mbufs from all queues to @p iut_port "
               "Make sure that all are sent");
     for (i = 0; i < nb_queues; i++)

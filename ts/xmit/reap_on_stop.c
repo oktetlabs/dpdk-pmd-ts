@@ -154,6 +154,11 @@ main(int argc, char *argv[])
 
     mp_objs_in_use_est = 0;
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Generate packets and send them in bursts");
     while (nb_packets_to_send > 0)
     {

@@ -108,6 +108,11 @@ main(int argc, char *argv[])
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Transmit and sniff two unicast packets from @p tst_if: "
               "the first to the @p iut_alien_mac "
               "and the second to old IUT MAC.");

@@ -176,6 +176,11 @@ main(int argc, char *argv[])
                      "been produced, but should be %d", count, nb_txq);
     }
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Validate and transmit one packet from already started "
               "Tx queues on @p iut_port");
     for (queue = 0; queue < nb_txq; queue++)

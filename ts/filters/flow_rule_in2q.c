@@ -172,6 +172,11 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     rpc_rte_eth_macaddr_get(iut_rpcs, iut_port->if_index, &iut_lladdr);
 
     if (!promisc && test_pdus_dst_mac_is_set(flow_rule_pattern))

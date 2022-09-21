@@ -191,13 +191,14 @@ main(int argc, char *argv[])
     hash_functions &= ec.dev_info.flow_type_rss_offloads;
     test_setup_rss_configuration(hash_functions, FALSE, rss_conf);
 
-    ec.mp = test_rte_pktmbuf_pool_create(iut_rpcs,
-                                        TEST_PKTS_MEMPOOL_NAME,
-                                        TEST_RTE_MEMPOOL_DEF_SIZE,
-                                        TEST_RTE_MEMPOOL_DEF_CACHE,
-                                        TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                        TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
-                                        ec.socket_id);
+    ec.mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
+                                            &ec.dev_info,
+                                            TEST_PKTS_MEMPOOL_NAME,
+                                            TEST_RTE_MEMPOOL_DEF_SIZE,
+                                            TEST_RTE_MEMPOOL_DEF_CACHE,
+                                            TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
+                                            TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
+                                            ec.socket_id);
 
     TEST_STEP("Check for Rx queue runtime setup capability");
     memset(&dev_info, 0, sizeof(dev_info));

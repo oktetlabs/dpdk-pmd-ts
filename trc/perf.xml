@@ -33,12 +33,22 @@
         <arg name="n_fwd_cores"/>
         <arg name="testpmd_command_loopback_mode">3</arg>
         <notes/>
+        <results tags="pci-15b3" key="WONTFIX LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03|pci-10ee-0100" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
@@ -58,12 +68,22 @@
         <arg name="n_fwd_cores"/>
         <arg name="testpmd_command_loopback_mode">27</arg>
         <notes/>
+        <results tags="pci-15b3" key="WONTFIX LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03|pci-10ee-0100" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
@@ -83,12 +103,22 @@
         <arg name="n_fwd_cores"/>
         <arg name="testpmd_command_loopback_mode">29</arg>
         <notes/>
+        <results tags="pci-15b3" key="WONTFIX LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>

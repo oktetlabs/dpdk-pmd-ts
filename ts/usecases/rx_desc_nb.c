@@ -163,6 +163,11 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&template, FALSE, NULL,
                                                   TEST_PAYLOAD_LEN));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Transmit and sniff nb_packets packets from @p tst_if");
     tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0, tst_if->if_name,
                                        template, NULL, NULL);

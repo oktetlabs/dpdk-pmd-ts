@@ -134,6 +134,11 @@ main(int argc, char *argv[])
     reta_indx = (packet_hash % reta_size) % RPC_RTE_RETA_GROUP_SIZE;
     expected_queue = reta_conf[reta_nb].reta[reta_indx];
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Transmit the packet from @p tst_if");
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                         tst_if->if_name, tmpl, NULL, &ptrn));

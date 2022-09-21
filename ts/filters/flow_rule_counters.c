@@ -112,6 +112,11 @@ main(int argc, char *argv[])
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Make flow rule attributes with only one ingress attribute");
     CHECK_RC(test_mk_rte_flow_attr_ingress(iut_rpcs, &attr));
 

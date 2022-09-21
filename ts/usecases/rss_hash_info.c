@@ -114,6 +114,11 @@ main(int argc, char *argv[])
 
     CHECK_RC(tapi_ndn_subst_env(tmpl, &test_params, &env));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Transmit and sniff one packet from @p tst_if to the @p iut_port");
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                         tst_if->if_name, tmpl, NULL, &ptrn));

@@ -140,6 +140,11 @@ main(int argc, char *argv[])
 
     tmpls = get_tmpls_with_altered_addrs(tmpl, nb_mc_addr, mc_addr_list);
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Transmit and sniff different multicast packets from @p tst_if");
     ptrns = tapi_calloc(nb_mc_addr, sizeof(ptrn));
     CHECK_NOT_NULL(ptrns);

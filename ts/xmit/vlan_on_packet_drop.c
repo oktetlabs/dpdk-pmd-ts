@@ -242,6 +242,11 @@ main(int argc, char *argv[])
                                    TAD_TIMEOUT_INF, 0,
                                    RCF_TRRECV_PACKETS | RCF_TRRECV_MISMATCH));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Validate and send the second packet and make sure it does not "
               "get dismissed.");
     if (test_tx_prepare_and_burst(iut_rpcs, iut_port->if_index, 0, &m, 1) != 1)

@@ -640,6 +640,11 @@ main(int argc, char *argv[])
         nb_pkts_expected = 1;
     }
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Start to capture traffic with the pattern prepared");
     CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
                                    TAD_TIMEOUT_INF, 0,

@@ -106,6 +106,11 @@ main(int argc, char *argv[])
         (int)(is_all_mcast_mode) )
         TEST_VERDICT("New all-multicast wasn't saved after start");
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     CHECK_RC(tapi_ndn_subst_env(tmpl, &test_params, &env));
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&tmpl, FALSE, NULL,
                                                   DPMD_TS_PAYLOAD_LEN_DEF));

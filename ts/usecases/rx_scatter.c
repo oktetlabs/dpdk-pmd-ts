@@ -247,6 +247,11 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta, tst_if->if_name,
                                                 max_packet_size));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Repeat following steps with extra payload size from @c 0 to "
               "@p max_extra_size inclusive.");
     for (extra_size = 0; extra_size <= max_extra_size; extra_size++)

@@ -95,6 +95,11 @@ main(int argc, char *argv[])
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Retrieve information about @p deferred_queue TX queue "
               "and make sure that the tx_deferred_start flag is set "
               "Ignore this check if tx_queue_info_get function is not supported");

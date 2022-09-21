@@ -226,11 +226,13 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_CONFIGURED));
 
     TEST_STEP("Prepare state TEST_ETHDEV_RX_SETUP_DONE");
-    mp_iut = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
-                                         TEST_RTE_MEMPOOL_DEF_SIZE,
-                                         TEST_RTE_MEMPOOL_DEF_CACHE,
-                                         TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                         UINT16_MAX, test_ethdev.socket_id);
+    mp_iut = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
+                                             &test_ethdev.dev_info,
+                                             TEST_PKTS_MEMPOOL_NAME,
+                                             TEST_RTE_MEMPOOL_DEF_SIZE,
+                                             TEST_RTE_MEMPOOL_DEF_CACHE,
+                                             TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
+                                             UINT16_MAX, test_ethdev.socket_id);
     test_ethdev.mp = mp_iut;
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_RX_SETUP_DONE));
 

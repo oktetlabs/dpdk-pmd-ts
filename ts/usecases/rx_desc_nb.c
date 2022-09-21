@@ -74,15 +74,17 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare default config and mbuf pool");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
-    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
-                                     MAX(TEST_MAX_NB_RXD *
-                                         TEST_PACKETS_TO_DESC_SCALE,
-                                         TEST_RTE_MEMPOOL_DEF_CACHE << 1),
-                                     TEST_RTE_MEMPOOL_DEF_CACHE,
-                                     TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                     TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
-                                     TEST_PAYLOAD_LEN,
-                                     ethdev_config.socket_id);
+    mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
+                                         &ethdev_config.dev_info,
+                                         TEST_PKTS_MEMPOOL_NAME,
+                                         MAX(TEST_MAX_NB_RXD *
+                                             TEST_PACKETS_TO_DESC_SCALE,
+                                             TEST_RTE_MEMPOOL_DEF_CACHE << 1),
+                                         TEST_RTE_MEMPOOL_DEF_CACHE,
+                                         TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
+                                         TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
+                                         TEST_PAYLOAD_LEN,
+                                         ethdev_config.socket_id);
     TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     rx_desc_lim = &ethdev_config.dev_info.rx_desc_lim;

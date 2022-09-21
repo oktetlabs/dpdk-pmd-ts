@@ -681,6 +681,25 @@ extern rpc_rte_mempool_p  test_rte_pktmbuf_pool_create(
                                                 uint16_t         data_room_size,
                                                 int              socket_id);
 
+/**
+ * Wrapper for @b rpc_rte_pktmbuf_pool_create() which creates packets
+ * mempool taking Rx limitations into account and therefore suitable for
+ * Rx queue setup.
+ *
+ * As well as test_rte_pktmbuf_pool_create() it enforces minimum value
+ * restriction in @p data_room_size for AF_XDP.
+ */
+extern rpc_rte_mempool_p test_rte_pktmbuf_rx_pool_create(
+                                rcf_rpc_server                *rpcs,
+                                uint16_t                       port_id,
+                                struct tarpc_rte_eth_dev_info *dev_info,
+                                const char                    *name,
+                                uint32_t                       n,
+                                uint32_t                       cache_size,
+                                uint16_t                       priv_size,
+                                uint16_t                       data_room_size,
+                                int                            socket_id);
+
 /** Wrapper for @b tapi_rpc_rte_eth_make_eth_conf(), with test workarounds */
 extern struct tarpc_rte_eth_conf *test_rpc_rte_eth_make_eth_conf(
                                           rcf_rpc_server             *rpcs,

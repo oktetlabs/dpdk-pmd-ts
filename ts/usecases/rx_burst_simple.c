@@ -67,8 +67,10 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
     if (payload_len > TEST_RTE_MEMPOOL_DEF_DATA_ROOM)
-        ethdev_config.mp = test_rte_pktmbuf_pool_create(
-                               iut_rpcs, TEST_PKTS_MEMPOOL_NAME,
+        ethdev_config.mp = test_rte_pktmbuf_rx_pool_create(
+                               iut_rpcs, iut_port->if_index,
+                               &ethdev_config.dev_info,
+                               TEST_PKTS_MEMPOOL_NAME,
                                TEST_RTE_MEMPOOL_DEF_SIZE,
                                TEST_RTE_MEMPOOL_DEF_CACHE,
                                TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

@@ -110,13 +110,14 @@ main(int argc, char *argv[])
 
     ec.nb_tx_queue = nb_txq;
 
-    ec.mp = test_rte_pktmbuf_pool_create(iut_rpcs,
-                                        TEST_PKTS_MEMPOOL_NAME,
-                                        TEST_RTE_MEMPOOL_DEF_SIZE,
-                                        TEST_RTE_MEMPOOL_DEF_CACHE,
-                                        TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                        TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
-                                        ec.socket_id);
+    ec.mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
+                                            &ec.dev_info,
+                                            TEST_PKTS_MEMPOOL_NAME,
+                                            TEST_RTE_MEMPOOL_DEF_SIZE,
+                                            TEST_RTE_MEMPOOL_DEF_CACHE,
+                                            TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
+                                            TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
+                                            ec.socket_id);
 
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
 

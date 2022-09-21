@@ -576,6 +576,31 @@ test_rte_pktmbuf_pool_create(rcf_rpc_server  *rpcs,
                                        socket_id);
 }
 
+rpc_rte_mempool_p
+test_rte_pktmbuf_rx_pool_create(rcf_rpc_server                *rpcs,
+                                uint16_t                       port_id,
+                                struct tarpc_rte_eth_dev_info *dev_info,
+                                const char                    *name,
+                                uint32_t                       n,
+                                uint32_t                       cache_size,
+                                uint16_t                       priv_size,
+                                uint16_t                       data_room_size,
+                                int                            socket_id)
+{
+    struct tarpc_rte_eth_dev_info local_dev_info;
+
+    if (dev_info == NULL)
+    {
+        rpc_rte_eth_dev_info_get(rpcs, port_id, &local_dev_info);
+        dev_info = &local_dev_info;
+    }
+
+    data_room_size = MAX(data_room_size, dev_info->min_rx_bufsize);
+
+    return test_rte_pktmbuf_pool_create(rpcs, name, n, cache_size, priv_size,
+                                        data_room_size, socket_id);
+}
+
 static void
 tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                          struct tarpc_rte_eth_dev_info *dev_info,
@@ -598,8 +623,8 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
         TEST_VERDICT("The number of rx queues is exceeded.");
 
     if (*mp == RPC_NULL)
-        *mp = test_rte_pktmbuf_pool_create(
-                  rpcs, TEST_PKTS_MEMPOOL_NAME,
+        *mp = test_rte_pktmbuf_rx_pool_create(
+                  rpcs, port_id, dev_info, TEST_PKTS_MEMPOOL_NAME,
                   MAX(nb_rx_queue * rx_descs, TEST_RTE_MEMPOOL_DEF_CACHE * 2) +
                   TEST_RTE_MEMPOOL_DEF_EXTRA,
                   TEST_RTE_MEMPOOL_DEF_CACHE, TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,

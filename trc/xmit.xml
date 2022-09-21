@@ -4383,6 +4383,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4399,6 +4404,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4413,6 +4423,11 @@
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -4441,6 +4456,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4465,6 +4485,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -4494,6 +4519,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7880" notes="Xilinx virtio-net does not like too many segments on Tx and custom patch in Tx prepare rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -4747,6 +4777,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4773,6 +4808,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4794,6 +4834,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4820,6 +4865,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4841,6 +4891,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4867,6 +4922,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4891,6 +4951,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -4924,6 +4989,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4948,6 +5018,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -4977,6 +5052,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -5012,6 +5092,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5039,6 +5124,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -5806,6 +5896,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5827,6 +5922,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5853,6 +5953,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6033,6 +6138,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6069,6 +6179,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6103,6 +6218,11 @@
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -6151,6 +6271,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -6195,6 +6320,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -6205,830 +6335,6 @@
         <arg name="payload_len">8900</arg>
         <arg name="segmentation">0xff*48</arg>
         <arg name="tmpl">VAR.tmpl.iut2tst.udp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="SNAP-7880" notes="Xilinx virtio-net does not like too many segments on Tx and custom patch in Tx prepare rejects it">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">0</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">0</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">1</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">1</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">10</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">10</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">50</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">50</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">727</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">727</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">999</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">999</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">1400</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">1400</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">4000</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">4000</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">7787</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">7787</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>Mbuf segmentation is prohibited</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">8900</arg>
-        <arg name="segmentation">0xff*48</arg>
-        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
         <arg name="tso_segsz"/>
         <arg name="vlan_id">[1,4094]</arg>
         <notes/>
@@ -7072,6 +6378,890 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">0</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">0</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">1</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">1</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">10</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">10</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">50</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">50</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">727</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">727</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">999</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">999</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">1400</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">1400</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">4000</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">4000</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">7787</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">7787</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">FALSE</arg>
+        <arg name="payload_len">8900</arg>
+        <arg name="segmentation">0xff*48</arg>
+        <arg name="tmpl">VAR.tmpl.iut2tst.tcp4</arg>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="SNAP-7880" notes="Xilinx virtio-net does not like too many segments on Tx and custom patch in Tx prepare rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7123,6 +7313,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8516,6 +8711,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8555,6 +8755,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -8601,6 +8806,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -24072,6 +24282,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24088,6 +24303,11 @@
             <verdict>Mbuf segmentation is prohibited</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24102,6 +24322,11 @@
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>Mbuf segmentation is prohibited</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -24130,6 +24355,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24154,6 +24384,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -24187,6 +24422,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24337,6 +24577,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24363,6 +24608,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24385,6 +24635,11 @@
           </result>
         </results>
         <results tags="tx-datapath-ef100&amp;rhead-r1" key="SF 84130" notes="IPv4 and pseudo-header checksums are calculated in driver and require contiguous headers">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -24425,6 +24680,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24457,6 +24717,11 @@
           </result>
         </results>
         <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -24497,6 +24762,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24630,6 +24900,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24649,6 +24924,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -24677,6 +24957,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25111,526 +25396,6 @@
         <arg name="env"/>
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload">FALSE</arg>
-        <arg name="payload_len">8900</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">0</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">1</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">10</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">50</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">727</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">999</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">1400</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">4000</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
-        <arg name="payload_len">7787</arg>
-        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz"/>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload">TRUE</arg>
         <arg name="payload_len">8900</arg>
         <arg name="segmentation">0xfe*1, 1*0xffff</arg>
         <arg name="tmpl"/>
@@ -25672,6 +25437,526 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">0</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">1</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">10</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">50</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">727</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">999</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">1400</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">4000</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">7787</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-HDR-CONTIG" notes="i40e uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload">TRUE</arg>
+        <arg name="payload_len">8900</arg>
+        <arg name="segmentation">0xfe*1, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz"/>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio does SW VLAN insertion which requires contiguous first 12 bytes">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -25837,6 +26122,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25868,6 +26158,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25897,6 +26192,11 @@
         <results tags="tx-datapath-ef10" key="SF 80182">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -25940,6 +26240,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25979,6 +26284,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -26027,6 +26337,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26252,6 +26567,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26293,6 +26613,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26330,6 +26655,11 @@
           </result>
         </results>
         <results tags="tx-datapath-ef100&amp;rhead-r1" key="SF 84130" notes="IPv4 and pseudo-header checksums are calculated in driver and require contiguous headers">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -26385,6 +26715,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26432,6 +26767,11 @@
           </result>
         </results>
         <results tags="tx-datapath-ef100" key="WONTFIX HIF-EF100-TX-SEGS-31" notes="EF100 host interface limits number of segments by 31">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -26492,6 +26832,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26745,6 +27090,11 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26779,6 +27129,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>
@@ -26820,6 +27175,11 @@
         <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-8-SEGS-MAX" notes="i40e supports packets with up to 8 segments">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
       </iter>

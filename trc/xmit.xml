@@ -7948,6 +7948,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8086,6 +8091,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -8326,6 +8336,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8558,6 +8573,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8786,6 +8806,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -9048,6 +9073,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -9285,6 +9315,138 @@
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len"/>
         <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">177</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">512</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">1201</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">1400</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">1440</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*54, 1*0xffff</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len"/>
+        <arg name="segmentation">1*128, 1*0xffff</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">177</arg>
         <arg name="vlan_id">-1</arg>
@@ -9299,129 +9461,7 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">512</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">1201</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">1400</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">1440</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">4000</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*54, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">8900</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len"/>
-        <arg name="segmentation">1*128, 1*0xffff</arg>
-        <arg name="tmpl"/>
-        <arg name="tso_segsz">177</arg>
-        <arg name="vlan_id">-1</arg>
-        <notes/>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TCP TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -9559,6 +9599,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -9796,6 +9841,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9992,6 +10042,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -11466,6 +11521,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -11698,6 +11758,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -11926,6 +11991,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -12158,6 +12228,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -12390,6 +12465,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -12622,6 +12702,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -12854,6 +12939,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -14096,6 +14186,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -25462,6 +25557,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25600,6 +25700,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -25825,6 +25930,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25948,6 +26058,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -26080,6 +26195,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -26272,6 +26392,11 @@
           </result>
         </results>
         <results tags="dpdk&gt;=20050014&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041)" notes="Virtio requires contiguous packet headers to calculate pseudo header checksum">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -26483,6 +26608,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26524,6 +26654,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26560,6 +26695,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26592,6 +26732,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -27465,6 +27610,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28939,6 +29089,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28971,6 +29126,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -29011,6 +29171,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -29043,6 +29208,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -29083,6 +29253,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -29115,6 +29290,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -30331,6 +30511,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30363,6 +30548,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -30403,6 +30593,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30435,6 +30630,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -30475,6 +30675,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30507,6 +30712,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -31723,6 +31933,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31755,6 +31970,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -31795,6 +32015,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31827,6 +32052,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -31867,6 +32097,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31899,6 +32134,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -33115,6 +33355,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -33147,6 +33392,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -33187,6 +33437,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -33219,6 +33474,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -33259,6 +33519,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -33291,6 +33556,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -34507,6 +34777,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -34539,6 +34814,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -34579,6 +34859,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -34611,6 +34896,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -34651,6 +34941,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -34683,6 +34978,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -35899,6 +36199,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -35931,6 +36236,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -35971,6 +36281,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -36003,6 +36318,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -36043,6 +36363,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -36075,6 +36400,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -37291,6 +37621,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -37323,6 +37658,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -37363,6 +37703,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -37395,6 +37740,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -37435,6 +37785,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -37467,6 +37822,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -38713,6 +39073,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -38749,6 +39114,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -38781,6 +39151,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
@@ -38826,6 +39201,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -38862,6 +39242,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -38894,6 +39279,11 @@
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="SNAP-7676" notes="Xilinx virtio-net does not like MSS less than 512 and custom patch in the driver rejects it">
+          <result value="FAILED">
+            <verdict>Tx offloads for the packet were rejected</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-MIN-TSO-MSS" notes="i40e does not allow MSS smaller than 256">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>

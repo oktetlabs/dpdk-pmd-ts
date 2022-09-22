@@ -30,6 +30,11 @@
         <arg name="tso_segsz"/>
         <arg name="vlan_id"/>
         <notes/>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16538,6 +16543,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -16582,6 +16592,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -16726,6 +16741,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -16775,6 +16795,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -16925,6 +16950,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -16986,6 +17016,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -17044,6 +17079,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -17146,6 +17186,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -17316,6 +17361,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -17360,6 +17410,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -17504,6 +17559,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -17553,6 +17613,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -17703,6 +17768,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -17764,6 +17834,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -17822,6 +17897,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -17924,6 +18004,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -18094,6 +18179,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -18138,6 +18228,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -18282,6 +18377,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -18331,6 +18431,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -18481,6 +18586,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -18542,6 +18652,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -18600,6 +18715,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -18702,6 +18822,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -18872,6 +18997,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -18916,6 +19046,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -19060,6 +19195,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -19109,6 +19249,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -19259,6 +19404,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -19320,6 +19470,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -19378,6 +19533,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -19482,6 +19642,11 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -19526,6 +19691,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">

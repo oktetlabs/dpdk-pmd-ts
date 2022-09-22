@@ -22213,6 +22213,11 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
         <results tags="vdev-failsafe" notes="failsafe driver does not call its slaves' set_mc_addr_list() while the slaves are in INITIALIZED or CLOSED state">
           <result value="FAILED">
             <verdict>There are no received packets</verdict>
@@ -22236,6 +22241,11 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">RX_SETUP_DONE</arg>
@@ -22250,6 +22260,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support set list of multicast operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -22272,6 +22287,11 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">RXTX_SETUP_DONE</arg>
@@ -22286,6 +22306,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support set list of multicast operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -22308,6 +22333,11 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">STOPPED</arg>
@@ -22322,6 +22352,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support set list of multicast operation">
+          <result value="SKIPPED">
+            <verdict>Set list of multicast addresses operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>

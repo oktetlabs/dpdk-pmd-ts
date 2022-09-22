@@ -1747,6 +1747,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1785,6 +1790,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1831,6 +1841,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1869,6 +1884,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1915,6 +1935,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1953,6 +1978,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1999,6 +2029,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2037,6 +2072,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2083,6 +2123,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2121,6 +2166,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2167,6 +2217,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2205,6 +2260,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2251,6 +2311,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2289,6 +2354,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2335,6 +2405,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2373,6 +2448,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2419,6 +2499,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2457,6 +2542,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2503,6 +2593,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2541,6 +2636,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2587,6 +2687,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2625,6 +2730,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2671,6 +2781,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2709,6 +2824,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2755,6 +2875,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2797,6 +2922,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2835,6 +2965,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4234,6 +4369,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4272,6 +4412,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4318,6 +4463,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4356,6 +4506,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4402,6 +4557,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4440,6 +4600,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4486,6 +4651,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4524,6 +4694,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4570,6 +4745,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4608,6 +4788,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4654,6 +4839,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4692,6 +4882,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4738,6 +4933,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4776,6 +4976,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4822,6 +5027,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4860,6 +5070,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4906,6 +5121,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4944,6 +5164,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4990,6 +5215,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5028,6 +5258,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5074,6 +5309,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5112,6 +5352,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5158,6 +5403,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5196,6 +5446,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5242,6 +5497,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5284,6 +5544,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5322,6 +5587,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -8655,6 +8925,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8700,6 +8975,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -8905,6 +9185,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8950,6 +9235,11 @@
           </result>
         </results>
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>

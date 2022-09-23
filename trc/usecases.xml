@@ -24181,6 +24181,11 @@
                     <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
                 </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24209,6 +24214,11 @@
                     <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
                 </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24236,6 +24246,11 @@
                     <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
                     <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
                 </result>
+            </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
             </results>
         </iter>
         <iter result="PASSED">
@@ -24348,6 +24363,11 @@
                     <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
                 </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24368,6 +24388,11 @@
                 <result value="SKIPPED">
                     <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
                 </result>
+            </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
             </results>
         </iter>
         <iter result="PASSED">
@@ -24417,6 +24442,11 @@
                     <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
                     <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
                 </result>
+            </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
             </results>
         </iter>
         <iter result="PASSED">
@@ -24511,6 +24541,11 @@
                     <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
                 </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24553,6 +24588,11 @@
                     <verdict>8184 received packets smaller than initially requested number of Rx descriptors</verdict>
               </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24574,6 +24614,11 @@
                     <verdict>16376 received packets smaller than initially requested number of Rx descriptors</verdict>
               </result>
             </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
+            </results>
         </iter>
         <iter result="PASSED">
             <arg name="env"/>
@@ -24589,6 +24634,11 @@
                 <result value="SKIPPED">
                     <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
                 </result>
+            </results>
+            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+              <result value="SKIPPED">
+                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+              </result>
             </results>
         </iter>
     </test>

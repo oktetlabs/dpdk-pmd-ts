@@ -52,8 +52,10 @@ main(int argc, char *argv[])
     te_bool                             deferred_txq_start = FALSE;
 
     struct test_ethdev_config           ethdev_config;
+    uint64_t                            tx_offloads = 0;
     struct tarpc_rte_eth_conf           eth_conf;
     struct tarpc_rte_eth_txconf         txconf;
+    struct tarpc_rte_eth_txconf        *eth_txconfp;
     unsigned int                        payload_len = DPMD_TS_PAYLOAD_LEN_DEF;
     send_transform                      cond;
     rpc_rte_mbuf_p                     *mbufs = NULL;
@@ -74,31 +76,33 @@ main(int argc, char *argv[])
     TEST_GET_VLAN_ID_PARAM(vlan_id);
     TEST_GET_BOOL_PARAM(deferred_txq_start);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Initialize ethdev and obtain the device information");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
-    ethdev_config.nb_rx_queue = 1;
-    ethdev_config.nb_tx_queue = 1;
+    if (vlan_id >= 0)
+    {
+        TEST_STEP("Check if VLAN insertion offload is supported and enable it");
+        if ((ethdev_config.dev_info.tx_offload_capa &
+            (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
+            TEST_SKIP("TX VLAN insertion is not available");
 
-    (void)test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
-                                         &eth_conf);
+        tx_offloads |= (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
+    }
+
+    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    CHECK_NOT_NULL(test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
+                                                  &eth_conf));
+    CHECK_RC(test_mk_txmode_txconf(&ethdev_config, tx_offloads,
+                                   &eth_conf.txmode, &txconf));
     ethdev_config.eth_conf = &eth_conf;
-
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
-    TEST_STEP("Verify the configuration requested");
-    if ((vlan_id >= 0) &&
-        ((ethdev_config.dev_info.tx_offload_capa &
-        (1U << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0))
-        TEST_SKIP("TX VLAN insertion is not available");
-
     TEST_STEP("Adjust TxQ settings (if need be)");
-    ethdev_config.tx_confs = tapi_calloc(1,
-                                         sizeof(struct tarpc_rte_eth_txconf *));
-    ethdev_config.tx_confs[0] = &txconf;
-    memcpy(&txconf, &ethdev_config.dev_info.default_txconf, sizeof(txconf));
     if (deferred_txq_start)
         txconf.tx_deferred_start = 1;
+    eth_txconfp = &txconf;
+    ethdev_config.tx_confs = &eth_txconfp;
 
     TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));

@@ -157,6 +157,7 @@ main(int argc, char *argv[])
     unsigned int                        nb_tx_queues = 0;
 
     struct test_ethdev_config           ethdev_config;
+    uint64_t                            tx_offloads = 0;
     struct tarpc_rte_eth_conf           eth_conf;
     unsigned int                        payload_len = DPMD_TS_PAYLOAD_LEN_DEF;
     rpc_rte_mbuf_p                    **bursts = NULL;
@@ -206,8 +207,14 @@ main(int argc, char *argv[])
     if (nb_tx_queues > ethdev_config.dev_info.max_tx_queues)
         TEST_SKIP("So many Tx queues are not supported");
 
+    TEST_STEP("Check if VLAN insertion offload is supported and enable it");
+    if ((ethdev_config.dev_info.tx_offload_capa &
+        (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
+        TEST_SKIP("TX VLAN insertion is not available");
+
+    tx_offloads |= (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
+
     TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
-    (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
 
     ethdev_config.nb_rx_queue = 1;
     ethdev_config.nb_tx_queue = nb_tx_queues;
@@ -215,14 +222,11 @@ main(int argc, char *argv[])
 
     (void)test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                          &eth_conf);
+    CHECK_RC(test_mk_txmode_txconf(&ethdev_config, tx_offloads,
+                                   &eth_conf.txmode, NULL));
     ethdev_config.eth_conf = &eth_conf;
 
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
-
-    TEST_STEP("Verify the configuration requested");
-    if ((ethdev_config.dev_info.tx_offload_capa &
-        (1U << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
-        TEST_SKIP("TX VLAN insertion is not available");
 
     TEST_STEP("Obtain the source Ethernet address");
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,

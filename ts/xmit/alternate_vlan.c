@@ -52,6 +52,8 @@ main(int argc, char *argv[])
     int                                 vlan_id_second;
 
     struct test_ethdev_config           ethdev_config;
+    struct tarpc_rte_eth_conf           eth_conf;
+    uint64_t                            tx_offloads = 0;
     send_transform                      cond;
     rpc_rte_mbuf_p                     *mbufs_first;
     unsigned int                        n_mbufs_first;
@@ -75,16 +77,29 @@ main(int argc, char *argv[])
     TEST_GET_VLAN_ID_PARAM(vlan_id_first);
     TEST_GET_VLAN_ID_PARAM(vlan_id_second);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Initialize ethdev and obtain the device information");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
+
+    if ((vlan_id_first >= 0) || (vlan_id_second >= 0))
+    {
+        TEST_STEP("Check if VLAN insertion offload is supported and enable it");
+        if ((ethdev_config.dev_info.tx_offload_capa &
+            (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0)
+            TEST_SKIP("TX VLAN insertion is not available");
+
+        tx_offloads |= (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
+    }
+
+    TEST_STEP("Configure and start ethdev");
+    CHECK_NOT_NULL(test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
+                                                  &eth_conf));
+    ethdev_config.eth_conf = &eth_conf;
+    CHECK_RC(test_mk_txmode_txconf(&ethdev_config, tx_offloads,
+                                   &eth_conf.txmode, NULL));
+
     ethdev_config.min_tx_desc = TEST_TX_PKTS_NUM;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
-
-    TEST_STEP("Verify the configuration requested");
-    if (((vlan_id_first >= 0) || (vlan_id_second >= 0)) &&
-        ((ethdev_config.dev_info.tx_offload_capa &
-        (1U << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT)) == 0))
-        TEST_SKIP("TX VLAN insertion is not available");
 
     TEST_STEP("Obtain the source Ethernet address");
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,

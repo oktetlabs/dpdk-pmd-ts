@@ -39,6 +39,83 @@
 #include "tapi_tcp.h"
 #include "te_ethernet.h"
 
+/** Per received packet callback data */
+struct pkt_cb_data {
+    te_bool     check_cwr;
+    te_bool     check_failed;
+};
+
+/** Per packet receive callback */
+static void
+pkt_cb(asn_value *packet, void *user_data)
+{
+    struct pkt_cb_data *cb_data = user_data;
+
+    if (cb_data->check_cwr)
+    {
+        int32_t match_unit;
+
+        CHECK_RC(asn_read_int32(packet, &match_unit, "match-unit"));
+        /* If it is the first packet */
+        if (match_unit == 1)
+        {
+            uint8_t tcp_flags;
+            size_t len = sizeof(tcp_flags);
+
+            /* TCP is the topmost PDU */
+            CHECK_RC(asn_read_value_field(packet, &tcp_flags, &len,
+                                          "pdus.0.#tcp.flags.#plain"));
+
+            if ((tcp_flags & TCP_CWR_FLAG) == 0)
+            {
+                ERROR_VERDICT("TCP CWR flag is lost in the first packet");
+                cb_data->check_failed = TRUE;
+            }
+        }
+    }
+}
+
+/**
+ * Convert TCP flags from plain to mask to accept any CWR flag value.
+ *
+ * @return Should TCP CWR flag be checked?
+ */
+static te_bool
+mask_tcp_cwr_in_first_packet(asn_value *ptrn)
+{
+    asn_value *first_pkt;
+    uint8_t    tcp_flags;
+    size_t     len = sizeof(tcp_flags);
+
+    CHECK_RC(asn_get_indexed(ptrn, &first_pkt, 0, ""));
+    /* TCP is the topmost PDU */
+    CHECK_RC(asn_read_value_field(first_pkt, &tcp_flags, &len,
+                                  "pdus.0.#tcp.flags.#plain"));
+
+    if (tcp_flags & TCP_CWR_FLAG)
+    {
+        asn_value *mask;
+
+        CHECK_RC(asn_free_subvalue_fmt(first_pkt, "pdus.0.#tcp.flags.#plain"));
+
+        mask = asn_retrieve_descendant(first_pkt, NULL, "pdus.0.#tcp.flags.#mask");
+        CHECK_NOT_NULL(mask);
+
+        tcp_flags &= ~TCP_CWR_FLAG;
+        CHECK_RC(asn_write_value_field(mask, &tcp_flags, sizeof(tcp_flags), "v"));
+
+        tcp_flags = 0xff & ~TCP_CWR_FLAG;
+        CHECK_RC(asn_write_value_field(mask, &tcp_flags, sizeof(tcp_flags), "m"));
+
+        return TRUE;
+    }
+    else
+    {
+        /* If CWR is unset, it must be unset - do not touch plain match */
+        return FALSE;
+    }
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -90,6 +167,11 @@ main(int argc, char *argv[])
     csap_handle_t                         rx_csap = CSAP_INVALID_HANDLE;
     asn_value                            *pkt;
     asn_value                            *ptrn;
+    struct pkt_cb_data                    test_cb_data = {};
+    tapi_tad_trrecv_cb_data               recv_cb_data = {
+                                                .callback = pkt_cb,
+                                                .user_data = &test_cb_data,
+                                          };
     unsigned int                          nb_pkts_expected;
     uint16_t                              nb_prep;
     unsigned int                          nb_pkts_rx;
@@ -632,6 +714,9 @@ main(int argc, char *argv[])
         TEST_STEP("Prepare a traffic pattern from TSO packet samples");
         CHECK_RC(tapi_ndn_pkts_to_ptrn(gso_pkts, nb_gso_pkts, &ptrn));
         nb_pkts_expected = nb_gso_pkts;
+
+        TEST_STEP("Mask TCP flag CWR in the first packet to handle it gracefully");
+        test_cb_data.check_cwr = mask_tcp_cwr_in_first_packet(ptrn);
     }
     else
     {
@@ -654,7 +739,9 @@ main(int argc, char *argv[])
     if (rpc_rte_eth_tx_burst(iut_rpcs, iut_port->if_index, 0, &m, 1) != 1)
         TEST_VERDICT("Cannot send the packet");
 
-    CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, nb_pkts_expected, 0));
+    CHECK_RC(test_rx_await_pkts_exec_cb(tst_host->ta, rx_csap,
+                                        nb_pkts_expected, 0,
+                                        &recv_cb_data));
     CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL, &nb_pkts_rx));
 
     TEST_STEP("Check that no extra packets are received on Tester");
@@ -665,6 +752,10 @@ main(int argc, char *argv[])
 
     TEST_STEP("Verify the number of matching packets received");
     CHECK_MATCHED_PACKETS_NUM(nb_pkts_rx, nb_pkts_expected);
+
+    TEST_STEP("Fail if TCP CWR flag is lost");
+    if (test_cb_data.check_failed)
+        TEST_STOP;
 
     TEST_SUCCESS;
 

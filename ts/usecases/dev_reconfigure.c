@@ -132,7 +132,10 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_get_rss_hf_by_tmpl(rx_tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions, TRUE, rss_conf);
+    test_setup_rss_configuration(hash_functions,
+                                 MAX(test_ethdev_config.dev_info.hash_key_size,
+                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 TRUE, rss_conf);
 
     RPC_AWAIT_ERROR(test_ethdev_config.rpcs);
     rc = rpc_rte_eth_dev_configure(test_ethdev_config.rpcs,
@@ -195,7 +198,9 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
               "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs, iut_port->if_index);
+    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
+                                                 rss_conf->rss_key_len,
+                                                 iut_port->if_index);
     if (actual_rss_conf != NULL)
         rss_conf = actual_rss_conf;
 

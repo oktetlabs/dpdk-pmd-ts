@@ -1158,6 +1158,7 @@ test_default_prepare_ethdev(tapi_env *env,
 static te_errno
 test_calc_hash_by_pdus_and_hf(tarpc_rss_hash_protos_t  hf,
                               uint8_t                 *rss_key,
+                              size_t                   rss_key_sz,
                               asn_value               *pdus,
                               uint32_t                *hash_regular,
                               uint32_t                *hash_symmetric)
@@ -1264,7 +1265,7 @@ test_calc_hash_by_pdus_and_hf(tarpc_rss_hash_protos_t  hf,
         dst_port = htons((uint16_t)value_read);
     }
 
-    hash_cache = te_toeplitz_cache_init(rss_key);
+    hash_cache = te_toeplitz_cache_init_size(rss_key, rss_key_sz);
 
     if (hash_regular != NULL)
     {
@@ -1299,6 +1300,7 @@ test_calc_hash_by_pdus_and_hf(tarpc_rss_hash_protos_t  hf,
 te_errno
 test_calc_hash_by_tmpl_and_hf(tarpc_rss_hash_protos_t  hf,
                               uint8_t                 *rss_key,
+                              size_t                   rss_key_sz,
                               asn_value               *tmpl,
                               uint32_t                *hash_regular,
                               uint32_t                *hash_symmetric)
@@ -1313,7 +1315,7 @@ test_calc_hash_by_tmpl_and_hf(tarpc_rss_hash_protos_t  hf,
     if (rc != 0)
         return rc;
 
-    return test_calc_hash_by_pdus_and_hf(hf, rss_key, pdus,
+    return test_calc_hash_by_pdus_and_hf(hf, rss_key, rss_key_sz, pdus,
                                          hash_regular, hash_symmetric);
 }
 
@@ -1439,6 +1441,7 @@ test_rss_hash_protos_str2bitmask(const char *rss_hash_protos_str)
 te_errno
 test_rss_get_hash_by_pattern_unit(tarpc_rss_hash_protos_t  rss_hf,
                                   uint8_t                 *rss_key,
+                                  size_t                   rss_key_sz,
                                   const asn_value         *pattern,
                                   int                      pattern_unit_index,
                                   uint32_t                *hash_regular,
@@ -1459,7 +1462,7 @@ test_rss_get_hash_by_pattern_unit(tarpc_rss_hash_protos_t  rss_hf,
     if (rc != 0)
         return rc;
 
-    return test_calc_hash_by_pdus_and_hf(rss_hf, rss_key, pdus,
+    return test_calc_hash_by_pdus_and_hf(rss_hf, rss_key, rss_key_sz, pdus,
                                          hash_regular, hash_symmetric);
 }
 
@@ -2387,9 +2390,10 @@ test_change_tmpl_ip_src_addr_by_queue_nb(
 
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf->rss_hf, rss_conf->rss_key.rss_key_val,
-                tmpl, &packet_hash, NULL));
+                rss_conf->rss_key_len, tmpl, &packet_hash, NULL));
 
-    hash_cache = te_toeplitz_cache_init(rss_conf->rss_key.rss_key_val);
+    hash_cache = te_toeplitz_cache_init_size(rss_conf->rss_key.rss_key_val,
+                                             rss_conf->rss_key_len);
     rc = test_change_src_addr_by_reta_index(hash_cache, packet_hash,
                                             src_addr, addr_len, reta_size,
                                             reta_indxs, nb_reta_indxs);
@@ -3776,14 +3780,16 @@ out:
 static te_errno
 test_get_rss_settings_by_action_conf(const asn_value  *fr_action_conf_rss,
                                      uint64_t         *rss_hf_out,
-                                     uint8_t         **rss_key_out)
+                                     uint8_t         **rss_key_out,
+                                     size_t           *rss_key_sz_out)
 {
     asn_value *rss_conf = NULL;
     asn_value *rss_key = NULL;
     uint64_t   rss_hf = 0;
     uint8_t   *rss_key_bytes = NULL;
-    size_t     d_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    size_t     d_len = 0;
     te_errno   rc = 0;
+    int        ret;
 
     rc = asn_get_subvalue(fr_action_conf_rss, &rss_conf, "rss-conf");
     if (rc == TE_EASNINCOMPLVAL)
@@ -3801,8 +3807,11 @@ test_get_rss_settings_by_action_conf(const asn_value  *fr_action_conf_rss,
     else if (rc != 0)
         return rc;
 
-    if (asn_get_length(rss_key, "") != (int)d_len)
-        return rc;
+    ret = asn_get_length(rss_key, "");
+    if (ret <= 0)
+        return TE_EINVAL;
+
+    d_len = ret;
 
     rss_key_bytes = TE_ALLOC(d_len);
     if (rss_key_bytes == NULL)
@@ -3818,6 +3827,7 @@ test_get_rss_settings_by_action_conf(const asn_value  *fr_action_conf_rss,
 out:
     *rss_hf_out = rss_hf;
     *rss_key_out = rss_key_bytes;
+    *rss_key_sz_out = d_len;
 
     return 0;
 }
@@ -3828,7 +3838,8 @@ test_get_rx_info_by_rss_action(const asn_value  *flow_rule_rss,
                                uint16_t         *nb_rss_queues_out,
                                uint16_t         *nb_queues_out,
                                uint64_t         *rss_hf_out,
-                               uint8_t         **rss_key_out)
+                               uint8_t         **rss_key_out,
+                               size_t           *rss_key_sz_out)
 {
     int            nb_fr_actions;
     asn_value     *fr_action_conf_rss = NULL;
@@ -3837,12 +3848,14 @@ test_get_rx_info_by_rss_action(const asn_value  *flow_rule_rss,
     uint16_t       queue_index_max = 0;
     uint64_t       rss_hf = 0;
     uint8_t       *rss_key = NULL;
+    size_t         rss_key_sz = 0;
     te_errno       rc = 0;
     int            i;
 
     if ((flow_rule_rss == NULL) || (rss_queues_out == NULL) ||
         (nb_rss_queues_out == NULL) || (nb_queues_out == NULL) ||
-        (rss_hf_out == NULL) || (rss_key_out == NULL))
+        (rss_hf_out == NULL) || (rss_key_out == NULL) ||
+        (rss_key_sz_out == NULL))
         return TE_EINVAL;
 
     nb_fr_actions = asn_get_length(flow_rule_rss, "actions");
@@ -3908,13 +3921,15 @@ test_get_rx_info_by_rss_action(const asn_value  *flow_rule_rss,
     }
 
     rc = test_get_rss_settings_by_action_conf(fr_action_conf_rss,
-                                              &rss_hf, &rss_key);
+                                              &rss_hf, &rss_key,
+                                              &rss_key_sz);
 
     *rss_queues_out = rss_queues;
     *nb_rss_queues_out = nb_entries;
     *nb_queues_out = queue_index_max + 1;
     *rss_hf_out = rss_hf;
     *rss_key_out = rss_key;
+    *rss_key_sz_out = rss_key_sz;
 
     return 0;
 
@@ -4270,45 +4285,38 @@ test_start_rx_queue(rcf_rpc_server *rpcs, uint16_t port_id, uint16_t queue_id)
 
 extern void
 test_setup_rss_configuration(tarpc_rss_hash_protos_t hf,
-                             te_bool regular,
+                             size_t rss_key_sz, te_bool regular,
                              struct tarpc_rte_eth_rss_conf *rss_conf)
 {
-    unsigned int i;
-    static const uint8_t regular_key[RPC_RSS_HASH_KEY_LEN_DEF] = {
-        0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a,
-        0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a,
-        0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a,
-        0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a,
-        0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a, 0x6d, 0x5a,
+    static const uint8_t regular_pattern[] = {
+        0x6d, 0x5a,
     };
+    unsigned int i;
 
+    rss_conf->rss_key.rss_key_val = tapi_malloc(rss_key_sz);
+    rss_conf->rss_key.rss_key_len = rss_key_sz;
+    rss_conf->rss_key_len = rss_key_sz;
     rss_conf->rss_hf = hf;
-    rss_conf->rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
-    rss_conf->rss_key.rss_key_val = tapi_malloc(RPC_RSS_HASH_KEY_LEN_DEF);
-    rss_conf->rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
 
-    if (regular)
+    for (i = 0; i < rss_key_sz; ++i)
     {
-        memcpy(rss_conf->rss_key.rss_key_val, regular_key,
-               RPC_RSS_HASH_KEY_LEN_DEF);
-    }
-    else
-    {
-        for (i = 0; i < RPC_RSS_HASH_KEY_LEN_DEF; i++)
-            rss_conf->rss_key.rss_key_val[i] = rand();
+        rss_conf->rss_key.rss_key_val[i] =
+            (regular) ? regular_pattern[i % sizeof(regular_pattern)] : rand();
     }
 }
 
 extern struct tarpc_rte_eth_rss_conf *
-test_try_get_rss_hash_conf(rcf_rpc_server *rpcs, uint16_t port_id)
+test_try_get_rss_hash_conf(rcf_rpc_server *rpcs,
+                           size_t rss_key_sz,
+                           uint16_t port_id)
 {
     te_errno rc;
     struct tarpc_rte_eth_rss_conf *rss_conf;
 
     rss_conf = tapi_malloc(sizeof(*rss_conf));
-    rss_conf->rss_key.rss_key_val = tapi_malloc(RPC_RSS_HASH_KEY_LEN_DEF);
-    rss_conf->rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
-    rss_conf->rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    rss_conf->rss_key.rss_key_val = tapi_malloc(rss_key_sz);
+    rss_conf->rss_key.rss_key_len = rss_key_sz;
+    rss_conf->rss_key_len = rss_key_sz;
 
     RPC_AWAIT_IUT_ERROR(rpcs);
     rc = rpc_rte_eth_dev_rss_hash_conf_get(rpcs, port_id, rss_conf);

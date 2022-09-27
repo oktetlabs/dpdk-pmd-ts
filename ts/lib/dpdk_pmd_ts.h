@@ -817,7 +817,8 @@ extern struct test_ethdev_config * test_prepare_config_mk(tapi_env *env,
  * account the hash function
  *
  * @param hf             Bitmask of RSS hash functions
- * @param rss_key        40-byte RSS key
+ * @param rss_key        RSS key
+ * @param rss_key_sz     RSS key size
  * @param tmpl           Template
  * @param hash_regular   Location for standard RSS hash or @c NULL
  * @param hash_symmetric Location for symmetric IP RSS hash (out) or @c NULL
@@ -829,6 +830,7 @@ extern struct test_ethdev_config * test_prepare_config_mk(tapi_env *env,
  */
 extern te_errno test_calc_hash_by_tmpl_and_hf(tarpc_rss_hash_protos_t  hf,
                                               uint8_t                 *rss_key,
+                                              size_t                   rss_key_sz,
                                               asn_value               *tmpl,
                                               uint32_t                *hash_regular,
                                               uint32_t                *hash_symmetric);
@@ -839,6 +841,7 @@ extern te_errno test_calc_hash_by_tmpl_and_hf(tarpc_rss_hash_protos_t  hf,
 extern te_errno test_rss_get_hash_by_pattern_unit(
                                   tarpc_rss_hash_protos_t  rss_hf,
                                   uint8_t                 *rss_key,
+                                  size_t                   rss_key_sz,
                                   const asn_value         *pattern,
                                   int                      pattern_unit_index,
                                   uint32_t                *hash_regular,
@@ -1086,7 +1089,8 @@ extern te_errno test_get_rx_info_by_rss_action(
                                uint16_t         *nb_rss_queues_out,
                                uint16_t         *nb_queues_out,
                                uint64_t         *rss_hf,
-                               uint8_t         **rss_key_out);
+                               uint8_t         **rss_key_out,
+                               size_t           *rss_key_sz_out);
 
 /**
 * Add the appropriate tunnel UDP port if VXLAN/GENEVE protocols are in the template
@@ -1195,13 +1199,14 @@ extern void test_start_rx_queue(rcf_rpc_server *rpcs,
  * Fill RSS with provided @p hf and regular or random RSS key
  *
  * @param[in]  hf            Hash functions to include into RSS configuration
+ * @param[in]  rss_key_size  RSS key size
  * @param[in]  regular       If @c TRUE - setup predefined regular RSS key,
  *                           setup random key otherwise
  * @param[out] rss_conf      RSS configuration to setup
  */
 extern void test_setup_rss_configuration(
                                     tarpc_rss_hash_protos_t hf,
-                                    te_bool regular,
+                                    size_t rss_key_sz, te_bool regular,
                                     struct tarpc_rte_eth_rss_conf *rss_conf);
 
 
@@ -1209,6 +1214,7 @@ extern void test_setup_rss_configuration(
  * Try to get RSS configuration using rss_hash_conf_get() RPC
  *
  * @param[in]  rpcs          RPC server handle
+ * @param[in]  rss_key_sz    Expected MAX RSS key size
  * @param[in]  port_id       The port identifier of the device
  *
  * @return  Pointer to allocated RSS configuration on heap on success
@@ -1217,6 +1223,7 @@ extern void test_setup_rss_configuration(
 
 extern struct tarpc_rte_eth_rss_conf *test_try_get_rss_hash_conf(
                                                         rcf_rpc_server *rpcs,
+                                                        size_t rss_key_sz,
                                                         uint16_t port_id);
 /**
  * Send one packet with @p tmpl, receive it on @p queue and match it

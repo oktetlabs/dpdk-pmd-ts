@@ -94,7 +94,10 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions, TRUE, rss_conf);
+    test_setup_rss_configuration(hash_functions,
+                                 MAX(test_ethdev_config.dev_info.hash_key_size,
+                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 TRUE, rss_conf);
 
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
@@ -173,13 +176,15 @@ main(int argc, char *argv[])
     TEST_STEP("Query the hash configuration. If the corresponding RPC is not supported, "
               "use previously requested configuration. Calculate the packet hash, "
               "using the Toeplitz function.");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs, iut_port->if_index);
+    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
+                                                 rss_conf->rss_key_len,
+                                                 iut_port->if_index);
     if (actual_rss_conf != NULL)
         rss_conf = actual_rss_conf;
 
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf->rss_hf, rss_conf->rss_key.rss_key_val,
-                tmpl, &packet_hash, NULL));
+                rss_conf->rss_key_len, tmpl, &packet_hash, NULL));
 
     TEST_STEP("Determine the queue index by means of the hash");
     reta_nb = (packet_hash % reta_size) / RPC_RTE_RETA_GROUP_SIZE;

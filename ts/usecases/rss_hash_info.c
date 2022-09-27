@@ -87,7 +87,10 @@ main(int argc, char *argv[])
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
     rss_conf = &test_ethdev_config.eth_conf->rx_adv_conf.rss_conf;
-    test_setup_rss_configuration(hash_functions, TRUE, rss_conf);
+    test_setup_rss_configuration(hash_functions,
+                                 MAX(test_ethdev_config.dev_info.hash_key_size,
+                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 TRUE, rss_conf);
 
     offload = (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT);
     offload_name = rpc_rte_eth_dev_rx_offload_name(iut_rpcs, offload);
@@ -140,6 +143,7 @@ main(int argc, char *argv[])
     TEST_STEP("Given the traffic template, anticipate RSS hash value");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(rss_conf->rss_hf,
                                            rss_conf->rss_key.rss_key_val,
+                                           rss_conf->rss_key_len,
                                            tmpl, &rss_hash_regular,
                                            &rss_hash_symmetric));
 

@@ -96,7 +96,8 @@ edit_tmpl_and_addr(te_bool symmetric, const te_toeplitz_hash_cache *hash_cache,
     uint32_t hash;
 
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(rss_conf->rss_hf,
-                                           rss_conf->rss_key.rss_key_val, tmpl,
+                                           rss_conf->rss_key.rss_key_val,
+                                           rss_conf->rss_key_len, tmpl,
                                            symmetric ? NULL : &hash,
                                            symmetric ? &hash : NULL));
 
@@ -189,7 +190,10 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= ec.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions, FALSE, rss_conf);
+    test_setup_rss_configuration(hash_functions,
+                                 MAX(ec.dev_info.hash_key_size,
+                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 FALSE, rss_conf);
 
     ec.mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
                                             &ec.dev_info,
@@ -257,14 +261,17 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
               "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs, iut_port->if_index);
+    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
+                                                 rss_conf->rss_key_len,
+                                                 iut_port->if_index);
     if (actual_rss_conf != NULL)
         rss_conf = actual_rss_conf;
 
     src_addr = te_sockaddr_get_netaddr(tst_addr);
     addr_size = (unsigned int)te_netaddr_get_size(tst_addr->sa_family);
 
-    hash_cache = te_toeplitz_cache_init(rss_conf->rss_key.rss_key_val);
+    hash_cache = te_toeplitz_cache_init_size(rss_conf->rss_key.rss_key_val,
+                                             rss_conf->rss_key_len);
 
     edit_tmpl_and_addr(FALSE, hash_cache, rss_conf, reta_size, reta_indxs_q,
                        nb_reta_indxs_q, addr_size, src_addr, tmpl);

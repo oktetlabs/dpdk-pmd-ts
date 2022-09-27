@@ -100,7 +100,10 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions, FALSE, rss_conf);
+    test_setup_rss_configuration(hash_functions,
+                                 MAX(ethdev_config.dev_info.hash_key_size,
+                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 FALSE, rss_conf);
 
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
@@ -149,7 +152,9 @@ main(int argc, char *argv[])
 
     TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
               "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs, iut_port->if_index);
+    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
+                                                 rss_conf->rss_key_len,
+                                                 iut_port->if_index);
     if (actual_rss_conf != NULL)
         rss_conf = actual_rss_conf;
 
@@ -171,11 +176,12 @@ main(int argc, char *argv[])
     src_addr = te_sockaddr_get_netaddr(tst_addr);
     addr_size = (unsigned int)te_netaddr_get_size(tst_addr->sa_family);
 
-    hash_cache = te_toeplitz_cache_init(rss_conf->rss_key.rss_key_val);
+    hash_cache = te_toeplitz_cache_init_size(rss_conf->rss_key.rss_key_val,
+                                             rss_conf->rss_key_len);
 
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf->rss_hf, rss_conf->rss_key.rss_key_val,
-                tmpl, &packet_hash, NULL));
+                rss_conf->rss_key_len, tmpl, &packet_hash, NULL));
 
     rc = test_change_src_addr_by_reta_index(hash_cache, packet_hash,
                                             src_addr, addr_size, reta_size,
@@ -235,6 +241,7 @@ main(int argc, char *argv[])
 
         CHECK_RC(test_calc_hash_by_tmpl_and_hf(rss_conf->rss_hf,
                                                rss_conf->rss_key.rss_key_val,
+                                               rss_conf->rss_key_len,
                                                tmpl, NULL, &hash_symmetric));
 
         CHECK_RC(test_change_src_addr_by_reta_index(hash_cache, hash_symmetric,

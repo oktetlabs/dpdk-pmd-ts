@@ -60,8 +60,9 @@ main(int argc, char *argv[])
     int                                    expected_queue;
     unsigned int                           matched_num;
 
-    uint8_t rss_hash_key[RPC_RSS_HASH_KEY_LEN_DEF];
-    uint8_t rss_hash_key_tmp[RPC_RSS_HASH_KEY_LEN_DEF];
+    uint8_t *rss_hash_key;
+    uint8_t *rss_hash_key_tmp;
+    size_t rss_key_sz;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -102,13 +103,22 @@ main(int argc, char *argv[])
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
 
+    rss_key_sz = MAX(test_ethdev_config.dev_info.hash_key_size,
+                     RPC_RSS_HASH_KEY_LEN_DEF);
+
+    rss_hash_key_tmp = TE_ALLOC(rss_key_sz);
+    CHECK_NOT_NULL(rss_hash_key_tmp);
+
+    rss_hash_key = TE_ALLOC(rss_key_sz);
+    CHECK_NOT_NULL(rss_hash_key);
+
     TEST_STEP("Generate a new RSS hash key randomly and fill @p rss_conf");
-    te_fill_buf(rss_hash_key, RPC_RSS_HASH_KEY_LEN_DEF);
+    te_fill_buf(rss_hash_key, rss_key_sz);
 
     rss_conf.rss_key.rss_key_val = rss_hash_key;
-    rss_conf.rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    rss_conf.rss_key.rss_key_len = rss_key_sz;
     rss_conf.rss_hf = rss_hash_protos;
-    rss_conf.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+    rss_conf.rss_key_len = rss_key_sz;
 
     TEST_STEP("Update the RSS hash configuration "
               "Ckeck that the @p rss_hash_protos is supported");
@@ -176,6 +186,7 @@ main(int argc, char *argv[])
               "and the new hash key");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf.rss_hf, rss_conf.rss_key.rss_key_val,
+                rss_conf.rss_key_len,
                 tmpl, &packet_hash, &hash_symmetric));
 
     TEST_STEP("Determine the queue index by means of the hash");

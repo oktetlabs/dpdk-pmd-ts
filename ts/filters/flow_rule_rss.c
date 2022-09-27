@@ -44,6 +44,7 @@ main(int argc, char *argv[])
     uint16_t                       nb_rx_queues;
     uint64_t                       rss_hf = 0;
     uint8_t                       *rss_key = NULL;
+    size_t                         rss_key_sz;
     uint8_t                       *rss_key_global = NULL;
     struct test_ethdev_config      ethdev_config;
     struct tarpc_rte_eth_conf      eth_conf;
@@ -93,7 +94,7 @@ main(int argc, char *argv[])
     CHECK_RC(test_get_rx_info_by_rss_action(flow_rule_rss,
                                             &rss_queues, &nb_rss_queues,
                                             &nb_rx_queues, &rss_hf,
-                                            &rss_key));
+                                            &rss_key, &rss_key_sz));
 
     TEST_STEP("Arrange a handful of Rx queues");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
@@ -122,13 +123,16 @@ main(int argc, char *argv[])
         ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
         CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
-        rss_key_global = TE_ALLOC(RPC_RSS_HASH_KEY_LEN_DEF);
+        rss_key_sz = MAX(ethdev_config.dev_info.hash_key_size,
+                         RPC_RSS_HASH_KEY_LEN_DEF);
+
+        rss_key_global = TE_ALLOC(rss_key_sz);
         CHECK_NOT_NULL(rss_key_global);
 
         memset(&rss_conf_global, 0, sizeof(rss_conf_global));
         rss_conf_global.rss_key.rss_key_val = rss_key_global;
-        rss_conf_global.rss_key.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
-        rss_conf_global.rss_key_len = RPC_RSS_HASH_KEY_LEN_DEF;
+        rss_conf_global.rss_key.rss_key_len = rss_key_sz;
+        rss_conf_global.rss_key_len = rss_key_sz;
 
         RPC_AWAIT_IUT_ERROR(iut_rpcs);
         rc = rpc_rte_eth_dev_rss_hash_conf_get(iut_rpcs, iut_port->if_index,
@@ -221,7 +225,7 @@ main(int argc, char *argv[])
         int      reta_idx;
         uint16_t rx_queue;
 
-        CHECK_RC(test_rss_get_hash_by_pattern_unit(rss_hf, rss_key,
+        CHECK_RC(test_rss_get_hash_by_pattern_unit(rss_hf, rss_key, rss_key_sz,
                                                    traffic_pattern,
                                                    i, &packet_hash, NULL));
 

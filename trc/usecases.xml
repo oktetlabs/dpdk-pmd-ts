@@ -8557,6 +8557,12 @@
             <verdict>Rx IP checksum offload is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+          <result value="PASSED">
+            <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
+            <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8609,6 +8615,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support IPv4 Rx checksum offload">
           <result value="PASSED">
             <verdict>Rx IP checksum offload is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+          <result value="PASSED">
+            <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
+            <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
           </result>
         </results>
       </iter>
@@ -8808,6 +8820,12 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+          <result value="PASSED">
+            <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
+            <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -9013,6 +9031,12 @@
             <verdict>Rx IP checksum offload is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+          <result value="PASSED">
+            <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
+            <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9068,6 +9092,12 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+          <result value="PASSED">
+            <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
+            <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">

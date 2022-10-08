@@ -14789,6 +14789,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -14843,6 +14848,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -14901,6 +14911,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -14957,6 +14972,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15011,6 +15031,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15071,6 +15096,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15127,6 +15157,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15187,6 +15222,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15243,6 +15283,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15303,6 +15348,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15357,6 +15407,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15415,6 +15470,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15471,6 +15531,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15525,6 +15590,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15585,6 +15655,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15641,6 +15716,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15701,6 +15781,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15757,6 +15842,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15817,6 +15907,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15870,6 +15965,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -15927,6 +16027,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15982,6 +16087,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -16035,6 +16145,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -16094,6 +16209,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -16149,6 +16269,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -16208,6 +16333,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -16263,6 +16393,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -19457,6 +19592,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -19511,6 +19651,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -19569,6 +19714,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -19625,6 +19775,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -19679,6 +19834,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -19739,6 +19899,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -19795,6 +19960,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -19855,6 +20025,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -19911,6 +20086,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -19971,6 +20151,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20025,6 +20210,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20083,6 +20273,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20139,6 +20334,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20193,6 +20393,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20253,6 +20458,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20309,6 +20519,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20369,6 +20584,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20425,6 +20645,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20485,6 +20710,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20538,6 +20768,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20595,6 +20830,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20650,6 +20890,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20703,6 +20948,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20762,6 +21012,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20817,6 +21072,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -20876,6 +21136,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -20931,6 +21196,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -23452,6 +23722,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23509,6 +23784,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>
@@ -24038,6 +24318,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24115,6 +24400,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>
@@ -24839,6 +25129,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24896,6 +25191,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>
@@ -25128,6 +25428,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25205,6 +25510,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>

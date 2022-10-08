@@ -45,6 +45,11 @@ main(int argc, char *argv[])
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Wait for interface to become UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Make sure statuses on @p tst_if and @p iut_port realy are \"up\"");
     CHECK_RC(test_check_iut_tst_link_status(tst_host->ta, tst_if->if_name,
                                             iut_rpcs, iut_port->if_index,
@@ -68,6 +73,11 @@ main(int argc, char *argv[])
 
     TEST_STEP("Link up the @p iut_port");
     rpc_rte_eth_dev_set_link_up(iut_rpcs, iut_port->if_index);
+
+    TEST_STEP("Wait for interface to become UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
 
     TEST_STEP(" Make sure statuses on @p tst_if and @p iut_port realy are \"up\"");
     CHECK_RC(test_check_iut_tst_link_status(tst_host->ta, tst_if->if_name,

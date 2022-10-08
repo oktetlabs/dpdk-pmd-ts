@@ -17864,6 +17864,11 @@
         <arg name="tso_segsz">512</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18162,6 +18167,11 @@
         <arg name="tso_segsz">1201</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18178,6 +18188,11 @@
         <arg name="tso_segsz">1201</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18460,6 +18475,11 @@
         <arg name="tso_segsz">1400</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18476,6 +18496,11 @@
         <arg name="tso_segsz">1400</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18492,6 +18517,11 @@
         <arg name="tso_segsz">1400</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18758,6 +18788,11 @@
         <arg name="tso_segsz">1440</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18774,6 +18809,11 @@
         <arg name="tso_segsz">1440</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -18790,6 +18830,11 @@
         <arg name="tso_segsz">1440</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>

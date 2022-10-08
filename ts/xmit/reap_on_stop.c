@@ -58,6 +58,7 @@ main(int argc, char *argv[])
 
     asn_value                 *template_copy;
     struct test_ethdev_config  ethdev_config;
+    struct tarpc_rte_eth_conf  eth_conf;
     uint16_t                   nb_txd;
     unsigned int               nb_packets_to_send;
     te_bool                    multiseg_allowed;
@@ -92,10 +93,26 @@ main(int argc, char *argv[])
     rc = asn_free_child(template_copy, PRIVATE, NDN_TMPL_ARGS);
     CHECK_RC((rc == TE_EASNINCOMPLVAL) ? 0 : rc);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state");
+    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config,
-                                         TEST_ETHDEV_RX_SETUP_DONE));
+                                         TEST_ETHDEV_INITIALIZED));
+
+    test_rpc_rte_eth_make_eth_conf(ethdev_config.rpcs,
+                                   ethdev_config.port_id, &eth_conf);
+    ethdev_config.eth_conf = &eth_conf;
+
+    TEST_STEP("Enable Tx multi-segment offload if supported");
+    if ((eth_conf.txmode.offloads &
+         (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT)) ==
+        (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
+    {
+        eth_conf.txmode.offloads |=
+            (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
+    }
+
+    TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state");
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RX_SETUP_DONE));
 
     TEST_STEP("Prepare @c TEST_ETHDEV_TX_SETUP_DONE state");
     nb_txd = TE_ALIGN(BURST_SIZE, ethdev_config.dev_info.tx_desc_lim.nb_align);
@@ -108,12 +125,12 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     nb_packets_to_send = ring_size_multiplier * nb_txd;
-    multiseg_allowed = ((ethdev_config.dev_info.tx_offload_capa &
+    multiseg_allowed = ((eth_conf.txmode.offloads &
                          (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT)) ==
                         (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT));
 
     if ((multi_mempool == TRUE) &&
-        ((ethdev_config.dev_info.tx_offload_capa &
+        ((eth_conf.txmode.offloads &
           (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
          (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
     {
@@ -123,7 +140,7 @@ main(int argc, char *argv[])
     nb_mp = (multi_mempool == TRUE) ? TE_ARRAY_LEN(mp) : 1;
 
     if ((update_refcnt == TRUE) &&
-        ((ethdev_config.dev_info.tx_offload_capa &
+        ((eth_conf.txmode.offloads &
           (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)) ==
          (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MBUF_FAST_FREE_BIT)))
     {

@@ -24164,483 +24164,523 @@
       </iter>
     </test>
     <test name="rx_desc_nb" type="script">
-        <objective>Given some descriptor count, verify queue setup and packet reception</objective>
+      <objective>Given some descriptor count, verify queue setup and packet reception</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">1</arg>
         <notes/>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">1</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-ef100|rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">8</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
-                <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">32</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
-                <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">64</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
-                <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">128</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
-                <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">256</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>256 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                <verdict>248 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>256 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">496</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
-                    <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">502</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>502 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-ef100">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">512</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>512 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                <verdict>504 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-efx">
-                <result value="PASSED">
-                    <verdict>496 received packets smaller than initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">1000</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
-                <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
-                    <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">1024</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>1024 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                    <verdict>1016 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-efx">
-                <result value="PASSED">
-                    <verdict>1008 received packets smaller than initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">2048</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>2048 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                    <verdict>2040 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-efx">
-                <result value="PASSED">
-                    <verdict>2032 received packets smaller than initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">3584</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
-                    <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
-                    <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">4080</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
-                    <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10">
-                <result value="FAILED">
-                    <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
-                    <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">4096</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>4096 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                    <verdict>4088 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-efx">
-                <result value="PASSED">
-                    <verdict>4080 received packets smaller than initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">8192</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>8192 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx|rx-datapath-ef10">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                    <verdict>8184 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">16384</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>16384 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-efx|rx-datapath-ef10">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef100">
-              <result value="PASSED">
-                    <verdict>16376 received packets smaller than initially requested number of Rx descriptors</verdict>
-              </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_rxd">32768</arg>
-            <notes/>
-            <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-                <result value="PASSED">
-                    <verdict>32768 received packets match initially requested number of Rx descriptors</verdict>
-                </result>
-            </results>
-            <results tags="rx-datapath-ef10|rx-datapath-ef100|rx-datapath-efx">
-                <result value="SKIPPED">
-                    <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-                </result>
-            </results>
-            <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
-              <result value="SKIPPED">
-                <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
-              </result>
-            </results>
-        </iter>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-ef100|rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">8</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
+            <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">32</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
+            <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">64</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
+            <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>64 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">128</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 256 descriptors instead</verdict>
+            <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>128 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">256</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>256 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>256 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">496</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">502</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>502 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-ef100">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">512</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>512 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-efx">
+          <result value="PASSED">
+            <verdict>Received 16 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">1000</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">1024</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>1024 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-efx">
+          <result value="PASSED">
+            <verdict>Received 16 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">2048</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>2048 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-efx">
+          <result value="PASSED">
+            <verdict>Received 16 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">3584</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
+            <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
+            <verdict>3584 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">4080</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
+            <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 4096 descriptors instead</verdict>
+            <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">4096</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>4096 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+          <result value="PASSED">
+            <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-efx">
+          <result value="PASSED">
+            <verdict>Received 16 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">8192</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>8192 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx|rx-datapath-ef10">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">16384</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>16384 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-efx|rx-datapath-ef10">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100">
+          <result value="PASSED">
+            <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">32768</arg>
+        <notes/>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>32768 received packets match initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef10|rx-datapath-ef100|rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+          <result value="SKIPPED">
+            <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
+          </result>
+        </results>
+      </iter>
     </test>
     <test name="tx_desc_nb" type="script">
         <objective>Given some descriptor count, verify queue setup and packet transmission</objective>

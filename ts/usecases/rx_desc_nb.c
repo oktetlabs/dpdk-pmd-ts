@@ -181,11 +181,11 @@ main(int argc, char *argv[])
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
                                           TEST_RXQ, mbufs, nb_packets, nb_rxd);
     if (received > nb_rxd)
-        TEST_VERDICT("%u received packets are greater than setup Rx ring size",
-                     received);
+        TEST_VERDICT("Received %u packets more than setup Rx ring size",
+                     received - nb_rxd);
     if (received < init_nb_rxd)
-        RING_VERDICT("%u received packets smaller than initially requested number of Rx descriptors",
-                     received);
+        RING_VERDICT("Received %u packets less than initially requested number of Rx descriptors",
+                     init_nb_rxd - received);
     if (received == init_nb_rxd)
         RING_VERDICT("%u received packets match initially requested number of Rx descriptors",
                      received);

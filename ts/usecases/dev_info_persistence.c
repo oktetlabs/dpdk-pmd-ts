@@ -62,6 +62,15 @@ main(int argc, char *argv[])
         memset(&dev_info, 0, sizeof(dev_info));
         rpc_rte_eth_dev_info_get(iut_rpcs, iut_port->if_index, &dev_info);
 
+        /* Adjust expected changes on transition to CONFIGURED state */
+        if (init_ethdev_state < TEST_ETHDEV_CONFIGURED &&
+            st == TEST_ETHDEV_CONFIGURED)
+        {
+            init_dev_info.nb_rx_queues = 1;
+            init_dev_info.nb_tx_queues = 1;
+        }
+
+
         TEST_SUBSTEP("Check that it remains the same");
         if (test_dev_info_cmp(&init_dev_info, &dev_info) != 0)
         {

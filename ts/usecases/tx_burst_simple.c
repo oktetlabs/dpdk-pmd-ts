@@ -102,10 +102,8 @@ main(int argc, char *argv[])
     m_eth_d_len = rpc_rte_pktmbuf_get_pkt_len(iut_rpcs, mbufs[0]) -
                   m_tx_ol.l2_len;
 
-    ethdev_config.required_mtu = m_eth_d_len;
-
     TEST_STEP("Adjust MTU on both ends");
-    test_set_mtu(iut_rpcs, iut_port->if_index, m_eth_d_len, &ethdev_config);
+    ethdev_config.required_mtu = m_eth_d_len;
     CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta,
                                                 tst_if->if_name,
                                                 m_eth_d_len));

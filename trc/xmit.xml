@@ -8864,7 +8864,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -8997,7 +8997,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9018,7 +9018,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9135,7 +9135,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9156,7 +9156,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9177,7 +9177,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9278,7 +9278,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9299,7 +9299,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9320,7 +9320,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9426,7 +9426,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9452,7 +9452,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9478,7 +9478,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9609,7 +9609,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9635,7 +9635,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9661,7 +9661,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9687,7 +9687,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -9848,7 +9848,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10101,7 +10101,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10137,7 +10137,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10359,7 +10359,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10395,7 +10395,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10431,7 +10431,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10622,7 +10622,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10658,7 +10658,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10694,7 +10694,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10890,7 +10890,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10931,7 +10931,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -10972,7 +10972,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11193,7 +11193,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11234,7 +11234,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11275,7 +11275,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11316,7 +11316,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11541,7 +11541,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11794,7 +11794,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -11830,7 +11830,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12052,7 +12052,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12088,7 +12088,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12124,7 +12124,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12315,7 +12315,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12351,7 +12351,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12387,7 +12387,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12583,7 +12583,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12624,7 +12624,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12665,7 +12665,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12886,7 +12886,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12927,7 +12927,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -12968,7 +12968,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13009,7 +13009,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13230,7 +13230,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13483,7 +13483,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13519,7 +13519,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13741,7 +13741,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13777,7 +13777,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -13813,7 +13813,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14004,7 +14004,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14040,7 +14040,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14076,7 +14076,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14272,7 +14272,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14313,7 +14313,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14354,7 +14354,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14575,7 +14575,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14616,7 +14616,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14657,7 +14657,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -14698,7 +14698,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15483,7 +15483,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15616,7 +15616,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15637,7 +15637,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15754,7 +15754,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15775,7 +15775,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15796,7 +15796,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15897,7 +15897,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15918,7 +15918,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -15939,7 +15939,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16045,7 +16045,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16071,7 +16071,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16097,7 +16097,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16228,7 +16228,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16254,7 +16254,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16280,7 +16280,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16306,7 +16306,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16437,7 +16437,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16570,7 +16570,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16591,7 +16591,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16708,7 +16708,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16729,7 +16729,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16750,7 +16750,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16851,7 +16851,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16872,7 +16872,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16893,7 +16893,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -16999,7 +16999,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17025,7 +17025,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17051,7 +17051,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17182,7 +17182,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17208,7 +17208,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17234,7 +17234,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -17260,7 +17260,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19111,7 +19111,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19137,7 +19137,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19163,7 +19163,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19514,7 +19514,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19540,7 +19540,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19566,7 +19566,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19697,7 +19697,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19765,7 +19765,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -19906,7 +19906,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20088,7 +20088,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20124,7 +20124,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20160,7 +20160,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20196,7 +20196,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20237,7 +20237,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20278,7 +20278,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20345,7 +20345,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20381,7 +20381,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20417,7 +20417,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20458,7 +20458,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20499,7 +20499,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20597,7 +20597,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20633,7 +20633,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20674,7 +20674,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20715,7 +20715,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20952,7 +20952,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -20993,7 +20993,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -21070,7 +21070,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -23955,7 +23955,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -23996,7 +23996,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -24263,7 +24263,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -24314,7 +24314,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -24793,7 +24793,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -24834,7 +24834,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -25264,7 +25264,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -25315,7 +25315,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -25834,7 +25834,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -25885,7 +25885,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26253,7 +26253,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26294,7 +26294,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26555,7 +26555,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26596,7 +26596,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26863,7 +26863,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -26914,7 +26914,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -27393,7 +27393,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -27434,7 +27434,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -27864,7 +27864,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -27915,7 +27915,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -28434,7 +28434,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -28485,7 +28485,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -28853,7 +28853,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -28894,7 +28894,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -29155,7 +29155,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -29196,7 +29196,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -29463,7 +29463,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -29514,7 +29514,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -29993,7 +29993,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -30034,7 +30034,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -30464,7 +30464,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -30515,7 +30515,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31034,7 +31034,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31085,7 +31085,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31453,7 +31453,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31494,7 +31494,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31755,7 +31755,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -31796,7 +31796,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -32063,7 +32063,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -32114,7 +32114,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -32593,7 +32593,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -32634,7 +32634,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -33064,7 +33064,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -33115,7 +33115,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -33634,7 +33634,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -33685,7 +33685,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -34053,7 +34053,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -34094,7 +34094,7 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -41933,7 +41933,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42066,7 +42066,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42087,7 +42087,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42204,7 +42204,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42225,7 +42225,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42246,7 +42246,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42347,7 +42347,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42368,7 +42368,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42389,7 +42389,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42495,7 +42495,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42521,7 +42521,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42547,7 +42547,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42678,7 +42678,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42704,7 +42704,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42730,7 +42730,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42756,7 +42756,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -42917,7 +42917,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43170,7 +43170,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43206,7 +43206,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43428,7 +43428,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43464,7 +43464,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43500,7 +43500,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43691,7 +43691,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43727,7 +43727,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43763,7 +43763,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -43959,7 +43959,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44000,7 +44000,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44041,7 +44041,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44262,7 +44262,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44303,7 +44303,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44344,7 +44344,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44385,7 +44385,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44580,7 +44580,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44713,7 +44713,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44734,7 +44734,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44851,7 +44851,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44872,7 +44872,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44893,7 +44893,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -44994,7 +44994,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45015,7 +45015,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45036,7 +45036,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45142,7 +45142,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45168,7 +45168,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45194,7 +45194,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45325,7 +45325,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45351,7 +45351,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45377,7 +45377,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45403,7 +45403,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45534,7 +45534,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45667,7 +45667,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45688,7 +45688,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45805,7 +45805,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45826,7 +45826,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45847,7 +45847,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45948,7 +45948,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45969,7 +45969,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -45990,7 +45990,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46096,7 +46096,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46122,7 +46122,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46148,7 +46148,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46279,7 +46279,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46305,7 +46305,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46331,7 +46331,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -46357,7 +46357,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -47187,7 +47187,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -47440,7 +47440,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -47775,7 +47775,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -47811,7 +47811,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48033,7 +48033,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48069,7 +48069,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48373,7 +48373,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48409,7 +48409,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48445,7 +48445,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48636,7 +48636,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48672,7 +48672,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48708,7 +48708,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -48981,7 +48981,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49017,7 +49017,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49053,7 +49053,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49244,7 +49244,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49280,7 +49280,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49316,7 +49316,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49604,7 +49604,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49645,7 +49645,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49686,7 +49686,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49907,7 +49907,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49948,7 +49948,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -49989,7 +49989,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50302,7 +50302,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50343,7 +50343,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50384,7 +50384,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50425,7 +50425,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50610,7 +50610,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50651,7 +50651,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50692,7 +50692,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50733,7 +50733,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -50928,7 +50928,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51231,7 +51231,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51252,7 +51252,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51539,7 +51539,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51560,7 +51560,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51581,7 +51581,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51852,7 +51852,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51873,7 +51873,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -51894,7 +51894,7 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52170,7 +52170,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52196,7 +52196,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52222,7 +52222,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52573,7 +52573,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52599,7 +52599,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52625,7 +52625,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52756,7 +52756,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52824,7 +52824,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -52965,7 +52965,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53147,7 +53147,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53183,7 +53183,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53219,7 +53219,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53255,7 +53255,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53296,7 +53296,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53337,7 +53337,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53445,7 +53445,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53481,7 +53481,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53517,7 +53517,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53558,7 +53558,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53599,7 +53599,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53738,7 +53738,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53774,7 +53774,7 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53815,7 +53815,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -53856,7 +53856,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -54134,7 +54134,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -54175,7 +54175,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
@@ -54252,7 +54252,7 @@
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy RSS">
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>

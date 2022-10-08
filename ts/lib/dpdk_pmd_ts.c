@@ -1132,9 +1132,9 @@ test_prepare_ethdev(struct test_ethdev_config *test_ethdev_config,
             tapi_ethdev_states[cur_state].setup(test_ethdev_config);
         else
             tapi_ethdev_states[cur_state + 1].rollback(test_ethdev_config);
-    }
 
-    test_ethdev_config->cur_state = cur_state;
+        test_ethdev_config->cur_state = cur_state;
+    }
 
     return 0;
 }

@@ -629,8 +629,10 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                   TEST_RTE_MEMPOOL_DEF_EXTRA,
                   TEST_RTE_MEMPOOL_DEF_CACHE, TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
                   required_mtu != 0 ?
-                  required_mtu + TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD :
-                  TEST_RTE_MEMPOOL_DEF_DATA_ROOM, socket_id);
+                      MAX(required_mtu, ETHER_DATA_LEN) +
+                      TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD :
+                      TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
+                  socket_id);
 
     for (queue = 0; queue < nb_rx_queue; queue++)
     {
@@ -889,6 +891,22 @@ test_rte_eth_dev_start(rcf_rpc_server *rpcs, uint16_t port_id)
 static void
 test_setup_ethdev_started(struct test_ethdev_config *test_ethdev_config)
 {
+    if (test_ethdev_config->required_mtu != 0)
+    {
+        uint16_t current_mtu;
+
+        rpc_rte_eth_dev_get_mtu(test_ethdev_config->rpcs,
+                                test_ethdev_config->port_id, &current_mtu);
+
+        if (current_mtu < test_ethdev_config->required_mtu)
+        {
+            test_set_mtu(test_ethdev_config->rpcs,
+                         test_ethdev_config->port_id,
+                         test_ethdev_config->required_mtu,
+                         test_ethdev_config);
+        }
+    }
+
     test_rte_eth_dev_start(test_ethdev_config->rpcs,
                            test_ethdev_config->port_id);
 }

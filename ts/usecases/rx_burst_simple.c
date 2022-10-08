@@ -48,7 +48,6 @@ main(int argc, char *argv[])
     unsigned int                payload_len;
     unsigned int                nb_pkts;
     unsigned int                nb_matched;
-    uint16_t                    tst_mtu;
     unsigned int                i;
 
     TEST_START;
@@ -89,6 +88,7 @@ main(int argc, char *argv[])
                                                   payload_len));
 
     TEST_STEP("Start the Ethernet device");
+    ethdev_config.required_mtu = payload_len;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Configure UDP tunnel port number if need be");
@@ -98,12 +98,6 @@ main(int argc, char *argv[])
               "or receive bigger frames if required");
     CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta, tst_if->if_name,
                                                 payload_len));
-
-    rpc_rte_eth_dev_get_mtu(iut_rpcs, iut_port->if_index, &tst_mtu);
-
-    if ((unsigned int)tst_mtu < payload_len)
-        test_rte_eth_dev_set_mtu_await_link_up(iut_rpcs, iut_port->if_index,
-                                               payload_len, &ethdev_config);
 
     TEST_STEP("Ensure that interface is UP on Tester side");
     CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,

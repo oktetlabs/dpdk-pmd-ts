@@ -119,7 +119,7 @@ main(int argc, char *argv[])
                                             TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
                                             ec.socket_id);
 
-    CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
+    CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_RX_SETUP_DONE));
 
     memcpy(&tx_conf, &ec.dev_info.default_txconf, sizeof(tx_conf));
     tx_conf.tx_deferred_start = 1;

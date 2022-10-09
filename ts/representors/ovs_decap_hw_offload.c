@@ -211,8 +211,9 @@ main(int argc, char *argv[])
     TEST_STEP("Make flow rule attributes with transfer and ingress or egress "
               "depending on traffic direction");
 
-    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, TRUE, FALSE, TRUE, &jump_rule.attr);
-    tapi_rte_flow_make_attr(iut_rpcs, TEST_GROUP_ID, 0, TRUE, FALSE, TRUE, &decap_rule.attr);
+    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, FALSE, FALSE, TRUE, &jump_rule.attr);
+    tapi_rte_flow_make_attr(iut_rpcs, TEST_GROUP_ID, 0, FALSE, FALSE, TRUE,
+                            &decap_rule.attr);
 
 
     TEST_STEP("Make flow rule action VF (when receiving on IUT) "

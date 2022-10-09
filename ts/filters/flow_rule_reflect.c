@@ -87,7 +87,7 @@ main(int argc, char *argv[])
     CHECK_RC(test_fill_in_tmpl_req_fields(tmpl_match, &zero_addrs, &zero_addrs));
 
     TEST_STEP("Prepare, validate and create the flow rule");
-    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, TRUE, FALSE, TRUE,
+    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, FALSE, FALSE, TRUE,
                             &flow_attributes);
     CHECK_NOT_NULL(flow_actions_ndn = asn_init_value(ndn_rte_flow_actions));
     tapi_rte_flow_add_ndn_action_port(NDN_FLOW_ACTION_TYPE_REPRESENTED_PORT,

@@ -152,7 +152,7 @@ main(int argc, char *argv[])
                                            ethdev_config.mp);
 
     TEST_STEP("Make flow rule attributes");
-    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, ingress, !ingress, TRUE, &attr);
+    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, FALSE, FALSE, TRUE, &attr);
 
     TEST_STEP("Make flow rule pattern by @p flow_rule_pattern");
     CHECK_RC(tapi_ndn_subst_env(flow_rule_pattern, &test_params, &env));

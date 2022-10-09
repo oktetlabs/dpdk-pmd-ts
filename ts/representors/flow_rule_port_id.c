@@ -125,7 +125,7 @@ main(int argc, char *argv[])
     rpc_rte_insert_flow_rule_items(iut_rpcs, &patterns[1], flow_items[1], -1);
 
     TEST_STEP("Make flow rule attributes with ingress and transfer");
-    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, TRUE, FALSE, TRUE, &attr);
+    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, FALSE, FALSE, TRUE, &attr);
 
     TEST_STEP("Make flow rule actions with PORT ID of the representor and PF");
     CHECK_NOT_NULL(flow_actions[0] = asn_init_value(ndn_rte_flow_actions));

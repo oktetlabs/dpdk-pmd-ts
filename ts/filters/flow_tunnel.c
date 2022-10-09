@@ -192,7 +192,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare DPDK representation of the TUNNEL rule");
     tapi_rte_flow_make_attr(iut_rpcs, tunnel_rule_group_id, tunnel_rule_prio,
-                            TRUE, FALSE, TRUE, &tunnel_rule_attr);
+                            FALSE, FALSE, TRUE, &tunnel_rule_attr);
     CHECK_RC(tapi_ndn_subst_env(tunnel_rule_ptrn_ndn, &test_params, &env));
     rpc_rte_mk_flow_rule_components(iut_rpcs, tunnel_rule_ptrn_ndn,
                                     NULL, &tunnel_rule_ptrn, NULL);
@@ -266,7 +266,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare DPDK representation of the SWITCH rule");
     tapi_rte_flow_make_attr(iut_rpcs, switch_rule_group_id, switch_rule_prio,
-                            TRUE, FALSE, TRUE, &switch_rule_attr);
+                            FALSE, FALSE, TRUE, &switch_rule_attr);
     rpc_rte_flow_tunnel_match(iut_rpcs, tec.port_id, &tunnel,
                               &switch_rule_itms_pmd,
                               &nb_switch_rule_itms_pmd, NULL);

@@ -127,7 +127,8 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Make flow rule attributes as specified in parameters");
-    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, ingress, !ingress, transfer, &attr);
+    tapi_rte_flow_make_attr(iut_rpcs, 0, 0, !transfer && ingress,
+                            !transfer && !ingress, transfer, &attr);
 
     TEST_STEP("Make flow rule pattern and prepare matching template");
     CHECK_RC(tapi_ndn_subst_env(flow_rule_pattern, &test_params, &env));

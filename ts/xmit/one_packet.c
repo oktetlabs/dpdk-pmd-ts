@@ -271,8 +271,7 @@ main(int argc, char *argv[])
          * accordance with inner checksum offload specifics.
          */
         if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
-            ((l4_cksum_offload && inner_l4_cksum_offload_supported) ||
-             (tunnel_aware && tso_segsz > 0)))
+            l4_cksum_offload && inner_l4_cksum_offload_supported)
         {
             bc = (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4) ?
                  TE_IP4_UPPER_LAYER_CSUM_ZERO : TE_IP6_UPPER_LAYER_CSUM_ZERO;

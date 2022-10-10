@@ -11,6 +11,8 @@
 #ifndef __TS_DPDK_PMD_TS_H__
 #define __TS_DPDK_PMD_TS_H__
 
+#include "te_defs.h"
+
 #include "tapi_env.h"
 #include "tapi_tad.h"
 #include "tapi_rpc_rte_mbuf.h"
@@ -335,6 +337,22 @@ enum test_tmpl_fields {
     TEST_TMPL_UN_UCAST_DST      = 0x80000000,
 };
 
+/** Setup data for RSS */
+struct test_rx_mq_rss {
+    /** Storage for effectively configured RSS key and hash proto mask */
+    struct tarpc_rte_eth_rss_conf effective_conf;
+    /** Storage for initially prepared RSS key and hash proto mask */
+    struct tarpc_rte_eth_rss_conf initial_conf;
+};
+
+/** Rx multi-queue setup data */
+struct test_rx_mq {
+    /** Multi-queue mode */
+    enum tarpc_rte_eth_rx_mq_mode mode;
+    /** Setup data for modes that involve RSS */
+    struct test_rx_mq_rss rss;
+};
+
 /**
  * Information about the configuration of the Ethernet device
  */
@@ -376,6 +394,7 @@ struct test_ethdev_config {
     struct tarpc_rte_eth_txconf **tx_confs;    /**< Array of structures used to
                                                     configure TX qeueus */
     rpc_rte_mempool_p             mp;          /**< RTE mempool pointer */
+    struct test_rx_mq            *rx_mq;       /**< Rx multi-queue setup data */
 };
 
 /** Test parameter to specify mbuf segmentation rules */
@@ -1789,5 +1808,35 @@ extern void test_check_mbuf_rss_hash_value(rcf_rpc_server *rpcs,
                                            rpc_rte_mbuf_p mbuf,
                                            uint32_t expected_hash,
                                            uint32_t symmetric_hash);
+
+/**
+ * Prepare custom RSS configuration (random RSS key + given
+ * hash proto mask) to be programmed into the ethdev either
+ * during transition to CONFIGURED state or at a later
+ * invocation of @p test_rx_mq_rss_establish()
+ *
+ * @param ec Ethdev configuration handle
+ * @param hash_protos Hash proto mask to be applied
+ */
+extern void test_rx_mq_rss_prepare(struct test_ethdev_config *ec,
+                                   tarpc_rss_hash_protos_t hash_protos);
+
+/**
+ * Establish effective RSS configuration to be used for building expectations
+ *
+ * The API first invokes @b rte_eth_dev_rss_hash_conf_get() to check whether
+ * early setup during transition to CONFIGURED state has been successful.
+ * If the current RSS configuration contradicts the initial one or if it
+ * cannot be retrieved at all, @b rte_eth_dev_rss_hash_update() will be
+ * invoked to retry setup before checking the result one more time.
+ *
+ * @param ec Ethdev configuration handle
+ * @param enforce_initial_conf Toggle for strict verification mode
+ *
+ * @return Established (effective) RSS configuration
+ */
+extern const struct tarpc_rte_eth_rss_conf *
+    test_rx_mq_rss_establish(struct test_ethdev_config *ec,
+                             te_bool enforce_initial_conf);
 
 #endif /* !__TS_DPDK_PMD_TS_H__ */

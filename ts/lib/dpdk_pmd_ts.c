@@ -29,6 +29,7 @@
 
 #include "tapi_test.h"
 #include "tapi_eth.h"
+#include "tapi_mem.h"
 #include "tapi_ndn.h"
 #include "ndn_ipstack.h"
 #include "ndn_gre.h"
@@ -730,19 +731,38 @@ test_rpc_rte_eth_make_eth_conf(rcf_rpc_server             *rpcs,
 static void
 test_setup_ethdev_configured(struct test_ethdev_config *test_ethdev_config)
 {
+    struct tarpc_rte_eth_conf  *eth_confp = test_ethdev_config->eth_conf;
+    struct test_rx_mq          *rx_mq = test_ethdev_config->rx_mq;
     struct tarpc_rte_eth_conf   eth_conf;
     int                         socket_id;
     te_errno                    rc;
+
+    if (eth_confp == NULL)
+    {
+        eth_confp = test_rpc_rte_eth_make_eth_conf(test_ethdev_config->rpcs,
+                                                   test_ethdev_config->port_id,
+                                                   &eth_conf);
+    }
+
+    if (rx_mq != NULL)
+    {
+        eth_confp->rxmode.mq_mode = rx_mq->mode;
+
+        if (rx_mq->mode == TARPC_ETH_MQ_RX_RSS)
+        {
+            struct test_rx_mq_rss *rss = &rx_mq->rss;
+
+            memcpy(&eth_confp->rx_adv_conf.rss_conf, &rss->initial_conf,
+                   sizeof(rss->initial_conf));
+        }
+    }
 
     RPC_AWAIT_IUT_ERROR(test_ethdev_config->rpcs);
     rc = rpc_rte_eth_dev_configure(test_ethdev_config->rpcs,
                         test_ethdev_config->port_id,
                         test_ethdev_config->nb_rx_queue,
                         test_ethdev_config->nb_tx_queue,
-                        (test_ethdev_config->eth_conf == NULL) ?
-                        test_rpc_rte_eth_make_eth_conf(test_ethdev_config->rpcs,
-                        test_ethdev_config->port_id, &eth_conf) :
-                        test_ethdev_config->eth_conf);
+                        eth_confp);
 
     if (rc != 0)
         TEST_VERDICT("rte_eth_dev_configure() failed: %r", -rc);
@@ -6243,4 +6263,153 @@ test_check_mbuf_rss_hash_value(rcf_rpc_server *rpcs, rpc_rte_mbuf_p mbuf,
             TEST_VERDICT("Packet RSS hash does not match expected hash value");
         }
     }
+}
+
+void
+test_rx_mq_rss_prepare(struct test_ethdev_config *ec,
+                       tarpc_rss_hash_protos_t hash_protos)
+{
+    size_t key_sz = MAX(ec->dev_info.hash_key_size, RPC_RSS_HASH_KEY_LEN_DEF);
+    struct tarpc_rte_eth_rss_conf *effective_conf;
+    struct tarpc_rte_eth_rss_conf *initial_conf;
+    struct test_rx_mq_rss *rss;
+
+    if (ec->cur_state != TEST_ETHDEV_INITIALIZED)
+        TEST_FAIL("Cannot prepare Rx multi-queue RSS configuration: bad state");
+
+    if (ec->rx_mq == NULL)
+        ec->rx_mq = tapi_calloc(1, sizeof(*ec->rx_mq));
+
+    ec->rx_mq->mode = TARPC_ETH_MQ_RX_RSS;
+
+    rss = &ec->rx_mq->rss;
+    initial_conf = &rss->initial_conf;
+    effective_conf = &rss->effective_conf;
+
+    if (initial_conf->rss_key_len != 0)
+        TEST_FAIL("Cannot prepare Rx multi-queue RSS configuration twice");
+
+    initial_conf->rss_key.rss_key_val = tapi_malloc(key_sz);
+    te_fill_buf(initial_conf->rss_key.rss_key_val, key_sz);
+    initial_conf->rss_key.rss_key_len = key_sz;
+    initial_conf->rss_key_len = key_sz;
+    initial_conf->rss_hf = hash_protos;
+
+    *effective_conf = *initial_conf;
+    effective_conf->rss_key.rss_key_val = tapi_malloc(key_sz);
+    memcpy(effective_conf->rss_key.rss_key_val,
+           initial_conf->rss_key.rss_key_val, key_sz);
+}
+
+static void
+test_rx_mq_rss_conf_check_effective_vs_initial(struct test_ethdev_config *ec,
+                                               te_bool enforce_initial_conf,
+                                               const char *op, te_bool *match)
+{
+    struct test_rx_mq *rx_mq = ec->rx_mq;
+    struct test_rx_mq_rss *rss = &rx_mq->rss;
+    const struct tarpc_rte_eth_rss_conf *initial_conf = &rss->initial_conf;
+    struct tarpc_rte_eth_rss_conf *effective_conf = &rss->effective_conf;
+    te_errno rc;
+
+    *match = TRUE;
+
+    RPC_AWAIT_IUT_ERROR(ec->rpcs);
+    rc = rpc_rte_eth_dev_rss_hash_conf_get(ec->rpcs, ec->port_id,
+                                           effective_conf);
+    if (rc != 0)
+        TEST_FAIL("Cannot get RSS hash conf: %s", errno_rpc2str(-rc));
+
+    if (effective_conf->rss_hf != initial_conf->rss_hf)
+    {
+        if (enforce_initial_conf)
+        {
+            WARN_VERDICT("Hash protos mismatch: %s (0x%x) vs hash_conf_get (0x%x)",
+                         op, initial_conf->rss_hf, effective_conf->rss_hf);
+        }
+        else
+        {
+            WARN_ARTIFACT("Hash protos mismatch: %s (0x%x) vs hash_conf_get (0x%x)",
+                         op, initial_conf->rss_hf, effective_conf->rss_hf);
+        }
+
+        if (enforce_initial_conf ||
+            (effective_conf->rss_hf & initial_conf->rss_hf) !=
+            initial_conf->rss_hf)
+            *match = FALSE;
+    }
+
+    if (effective_conf->rss_key_len != initial_conf->rss_key_len)
+    {
+        if (enforce_initial_conf)
+        {
+            WARN_VERDICT("RSS key size mismatch: %s (%hhu) vs hash_conf_get (%hhu)",
+                         op, initial_conf->rss_key_len,
+                         effective_conf->rss_key_len);
+        }
+        else
+        {
+            WARN_ARTIFACT("RSS key size mismatch: %s (%hhu) vs hash_conf_get (%hhu)",
+                          op, initial_conf->rss_key_len,
+                          effective_conf->rss_key_len);
+        }
+
+        *match = FALSE;
+    }
+    else if (memcmp(effective_conf->rss_key.rss_key_val,
+                    initial_conf->rss_key.rss_key_val,
+                    initial_conf->rss_key_len) != 0)
+    {
+        if (enforce_initial_conf)
+            WARN_VERDICT("RSS key data mismatch: %s vs hash_conf_get", op);
+        else
+            WARN_ARTIFACT("RSS key data mismatch: %s vs hash_conf_get", op);
+
+        *match = FALSE;
+    }
+}
+
+const struct tarpc_rte_eth_rss_conf *
+test_rx_mq_rss_establish(struct test_ethdev_config *ec,
+                         te_bool enforce_initial_conf)
+{
+    struct test_rx_mq *rx_mq = ec->rx_mq;
+    struct test_rx_mq_rss *rss;
+    te_bool match;
+    te_errno rc;
+
+    if (ec->cur_state < TEST_ETHDEV_CONFIGURED || rx_mq == NULL ||
+        rx_mq->mode != TARPC_ETH_MQ_RX_RSS)
+        TEST_FAIL("Cannot establish Rx multi-queue RSS configuration");
+
+    rss = &rx_mq->rss;
+
+    test_rx_mq_rss_conf_check_effective_vs_initial(ec, enforce_initial_conf,
+                                                   "rx_adv_conf", &match);
+    if (match)
+        goto exit;
+
+    RPC_AWAIT_IUT_ERROR(ec->rpcs);
+    rc = rpc_rte_eth_dev_rss_hash_update(ec->rpcs, ec->port_id,
+                                         &rss->initial_conf);
+    if (rc != 0)
+    {
+        WARN_ARTIFACT("Cannot set RSS hash conf: %s", errno_rpc2str(-rc));
+        goto exit;
+    }
+
+    test_rx_mq_rss_conf_check_effective_vs_initial(ec, enforce_initial_conf,
+                                                   "hash_update", &match);
+
+exit:
+    if (enforce_initial_conf && !match)
+        TEST_STOP;
+
+    /*
+     * If the caller has not opted to enable strict match,
+     * always assume success and provide the last known
+     * indication of the effective configuration.
+     * So it may in fact match the initial one.
+     */
+    return &rss->effective_conf;
 }

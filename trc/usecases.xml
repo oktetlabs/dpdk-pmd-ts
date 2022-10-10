@@ -23560,6 +23560,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23568,6 +23573,11 @@
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -23584,6 +23594,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23592,6 +23607,11 @@
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -23608,6 +23628,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23620,6 +23645,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23628,6 +23658,11 @@
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -23728,6 +23763,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -23821,6 +23861,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -24544,7 +24589,7 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="qinq_strip">TRUE</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
@@ -24566,7 +24611,1240 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="qinq_strip">TRUE</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.eth</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_first</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_middle</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_last</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.arp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.eth</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_first</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_middle</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_last</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.arp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan4.udp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve4.tcp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre4.vlan</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan4.ip4_frag_first</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve4.ip4_frag_last</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre4.tcp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.arp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_first</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_middle</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_last</arg>
+        <arg name="vlan_strip">TRUE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>VLAN strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.eth</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_first</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_middle</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_last</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan.arp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.eth</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_first</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_middle</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_last</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq.arp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan4.udp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve4.tcp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre4.vlan</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan4.ip4_frag_first</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve4.ip4_frag_last</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre4.tcp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.arp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_first</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_middle</arg>
+        <arg name="vlan_strip">FALSE</arg>
+        <notes/>
+        <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="qinq_strip">TRUE</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">

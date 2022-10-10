@@ -24932,6 +24932,11 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -24996,6 +25001,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
@@ -25588,6 +25598,11 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -25657,6 +25672,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="DPDK-161" notes="Not supported by FW yet">

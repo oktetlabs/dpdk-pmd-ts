@@ -139,6 +139,8 @@ main(int argc, char *argv[])
     uint64_t                              offloads_adv;
     uint64_t                              outer_ip_cksum_ol;
     te_bool                               outer_ip_cksum_offload_supported;
+    uint64_t                              outer_udp_cksum_ol;
+    te_bool                               outer_udp_cksum_offload_supported;
     uint64_t                              inner_ip_cksum_ol;
     te_bool                               inner_ip_cksum_offload_supported;
     uint64_t                              inner_l4_cksum_ol;
@@ -216,6 +218,8 @@ main(int argc, char *argv[])
     offloads_adv = ec.dev_info.tx_offload_capa;
     outer_ip_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_IPV4_CKSUM_BIT);
     outer_ip_cksum_offload_supported = (offloads_adv & outer_ip_cksum_ol);
+    outer_udp_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_OUTER_UDP_CKSUM_BIT);
+    outer_udp_cksum_offload_supported = (offloads_adv & outer_udp_cksum_ol);
     inner_ip_cksum_ol = (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_IPV4_CKSUM_BIT);
     inner_ip_cksum_offload_supported = (offloads_adv & inner_ip_cksum_ol);
 
@@ -235,6 +239,7 @@ main(int argc, char *argv[])
                                         inner_l4_cksum_ol);
 
     tunnel_aware = outer_ip_cksum_offload_supported ||
+                   outer_udp_cksum_offload_supported ||
                    (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_VXLAN &&
                     vxlan_tso_supported) ||
                    (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_GENEVE &&
@@ -271,7 +276,9 @@ main(int argc, char *argv[])
          * accordance with inner checksum offload specifics.
          */
         if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
-            l4_cksum_offload && inner_l4_cksum_offload_supported)
+            ((tunnel_aware && outer_udp_cksum_offload_supported) ||
+             (!tunnel_aware && l4_cksum_offload &&
+              inner_l4_cksum_offload_supported)))
         {
             bc = (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4) ?
                  TE_IP4_UPPER_LAYER_CSUM_ZERO : TE_IP6_UPPER_LAYER_CSUM_ZERO;
@@ -331,6 +338,13 @@ main(int argc, char *argv[])
     {
         TEST_STEP("Enable outer IP checksum offload in the PMD");
         test_offloads |= outer_ip_cksum_ol;
+    }
+
+    if (outer_udp_cksum_offload_supported &&
+        hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
+    {
+        TEST_STEP("Enable outer UDP checksum offload in the PMD");
+        test_offloads |= outer_udp_cksum_ol;
     }
 
     if (inner_ip_cksum_offload && inner_ip_cksum_offload_supported &&
@@ -427,6 +441,12 @@ main(int argc, char *argv[])
             else
             {
                 m_ol_flags |= (1ULL << TARPC_RTE_MBUF_F_TX_OUTER_IPV6);
+            }
+
+            if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
+                outer_udp_cksum_offload_supported)
+            {
+                m_ol_flags |= (1ULL << TARPC_RTE_MBUF_F_TX_OUTER_UDP_CKSUM);
             }
         }
         else
@@ -604,6 +624,7 @@ main(int argc, char *argv[])
 
             if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
                 ((l4_cksum_offload && inner_l4_cksum_offload_supported) ||
+                 outer_udp_cksum_offload_supported ||
                  tso_segsz > 0))
             {
                 /*

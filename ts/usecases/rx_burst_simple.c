@@ -65,17 +65,6 @@ main(int argc, char *argv[])
     ethdev_config.min_rx_desc = nb_pkts;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
-    if (payload_len > TEST_RTE_MEMPOOL_DEF_DATA_ROOM)
-        ethdev_config.mp = test_rte_pktmbuf_rx_pool_create(
-                               iut_rpcs, iut_port->if_index,
-                               &ethdev_config.dev_info,
-                               TEST_PKTS_MEMPOOL_NAME,
-                               TEST_RTE_MEMPOOL_DEF_SIZE,
-                               TEST_RTE_MEMPOOL_DEF_CACHE,
-                               TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                               TEST_RTE_MEMPOOL_DEF_JUMBO_DATA_ROOM,
-                               ethdev_config.socket_id);
-
     TEST_STEP("Prepare @p tmpl for test");
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                                   &test_params,

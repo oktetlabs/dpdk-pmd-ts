@@ -78,7 +78,8 @@ main(int argc, char *argv[])
                                      TEST_RTE_MEMPOOL_DEF_SIZE,
                                      TEST_RTE_MEMPOOL_DEF_CACHE,
                                      TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                     TEST_RTE_MEMPOOL_DEF_JUMBO_DATA_ROOM,
+                                     TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD +
+                                     mtu + excess_mtu,
                                      test_ethdev_config.socket_id);
 
     tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,

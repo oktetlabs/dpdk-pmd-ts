@@ -47,7 +47,7 @@ main(int argc, char *argv[])
 
     unsigned int                payload_len;
     unsigned int                nb_pkts;
-    unsigned int                nb_matched;
+    unsigned int                nb_matched = 0;
     unsigned int                i;
 
     TEST_START;
@@ -112,14 +112,15 @@ main(int argc, char *argv[])
     received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index, 0,
                                           mbufs, TE_ARRAY_LEN(mbufs), nb_pkts);
 
-    TEST_STEP("Check the number of received packet");
-    CHECK_PACKETS_NUM(received, nb_pkts);
+    if (received > 0)
+    {
+        TEST_STEP("Check received packets");
+        rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, received,
+                                   NULL, &nb_matched);
+    }
 
-    /*  Check that the packets received match the packets sent
-     *  from @p tst_if
-     */
-    rpc_rte_mbuf_match_pattern(iut_rpcs, ptrn, mbufs, nb_pkts,
-                               NULL, &nb_matched);
+    TEST_STEP("Check the number of received and match packets");
+    CHECK_PACKETS_NUM(received, nb_pkts);
     CHECK_MATCHED_PACKETS_NUM(nb_matched, nb_pkts);
 
     TEST_SUCCESS;

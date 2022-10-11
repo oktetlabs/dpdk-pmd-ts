@@ -649,6 +649,50 @@
                 <value ref="tmpl.tst2iut.udp4"/>
             </arg>
         </run>
+        <!--- @autogroup -->
+        <run name="rx_buf_size">
+            <script name="rx_scatter"/>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="pre_rxq_setup_mtu">
+              <value>1500</value>
+            </arg>
+            <arg name="enable_scatter">
+              <value>FALSE</value>
+            </arg>
+            <arg name="rx_buf_size">
+              <value>2047</value>
+              <value>2048</value>
+              <value>2200</value>
+              <value>4095</value>
+              <value>4096</value>
+              <value>4200</value>
+              <value>8191</value>
+              <value>8192</value>
+              <value>8300</value>
+              <value>16383</value>
+              <value>16384</value>
+              <value>16500</value>
+              <value>32767</value>
+              <value>32768</value>
+              <value>32900</value>
+              <value>65535</value>
+            </arg>
+            <arg name="payload_size">
+              <value>512</value>
+              <value>1400</value>
+            </arg>
+            <arg name="max_extra_size">
+              <value>0</value>
+            </arg>
+            <arg name="packet_headers_size">
+                <value>42</value>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.udp4"/>
+            </arg>
+        </run>
 
         <!--- @autogroup -->
         <run>

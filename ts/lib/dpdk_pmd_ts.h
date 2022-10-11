@@ -54,11 +54,6 @@
 #define TEST_RTE_MEMPOOL_DATA_ROOM_OVERHEAD 256
 
 /**
- * Default size of RTE mbuf data buffer for receiving Jumbo frames
- */
-#define TEST_RTE_MEMPOOL_DEF_JUMBO_DATA_ROOM  (1 << 14)
-
-/**
  * Default number of Rx descriptors to be taken into account when
  * mempool is sized if driver does not provide the minimum.
  *

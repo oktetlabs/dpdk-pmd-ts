@@ -54,7 +54,6 @@ main(int argc, char *argv[])
     unsigned                               nb_bytes;
     unsigned                               payload_len;
     uint32_t                               pkt_len;
-    uint16_t                               iut_mtu;
     te_bool                                is_ucast_pkts = FALSE;
     te_bool                                is_mcast_pkts = FALSE;
     te_bool                                is_bcast_pkts = FALSE;
@@ -85,18 +84,8 @@ main(int argc, char *argv[])
                                          &ethdev_config,
                                          TEST_ETHDEV_INITIALIZED));
 
-    if (payload_len > TEST_RTE_MEMPOOL_DEF_DATA_ROOM)
-        ethdev_config.mp = test_rte_pktmbuf_rx_pool_create(
-                               iut_rpcs, iut_port->if_index,
-                               &ethdev_config.dev_info,
-                               TEST_PKTS_MEMPOOL_NAME,
-                               TEST_RTE_MEMPOOL_DEF_SIZE,
-                               TEST_RTE_MEMPOOL_DEF_CACHE,
-                               TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                               TEST_RTE_MEMPOOL_DEF_JUMBO_DATA_ROOM,
-                               ethdev_config.socket_id);
-
     TEST_STEP("Start the Ethernet device");
+    ethdev_config.required_mtu = payload_len;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Prepare @p tmpl for test");
@@ -113,12 +102,6 @@ main(int argc, char *argv[])
               "or receive bigger frames if required");
     CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta, tst_if->if_name,
                                                 payload_len));
-
-    rpc_rte_eth_dev_get_mtu(iut_rpcs, iut_port->if_index, &iut_mtu);
-
-    if (iut_mtu < payload_len)
-        test_rte_eth_dev_set_mtu_await_link_up(iut_rpcs, iut_port->if_index,
-                                               payload_len, &ethdev_config);
 
     TEST_STEP("Identify destination address: unicast, broadcast, multicast");
     CHECK_RC(asn_get_subvalue(tmpl, &pdus, "pdus"));

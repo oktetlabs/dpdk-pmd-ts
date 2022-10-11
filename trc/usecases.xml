@@ -8556,6 +8556,21 @@
         </results>
       </iter>
     </test>
+    <test name="rx_buf_size" type="script">
+      <objective>Test checks work of RX scatter function with different buffer sizes</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="enable_scatter"/>
+        <arg name="rx_buf_size"/>
+        <arg name="payload_size"/>
+        <arg name="max_extra_size"/>
+        <arg name="packet_headers_size"/>
+        <arg name="tmpl"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="rx_offload_checksum" type="script">
       <objective>Make sure that valid Rx checksum flags are put into mbufs</objective>
       <notes/>

@@ -41,7 +41,7 @@ main(int argc, char *argv[])
     struct test_ethdev_config      test_ethdev_config;
     struct tarpc_rte_eth_conf      eth_conf;
     tarpc_rss_hash_protos_t        hash_functions;
-    struct tarpc_rte_eth_rss_conf *rss_conf;
+    const struct tarpc_rte_eth_rss_conf *rss_conf;
     uint64_t                       offload;
     char                          *offload_name;
 
@@ -74,8 +74,6 @@ main(int argc, char *argv[])
 
     test_ethdev_config.nb_rx_queue = nb_rx_queues;
 
-    test_ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
-
     TEST_STEP("Prepare TEST_ETHDEV_INITIALIZED state");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_INITIALIZED));
 
@@ -83,14 +81,10 @@ main(int argc, char *argv[])
     if (nb_rx_queues > test_ethdev_config.dev_info.max_rx_queues)
         TEST_SKIP("So many Rx queues are not supported");
 
-    TEST_STEP("Decide on explicit RSS configuration to be applied on start");
+    TEST_STEP("Prepare desired RSS hash configuration");
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
-    rss_conf = &test_ethdev_config.eth_conf->rx_adv_conf.rss_conf;
-    test_setup_rss_configuration(hash_functions,
-                                 MAX(test_ethdev_config.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
-                                 TRUE, rss_conf);
+    test_rx_mq_rss_prepare(&test_ethdev_config, hash_functions);
 
     offload = (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT);
     offload_name = rpc_rte_eth_dev_rx_offload_name(iut_rpcs, offload);
@@ -111,6 +105,10 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare TEST_ETHDEV_STARTED state");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
+
+
+    TEST_STEP("Establish effective RSS hash configuration");
+    rss_conf = test_rx_mq_rss_establish(&test_ethdev_config, FALSE);
 
     tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                          &test_params, TEST_IUT_PORT_MAC_NAME);

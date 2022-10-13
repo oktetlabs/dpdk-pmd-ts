@@ -12118,7 +12118,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12140,7 +12140,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12167,7 +12167,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12189,7 +12189,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12211,7 +12211,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12238,7 +12238,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12260,7 +12260,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12287,7 +12287,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12309,7 +12309,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12331,7 +12331,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12353,7 +12353,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12375,7 +12375,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12402,7 +12402,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12424,7 +12424,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12446,7 +12446,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12468,7 +12468,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12490,7 +12490,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12517,7 +12517,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12539,7 +12539,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12561,7 +12561,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12583,7 +12583,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12610,7 +12610,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12637,7 +12637,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12664,7 +12664,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
@@ -12691,7 +12691,7 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>

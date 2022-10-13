@@ -26419,14 +26419,170 @@
       </iter>
     </test>
     <test name="tx_desc_nb" type="script">
-        <objective>Given some descriptor count, verify queue setup and packet transmission</objective>
+      <objective>Given some descriptor count, verify queue setup and packet transmit</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">1</arg>
         <notes/>
-        <iter result="PASSED">
-            <arg name="env"/>
-            <arg name="template"/>
-            <arg name="nb_txd"/>
-            <notes/>
-        </iter>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">8</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">32</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">64</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">128</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">256</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">496</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">502</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">512</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">1000</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
+          <result value="PASSED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of sent packets matches initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">1024</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">2048</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">3584</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">4080</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">4096</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">8192</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">16384</arg>
+        <notes/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_txd">32768</arg>
+        <notes/>
+      </iter>
     </test>
     <test name="vlan_strip_ip6" type="script">
       <objective>Check VLAN strip offload</objective>

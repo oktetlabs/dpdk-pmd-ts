@@ -53948,7 +53948,169 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">6000</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
@@ -53969,7 +54131,127 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">10023</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
@@ -53990,11 +54272,84 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">27334</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54021,6 +54376,11 @@
             <verdict>TCP TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
           <result value="SKIPPED">
             <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
@@ -54040,6 +54400,11 @@
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 16</verdict>
           </result>
         </results>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
@@ -54142,6 +54507,11 @@
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54168,6 +54538,11 @@
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54236,6 +54611,11 @@
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54257,6 +54637,11 @@
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54356,6 +54741,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54372,7 +54762,174 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">10023</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
@@ -54393,11 +54950,84 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">27334</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TCP TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">-1</arg>
+        <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54419,6 +55049,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54440,6 +55075,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54597,6 +55237,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54618,6 +55263,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54644,6 +55294,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54738,6 +55393,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54759,6 +55419,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -54780,6 +55445,11 @@
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">-1</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TCP TSO is not available</verdict>
@@ -55747,7 +56417,7 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">6000</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">[1,4094]</arg>
@@ -55760,6 +56430,196 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">6000</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -55796,6 +56656,11 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -55916,6 +56781,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -55993,6 +56863,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 1</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -56179,7 +57054,48 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">10023</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">[1,4094]</arg>
@@ -56215,7 +57131,161 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">10023</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 3</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">8900</arg>
         <arg name="vlan_id">[1,4094]</arg>
@@ -56228,6 +57298,201 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">10023</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 2</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56416,7 +57681,48 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">27334</arg>
-        <arg name="segmentation"/>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
         <arg name="tmpl"/>
         <arg name="tso_segsz">4000</arg>
         <arg name="vlan_id">[1,4094]</arg>
@@ -56452,44 +57758,393 @@
         <arg name="inner_ip_cksum_offload"/>
         <arg name="l4_cksum_offload"/>
         <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">4000</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x256</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x1024</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 0xf0*0x2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">1*74, 1*57, 0xf0*333</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*2048</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">27334</arg>
+        <arg name="segmentation">0xff*411</arg>
+        <arg name="tmpl"/>
+        <arg name="tso_segsz">8900</arg>
+        <arg name="vlan_id">[1,4094]</arg>
+        <notes/>
+        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 4</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple" key="OK">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10" key="SF 80182">
+          <result value="SKIPPED">
+            <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
+          <result value="SKIPPED">
+            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="inner_ip_cksum_offload"/>
+        <arg name="l4_cksum_offload"/>
+        <arg name="payload_len">61437</arg>
         <arg name="segmentation"/>
         <arg name="tmpl"/>
-        <arg name="tso_segsz">8900</arg>
-        <arg name="vlan_id">[1,4094]</arg>
-        <notes/>
-        <results tags="vdev-failsafe" notes="Failsafe does not support Tx VLAN insertion offload">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10_simple" key="OK">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="tx-datapath-ef10" key="SF 80182">
-          <result value="SKIPPED">
-            <verdict>TX VLAN insertion is not available</verdict>
-          </result>
-        </results>
-        <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
-          <result value="SKIPPED">
-            <verdict>Cannot set MTU out of reported min/max 46/1500</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="inner_ip_cksum_offload"/>
-        <arg name="l4_cksum_offload"/>
-        <arg name="payload_len">61437</arg>
-        <arg name="segmentation"/>
-        <arg name="tmpl"/>
         <arg name="tso_segsz">177</arg>
         <arg name="vlan_id">[1,4094]</arg>
         <notes/>
@@ -57308,6 +58963,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -57416,6 +59076,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -57491,6 +59156,11 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57529,6 +59199,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -57637,6 +59312,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -57712,6 +59392,11 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 7</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -58765,6 +60450,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>1 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -58873,6 +60563,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -58948,6 +60643,11 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 16</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -58986,6 +60686,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -59094,6 +60799,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -59169,6 +60879,11 @@
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
+          <result value="FAILED">
+            <verdict>0 packets have been matched, but should be 8</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">

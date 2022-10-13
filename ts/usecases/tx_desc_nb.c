@@ -132,7 +132,8 @@ main(int argc, char *argv[])
                 WARN_VERDICT("Requested descriptors number violates NO limits; "
                              "Driver set up %u descriptors instead",
                              tx_qinfo.nb_desc);
-                fail_test = TRUE;
+                if (tx_qinfo.nb_desc < nb_txd)
+                    fail_test = TRUE;
             }
             nb_txd = tx_qinfo.nb_desc;
             limits_violated = test_desc_nb_violates_limits(nb_txd, tx_desc_lim);
@@ -209,8 +210,12 @@ main(int argc, char *argv[])
         RING_VERDICT("%u sent packets smaller than initially requested number of Tx descriptors",
                      sent);
     if (sent == init_nb_txd)
+    {
         RING("%u sent packets match initially requested number of Tx descriptors",
              sent);
+        if (nb_txd != init_nb_txd)
+            RING_VERDICT("Number of sent packets matches initially requested number of Tx descriptors");
+    }
     if (sent > init_nb_txd)
     {
         fail_test = TRUE;

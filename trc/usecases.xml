@@ -9823,7 +9823,130 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">1</arg>
         <arg name="rss_hash_protos">TCP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <notes/>
         <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
           <result value="FAILED">
@@ -9850,7 +9973,7 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">1</arg>
         <arg name="rss_hash_protos">UDP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <notes/>
         <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
           <result value="FAILED">
@@ -9865,6 +9988,129 @@
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">1</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
+        <notes/>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -9926,7 +10172,130 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">8</arg>
         <arg name="rss_hash_protos">TCP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <notes/>
         <results tags="max_rx_queues&lt;8">
           <result value="SKIPPED">
@@ -9953,7 +10322,7 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">8</arg>
         <arg name="rss_hash_protos">UDP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <notes/>
         <results tags="max_rx_queues&lt;8">
           <result value="SKIPPED">
@@ -9968,6 +10337,129 @@
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">8</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;8">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -10029,7 +10521,130 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">17</arg>
         <arg name="rss_hash_protos">TCP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <notes/>
         <results tags="max_rx_queues&lt;17">
           <result value="SKIPPED">
@@ -10056,7 +10671,7 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">17</arg>
         <arg name="rss_hash_protos">UDP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <notes/>
         <results tags="max_rx_queues&lt;17">
           <result value="SKIPPED">
@@ -10071,6 +10686,129 @@
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">17</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;17">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -10132,7 +10870,130 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">32</arg>
         <arg name="rss_hash_protos">TCP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <notes/>
         <results tags="max_rx_queues&lt;32">
           <result value="SKIPPED">
@@ -10159,7 +11020,7 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">32</arg>
         <arg name="rss_hash_protos">UDP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <notes/>
         <results tags="max_rx_queues&lt;32">
           <result value="SKIPPED">
@@ -10174,6 +11035,129 @@
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">32</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;32">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -10240,7 +11224,150 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">64</arg>
         <arg name="rss_hash_protos">TCP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">TCP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <notes/>
         <results tags="max_rx_queues&lt;64">
           <result value="SKIPPED">
@@ -10272,7 +11399,7 @@
         <arg name="env"/>
         <arg name="nb_rx_queues">64</arg>
         <arg name="rss_hash_protos">UDP</arg>
-        <arg name="tmpl"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <notes/>
         <results tags="max_rx_queues&lt;64">
           <result value="SKIPPED">
@@ -10292,6 +11419,149 @@
         <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
           <result value="PASSED">
             <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_rx_queues">64</arg>
+        <arg name="rss_hash_protos">UDP</arg>
+        <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
+        <notes/>
+        <results tags="max_rx_queues&lt;64">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100&amp;vis&lt;=128" key="SF 86446" notes="63 is the maximum number of Rx queues on SN1022 for now">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924&amp;(rx-packed-stream|rx-dpdk)" key="WONTFIX FW" notes="FW variant does not support TCP/UDP ports hashing">
+          <result value="FAILED">
+            <verdict>Hash protocols configuration failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe&amp;!(pci-1924&amp;(rx-packed-stream|rx-dpdk))">
+          <result value="PASSED">
+            <verdict>RSS hash configuration get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924" key="RSS-HASH-NOT-0" notes="sfc provides non-zero RSS hash when packet should not be a subject to RSS hashing">
+          <result value="FAILED">
+            <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">

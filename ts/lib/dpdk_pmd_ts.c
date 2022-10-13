@@ -6260,7 +6260,10 @@ test_check_mbuf_rss_hash_value(rcf_rpc_server *rpcs, rpc_rte_mbuf_p mbuf,
              */
             if (rss_hash == 0)
                 RING_ARTIFACT("RSS hash value is 0");
-            TEST_VERDICT("Packet RSS hash does not match expected hash value");
+            if (expected_hash == 0)
+                TEST_VERDICT("Packet RSS hash is not zero as expected");
+            else
+                TEST_VERDICT("Packet RSS hash does not match expected hash value");
         }
     }
 }

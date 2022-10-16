@@ -998,7 +998,7 @@ extern te_errno test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
 extern te_errno test_change_tmpl_ip_src_addr_by_queue_nb(
     asn_value *tmpl, uint16_t queue, uint64_t reta_size,
     struct tarpc_rte_eth_rss_reta_entry64 *reta_conf,
-    struct tarpc_rte_eth_rss_conf *rss_conf);
+    const struct tarpc_rte_eth_rss_conf *rss_conf);
 
 /**
  * Convert an ASN.1 flow rule or pattern to a template containing the same set

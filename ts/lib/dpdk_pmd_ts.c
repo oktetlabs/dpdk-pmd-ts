@@ -2387,7 +2387,7 @@ test_change_tmpl_ip_src_addr_by_queue_nb(
                             uint16_t queue,
                             uint64_t reta_size,
                             struct tarpc_rte_eth_rss_reta_entry64 *reta_conf,
-                            struct tarpc_rte_eth_rss_conf *rss_conf)
+                            const struct tarpc_rte_eth_rss_conf *rss_conf)
 {
     unsigned int                            reta_indxs[reta_size];
     unsigned int                            nb_reta_indxs = 0;

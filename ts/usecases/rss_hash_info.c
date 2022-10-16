@@ -12,6 +12,7 @@
  * @objective Test checks that ethdev writes right rss hash info
  *            to the packet
  *
+ * @param enable_offload Toggle for RSS hash offload
  * @param nb_rx_queues     The number of RX queues
  *
  * @type use case

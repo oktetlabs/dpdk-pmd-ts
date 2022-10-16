@@ -47,7 +47,6 @@ main(int argc, char *argv[])
     const struct if_nameindex              *tst_if    = NULL;
 
     struct test_ethdev_config               test_ethdev_config;
-    struct tarpc_rte_eth_conf               eth_conf;
     uint16_t                                queue, queue_first, queue_last;
     uint16_t                                nb_rx_queue;
     uint16_t                                nb_tx_queue;
@@ -55,8 +54,7 @@ main(int argc, char *argv[])
     uint16_t                                nb_tx_queue_reconf;
     te_bool                                 all_queues_reconf;
 
-    struct tarpc_rte_eth_rss_conf          *rss_conf;
-    struct tarpc_rte_eth_rss_conf          *actual_rss_conf;
+    const struct tarpc_rte_eth_rss_conf    *rss_conf;
     uint64_t                                reta_size;
     struct tarpc_rte_eth_rss_reta_entry64  *reta_conf;
     tarpc_rss_hash_protos_t                 hash_functions;
@@ -102,9 +100,6 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare stopped Ethernet device using @p nb_rx_queue Rx queues "
               "and @p nb_tx_queue Tx queues");
-    test_ethdev_config.eth_conf = test_rpc_rte_eth_make_eth_conf(
-                                    iut_rpcs, iut_port->if_index, &eth_conf);
-
     test_ethdev_config.nb_rx_queue = nb_rx_queue;
     test_ethdev_config.nb_tx_queue = nb_tx_queue;
 
@@ -121,29 +116,23 @@ main(int argc, char *argv[])
                                         test_ethdev_config.socket_id);
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STOPPED));
+    /*
+     * Below code needs to reconfigure the ethdev without releasing
+     * the queues that were set up above. Doing so requires that
+     * the formal state of the ethdev be adjusted like this.
+     */
+    test_ethdev_config.cur_state = TEST_ETHDEV_INITIALIZED;
 
     TEST_STEP("Reconfigure the device using @p nb_rx_queue_reconf Rx queues, "
               "@p nb_tx_queue_reconf Tx queues and RSS configuration");
-    test_ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
-
-    TEST_STEP("Request appropriate RSS configuration that will be applied on "
-              "device configure stage");
-    rss_conf = &test_ethdev_config.eth_conf->rx_adv_conf.rss_conf;
-
     CHECK_RC(test_get_rss_hf_by_tmpl(rx_tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions,
-                                 MAX(test_ethdev_config.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
-                                 TRUE, rss_conf);
+    test_rx_mq_rss_prepare(&test_ethdev_config, hash_functions);
 
-    RPC_AWAIT_ERROR(test_ethdev_config.rpcs);
-    rc = rpc_rte_eth_dev_configure(test_ethdev_config.rpcs,
-                              test_ethdev_config.port_id,
-                              nb_rx_queue_reconf, nb_tx_queue_reconf,
-                              test_ethdev_config.eth_conf);
-    if (rc != 0)
-        TEST_VERDICT("rte_eth_dev_configure() failed: %r", -rc);
+    test_ethdev_config.nb_rx_queue = nb_rx_queue_reconf;
+    test_ethdev_config.nb_tx_queue = nb_tx_queue_reconf;
+
+    CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_CONFIGURED));
 
     TEST_STEP("Setup all Rx and Tx queues if @p all_queues_reconf is @c TRUE, "
               "otherwise setup only those queues that were not setup before");
@@ -196,13 +185,8 @@ main(int argc, char *argv[])
                         nb_rx_queue_reconf : nb_tx_queue_reconf, sizeof(*ptrns));
     tmpls = tapi_calloc(nb_rx_queue_reconf, sizeof(rx_tmpl));
 
-    TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
-              "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
-                                                 rss_conf->rss_key_len,
-                                                 iut_port->if_index);
-    if (actual_rss_conf != NULL)
-        rss_conf = actual_rss_conf;
+    TEST_STEP("Establish effective RSS hash configuration");
+    rss_conf = test_rx_mq_rss_establish(&test_ethdev_config, FALSE);
 
     TEST_STEP("Get RSS Redirection Table. If the corresponding RPC is not supported, "
               "use default Redirection Table");

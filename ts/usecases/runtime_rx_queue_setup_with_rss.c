@@ -132,8 +132,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_dev_info           dev_info;
 
     struct tarpc_rte_eth_rxconf             rx_conf;
-    struct tarpc_rte_eth_rss_conf          *rss_conf;
-    struct tarpc_rte_eth_rss_conf          *actual_rss_conf;
+    const struct tarpc_rte_eth_rss_conf    *rss_conf;
     struct tarpc_rte_eth_rss_reta_entry64  *reta_conf;
     struct tarpc_rte_eth_rss_reta_entry64  *reta_conf_tmp;
     uint64_t                                reta_size;
@@ -182,18 +181,11 @@ main(int argc, char *argv[])
     ec.eth_conf = test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                                  &eth_conf);
     ec.nb_rx_queue = nb_rxq;
-    ec.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
 
-    TEST_STEP("Request appropriate RSS configuration that will be applied on "
-              "device configure stage");
-    rss_conf = &eth_conf.rx_adv_conf.rss_conf;
-
+    TEST_STEP("Prepare desired RSS hash configuration");
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= ec.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions,
-                                 MAX(ec.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
-                                 FALSE, rss_conf);
+    test_rx_mq_rss_prepare(&ec, hash_functions);
 
     ec.mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
                                             &ec.dev_info,
@@ -259,13 +251,8 @@ main(int argc, char *argv[])
             reta_indxs_q[nb_reta_indxs_q++] = i;
     }
 
-    TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
-              "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
-                                                 rss_conf->rss_key_len,
-                                                 iut_port->if_index);
-    if (actual_rss_conf != NULL)
-        rss_conf = actual_rss_conf;
+    TEST_STEP("Establish effective RSS hash configuration");
+    rss_conf = test_rx_mq_rss_establish(&ec, FALSE);
 
     src_addr = te_sockaddr_get_netaddr(tst_addr);
     addr_size = (unsigned int)te_netaddr_get_size(tst_addr->sa_family);

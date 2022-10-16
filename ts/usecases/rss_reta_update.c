@@ -53,8 +53,7 @@ main(int argc, char *argv[])
 
     int                                    reta_nb;
     int                                    reta_indx;
-    struct tarpc_rte_eth_rss_conf         *rss_conf;
-    struct tarpc_rte_eth_rss_conf         *actual_rss_conf;
+    const struct tarpc_rte_eth_rss_conf   *rss_conf;
     uint32_t                               packet_hash;
 
     int                                    expected_queue;
@@ -86,18 +85,11 @@ main(int argc, char *argv[])
     test_ethdev_config.eth_conf = test_rpc_rte_eth_make_eth_conf(
                                       iut_rpcs, iut_port->if_index, &eth_conf);
     test_ethdev_config.nb_rx_queue = nb_rx_queues;
-    test_ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
 
-    TEST_STEP("Request appropriate RSS configuration that will be applied on "
-              "device configure stage");
-    rss_conf = &test_ethdev_config.eth_conf->rx_adv_conf.rss_conf;
-
+    TEST_STEP("Prepare desired RSS hash configuration");
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= test_ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions,
-                                 MAX(test_ethdev_config.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
-                                 TRUE, rss_conf);
+    test_rx_mq_rss_prepare(&test_ethdev_config, hash_functions);
 
     TEST_STEP("Start the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
@@ -173,15 +165,10 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&tmpl, FALSE, NULL,
                                                   DPMD_TS_PAYLOAD_LEN_DEF));
 
-    TEST_STEP("Query the hash configuration. If the corresponding RPC is not supported, "
-              "use previously requested configuration. Calculate the packet hash, "
-              "using the Toeplitz function.");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
-                                                 rss_conf->rss_key_len,
-                                                 iut_port->if_index);
-    if (actual_rss_conf != NULL)
-        rss_conf = actual_rss_conf;
+    TEST_STEP("Establish effective RSS hash configuration");
+    rss_conf = test_rx_mq_rss_establish(&test_ethdev_config, FALSE);
 
+    TEST_STEP("Calculate the packet hash using the Toeplitz function");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
                 rss_conf->rss_hf, rss_conf->rss_key.rss_key_val,
                 rss_conf->rss_key_len, tmpl, &packet_hash, NULL));

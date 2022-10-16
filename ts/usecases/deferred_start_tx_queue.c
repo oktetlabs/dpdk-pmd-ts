@@ -53,6 +53,8 @@ main(int argc, char *argv[])
     rpc_rte_mbuf_p                *mbufs;
     uint16_t                       sent;
     te_bool                        tx_queue_info_get_supported;
+    te_bool                        suspect_stuck_pkt = FALSE;
+    te_bool                        fail = FALSE;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -129,17 +131,27 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                                   &test_params,
                                                   TEST_IUT_PORT_MAC_NAME));
+    CHECK_RC(asn_write_int32(tmpl, 1, "arg-sets.0.#simple-for.begin"));
+    CHECK_RC(asn_write_int32(tmpl, 2, "arg-sets.0.#simple-for.end"));
     CHECK_RC(tapi_ndn_subst_env(tmpl, &test_params, &env));
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&tmpl, FALSE, NULL,
                                                   DPMD_TS_PAYLOAD_LEN_DEF));
 
     tapi_rte_mk_mbuf_mk_ptrn_by_tmpl(iut_rpcs, tmpl, ethdev_config.mp,
                                      NULL, &mbufs, &count, &ptrn);
-    if (count != 1)
+    if (count != 2)
     {
         TEST_VERDICT("Unexpected number of prepared mbufs: %d mbufs have "
-                     "been produced, but should be %d", count, 1);
+                     "been produced, but must be %d", count, 2);
     }
+
+    TEST_STEP("TST: start listening to network");
+    CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
+                                                tst_if->if_name,
+                                                TAD_ETH_RECV_DEF,
+                                                tmpl, &rx_csap));
+    CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
+                                   RECEIVE_TIMEOUT_DEF, 0, RCF_TRRECV_PACKETS));
 
     TEST_STEP("Validate and try to transmit the packet from @p iut_port from "
               "@p deferred_queue TX queue");
@@ -147,20 +159,33 @@ main(int argc, char *argv[])
                                      deferred_queue, mbufs, 1);
 
     TEST_STEP("Check that @p iut_port port hasn't transmitted any packets");
-    if (sent != 0)
-        TEST_VERDICT("The packet was sent from non-started %d tx queue",
-                     deferred_queue);
+    if (sent == 1)
+    {
+        WARN_VERDICT("Inactive deferred start queue did not reject the packet");
+
+        TEST_SUBSTEP("TST: check that no packets arrived");
+        CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, 1, 0));
+        CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL,
+                                      &received));
+        if (received != 0)
+            TEST_VERDICT("Inactive deferred start TxQ sent the packet");
+
+        suspect_stuck_pkt = TRUE;
+    }
+    else if (sent != 0)
+    {
+        TEST_VERDICT("Inactive deferred start TxQ purportedly sent %hu packets",
+                     sent);
+    }
+    else
+    {
+        CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL, NULL));
+    }
 
     TEST_STEP("Start TX queue");
     test_start_tx_queue(iut_rpcs, iut_port->if_index, deferred_queue);
 
-    TEST_STEP("Create Ethernet-based CSAP which starts to listen to network "
-              "immediately");
-    CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
-                                                tst_if->if_name,
-                                                TAD_ETH_RECV_DEF,
-                                                tmpl, &rx_csap));
-
+    TEST_STEP("TST: continue listening to network");
     CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
                                    RECEIVE_TIMEOUT_DEF, 0,
                                    RCF_TRRECV_PACKETS | RCF_TRRECV_MISMATCH));
@@ -168,14 +193,23 @@ main(int argc, char *argv[])
     TEST_STEP("Validate and transmit the packet from @p deferred_queue Tx queue "
               "on @p iut_port");
     sent = test_tx_prepare_and_burst(iut_rpcs, iut_port->if_index,
-                                     deferred_queue, mbufs, 1);
+                                     deferred_queue, mbufs + sent, 1);
 
     TEST_STEP("Receive packet on @p iut_port "
               "Check that the port has received only one packet, and this packet "
               "match the packet sent one from @p iut_port");
-    CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, 1, 0));
+    CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, 2, 0));
     CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL, &received));
-    CHECK_PACKETS_NUM(received, 1);
+    if (suspect_stuck_pkt && received == 2)
+    {
+        WARN_VERDICT("A packet was accepted for Tx by an inactive queue; "
+                     "it got stuck and was sent upon the queue start");
+        fail = TRUE;
+    }
+    else
+    {
+        CHECK_PACKETS_NUM(received, 1);
+    }
 
     TEST_STEP("Check that no extra packets are received on Tester");
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
@@ -200,6 +234,9 @@ main(int argc, char *argv[])
             TEST_VERDICT("Deferred start has not been set for %u Tx queue",
                          deferred_queue);
     }
+
+    if (fail)
+        TEST_STOP;
 
     TEST_SUCCESS;
 

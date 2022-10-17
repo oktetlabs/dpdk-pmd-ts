@@ -242,7 +242,13 @@ load_required_modules(const char *ta, void *cookie)
     {
         /* Both sfc and sfc_ef100 drivers are in sfc.ko module */
         if (strcmp_start("sfc", driver) == 0) {
-            rc = tapi_cfg_module_add_from_ta_dir_or_fallback(ta, "sfc", TRUE);
+            /* sfc drivers depend on the sfc_driverlink module */
+            rc = tapi_cfg_module_add_from_ta_dir_or_fallback(ta, "sfc_driverlink", TRUE);
+            if (rc == 0)
+                rc = tapi_cfg_module_change_finish(ta, "sfc_driverlink");
+
+            if (rc == 0)
+                rc = tapi_cfg_module_add_from_ta_dir_or_fallback(ta, "sfc", TRUE);
             if (rc == 0)
                 rc = tapi_cfg_module_change_finish(ta, "sfc");
         } else {

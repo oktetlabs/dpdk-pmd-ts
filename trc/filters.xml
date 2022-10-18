@@ -11661,6 +11661,11 @@
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -11761,6 +11766,11 @@
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -12768,6 +12778,11 @@
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -12868,6 +12883,11 @@
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>

@@ -7851,6 +7851,11 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="WONTFIX ICE-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7896,6 +7901,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="WONTFIX ICE-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
           <result value="PASSED">
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
@@ -7950,6 +7960,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="WONTFIX ICE-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
           <result value="PASSED">
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>

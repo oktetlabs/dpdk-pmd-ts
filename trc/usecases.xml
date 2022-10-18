@@ -9674,6 +9674,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
         <results tags="pci-15b3-1017">
           <result value="SKIPPED">
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
@@ -9738,6 +9743,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>

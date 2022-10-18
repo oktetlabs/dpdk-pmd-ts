@@ -221,7 +221,7 @@
                     <value>TRUE</value>
                 </arg>
                 <arg name="transfer">
-                    <value>TRUE</value>
+                    <value reqs="FLOW_TRANSFER">TRUE</value>
                 </arg>
 
                 <!--- @autogroup -->
@@ -417,7 +417,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_rule_encap_on_egress"/>
+            <script name="flow_rule_encap_on_egress">
+                <req id="FLOW_TRANSFER"/>
+            </script>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -486,7 +488,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_rule_decap_on_ingress"/>
+            <script name="flow_rule_decap_on_ingress">
+                <req id="FLOW_TRANSFER"/>
+            </script>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -501,7 +505,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_rule_vlan_push"/>
+            <script name="flow_rule_vlan_push">
+                <req id="FLOW_TRANSFER"/>
+            </script>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -561,7 +567,7 @@
                 <value>TRUE</value>
             </arg>
             <arg name="transfer">
-                <value>TRUE</value>
+                <value reqs="FLOW_TRANSFER">TRUE</value>
             </arg>
             <arg name="flow_rule_pattern" list="vlan_tag">
                 <value ref="flow_rule_pattern.dst_mac"/>
@@ -576,7 +582,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_rule_reflect"/>
+            <script name="flow_rule_reflect">
+                <req id="FLOW_TRANSFER"/>
+            </script>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -588,7 +596,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_tunnel"/>
+            <script name="flow_tunnel">
+                <req id="FLOW_TRANSFER"/>
+            </script>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>

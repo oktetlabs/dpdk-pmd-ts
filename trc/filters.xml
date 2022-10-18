@@ -41,6 +41,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -70,6 +75,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -112,6 +122,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -141,6 +156,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -188,6 +208,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -226,6 +251,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -255,6 +285,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -297,6 +332,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -326,6 +366,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -396,6 +441,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -434,6 +484,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -463,6 +518,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -505,6 +565,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -534,6 +599,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -576,6 +646,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -604,6 +679,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -627,6 +707,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -646,6 +731,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -678,6 +768,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -706,6 +801,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -725,6 +825,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -762,6 +867,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -786,6 +896,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -823,6 +938,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -847,6 +967,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -889,6 +1014,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -918,6 +1048,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -955,6 +1090,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -988,6 +1128,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1017,6 +1162,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -1064,6 +1214,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1107,6 +1262,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1136,6 +1296,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -1173,6 +1338,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1206,6 +1376,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1230,6 +1405,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -1267,6 +1447,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1291,6 +1476,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -2947,6 +3137,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3043,6 +3238,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3120,6 +3320,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3210,6 +3415,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3307,6 +3517,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3417,6 +3632,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3479,6 +3699,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3511,6 +3736,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3600,6 +3830,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3699,6 +3934,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3779,6 +4019,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -3875,6 +4120,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -6786,6 +7036,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -6813,6 +7068,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -6853,6 +7113,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -6889,6 +7154,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -6916,6 +7186,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -6951,6 +7226,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -6978,6 +7258,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7013,6 +7298,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7040,6 +7330,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7075,6 +7370,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7102,6 +7402,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7137,6 +7442,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7164,6 +7474,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7199,6 +7514,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7226,6 +7546,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7261,6 +7586,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7288,6 +7618,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7323,6 +7658,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7350,6 +7690,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7385,6 +7730,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7412,6 +7762,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7447,6 +7802,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7474,6 +7834,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -7509,6 +7874,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -7536,6 +7906,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8274,6 +8649,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8309,6 +8689,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8341,6 +8726,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8381,6 +8771,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8403,6 +8798,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8433,6 +8833,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8455,6 +8860,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8485,6 +8895,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8507,6 +8922,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8537,6 +8957,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8559,6 +8984,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8589,6 +9019,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8611,6 +9046,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8646,6 +9086,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8668,6 +9113,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8698,6 +9148,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8720,6 +9175,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8750,6 +9210,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8772,6 +9237,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8802,6 +9272,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8824,6 +9299,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8854,6 +9334,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8876,6 +9361,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8906,6 +9396,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8928,6 +9423,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -8958,6 +9458,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -8980,6 +9485,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9015,6 +9525,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9047,6 +9562,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9087,6 +9607,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9109,6 +9634,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9139,6 +9669,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9161,6 +9696,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9191,6 +9731,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9213,6 +9758,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9243,6 +9793,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9265,6 +9820,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9295,6 +9855,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9317,6 +9882,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9352,6 +9922,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9374,6 +9949,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9404,6 +9984,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9426,6 +10011,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9456,6 +10046,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9478,6 +10073,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9508,6 +10108,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9530,6 +10135,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9560,6 +10170,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9582,6 +10197,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9612,6 +10232,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9638,6 +10263,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9660,6 +10290,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9694,6 +10329,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -9737,6 +10377,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9789,6 +10434,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -9854,6 +10504,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
@@ -9966,6 +10621,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -10053,6 +10713,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -10121,6 +10786,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10223,6 +10893,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10330,6 +11005,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10417,6 +11097,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10494,6 +11179,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10586,6 +11276,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10683,6 +11378,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10789,6 +11489,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -10796,1008 +11501,6 @@
         <arg name="promisc"/>
         <arg name="isolated">FALSE</arg>
         <arg name="transfer"/>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
-          <result value="FAILED">
-            <verdict>Failed to add a tunnel UDP port</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">TRUE</arg>
-        <arg name="transfer">TRUE</arg>
-        <arg name="env"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre</arg>
-        <arg name="is_ip6_inner_frame"/>
-        <notes/>
-        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
-          <result value="SKIPPED">
-            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="count"/>
-        <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
-        <arg name="isolated">FALSE</arg>
-        <arg name="transfer">TRUE</arg>
         <arg name="env"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre</arg>
         <arg name="is_ip6_inner_frame"/>
@@ -11812,6 +11515,1063 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-OR-NEED-ETHERTYPE-IP-PROTO-UDP-DST" notes="SN1022 requires EtherType, IP proto (UDP) and UDP destination port in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.vxlan6</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.geneve6</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">TRUE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc"/>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac.vsid.ifrm_dst_mac.nvgre</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-OR-MAC-MATCH" notes="SN1022 has no MAC addresses match in outer rules">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Inconsistent pattern (outer)</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
@@ -11844,6 +12604,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -11901,6 +12666,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -11958,6 +12728,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -12996,6 +13771,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -13022,6 +13802,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -13056,6 +13841,11 @@
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -13082,6 +13872,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+          <result value="SKIPPED">
+            <verdict>rte_flow_isolate() RPC is unavailable</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="FLOW-ISOLATE" notes="net/ice does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>

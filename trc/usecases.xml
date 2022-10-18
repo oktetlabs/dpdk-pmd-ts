@@ -7825,6 +7825,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="rss_hash_info" type="script">

@@ -184,7 +184,8 @@ main(int argc, char *argv[])
                                        &info, NULL);
     if (rc == 0)
         TEST_VERDICT("Unexpectedly, the packet is recognised as a tunnel one");
-    else if (rc == -TE_RC(TE_RPC, TE_ENOSYS))
+    else if (rc == -TE_RC(TE_RPC, TE_ENOSYS) ||
+             rc == -TE_RC(TE_RPC, TE_EOPNOTSUPP))
         TEST_SKIP("Flow tunnel offload is unsupported");
 
     rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);

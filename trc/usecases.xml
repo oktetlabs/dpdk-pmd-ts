@@ -9555,10 +9555,10 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572">
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
-            <verdict>Inactive deferred start queue did not reject the packet</verdict>
-            <verdict>A packet was accepted for Tx by an inactive queue; it got stuck and was sent upon the queue start</verdict>
+            <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
+            <verdict>The packet(s) really hit the wire</verdict>
           </result>
         </results>
       </iter>
@@ -9582,10 +9582,10 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572">
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
-            <verdict>Inactive deferred start queue did not reject the packet</verdict>
-            <verdict>A packet was accepted for Tx by an inactive queue; it got stuck and was sent upon the queue start</verdict>
+            <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
+            <verdict>The packet(s) really hit the wire</verdict>
           </result>
         </results>
       </iter>
@@ -9609,10 +9609,10 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572">
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
-            <verdict>Inactive deferred start queue did not reject the packet</verdict>
-            <verdict>A packet was accepted for Tx by an inactive queue; it got stuck and was sent upon the queue start</verdict>
+            <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
+            <verdict>The packet(s) really hit the wire</verdict>
           </result>
         </results>
       </iter>
@@ -9636,10 +9636,10 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572">
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
-            <verdict>Inactive deferred start queue did not reject the packet</verdict>
-            <verdict>A packet was accepted for Tx by an inactive queue; it got stuck and was sent upon the queue start</verdict>
+            <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
+            <verdict>The packet(s) really hit the wire</verdict>
           </result>
         </results>
       </iter>

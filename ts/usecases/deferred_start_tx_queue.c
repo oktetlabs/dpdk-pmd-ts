@@ -161,21 +161,21 @@ main(int argc, char *argv[])
     TEST_STEP("Check that @p iut_port port hasn't transmitted any packets");
     if (sent == 1)
     {
-        WARN_VERDICT("Inactive deferred start queue did not reject the packet");
+        WARN_VERDICT("The inactive queue(s) accepted the packet(s) for Tx");
 
         TEST_SUBSTEP("TST: check that no packets arrived");
         CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, 1, 0));
         CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL,
                                       &received));
         if (received != 0)
-            TEST_VERDICT("Inactive deferred start TxQ sent the packet");
+            TEST_VERDICT("The packet(s) really hit the wire");
 
         suspect_stuck_pkt = TRUE;
     }
     else if (sent != 0)
     {
-        TEST_VERDICT("Inactive deferred start TxQ purportedly sent %hu packets",
-                     sent);
+        TEST_VERDICT("Inactive queue %u reported that it had sent %hu packets "
+                     "despite only 1 being passed to it", deferred_queue, sent);
     }
     else
     {
@@ -202,8 +202,8 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL, &received));
     if (suspect_stuck_pkt && received == 2)
     {
-        WARN_VERDICT("A packet was accepted for Tx by an inactive queue; "
-                     "it got stuck and was sent upon the queue start");
+        WARN_VERDICT("The packet(s) got stuck, then hit the wire "
+                     "as a consequence of starting the queue(s)");
         fail = TRUE;
     }
     else

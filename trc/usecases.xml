@@ -9861,6 +9861,11 @@
             <verdict>Runtime Tx queue setup is not supported by the device</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1110" notes="i40e: runtime Rx/Tx queue setup is unusable">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_start() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="update_rss_hash_conf" type="script">

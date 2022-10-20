@@ -158,15 +158,6 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&tmpl, FALSE, NULL,
                                                   DPMD_TS_PAYLOAD_LEN_DEF));
 
-    TEST_STEP("Create Ethernet-based CSAP");
-    CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
-                                                tst_if->if_name,
-                                                TAD_ETH_RECV_DEF,
-                                                tmpl, &rx_csap));
-    CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
-                                   RECEIVE_TIMEOUT_DEF, 0,
-                                   RCF_TRRECV_PACKETS | RCF_TRRECV_MISMATCH));
-
     /* Prepare mbufs and pattern */
     tapi_rte_mk_mbuf_mk_ptrn_by_tmpl(iut_rpcs, tmpl, ec.mp,
                                      NULL, &mbufs, &count, &ptrn);
@@ -175,6 +166,15 @@ main(int argc, char *argv[])
         TEST_VERDICT("Unexpected number of prepared mbufs: %d mbufs have "
                      "been produced, but should be %d", count, nb_txq);
     }
+
+    TEST_STEP("Create Ethernet-based CSAP");
+    CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
+                                                tst_if->if_name,
+                                                TAD_ETH_RECV_DEF,
+                                                tmpl, &rx_csap));
+    CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, ptrn,
+                                   RECEIVE_TIMEOUT_DEF, 0,
+                                   RCF_TRRECV_PACKETS | RCF_TRRECV_MISMATCH));
 
     TEST_STEP("Ensure that interface is UP on Tester side");
     CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,

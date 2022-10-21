@@ -7841,6 +7841,11 @@
         <arg name="tmpl"/>
         <arg name="enable_offload">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
@@ -7893,6 +7898,11 @@
         <results tags="max_rx_queues&lt;2">
           <result value="SKIPPED">
             <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -7952,6 +7962,11 @@
         <results tags="max_rx_queues&lt;3">
           <result value="SKIPPED">
             <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">

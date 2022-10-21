@@ -187,8 +187,14 @@ main(int argc, char *argv[])
         RING_VERDICT("Received %u packets less than initially requested number of Rx descriptors",
                      init_nb_rxd - received);
     if (received == init_nb_rxd)
-        RING_VERDICT("%u received packets match initially requested number of Rx descriptors",
-                     received);
+    {
+        if (nb_rxd != init_nb_rxd)
+            RING_VERDICT("%u received packets match initially requested number of Rx descriptors",
+                         received);
+        else
+            RING("%u received packets match initially requested number of Rx descriptors",
+                         received);
+    }
     if (received > init_nb_rxd)
         RING_VERDICT("%u received packets greater than initially requested number of Rx descriptors",
                      received);

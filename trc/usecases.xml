@@ -13268,6 +13268,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13337,6 +13350,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -13410,6 +13436,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13479,6 +13518,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -13552,6 +13604,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13623,6 +13688,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13692,6 +13770,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -13765,6 +13856,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13836,6 +13940,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -13905,6 +14022,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -13978,6 +14108,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -14047,6 +14190,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -14120,6 +14276,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -14191,6 +14360,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -14260,6 +14442,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -14331,6 +14526,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -14409,6 +14617,19 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in obytes</verdict>
@@ -14483,6 +14704,19 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+            <verdict>Extended statistic tx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">

@@ -11864,6 +11864,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -11922,6 +11935,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -11984,6 +12010,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12042,6 +12081,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12104,6 +12156,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12162,6 +12227,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12229,6 +12307,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12297,6 +12388,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12369,6 +12473,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12437,6 +12554,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12509,6 +12639,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12577,6 +12720,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12654,6 +12810,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12712,6 +12881,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12774,6 +12956,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12832,6 +13027,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
@@ -12894,6 +13102,19 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">
           <result value="FAILED">
             <verdict>FCS is included in ibytes</verdict>
@@ -12952,6 +13173,19 @@
             <verdict>Extended statistic rx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core">
+          <result value="PASSED">
+            <verdict>Extended statistic rx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_octets is not supported</verdict>
+            <verdict>Extended statistic rx_le_64_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_65_to_127_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_128_to_255_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_256_to_511_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_512_to_1023_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_1024_to_15xx_pkts is not supported</verdict>
+            <verdict>Extended statistic rx_ge_15xx_pkts is not supported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03)&amp;dpdk&lt;21020001" key="TODO" notes="SF VFs do not have access to port level statistics and should not expose corresponding xstats">

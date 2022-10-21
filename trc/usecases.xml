@@ -28209,6 +28209,12 @@
         <arg name="template"/>
         <arg name="nb_rxd">496</arg>
         <notes/>
+        <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
@@ -28237,6 +28243,12 @@
         <arg name="template"/>
         <arg name="nb_rxd">502</arg>
         <notes/>
+        <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
@@ -28279,6 +28291,12 @@
         <arg name="template"/>
         <arg name="nb_rxd">1000</arg>
         <notes/>
+        <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
@@ -28349,6 +28367,12 @@
         <arg name="template"/>
         <arg name="nb_rxd">3584</arg>
         <notes/>
+        <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -28372,6 +28396,12 @@
         <arg name="template"/>
         <arg name="nb_rxd">4080</arg>
         <notes/>
+        <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
+          <result value="FAILED">
+            <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
+            <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>

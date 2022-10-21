@@ -196,8 +196,13 @@ main(int argc, char *argv[])
                          received);
     }
     if (received > init_nb_rxd)
-        RING_VERDICT("%u received packets greater than initially requested number of Rx descriptors",
-                     received);
+    {
+        if (received == nb_rxd)
+            RING_VERDICT("Number of received packets matches effective number of Rx descriptors");
+        else
+            RING_VERDICT("Received %u packets less than effective number of Rx descriptors",
+                         nb_rxd - received);
+    }
 
     if (fail_test)
         TEST_STOP;

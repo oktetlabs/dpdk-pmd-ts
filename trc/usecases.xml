@@ -26464,6 +26464,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26486,6 +26491,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26508,6 +26518,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.eth</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26530,6 +26545,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_first</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26552,6 +26572,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_middle</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26574,6 +26599,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_last</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26596,6 +26626,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.arp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26618,6 +26653,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26640,6 +26680,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26662,6 +26707,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.eth</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26684,6 +26734,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_first</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26706,6 +26761,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_middle</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26728,6 +26788,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_last</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26750,6 +26815,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.arp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26772,6 +26842,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan4.udp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26794,6 +26869,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve4.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26821,6 +26901,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre4.vlan</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26843,6 +26928,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan4.ip4_frag_first</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26865,6 +26955,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve4.ip4_frag_last</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26892,6 +26987,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre4.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26914,6 +27014,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26936,6 +27041,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.arp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26958,6 +27068,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26980,6 +27095,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -27002,6 +27122,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -27024,6 +27149,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_first</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -27046,6 +27176,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_middle</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -27068,6 +27203,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_last</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -27090,6 +27230,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27117,6 +27262,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27144,6 +27294,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.eth</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27171,6 +27326,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_first</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27198,6 +27358,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_middle</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27225,6 +27390,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27252,6 +27422,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.arp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27279,6 +27454,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27301,6 +27481,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27323,6 +27508,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.eth</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27345,6 +27535,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_first</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27367,6 +27562,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_middle</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27389,6 +27589,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27411,6 +27616,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.arp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27433,6 +27643,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan4.udp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27460,6 +27675,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve4.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27487,6 +27707,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre4.vlan</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27514,6 +27739,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan4.ip4_frag_first</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27536,6 +27766,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve4.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27563,6 +27798,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre4.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27585,6 +27825,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.udp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27607,6 +27852,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.arp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27629,6 +27879,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27651,6 +27906,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27673,6 +27933,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.icmp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27695,6 +27960,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_first</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27717,6 +27987,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_middle</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27739,6 +28014,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29003,6 +29283,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29025,6 +29310,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29047,6 +29337,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29069,6 +29364,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29091,6 +29391,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan6.udp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29113,6 +29418,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve6.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29140,6 +29450,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre6.vlan</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29162,6 +29477,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan6.ip4_frag_first</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29184,6 +29504,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve6.ip4_frag_last</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29211,6 +29536,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre6.tcp4</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29233,6 +29563,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29255,6 +29590,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29277,6 +29617,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.tcp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29304,6 +29649,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan.udp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29331,6 +29681,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.tcp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29353,6 +29708,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq.udp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29375,6 +29735,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_vxlan6.udp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29402,6 +29767,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_geneve6.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29429,6 +29799,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.vlan_nvgre6.vlan</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29456,6 +29831,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_vxlan6.ip4_frag_first</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29478,6 +29858,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_geneve6.ip4_frag_last</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29505,6 +29890,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.qinq_nvgre6.tcp4</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29527,6 +29917,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.udp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29549,6 +29944,11 @@
         <arg name="tmpl">VAR.tmpl.tst2iut.tcp6</arg>
         <arg name="vlan_strip">FALSE</arg>
         <notes/>
+        <results tags="mlx5_core" key="NO-QINQ-STRIP">
+          <result value="SKIPPED">
+            <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>

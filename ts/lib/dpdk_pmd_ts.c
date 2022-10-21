@@ -2293,7 +2293,7 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
 
     if (strcmp(dev_info_2->driver_name, dev_info_1->driver_name) != 0)
     {
-        ERROR("Fields driver_name don't match");
+        ERROR_VERDICT("Fields driver_name don't match");
         return TE_EINVAL;
     }
 
@@ -2304,7 +2304,7 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
 #define TEST_CMP_DEV_INFO_FIELD(_field) \
     if (dev_info_2->_field != dev_info_1->_field)   \
     {                                               \
-        ERROR("Fields "#_field" don't match");      \
+        ERROR_VERDICT("Fields "#_field" don't match");      \
         return TE_EINVAL;                           \
     }                                               \
 
@@ -2312,19 +2312,19 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
 #define TEST_CMP_DEV_INFO_DESC_LIM_FIELD(_field) \
     if (dev_info_2->rx_desc_lim._field != dev_info_1->rx_desc_lim._field)   \
     {                                                                       \
-        ERROR("rx_desc_lim's fields "#_field" don't match");                \
+        ERROR_VERDICT("rx_desc_lim's fields "#_field" don't match");        \
         return TE_EINVAL;                                                   \
     }                                                                       \
     if (dev_info_2->tx_desc_lim._field != dev_info_1->tx_desc_lim._field)   \
     {                                                                       \
-        ERROR("tx_desc_lim's fields "#_field" don't match");                \
+        ERROR_VERDICT("tx_desc_lim's fields "#_field" don't match");        \
         return TE_EINVAL;                                                   \
     }
 
 #define TEST_CMP_DEV_INFO_CONF_FIELD(_conf, _field) \
     if (dev_info_2->_conf._field != dev_info_1->_conf._field)   \
     {                                                           \
-        ERROR(#_conf"'s fields "#_field" don't match");         \
+        ERROR_VERDICT(#_conf"'s fields "#_field" don't match"); \
         return TE_EINVAL;                                       \
     }
 
@@ -2332,7 +2332,7 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
     if (dev_info_2->_conf._field._thresh_field !=                           \
         dev_info_1->_conf._field._thresh_field)                             \
     {                                                                       \
-        ERROR(#_field"'s fields "#_thresh_field" in "#_conf" don't match"); \
+        ERROR_VERDICT(#_field"'s fields "#_thresh_field" in "#_conf" don't match"); \
         return TE_EINVAL;                                                   \
     }
 

@@ -25047,6 +25047,12 @@
             <verdict>Different info on state: CONFIGURED</verdict>
           </result>
         </results>
+        <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
+          <result value="FAILED">
+            <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25055,6 +25061,12 @@
         <results tags="vdev-bonding" notes="bonding device information depends on slave driver being removed (INITIALIZED, CLOSED device state) or attached (other states)">
           <result value="FAILED">
             <verdict>Different info on state: CLOSED</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
+          <result value="FAILED">
+            <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
       </iter>
@@ -25067,6 +25079,12 @@
             <verdict>Different info on state: CLOSED</verdict>
           </result>
         </results>
+        <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
+          <result value="FAILED">
+            <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25077,6 +25095,12 @@
             <verdict>Different info on state: CLOSED</verdict>
           </result>
         </results>
+        <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
+          <result value="FAILED">
+            <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25085,6 +25109,12 @@
         <results tags="vdev-bonding" notes="bonding device information depends on slave driver being removed (INITIALIZED, CLOSED device state) or attached (other states)">
           <result value="FAILED">
             <verdict>Different info on state: CLOSED</verdict>
+          </result>
+        </results>
+        <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
+          <result value="FAILED">
+            <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
       </iter>

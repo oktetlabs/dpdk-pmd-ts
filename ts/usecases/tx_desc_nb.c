@@ -113,8 +113,7 @@ main(int argc, char *argv[])
         if (rc == -TE_RC(TE_RPC, TE_EOPNOTSUPP))
             RING_VERDICT("Get queue info isn't supported");
         else
-            TEST_VERDICT("Failed to get TxQ %u info: %s", TEST_TXQ,
-                         errno_rpc2str(-rc));
+            TEST_VERDICT("Failed to get TxQ info: %s", errno_rpc2str(-rc));
     }
     else
     {

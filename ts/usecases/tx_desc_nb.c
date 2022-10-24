@@ -34,7 +34,6 @@
 #define TEST_PAYLOAD_LEN 128
 #define TEST_PACKETS_TO_DESC_SCALE 4
 #define TEST_TXQ 0
-#define TEST_RXQ 0
 
 int
 main(int argc, char *argv[])

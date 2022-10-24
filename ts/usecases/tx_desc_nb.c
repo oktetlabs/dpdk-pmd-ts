@@ -115,27 +115,24 @@ main(int argc, char *argv[])
         else
             TEST_VERDICT("Failed to get TxQ info: %s", errno_rpc2str(-rc));
     }
-    else
+    else if (nb_txd != tx_qinfo.nb_desc)
     {
-        if (nb_txd != tx_qinfo.nb_desc)
+        if (limits_violated)
         {
-            if (limits_violated)
-            {
-                RING_VERDICT("Requested descriptors number violates limits; "
-                             "Driver set up %u descriptors instead",
-                             tx_qinfo.nb_desc);
-            }
-            else
-            {
-                WARN_VERDICT("Requested descriptors number violates NO limits; "
-                             "Driver set up %u descriptors instead",
-                             tx_qinfo.nb_desc);
-                if (tx_qinfo.nb_desc < nb_txd)
-                    fail_test = TRUE;
-            }
-            nb_txd = tx_qinfo.nb_desc;
-            limits_violated = test_desc_nb_violates_limits(nb_txd, tx_desc_lim);
+            RING_VERDICT("Requested descriptors number violates limits; "
+                         "Driver set up %u descriptors instead",
+                         tx_qinfo.nb_desc);
         }
+        else
+        {
+            WARN_VERDICT("Requested descriptors number violates NO limits; "
+                         "Driver set up %u descriptors instead",
+                         tx_qinfo.nb_desc);
+            if (tx_qinfo.nb_desc < nb_txd)
+                fail_test = TRUE;
+        }
+        nb_txd = tx_qinfo.nb_desc;
+        limits_violated = test_desc_nb_violates_limits(nb_txd, tx_desc_lim);
     }
 
     if (limits_violated)

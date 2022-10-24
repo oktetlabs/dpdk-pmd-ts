@@ -28549,6 +28549,11 @@
         <arg name="template"/>
         <arg name="nb_txd">64</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+          <result value="PASSED">
+            <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -28561,6 +28566,11 @@
         <arg name="template"/>
         <arg name="nb_txd">128</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+          <result value="PASSED">
+            <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -28573,6 +28583,11 @@
         <arg name="template"/>
         <arg name="nb_txd">256</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+          <result value="PASSED">
+            <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -28609,6 +28624,11 @@
         <arg name="template"/>
         <arg name="nb_txd">512</arg>
         <notes/>
+        <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+          <result value="PASSED">
+            <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TXQ-LIMIT" notes="sfc has Tx queue limit because of event queue limit and space for unsolicited error and flush events">
           <result value="PASSED">
             <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>

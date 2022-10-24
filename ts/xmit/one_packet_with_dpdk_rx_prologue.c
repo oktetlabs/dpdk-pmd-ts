@@ -15,6 +15,7 @@
 #include "dpdk_pmd_test.h"
 
 #include "tapi_test.h"
+#include "tapi_cfg_if.h"
 
 /**
  * @retval EXIT_SUCCESS success
@@ -30,12 +31,9 @@ main(int argc, char **argv)
 #undef TEST_END_SPECIFIC
 #define TEST_END_SPECIFIC
 
-    cfg_val_type               cvt = CVT_INTEGER;
     const tapi_env_if         *iut_port = NULL;
     rcf_rpc_server            *tst_rpcs = NULL;
     const struct if_nameindex *tst_if = NULL;
-    int                        cv_cur;
-    int                        cv_max;
 
     TEST_START_ENV_VARS;
     TEST_START;
@@ -58,21 +56,8 @@ main(int argc, char **argv)
                                   "/agent:%s/rpcprovider:", tst_rpcs->ta));
     CHECK_RC(rcf_rpc_server_restart(tst_rpcs));
 
-    CHECK_RC(cfg_get_instance_fmt(&cvt, &cv_max,
-                                  "/agent:%s/interface:%s/ring:/rx:/max:",
-                                  tst_rpcs->ta, tst_if->if_name));
-
-    CHECK_RC(cfg_get_instance_fmt(&cvt, &cv_cur,
-                                  "/agent:%s/interface:%s/ring:/rx:/current:",
-                                  tst_rpcs->ta, tst_if->if_name));
-
-    if (cv_max != -1 && cv_cur != -1 && cv_max > cv_cur)
-    {
-        CHECK_RC(cfg_set_instance_fmt(CFG_VAL(INTEGER, cv_max),
-                                      "/agent:%s/interface:%s"
-                                      "/ring:/rx:/current:",
-                                      tst_rpcs->ta, tst_if->if_name));
-    }
+    CHECK_RC(tapi_cfg_if_set_ring_size_to_max(tst_rpcs->ta, tst_if->if_name, true,
+                                              NULL));
 
     CFG_WAIT_CHANGES;
 

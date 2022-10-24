@@ -216,8 +216,11 @@ main(int argc, char *argv[])
     if (sent > init_nb_txd)
     {
         fail_test = TRUE;
-        WARN_VERDICT("%u sent packets greater than initially requested number of Tx descriptors",
-                     sent);
+        if (sent == nb_txd)
+            WARN_VERDICT("Number of sent packets matches reported number of Tx descriptors");
+        else
+            WARN_VERDICT("Sent %u packets less than reported number of Tx descriptors",
+                         nb_txd - sent);
     }
 
     if (fail_test)

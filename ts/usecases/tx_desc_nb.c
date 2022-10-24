@@ -32,7 +32,6 @@
 #include "tapi_cfg_base.h"
 
 #define TEST_PAYLOAD_LEN 128
-#define TEST_PACKETS_TO_DESC_SCALE 4
 #define TEST_TXQ 0
 
 int
@@ -70,17 +69,9 @@ main(int argc, char *argv[])
     TEST_GET_UINT_PARAM(nb_txd);
     init_nb_txd = nb_txd;
 
-    TEST_STEP("Prepare default config and mbuf pool");
+    TEST_STEP("Prepare default config");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
-    nb_pkts = nb_txd * TEST_PACKETS_TO_DESC_SCALE + 1;
-    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME "-xmit",
-                                     MAX(nb_pkts,
-                                         TEST_RTE_MEMPOOL_DEF_CACHE << 1),
-                                     TEST_RTE_MEMPOOL_DEF_CACHE,
-                                     TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                     TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
-                                     TEST_PAYLOAD_LEN,
-                                     ethdev_config.socket_id);
+
     TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     tx_desc_lim = &ethdev_config.dev_info.tx_desc_lim;
@@ -147,6 +138,17 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Prepare mbufs to be sent and pattern to match it by @p template");
+
+    nb_pkts = nb_txd + 1;
+    mp = test_rte_pktmbuf_pool_create(iut_rpcs, TEST_PKTS_MEMPOOL_NAME "-xmit",
+                                     MAX(nb_pkts,
+                                         TEST_RTE_MEMPOOL_DEF_CACHE << 1),
+                                     TEST_RTE_MEMPOOL_DEF_CACHE,
+                                     TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
+                                     TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
+                                     TEST_PAYLOAD_LEN,
+                                     ethdev_config.socket_id);
+
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                                   &test_params,
                                                   TEST_IUT_PORT_MAC_NAME));
@@ -199,8 +201,8 @@ main(int argc, char *argv[])
     CHECK_PACKETS_NUM(received, sent);
 
     if (sent > nb_txd)
-        TEST_VERDICT("%u sent packets are greater than setup Tx ring size",
-                     sent);
+        TEST_VERDICT("Number of sent packets is greater than setup Tx ring size");
+
     if (sent < init_nb_txd)
         RING_VERDICT("Sent %u packets less than initially requested number of Tx descriptors",
                      init_nb_txd - sent);

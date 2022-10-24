@@ -28609,6 +28609,11 @@
         <arg name="template"/>
         <arg name="nb_txd">512</arg>
         <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TXQ-LIMIT" notes="sfc has Tx queue limit because of event queue limit and space for unsolicited error and flush events">
+          <result value="PASSED">
+            <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28627,6 +28632,11 @@
         <arg name="template"/>
         <arg name="nb_txd">1024</arg>
         <notes/>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TXQ-LIMIT" notes="sfc has Tx queue limit because of event queue limit and space for unsolicited error and flush events">
+          <result value="PASSED">
+            <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>

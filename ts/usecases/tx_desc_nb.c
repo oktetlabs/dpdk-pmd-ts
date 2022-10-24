@@ -202,8 +202,8 @@ main(int argc, char *argv[])
         TEST_VERDICT("%u sent packets are greater than setup Tx ring size",
                      sent);
     if (sent < init_nb_txd)
-        RING_VERDICT("%u sent packets smaller than initially requested number of Tx descriptors",
-                     sent);
+        RING_VERDICT("Sent %u packets less than initially requested number of Tx descriptors",
+                     init_nb_txd - sent);
     if (sent == init_nb_txd)
     {
         RING("%u sent packets match initially requested number of Tx descriptors",

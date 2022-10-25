@@ -1246,11 +1246,15 @@ test_calc_hash_by_pdus_and_hf(tarpc_rss_hash_protos_t  hf,
         hf_ip4 |= TEST_ETH_RSS_NONFRAG_IPV4_TCP;
         hf_ip6 |= TEST_ETH_RSS_NONFRAG_IPV6_TCP;
     }
-
-    if (pdu_udp != NULL)
+    else if (pdu_udp != NULL)
     {
         hf_ip4 |= TEST_ETH_RSS_NONFRAG_IPV4_UDP;
         hf_ip6 |= TEST_ETH_RSS_NONFRAG_IPV6_UDP;
+    }
+    else
+    {
+        hf_ip4 |= TEST_ETH_RSS_NONFRAG_IPV4_OTHER;
+        hf_ip6 |= TEST_ETH_RSS_NONFRAG_IPV6_OTHER;
     }
 
     hf_ip = (pdu_ip4 != NULL) ? hf_ip4 : hf_ip6;
@@ -1543,18 +1547,24 @@ test_get_rss_hf_by_tmpl(asn_value               *tmpl,
         return TE_RC(TE_TAPI, TE_EINVAL);
 
     *hf = 0;
-    if (pdu_ip4 != NULL)
-        *hf |= TEST_ETH_RSS_IPV4;
-    else
-        *hf |= TEST_ETH_RSS_IPV6;
+
+    /* It is assumed that this test suite does not consider fragmentation. */
 
     if (pdu_tcp != NULL)
+    {
         *hf |= (pdu_ip4 != NULL) ? TEST_ETH_RSS_NONFRAG_IPV4_TCP :
                                    TEST_ETH_RSS_NONFRAG_IPV6_TCP;
-
-    if (pdu_udp != NULL)
+    }
+    else if (pdu_udp != NULL)
+    {
         *hf |= (pdu_ip4 != NULL) ? TEST_ETH_RSS_NONFRAG_IPV4_UDP :
                                    TEST_ETH_RSS_NONFRAG_IPV6_UDP;
+    }
+    else
+    {
+        *hf |= (pdu_ip4 != NULL) ? TEST_ETH_RSS_NONFRAG_IPV4_OTHER :
+                                   TEST_ETH_RSS_NONFRAG_IPV6_OTHER;
+    }
 
     return 0;
 }

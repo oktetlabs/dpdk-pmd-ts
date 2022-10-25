@@ -26,6 +26,8 @@
 
 #define TE_TEST_NAME  "usecases/update_rss_hash_conf"
 
+#include "log_bufs.h"
+
 #include "dpdk_pmd_test.h"
 
 
@@ -205,7 +207,18 @@ retry_hash_conf_update:
             TEST_VERDICT("Read RSS hash key does not match written one");
         }
 
-        if (rss_conf.rss_hf != rss_conf_tmp.rss_hf)
+        if (rss_conf.rss_hf != rss_conf_tmp.rss_hf &&
+            (rss_conf_tmp.rss_hf & rss_conf.rss_hf) == rss_conf.rss_hf)
+        {
+            uint64_t extra_protos = rss_conf_tmp.rss_hf & ~rss_conf.rss_hf;
+            te_log_buf *tlbp = te_log_buf_alloc();
+
+            WARN_ARTIFACT("The ethdev enabled hash for extra protocols: %s",
+                          tarpc_rte_eth_dev_rss_types2str(tlbp, extra_protos));
+
+            te_log_buf_free(tlbp);
+        }
+        else if (rss_conf.rss_hf != rss_conf_tmp.rss_hf)
         {
             TEST_VERDICT("Updating of RSS hash functions failed, should "
                          "be 0x%x, but it is 0x%x",
@@ -237,7 +250,7 @@ retry_hash_conf_update:
     TEST_STEP("Calculate the packet hash, using the Toeplitz function "
               "and the new hash key");
     CHECK_RC(test_calc_hash_by_tmpl_and_hf(
-                rss_conf.rss_hf, rss_conf.rss_key.rss_key_val,
+                rss_conf_tmp.rss_hf, rss_conf.rss_key.rss_key_val,
                 rss_conf.rss_key_len,
                 tmpl, &packet_hash, &hash_symmetric));
 

@@ -42,8 +42,7 @@ main(int argc, char *argv[])
     asn_value                             *ptrn      = NULL;
     asn_value                             *tmpl      = NULL;
 
-    struct tarpc_rte_eth_rss_conf         *rss_conf;
-    struct tarpc_rte_eth_rss_conf         *actual_rss_conf;
+    const struct tarpc_rte_eth_rss_conf   *rss_conf;
     struct tarpc_rte_eth_rss_reta_entry64 *reta_conf;
     tarpc_rss_hash_protos_t                hash_functions;
     te_toeplitz_hash_cache                *hash_cache;
@@ -53,7 +52,6 @@ main(int argc, char *argv[])
     uint64_t                               reta_size;
 
     struct test_ethdev_config              ethdev_config;
-    struct tarpc_rte_eth_conf              eth_conf;
     struct tarpc_rte_eth_rxq_info          rx_qinfo;
     struct tarpc_rte_eth_rxconf            rx_conf;
     unsigned int                           n_rxq;
@@ -89,21 +87,17 @@ main(int argc, char *argv[])
     if (n_rxq > ethdev_config.dev_info.max_rx_queues)
         TEST_SKIP("So many Rx queues are not supported");
 
-    ethdev_config.eth_conf = test_rpc_rte_eth_make_eth_conf(
-                                      iut_rpcs, iut_port->if_index, &eth_conf);
     ethdev_config.nb_rx_queue = n_rxq;
-    ethdev_config.eth_conf->rxmode.mq_mode = TARPC_ETH_MQ_RX_RSS;
 
-    TEST_STEP("Request appropriate RSS configuration that will be applied "
-               "on device configure stage");
-    rss_conf = &eth_conf.rx_adv_conf.rss_conf;
+    TEST_STEP("Prepare desired RSS hash configuration");
 
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
+
     hash_functions &= ethdev_config.dev_info.flow_type_rss_offloads;
-    test_setup_rss_configuration(hash_functions,
-                                 MAX(ethdev_config.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
-                                 FALSE, rss_conf);
+
+    test_rx_mq_rss_prepare(&ethdev_config, hash_functions);
+
+    TEST_STEP("Lead the ethdev to state @c TEST_ETHDEV_CONFIGURED");
 
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
@@ -150,13 +144,9 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_tmpl_ptrn_set_payload_plain(&tmpl, FALSE, NULL,
                                                   DPMD_TS_PAYLOAD_LEN_DEF));
 
-    TEST_STEP("Get RSS hash configuration. If the corresponding RPC is not supported, "
-              "use previously requested configuration");
-    actual_rss_conf = test_try_get_rss_hash_conf(iut_rpcs,
-                                                 rss_conf->rss_key_len,
-                                                 iut_port->if_index);
-    if (actual_rss_conf != NULL)
-        rss_conf = actual_rss_conf;
+    TEST_STEP("Establish effective RSS hash configuration");
+
+    rss_conf = test_rx_mq_rss_establish(&ethdev_config, FALSE);
 
     TEST_STEP("Get RSS Redirection Table. If the corresponding RPC is not supported, "
               "use default Redirection Table");

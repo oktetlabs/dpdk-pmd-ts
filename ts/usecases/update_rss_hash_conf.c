@@ -60,6 +60,9 @@ main(int argc, char *argv[])
     int                                    expected_queue;
     unsigned int                           matched_num;
 
+    te_bool use_parameter_rss_hash_protos;
+    te_bool use_rx_adv_conf;
+
     uint8_t *rss_hash_key;
     uint8_t *rss_hash_key_tmp;
     size_t rss_key_sz;
@@ -100,8 +103,7 @@ main(int argc, char *argv[])
             (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_RSS_HASH_BIT);
     }
 
-    TEST_STEP("Start the Ethernet device");
-    CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
+    TEST_STEP("Commence configuration with generating a random hash key");
 
     rss_key_sz = MAX(test_ethdev_config.dev_info.hash_key_size,
                      RPC_RSS_HASH_KEY_LEN_DEF);
@@ -112,22 +114,72 @@ main(int argc, char *argv[])
     rss_hash_key = TE_ALLOC(rss_key_sz);
     CHECK_NOT_NULL(rss_hash_key);
 
-    TEST_STEP("Generate a new RSS hash key randomly and fill @p rss_conf");
     te_fill_buf(rss_hash_key, rss_key_sz);
 
     rss_conf.rss_key.rss_key_val = rss_hash_key;
     rss_conf.rss_key.rss_key_len = rss_key_sz;
-    rss_conf.rss_hf = rss_hash_protos;
     rss_conf.rss_key_len = rss_key_sz;
 
-    TEST_STEP("Update the RSS hash configuration "
-              "Ckeck that the @p rss_hash_protos is supported");
+    TEST_STEP("Specify all of the advertised flags in the hash proto mask");
+
+    rss_conf.rss_hf = test_ethdev_config.dev_info.flow_type_rss_offloads;
+
+    use_parameter_rss_hash_protos = FALSE;
+    use_rx_adv_conf = FALSE;
+
+retry_dev_configure_and_hash_conf_update:
+
+    TEST_STEP("Start the Ethernet device");
+    CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
+
+retry_hash_conf_update:
+
+    TEST_STEP("Try to update hash configuration via the dedicated API");
+
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
     rc = rpc_rte_eth_dev_rss_hash_update(iut_rpcs, iut_port->if_index,
                                          &rss_conf);
+
+    TEST_STEP("On error, lead the ethdev to state @c TEST_ETHDEV_INITIALIZED");
+
+    TEST_STEP("If needed, fill out @c rx_adv_conf and redo steps 7 and 8");
+
     if (rc != 0)
+    {
+        CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STOPPED));
+
+        /*
+         * The next step may be to reconfigure the ethdev without releasing
+         * the queues that were set up above. Doing so requires that
+         * the formal state of the ethdev be adjusted like this.
+         */
+        test_ethdev_config.cur_state = TEST_ETHDEV_INITIALIZED;
+
+        if (!use_rx_adv_conf && !use_parameter_rss_hash_protos)
+        {
+            memcpy(&test_ethdev_config.eth_conf->rx_adv_conf.rss_conf,
+                   &rss_conf, sizeof(rss_conf));
+            use_rx_adv_conf = TRUE;
+
+            goto retry_dev_configure_and_hash_conf_update;
+        }
+
         TEST_VERDICT("Hash protocols configuration failed: %s",
                      errno_rpc2str(-rc));
+    }
+
+    TEST_STEP("If needed, apply parameter @p rss_hash_protos and redo step 8");
+
+    if (!use_parameter_rss_hash_protos)
+    {
+        if (use_rx_adv_conf)
+            WARN_ARTIFACT("Hash proto mask in rx_adv_conf must not be zero");
+
+        use_parameter_rss_hash_protos = TRUE;
+        rss_conf.rss_hf = rss_hash_protos;
+
+        goto retry_hash_conf_update;
+    }
 
     TEST_STEP("Query the RSS hash configuration and check that "
               "the new configuration was successfully updated "

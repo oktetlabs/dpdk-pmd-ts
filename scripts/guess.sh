@@ -64,14 +64,14 @@ if test -z "${SF_TS_CONFDIR}" ; then
     export SF_TS_CONFDIR
 fi
 
-if test -z "${TS_RIGSDIR}" ; then
-    TS_RIGSDIR="${TE_TS_TOPDIR}"/../ts-rigs
-    if [[ -d "${TS_RIGSDIR}" ]] ; then
-        TS_RIGSDIR="$(realpath "${TS_RIGSDIR}")"
-        echo "Guessed TS_RIGSDIR=${TS_RIGSDIR}"
-        export TS_RIGSDIR
+if test -z "${TE_TS_RIGSDIR}" ; then
+    TE_TS_RIGSDIR="${TE_TS_TOPDIR}"/../ts-rigs
+    if [[ -d "${TE_TS_RIGSDIR}" ]] ; then
+        TE_TS_RIGSDIR="$(realpath "${TE_TS_RIGSDIR}")"
+        echo "Guessed TE_TS_RIGSDIR=${TE_TS_RIGSDIR}"
+        export TE_TS_RIGSDIR
     else
-        unset TS_RIGSDIR
+        unset TE_TS_RIGSDIR
     fi
 fi
 

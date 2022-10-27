@@ -12,8 +12,8 @@ source "$(dirname "$(which "$0")")"/guess.sh
 source "${TE_BASE}/scripts/lib"
 source "${TE_BASE}/scripts/lib.grab_cfg"
 
-if [[ -n "${TS_RIGSDIR}" ]] ; then
-    source "${TS_RIGSDIR}/scripts/lib/grab_cfg_handlers"
+if [[ -n "${TE_TS_RIGSDIR}" ]] ; then
+    source "${TE_TS_RIGSDIR}/scripts/lib/grab_cfg_handlers"
 fi
 
 cleanup() {
@@ -222,7 +222,7 @@ if test -n "${CFG}" ; then
     IFS=: ; process_cfg ${CFG} ; IFS=
 fi
 
-MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TS_RIGSDIR}${TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
+MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TE_TS_RIGSDIR}${TE_TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
 
 MY_OPTS+=(--trc-db="${TE_TS_TRC_DB}")
 MY_OPTS+=(--trc-comparison=normalised)

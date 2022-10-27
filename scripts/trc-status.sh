@@ -14,7 +14,7 @@ DPDK_NUM=21110016
 
 declare -a COMMON_OPTS
 COMMON_OPTS+=(--db="${TE_TS_TRC_DB}")
-COMMON_OPTS+=(--key2html="${SF_TS_CONFDIR}"/trc.key2html)
+COMMON_OPTS+=(--key2html="${TE_TS_RIGSDIR}"/trc.key2html)
 
 declare -a COMMON_TAGS
 COMMON_TAGS+=(dpdk:"${DPDK_NUM}")

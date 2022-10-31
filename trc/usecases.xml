@@ -25175,6 +25175,11 @@
             <verdict>Correct RSS configuration has been rejected on configuration stage</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1113" notes="i40e: device configure ignores RSS key in rx_adv_conf">
+          <result value="FAILED">
+            <verdict>Bogus RSS key size has been accepted</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="rx_intr" type="script">

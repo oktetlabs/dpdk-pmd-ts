@@ -149,8 +149,6 @@ function process_cfg() {
     fi
     # Modifier must be applied after base configuration
     RUN_OPTS+=(--opts=run/"${cfg}" "${mod_opts[@]}")
-    # Add test suite default options after configuration specifics
-    RUN_OPTS+=(--opts=opts.ts)
 }
 
 CFG=
@@ -221,6 +219,9 @@ done
 if test -n "${CFG}" ; then
     IFS=: ; process_cfg ${CFG} ; IFS=
 fi
+
+# Add test suite default options after configuration specifics
+RUN_OPTS+=(--opts=opts.ts)
 
 MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TE_TS_RIGSDIR}${TE_TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
 

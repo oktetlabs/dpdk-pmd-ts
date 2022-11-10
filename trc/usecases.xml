@@ -1752,6 +1752,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1797,6 +1802,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -1846,6 +1856,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1891,6 +1906,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -1940,6 +1960,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1985,6 +2010,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2034,6 +2064,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2079,6 +2114,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2128,6 +2168,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2173,6 +2218,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2222,6 +2272,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2267,6 +2322,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2316,6 +2376,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2361,6 +2426,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2410,6 +2480,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2455,6 +2530,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2504,6 +2584,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2549,6 +2634,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2598,6 +2688,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2643,6 +2738,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2692,6 +2792,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2737,6 +2842,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2786,6 +2896,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2831,6 +2946,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -2880,6 +3000,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2927,6 +3052,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2972,6 +3102,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4374,6 +4509,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4419,6 +4559,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4468,6 +4613,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4513,6 +4663,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4562,6 +4717,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4607,6 +4767,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4656,6 +4821,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4701,6 +4871,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4750,6 +4925,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4795,6 +4975,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4844,6 +5029,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4889,6 +5079,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -4938,6 +5133,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -4983,6 +5183,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5032,6 +5237,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5077,6 +5287,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5126,6 +5341,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5171,6 +5391,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5220,6 +5445,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5265,6 +5495,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5314,6 +5549,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5359,6 +5599,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5408,6 +5653,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5453,6 +5703,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -5502,6 +5757,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5549,6 +5809,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -5594,6 +5859,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -9043,6 +9313,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9095,6 +9370,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -9315,6 +9595,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9367,6 +9652,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -16789,6 +17079,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -16848,6 +17143,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -16911,6 +17211,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -16972,6 +17277,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17031,6 +17341,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17096,6 +17411,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17157,6 +17477,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17222,6 +17547,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17283,6 +17613,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17348,6 +17683,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17407,6 +17747,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17470,6 +17815,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17531,6 +17881,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17590,6 +17945,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17655,6 +18015,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17716,6 +18081,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17781,6 +18151,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17842,6 +18217,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -17907,6 +18287,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -17965,6 +18350,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -18027,6 +18417,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -18087,6 +18482,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -18145,6 +18545,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -18209,6 +18614,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -18269,6 +18679,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -18333,6 +18748,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -18393,6 +18813,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -21592,6 +22017,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -21651,6 +22081,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -21714,6 +22149,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -21775,6 +22215,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -21834,6 +22279,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -21899,6 +22349,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -21960,6 +22415,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22025,6 +22485,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22086,6 +22551,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22151,6 +22621,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22210,6 +22685,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22273,6 +22753,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22334,6 +22819,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22393,6 +22883,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22458,6 +22953,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22519,6 +23019,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22584,6 +23089,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22645,6 +23155,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22710,6 +23225,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22768,6 +23288,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -22830,6 +23355,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22890,6 +23420,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -22948,6 +23483,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -23012,6 +23552,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -23072,6 +23617,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -23136,6 +23686,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -23196,6 +23751,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03))">
@@ -25802,6 +26362,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25864,6 +26429,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -26398,6 +26968,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26480,6 +27055,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -26914,6 +27494,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -26998,6 +27583,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
@@ -27720,6 +28310,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -27809,6 +28404,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
@@ -28898,6 +29498,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28960,6 +29565,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -29197,6 +29807,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -29279,6 +29894,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
       </iter>
@@ -29443,6 +30063,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
@@ -29527,6 +30152,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
@@ -29792,6 +30422,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
@@ -29881,6 +30516,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">

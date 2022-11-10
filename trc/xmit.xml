@@ -26460,6 +26460,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26497,6 +26502,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -26542,6 +26552,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26574,6 +26589,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -26614,6 +26634,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26646,6 +26671,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -26686,6 +26716,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26718,6 +26753,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -26758,6 +26798,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -26807,6 +26852,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -26860,6 +26910,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -26904,6 +26959,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -26952,6 +27012,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -26996,6 +27061,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -27044,6 +27114,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -27088,6 +27163,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -27151,6 +27231,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -27200,6 +27285,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -27257,6 +27347,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -27303,6 +27398,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27340,6 +27440,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -27385,6 +27490,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27417,6 +27527,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -27457,6 +27572,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27489,6 +27609,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -27529,6 +27654,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27561,6 +27691,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -27616,6 +27751,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -27670,6 +27810,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -27713,6 +27858,11 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -27769,6 +27919,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -27818,6 +27973,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -27871,6 +28031,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -27915,6 +28080,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -27963,6 +28133,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28007,6 +28182,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28055,6 +28235,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28099,6 +28284,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28162,6 +28352,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28226,6 +28421,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28293,6 +28493,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28337,6 +28542,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28390,6 +28600,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28441,6 +28656,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28485,6 +28705,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28533,6 +28758,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28577,6 +28807,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28625,6 +28860,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -28669,6 +28909,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -28732,6 +28977,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -28764,6 +29014,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -28809,6 +29064,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28850,6 +29110,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28882,6 +29147,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -28922,6 +29192,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28954,6 +29229,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -28994,6 +29274,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29026,6 +29311,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29070,6 +29360,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29107,6 +29402,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29152,6 +29452,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29184,6 +29489,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29224,6 +29534,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29256,6 +29571,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29296,6 +29616,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29328,6 +29653,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29368,6 +29698,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -29417,6 +29752,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -29470,6 +29810,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -29514,6 +29859,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -29562,6 +29912,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -29606,6 +29961,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -29654,6 +30014,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -29698,6 +30063,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -29761,6 +30131,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -29810,6 +30185,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -29867,9 +30247,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
@@ -29909,6 +30289,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -29954,6 +30339,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29995,6 +30385,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30027,6 +30422,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -30067,6 +30467,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30099,6 +30504,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -30139,6 +30549,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30171,6 +30586,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -30226,6 +30646,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -30280,6 +30705,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -30323,9 +30753,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30379,6 +30809,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30428,6 +30863,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30481,6 +30921,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30525,6 +30970,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30573,6 +31023,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30617,6 +31072,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30665,6 +31125,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30709,6 +31174,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30772,6 +31242,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30836,6 +31311,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -30903,6 +31383,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -30947,6 +31432,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -31000,6 +31490,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -31051,6 +31546,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -31095,6 +31595,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -31143,6 +31648,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -31187,6 +31697,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -31235,6 +31750,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -31279,6 +31799,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -31342,6 +31867,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -31374,6 +31904,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31419,6 +31954,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31460,6 +32000,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31492,6 +32037,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31532,6 +32082,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31564,6 +32119,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31604,6 +32164,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31636,6 +32201,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31680,6 +32250,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31717,6 +32292,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31762,6 +32342,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31794,6 +32379,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31834,6 +32424,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31866,6 +32461,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31906,6 +32506,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31938,6 +32543,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -31978,6 +32588,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -32027,6 +32642,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32080,6 +32700,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -32124,6 +32749,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32172,6 +32802,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -32216,6 +32851,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32264,6 +32904,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -32308,6 +32953,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32371,6 +33021,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -32420,6 +33075,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32477,9 +33137,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
@@ -32519,6 +33179,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -32564,6 +33229,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32605,6 +33275,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32637,6 +33312,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -32677,6 +33357,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32709,6 +33394,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -32749,6 +33439,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32781,6 +33476,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -32836,6 +33536,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -32890,6 +33595,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -32933,9 +33643,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -32989,6 +33699,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33038,6 +33753,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33091,6 +33811,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33135,6 +33860,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33183,6 +33913,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33227,6 +33962,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33275,6 +34015,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33319,6 +34064,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33382,6 +34132,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33446,6 +34201,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33513,6 +34273,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33557,6 +34322,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33610,6 +34380,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33661,6 +34436,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33705,6 +34485,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33753,6 +34538,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33797,6 +34587,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33845,6 +34640,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -33889,6 +34689,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -33952,6 +34757,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -33984,6 +34794,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34029,6 +34844,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34070,6 +34890,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34102,6 +34927,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34142,6 +34972,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34174,6 +35009,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34214,6 +35054,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34246,6 +35091,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34290,6 +35140,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34327,6 +35182,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34372,6 +35232,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34404,6 +35269,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34444,6 +35314,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34476,6 +35351,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34516,6 +35396,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34548,6 +35433,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -34588,6 +35478,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -34637,6 +35532,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -34690,6 +35590,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -34734,6 +35639,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -34782,6 +35692,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -34826,6 +35741,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -34874,6 +35794,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -34918,6 +35843,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -34981,6 +35911,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -35030,6 +35965,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35087,9 +36027,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
@@ -35129,6 +36069,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -35174,6 +36119,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35215,6 +36165,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35247,6 +36202,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -35287,6 +36247,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35319,6 +36284,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -35359,6 +36329,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35391,6 +36366,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -35446,6 +36426,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef100" key="WONTFIX PMD-EF100-TSO-TUNNEL-CONTIG-HDR" notes="IPv4 and pseudo-header checksum are calculated in driver and require contiguous headers in the case of tunnels">
           <result value="FAILED">
             <verdict>Tx offloads for the packet were rejected</verdict>
@@ -35500,6 +36485,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
@@ -35543,9 +36533,9 @@
             <verdict>Tx offloads for the packet were rejected</verdict>
           </result>
         </results>
-        <results tags="pci-8086-159b" key="TX-HDR-CONTIG" notes="ice uses helper to calculate IPv4 checksum which requires L2+L3+L4 headers in the first segment">
-          <result value="FAILED">
-            <verdict>Tx offloads for the packet were rejected</verdict>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35599,6 +36589,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -35648,6 +36643,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35701,6 +36701,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -35745,6 +36750,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35793,6 +36803,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -35837,6 +36852,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35885,6 +36905,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -35929,6 +36954,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -35992,6 +37022,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36056,6 +37091,11 @@
         <results tags="pci-8086-1572" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -36123,6 +37163,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36167,6 +37212,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -36220,6 +37270,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36271,6 +37326,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36315,6 +37375,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -36363,6 +37428,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36407,6 +37477,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -36455,6 +37530,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
@@ -36499,6 +37579,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="WONTFIX FW">
@@ -36562,6 +37647,11 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>Geneve TSO is not available</verdict>
@@ -36594,6 +37684,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -36639,6 +37734,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36680,6 +37780,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36712,6 +37817,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -36752,6 +37862,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36784,6 +37899,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -36824,6 +37944,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|(!rx-full-featured&amp;(pci-1924-0a03|pci-1924-1a03|pci-1924-0b03|pci-1924-1b03)))">
           <result value="SKIPPED" key="OK">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36856,6 +37981,11 @@
           </result>
         </results>
         <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -63688,6 +64818,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
         <results tags="(tx-datapath-efx|tx-datapath-ef10_simple)&amp;!tx-low-latency" key="WONTFIX PMD-EFX-EF10-SIMPLE-NO-ENCAP-TSO" notes="Datapaths efx and ef10_simple don't support encap. TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -63737,6 +64872,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -63836,6 +64976,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -63962,6 +65107,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -64000,6 +65150,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -64034,6 +65189,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>
@@ -64122,6 +65282,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -64156,6 +65321,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
+          <result value="SKIPPED">
+            <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
           </result>

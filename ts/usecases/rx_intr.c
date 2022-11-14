@@ -240,8 +240,9 @@ step_do_send_packet(struct scenario_step_context *ctx)
 static void
 step_do_receive_packet(struct scenario_step_context *ctx)
 {
-    rpc_rte_mbuf_p mbuf = RPC_NULL;
+    rpc_rte_mbuf_p mbufs[BURST_SIZE] = {};
     int nb_expected = 0;
+    unsigned int i;
 
     TEST_SUBSTEP("Check that the packet is received on the target queue");
 
@@ -249,11 +250,13 @@ step_do_receive_packet(struct scenario_step_context *ctx)
         nb_expected = 1;
 
     CHECK_RC(test_rx_burst_match_pattern(ctx->iut_rpcs, ctx->iut_port->if_index,
-                                         TEST_QUEUE, &mbuf, 1, nb_expected,
-                                         ctx->ptrn, TRUE));
+                                         TEST_QUEUE, mbufs, TE_ARRAY_LEN(mbufs),
+                                         nb_expected, ctx->ptrn, TRUE));
 
     ctx->pkts_expected--;
-    rpc_rte_pktmbuf_free(ctx->iut_rpcs, mbuf);
+
+    for (i = 0; i < TE_ARRAY_LEN(mbufs); ++i)
+            rpc_rte_pktmbuf_free(ctx->iut_rpcs, mbufs[i]);
 }
 
 static void

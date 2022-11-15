@@ -269,21 +269,32 @@ main(int argc, char *argv[])
             TEST_STEP("Spoil outer IP checksum in the traffic template");
             CHECK_RC(tapi_ndn_tmpl_set_ip_cksum(tmpl, 0, TAPI_NDN_OUTER_L3));
         }
+    }
 
+    TEST_STEP("Set outer L4 checksum to 0 in the traffic template if need be");
+    if (hdrs[TAPI_NDN_TUNNEL] != TE_PROTO_INVALID &&
+        hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
+    {
         /*
-         * There's no dedicated test parameter for outer L4
-         * checksum offload, so spoil outer UDP checksum in
-         * accordance with inner checksum offload specifics.
+         * For both cases, TSO and non-TSO, setting the UDP checksum
+         * to 0 should be a tenable way of spoiling it because the
+         * truly computed value of 0 should be replaced by 0xffff,
+         * according to RFC 768. Meanwhile, it is allowed to
+         * set the checksum to 0 in outer UDP-in-IPv4 in
+         * order to explicitly declare that the checksum
+         * is wittingly absent and may remain this way.
+         *
+         * If the test decides to check outer UDP checksum offload,
+         * it will request "correct" and not "correct-or-zero"
+         * verification mode in the traffic pattern.
          */
-        if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
-            ((tunnel_aware && outer_udp_cksum_offload_supported) ||
-             (!tunnel_aware && l4_cksum_offload &&
-              inner_l4_cksum_offload_supported)))
+        if ((!tunnel_aware && l4_cksum_offload &&
+             inner_l4_cksum_offload_supported) ||
+            tunnel_aware)
         {
             bc = (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4) ?
                  TE_IP4_UPPER_LAYER_CSUM_ZERO : TE_IP6_UPPER_LAYER_CSUM_ZERO;
 
-            TEST_STEP("Force zero outer L4 checksum in the traffic template");
             CHECK_RC(tapi_ndn_tmpl_set_udp_cksum(tmpl, bc, TAPI_NDN_OUTER_L4));
         }
     }
@@ -622,20 +633,20 @@ main(int argc, char *argv[])
                                                     pkt, TAPI_NDN_OUTER_L3));
             }
 
-            if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP &&
-                ((l4_cksum_offload && inner_l4_cksum_offload_supported) ||
-                 outer_udp_cksum_offload_supported ||
-                 tso_segsz > 0))
+            if (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
             {
+                /* Few steps above we set the checksum to 0 in the template */
+                te_bool may_remain_zero = !outer_udp_cksum_offload_supported;
+
                 /*
                  * Tunnel-aware NICs may support and may not support
                  * outer UDP checksum offload. In the latter case,
-                 * expect NICs to set the checksum to zero, as
-                 * per RFC 7348, RFC 6935 and Geneve draft,
-                 * so spoil the checksum in the template.
+                 * expect NICs to leave the checksum untouched,
+                 * as per RFC 7348, RFC 6935 and Geneve draft.
                  */
                 CHECK_RC(tapi_ndn_pkt_demand_correct_udp_cksum(
-                                                pkt, TRUE, TAPI_NDN_OUTER_L4));
+                                                           pkt, may_remain_zero,
+                                                           TAPI_NDN_OUTER_L4));
             }
         }
         else
@@ -651,12 +662,6 @@ main(int argc, char *argv[])
             if (l4_cksum_offload && inner_l4_cksum_offload_supported &&
                 hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
             {
-                /*
-                 * Tunnel-aware NICs may support and may not support
-                 * outer UDP checksum offload. In the latter case,
-                 * expect NICs to set the checksum to zero, as
-                 * per RFC 7348, RFC 6935 and Geneve draft.
-                 */
                 CHECK_RC(tapi_ndn_pkt_demand_correct_udp_cksum(
                                             pkt, FALSE, TAPI_NDN_OUTER_L4));
             }

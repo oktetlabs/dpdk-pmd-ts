@@ -150,13 +150,17 @@ test_eal_init(tapi_env *env)
  * Check that the number of packets is expected
  */
 #define CHECK_PACKETS_NUM(_actual, _expected) \
-    do {                                                                    \
-        int __actual = (_actual);                                           \
-        int __expected = (_expected);                                       \
-                                                                            \
-        if (_actual != _expected)                                           \
-            TEST_VERDICT("%d packets have been received, but should be %d", \
-                         __actual, __expected);                             \
+    do {                                                                        \
+        int __actual = (_actual);                                               \
+        int __expected = (_expected);                                           \
+                                                                                \
+        if (__actual != __expected) {                                           \
+            if (__actual == 0)                                                  \
+                TEST_VERDICT("No expected packets received");                   \
+            else                                                                \
+                TEST_VERDICT("%d packets have been received, but should be %d", \
+                             __actual, __expected);                             \
+        }                                                                       \
     } while (0)
 
 /**

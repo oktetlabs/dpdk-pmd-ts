@@ -215,7 +215,7 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
                                              &no_match_pkts));
     if (no_match_pkts != 0)
-        TEST_VERDICT("%u unmatched packets %s received", no_match_pkts,
+        TEST_VERDICT("%u not matching packets %s received", no_match_pkts,
                      (no_match_pkts > 1) ? "were" : "was");
 
     TEST_STEP("Stop @p deferred_queue TX queue");

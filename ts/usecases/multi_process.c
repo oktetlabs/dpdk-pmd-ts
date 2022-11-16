@@ -138,7 +138,7 @@ main(int argc, char *argv[])
     TEST_STEP("Check that no extra packets are received on Tester");
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap, &pkts));
     if (pkts != 0)
-        TEST_VERDICT("%u unmatched packets %s received", pkts,
+        TEST_VERDICT("%u not matching packets %s received", pkts,
                      (pkts > 1) ? "were" : "was");
 
     TEST_SUCCESS;

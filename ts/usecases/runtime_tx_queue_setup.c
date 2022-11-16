@@ -223,7 +223,7 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
                                              &no_match_pkts));
     if (no_match_pkts != 0)
-        TEST_VERDICT("%u unmatched packets received", no_match_pkts);
+        TEST_VERDICT("%u not matching packets received", no_match_pkts);
 
     CHECK_PACKETS_NUM(received, nb_pkts_pri);
 
@@ -338,7 +338,7 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
                                              &no_match_pkts));
     if (no_match_pkts != 0)
-        TEST_VERDICT("%u unmatched packets received", no_match_pkts);
+        TEST_VERDICT("%u not matching packets received", no_match_pkts);
 
     if (nb_stuck_pkts != 0 && received == nb_stuck_pkts + nb_txq)
     {

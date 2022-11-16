@@ -20044,7 +20044,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20091,7 +20091,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20185,7 +20185,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20232,7 +20232,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20326,7 +20326,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20373,7 +20373,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20535,7 +20535,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20566,7 +20566,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20639,7 +20639,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20665,7 +20665,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20769,7 +20769,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20795,7 +20795,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20863,7 +20863,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20910,7 +20910,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -20936,7 +20936,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21004,7 +21004,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21051,7 +21051,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21077,7 +21077,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21103,7 +21103,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21265,7 +21265,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21291,7 +21291,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21322,7 +21322,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21421,7 +21421,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21447,7 +21447,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -21473,7 +21473,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -22440,7 +22440,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -22517,7 +22517,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -22563,7 +22563,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -22686,7 +22686,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -22768,7 +22768,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -23041,7 +23041,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23118,7 +23118,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23159,7 +23159,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23272,7 +23272,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23349,7 +23349,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23627,7 +23627,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23704,7 +23704,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23745,7 +23745,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23858,7 +23858,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -23935,7 +23935,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -24853,7 +24853,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -24935,7 +24935,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -24976,7 +24976,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -25094,7 +25094,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -25171,7 +25171,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -26089,7 +26089,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -26171,7 +26171,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;tx-no-vlan-insertion" key="FW">
@@ -26217,7 +26217,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -26330,7 +26330,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -26412,7 +26412,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56543,7 +56543,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56590,7 +56590,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56684,7 +56684,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56731,7 +56731,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56825,7 +56825,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -56872,7 +56872,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57034,7 +57034,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57065,7 +57065,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57138,7 +57138,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57164,7 +57164,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57268,7 +57268,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57294,7 +57294,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57362,7 +57362,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57409,7 +57409,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57435,7 +57435,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57503,7 +57503,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57550,7 +57550,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57576,7 +57576,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57602,7 +57602,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57764,7 +57764,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57790,7 +57790,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57821,7 +57821,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57920,7 +57920,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57946,7 +57946,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -57972,7 +57972,7 @@
         <notes/>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59067,7 +59067,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59144,7 +59144,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59185,7 +59185,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59308,7 +59308,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59390,7 +59390,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 1</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59709,7 +59709,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59786,7 +59786,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 3</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59827,7 +59827,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -59940,7 +59940,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60017,7 +60017,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 2</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60336,7 +60336,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60413,7 +60413,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60454,7 +60454,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60567,7 +60567,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -60644,7 +60644,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 4</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -61603,7 +61603,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -61685,7 +61685,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -61726,7 +61726,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -61839,7 +61839,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -61921,7 +61921,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 7</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -63090,7 +63090,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -63172,7 +63172,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 16</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -63213,7 +63213,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -63326,7 +63326,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">
@@ -63408,7 +63408,7 @@
         </results>
         <results tags="pci-8086-1572" key="ref://dpdk-bz/1097" notes="i40e: TSO breaks when MSS spans more than 8 data fragments">
           <result value="FAILED">
-            <verdict>0 packets have been matched, but should be 8</verdict>
+            <verdict>No matching packets received</verdict>
           </result>
         </results>
         <results tags="tx-datapath-ef10_simple" key="OK">

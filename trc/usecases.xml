@@ -605,7 +605,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -647,7 +647,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -689,7 +689,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -731,7 +731,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -773,7 +773,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -815,7 +815,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -857,7 +857,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -899,7 +899,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -978,7 +978,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1020,7 +1020,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1062,7 +1062,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1104,7 +1104,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1146,7 +1146,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1188,7 +1188,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1230,7 +1230,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1272,7 +1272,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1351,7 +1351,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1393,7 +1393,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1435,7 +1435,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1477,7 +1477,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1519,7 +1519,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1561,7 +1561,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1603,7 +1603,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -1645,7 +1645,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3362,7 +3362,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3404,7 +3404,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3446,7 +3446,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3488,7 +3488,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3530,7 +3530,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3572,7 +3572,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3614,7 +3614,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3656,7 +3656,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3735,7 +3735,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3777,7 +3777,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3819,7 +3819,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3861,7 +3861,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3903,7 +3903,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3945,7 +3945,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -3987,7 +3987,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4029,7 +4029,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4108,7 +4108,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4150,7 +4150,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4192,7 +4192,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4234,7 +4234,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4276,7 +4276,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4318,7 +4318,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4360,7 +4360,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
@@ -4402,7 +4402,7 @@
         </results>
         <results tags="pci-10ee-0100" key="SNAP-7250" notes="Filtering is done on inner frame fields and MAC does not match">
           <result value="FAILED">
-            <verdict>0 packets have been received, but should be 1</verdict>
+            <verdict>No expected packets received</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">

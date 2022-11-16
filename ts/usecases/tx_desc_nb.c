@@ -195,7 +195,7 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
                                              &no_match_pkts));
     if (no_match_pkts != 0)
-        TEST_VERDICT("%u unmatched packets were received", no_match_pkts);
+        TEST_VERDICT("%u not matching packets were received", no_match_pkts);
 
     TEST_STEP("Check that received and sent packet counts match");
     CHECK_PACKETS_NUM(received, sent);

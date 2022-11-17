@@ -19,6 +19,11 @@
         <arg name="tso_segsz"/>
         <arg name="vlan_id"/>
         <notes/>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26460,6 +26465,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26473,11 +26488,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -26506,6 +26516,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26519,11 +26539,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -26550,6 +26565,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -26593,6 +26613,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26632,6 +26657,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -26675,6 +26705,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26716,6 +26751,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -26755,6 +26795,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -26823,6 +26868,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
@@ -26879,6 +26929,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
           <result value="FAILED">
             <verdict>TCP CWR flag is lost in the first packet</verdict>
@@ -26908,6 +26963,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -26961,6 +27021,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27010,6 +27075,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -27063,6 +27133,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27114,6 +27189,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27163,6 +27243,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -27398,6 +27483,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27411,11 +27506,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -27444,6 +27534,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27457,11 +27557,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -27488,6 +27583,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -27531,6 +27631,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27570,6 +27675,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -27613,6 +27723,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27654,6 +27769,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27693,6 +27813,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -27919,6 +28044,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27942,11 +28077,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -27975,6 +28105,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -27998,11 +28138,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -28029,6 +28164,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28082,6 +28222,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28131,6 +28276,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28184,6 +28334,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28235,6 +28390,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28284,6 +28444,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28544,6 +28709,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28598,6 +28768,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28656,6 +28831,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28705,6 +28885,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28758,6 +28943,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28807,6 +28997,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -28860,6 +29055,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -28909,6 +29109,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29018,6 +29223,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29062,6 +29272,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29110,6 +29325,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29149,6 +29369,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29192,6 +29417,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29231,6 +29461,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29274,6 +29509,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29313,6 +29553,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29360,6 +29605,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29373,11 +29628,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -29406,6 +29656,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29419,11 +29679,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -29450,6 +29705,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29493,6 +29753,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29532,6 +29797,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29575,6 +29845,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29616,6 +29891,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29655,6 +29935,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29698,6 +29983,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29721,11 +30016,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -29754,6 +30044,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29777,11 +30077,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -29808,6 +30103,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29861,6 +30161,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -29910,6 +30215,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -29963,6 +30273,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30014,6 +30329,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30063,6 +30383,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30293,6 +30618,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30337,6 +30667,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30385,6 +30720,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30424,6 +30764,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30467,6 +30812,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30506,6 +30856,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30549,6 +30904,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30588,6 +30948,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30809,6 +31174,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30863,6 +31233,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -30921,6 +31296,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -30970,6 +31350,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31023,6 +31408,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31072,6 +31462,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31125,6 +31520,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31174,6 +31574,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31434,6 +31839,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31488,6 +31898,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31546,6 +31961,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31595,6 +32015,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31648,6 +32073,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31697,6 +32127,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31750,6 +32185,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31799,6 +32239,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -31908,6 +32353,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -31952,6 +32402,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32000,6 +32455,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32039,6 +32499,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32082,6 +32547,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32121,6 +32591,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32164,6 +32639,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32203,6 +32683,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32250,6 +32735,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32263,11 +32758,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -32296,6 +32786,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32309,11 +32809,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -32340,6 +32835,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32383,6 +32883,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32422,6 +32927,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32465,6 +32975,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32506,6 +33021,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32545,6 +33065,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32588,6 +33113,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32611,11 +33146,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -32644,6 +33174,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32667,11 +33207,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -32698,6 +33233,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32751,6 +33291,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32800,6 +33345,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -32853,6 +33403,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32904,6 +33459,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -32953,6 +33513,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33183,6 +33748,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33227,6 +33797,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33275,6 +33850,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33314,6 +33894,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33357,6 +33942,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33396,6 +33986,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33439,6 +34034,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33478,6 +34078,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33699,6 +34304,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33753,6 +34363,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33811,6 +34426,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33860,6 +34480,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -33913,6 +34538,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -33962,6 +34592,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34015,6 +34650,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34064,6 +34704,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34324,6 +34969,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34378,6 +35028,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34436,6 +35091,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34485,6 +35145,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34538,6 +35203,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34587,6 +35257,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34640,6 +35315,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34689,6 +35369,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34798,6 +35483,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34842,6 +35532,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34890,6 +35585,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -34929,6 +35629,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -34972,6 +35677,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35011,6 +35721,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35054,6 +35769,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35093,6 +35813,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35140,6 +35865,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35153,11 +35888,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -35186,6 +35916,16 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35199,11 +35939,6 @@
         <results tags="!pci-10ee-0100&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923&amp;rx-full-featured&amp;((dpdk&lt;19050001)|!tx-datapath-ef10)" key="OK">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -35230,6 +35965,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35273,6 +36013,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35312,6 +36057,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35355,6 +36105,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35396,6 +36151,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35435,6 +36195,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35478,6 +36243,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35501,11 +36276,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -35534,6 +36304,16 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
+          <result value="FAILED">
+            <verdict>TCP CWR flag is lost in the first packet</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35557,11 +36337,6 @@
         <results tags="tx-datapath-efx" key="WONTFIX" notes="EFX-based datapath does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1572" key="TX-TSO-DUMMY-CWR-LOST" notes="Intel X710 loses CWR TCP flag in the case of dummy TSO">
-          <result value="FAILED">
-            <verdict>TCP CWR flag is lost in the first packet</verdict>
           </result>
         </results>
       </iter>
@@ -35588,6 +36363,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35641,6 +36421,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35690,6 +36475,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -35743,6 +36533,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35794,6 +36589,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -35843,6 +36643,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36073,6 +36878,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36117,6 +36927,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36165,6 +36980,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36204,6 +37024,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36247,6 +37072,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36286,6 +37116,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36329,6 +37164,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36368,6 +37208,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36589,6 +37434,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36643,6 +37493,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36701,6 +37556,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36750,6 +37610,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36803,6 +37668,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36852,6 +37722,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -36905,6 +37780,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -36954,6 +37834,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37214,6 +38099,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37268,6 +38158,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37326,6 +38221,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37375,6 +38275,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37428,6 +38333,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37477,6 +38387,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37530,6 +38445,11 @@
             <verdict>TX VLAN insertion is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37579,6 +38499,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>TX VLAN insertion is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37688,6 +38613,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37732,6 +38662,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37780,6 +38715,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>2 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37819,6 +38759,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>5 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37862,6 +38807,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>8 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37901,6 +38851,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>20 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
@@ -37944,6 +38899,11 @@
             <verdict>VxLAN TSO is not available</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>45 not matching packets were received</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
@@ -37983,6 +38943,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>VxLAN TSO is not available</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1125" notes="i40e does not support outer UDP checksum offload, but reports it">
+          <result value="FAILED">
+            <verdict>47 not matching packets were received</verdict>
           </result>
         </results>
         <results tags="pci-8086-159b" key="NO-VXLAN-TSO" notes="ice does not support VxLAN TSO in non-DCF mode">

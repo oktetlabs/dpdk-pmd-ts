@@ -12046,6 +12046,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+          <result value="FAILED">
+            <verdict>The RETA was changed after the port restarting</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -12067,6 +12072,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+          <result value="FAILED">
+            <verdict>The RETA was changed after the port restarting</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -12086,6 +12096,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+          <result value="FAILED">
+            <verdict>The RETA was changed after the port restarting</verdict>
           </result>
         </results>
       </iter>
@@ -12112,6 +12127,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+          <result value="FAILED">
+            <verdict>The RETA was changed after the port restarting</verdict>
           </result>
         </results>
       </iter>

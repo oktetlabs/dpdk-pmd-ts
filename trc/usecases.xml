@@ -7467,7 +7467,7 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="ethdev_state">INITIALIZED</arg>
-        <arg name="nb_rx_queues">1</arg>
+        <arg name="nb_rx_queues"/>
         <notes/>
         <results tags="vdev-failsafe">
           <result value="SKIPPED">
@@ -7510,6 +7510,11 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7529,6 +7534,11 @@
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="FAILED">
             <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7552,6 +7562,11 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7571,6 +7586,11 @@
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
           <result value="FAILED">
             <verdict>RSS redirection table query failed: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7618,32 +7638,6 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="ethdev_state">INITIALIZED</arg>
-        <arg name="nb_rx_queues">3</arg>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>RSS redirection table query not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS and query fails on mask check with EINVAL">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="sfc_efx">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
         <arg name="ethdev_state">CONFIGURED</arg>
         <arg name="nb_rx_queues">3</arg>
         <notes/>
@@ -7660,6 +7654,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7683,6 +7682,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7704,6 +7708,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7723,6 +7732,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7770,32 +7784,6 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="ethdev_state">INITIALIZED</arg>
-        <arg name="nb_rx_queues">8</arg>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>RSS redirection table query not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS and query fails on mask check with EINVAL">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="sfc_efx">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
         <arg name="ethdev_state">CONFIGURED</arg>
         <arg name="nb_rx_queues">8</arg>
         <notes/>
@@ -7812,6 +7800,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7835,6 +7828,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7856,6 +7854,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -7875,6 +7878,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7922,32 +7930,6 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="ethdev_state">INITIALIZED</arg>
-        <arg name="nb_rx_queues">11</arg>
-        <notes/>
-        <results tags="vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>RSS redirection table query not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS and query fails on mask check with EINVAL">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="sfc_efx">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
-          <result value="PASSED">
-            <verdict>RSS redirection table query failed: EINVAL</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
         <arg name="ethdev_state">CONFIGURED</arg>
         <arg name="nb_rx_queues">11</arg>
         <notes/>
@@ -7964,6 +7946,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>
@@ -7987,6 +7974,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8008,6 +8000,11 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8027,6 +8024,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+          <result value="FAILED">
+            <verdict>RETA has been filled incorrectly.</verdict>
           </result>
         </results>
       </iter>

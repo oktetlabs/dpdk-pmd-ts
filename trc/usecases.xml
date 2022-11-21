@@ -1727,6 +1727,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1775,6 +1780,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1831,6 +1841,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1879,6 +1894,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -1935,6 +1955,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -1983,6 +2008,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2039,6 +2069,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2087,6 +2122,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2143,6 +2183,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2191,6 +2236,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2247,6 +2297,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2295,6 +2350,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2351,6 +2411,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2399,6 +2464,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2455,6 +2525,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2503,6 +2578,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2559,6 +2639,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2607,6 +2692,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2663,6 +2753,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2711,6 +2806,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2767,6 +2867,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2815,6 +2920,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2871,6 +2981,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -2919,6 +3034,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -2975,6 +3095,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3027,6 +3152,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -3075,6 +3205,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4484,6 +4619,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4532,6 +4672,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4588,6 +4733,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4636,6 +4786,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4692,6 +4847,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4740,6 +4900,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4796,6 +4961,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4844,6 +5014,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -4900,6 +5075,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -4948,6 +5128,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5004,6 +5189,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5052,6 +5242,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5108,6 +5303,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5156,6 +5356,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5212,6 +5417,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5260,6 +5470,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5316,6 +5531,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5364,6 +5584,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5420,6 +5645,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5468,6 +5698,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5524,6 +5759,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5572,6 +5812,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5628,6 +5873,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5676,6 +5926,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -5732,6 +5987,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5784,6 +6044,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -5832,6 +6097,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -9283,6 +9553,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support IPv4 Rx checksum offload and UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>Rx IP checksum offload is unsupported</verdict>
@@ -9344,6 +9619,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -9565,6 +9845,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support IPv4 Rx checksum offload and UDP tunnel ports configuration">
           <result value="SKIPPED">
             <verdict>Rx IP checksum offload is unsupported</verdict>
@@ -9626,6 +9911,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -26364,6 +26654,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -26429,6 +26724,16 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -26970,6 +27275,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -27055,6 +27365,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -29500,6 +29815,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -29565,6 +29885,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -29809,6 +30134,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924-0903|pci-1924-1903|pci-1924-0923|pci-1924-1923|((rx-low-latency|rx-packed-stream|rx-dpdk)&amp;(pci-1924-0a03|pci-1924-0b03))">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -29894,6 +30224,11 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-15b3-1017" key="NO-GENEVE" notes="mlx5 does not support UDP port configuration for GENEVE">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>

@@ -156,8 +156,7 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
     UNUSED(net);
 
     if (strcmp(cfg_oid_inst_subid(oid, 1), "agent") != 0 ||
-        strcmp(cfg_oid_inst_subid(oid, 2), "hardware") != 0 ||
-        node->type != NET_NODE_TYPE_AGENT)
+        strcmp(cfg_oid_inst_subid(oid, 2), "hardware") != 0)
     {
         goto out;
     }
@@ -174,24 +173,41 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
     rc = tapi_cfg_pci_get_net_if(pci_path, &interface);
     if (rc != 0)
     {
-        ERROR("Failed to get network interface from the TST PCI device");
+        if (TE_RC_GET_ERROR(rc) != TE_ENOENT)
+            ERROR("Failed to get network interface from the PCI device");
+        else
+            rc = 0;
+        goto out;
+    }
+
+    if (strlen(interface) == 0)
+    {
+        if (node->type == NET_NODE_TYPE_AGENT)
+        {
+            ERROR("Interface name on TST must not be empty");
+            rc = TE_EFAIL;
+        }
         goto out;
     }
 
     rc = tapi_cfg_base_if_add_rsrc(agent, interface);
-
     if (rc != 0)
     {
-        ERROR("Failed to add a network interface to TST");
+        ERROR("Cannot grab network interface '%s' resource on TA '%s': %r",
+              interface, agent, rc);
         goto out;
     }
 
-    snprintf(interface_path, sizeof(interface_path), "/agent:%s/interface:%s",
-             agent, interface);
+    /* Update network configuration to use interface on TST only */
+    if (node->type == NET_NODE_TYPE_AGENT)
+    {
+        snprintf(interface_path, sizeof(interface_path),
+                 "/agent:%s/interface:%s", agent, interface);
 
-    rc = cfg_set_instance(node->handle, CFG_VAL(STRING, interface_path));
-    if (rc != 0)
-        ERROR("Failed to assign TST network node to TST interface");
+        rc = cfg_set_instance(node->handle, CFG_VAL(STRING, interface_path));
+        if (rc != 0)
+            ERROR("Failed to assign TST network node to TST interface");
+    }
 
 out:
     free(pci_path);

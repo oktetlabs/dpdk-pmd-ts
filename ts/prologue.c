@@ -105,19 +105,51 @@ disable_ipv6_and_ipv4(cfg_net_t *net, cfg_net_node_t *node,
     te_errno rc;
     const char *agent;
     const char *interface;
+    char *iface_alloced = NULL;
     struct sockaddr_in dummy_ip4;
 
     UNUSED(net);
-    UNUSED(node);
-    UNUSED(oid_str);
     UNUSED(cookie);
 
-    if (strcmp(cfg_oid_inst_subid(oid, 1), "agent") != 0 ||
-        strcmp(cfg_oid_inst_subid(oid, 2), "interface") != 0)
-        return 0;
+    switch (tapi_cfg_net_get_node_rsrc_type(node))
+    {
+        case NET_NODE_RSRC_TYPE_INTERFACE:
+            agent = CFG_OID_GET_INST_NAME(oid, 1);
+            interface = CFG_OID_GET_INST_NAME(oid, 2);
+            break;
 
-    agent = CFG_OID_GET_INST_NAME(oid, 1);
-    interface = CFG_OID_GET_INST_NAME(oid, 2);
+        case NET_NODE_RSRC_TYPE_PCI_FN:
+        {
+            char *pci_fn = NULL;
+
+            agent = CFG_OID_GET_INST_NAME(oid, 1);
+            rc = cfg_get_string(&pci_fn, "%s", oid_str);
+            if (rc != 0)
+            {
+                ERROR("Cannot get PCI function OID by %s: %r", oid_str, rc);
+                return rc;
+            }
+            rc = tapi_cfg_pci_get_net_if(pci_fn, &iface_alloced);
+            free(pci_fn);
+            if (rc != 0)
+                return (TE_RC_GET_ERROR(rc) == TE_ENOENT) ? 0 : rc;
+            if (strlen(iface_alloced) == 0)
+            {
+                /*
+                 * Bound PCI device driver does not provide network interface.
+                 * So, nothing to do here.
+                 */
+                free(iface_alloced);
+                return 0;
+            }
+            interface = iface_alloced;
+            break;
+        }
+
+        default:
+            RING("ARB: unknown type");
+            return 0;
+    }
 
     rc = tapi_cfg_sys_set_int(agent, 1, NULL,
                               "net/ipv6/conf/%s/disable_ipv6", interface);
@@ -137,6 +169,8 @@ disable_ipv6_and_ipv4(cfg_net_t *net, cfg_net_node_t *node,
 
         rc = tapi_cfg_del_if_ip4_addresses(agent, interface, SA(&dummy_ip4));
     }
+
+    free(iface_alloced);
 
     return rc;
 }

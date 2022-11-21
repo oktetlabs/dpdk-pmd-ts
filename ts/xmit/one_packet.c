@@ -42,6 +42,9 @@
 /** Per received packet callback data */
 struct pkt_cb_data {
     te_bool     check_cwr;
+    te_bool     cwr_in_the_first;
+    te_bool     cwr_everywhere;
+    te_bool     unexpected_cwr;
     te_bool     check_failed;
 };
 
@@ -54,23 +57,42 @@ pkt_cb(asn_value *packet, void *user_data)
     if (cb_data->check_cwr)
     {
         int32_t match_unit;
+        uint8_t tcp_flags;
+        size_t len = sizeof(tcp_flags);
 
         CHECK_RC(asn_read_int32(packet, &match_unit, "match-unit"));
-        /* If it is the first packet */
+        if (match_unit < 0)
+        {
+            /* Not matching packet */
+            return;
+        }
+
+        /* TCP is the topmost PDU */
+        CHECK_RC(asn_read_value_field(packet, &tcp_flags, &len,
+                                      "pdus.0.#tcp.flags.#plain"));
+
         if (match_unit == 1)
         {
-            uint8_t tcp_flags;
-            size_t len = sizeof(tcp_flags);
-
-            /* TCP is the topmost PDU */
-            CHECK_RC(asn_read_value_field(packet, &tcp_flags, &len,
-                                          "pdus.0.#tcp.flags.#plain"));
-
             if ((tcp_flags & TCP_CWR_FLAG) == 0)
             {
                 ERROR_VERDICT("TCP CWR flag is lost in the first packet");
                 cb_data->check_failed = TRUE;
             }
+            else
+            {
+                cb_data->cwr_in_the_first = TRUE;
+                cb_data->cwr_everywhere = TRUE;
+            }
+        }
+        else if ((tcp_flags & TCP_CWR_FLAG) != 0)
+        {
+            cb_data->unexpected_cwr = TRUE;
+            cb_data->check_failed = TRUE;
+            ERROR("TCP CWR flag is kept in the packet #%d", match_unit);
+        }
+        else
+        {
+            cb_data->cwr_everywhere = FALSE;
         }
     }
 }
@@ -81,24 +103,43 @@ pkt_cb(asn_value *packet, void *user_data)
  * @return Should TCP CWR flag be checked?
  */
 static te_bool
-mask_tcp_cwr_in_first_packet(asn_value *ptrn)
+mask_tcp_cwr(asn_value *ptrn)
 {
-    asn_value *first_pkt;
-    uint8_t    tcp_flags;
-    size_t     len = sizeof(tcp_flags);
+    int        n_units;
+    int        unit_idx;
 
-    CHECK_RC(asn_get_indexed(ptrn, &first_pkt, 0, ""));
-    /* TCP is the topmost PDU */
-    CHECK_RC(asn_read_value_field(first_pkt, &tcp_flags, &len,
-                                  "pdus.0.#tcp.flags.#plain"));
-
-    if (tcp_flags & TCP_CWR_FLAG)
+    n_units = asn_get_length(ptrn, "");
+    if (n_units <= 0)
     {
+        TEST_FAIL("Failed to get number of pattern units");
+        return FALSE;
+    }
+
+    for (unit_idx = 0; unit_idx < n_units; ++unit_idx)
+    {
+        asn_value *ptrn_unit;
+        uint8_t    tcp_flags;
+        size_t     len = sizeof(tcp_flags);
         asn_value *mask;
 
-        CHECK_RC(asn_free_subvalue_fmt(first_pkt, "pdus.0.#tcp.flags.#plain"));
+        CHECK_RC(asn_get_indexed(ptrn, &ptrn_unit, unit_idx, ""));
+        /* TCP is the topmost PDU */
+        CHECK_RC(asn_read_value_field(ptrn_unit, &tcp_flags, &len,
+                                      "pdus.0.#tcp.flags.#plain"));
 
-        mask = asn_retrieve_descendant(first_pkt, NULL, "pdus.0.#tcp.flags.#mask");
+        if (unit_idx == 0 && (tcp_flags & TCP_CWR_FLAG) == 0)
+        {
+            /*
+             * If CWR is unset in the first packet, it must be unset
+             * everywhere - do not touch plain match.
+             */
+            return FALSE;
+        }
+
+
+        CHECK_RC(asn_free_subvalue_fmt(ptrn_unit, "pdus.0.#tcp.flags.#plain"));
+
+        mask = asn_retrieve_descendant(ptrn_unit, NULL, "pdus.0.#tcp.flags.#mask");
         CHECK_NOT_NULL(mask);
 
         tcp_flags &= ~TCP_CWR_FLAG;
@@ -106,14 +147,9 @@ mask_tcp_cwr_in_first_packet(asn_value *ptrn)
 
         tcp_flags = 0xff & ~TCP_CWR_FLAG;
         CHECK_RC(asn_write_value_field(mask, &tcp_flags, sizeof(tcp_flags), "m"));
+    }
 
-        return TRUE;
-    }
-    else
-    {
-        /* If CWR is unset, it must be unset - do not touch plain match */
-        return FALSE;
-    }
+    return TRUE;
 }
 
 int
@@ -741,7 +777,7 @@ main(int argc, char *argv[])
         nb_pkts_expected = nb_gso_pkts;
 
         TEST_STEP("Mask TCP flag CWR in the first packet to handle it gracefully");
-        test_cb_data.check_cwr = mask_tcp_cwr_in_first_packet(ptrn);
+        test_cb_data.check_cwr = mask_tcp_cwr(ptrn);
     }
     else
     {
@@ -780,7 +816,16 @@ main(int argc, char *argv[])
 
     TEST_STEP("Fail if TCP CWR flag is lost");
     if (test_cb_data.check_failed)
+    {
+        if (test_cb_data.unexpected_cwr)
+        {
+            if (test_cb_data.cwr_everywhere)
+                ERROR_VERDICT("TCP CWR flag is kept in all packets");
+            else
+                ERROR_VERDICT("TCP CWR flag is kept in non-first packet");
+        }
         TEST_STOP;
+    }
 
     TEST_SUCCESS;
 

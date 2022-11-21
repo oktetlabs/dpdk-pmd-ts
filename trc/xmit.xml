@@ -27296,11 +27296,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -27348,11 +27343,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -27856,11 +27846,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -27913,11 +27898,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -28497,11 +28477,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -28568,11 +28543,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -28634,11 +28604,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -29158,11 +29123,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -30436,11 +30396,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -30488,11 +30443,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -30991,11 +30941,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -31048,11 +30993,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -31627,11 +31567,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -31698,11 +31633,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -31764,11 +31694,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -32288,11 +32213,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -33566,16 +33486,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -33618,11 +33528,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -34121,11 +34026,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -34178,11 +34078,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -34757,11 +34652,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -34828,11 +34718,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -34894,11 +34779,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -35418,11 +35298,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -36696,11 +36571,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -36748,11 +36618,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -37251,11 +37116,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -37308,11 +37168,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -37887,11 +37742,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -37958,11 +37808,6 @@
             <verdict>Geneve TSO is not available</verdict>
           </result>
         </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1041" notes="VirtIO does not support encapsulated TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
@@ -38024,11 +37869,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>
@@ -38548,11 +38388,6 @@
           </result>
         </results>
         <results tags="pci-10ee-0100" key="WONTFIX HW-GENEVE" notes="SN1022 does not support GENEVE">
-          <result value="SKIPPED">
-            <verdict>Geneve TSO is not available</verdict>
-          </result>
-        </results>
-        <results tags="pci-15b3-1017" notes="mlx5 does not support Geneve TSO">
           <result value="SKIPPED">
             <verdict>Geneve TSO is not available</verdict>
           </result>

@@ -216,7 +216,7 @@
             </arg>
             <arg name="payload_len">
                 <value>512</value>
-                <value>999</value>
+                <value reqs="TEST_HARNESS_SANITY">999</value>
                 <value>1234</value>
                 <value>1600</value>
                 <value>4000</value>
@@ -244,7 +244,7 @@
             <arg name="payload_len">
                 <value>512</value>
                 <value>999</value>
-                <value>1234</value>
+                <value reqs="TEST_HARNESS_SANITY">1234</value>
                 <value reqs="RX_JUMBO">1600</value>
                 <value reqs="RX_JUMBO">4000</value>
                 <value reqs="RX_JUMBO">9000</value>
@@ -348,9 +348,7 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="get_mtu">
-                <req id="TEST_HARNESS_SANITY"/>
-            </script>
+        <script name="get_mtu"/>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -431,7 +429,7 @@
             </arg>
             <arg name="nb_rx_queues">
                 <value>1</value>
-                <value>3</value>
+                <value reqs="TEST_HARNESS_SANITY">3</value>
                 <value>8</value>
                 <value>11</value>
             </arg>
@@ -460,7 +458,6 @@
         <!--- @autogroup -->
         <run>
             <script name="rss_hash_conf_get">
-                <req id="TEST_HARNESS_SANITY"/>
                 <req id="RSS"/>
             </script>
             <arg name="env">
@@ -554,9 +551,7 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="flow_ctrl_get">
-                <req id="TEST_HARNESS_SANITY"/>
-            </script>
+            <script name="flow_ctrl_get"/>
             <arg name="env">
               <value ref="env.peer2peer"/>
             </arg>
@@ -576,8 +571,8 @@
             </arg>
             <arg name="enable_scatter" list="sizes">
               <value>FALSE</value>
-              <value>FALSE</value>
-              <value>TRUE</value>
+              <value reqs="TEST_HARNESS_SANITY">FALSE</value>
+              <value reqs="TEST_HARNESS_SANITY">TRUE</value>
               <value>TRUE</value>
               <value>TRUE</value>
               <value>TRUE</value>
@@ -885,7 +880,7 @@
             </arg>
             <arg name="payload_len">
                 <value>46</value>
-                <value>100</value>
+                <value reqs="TEST_HARNESS_SANITY">100</value>
                 <value>200</value>
                 <value>400</value>
                 <value>800</value>
@@ -1023,7 +1018,9 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="rx_offload_checksum"/>
+            <script name="rx_offload_checksum">
+                <req id="TEST_HARNESS_SANITY"/>
+            </script>
             <arg name="env" list="env_tmpl">
                 <value ref="env.peer2peer"/>
                 <value ref="env.peer2peer"/>

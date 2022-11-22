@@ -635,14 +635,16 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_STARTED));
 
     nb_prep_exp = 1;
-    if (nb_segs > ec.dev_info.tx_desc_lim.nb_seg_max)
+    if (ec.dev_info.tx_desc_lim.nb_seg_max > 0 &&
+        nb_segs > ec.dev_info.tx_desc_lim.nb_seg_max)
     {
         nb_prep_exp = 0;
         RING("The packet should be rejected by Tx prepare since number of "
              "segments %u is greater than maximum for whole packet %u",
              nb_segs, ec.dev_info.tx_desc_lim.nb_seg_max);
     }
-    else if (nb_segs > ec.dev_info.tx_desc_lim.nb_mtu_seg_max)
+    else if (ec.dev_info.tx_desc_lim.nb_mtu_seg_max > 0 &&
+             nb_segs > ec.dev_info.tx_desc_lim.nb_mtu_seg_max)
     {
         if (tso_segsz == 0)
         {

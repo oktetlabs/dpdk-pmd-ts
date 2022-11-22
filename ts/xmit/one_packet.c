@@ -195,7 +195,7 @@ main(int argc, char *argv[])
     unsigned int                          nb_mbufs;
     asn_value                           **pkts_by_tmpl;
     unsigned int                          nb_pkts_by_tmpl;
-    rpc_rte_mbuf_p                        m;
+    rpc_rte_mbuf_p                        m = RPC_NULL;
     uint64_t                              m_ol_flags;
     struct tarpc_rte_pktmbuf_tx_offload   m_tx_ol;
     uint16_t                              nb_segs;
@@ -211,7 +211,9 @@ main(int argc, char *argv[])
                                                 .user_data = &test_cb_data,
                                           };
     unsigned int                          nb_pkts_expected;
+    uint16_t                              nb_prep_exp;
     uint16_t                              nb_prep;
+    uint16_t                              nb_sent;
     unsigned int                          nb_pkts_rx;
     unsigned int                          no_match_pkts;
 
@@ -632,13 +634,93 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare TEST_ETHDEV_STARTED state");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_STARTED));
 
+    nb_prep_exp = 1;
+    if (nb_segs > ec.dev_info.tx_desc_lim.nb_seg_max)
+    {
+        nb_prep_exp = 0;
+        RING("The packet should be rejected by Tx prepare since number of "
+             "segments %u is greater than maximum for whole packet %u",
+             nb_segs, ec.dev_info.tx_desc_lim.nb_seg_max);
+    }
+    else if (nb_segs > ec.dev_info.tx_desc_lim.nb_mtu_seg_max)
+    {
+        if (tso_segsz == 0)
+        {
+            nb_prep_exp = 0;
+            RING("Non-TSO packet should be rejected by Tx prepare since number of "
+                 "segments %u is greater than maximum for single packet %u",
+                 nb_segs, ec.dev_info.tx_desc_lim.nb_mtu_seg_max);
+        }
+        else
+        {
+            uint16_t hdr_len;
+            uint16_t hdr_segs = 0;
+            rpc_rte_mbuf_p seg;
+            uint16_t data_segs = 0;
+            uint16_t pkt_len = 0;
+            uint16_t pkt_num = 1;
+
+            hdr_len = m_tx_ol.outer_l2_len + m_tx_ol.outer_l3_len +
+                m_tx_ol.l2_len + m_tx_ol.l3_len + m_tx_ol.l4_len;
+
+            for (seg = m; seg != RPC_NULL;
+                 seg = rpc_rte_pktmbuf_get_next(iut_rpcs, seg))
+            {
+                uint16_t seg_len;
+
+                seg_len = rpc_rte_pktmbuf_get_data_len(iut_rpcs, seg);
+
+                if (pkt_len < hdr_len)
+                    hdr_segs++;
+
+                pkt_len += seg_len;
+                if (pkt_len > hdr_len)
+                    data_segs++;
+
+                if (pkt_len >= hdr_len + tso_segsz)
+                {
+                    if (hdr_segs + data_segs >
+                        ec.dev_info.tx_desc_lim.nb_mtu_seg_max)
+                    {
+                        nb_prep_exp = 0;
+                        RING("TSO packet should be rejected by Tx prepare since "
+                             "number of data segments for the packet #%u is %u "
+                             "(greater than maximum %u)", pkt_num,
+                             hdr_segs + data_segs,
+                             ec.dev_info.tx_desc_lim.nb_mtu_seg_max);
+                        /* continue to log other violations as well */
+                    }
+                    pkt_len -= tso_segsz;
+                    data_segs = (pkt_len > hdr_len) ? 1 : 0;
+                }
+            }
+        }
+    }
+
     TEST_STEP("Validate Tx offloads for the packet");
     nb_prep = rpc_rte_eth_tx_prepare(iut_rpcs, iut_port->if_index, 0, &m, 1);
     if (nb_prep == 0)
-        TEST_VERDICT("Tx offloads for the packet were rejected");
+    {
+        if (nb_prep_exp == 0)
+        {
+            RING("Tx offloads for the packet have been rejected as expected");
+            TEST_SUCCESS;
+        }
+        else
+        {
+            TEST_VERDICT("Tx offloads for the packet were rejected");
+        }
+    }
     else if (nb_prep != 1)
+    {
         TEST_VERDICT("Wrong return value from Tx prepare API: "
                      "expected 0 or 1, got %" PRIu16, nb_prep);
+    }
+    else if (nb_prep_exp == 0)
+    {
+        ERROR_VERDICT("Tx offloads for the packet are expected to be "
+                      "rejected but Tx prepare has accepted it");
+    }
 
     TEST_STEP("Create an Rx CSAP on the TST host according to the template");
     CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
@@ -797,8 +879,26 @@ main(int argc, char *argv[])
                                    RCF_TRRECV_SEQ_MATCH | RCF_TRRECV_MISMATCH));
 
     TEST_STEP("Send the packet");
-    if (rpc_rte_eth_tx_burst(iut_rpcs, iut_port->if_index, 0, &m, 1) != 1)
-        TEST_VERDICT("Cannot send the packet");
+    nb_sent = rpc_rte_eth_tx_burst(iut_rpcs, iut_port->if_index, 0, &m, 1);
+    if (nb_sent == 0)
+    {
+        if (nb_prep_exp == 0)
+            TEST_VERDICT("The packet was not rejected on prepare but "
+                         "cannot be sent as expected");
+        else
+            TEST_VERDICT("Cannot send the packet");
+    }
+    else if (nb_sent != 1)
+    {
+        m = RPC_NULL;
+        TEST_VERDICT("Too many packets sent");
+    }
+    else if (nb_prep_exp == 0)
+    {
+        WARN_VERDICT("The packet which should not pass Tx parepare seems "
+                     "to be sent");
+    }
+    m = RPC_NULL;
 
     CHECK_RC(test_rx_await_pkts_exec_cb(tst_host->ta, rx_csap,
                                         nb_pkts_expected, 0,
@@ -810,6 +910,26 @@ main(int argc, char *argv[])
                                              &no_match_pkts));
     if (no_match_pkts != 0)
         TEST_VERDICT("%u not matching packets were received", no_match_pkts);
+
+    if (nb_prep_exp == 0)
+    {
+        if (nb_pkts_rx == 0)
+        {
+            TEST_VERDICT("The packet which should not pass Tx parepare "
+                         "has been dropped on Tx");
+        }
+        else if (nb_pkts_rx == nb_pkts_expected)
+        {
+            ERROR_VERDICT("The packet which should not pass Tx parepare "
+                         "has been sent and received");
+            /* Continue to check CWR handling results */
+        }
+        else
+        {
+            TEST_VERDICT("The packet which should not pass Tx parepare "
+                         "has been sent and partially received");
+        }
+    }
 
     TEST_STEP("Verify the number of matching packets received");
     CHECK_MATCHED_PACKETS_NUM(nb_pkts_rx, nb_pkts_expected);
@@ -827,9 +947,13 @@ main(int argc, char *argv[])
         TEST_STOP;
     }
 
-    TEST_SUCCESS;
+    if (nb_prep_exp == 0)
+        TEST_STOP;
+    else
+        TEST_SUCCESS;
 
 cleanup:
+    rpc_rte_pktmbuf_free(iut_rpcs, m);
     TEST_END;
 }
 /** @} */

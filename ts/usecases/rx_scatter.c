@@ -148,8 +148,8 @@ main(int argc, char *argv[])
 
     if (iut_mtu != pre_rxq_setup_mtu)
     {
-        test_rte_eth_dev_set_mtu_await_link_up(iut_rpcs, iut_port->if_index,
-                                        pre_rxq_setup_mtu, &test_ethdev_config);
+        test_set_mtu(iut_rpcs, iut_port->if_index, pre_rxq_setup_mtu,
+                     &test_ethdev_config);
         iut_mtu = pre_rxq_setup_mtu;
     }
 

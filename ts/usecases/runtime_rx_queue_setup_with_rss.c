@@ -222,7 +222,10 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Start the device");
-    rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
+    RPC_AWAIT_IUT_ERROR(ec.rpcs);
+    rc = rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
+    if (rc != 0)
+        TEST_VERDICT("Failed to start device with not setup Rx queue: %r", -rc);
 
     TEST_STEP("Stop and start the device again to make sure that the device can be "
               "stopped while some of its queues are not set up");

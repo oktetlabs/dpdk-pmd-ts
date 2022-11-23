@@ -10282,6 +10282,11 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+          <result value="FAILED">
+            <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
+          </result>
+        </results>
         <results tags="pci-15b3-1017">
           <result value="SKIPPED">
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
@@ -10348,6 +10353,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+          <result value="FAILED">
+            <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="pci-15b3-1017">
@@ -10417,7 +10427,7 @@
       </iter>
     </test>
     <test name="runtime_rx_queue_setup_with_rss" type="script">
-      <objective/>
+      <objective>Setup Rx queue when device is started, perform the check using RSS</objective>
       <notes/>
       <iter result="PASSED">
         <arg name="env"/>
@@ -10429,6 +10439,11 @@
         <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+          <result value="FAILED">
+            <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="pci-15b3-1017">

@@ -13940,6 +13940,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14022,6 +14028,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -14108,6 +14120,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14190,6 +14208,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -14276,6 +14300,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14360,6 +14390,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14442,6 +14478,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -14528,6 +14570,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14612,6 +14660,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14694,6 +14748,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -14780,6 +14840,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14862,6 +14928,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -14948,6 +15020,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15032,6 +15110,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15114,6 +15198,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>
@@ -15205,6 +15295,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15294,6 +15390,12 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15381,6 +15483,12 @@
             <verdict>Extended statistic tx_unicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_multicst_pkts is not supported</verdict>
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+          <result value="PASSED">
+            <verdict>Extended statistic tx_pkts is not supported</verdict>
+            <verdict>Extended statistic tx_octets is not supported</verdict>
           </result>
         </results>
       </iter>

@@ -15489,11 +15489,6 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1521">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support add a tunell UDP port operation">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -15514,6 +15509,16 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-TEREDO" notes="Intel X710 with i40e supports VXLAN only">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15522,11 +15527,6 @@
         <arg name="tunnel_type">VXLAN</arg>
         <notes/>
         <results tags="vdev-bonding|vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -15551,6 +15551,11 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1521">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15559,11 +15564,6 @@
         <arg name="tunnel_type">GENEVE</arg>
         <notes/>
         <results tags="vdev-bonding|vdev-failsafe">
-          <result value="SKIPPED">
-            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
-          </result>
-        </results>
-        <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
@@ -15589,6 +15589,16 @@
           </result>
         </results>
         <results tags="pci-15b3-1017">
+          <result value="SKIPPED">
+            <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="NO-GENEVE" notes="Intel X710 with i40e supports VXLAN only">
+          <result value="SKIPPED">
+            <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1521">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>

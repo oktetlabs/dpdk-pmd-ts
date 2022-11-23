@@ -25955,6 +25955,12 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+          <result value="FAILED">
+            <verdict>default_rxportconf's fields ring_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25968,6 +25974,12 @@
         <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
           <result value="FAILED">
             <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+          <result value="FAILED">
+            <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
@@ -25987,6 +25999,12 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+          <result value="FAILED">
+            <verdict>default_rxportconf's fields ring_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26003,6 +26021,12 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+          <result value="FAILED">
+            <verdict>default_rxportconf's fields ring_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26016,6 +26040,12 @@
         <results tags="mlx5_core" key="MLX5-CHANGES-RETA-SIZE-AT-START">
           <result value="FAILED">
             <verdict>Fields reta_size don't match</verdict>
+            <verdict>Different info on state: STARTED</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-1572" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+          <result value="FAILED">
+            <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>

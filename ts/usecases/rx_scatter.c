@@ -180,6 +180,15 @@ main(int argc, char *argv[])
                                     test_ethdev_config.port_id, 0, nb_rx_desc,
                                     test_ethdev_config.socket_id, NULL,
                                     test_ethdev_config.mp);
+    if (rx_buf_size < test_ethdev_config.dev_info.min_rx_bufsize)
+    {
+        if (rc < 0)
+        {
+            RING("Rx queue setup failed as expected since Rx buffer is too small");
+            TEST_SUCCESS;
+        }
+        ERROR_VERDICT("Rx setup done with Rx buffer smaller than minimum");
+    }
     if (!enable_scatter && iut_mtu > rx_buf_size)
     {
         if (rc == 0)

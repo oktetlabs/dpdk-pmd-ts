@@ -65,7 +65,7 @@ main(int argc, char *argv[])
     if (rc == -TE_RC(TE_RPC, TE_EOPNOTSUPP))
         TEST_SKIP("The operation to add a tunnel UDP port is unsupported");
 
-    if (rc == -TE_RC(TE_RPC, TE_EINVAL))
+    if (rc == -TE_RC(TE_RPC, TE_EINVAL) || rc == -TE_RC(TE_RPC, TE_EPERM))
         TEST_SKIP("The tunnel type is unsupported");
 
     TEST_STEP("Check that 'delete' operation is available");

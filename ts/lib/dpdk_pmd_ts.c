@@ -2370,11 +2370,15 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
     TEST_CMP_DEV_INFO_FIELD(vmdq_queue_base);
     TEST_CMP_DEV_INFO_FIELD(vmdq_queue_num);
     TEST_CMP_DEV_INFO_FIELD(vmdq_pool_base);
+    TEST_CMP_DEV_INFO_FIELD(speed_capa);
+    TEST_CMP_DEV_INFO_FIELD(dev_capa);
 #undef TEST_CMP_DEV_INFO_FIELD
 
     TEST_CMP_DEV_INFO_DESC_LIM_FIELD(nb_max);
     TEST_CMP_DEV_INFO_DESC_LIM_FIELD(nb_min);
     TEST_CMP_DEV_INFO_DESC_LIM_FIELD(nb_align);
+    TEST_CMP_DEV_INFO_DESC_LIM_FIELD(nb_seg_max);
+    TEST_CMP_DEV_INFO_DESC_LIM_FIELD(nb_mtu_seg_max);
 #undef TEST_CMP_DEV_INFO_DESC_LIM_FIELD
 
     TEST_CMP_DEV_INFO_CONF_THRESH_FIELD(default_rxconf, rx_thresh, pthresh);
@@ -2390,8 +2394,16 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
     TEST_CMP_DEV_INFO_CONF_FIELD(default_txconf, tx_free_thresh);
     TEST_CMP_DEV_INFO_CONF_FIELD(default_txconf, txq_flags);
     TEST_CMP_DEV_INFO_CONF_FIELD(default_txconf, tx_deferred_start);
-#undef TEST_CMP_DEV_INFO_CONF_FIELD
 #undef TEST_CMP_DEV_INFO_CONF_THRESH_FIELD
+
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_rxportconf, burst_size);
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_rxportconf, ring_size);
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_rxportconf, nb_queues);
+
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_txportconf, burst_size);
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_txportconf, ring_size);
+    TEST_CMP_DEV_INFO_CONF_FIELD(default_txportconf, nb_queues);
+#undef TEST_CMP_DEV_INFO_CONF_FIELD
 
     if (match)
         ERROR("Device informations are different, but detailed "

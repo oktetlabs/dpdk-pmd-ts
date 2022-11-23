@@ -23,6 +23,7 @@
 #include "te_defs.h"
 
 #include "tapi_cfg_base.h"
+#include "tapi_cfg_if.h"
 #include "tapi_cfg_cpu.h"
 #include "tapi_cfg_net.h"
 #include "tapi_cfg_sys.h"
@@ -230,6 +231,19 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
         ERROR("Cannot grab network interface '%s' resource on TA '%s': %r",
               interface, agent, rc);
         goto out;
+    }
+
+    /*
+     * Try to disable FW LLDP using private flag if it is
+     * present. FW LLDP generates packets from Intel X710 which
+     * randomly break tests because of unexpected packets observed.
+     */
+    rc = tapi_cfg_if_priv_flag_set(agent, interface,
+                                   "disable-fw-lldp", TRUE);
+    if (rc != 0 && rc != TE_RC(TE_CS, TE_ENOENT))
+    {
+        TEST_VERDICT("Attempt to disable FW LLDP using private "
+                     "flag failed unexpectedly: %r", rc);
     }
 
     /* Update network configuration to use interface on TST only */

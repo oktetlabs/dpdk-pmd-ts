@@ -563,7 +563,7 @@ test_rte_pktmbuf_pool_create(rcf_rpc_server  *rpcs,
         /* FIXME: one should not hard code this; it should come from PMDs */
         uint16_t data_room_size_max = 3560 /* MAX Rx packet size */ +
                                       256 /* XDP_PACKET_HEADROOM */ +
-                                      128 /* RTE_PKTMBUF_HEADROOM */;
+                                      TEST_PKTMBUF_HEADROOM;
 
         if (data_room_size > data_room_size_max)
             TEST_SKIP("Mbuf data room size is too large for AF_XDP");

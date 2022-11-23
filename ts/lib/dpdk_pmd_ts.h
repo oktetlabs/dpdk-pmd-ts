@@ -45,6 +45,13 @@
 #define TEST_RTE_MEMPOOL_DEF_PRIV_SIZE  0
 
 /**
+ * Size of headroom reserved in packet mbuf.
+ *
+ * @todo Get it from RPC server.
+ */
+#define TEST_PKTMBUF_HEADROOM           128
+
+/**
  * Default size of RTE mbuf data buffer, including RTE_PKTMBUF_HEADROOM
  */
 #define TEST_RTE_MEMPOOL_DEF_DATA_ROOM  (2 << 10)

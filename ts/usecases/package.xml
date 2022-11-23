@@ -672,7 +672,7 @@
               <value>32767</value>
               <value>32768</value>
               <value>32900</value>
-              <value>65535</value>
+              <value>65407</value>
             </arg>
             <arg name="payload_size">
               <value>512</value>

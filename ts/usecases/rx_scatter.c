@@ -138,7 +138,7 @@ main(int argc, char *argv[])
                                     TEST_RTE_MEMPOOL_DEF_SIZE,
                                     TEST_RTE_MEMPOOL_DEF_CACHE,
                                     TEST_RTE_MEMPOOL_DEF_PRIV_SIZE,
-                                    rx_buf_size,
+                                    rx_buf_size + TEST_PKTMBUF_HEADROOM,
                                     test_ethdev_config.socket_id);
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_CONFIGURED));

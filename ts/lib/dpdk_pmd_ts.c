@@ -2297,53 +2297,60 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
                   struct tarpc_rte_eth_dev_info *dev_info_2)
 {
     struct tarpc_rte_eth_dev_info   mask;
+    te_bool match = TRUE;
 
     memset(&mask, 0xff, sizeof(mask));
     mask.driver_name = NULL;
 
+    /* Compare masked fields first */
     if (strcmp(dev_info_2->driver_name, dev_info_1->driver_name) != 0)
     {
         ERROR_VERDICT("Fields driver_name don't match");
-        return TE_EINVAL;
+        match = FALSE;
     }
 
-    if (test_masked_array_cmp((uint8_t *)dev_info_1, (uint8_t *)dev_info_2,
+    if (match &&
+        test_masked_array_cmp((uint8_t *)dev_info_1, (uint8_t *)dev_info_2,
                               (uint8_t *)&mask, sizeof(mask)) == 0)
+    {
+        /* No differences found */
         return 0;
+    }
 
 #define TEST_CMP_DEV_INFO_FIELD(_field) \
-    if (dev_info_2->_field != dev_info_1->_field)   \
-    {                                               \
-        ERROR_VERDICT("Fields "#_field" don't match");      \
-        return TE_EINVAL;                           \
-    }                                               \
+    if (dev_info_2->_field != dev_info_1->_field)       \
+    {                                                   \
+        ERROR_VERDICT("Fields "#_field" don't match");  \
+        match = FALSE;                                  \
+    }
 
 
 #define TEST_CMP_DEV_INFO_DESC_LIM_FIELD(_field) \
     if (dev_info_2->rx_desc_lim._field != dev_info_1->rx_desc_lim._field)   \
     {                                                                       \
         ERROR_VERDICT("rx_desc_lim's fields "#_field" don't match");        \
-        return TE_EINVAL;                                                   \
+        match = FALSE;                                                      \
     }                                                                       \
     if (dev_info_2->tx_desc_lim._field != dev_info_1->tx_desc_lim._field)   \
     {                                                                       \
         ERROR_VERDICT("tx_desc_lim's fields "#_field" don't match");        \
-        return TE_EINVAL;                                                   \
+        match = FALSE;                                                      \
     }
 
 #define TEST_CMP_DEV_INFO_CONF_FIELD(_conf, _field) \
     if (dev_info_2->_conf._field != dev_info_1->_conf._field)   \
     {                                                           \
         ERROR_VERDICT(#_conf"'s fields "#_field" don't match"); \
-        return TE_EINVAL;                                       \
+        match = FALSE;                                          \
     }
 
 #define TEST_CMP_DEV_INFO_CONF_THRESH_FIELD(_conf, _field, _thresh_field)   \
     if (dev_info_2->_conf._field._thresh_field !=                           \
         dev_info_1->_conf._field._thresh_field)                             \
     {                                                                       \
-        ERROR_VERDICT(#_field"'s fields "#_thresh_field" in "#_conf" don't match"); \
-        return TE_EINVAL;                                                   \
+        ERROR_VERDICT(#_field"'s fields "#_thresh_field" in "#_conf         \
+                      " don't match");                                      \
+        match = FALSE;                                                      \
     }
 
     TEST_CMP_DEV_INFO_FIELD(if_index);
@@ -2386,8 +2393,9 @@ test_dev_info_cmp(struct tarpc_rte_eth_dev_info *dev_info_1,
 #undef TEST_CMP_DEV_INFO_CONF_FIELD
 #undef TEST_CMP_DEV_INFO_CONF_THRESH_FIELD
 
-    ERROR("Device informations are different, but detailed "
-          "analysis has found no differences");
+    if (match)
+        ERROR("Device informations are different, but detailed "
+              "analysis has found no differences");
 
     return TE_EINVAL;
 }

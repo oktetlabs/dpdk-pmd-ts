@@ -29,7 +29,7 @@
 #include "dpdk_pmd_test.h"
 #include "tapi_rpc_rte_ethdev.h"
 
-#define TEST_FW_VERSION_NUM_COUNT 4
+#define TEST_FW_VERSION_NUM_MAX 4
 
 int
 main(int argc, char *argv[])
@@ -43,7 +43,8 @@ main(int argc, char *argv[])
 
     char                       *fw_version;
     int                         fw_size;
-    uint16_t                    ver_numbers[TEST_FW_VERSION_NUM_COUNT];
+    const char                 *driver_name;
+    uint16_t                    ver_numbers[TEST_FW_VERSION_NUM_MAX];
     int                         num_matched;
 
     TEST_START;
@@ -88,12 +89,33 @@ main(int argc, char *argv[])
                                             fw_version, fw_size));
 
     TEST_STEP("Verify the output");
-    num_matched = sscanf(fw_version,
-                         "%" SCNu16 ".%" SCNu16 ".%" SCNu16 ".%" SCNu16,
-                         &ver_numbers[0], &ver_numbers[1],
-                         &ver_numbers[2], &ver_numbers[3]);
-    if (num_matched != TEST_FW_VERSION_NUM_COUNT)
-        TEST_VERDICT("A malformed FW version string was received");
+    driver_name = ethdev_config.dev_info.driver_name;
+    if (strcmp(driver_name, "net_sfc_efx") == 0)
+    {
+        num_matched = sscanf(fw_version,
+                             "%" SCNu16 ".%" SCNu16 ".%" SCNu16 ".%" SCNu16,
+                             &ver_numbers[0], &ver_numbers[1],
+                             &ver_numbers[2], &ver_numbers[3]);
+        if (num_matched != 4)
+            TEST_VERDICT("A malformed FW version string was received");
+    }
+    else if (strcmp(driver_name, "net_i40e") == 0 ||
+             strcmp(driver_name, "net_ice") == 0)
+    {
+        num_matched = sscanf(fw_version,
+                             "%" SCNu16 ".%" SCNu16 " ",
+                             &ver_numbers[0], &ver_numbers[1]);
+        if (num_matched != 2)
+            TEST_VERDICT("A malformed FW version string was received");
+    }
+    else if (strcmp(driver_name, "mlx5_pci") == 0)
+    {
+        num_matched = sscanf(fw_version,
+                             "%" SCNu16 ".%" SCNu16 ".%" SCNu16 " ",
+                             &ver_numbers[0], &ver_numbers[1], &ver_numbers[2]);
+        if (num_matched != 3)
+            TEST_VERDICT("A malformed FW version string was received");
+    }
 
     TEST_SUCCESS;
 

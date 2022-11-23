@@ -9083,6 +9083,11 @@
             <verdict>Rx scatter is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-8086-1572" key="SET-MTU-STARTED" notes="i40e does not allow to set MTU in started state">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_set_mtu() failed (-EBUSY)</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>

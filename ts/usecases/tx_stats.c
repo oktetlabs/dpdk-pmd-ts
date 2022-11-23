@@ -86,10 +86,10 @@ main(int argc, char *argv[])
     TEST_GET_LINK_ADDR(bcast_addr);
     TEST_GET_LINK_ADDR(mcast_addr);
 
-    TEST_STEP("Initialize EAL, preparing of @p ethdev_state Ethernet device state");
+    TEST_STEP("Initialize EAL, preparing of Rx/Tx setup done Ethernet device state");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     ethdev_config.min_tx_desc = nb_pkts;
-    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RXTX_SETUP_DONE));
 
     TEST_STEP("Prepare mbufs to be sent and pattern to match it by @p tmpl");
     tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
@@ -117,13 +117,14 @@ main(int argc, char *argv[])
     /* ETHER_DATA_LEN is a standard Ethernet MTU of 1500 bytes */
     if (m_eth_d_len > ETHER_DATA_LEN)
     {
-        test_rte_eth_dev_set_mtu_await_link_up(iut_rpcs, iut_port->if_index,
-                                               m_eth_d_len, &ethdev_config);
+        test_set_mtu(iut_rpcs, iut_port->if_index, m_eth_d_len, &ethdev_config);
 
         CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta,
                                                     tst_if->if_name,
                                                     m_eth_d_len));
     }
+
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Identify destination address: unicast, broadcast, multicast");
     CHECK_RC(asn_get_subvalue(tmpl, &pdus, "pdus"));

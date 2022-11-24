@@ -49,6 +49,7 @@ main(int argc, char *argv[])
     int *testpmd_command_txpkts;
     unsigned int n_fwd_cores;
     unsigned int testpmd_arg_txq;
+    uint64_t tx_offloads = 0;
     unsigned int link_speed;
     unsigned int link_speed_rx;
     int txpkts_len;
@@ -84,17 +85,40 @@ main(int argc, char *argv[])
         TEST_SKIP("So many Tx queues are not supported");
     }
 
-    if (txpkts_len > 1 &&
-        !test_conf_tx_offload_supported(TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
+    if (txpkts_len > 1)
     {
-        TEST_SKIP("Iteration skipped due to unsupported multi seg offload");
+        if (!test_conf_tx_offload_supported(
+                TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
+        {
+            TEST_SKIP("Iteration skipped due to unsupported multi seg offload");
+        }
+        /*
+         * Enable MULTI_SEGS Tx offload.
+         * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_MULTI_SEGS is RTE_BIT64(15)
+         */
+        tx_offloads |= UINT64_C(1) << 15;
     }
 
     tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
-    if (tso_requested &&
-       !test_conf_tx_offload_supported(TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT))
+    if (tso_requested)
     {
-        TEST_SKIP("TSO is not supported");
+        if (!test_conf_tx_offload_supported(TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT))
+            TEST_SKIP("TSO is not supported");
+        /*
+         * Enable TSO Tx offload.
+         * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_TCP_TSO is RTE_BIT64(5)
+         */
+        tx_offloads |= UINT64_C(1) << 5;
+    }
+
+    if (tx_offloads != 0)
+    {
+        /*
+         * TODO testpmd should provide a way to enable Tx offloads
+         * without numbers hardcoding.
+         */
+        CHECK_RC(te_kvpair_add(&test_params, "testpmd_arg_tx_offloads",
+                               "0x%llx", (unsigned long long)tx_offloads));
     }
 
 

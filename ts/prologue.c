@@ -245,6 +245,7 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
         TEST_VERDICT("Attempt to disable FW LLDP using private "
                      "flag failed unexpectedly: %r", rc);
     }
+    rc = 0;
 
     /* Update network configuration to use interface on TST only */
     if (node->type == NET_NODE_TYPE_AGENT)

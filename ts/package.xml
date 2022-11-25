@@ -7909,7 +7909,7 @@
                 dst-port plain:11
               }
             }</value>
-        </var>>
+        </var>
 
 
         <var name="flow_rule_pattern.5tuple.udp6" global="true">

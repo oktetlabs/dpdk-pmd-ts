@@ -1031,11 +1031,8 @@
                                         </run>
                                     </session>
 
-                                    <arg name="pld_size">
-                                        <value>239</value>
-                                    </arg>
                                     <arg name="tso">
-                                        <value reqs="TSO">1</value>
+                                        <value reqs="TSO">257</value>
                                     </arg>
                                     <arg name="segmentation">
                                         <value>1*14, 1*20, 1*8, 1*0xffff</value>

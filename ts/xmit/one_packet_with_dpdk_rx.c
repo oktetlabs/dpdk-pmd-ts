@@ -82,6 +82,7 @@ main(int argc, char *argv[])
     rpc_rte_mbuf_p                       m_tx_tst;
     rpc_rte_mbuf_p                      *rx_burst;
     uint16_t                             nb_segs;
+    uint16_t                             nb_prep_exp;
     uint16_t                             nb_prep;
     rpc_rte_mempool_p                    mp_iut;
     rpc_rte_mempool_p                    mp_tst;
@@ -349,12 +350,27 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_STARTED));
 
+    TEST_STEP("Check mbuf segmentation vs limits");
+    nb_prep_exp = test_tx_mbuf_segs_good(iut_rpcs, m_tx,
+                                         &test_ethdev.dev_info) ? 1 : 0;
+
     TEST_STEP("Sanity check the packet mbuf with Tx prepare API");
     nb_prep = rpc_rte_eth_tx_prepare(iut_rpcs, iut_port->if_index, 0, &m_tx, 1);
     if (nb_prep == 0)
+    {
+        if (nb_prep_exp == 0)
+            TEST_SUCCESS;
+
         TEST_VERDICT("The packet mbuf cannot pass Tx prepare API checks");
+    }
     else if (nb_prep != 1)
+    {
         TEST_VERDICT("Bad return value by Tx prepare API: %" PRIu16, nb_prep);
+    }
+    else if (nb_prep_exp == 0)
+    {
+        ERROR_VERDICT("Packet has been accepted by Tx prepare unexpectedly");
+    }
 
     TEST_STEP("Derive the maximum packet length and the "
               "number of packets to be seen on Rx side");

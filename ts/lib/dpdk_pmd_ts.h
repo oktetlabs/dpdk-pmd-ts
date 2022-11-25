@@ -1839,4 +1839,18 @@ extern const struct tarpc_rte_eth_rss_conf *
     test_rx_mq_rss_establish(struct test_ethdev_config *ec,
                              te_bool enforce_initial_conf);
 
+/**
+ * Check segmentation of the mbuf to be sent to comply with
+ * Tx segmentation limits reported by the driver in device information.
+ *
+ * @param rpcs          RPC server handle
+ * @param m             mbuf RPC pointer
+ * @param dev_info      Device information
+ *
+ * @return Is mbuf segmentation good vs limits?
+ */
+extern te_bool test_tx_mbuf_segs_good(rcf_rpc_server *rpcs,
+                                      rpc_rte_mbuf_p m,
+                                      struct tarpc_rte_eth_dev_info *dev_info);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

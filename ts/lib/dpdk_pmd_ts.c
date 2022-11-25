@@ -5825,11 +5825,12 @@ test_rte_af_packet_on_tst_if_release(rcf_rpc_server            *tst_rpcs,
 
     CHECK_RC(te_string_append(&dn, "net_af_packet%u", tst_if->if_index));
 
+    RPC_AWAIT_IUT_ERROR(tst_rpcs);
     rc = rpc_rte_eth_dev_get_port_by_name(tst_rpcs, dn.ptr, &port_id);
     if (rc == -TE_RC(TE_RPC, TE_ENODEV))
         return;
-
-    CHECK_RC(rc);
+    else if (rc != 0)
+        TEST_FAIL("rpc_rte_eth_dev_get_port_by_name() failed: %r", -rc);
 
     rpc_rte_eth_dev_stop(tst_rpcs, port_id);
 

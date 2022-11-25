@@ -17,7 +17,7 @@
         @code
         -->
         <run name="one_packet_all">
-            <session track_conf="silent" track_conf_handdown="descendants">>
+            <session track_conf="silent" track_conf_handdown="descendants">
                 <enum name="payload_len_pkt">
                     <value>0</value>
                     <value>1</value>
@@ -87,7 +87,7 @@
                 <!--- @autogroup -->
                 <run name="one_packet_ip4">
                     <session track_conf="silent"
-                        track_conf_handdown="descendants">>
+                        track_conf_handdown="descendants">
                         <enum name="segmentation_ip4_pkt">
                             <value>1*14, 2*20, 1*0xffff</value>
                             <value>1*14, 1*40, 1*0xffff</value>
@@ -134,7 +134,7 @@
 
                         <run name="one_packet_ip4">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -178,7 +178,7 @@
 
                         <run name="tso_packet_ip4">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -227,7 +227,7 @@
 
                         <run name="tso_packet_ip4_encap_ip4">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -280,7 +280,7 @@
 
                         <run name="tso_packet_ip6_encap_ip4">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -344,7 +344,7 @@
 
                 <run name="one_packet_ip6">
                     <session track_conf="silent"
-                        track_conf_handdown="descendants">>
+                        track_conf_handdown="descendants">
                         <enum name="segmentation_ip6_pkt">
                             <value>1*14, 1*40, 1*20, 1*0xffff</value>
                             <value>1*14, 1*60, 1*0xffff</value>
@@ -391,7 +391,7 @@
 
                         <run name="one_packet_ip6">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -438,7 +438,7 @@
 
                         <run name="tso_packet_ip6">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -488,7 +488,7 @@
 
                         <run name="tso_packet_ip4_encap_ip6">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -542,7 +542,7 @@
 
                         <run name="tso_packet_ip6_encap_ip6">
                             <session track_conf="silent"
-                                track_conf_handdown="descendants">>
+                                track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -762,7 +762,7 @@
         </run>
 
         <run name="one_packet_with_dpdk_rx_all">
-            <session track_conf="silent" track_conf_handdown="descendants">>
+            <session track_conf="silent" track_conf_handdown="descendants">
                 <prologue>
                     <script name="one_packet_with_dpdk_rx_prologue"/>
                     <arg name="env" ref="env.peer2peer"/>
@@ -774,20 +774,20 @@
                 </epilogue>
 
                 <run>
-                    <session track_conf="silent" track_conf_handdown="descendants">>
+                    <session track_conf="silent" track_conf_handdown="descendants">
                         <arg name="pld_size"/>
                         <arg name="vlan"/>
                         <arg name="segmentation"/>
 
                         <run name="one_packet_with_dpdk_rx_cksum_offloads">
-                            <session track_conf="silent" track_conf_handdown="descendants">>
+                            <session track_conf="silent" track_conf_handdown="descendants">
                                 <arg name="pld_size"/>
                                 <arg name="vlan"/>
                                 <arg name="tso"/>
                                 <arg name="segmentation"/>
 
                                 <run name="one_packet_with_dpdk_rx_cksum_offloads_plain">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>
                                         <arg name="outer_ip_cksum"/>
@@ -837,7 +837,7 @@
                                 </run>
 
                                 <run name="one_packet_with_dpdk_rx_cksum_offloads_encap">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>
                                         <arg name="outer_udp_cksum"/>
@@ -845,7 +845,7 @@
                                         <arg name="segmentation"/>
 
                                         <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip4">
-                                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                            <session track_conf="silent" track_conf_handdown="descendants">
                                                 <arg name="env"/>
                                                 <arg name="pld_size"/>
                                                 <arg name="vlan"/>
@@ -884,7 +884,7 @@
                                         </run>
 
                                         <run name="one_packet_with_dpdk_rx_cksum_offloads_encap_ip6">
-                                            <session track_conf="silent" track_conf_handdown="descendants">>
+                                            <session track_conf="silent" track_conf_handdown="descendants">
                                                 <arg name="env"/>
                                                 <arg name="pld_size"/>
                                                 <arg name="vlan"/>
@@ -935,7 +935,7 @@
                         </run>
 
                         <run name="tso_packet_with_dpdk_rx_corner_cases">
-                            <session track_conf="silent" track_conf_handdown="descendants">>
+                            <session track_conf="silent" track_conf_handdown="descendants">
                                 <arg name="env"/>
                                 <arg name="pld_size"/>
                                 <arg name="vlan"/>
@@ -945,7 +945,7 @@
                                 <arg name="segmentation"/>
 
                                 <run name="tso_packet_with_dpdk_rx_too_many_outgoing_frames">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="env"/>
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>
@@ -993,7 +993,7 @@
                                 </run>
 
                                 <run name="tso_packet_with_dpdk_rx_too_many_header_segments">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="env"/>
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>
@@ -1044,7 +1044,7 @@
                                 </run>
 
                                 <run name="tso_packet_with_dpdk_rx_too_many_payload_segments">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="env"/>
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>
@@ -1097,7 +1097,7 @@
                                 </run>
 
                                 <run name="tso_packet_with_dpdk_rx_too_long_payload">
-                                    <session track_conf="silent" track_conf_handdown="descendants">>
+                                    <session track_conf="silent" track_conf_handdown="descendants">
                                         <arg name="env"/>
                                         <arg name="pld_size"/>
                                         <arg name="vlan"/>

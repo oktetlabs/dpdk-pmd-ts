@@ -182,10 +182,13 @@ main(int argc, char *argv[])
     m_pkt_len = rpc_rte_pktmbuf_get_pkt_len(iut_rpcs, m);
     m_eth_d_len = m_pkt_len - m_tx_ol.l2_len;
 
-    TEST_STEP("Fix MTU on both ends.");
-    rpc_rte_eth_dev_set_mtu(iut_rpcs, iut_port->if_index, m_eth_d_len);
-    CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta, tst_if->if_name,
-                                                m_eth_d_len));
+    TEST_STEP("Fix MTU on both ends if required.");
+    if (m_eth_d_len > ETHER_DATA_LEN)
+    {
+        rpc_rte_eth_dev_set_mtu(iut_rpcs, iut_port->if_index, m_eth_d_len);
+        CHECK_RC(tapi_cfg_base_if_set_mtu_leastwise(tst_host->ta, tst_if->if_name,
+                                                    m_eth_d_len));
+    }
 
     TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state.");
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_STARTED));

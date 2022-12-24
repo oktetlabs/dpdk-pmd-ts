@@ -636,6 +636,72 @@ exit:
 }
 
 /**
+ * Check an RPC server controls DPDK interfaces.
+ *
+ * @param rpcs The RPC server.
+ */
+static te_bool
+is_dpdk_rpcs(rcf_rpc_server *rpcs)
+{
+    cfg_val_type cvt = CVT_STRING;
+    char *provider;
+    te_errno rc;
+
+    rc = cfg_get_instance_fmt(&cvt, &provider, "/agent:%s/rpcprovider:", rpcs->ta);
+    return rc == 0 && strcmp(provider, "dpdkrpc") == 0;
+}
+
+/**
+ * Read out packets queued by an DPDK interface.
+ *
+ * @param env  The test environment.
+ * @param rpcs The RCP server.
+ * @param port The DPDK interface.
+ *
+ * @retval The status code.
+ */
+static te_errno
+clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
+                     const struct if_nameindex *port)
+{
+    struct test_ethdev_config config;
+    rpc_rte_mbuf_p mbufs[BURST_SIZE];
+    unsigned timeout_ms = TEST_RX_UNEXP_PKTS_GUARD_TIMEOUT_MS;
+    unsigned total_ms = 0;
+    unsigned sleep_ms = 1;
+    unsigned n_rx;
+    unsigned i;
+    te_errno rc;
+
+    (void)test_prepare_config_mk(env, rpcs, port->if_name, port->if_index,
+                                 &config);
+
+    rc = test_prepare_ethdev(&config, TEST_ETHDEV_STARTED);
+    if (rc != 0)
+        return rc;
+
+    while (total_ms < timeout_ms)
+    {
+        n_rx = rpc_rte_eth_rx_burst(rpcs, port->if_index, 0, mbufs,
+                                    TE_ARRAY_LEN(mbufs));
+
+        for (i = 0; i < n_rx; ++i)
+            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
+
+        if (n_rx > 0)
+            sleep_ms = 1;
+
+        sleep_ms = MIN(sleep_ms, timeout_ms - sleep_ms);
+        MSLEEP(sleep_ms);
+
+        total_ms += sleep_ms;
+        sleep_ms *= 2;
+    }
+
+    return rc;
+}
+
+/**
  * Reserve network interfaces and assign test IP addresses for test
  * networks.
  *
@@ -661,6 +727,9 @@ main(int argc, char **argv)
     int               peer_max_mtu;
     tapi_cpu_index_t  cpu_index;
     unsigned int      i;
+
+    const struct if_nameindex  *iut_port = NULL;
+    const struct if_nameindex  *tst_if   = NULL;
 
     TEST_START_ENV_VARS;
     TEST_START;
@@ -807,6 +876,30 @@ main(int argc, char **argv)
 
     CHECK_RC(rc = cfg_synchronize("/:", TRUE));
     CHECK_RC(rc = cfg_tree_print(NULL, TE_LL_RING, "/:"));
+
+    /*
+     * There are NIC controllers that queue received packets while not
+     * enabled, and then transmit them to a NIC driver when enabled, e.g.
+     * QEMU network devices.
+     * The DPDK controlled NIC controllers must be cleared to prevent queued
+     * packets to be received by tests.
+     */
+    rc = test_eal_init(&env);
+    if (rc != 0)
+        TEST_VERDICT("Failed to initialise EAL interfaces: %r", rc);
+
+    TEST_GET_IF(iut_port);
+    rc = clean_dpdk_interface(&env, iut_rpcs, iut_port);
+    if (rc != 0)
+        TEST_VERDICT("Failed to clean the IUT interface: %r", rc);
+
+    if (is_dpdk_rpcs(tst_rpcs))
+    {
+        TEST_GET_IF(tst_if);
+        rc = clean_dpdk_interface(&env, tst_rpcs, tst_if);
+        if (rc != 0)
+            TEST_VERDICT("Failed to clean the TST interface: %r", rc);
+    }
 
     TEST_SUCCESS;
 

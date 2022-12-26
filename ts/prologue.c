@@ -648,10 +648,11 @@ main(int argc, char **argv)
 /* Redefine as empty to avoid environment processing here */
 #undef TEST_START_VARS
 #define TEST_START_VARS
+/* Redefine to initialise and clean up the env variable only. */
 #undef TEST_START_SPECIFIC
-#define TEST_START_SPECIFIC
+#define TEST_START_SPECIFIC (void)tapi_env_init(&env)
 #undef TEST_END_SPECIFIC
-#define TEST_END_SPECIFIC
+#define TEST_END_SPECIFIC TEST_END_ENV
 
     te_bool           xdp_detected = FALSE;
     unsigned int      service_core_count;

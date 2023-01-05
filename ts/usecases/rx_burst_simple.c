@@ -44,6 +44,9 @@ main(int argc, char *argv[])
 
     uint16_t                    received = 0;
     struct test_ethdev_config   ethdev_config;
+    struct tarpc_rte_eth_conf   eth_conf;
+    te_bool                     vlan_filter = FALSE;
+    uint16_t                    vlan_id = 0;
 
     unsigned int                payload_len;
     unsigned int                nb_pkts;
@@ -65,6 +68,31 @@ main(int argc, char *argv[])
     ethdev_config.min_rx_desc = nb_pkts;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
+    /*
+     * Some Ethernet controllers provide persistent RX VLAN filtering. In the
+     * such case the correspoinding VLAN identifier has to be added to the RX
+     * VLAN filter.
+     *
+     * The VLAN protocol is considered only. The QinQ protocol has an other
+     * Ethernet type.
+     */
+    if ((ethdev_config.dev_info.rx_offload_capa &
+         (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_VLAN_FILTER_BIT)) != 0)
+    {
+        vlan_filter = test_eth_get_vlan_from_bottom_layer_of_template(tmpl,
+                                                                      &vlan_id);
+    }
+
+    (void)test_rpc_rte_eth_make_eth_conf(ethdev_config.rpcs,
+                                         ethdev_config.port_id, &eth_conf);
+    ethdev_config.eth_conf = &eth_conf;
+
+    if (vlan_filter)
+    {
+        eth_conf.rxmode.offloads =
+                (1ULL << TARPC_RTE_ETH_RX_OFFLOAD_VLAN_FILTER_BIT);
+    }
+
     TEST_STEP("Prepare @p tmpl for test");
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
                                                   &test_params,
@@ -79,6 +107,12 @@ main(int argc, char *argv[])
     TEST_STEP("Start the Ethernet device");
     ethdev_config.required_mtu = payload_len;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
+
+    if (vlan_filter)
+    {
+        (void)rpc_rte_eth_dev_vlan_filter(iut_rpcs, iut_port->if_index,
+                                          vlan_id, 1);
+    }
 
     TEST_STEP("Configure UDP tunnel port number if need be");
     CHECK_RC(test_add_tunnel_udp_port_from_tmpl(&ethdev_config, tmpl, TRUE));

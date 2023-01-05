@@ -6526,3 +6526,27 @@ test_tx_mbuf_segs_good(rcf_rpc_server *rpcs, rpc_rte_mbuf_p m,
     }
     return result;
 }
+
+te_bool
+test_eth_get_vlan_from_bottom_layer_of_template(const asn_value *tmpl,
+                                                uint16_t *vlan_id)
+{
+    int pdus_len;
+    size_t vlan_len = sizeof(*vlan_id);
+
+    pdus_len = asn_get_length(tmpl, "pdus");
+    if (pdus_len < 1) {
+        *vlan_id = UINT16_MAX;
+        return FALSE;
+    }
+
+    if (asn_read_value_field_fmt(tmpl, vlan_id, &vlan_len,
+                                 "pdus.%d.#eth.tagged.#tagged.vlan-id.#plain",
+                                 pdus_len - 1) != 0)
+    {
+        *vlan_id = UINT16_MAX;
+        return FALSE;
+    }
+
+    return TRUE;
+}

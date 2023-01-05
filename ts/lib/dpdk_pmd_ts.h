@@ -1853,4 +1853,17 @@ extern te_bool test_tx_mbuf_segs_good(rcf_rpc_server *rpcs,
                                       rpc_rte_mbuf_p m,
                                       struct tarpc_rte_eth_dev_info *dev_info);
 
+/**
+ * Get the VLAN identifier from the bottom layer of a traffic template.
+ *
+ * The VLAN protocol, IEEE 802.1Q, is considered only.
+ *
+ * @param[in]  tmpl    A traffic template.
+ * @param[out] vlan_id The VLAN identifier if provided or UINT16_MAX otherwise.
+ *
+ * @retval TRUE if the VLAN identifier is provided or FALSE otherwise.
+ */
+extern te_bool test_eth_get_vlan_from_bottom_layer_of_template(
+        const asn_value *tmpl, uint16_t *vlan_id);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

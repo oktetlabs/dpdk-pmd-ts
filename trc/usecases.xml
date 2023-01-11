@@ -29974,6 +29974,11 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -29990,6 +29995,11 @@
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30010,6 +30020,11 @@
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30023,6 +30038,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30043,6 +30063,11 @@
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30087,6 +30112,11 @@
           </result>
         </results>
         <results tags="pci-8086-1572" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30169,6 +30199,11 @@
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
+          <result value="PASSED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30230,11 +30265,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30247,11 +30277,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30260,11 +30285,6 @@
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
@@ -30286,11 +30306,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
@@ -30308,11 +30323,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30321,11 +30331,6 @@
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
@@ -30347,11 +30352,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30364,11 +30364,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30377,11 +30372,6 @@
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
@@ -30414,11 +30404,6 @@
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
@@ -30475,11 +30460,6 @@
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
         <results tags="vdev-failsafe">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
@@ -30508,11 +30488,6 @@
         <arg name="vlan_strip">TRUE</arg>
         <notes/>
         <results tags="pci-1924" key="WONTFIX" notes="SF NICs do not support VLAN stripping on Rx">
-          <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
-          </result>
-        </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>VLAN strip is requested but not available</verdict>
           </result>
@@ -30579,9 +30554,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30606,9 +30581,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30633,9 +30608,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30660,9 +30635,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30687,9 +30662,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30724,9 +30699,9 @@
             <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30751,9 +30726,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30778,9 +30753,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30815,9 +30790,9 @@
             <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30842,9 +30817,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30869,9 +30844,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>
@@ -30896,9 +30871,9 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
+        <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
-            <verdict>VLAN strip is requested but not available</verdict>
+            <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
       </iter>

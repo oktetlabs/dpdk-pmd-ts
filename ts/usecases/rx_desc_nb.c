@@ -177,8 +177,16 @@ main(int argc, char *argv[])
     mbufs = TE_ALLOC(nb_packets * sizeof(*mbufs));
     CHECK_NOT_NULL(mbufs);
     TEST_STEP("Receive packets on @p iut_port");
-    received = test_rx_burst_with_retries(iut_rpcs, iut_port->if_index,
-                                          TEST_RXQ, mbufs, nb_packets, nb_rxd);
+
+    /*
+     * There are NIC controllers that can queue more received packets then
+     * the number of RX descriptors, e.g. QEMU network devices.
+     *
+     * So that, the only number of packets read at once should be validated.
+     */
+    received = rpc_rte_eth_rx_burst(iut_rpcs, iut_port->if_index, TEST_RXQ,
+                                    mbufs, MIN(nb_packets, UINT16_MAX));
+
     if (received > nb_rxd)
         TEST_VERDICT("Received %u packets more than setup Rx ring size",
                      received - nb_rxd);
@@ -212,5 +220,12 @@ cleanup:
     if (received > 0)
         rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);
     free(mbufs);
+
+    /*
+     * Try to read out sent packets to prevent providing them to the following
+     * tests.
+     */
+    test_rx_clean_queue(iut_rpcs, iut_port->if_index, TEST_RXQ);
+
     TEST_END;
 }

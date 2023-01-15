@@ -115,27 +115,30 @@ static void
 get_xstat_nb_names(rcf_rpc_server *rpcs, uint16_t port_id,
                    struct tarpc_rte_eth_xstat_name **names, int *nb)
 {
+    int n_required;
     int ret;
 
-    *nb = rpc_rte_eth_xstats_get_names(rpcs, port_id, NULL, 0);
-    if (*nb == 0)
+    n_required = rpc_rte_eth_xstats_get_names(rpcs, port_id, NULL, 0);
+    if (n_required == 0)
         TEST_SKIP("Zero number of xstats is reported");
-    if (*nb < 0)
+    if (n_required < 0)
         TEST_VERDICT("rte_eth_xstats_get_names() failed (-%s)",
-                     errno_rpc2str(-*nb));
+                     errno_rpc2str(-n_required));
 
-    *names = TE_ALLOC(*nb * sizeof(**names));
+    *names = TE_ALLOC(n_required * sizeof(**names));
     CHECK_NOT_NULL(*names);
-    ret = rpc_rte_eth_xstats_get_names(rpcs, port_id, *names, *nb);
+    ret = rpc_rte_eth_xstats_get_names(rpcs, port_id, *names, n_required);
     if (ret < 0)
         TEST_VERDICT("rte_eth_xstats_get_names() failed (-%s)",
                      errno_rpc2str(-ret));
-    if (ret != *nb)
+    if (ret > n_required)
     {
-        ERROR("Bad number of all xstat names obtained: %d; must be %d",
-              ret, *nb);
+        ERROR("Bad number of all xstat names obtained: %d; must not exceed %d",
+              ret, n_required);
         TEST_VERDICT("Number of xstat names does not match total number of xstats");
     }
+
+    *nb = ret;
 }
 
 int

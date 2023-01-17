@@ -26253,6 +26253,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26285,6 +26290,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26306,6 +26316,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26325,6 +26340,11 @@
         <results tags="dpdk&lt;19080000&amp;(rx-datapath-efx|rx-datapath-ef10)" key="SF 80067" notes="Rx interrupts are not supported by PMD yet">
           <result value="SKIPPED">
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
+          </result>
+        </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
           </result>
         </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
@@ -26356,6 +26376,11 @@
         <results tags="dpdk&lt;19080000&amp;(rx-datapath-efx|rx-datapath-ef10)" key="SF 80067" notes="Rx interrupts are not supported by PMD yet">
           <result value="SKIPPED">
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
+          </result>
+        </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
           </result>
         </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
@@ -26390,6 +26415,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26421,6 +26451,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26440,6 +26475,11 @@
         <results tags="dpdk&lt;19080000&amp;(rx-datapath-efx|rx-datapath-ef10)" key="SF 80067" notes="Rx interrupts are not supported by PMD yet">
           <result value="SKIPPED">
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
+          </result>
+        </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
           </result>
         </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
@@ -26463,6 +26503,11 @@
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
           </result>
         </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
+          </result>
+        </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
           <result value="FAILED">
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
@@ -26482,6 +26527,11 @@
         <results tags="dpdk&lt;19080000&amp;(rx-datapath-efx|rx-datapath-ef10)" key="SF 80067" notes="Rx interrupts are not supported by PMD yet">
           <result value="SKIPPED">
             <verdict>Configuration with Rx interrupt enabled is rejected</verdict>
+          </result>
+        </results>
+        <results tags="uio_pci_generic&amp;pci-1af4-1000" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Failed to configure device: RPC-EPERM</verdict>
           </result>
         </results>
         <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">

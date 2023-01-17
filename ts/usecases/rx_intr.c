@@ -124,7 +124,10 @@ main(int argc, char *argv[])
     {
         TEST_SKIP("Configuration with Rx interrupt enabled is rejected");
     }
-    CHECK_RC(rc);
+    else if (rc != 0)
+    {
+        TEST_VERDICT("Failed to configure device: %r", -rc);
+    }
 
     ec.cur_state = TEST_ETHDEV_CONFIGURED;
 

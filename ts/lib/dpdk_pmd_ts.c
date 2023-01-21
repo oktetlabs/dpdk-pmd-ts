@@ -6551,3 +6551,51 @@ test_eth_get_vlan_from_bottom_layer_of_template(const asn_value *tmpl,
 
     return TRUE;
 }
+
+void
+test_rx_clean_queue(rcf_rpc_server *rpcs, uint16_t port, uint16_t queue)
+{
+#define CLK_SCALE   10U
+#define RX_WAIT_US  1000U
+
+    rpc_rte_mbuf_p mbufs[BURST_SIZE];
+    unsigned int max_wait = CLK_SCALE * TEST_RX_PKTS_WAIT_MAX_MS;
+    unsigned int rx_wait = CLK_SCALE * TEST_RX_UNEXP_PKTS_GUARD_TIMEOUT_MS;
+    unsigned int sleep_scale;
+    unsigned int clk_timeout;
+    unsigned int clk;
+    unsigned int n_rx;
+
+    sleep_scale = test_sleep_scale();
+    clk_timeout = rx_wait;
+    clk = 0;
+
+    while (TRUE)
+    {
+        n_rx = rpc_rte_eth_rx_burst(rpcs, port, queue, mbufs,
+                                    TE_ARRAY_LEN(mbufs));
+
+        if (n_rx != 0)
+            rpc_rte_pktmbuf_free_array(rpcs, mbufs, n_rx);
+
+        if (clk >= max_wait)
+            break;
+
+        if (n_rx == 0)
+        {
+            if (clk >= clk_timeout)
+                break;
+
+            clk += CLK_SCALE;
+            (void)usleep(RX_WAIT_US * sleep_scale);
+        }
+        else
+        {
+            clk_timeout = clk + rx_wait;
+            clk += 1;
+        }
+    }
+
+#undef CLK_SCALE
+#undef RX_WAIT_US
+}

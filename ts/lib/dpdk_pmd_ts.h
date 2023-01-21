@@ -1866,4 +1866,16 @@ extern te_bool test_tx_mbuf_segs_good(rcf_rpc_server *rpcs,
 extern te_bool test_eth_get_vlan_from_bottom_layer_of_template(
         const asn_value *tmpl, uint16_t *vlan_id);
 
+/**
+ * Read out packets from an interface queue.
+ *
+ * @pre At leasts one mpool buffer is available for the queue.
+ *
+ * @param[inout] rpcs  The RCP server.
+ * @param[in]    port  The DPDK interface.
+ * @param[in]    queue The queue index.
+ */
+extern void test_rx_clean_queue(rcf_rpc_server *rpcs, uint16_t port,
+                                uint16_t queue);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

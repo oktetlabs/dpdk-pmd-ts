@@ -665,12 +665,6 @@ clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
                      const struct if_nameindex *port)
 {
     struct test_ethdev_config config;
-    rpc_rte_mbuf_p mbufs[BURST_SIZE];
-    unsigned timeout_ms = TEST_RX_UNEXP_PKTS_GUARD_TIMEOUT_MS;
-    unsigned total_ms = 0;
-    unsigned sleep_ms = 1;
-    unsigned n_rx;
-    unsigned i;
     te_errno rc;
 
     (void)test_prepare_config_mk(env, rpcs, port->if_name, port->if_index,
@@ -680,25 +674,9 @@ clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
     if (rc != 0)
         return rc;
 
-    while (total_ms < timeout_ms)
-    {
-        n_rx = rpc_rte_eth_rx_burst(rpcs, port->if_index, 0, mbufs,
-                                    TE_ARRAY_LEN(mbufs));
+    test_rx_clean_queue(rpcs, port->if_index, 0);
 
-        for (i = 0; i < n_rx; ++i)
-            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
-
-        if (n_rx > 0)
-            sleep_ms = 1;
-
-        sleep_ms = MIN(sleep_ms, timeout_ms - sleep_ms);
-        MSLEEP(sleep_ms);
-
-        total_ms += sleep_ms;
-        sleep_ms *= 2;
-    }
-
-    return rc;
+    return 0;
 }
 
 /**

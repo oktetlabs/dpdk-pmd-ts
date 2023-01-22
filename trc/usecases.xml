@@ -29346,6 +29346,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">128</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 64 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29374,6 +29379,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">256</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 192 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29401,6 +29411,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">496</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 432 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
           <result value="FAILED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -29435,6 +29450,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">502</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 438 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
           <result value="FAILED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -29462,6 +29482,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">512</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 448 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29483,6 +29508,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">1000</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 936 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
           <result value="FAILED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -29517,6 +29547,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">1024</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 960 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29538,6 +29573,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">2048</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 1984 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29559,6 +29599,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">3584</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 3520 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
           <result value="FAILED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -29588,6 +29633,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">4080</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 4016 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="mlx5_core" key="MLX5-RX-DESC-NUM-P2">
           <result value="FAILED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -29622,6 +29672,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">4096</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 4032 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
@@ -29643,6 +29698,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">8192</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 8128 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx|rx-datapath-ef10">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
@@ -29664,6 +29724,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">16384</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 16320 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx|rx-datapath-ef10">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
@@ -29685,6 +29750,11 @@
         <arg name="template"/>
         <arg name="nb_rxd">32768</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide RX queue information">
+          <result value="PASSED">
+            <verdict>Received 32704 packets less than initially requested number of Rx descriptors</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-ef10|rx-datapath-ef100|rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>

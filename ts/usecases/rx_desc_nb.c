@@ -48,8 +48,7 @@ main(int argc, char *argv[])
     asn_value                      *template = NULL;
     struct test_ethdev_config       ethdev_config;
     rpc_rte_mempool_p               mp;
-    uint16_t                        received;
-    unsigned int                    i;
+    uint16_t                        received = 0;
     unsigned int                    nb_rxd;
     unsigned int                    init_nb_rxd;
     unsigned int                    nb_packets;
@@ -210,8 +209,8 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    if (received > 0)
+        rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);
     free(mbufs);
     TEST_END;
 }

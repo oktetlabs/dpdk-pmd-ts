@@ -15683,6 +15683,11 @@
         <arg name="env"/>
         <arg name="template"/>
         <notes/>
+        <results tags="max_tx_queues&lt;2" notes="At least two TX queues must be supported">
+          <result value="SKIPPED">
+            <verdict>So many Tx queues are not supported</verdict>
+          </result>
+        </results>
         <results tags="vdev-failsafe|vdev-bonding">
           <result value="SKIPPED">
             <verdict>Tx descriptor status retrieval is not supported</verdict>

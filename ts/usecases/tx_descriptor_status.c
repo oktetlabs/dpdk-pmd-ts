@@ -68,6 +68,11 @@ main(int argc, char *argv[])
     (void)test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                          &eth_conf);
     ethdev_config.eth_conf = &eth_conf;
+
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
+    if (ethdev_config.nb_tx_queue > ethdev_config.dev_info.max_tx_queues)
+        TEST_SKIP("So many Tx queues are not supported");
+
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RX_SETUP_DONE));
 
     TEST_STEP("Setup the second Tx queue with default settings. Do it before the first "

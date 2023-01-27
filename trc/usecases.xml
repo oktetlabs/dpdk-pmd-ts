@@ -29899,6 +29899,11 @@
         <arg name="template"/>
         <arg name="nb_txd">32</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide TX queue information">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -29911,6 +29916,11 @@
         <arg name="template"/>
         <arg name="nb_txd">64</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide TX queue information">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
@@ -29928,6 +29938,11 @@
         <arg name="template"/>
         <arg name="nb_txd">128</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide TX queue information">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
@@ -29945,6 +29960,11 @@
         <arg name="template"/>
         <arg name="nb_txd">256</arg>
         <notes/>
+        <results tags="pci-1af4-1000" notes="DPDK Virtio does not provide TX queue information">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
@@ -29962,6 +29982,12 @@
         <arg name="template"/>
         <arg name="nb_txd">496</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 240 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -29974,6 +30000,12 @@
         <arg name="template"/>
         <arg name="nb_txd">502</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 246 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 512 descriptors instead</verdict>
@@ -29986,6 +30018,12 @@
         <arg name="template"/>
         <arg name="nb_txd">512</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 256 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="pci-8086-1572" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
@@ -30002,6 +30040,12 @@
         <arg name="template"/>
         <arg name="nb_txd">1000</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 744 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TX-RING-P2" notes="Real Tx ring size is always power of 2 on sfc">
           <result value="PASSED">
             <verdict>Requested descriptors number violates NO limits; Driver set up 1024 descriptors instead</verdict>
@@ -30014,6 +30058,12 @@
         <arg name="template"/>
         <arg name="nb_txd">1024</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 768 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
         <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TXQ-LIMIT" notes="sfc has Tx queue limit because of event queue limit and space for unsolicited error and flush events">
           <result value="PASSED">
             <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
@@ -30025,42 +30075,84 @@
         <arg name="template"/>
         <arg name="nb_txd">2048</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 1792 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">3584</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 3328 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">4080</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 3824 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">4096</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 3840 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">8192</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 7936 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">16384</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 16128 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
         <arg name="nb_txd">32768</arg>
         <notes/>
+        <results tags="pci-1af4-1000&amp;qemu-virtio-net" notes="QEMU Virtio supports up to 256 descriptors">
+          <result value="PASSED">
+            <verdict>Get queue info isn't supported</verdict>
+            <verdict>Sent 32512 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="vlan_strip_ip6" type="script">

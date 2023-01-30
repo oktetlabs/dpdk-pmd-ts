@@ -38,6 +38,70 @@
 
 #define TEST_TX_PKTS_NUM    2
 
+struct match_data {
+    unsigned int count;
+    int match_unit[TEST_TX_PKTS_NUM];
+    te_bool tagged[TEST_TX_PKTS_NUM];
+};
+
+static void
+match_packet(asn_value *packet, void *arg)
+{
+    struct match_data *data = arg;
+    unsigned int i = data->count++;
+    int32_t unit = -1;
+    te_bool tagged = FALSE;
+
+    if (i >= TE_ARRAY_LEN(data->match_unit))
+        return;
+
+    if (asn_read_int32(packet, &unit, "match-unit") != 0)
+    {
+        unit = -1;
+    }
+    else
+    {
+        tagged = asn_find_descendant(packet, NULL,
+                "pdus.0.#eth.tagged.#tagged.vlan-id.#plain") != NULL;
+    }
+
+    data->match_unit[i] = unit;
+    data->tagged[i] = tagged;
+}
+
+static void
+check_match_data(const struct match_data *data)
+{
+    unsigned int received = data->count;
+    const int *match_unit = data->match_unit;
+    const te_bool *tagged = data->tagged;
+    unsigned int matched = 0;
+
+    CHECK_PACKETS_NUM(received, TEST_TX_PKTS_NUM);
+
+    /*
+     * Suppose matching patterns are distinct.
+     */
+    matched += match_unit[0] != -1 ? 1 : 0;
+    matched += match_unit[1] != -1 && match_unit[1] != match_unit[0] ? 1 : 0;
+    CHECK_MATCHED_PACKETS_NUM(matched, TEST_TX_PKTS_NUM);
+
+    if (match_unit[0] == 0 && match_unit[1] == 1)
+        return;
+
+    /*
+     * On Linux, packets can be reordered such that the VLAN tagged packets are
+     * received before untagged ones.
+     */
+    if (tagged[0] && !tagged[1])
+    {
+        RING_VERDICT("Tagged packets are received before untagged");
+        return;
+    }
+
+    TEST_VERDICT("Packets are reordered");
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -63,7 +127,11 @@ main(int argc, char *argv[])
     asn_value                          *pattern;
     asn_value                          *pattern_second;
     csap_handle_t                       rx_csap = CSAP_INVALID_HANDLE;
-    unsigned int                        packets_received;
+    struct match_data                   match_data = {};
+    tapi_tad_trrecv_cb_data             match_cb = {
+                                            .callback = match_packet,
+                                            .user_data = &match_data,
+                                        };
 
     TEST_START;
 
@@ -155,8 +223,7 @@ main(int argc, char *argv[])
     TEST_STEP("Start to capture traffic with the pattern prepared");
     CHECK_RC(tapi_tad_trrecv_start(tst_host->ta, 0, rx_csap, pattern,
                                    TAD_TIMEOUT_INF, 0,
-                                   RCF_TRRECV_PACKETS | RCF_TRRECV_SEQ_MATCH |
-                                   RCF_TRRECV_MISMATCH));
+                                   RCF_TRRECV_PACKETS | RCF_TRRECV_MISMATCH));
 
     TEST_STEP("Ensure that interface is UP on Tester side");
     CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
@@ -169,12 +236,12 @@ main(int argc, char *argv[])
         TEST_VERDICT("Cannot send the packets");
 
     TEST_STEP("Receive packets on peer");
-    CHECK_RC(test_rx_await_pkts(tst_host->ta, rx_csap, 2, 0));
-    CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, NULL,
-                                  &packets_received));
+    CHECK_RC(test_rx_await_pkts_exec_cb(tst_host->ta, rx_csap,
+             TEST_TX_PKTS_NUM, 0, &match_cb));
+    CHECK_RC(tapi_tad_trrecv_stop(tst_host->ta, 0, rx_csap, &match_cb, NULL));
 
     TEST_STEP("Verify the number of matching packets received");
-    CHECK_MATCHED_PACKETS_NUM(packets_received, 2);
+    check_match_data(&match_data);
 
     TEST_SUCCESS;
 

@@ -41,6 +41,43 @@
 #include "te_alloc.h"
 #include "te_defs.h"
 
+static void
+check_match(const struct tarpc_rte_mbuf_report *report)
+{
+    switch (report->match_status)
+    {
+        case TARPC_RTE_MBUF_MATCH_TX_RX_MATCHED:
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_VLAN_MISMATCH:
+            TEST_VERDICT("Packet #%u has mismatched VLAN ID",
+                         report->mismatch_idx);
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_UNEXPECTED_PACKET:
+            TEST_VERDICT("Packet #%u is not expected",
+                         report->mismatch_idx);
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_LESS_DATA:
+            TEST_VERDICT("Not enough data to match packet #%u",
+                         report->mismatch_idx);
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_INCONISTENT_TSO_OFFSET:
+            TEST_VERDICT("Packet #%u has inconsistent TSO cutoff offset",
+                         report->mismatch_idx);
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_PAYLOAD_MISMATCH:
+            TEST_VERDICT("Packet #%u has mismatched payload",
+                         report->mismatch_idx);
+            break;
+        case TARPC_RTE_MBUF_MATCH_TX_RX_HEADER_MISMATCH:
+            TEST_VERDICT("Packet #%u has mismatched header",
+                         report->mismatch_idx);
+            break;
+        default:
+            TEST_VERDICT("Failed to match packets for an unexpected reason");
+            break;
+    }
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -423,6 +460,7 @@ main(int argc, char *argv[])
     TEST_STEP("Match Rx packet(s) and figure out what offloads took place");
     CHECK_RC(rpc_rte_mbuf_match_tx_rx(tst_rpcs, m_tx_tst, rx_burst,
                                       nb_rx, &report));
+    check_match(&report);
 
     if (vlan >= 0 && report.ol_vlan == TARPC_RTE_MBUF_OL_NOT_DONE)
         TEST_VERDICT("VLAN offload did not happen");

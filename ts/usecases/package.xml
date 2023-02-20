@@ -968,7 +968,7 @@
                 <value ref="env.peer2peer"/>
             </arg>
             <arg name="template">
-                <value ref="tmpl.tst2iut.eth"/>
+                <value ref="tmpl.iut2tst.eth"/>
             </arg>
             <arg name="nb_txd">
                 <value>1</value>

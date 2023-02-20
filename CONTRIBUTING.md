@@ -59,9 +59,10 @@ The summary line should:
     - `conf` (for generic changes in configuration files)
     - `doc`
     - `scripts`
-    - `trc`
-    - `usecases|perf|xmit|...` (for changes in tests of a specific package)
-    - `usecases/rss` (for changes in a specific test)
+    - `usecases|perf|xmit|...` (for changes related to a specific package)
+    - `usecases/rss` (for changes related to a specific test)
+      - **Note:** changes to TRC, package.xml and other similar files
+                  should be attributed to the relevant package/test
  - start with the imperative of a verb, for example:
 
    ```

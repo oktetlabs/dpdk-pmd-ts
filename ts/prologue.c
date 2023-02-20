@@ -312,8 +312,13 @@ load_required_modules(const char *ta, void *cookie)
             if (rc == 0)
                 rc = tapi_cfg_module_change_finish(ta, "sfc_driverlink");
 
-            if (rc == 0)
-                rc = tapi_cfg_module_add_from_ta_dir_or_fallback(ta, "sfc", TRUE);
+            if (rc != 0)
+            {
+                WARN("Failed to reload sfc_driverlink. If you are using an "
+                     "out-of-tree version of the sfc driver, it may be unusable.");
+            }
+
+            rc = tapi_cfg_module_add_from_ta_dir_or_fallback(ta, "sfc", TRUE);
             if (rc == 0)
                 rc = tapi_cfg_module_change_finish(ta, "sfc");
         } else {

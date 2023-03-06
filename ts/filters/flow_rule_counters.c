@@ -74,7 +74,6 @@ main(int argc, char *argv[])
     unsigned int                            n_counters;
     unsigned int                            i;
     unsigned int                            transmitted = 0;
-    unsigned int                            received = 0;
     te_bool                                 promisc_enabled = FALSE;
 
     struct test_ethdev_config               ethdev_config;
@@ -215,7 +214,6 @@ main(int argc, char *argv[])
                                          TEST_DEF_QUEUE_NB,
                                          mbufs, TE_ARRAY_LEN(mbufs),
                                          transmitted, packet_patterns, TRUE));
-    received += transmitted;
 
     /* FIXME: get sleep time from configurator */
     SLEEP(1);
@@ -238,10 +236,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-    {
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
-    }
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     for (i = 0; i < n_counters; i++)
     {

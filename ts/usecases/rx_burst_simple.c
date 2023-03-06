@@ -51,7 +51,6 @@ main(int argc, char *argv[])
     unsigned int                payload_len;
     unsigned int                nb_pkts;
     unsigned int                nb_matched = 0;
-    unsigned int                i;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -149,8 +148,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);
 
     TEST_END;
 }

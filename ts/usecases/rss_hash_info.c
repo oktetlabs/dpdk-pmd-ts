@@ -167,8 +167,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);
 
     TEST_END;
 }

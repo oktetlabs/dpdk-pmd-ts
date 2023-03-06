@@ -192,8 +192,13 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    while ((mbufs != NULL) && (burst != NULL) && (burst != (mbufs + n_mbufs)))
-        rpc_rte_pktmbuf_free(iut_rpcs, *(burst++));
+    if (mbufs != NULL && burst != NULL)
+    {
+        unsigned int n = mbufs + n_mbufs - burst;
+
+        if (n > 0)
+            rpc_rte_pktmbuf_free_array(iut_rpcs, burst, n);
+    }
 
     TEST_END;
 }

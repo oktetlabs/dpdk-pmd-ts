@@ -1878,4 +1878,13 @@ extern te_bool test_eth_get_vlan_from_bottom_layer_of_template(
 extern void test_rx_clean_queue(rcf_rpc_server *rpcs, uint16_t port,
                                 uint16_t queue);
 
+/**
+ * Nullify an array of RPC mempool buffers.
+ *
+ * @param[out] ptrs   An array of RPC mempool buffers.
+ * @param[in]  n_ptrs The length of the @p ptrs array.
+ */
+extern void test_nullify_rte_pktmbuf_array(rpc_rte_mbuf_p *ptrs,
+                                           unsigned int n_ptrs);
+
 #endif /* !__TS_DPDK_PMD_TS_H__ */

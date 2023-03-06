@@ -280,8 +280,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < TE_ARRAY_LEN(rx_mbufs); i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, rx_mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, rx_mbufs, TE_ARRAY_LEN(rx_mbufs));
 
     TEST_END;
 }

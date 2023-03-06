@@ -235,8 +235,12 @@ main(int argc, char *argv[])
                 mp_objs_in_use_est -= rpc_rte_pktmbuf_get_nb_segs(iut_rpcs,
                                                                   burst[i]);
             }
+        }
 
-            rpc_rte_pktmbuf_free(iut_rpcs, burst[i]);
+        if (nb_packets_sent < burst_size)
+        {
+            rpc_rte_pktmbuf_free_array(iut_rpcs, burst + nb_packets_sent,
+                                       burst_size - nb_packets_sent);
         }
 
         if (nb_packets_sent == 0)

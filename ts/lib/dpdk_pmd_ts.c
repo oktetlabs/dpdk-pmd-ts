@@ -4426,6 +4426,8 @@ test_send_and_match_one_packet_custom_verdicts(rcf_rpc_server *rpcs,
         if (mbufs[i] != RPC_NULL)
             rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
     }
+
+    test_nullify_rte_pktmbuf_array(mbufs, packet_expected);
 }
 
 extern void
@@ -4477,6 +4479,8 @@ test_get_template_packet_length(rcf_rpc_server *rpcs, asn_value *tmpl,
             rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
     }
 
+    free(mbufs);
+
     return packet_length;
 }
 
@@ -4502,6 +4506,8 @@ test_get_template_header_length(rcf_rpc_server *rpcs, asn_value *tmpl,
         if (mbufs[i] != RPC_NULL)
             rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
     }
+
+    free(mbufs);
 
     return tx_offload.l2_len + tx_offload.l3_len + tx_offload.l4_len;
 }
@@ -5048,6 +5054,8 @@ test_transceiver_exchange_commit(const struct test_transceiver_exchange *exchang
                 if (rx_mbufs[i] != RPC_NULL)
                     rpc_rte_pktmbuf_free(rx->trsc.dpdk.rpcs, rx_mbufs[i]);
             }
+
+            free(rx_mbufs);
 
             break;
         }
@@ -6597,4 +6605,13 @@ test_rx_clean_queue(rcf_rpc_server *rpcs, uint16_t port, uint16_t queue)
 
 #undef CLK_SCALE
 #undef RX_WAIT_US
+}
+
+void
+test_nullify_rte_pktmbuf_array(rpc_rte_mbuf_p *ptrs, unsigned int n_ptrs)
+{
+    unsigned int i = 0;
+
+    for (; i < n_ptrs; ++i)
+        ptrs[i] = RPC_NULL;
 }

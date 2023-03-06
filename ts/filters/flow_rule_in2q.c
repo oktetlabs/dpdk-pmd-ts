@@ -64,7 +64,6 @@ main(int argc, char *argv[])
     tarpc_rte_flow_error                    error;
 
     rpc_rte_mbuf_p                          mbufs[BURST_SIZE] = {};
-    uint16_t                                received = 0;
     uint32_t                                match_fields;
     uint32_t                                match_fields_mask = ~0;
     unsigned int                            i;
@@ -108,7 +107,7 @@ main(int argc, char *argv[])
 #define TEST_SEND_AND_MATCH_ONE_PACKET_TST2IUT(_tmpl, _queue, _packet_expected)\
     do {                                                                       \
         asn_value      *__ptrn = NULL;                                         \
-        unsigned int    __j;                                                   \
+        unsigned int    received = 0;                                          \
                                                                                \
         CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,           \
                                 tst_if->if_name, _tmpl, NULL, &__ptrn));       \
@@ -145,9 +144,11 @@ main(int argc, char *argv[])
             received += _packet_expected;                                      \
         }                                                                      \
                                                                                \
-        for (__j = 0; __j < received; __j++)                                   \
-            rpc_rte_pktmbuf_free(iut_rpcs, mbufs[__j]);                        \
-        received = 0;                                                          \
+        if (received > 0)                                                      \
+        {                                                                      \
+            rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);             \
+            test_nullify_rte_pktmbuf_array(mbufs, received);                   \
+        }                                                                      \
     } while (0)
 
     TEST_STEP("Setup 2 Rx queues in non-RSS mode");
@@ -291,8 +292,7 @@ cleanup:
 
     rpc_rte_free_flow_rule(iut_rpcs, attr, pattern, actions);
 
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     TEST_END;
 }

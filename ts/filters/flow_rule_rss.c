@@ -269,13 +269,7 @@ cleanup:
     rpc_rte_free_flow_rule(iut_rpcs, attr, pattern, actions);
 
     if (m != NULL)
-    {
-        for (i = 0; i < (nb_packets << 1); ++i)
-        {
-            if (m[i] != RPC_NULL)
-                rpc_rte_pktmbuf_free(iut_rpcs, m[i]);
-        }
-    }
+        rpc_rte_pktmbuf_free_array(iut_rpcs, m, nb_packets * 2);
 
     TEST_END;
 }

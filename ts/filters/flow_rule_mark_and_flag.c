@@ -61,7 +61,6 @@ main(int argc, char *argv[])
     uint8_t                                 type;
     te_bool                                 is_mark_action = FALSE;
     unsigned int                            pkts_nb;
-    unsigned int                            received = 0;
     uint64_t                                ol_flags;
     uint32_t                                fdir_id;
     unsigned int                            mark_value;
@@ -207,7 +206,6 @@ main(int argc, char *argv[])
                                          TEST_DEF_QUEUE_NB,
                                          mbufs, TE_ARRAY_LEN(mbufs),
                                          pkts_nb, patterns, TRUE));
-    received = pkts_nb;
 
     /*- Check that the first packet has RTE_MBUF_F_RX_FDIR mbuf offload flag in case
      *  of FLAG action and has RTE_MBUF_F_RX_FDIR and RTE_MBUF_F_RX_FDIR_ID flags and right
@@ -244,8 +242,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     if (flow != RPC_NULL)
         rpc_rte_flow_destroy(iut_rpcs, iut_port->if_index, flow, &error);

@@ -4413,7 +4413,6 @@ test_send_and_match_one_packet_custom_verdicts(rcf_rpc_server *rpcs,
                                                const char *verdict_known_unexp)
 {
     asn_value      *ptrn = NULL;
-    unsigned int    i;
 
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_ta, 0, tst_if_name,
                                                 tmpl, NULL, &ptrn));
@@ -4421,12 +4420,12 @@ test_send_and_match_one_packet_custom_verdicts(rcf_rpc_server *rpcs,
     CHECK_RC(test_rx_burst_match_pattern_custom_verdicts(rpcs, port_id, queue,
                         mbufs, BURST_SIZE, packet_expected, ptrn, TRUE,
                         verdict_no_pkts, verdict_known_unexp));
-    for (i = 0; i < packet_expected; i++)
-    {
-        if (mbufs[i] != RPC_NULL)
-            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
-    }
 
+    /*
+     * It must jumps out on CHECK_RC above if the number of received buffers
+     * does not equal packet_expected.
+     */
+    rpc_rte_pktmbuf_free_array(rpcs, mbufs, packet_expected);
     test_nullify_rte_pktmbuf_array(mbufs, packet_expected);
 }
 
@@ -4464,7 +4463,6 @@ test_get_template_packet_length(rcf_rpc_server *rpcs, asn_value *tmpl,
     rpc_rte_mbuf_p *mbufs;
     unsigned int n_mbufs;
     uint32_t packet_length;
-    unsigned int i;
 
     (void)rpc_rte_mk_mbuf_from_template(rpcs, tmpl, mp, &mbufs, &n_mbufs);
 
@@ -4473,12 +4471,7 @@ test_get_template_packet_length(rcf_rpc_server *rpcs, asn_value *tmpl,
 
     packet_length = rpc_rte_pktmbuf_get_pkt_len(rpcs, mbufs[0]);
 
-    for (i = 0; i < n_mbufs; i++)
-    {
-        if (mbufs[i] != RPC_NULL)
-            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
-    }
-
+    rpc_rte_pktmbuf_free_array(rpcs, mbufs, n_mbufs);
     free(mbufs);
 
     return packet_length;
@@ -4491,7 +4484,6 @@ test_get_template_header_length(rcf_rpc_server *rpcs, asn_value *tmpl,
     rpc_rte_mbuf_p *mbufs;
     unsigned int n_mbufs;
     struct tarpc_rte_pktmbuf_tx_offload tx_offload;
-    unsigned int i;
 
     (void)rpc_rte_mk_mbuf_from_template(rpcs, tmpl, mp, &mbufs, &n_mbufs);
 
@@ -4501,12 +4493,7 @@ test_get_template_header_length(rcf_rpc_server *rpcs, asn_value *tmpl,
     memset(&tx_offload, 0, sizeof(tx_offload));
     rpc_rte_pktmbuf_get_tx_offload(rpcs, mbufs[0], &tx_offload);
 
-    for (i = 0; i < n_mbufs; i++)
-    {
-        if (mbufs[i] != RPC_NULL)
-            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
-    }
-
+    rpc_rte_pktmbuf_free_array(rpcs, mbufs, n_mbufs);
     free(mbufs);
 
     return tx_offload.l2_len + tx_offload.l3_len + tx_offload.l4_len;
@@ -5029,7 +5016,6 @@ test_transceiver_exchange_commit(const struct test_transceiver_exchange *exchang
         case TEST_TRANSCEIVER_DPDK:
         {
             rpc_rte_mbuf_p *rx_mbufs;
-            unsigned int i;
             unsigned int burst_size = TE_ALIGN(n_rx_pkts + 1, BURST_SIZE);
 
             rx_mbufs = tapi_calloc(burst_size, sizeof(*rx_mbufs));
@@ -5049,12 +5035,7 @@ test_transceiver_exchange_commit(const struct test_transceiver_exchange *exchang
                                              exchange->verdict_no_pkts,
                                              exchange->verdict_known_unexp));
 
-            for (i = 0; i < burst_size; i++)
-            {
-                if (rx_mbufs[i] != RPC_NULL)
-                    rpc_rte_pktmbuf_free(rx->trsc.dpdk.rpcs, rx_mbufs[i]);
-            }
-
+            rpc_rte_pktmbuf_free_array(rx->trsc.dpdk.rpcs, rx_mbufs, n_rx_pkts);
             free(rx_mbufs);
 
             break;
@@ -6265,9 +6246,9 @@ test_check_rss_queues(rcf_rpc_server *rpcs, unsigned int port_id,
                     ERROR("Rx queue %u does not match expected %u in accordance with RSS hash value and RETA",
                           qid, rss_qid);
             }
-            rpc_rte_pktmbuf_free(rpcs, mbufs[i]);
-            mbufs[i] = RPC_NULL;
         }
+
+        rpc_rte_pktmbuf_free_array(rpcs, mbufs, nb_rx);
     }
 }
 

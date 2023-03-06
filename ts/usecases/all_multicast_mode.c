@@ -53,7 +53,6 @@ main(int argc, char *argv[])
 
     te_bool                     is_promiscuous_mode;
     te_bool                     is_all_mcast_mode;
-    unsigned int                i;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -157,8 +156,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     TEST_END;
 }

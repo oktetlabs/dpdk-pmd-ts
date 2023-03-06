@@ -54,7 +54,6 @@ main(int argc, char *argv[])
     uint16_t                               pre_rxq_setup_mtu;
     uint16_t                               iut_mtu;
     uint16_t                               packet_headers_size;
-    unsigned int                           i;
 
     struct test_ethdev_config              test_ethdev_config;
     uint64_t                               offload;
@@ -296,19 +295,20 @@ main(int argc, char *argv[])
                          "segments are found in the mbuf chain");
         }
 
-        for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
-        {
-            rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
-            mbufs[i] = RPC_NULL;
-        }
+        /*
+         * It must jumps out on CHECK_RC above if the number of received buffers
+         * does not equal 1.
+         */
+        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[0]);
+        mbufs[0] = RPC_NULL;
+
         asn_free_value(ptrn);
     }
 
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < TE_ARRAY_LEN(mbufs); i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     TEST_END;
 }

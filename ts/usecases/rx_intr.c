@@ -245,7 +245,6 @@ step_do_receive_packet(struct scenario_step_context *ctx)
 {
     rpc_rte_mbuf_p mbufs[BURST_SIZE] = {};
     int nb_expected = 0;
-    unsigned int i;
 
     TEST_SUBSTEP("Check that the packet is received on the target queue");
 
@@ -258,8 +257,11 @@ step_do_receive_packet(struct scenario_step_context *ctx)
 
     ctx->pkts_expected--;
 
-    for (i = 0; i < TE_ARRAY_LEN(mbufs); ++i)
-            rpc_rte_pktmbuf_free(ctx->iut_rpcs, mbufs[i]);
+    /*
+     * It must jumps out on CHECK_RC above if the number of received buffers
+     * does not equal nb_expected.
+     */
+    rpc_rte_pktmbuf_free_array(ctx->iut_rpcs, mbufs, nb_expected);
 }
 
 static void

@@ -46,12 +46,10 @@ main(int argc, char *argv[])
     asn_value                  *tmpl_with_mtu_sz        = NULL;
     asn_value                  *tmpl_with_excess_mtu_sz = NULL;
 
-    uint16_t                    received = 0;
     struct test_ethdev_config   test_ethdev_config;
 
     test_ethdev_state           ethdev_state;
     uint16_t                    mtu, tmp_mtu, excess_mtu;
-    unsigned int                i;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -162,8 +160,7 @@ main(int argc, char *argv[])
     TEST_SUCCESS;
 
 cleanup:
-    for (i = 0; i < received; i++)
-        rpc_rte_pktmbuf_free(iut_rpcs, mbufs[i]);
+    rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, TE_ARRAY_LEN(mbufs));
 
     TEST_END;
 }

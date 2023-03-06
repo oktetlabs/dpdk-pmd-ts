@@ -326,20 +326,22 @@ main(int argc, char *argv[])
 cleanup:
     if (bursts != NULL)
     {
-        for (i = 0; i < nb_tx_queues; ++i)
-        {
-            if ((bursts[i] != NULL) &&
-                (packets_sent < ((i + 1) * burst_size_per_txq)))
-            {
-                unsigned int j;
+        unsigned int qid = packets_sent / burst_size_per_txq;
+        unsigned int off = packets_sent % burst_size_per_txq;
 
-                for (j = packets_sent % burst_size_per_txq;
-                     j < burst_size_per_txq;
-                     ++j)
-                    rpc_rte_pktmbuf_free(iut_rpcs, bursts[i][j]);
-            }
+        if (off > 0)
+        {
+            rpc_rte_pktmbuf_free_array(iut_rpcs, bursts[qid] + off,
+                                       burst_size_per_txq - off);
+            ++qid;
         }
-    }
+
+        for (; qid < nb_tx_queues && bursts[qid] != NULL; ++qid)
+        {
+            rpc_rte_pktmbuf_free_array(iut_rpcs, bursts[qid],
+                                       burst_size_per_txq);
+        }
+     }
 
     TEST_END;
 }

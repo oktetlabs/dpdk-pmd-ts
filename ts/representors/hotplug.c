@@ -141,7 +141,7 @@ main(int argc, char *argv[])
         TEST_STEP("Hotplug the VF");
         test_hotplug_vfs_by_ids(iut_rpcs, &env,
                                 tapi_env_get_if_net_node(iut_port),
-                                1, vf_ids, &ethdev_config_vf);
+                                1, &vf_ids[vf_id], &ethdev_config_vf);
 
         TEST_STEP("Find represetor port");
         rpc_dpdk_find_representors(iut_rpcs, &n_rep, &rep_port_ids);

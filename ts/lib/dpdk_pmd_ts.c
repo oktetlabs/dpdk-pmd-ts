@@ -5448,7 +5448,7 @@ test_hotplug_vfs_by_ids(rcf_rpc_server *rpcs, tapi_env *env,
         if (vf_id == UINT_MAX)
             TEST_VERDICT("Failed to find VF with index %u", vf_ids[i]);
 
-        test_hotplug_vf(rpcs, env, vf_pci_addrs[i], &(*vfs)[i]);
+        test_hotplug_vf(rpcs, env, vf_pci_addrs[vf_id], &(*vfs)[i]);
     }
 
     for (i = 0; i < n_vf_addrs; i++)

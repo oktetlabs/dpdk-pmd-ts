@@ -13248,10 +13248,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
@@ -13270,9 +13268,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13297,9 +13295,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13319,9 +13317,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-IP-PROTO" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13341,10 +13339,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
@@ -13368,9 +13364,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+        <results tags="pci-10ee-0100" notes="RTE flow marked with 0 is interpreted as unmarked flow">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_FDIR mbuf offload flag is not set</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13386,13 +13382,13 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="mark_value">0</arg>
+        <arg name="mark_value"/>
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13417,9 +13413,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13439,9 +13435,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-IP-PROTO" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13449,7 +13445,7 @@
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
           </result>
         </results>
-          <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
@@ -13461,9 +13457,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+        <results tags="pci-10ee-0100" notes="RTE flow marked with 0 is interpreted as unmarked flow">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_FDIR mbuf offload flag is not set</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13483,41 +13479,12 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="mark_value">1</arg>
-        <arg name="flow_rule_actions"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
-        <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Flow rule pattern is not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13532,9 +13499,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13554,9 +13521,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-IP-PROTO" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13576,10 +13543,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
@@ -13598,41 +13563,12 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="mark_value">255</arg>
-        <arg name="flow_rule_actions"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
-        <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Flow rule pattern is not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13647,9 +13583,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13669,9 +13605,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-IP-PROTO" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13691,10 +13627,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
@@ -13713,10 +13647,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.dst_mac</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
@@ -13738,38 +13670,11 @@
         <arg name="env"/>
         <arg name="mark_value">256</arg>
         <arg name="flow_rule_actions"/>
-        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
-        <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
-        </results>
-        <results tags="pci-1924&amp;rx-datapath-ef10_essb">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Flow rule pattern is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
-          </result>
-        </results>
-      </iter>
-      <iter result="PASSED">
-        <arg name="env"/>
-        <arg name="mark_value">256</arg>
-        <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.outer_vid</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-ETHERTYPE" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13794,9 +13699,9 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.outer_vid.ip_proto</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-FILTER-IP-PROTO" notes="SN1022 VNIC Rx does not support match pattern">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
@@ -13821,10 +13726,8 @@
         <arg name="flow_rule_actions"/>
         <arg name="flow_rule_pattern">VAR.flow_rule_pattern.3tuple.udp</arg>
         <notes/>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/DPDK-154" notes="SN1022 does not support MARK and FLAG actions yet">
-          <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
-          </result>
+        <results tags="pci-10ee-0100">
+          <result value="PASSED"/>
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">

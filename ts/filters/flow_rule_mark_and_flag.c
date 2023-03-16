@@ -76,6 +76,8 @@ main(int argc, char *argv[])
     struct test_pkt_addresses               addrs;
     struct test_pkt_addresses               ifrm_addrs;
 
+    uint64_t metadata_requested;
+    uint64_t metadata;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -92,9 +94,9 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(alien_addr);
     TEST_GET_UINT_PARAM(mark_value);
 
-    /*- Prepare @c TEST_ETHDEV_STARTED state */
-    CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
-                                         &ethdev_config, TEST_ETHDEV_STARTED));
+    TEST_STEP("Prepare state TEST_ETHDEV_INITIALIZED");
+    test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &ethdev_config,
+                                TEST_ETHDEV_INITIALIZED);
 
     CHECK_RC(tapi_ndn_subst_env(flow_rule_pattern, &test_params, &env));
     flow_rule_pattern_copy = asn_copy_value(flow_rule_pattern);
@@ -134,6 +136,25 @@ main(int argc, char *argv[])
     /*- Make flow rule actions by @p flow_rule_actions */
     rpc_rte_mk_flow_rule_components(iut_rpcs, flow_rule_actions, NULL,
                                     NULL, &actions);
+
+    RPC_AWAIT_ERROR(iut_rpcs);
+
+    TEST_STEP("Negotiate the NIC's ability to deliver MARK/FLAG to the PMD");
+    if (type == NDN_FLOW_ACTION_TYPE_MARK)
+        metadata_requested = (1ULL << TARPC_RTE_ETH_RX_METADATA_USER_MARK_BIT);
+    else if (type == NDN_FLOW_ACTION_TYPE_FLAG)
+        metadata_requested = (1ULL << TARPC_RTE_ETH_RX_METADATA_USER_FLAG_BIT);
+    metadata = metadata_requested;
+    rc = rpc_rte_eth_rx_metadata_negotiate(iut_rpcs, ethdev_config.port_id,
+                                           &metadata);
+    if (rc == 0 && (metadata & metadata_requested) == 0)
+        TEST_SKIP("Delivery of MARK/FLAG from NIC to PMD is unsupported");
+    else if (rc != 0 && rc != -TE_RC(TE_RPC, TE_EOPNOTSUPP))
+        CHECK_RC(rc);
+
+    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &ethdev_config,
+                                TEST_ETHDEV_STARTED);
 
     /*- Validate and create the flow rule */
     flow = tapi_rte_flow_validate_and_create_rule(iut_rpcs, iut_port->if_index,

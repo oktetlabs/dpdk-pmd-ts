@@ -50,7 +50,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_rss_reta_entry64 *reta_conf;
     struct tarpc_rte_eth_rss_conf          rss_conf;
     struct tarpc_rte_eth_rss_conf          rss_conf_tmp;
-    uint16_t                               received;
+    unsigned int                           received;
     rpc_rte_mbuf_p                         mbufs[BURST_SIZE] = {};
 
     uint32_t                               packet_hash;

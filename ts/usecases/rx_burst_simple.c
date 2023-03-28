@@ -42,7 +42,7 @@ main(int argc, char *argv[])
     asn_value                  *ptrn = NULL;
     rpc_rte_mbuf_p              mbufs[BURST_SIZE] = {};
 
-    uint16_t                    received = 0;
+    unsigned int                received = 0;
     struct test_ethdev_config   ethdev_config;
 
     unsigned int                payload_len;

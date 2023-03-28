@@ -48,7 +48,7 @@ main(int argc, char *argv[])
     asn_value                      *template = NULL;
     struct test_ethdev_config       ethdev_config;
     rpc_rte_mempool_p               mp;
-    uint16_t                        received;
+    unsigned int                    received;
     unsigned int                    i;
     unsigned int                    nb_rxd;
     unsigned int                    init_nb_rxd;

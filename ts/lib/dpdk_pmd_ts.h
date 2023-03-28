@@ -734,12 +734,12 @@ extern struct tarpc_rte_eth_conf *test_rpc_rte_eth_make_eth_conf(
  *
  * @return number of received packets
  */
-extern uint16_t test_rx_burst_with_retries(rcf_rpc_server *rpcs,
-                                           uint16_t port_id,
-                                           uint16_t queue_id,
-                                           rpc_rte_mbuf_p *rx_pkts,
-                                           uint16_t nb_pkts,
-                                           uint16_t nb_expected);
+extern unsigned int test_rx_burst_with_retries(rcf_rpc_server *rpcs,
+                                               uint16_t port_id,
+                                               uint16_t queue_id,
+                                               rpc_rte_mbuf_p *rx_pkts,
+                                               unsigned int nb_pkts,
+                                               unsigned int nb_expected);
 
 /** Await link UP after port start/restart */
 extern void test_await_link_up(rcf_rpc_server *rpcs,

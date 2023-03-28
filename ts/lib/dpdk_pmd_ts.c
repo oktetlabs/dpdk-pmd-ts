@@ -181,23 +181,24 @@ test_print_one_mbuf(rcf_rpc_server  *rpcs,
     return 0;
 }
 
-uint16_t
+unsigned int
 test_rx_burst_with_retries(rcf_rpc_server *rpcs, uint16_t port_id,
                            uint16_t queue_id, rpc_rte_mbuf_p *rx_pkts,
-                           uint16_t nb_pkts, uint16_t nb_expected)
+                           unsigned int nb_pkts, unsigned int nb_expected)
 {
     unsigned int timeout_ms = TEST_RX_PKTS_WAIT_MAX_MS;
     unsigned int sleep_total_ms = 0;
     unsigned int msleep_now = 1;
     te_bool last_burst = FALSE;
-    uint16_t nb_rx = 0;
+    unsigned int nb_rx = 0;
 
     while (TRUE)
     {
         uint16_t nb_rx_new;
+        uint16_t nb_rx_batch = MIN(nb_pkts - nb_rx, BURST_SIZE);
 
         nb_rx_new = rpc_rte_eth_rx_burst(rpcs, port_id, queue_id,
-                                         rx_pkts + nb_rx, nb_pkts - nb_rx);
+                                         rx_pkts + nb_rx, nb_rx_batch);
         nb_rx += nb_rx_new;
 
         if (last_burst || sleep_total_ms >= timeout_ms)
@@ -242,7 +243,7 @@ test_rx_burst_match_pattern_custom_verdicts(
                                 const char      *verdict_no_pkts,
                                 const char      *verdict_known_unexp)
 {
-    uint16_t      nb_rx;
+    unsigned int  nb_rx;
     te_bool       burst_inconsistent = FALSE;
     unsigned int  ret;
     asn_value    *pattern_copy = NULL;

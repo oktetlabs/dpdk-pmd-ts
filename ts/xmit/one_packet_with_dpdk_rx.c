@@ -75,7 +75,7 @@ main(int argc, char *argv[])
     uint16_t                             port_id_rx;
     uint32_t                             m_tx_size;
     unsigned int                         nb_rx_exp;
-    uint16_t                             nb_rx = 0;
+    unsigned int                         nb_rx = 0;
     struct tarpc_rte_eth_conf            eth_conf;
     uint64_t                             offloads;
     rpc_rte_mbuf_p                      *mbufs_tx;

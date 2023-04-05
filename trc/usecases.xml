@@ -8862,19 +8862,19 @@
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">512</arg>
-        <arg name="rx_buf_size"/>
-        <arg name="max_extra_size"/>
+        <arg name="rx_buf_size">256</arg>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">FALSE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
-        <arg name="payload_size"/>
+        <arg name="payload_size">2048</arg>
         <arg name="rx_buf_size">2048</arg>
-        <arg name="max_extra_size"/>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="sfc_efx&amp;dpdk&lt;19050003" key="SF 86745">
@@ -8886,12 +8886,12 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">4096</arg>
-        <arg name="rx_buf_size"/>
-        <arg name="max_extra_size"/>
+        <arg name="rx_buf_size">512</arg>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
@@ -8916,8 +8916,8 @@
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">512</arg>
-        <arg name="rx_buf_size"/>
-        <arg name="max_extra_size"/>
+        <arg name="rx_buf_size">256</arg>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
@@ -8925,15 +8925,20 @@
             <verdict>Rx scatter is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
+          <result value="FAILED">
+            <verdict>Rx queue setup failed with EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">1024</arg>
-        <arg name="rx_buf_size"/>
-        <arg name="max_extra_size"/>
+        <arg name="rx_buf_size">256</arg>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
@@ -8941,15 +8946,20 @@
             <verdict>Rx scatter is not supported</verdict>
           </result>
         </results>
+        <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
+          <result value="FAILED">
+            <verdict>Rx queue setup failed with EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">2048</arg>
         <arg name="rx_buf_size">256</arg>
-        <arg name="max_extra_size"/>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
@@ -8964,18 +8974,50 @@
         </results>
         <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
           <result value="FAILED">
-            <verdict>Set MTU failed with EINVAL</verdict>
+            <verdict>Rx queue setup failed with EINVAL</verdict>
           </result>
         </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="packet_headers_size"/>
+        <arg name="payload_size">512</arg>
+        <arg name="rx_buf_size">512</arg>
+        <arg name="max_extra_size">0</arg>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
+          <result value="SKIPPED">
+            <verdict>Rx scatter is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="enable_scatter">TRUE</arg>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="packet_headers_size"/>
+        <arg name="payload_size">1024</arg>
+        <arg name="rx_buf_size">512</arg>
+        <arg name="max_extra_size">0</arg>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
+          <result value="SKIPPED">
+            <verdict>Rx scatter is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">2048</arg>
         <arg name="rx_buf_size">512</arg>
-        <arg name="max_extra_size"/>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
@@ -8991,12 +9033,44 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="packet_headers_size"/>
+        <arg name="payload_size">512</arg>
+        <arg name="rx_buf_size">1024</arg>
+        <arg name="max_extra_size">0</arg>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
+          <result value="SKIPPED">
+            <verdict>Rx scatter is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="enable_scatter">TRUE</arg>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="packet_headers_size"/>
+        <arg name="payload_size">1024</arg>
+        <arg name="rx_buf_size">1024</arg>
+        <arg name="max_extra_size">0</arg>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
+          <result value="SKIPPED">
+            <verdict>Rx scatter is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
         <arg name="payload_size">2048</arg>
         <arg name="rx_buf_size">1024</arg>
-        <arg name="max_extra_size"/>
+        <arg name="max_extra_size">0</arg>
         <arg name="tmpl"/>
         <notes/>
         <results tags="xilinx-virtio-net" key="ref://amd-jira/FWRIVERHD-1507" notes="Xilinx VirtIO does not support jumbo MTU">
@@ -9017,11 +9091,11 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
-        <arg name="payload_size"/>
-        <arg name="rx_buf_size"/>
+        <arg name="payload_size">70</arg>
+        <arg name="rx_buf_size">200</arg>
         <arg name="max_extra_size">70</arg>
         <arg name="tmpl"/>
         <notes/>
@@ -9038,11 +9112,32 @@
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
-        <arg name="enable_scatter"/>
+        <arg name="enable_scatter">TRUE</arg>
         <arg name="pre_rxq_setup_mtu"/>
         <arg name="packet_headers_size"/>
-        <arg name="payload_size"/>
-        <arg name="rx_buf_size"/>
+        <arg name="payload_size">890</arg>
+        <arg name="rx_buf_size">200</arg>
+        <arg name="max_extra_size">70</arg>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
+          <result value="SKIPPED">
+            <verdict>Rx scatter is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
+          <result value="FAILED">
+            <verdict>Rx queue setup failed with EINVAL</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="enable_scatter">TRUE</arg>
+        <arg name="pre_rxq_setup_mtu"/>
+        <arg name="packet_headers_size"/>
+        <arg name="payload_size">1450</arg>
+        <arg name="rx_buf_size">512</arg>
         <arg name="max_extra_size">50</arg>
         <arg name="tmpl"/>
         <notes/>

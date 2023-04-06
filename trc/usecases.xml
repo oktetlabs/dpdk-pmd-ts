@@ -8925,11 +8925,6 @@
             <verdict>Rx scatter is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
-          <result value="FAILED">
-            <verdict>Rx queue setup failed with EINVAL</verdict>
-          </result>
-        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8944,11 +8939,6 @@
         <results tags="dpdk&lt;21080002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="Virtio supports Rx scatter, but does not advertise it">
           <result value="SKIPPED">
             <verdict>Rx scatter is not supported</verdict>
-          </result>
-        </results>
-        <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
-          <result value="FAILED">
-            <verdict>Rx queue setup failed with EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8974,7 +8964,7 @@
         </results>
         <results tags="pci-10ee-0100" key="ref://amd-jira/FWRIVERHD-207" notes="Maximum number of Rx scatter segments is 7">
           <result value="FAILED">
-            <verdict>Rx queue setup failed with EINVAL</verdict>
+            <verdict>Set MTU failed with EINVAL</verdict>
           </result>
         </results>
       </iter>

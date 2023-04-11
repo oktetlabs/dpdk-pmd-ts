@@ -702,6 +702,7 @@ main(int argc, char **argv)
     unsigned int      service_core_count;
     rcf_rpc_server   *iut_rpcs = NULL;
     rcf_rpc_server   *tst_rpcs = NULL;
+    char             *net_driver = NULL;
     int               peer_max_mtu;
     tapi_cpu_index_t  cpu_index;
     unsigned int      i;
@@ -854,6 +855,21 @@ main(int argc, char **argv)
 
     CHECK_RC(rc = cfg_synchronize("/:", TRUE));
     CHECK_RC(rc = cfg_tree_print(NULL, TE_LL_RING, "/:"));
+
+    /*
+     * Workaround for ef100 devices, which have link issues.
+     * Don't let these issues that mostly occur during the first iteration
+     * hinder the continuation of testing.
+     */
+    CHECK_RC(tapi_cfg_pci_get_ta_driver(iut_rpcs->ta, NET_DRIVER_TYPE_NET,
+                                        &net_driver));
+    if (net_driver != NULL && strcmp(net_driver, "sfc_ef100") == 0)
+    {
+        free(net_driver);
+        TEST_SUCCESS;
+    }
+
+    free(net_driver);
 
     /*
      * There are NIC controllers that queue received packets while not

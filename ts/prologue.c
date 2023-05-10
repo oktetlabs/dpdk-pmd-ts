@@ -791,6 +791,12 @@ main(int argc, char **argv)
         TEST_VERDICT("Failed to disable IPv6 and delete IPv4 addresses on "
                      "interfaces mentioned in networks configuration: %r", rc);
 
+    rc = tapi_cfg_rpcs_local_to_agent();
+    if (rc != 0)
+        TEST_FAIL("Failed to start all RPC servers: %r", rc);
+
+    CFG_WAIT_CHANGES;
+
     TEST_START_ENV;
 
     TEST_GET_PCO(iut_rpcs);

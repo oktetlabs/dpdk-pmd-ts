@@ -13253,7 +13253,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13275,7 +13275,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">
@@ -13302,7 +13302,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13324,7 +13324,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13344,7 +13344,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: FLAG action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13371,7 +13371,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13393,7 +13393,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">
@@ -13420,7 +13420,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13442,7 +13442,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13464,7 +13464,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13484,7 +13484,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13506,7 +13506,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13528,7 +13528,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13548,7 +13548,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13568,7 +13568,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13590,7 +13590,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13612,7 +13612,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13632,7 +13632,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
@@ -13652,7 +13652,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">
@@ -13679,7 +13679,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">
@@ -13706,7 +13706,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">
@@ -13731,7 +13731,7 @@
         </results>
         <results tags="pci-1924&amp;!rx-datapath-ef10_essb">
           <result value="SKIPPED">
-            <verdict>'rte_flow_validate' operation failed: MARK action is not supported on the current Rx datapath</verdict>
+            <verdict>Delivery of MARK/FLAG from NIC to PMD is unsupported</verdict>
           </result>
         </results>
         <results tags="pci-1924&amp;rx-datapath-ef10_essb">

@@ -5575,7 +5575,7 @@ test_create_traffic_generator_params(const char *ta,
         goto cleanup;
 
     strcat(strcpy(buf, arg_prefix), "forward_mode");
-    rc = te_kvpair_add(result, buf, mode);
+    rc = te_kvpair_add(result, buf, "%s", mode);
     if (rc != 0)
         goto cleanup;
 

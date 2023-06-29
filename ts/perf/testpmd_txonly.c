@@ -141,7 +141,7 @@ main(int argc, char *argv[])
      * Set number of RxQs equal to the number of TxQs to
      * enable all specified forwarding cores.
      */
-    CHECK_RC(te_kvpair_add(&test_params, "testpmd_arg_rxq",
+    CHECK_RC(te_kvpair_add(&test_params, "testpmd_arg_rxq", "%s",
                            TEST_STRING_PARAM(testpmd_arg_txq)));
 
     CHECK_RC(tapi_dpdk_add_tx_dbells_display(&dbells_opt,

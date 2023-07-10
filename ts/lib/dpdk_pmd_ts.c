@@ -911,11 +911,13 @@ test_tunnel_udp_port_del(struct test_ethdev_config       *test_ethdev_config,
 }
 
 static void
-test_rte_eth_dev_start(rcf_rpc_server *rpcs, uint16_t port_id)
+test_rte_eth_dev_start(rcf_rpc_server *rpcs, uint16_t port_id,
+                       te_bool skip_link_up_check)
 {
     rpc_rte_eth_dev_start(rpcs, port_id);
 
-    test_await_link_up(rpcs, port_id);
+    if (!skip_link_up_check)
+        test_await_link_up(rpcs, port_id);
 }
 
 static void
@@ -938,7 +940,8 @@ test_setup_ethdev_started(struct test_ethdev_config *test_ethdev_config)
     }
 
     test_rte_eth_dev_start(test_ethdev_config->rpcs,
-                           test_ethdev_config->port_id);
+                           test_ethdev_config->port_id,
+                           test_ethdev_config->skip_link_up_check);
 }
 
 static void
@@ -1040,7 +1043,8 @@ static void
 test_rollback_ethdev_stopped(struct test_ethdev_config *test_ethdev_config)
 {
     test_rte_eth_dev_start(test_ethdev_config->rpcs,
-                           test_ethdev_config->port_id);
+                           test_ethdev_config->port_id,
+                           test_ethdev_config->skip_link_up_check);
 };
 
 static void

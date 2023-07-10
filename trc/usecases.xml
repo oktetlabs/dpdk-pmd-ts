@@ -34372,5 +34372,89 @@
         </results>
       </iter>
     </test>
+    <test name="fec" type="script">
+      <objective>Verify setting FEC mode and link transitions associated with that</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="ethdev_state">CONFIGURED</arg>
+        <arg name="link_mode">AUTO</arg>
+        <arg name="fec_mode">BASER</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+        <notes/>
+        <results tags="pci-1924-0c03" notes="No support for BASER on 25G yet">
+          <result value="FAILED">
+            <verdict>Failed to bring link up (taget FEC mode)</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">CONFIGURED</arg>
+        <arg name="link_mode">AUTO</arg>
+        <arg name="fec_mode">RS</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">CONFIGURED</arg>
+        <arg name="fec_mode">BASER</arg>
+        <arg name="link_mode">10G</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">CONFIGURED</arg>
+        <arg name="link_mode">10G</arg>
+        <arg name="fec_mode">RS</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+        <notes/>
+        <results tags="pci-1924" notes="RS is not meant for 10G">
+          <result value="SKIPPED">
+            <verdict>No support for the target link + FEC mode</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">STARTED</arg>
+        <arg name="link_mode">AUTO</arg>
+        <arg name="fec_mode">BASER</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+        <notes/>
+        <results tags="pci-1924-0c03" notes="No support for BASER on 25G yet">
+          <result value="FAILED">
+            <verdict>Failed to bring link up (taget FEC mode)</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">STARTED</arg>
+        <arg name="link_mode">AUTO</arg>
+        <arg name="fec_mode">RS</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">STARTED</arg>
+        <arg name="fec_mode">BASER</arg>
+        <arg name="link_mode">10G</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+      </iter>
+      <iter result="PASSED">
+        <arg name="ethdev_state">STARTED</arg>
+        <arg name="link_mode">10G</arg>
+        <arg name="fec_mode">RS</arg>
+        <arg name="tmpl"/>
+        <arg name="env"/>
+        <notes/>
+        <results tags="pci-1924" notes="RS is not meant for 10G">
+          <result value="SKIPPED">
+            <verdict>No support for the target link + FEC mode</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
   </iter>
 </test>

@@ -50,6 +50,7 @@ tests = [
     'vlan_strip',
     'xstats_by_id',
     'xstats_dev_state',
+    'fec',
 ]
 
 foreach test : tests

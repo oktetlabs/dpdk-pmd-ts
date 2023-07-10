@@ -395,6 +395,9 @@ struct test_ethdev_config {
                                                     configure TX qeueus */
     rpc_rte_mempool_p             mp;          /**< RTE mempool pointer */
     struct test_rx_mq            *rx_mq;       /**< Rx multi-queue setup data */
+    te_bool                       skip_link_up_check; /**< Do not check link
+                                                           when going to STARTED
+                                                           state */
 };
 
 /** Test parameter to specify mbuf segmentation rules */

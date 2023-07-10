@@ -1604,5 +1604,28 @@
             </arg>
         </run>
 
+        <!--- @autogroup -->
+        <run name="fec">
+            <script name="fec"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.tcp4"/>
+            </arg>
+            <arg name="ethdev_state" type="ethdev_state.all">
+                <value>CONFIGURED</value>
+                <value>STARTED</value>
+            </arg>
+            <arg name="link_mode">
+                <value>AUTO</value>
+                <value>10G</value>
+            </arg>
+            <arg name="fec_mode">
+                <value>BASER</value>
+                <value>RS</value>
+            </arg>
+        </run>
+
     </session>
 </package>

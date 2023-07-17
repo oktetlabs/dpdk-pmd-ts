@@ -5736,7 +5736,7 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
     size_t                    framesz;
     size_t                    blocksz;
     unsigned int              framecnt;
-    cfg_val_type              cvt = CVT_INTEGER;
+    cfg_val_type              cvt = CVT_INT64;
     int                       cv;
     te_string                 da = TE_STRING_INIT;
     uint16_t                  port_id;

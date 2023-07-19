@@ -1,0 +1,80 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2023 OKTET Labs Ltd. All rights reserved.
+//
+// Main pipeline for running tests.
+
+@Library('teLib') _
+
+teTsPipeline {
+    specificParameters = [
+        booleanParam(name: 'reuse_pco', defaultValue: true,
+                     description: 'Reuse RPC server for different tests. It speeds up tests execution.'),
+        choice(name: 'mode', description: '',
+               choices: ['', 'af_xdp', 'failsafe', 'bonding']),
+        string(name: 'dev_args', defaultValue: '',
+               description: 'Arguments to be passed to PCI device on init'),
+        string(name: 'eal_args', defaultValue: '',
+               description: 'Extra EAL arguments')
+    ]
+
+    label = 'dpdk-ethdev-ts'
+    ts_name = 'dpdk-ethdev-ts'
+
+    tsconf = true
+
+    teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
+
+    optionsProvider = {
+        def opts = [
+            '--steal-cfg',
+            '--release-cfg',
+            '--tester-req=!BROKEN',
+        ]
+
+        if (params.reuse_pco) {
+            opts.add('--reuse-pco')
+        }
+
+        switch (params.mode) {
+            case 'af_xdp':
+                opts.add('--vdev=net_af_xdp0')
+                break
+            case 'failsafe':
+                opts.add('--vdev=net_failsafe0')
+                break
+            case 'bonding':
+                opts.add('--vdev=net_bonding0')
+                break
+        }
+
+        if (params.dev_args) {
+            opts.add('--iut-dev-args="' + params.dev_args + '"')
+        }
+
+        if (params.eal_args) {
+            opts.add('--iut-eal-args="' + params.eal_args + '"')
+        }
+
+        return opts
+    }
+
+    preRunHook = {
+        def rx_dp = (params.dev_args =~ /^.*rx_datapath=([^,]*).*$/).findAll()
+        def tx_dp = (params.dev_args =~ /^.*tx_datapath=([^,]*).*$/).findAll()
+
+        metas.REUSE_PCO = params.reuse_pco ? 'true' : 'false'
+        metas.DPDK_ETHDEV_TS_REV = env.TS_REV
+        metas.DEV_ARGS = params.dev_args
+        metas.RX_DATAPATH = rx_dp.isEmpty() ? "" : rx_dp.first().last()
+        metas.TX_DATAPATH = tx_dp.isEmpty() ? "" : tx_dp.first().last()
+        metas.EAL_ARGS = params.eal_args
+        metas.MODE = params.mode
+
+        teDPDK.checkout(ctx: teCtx)
+        env.RTE_SDK = teCtx.DPDK_SRC
+    }
+
+    postAlwaysHook = {
+        teEmail.email_set_prefix(teCtx, "[CI DPDK-ETHDEV]")
+    }
+}

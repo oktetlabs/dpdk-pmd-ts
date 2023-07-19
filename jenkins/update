@@ -1,0 +1,47 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2023 OKTET Labs Ltd. All rights reserved.
+//
+// Pipeline to rebuild test suite after something changed in its
+// sources. This pipeline saves revisions in an artifact in case of
+// success, other pipelines use revisions from that artifact.
+
+@Library('teLib') _
+
+teTsPipeline {
+    label = 'dpdk-ethdev-ts'
+    ts_name = 'dpdk-ethdev-ts'
+
+    tsconf = true
+    sticky_repo_params = true
+
+    teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
+
+    optionsProvider = {
+        return [
+            '--build-only',
+            '--no-grab-cfg',
+        ]
+    }
+
+    triggersProvider = {
+        def triggers = [
+            pollSCM('H * * * *'),
+        ]
+
+        if (params.get_revs_from) {
+            // If this job takes DPDK revision from another update job,
+            // rebuild this job once new checked revision is available
+            // from there.
+            triggers += teCommon.jobs_triggers(params.get_revs_from)
+        }
+
+        return triggers
+    }
+
+    preRunHook = {
+        metas.DPDK_ETHDEV_TS_REV = env.TS_REV
+
+        teDPDK.checkout(ctx: teCtx)
+        env.RTE_SDK = teCtx.DPDK_SRC
+    }
+}

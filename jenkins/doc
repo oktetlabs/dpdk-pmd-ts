@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2023 OKTET Labs Ltd. All rights reserved.
+//
+// Building test suite documentation.
+
+@Library('teLib') _
+
+teTsDocPipeline {
+    label = 'dpdk-ethdev-ts-doc'
+    ts_name = 'dpdk-ethdev-ts'
+    tsconf = true
+    doxyrest = true
+    teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
+
+    buildDocHook = {
+        dir("${ts_name}") {
+            sh "./scripts/gen_doxygen"
+        }
+    }
+
+    archiveDocHook = {
+        dir("${ts_name}") {
+            archiveArtifacts artifacts: "ts/doc/generated/**, doxygen.warn"
+        }
+    }
+}

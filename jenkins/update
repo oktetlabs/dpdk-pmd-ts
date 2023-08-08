@@ -39,8 +39,6 @@ teTsPipeline {
     }
 
     preRunHook = {
-        metas.DPDK_ETHDEV_TS_REV = env.TS_REV
-
         teDPDK.checkout(ctx: teCtx)
         env.RTE_SDK = teCtx.DPDK_SRC
     }

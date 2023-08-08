@@ -63,7 +63,6 @@ teTsPipeline {
         def tx_dp = (params.dev_args =~ /^.*tx_datapath=([^,]*).*$/).findAll()
 
         metas.REUSE_PCO = params.reuse_pco ? 'true' : 'false'
-        metas.DPDK_ETHDEV_TS_REV = env.TS_REV
         metas.DEV_ARGS = params.dev_args
         metas.RX_DATAPATH = rx_dp.isEmpty() ? "" : rx_dp.first().last()
         metas.TX_DATAPATH = tx_dp.isEmpty() ? "" : tx_dp.first().last()

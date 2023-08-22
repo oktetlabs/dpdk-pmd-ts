@@ -21,6 +21,7 @@ teTsPipeline {
     ts_name = 'dpdk-ethdev-ts'
 
     tsconf = true
+    publish_logs = true
 
     teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
 

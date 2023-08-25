@@ -4,4 +4,5 @@
 sources = [ 'dpdk_pmd_ts.c' ]
 
 tslib = static_library('ts_dpdk_pmd', sources,
-                       include_directories: lib_dir)
+                       include_directories: lib_dir,
+                       dependencies: [ dep_rpc ])

@@ -17,6 +17,11 @@ te_tests_info_sh = find_program(join_paths(te_path, 'te_tests_info.sh'))
 
 test_deps = [ dependency('threads') ]
 
+# The line below would produce empty dependencies on systems
+# having no tirpc - it is not a problem.
+dep_rpc = dependency('libtirpc', required: false)
+test_deps += [ dep_rpc ]
+
 te_libs = [
     'rpc_dpdk',
     'rpcc_dpdk',

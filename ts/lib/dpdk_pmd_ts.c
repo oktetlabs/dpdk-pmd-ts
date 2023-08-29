@@ -38,6 +38,7 @@
 #include "tapi_cfg_phy.h"
 #include "tapi_cfg_pci.h"
 #include "tapi_cfg_cpu.h"
+#include "tapi_cfg_if.h"
 #include "tapi_dpdk.h"
 
 #include "tapi_rpc_rte.h"
@@ -5736,8 +5737,7 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
     size_t                    framesz;
     size_t                    blocksz;
     unsigned int              framecnt;
-    cfg_val_type              cvt = CVT_INTEGER;
-    int                       cv;
+    int64_t                   ring_size;
     te_string                 da = TE_STRING_INIT;
     uint16_t                  port_id;
     int                       sid;
@@ -5752,14 +5752,10 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
                                    TEST_MIN_PAGE_SIZE));
     blocksz = framesz;
 
-    CHECK_RC(cfg_get_instance_fmt(&cvt, &cv,
-                                  "/agent:%s/interface:%s/ring:/rx:/current:",
-                                  tst_rpcs->ta, tst_if->if_name));
-    if (cv != -1)
-    {
-        if (cv < (int)nb_frames)
-            TEST_SKIP("TST will unlikely manage to receive that many packets");
-    }
+    CHECK_RC(tapi_cfg_if_get_ring_size(tst_rpcs->ta, tst_if->if_name, TRUE,
+                                       &ring_size));
+    if (ring_size < (int64_t)nb_frames)
+        TEST_SKIP("TST will unlikely manage to receive that many packets");
 
     CHECK_RC(te_string_append(&da,
                               "iface=%s,framesz=%zu,blocksz=%zu,framecnt=%u",

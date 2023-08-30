@@ -250,8 +250,15 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
     /* Update network configuration to use interface on TST only */
     if (node->type == NET_NODE_TYPE_AGENT)
     {
-        snprintf(interface_path, sizeof(interface_path),
-                 "/agent:%s/interface:%s", agent, interface);
+        int ret;
+
+        ret = snprintf(interface_path, sizeof(interface_path),
+                       "/agent:%s/interface:%s", agent, interface);
+        if (ret < 0 || (size_t)ret >= sizeof(interface_path))
+        {
+            rc = TE_ESMALLBUF;
+            goto out;
+        }
 
         rc = cfg_set_instance(node->handle, CFG_VAL(STRING, interface_path));
         if (rc != 0)

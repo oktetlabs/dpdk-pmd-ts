@@ -216,7 +216,7 @@
             </arg>
             <arg name="payload_len">
                 <value>512</value>
-                <value reqs="TEST_HARNESS_SANITY">999</value>
+                <value reqs="TEST_HARNESS_CHECKUP">999</value>
                 <value>1234</value>
                 <value>1600</value>
                 <value>4000</value>
@@ -244,7 +244,7 @@
             <arg name="payload_len">
                 <value>512</value>
                 <value>999</value>
-                <value reqs="TEST_HARNESS_SANITY">1234</value>
+                <value reqs="TEST_HARNESS_CHECKUP">1234</value>
                 <value reqs="RX_JUMBO">1600</value>
                 <value reqs="RX_JUMBO">4000</value>
                 <value reqs="RX_JUMBO">9000</value>
@@ -429,7 +429,7 @@
             </arg>
             <arg name="nb_rx_queues">
                 <value>1</value>
-                <value reqs="TEST_HARNESS_SANITY">3</value>
+                <value reqs="TEST_HARNESS_CHECKUP">3</value>
                 <value>8</value>
                 <value>11</value>
             </arg>
@@ -571,8 +571,8 @@
             </arg>
             <arg name="enable_scatter" list="sizes">
               <value>FALSE</value>
-              <value reqs="TEST_HARNESS_SANITY">FALSE</value>
-              <value reqs="TEST_HARNESS_SANITY">TRUE</value>
+              <value reqs="TEST_HARNESS_CHECKUP">FALSE</value>
+              <value reqs="TEST_HARNESS_CHECKUP">TRUE</value>
               <value>TRUE</value>
               <value>TRUE</value>
               <value>TRUE</value>
@@ -880,7 +880,7 @@
             </arg>
             <arg name="payload_len">
                 <value>46</value>
-                <value reqs="TEST_HARNESS_SANITY">100</value>
+                <value reqs="TEST_HARNESS_CHECKUP">100</value>
                 <value>200</value>
                 <value>400</value>
                 <value>800</value>
@@ -1019,7 +1019,7 @@
         <!--- @autogroup -->
         <run>
             <script name="rx_offload_checksum">
-                <req id="TEST_HARNESS_SANITY"/>
+                <req id="TEST_HARNESS_CHECKUP"/>
             </script>
             <arg name="env" list="env_tmpl">
                 <value ref="env.peer2peer"/>

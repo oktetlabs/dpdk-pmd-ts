@@ -37,7 +37,7 @@
                 <value ref="flow_rule_pattern.ethertype.outer_vid"/>
                 <value ref="flow_rule_pattern.ethertype.outer_vid.inner_vid"/>
                 <value ref="flow_rule_pattern.dst_mac"
-                       reqs="TEST_HARNESS_SANITY"/>
+                       reqs="TEST_HARNESS_CHECKUP"/>
                 <value ref="flow_rule_pattern.unknown_ucast_dst_mac"/>
                 <value ref="flow_rule_pattern.unknown_mcast_dst_mac"/>
                 <value ref="flow_rule_pattern.dst_mac.ethertype"/>
@@ -54,7 +54,7 @@
                 <value ref="flow_rule_pattern.dst_mac.5tuple.udp"/>
                 <value ref="flow_rule_pattern.3tuple.tcp"/>
                 <value ref="flow_rule_pattern.5tuple.tcp"
-                       reqs="TEST_HARNESS_SANITY"/>
+                       reqs="TEST_HARNESS_CHECKUP"/>
                 <value ref="flow_rule_pattern.dst_mac.3tuple.tcp"/>
                 <value ref="flow_rule_pattern.dst_mac.5tuple.tcp"/>
             </arg>

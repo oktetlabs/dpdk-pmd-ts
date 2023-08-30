@@ -49,7 +49,7 @@ EOF
 
     cat <<EOF
 
-  --sanity                  Run sanity check
+  --checkup                 Run checkup
   --dev-args=<ARGs>         Per-device parameters to be appended to whitelist opts
   --eal-args=<ARGs>         Extra EAL command-line arguments
   --reuse-pco               Do not restart RPC servers and re-init EAL in each test
@@ -169,11 +169,11 @@ for opt ; do
                 run_fail "Configuration is specified twice: ${CFG} vs ${opt#--cfg=}"
             CFG="${opt#--cfg=}"
             ;;
-        --sanity)
+        --checkup)
             # Use negative requirement to exclude iterations
-            # which values are marked as NO_TEST_HARNESS_SANITY
-            RUN_OPTS+=('--tester-req=TEST_HARNESS_SANITY'
-                       '--tester-req=!NO_TEST_HARNESS_SANITY')
+            # which values are marked as NO_TEST_HARNESS_CHECKUP
+            RUN_OPTS+=('--tester-req=TEST_HARNESS_CHECKUP'
+                       '--tester-req=!NO_TEST_HARNESS_CHECKUP')
             ;;
         --dev-args=*)
             export TE_DPDK_DEV_ARGS="${opt#--dev-args=}"

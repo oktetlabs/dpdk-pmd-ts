@@ -275,7 +275,7 @@
         <!--- @autogroup -->
         <run>
             <script name="l2fwd_simple">
-                <req id="TEST_HARNESS_SANITY"/>
+                <req id="TEST_HARNESS_CHECKUP"/>
             </script>
             <arg name="env">
                 <value ref="env.perf.peer2peer"/>

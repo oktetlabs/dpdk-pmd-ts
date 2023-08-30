@@ -31,23 +31,23 @@
                     <value>8900</value>
                 </enum>
                 <enum name="payload_len_tso">
-                    <value reqs="NO_TEST_HARNESS_SANITY">10</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">727</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">1400</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">6000</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">10</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">727</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">1400</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">6000</value>
                     <value>10023</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">27334</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">61437</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">63000</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">27334</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">61437</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">63000</value>
                 </enum>
                 <enum name="tso_segsz">
-                    <value reqs="NO_TEST_HARNESS_SANITY">177</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">512</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">177</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">512</value>
                     <value>1201</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">1400</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">1440</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">4000</value>
-                    <value reqs="NO_TEST_HARNESS_SANITY">8900</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">1400</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">1440</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">4000</value>
+                    <value reqs="NO_TEST_HARNESS_CHECKUP">8900</value>
                 </enum>
                 <enum name="encap_tso_segsz">
                     <value>1367</value>
@@ -58,7 +58,7 @@
                 <!--- @autogroup -->
                 <run name="one_packet_tunnel">
                     <script name="one_packet">
-                        <req id="TEST_HARNESS_SANITY"/>
+                        <req id="TEST_HARNESS_CHECKUP"/>
                     </script>
                     <arg name="env">
                         <value ref="env.peer2peer"/>
@@ -102,7 +102,7 @@
                         <enum name="segmentation_ip4_tso">
                             <value>1*14, 2*20, 1*0xffff</value>
                             <value>1*14, 1*40, 1*0xffff</value>
-                            <value reqs="TEST_HARNESS_SANITY">1*54, 1*0xffff</value>
+                            <value reqs="TEST_HARNESS_CHECKUP">1*54, 1*0xffff</value>
                             <value>1*128, 1*0xffff</value>
                         </enum>
                         <enum name="segmentation_ip4_tso_many_seg">
@@ -798,7 +798,7 @@
                                         <!--- @autogroup -->
                                         <run name="one_packet_with_dpdk_rx_cksum_offloads_plain_ip4">
                                             <script name="one_packet_with_dpdk_rx">
-                                                <req id="TEST_HARNESS_SANITY"/>
+                                                <req id="TEST_HARNESS_CHECKUP"/>
                                             </script>
                                             <arg name="env">
                                                 <value ref="env.peer2peer"/>

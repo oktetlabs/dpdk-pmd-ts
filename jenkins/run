@@ -22,6 +22,7 @@ teTsPipeline {
 
     tsconf = true
     publish_logs = true
+    concurrent_builds = true
 
     teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
 

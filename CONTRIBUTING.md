@@ -1,9 +1,9 @@
 [SPDX-License-Identifier: Apache-2.0]::
 [(c) Copyright 2022 Xilinx, Inc. All rights reserved.]::
 
-# Contributing code to DPDK Poll Mode Drivers Test Suite
+# Contributing code to DPDK Networking Drivers Test Suite
 
-The document provides the guidelines for submitting changes to DPDK PMD TS.
+The document provides the guidelines for submitting changes to DPDK EthDev TS.
 
 If you want your changes to be accepted in the mainline:
 

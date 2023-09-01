@@ -2,8 +2,8 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <!-- (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved. -->
 <trc_db>
-  <test name="dpdk-pmd-ts" type="package">
-    <objective>DPDK PMD Test Suite</objective>
+  <test name="dpdk-ethdev-ts" type="package">
+    <objective>DPDK EthDev Test Suite</objective>
     <xi:include href="globals.xml" parse="xml"
                 xmlns:xi="http://www.w3.org/2003/XInclude"/>
     <iter result="PASSED">

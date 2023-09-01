@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # (c) Copyright 2016 - 2022 Xilinx, Inc. All rights reserved.
 
-project('dpdk-pmd-ts', 'c',
+project('dpdk-ethdev-ts', 'c',
     version : '1.0.0',
     default_options: 'werror=true'
 )
@@ -58,7 +58,7 @@ test_deps += declare_dependency(include_directories: lib_dir,
 
 tests = [ 'prologue' ]
 
-package_dir = 'dpdk-pmd-ts'
+package_dir = 'dpdk-ethdev-ts'
 package_tests_c = []
 
 foreach test : tests

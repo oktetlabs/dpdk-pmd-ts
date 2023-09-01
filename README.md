@@ -1,6 +1,6 @@
-# DPDK-PMD-TS - test suite for DPDK Poll Mode Drivers
+# DPDK-EthDev-TS - test suite for DPDK Networking Drivers
 
-DPDK PMD TS carries out testing and performance evaluation of Poll Mode Drivers used by DPDK.
+DPDK EthDev TS carries out testing and performance evaluation of Poll Mode Drivers used by DPDK.
 
 The tests cover (list not exhaustive):
 

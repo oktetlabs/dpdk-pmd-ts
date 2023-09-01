@@ -10,7 +10,7 @@ doxygen_debug=false
 
 help() {
     cat <<EOF
-Tool is used to generate documentation for the dpdk-pmd-ts test suite.
+Tool is used to generate documentation for the dpdk-ethdev-ts test suite.
 
 It's based on doxygen and doxyrest.
 

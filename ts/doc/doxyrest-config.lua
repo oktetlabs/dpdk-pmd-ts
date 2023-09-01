@@ -7,7 +7,7 @@ OUTPUT_FILE = "ts/doc/generated/rst/index.rst"
 INTRO_FILE = "index.rst"
 
 -- Specific title
-INDEX_TITLE = "DPDK PMD Test Suite"
+INDEX_TITLE = "DPDK EthDev Test Suite"
 
 -- If your documentation uses \verbatim directives for code snippets
 -- you can convert those to reStructuredText C++ code-blocks:

@@ -42,4 +42,11 @@ teTsPipeline {
         teDPDK.checkout(ctx: teCtx)
         env.RTE_SDK = teCtx.DPDK_SRC
     }
+
+    postRunHook = {
+        dir('run') {
+            sh "${TS_SRC}/scripts/trc-status.sh"
+            archiveArtifacts artifacts: '*.html'
+        }
+    }
 }

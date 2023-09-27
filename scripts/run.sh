@@ -11,6 +11,7 @@ source "$(dirname "$(which "$0")")"/guess.sh
 
 source "${TE_BASE}/scripts/lib"
 source "${TE_BASE}/scripts/lib.grab_cfg"
+source "${TE_BASE}/scripts/lib.meta"
 
 if [[ -e "${TE_TS_RIGSDIR}/scripts/lib/grab_cfg_handlers" ]] ; then
     source "${TE_TS_RIGSDIR}/scripts/lib/grab_cfg_handlers"
@@ -28,6 +29,8 @@ run_fail() {
 
 test -d "${RTE_SDK}" ||
     run_fail "Path to DPDK sources MUST be specified in RTE_SDK"
+
+TE_RUN_META=yes
 
 usage() {
 cat <<EOF
@@ -61,6 +64,8 @@ EOF
                             Use --vdev=net_af_xdp0 to request af_xdp device.
   --iut-dpdk-drv=<NAME>     DPDK-compatible driver to be used on IUT agent
   --tst-dpdk-drv=<NAME>     DPDK-compatible driver to be used on TST agent
+
+  --no-meta                 Do not generate testing metadata
 
 EOF
 "${TE_BASE}"/dispatcher.sh --help
@@ -153,6 +158,7 @@ function process_cfg() {
 }
 
 CFG=
+MODE=
 declare -a RUN_OPTS
 declare -a MY_OPTS
 
@@ -202,12 +208,17 @@ for opt ; do
             if [[ $vdev = *"failsafe"* ]]; then
                 # Failsafe driver uses a service core for interrupts
                 export TE_IUT_REQUIRED_SERVICE_CORES="1"
+                MODE="failsafe"
             fi
             if [[ $vdev = *"af_xdp"* ]]; then
                 # In prologue, the number of combined
                 # channels is set to 1 to disable RSS
                 MY_OPTS+=(--trc-tag="max_rx_queues:1")
                 MY_OPTS+=(--trc-tag="max_tx_queues:1")
+                MODE="af_xdp"
+            fi
+            if [[ $vdev = *"bonding"* ]]; then
+                MODE="bonding"
             fi
             ;;
         --iut-dpdk-drv=*)
@@ -218,6 +229,10 @@ for opt ; do
             tst_dpdk_driver="${opt#--tst-dpdk-drv=}"
             export TE_ENV_TST_DPDK_DRIVER=${tst_dpdk_driver}
             ;;
+        --no-meta)
+            TE_RUN_META=no
+            RUN_OPTS+=("${opt}")
+            ;;
         *)  RUN_OPTS+=("${opt}") ;;
     esac
     shift 1
@@ -225,6 +240,55 @@ done
 
 if test -n "${CFG}" ; then
     IFS=: ; process_cfg ${CFG} ; IFS=
+fi
+
+##########################################################################
+# Set meta variable corresponding to a given device argument
+# if it is present among arguments specification.
+# Arguments:
+#   Arguments specification (param1=value1,param2=value2,...).
+#   Parameter name.
+##########################################################################
+dev_arg_to_meta() {
+    local args="$1"
+    local name="$2"
+    local val=
+
+    # Try to remove "${name}=" from the beginning.
+    # If that succeeds, our parameter was at the beginning
+    # and we are at the start of its value now.
+    val="${args##${name}=}"
+    if [[ "${val}" = "${args}" ]] ; then
+        # Try to remove all from the beginning to ",${name}=".
+        # If that succeeds, we go to the start of target
+        # parameter value, dropping everything before it.
+        val="${val##*,${name}=}"
+    fi
+    if [[ "${val}" = "${args}" ]] ; then
+        # Nothing was removed, args do not contain
+        # ${name}.
+        return
+    fi
+
+    te_meta_set "${name^^}" "${val%%,*}"
+}
+
+if [[ "${TE_RUN_META}" = "yes" ]] ; then
+    te_meta_test_suite "dpdk-ethdev-ts"
+
+    te_meta_set CFG "${CFG}"
+    te_meta_set_git "${SF_TS_CONFDIR}" TSCONF
+
+    if [[ -n "${RTE_SDK}" ]] ; then
+        te_meta_set_git "${RTE_SDK}" DPDK
+    fi
+
+    te_meta_set DEV_ARGS "${TE_IUT_DEV_ARGS}"
+    te_meta_set EAL_ARGS "${TE_IUT_EXTRA_EAL_ARGS}"
+    te_meta_set MODE "${MODE}"
+
+    dev_arg_to_meta "${TE_IUT_DEV_ARGS}" rx_datapath
+    dev_arg_to_meta "${TE_IUT_DEV_ARGS}" tx_datapath
 fi
 
 # Add test suite default options after configuration specifics

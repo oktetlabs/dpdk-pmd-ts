@@ -19,3 +19,4 @@ ts/doxygen.warn
 ts/package.dox
 vg.test.*
 ts/doc/generated
+te_run_meta.json

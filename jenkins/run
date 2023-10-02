@@ -61,16 +61,6 @@ teTsPipeline {
     }
 
     preRunHook = {
-        def rx_dp = (params.dev_args =~ /^.*rx_datapath=([^,]*).*$/).findAll()
-        def tx_dp = (params.dev_args =~ /^.*tx_datapath=([^,]*).*$/).findAll()
-
-        metas.REUSE_PCO = params.reuse_pco ? 'true' : 'false'
-        metas.DEV_ARGS = params.dev_args
-        metas.RX_DATAPATH = rx_dp.isEmpty() ? "" : rx_dp.first().last()
-        metas.TX_DATAPATH = tx_dp.isEmpty() ? "" : tx_dp.first().last()
-        metas.EAL_ARGS = params.eal_args
-        metas.MODE = params.mode
-
         teDPDK.checkout(ctx: teCtx)
         env.RTE_SDK = teCtx.DPDK_SRC
     }

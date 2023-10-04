@@ -134,15 +134,15 @@ function process_cfg() {
 
     case "${cfg}" in
         cmod-rhsim-ef100|cmod-rhsim-virtio)
-            process_cmod_vm "$@" ; CFG= ;;
+            process_cmod_vm "$@" ;;
         cmod-virtio-net)
-            process_cmod "$@" ; CFG= ;;
+            process_cmod "$@" ;;
         rheadington)
-            process_cmod "$@" ; CFG= ;;
+            process_cmod "$@" ;;
         virtio_tap)
-            process_virtio TE_TST1 "$@" ; CFG= ;;
+            process_virtio TE_TST1 "$@" ;;
         virtio_virtio)
-            process_virtio TE_HYPERVISOR "$@" ; CFG= ;;
+            process_virtio TE_HYPERVISOR "$@" ;;
         *)
             call_if_defined grab_cfg_process "${cfg}" || exit 1 ;;
     esac

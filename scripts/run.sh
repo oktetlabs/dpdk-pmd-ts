@@ -66,6 +66,7 @@ EOF
   --tst-dpdk-drv=<NAME>     DPDK-compatible driver to be used on TST agent
 
   --no-meta                 Do not generate testing metadata
+  --publish                 Publish testing logs to Bublik
 
 EOF
 "${TE_BASE}"/dispatcher.sh --help
@@ -232,6 +233,11 @@ for opt ; do
         --no-meta)
             TE_RUN_META=no
             RUN_OPTS+=("${opt}")
+            ;;
+        --publish)
+            source "${TE_TS_RIGSDIR}/scripts/publish_logs/ts_publish"
+            pscript="$(tsrigs_publish_get dpdk-ethdev-ts)"
+            RUN_OPTS+=("--publish=${pscript}")
             ;;
         *)  RUN_OPTS+=("${opt}") ;;
     esac

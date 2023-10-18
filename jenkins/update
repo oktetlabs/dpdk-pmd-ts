@@ -13,6 +13,7 @@ teTsPipeline {
 
     tsconf = true
     sticky_repo_params = true
+    email_conditions = [ 'unsuccessful', 'fixed' ]
 
     teEmail.email_add_to_by_ids(teCtx, "DPDK_ETHDEV_TS")
 

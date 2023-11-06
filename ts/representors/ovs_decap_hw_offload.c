@@ -28,7 +28,7 @@
 
 #include "dpdk_pmd_test.h"
 
-#define TEST_GROUP_ID 1
+#define TEST_GROUP_ID 0
 
 struct test_flow_rule {
     rpc_rte_flow_attr_p attr;
@@ -88,6 +88,7 @@ main(int argc, char *argv[])
     asn_value                              *decap_flow_rule_pattern;
     unsigned int                            nb_pkts;
 
+    uint64_t                                metadata;
     uint8_t                                 dst_mac[ETHER_ADDR_LEN];
     uint8_t                                 src_mac[ETHER_ADDR_LEN];
     size_t                                  mac_len = ETHER_ADDR_LEN;
@@ -97,6 +98,14 @@ main(int argc, char *argv[])
     struct test_pkt_addresses               addrs;
     struct test_pkt_addresses               ifrm_addrs;
 
+    struct tarpc_rte_flow_tunnel            flow_tunnel = {};
+    rpc_rte_flow_action_p                   jump_rule_actions_app = RPC_NULL;
+    rpc_rte_flow_action_p                   jump_rule_actions_pmd = RPC_NULL;
+    rpc_rte_flow_action_p                   nb_jump_rule_actions_pmd;
+    rpc_rte_flow_item_p                     decap_rule_items_app = RPC_NULL;
+    rpc_rte_flow_item_p                     decap_rule_items_pmd = RPC_NULL;
+    uint32_t                                nb_decap_rule_items_pmd;
+    tarpc_rte_flow_error                    error;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
@@ -116,6 +125,10 @@ main(int argc, char *argv[])
     memset(&jump_rule, 0, sizeof(jump_rule));
     memset(&decap_rule, 0, sizeof(decap_rule));
 
+    /* Initiliaze the rte_flow_tunnel structure */
+    flow_tunnel.type = encap_tunnel_type;
+    flow_tunnel.tun_id = random();
+
     /* Get MAC addresses for outer rule from flow rule with jump */
     CHECK_RC(asn_read_value_field(jump_flow_rule_pattern, dst_mac, &mac_len,
                                   "0.#eth.dst-addr.#plain"));
@@ -126,6 +139,18 @@ main(int argc, char *argv[])
                                &ethdev_config_pf);
     test_get_vf_pci_addrs_by_node(tapi_env_get_if_net_node(iut_port),
                                   &n_vfs, &vf_addrs, &vf_ids);
+
+
+    TEST_STEP("Negotiate the NIC's ability to deliver tunnel IDs to the PMD");
+
+    metadata = (1ULL << TARPC_RTE_ETH_RX_METADATA_TUNNEL_ID_BIT);
+    rc = rpc_rte_eth_rx_metadata_negotiate(iut_rpcs, ethdev_config_pf.port_id,
+                                           &metadata);
+    if (rc == 0 &&
+        (metadata & (1ULL << TARPC_RTE_ETH_RX_METADATA_TUNNEL_ID_BIT)) == 0)
+        TEST_SKIP("Flow tunnel offload is unsupported");
+    else if (rc != 0 && rc != -TE_RC(TE_RPC, TE_EOPNOTSUPP))
+        CHECK_RC(rc);
 
 
     TEST_STEP("Bind DPDK driver on a VF");
@@ -166,7 +191,14 @@ main(int argc, char *argv[])
     CHECK_RC(rpc_rte_mk_flow_rule_components(iut_rpcs, jump_flow_rule_pattern,
                                              NULL, &jump_rule.pattern, NULL));
     test_mk_pattern_and_tmpl_by_flow_rule_pattern(iut_rpcs,
-                     decap_flow_rule_pattern, &decap_rule.pattern, &tmpl, NULL);
+                decap_flow_rule_pattern, &decap_rule_items_app, &tmpl, NULL);
+    rpc_rte_flow_tunnel_match(iut_rpcs, ethdev_config_pf.port_id, &flow_tunnel,
+                              &decap_rule_items_pmd, &nb_decap_rule_items_pmd,
+                              &error);
+    rpc_rte_flow_prepend_opaque_items(iut_rpcs, decap_rule_items_app,
+                                      decap_rule_items_pmd,
+                                      nb_decap_rule_items_pmd,
+                                      &decap_rule.pattern);
 
     test_set_pkt_addresses(&addrs,
                            src_mac, dst_mac,
@@ -186,6 +218,14 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(ethdev_config_vf, TEST_ETHDEV_STARTED));
 
 
+    TEST_STEP("Since DST addresses are alien, enable promiscuous mode on IUT");
+
+    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_pf.port_id,
+                                    TEST_OP_REQUIRED);
+    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_vf->port_id,
+                                    TEST_OP_REQUIRED);
+
+
     TEST_STEP("Check full traffic path (IUT - representor - TST) without flow rule");
 
     trsc_net = test_transceiver_net_init(tst_host->ta, tst_if->if_name);
@@ -196,11 +236,6 @@ main(int argc, char *argv[])
                                           ethdev_config_rep->mp);
     trsc_vf = test_transceiver_dpdk_init(iut_rpcs, ethdev_config_vf->port_id,
                                          ethdev_config_vf->mp);
-
-    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_pf.port_id,
-                                    TEST_OP_REQUIRED);
-    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_vf->port_id,
-                                    TEST_OP_REQUIRED);
 
     test_transciever_simple_exchange_commit(tmpl, trsc_net, 1, 0,
                                             trsc_pf, 1, 0, NULL, NULL);
@@ -222,13 +257,20 @@ main(int argc, char *argv[])
     CHECK_NOT_NULL(flow_actions = asn_init_value(ndn_rte_flow_actions));
     tapi_rte_flow_add_ndn_action_jump(flow_actions, 0, TEST_GROUP_ID);
     rpc_rte_mk_flow_rule_components(iut_rpcs, flow_actions, NULL, NULL,
-                                    &jump_rule.actions);
+                                    &jump_rule_actions_app);
+    rpc_rte_flow_tunnel_decap_set(iut_rpcs, ethdev_config_pf.port_id,
+                                  &flow_tunnel, &jump_rule_actions_pmd,
+                                  &nb_jump_rule_actions_pmd, NULL);
+    rpc_rte_flow_prepend_opaque_actions(iut_rpcs, jump_rule_actions_app,
+                                        jump_rule_actions_pmd,
+                                        nb_jump_rule_actions_pmd,
+                                        &jump_rule.actions);
 
     asn_free_value(flow_actions);
     CHECK_NOT_NULL(flow_actions = asn_init_value(ndn_rte_flow_actions));
-    tapi_rte_flow_add_ndn_action_decap(flow_actions, 0, encap_tunnel_type);
-    tapi_rte_flow_add_ndn_action_port(NDN_FLOW_ACTION_TYPE_PORT_REPRESENTOR,
-                                      1, flow_actions, -1);
+    tapi_rte_flow_add_ndn_action_port(NDN_FLOW_ACTION_TYPE_REPRESENTED_PORT,
+                                      ethdev_config_rep->port_id, flow_actions,
+                                      -1);
     rpc_rte_mk_flow_rule_components(iut_rpcs, flow_actions, NULL, NULL,
                                     &decap_rule.actions);
 
@@ -241,11 +283,6 @@ main(int argc, char *argv[])
                 ethdev_config_pf.port_id, rules[i]->attr, rules[i]->pattern,
                 rules[i]->actions);
     }
-
-    test_rte_eth_promiscuous_disable(iut_rpcs, ethdev_config_pf.port_id,
-                                     TEST_OP_REQUIRED);
-    test_rte_eth_promiscuous_disable(iut_rpcs, ethdev_config_vf->port_id,
-                                     TEST_OP_REQUIRED);
 
     for (i = 0; i < nb_pkts; i++)
     {
@@ -286,11 +323,6 @@ exchange_fail:
         rules[i]->flow = RPC_NULL;
     }
 
-    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_pf.port_id,
-                                    TEST_OP_REQUIRED);
-    test_rte_eth_promiscuous_enable(iut_rpcs, ethdev_config_vf->port_id,
-                                    TEST_OP_REQUIRED);
-
     test_transciever_simple_exchange_commit(tmpl, trsc_net, 1, 0,
                                             trsc_pf, 1, 0, NULL, NULL);
     test_transciever_simple_exchange_commit(tmpl, trsc_rep, 1, 0,
@@ -300,16 +332,37 @@ exchange_fail:
 
 cleanup:
 
-    for (i = 0; i < TE_ARRAY_LEN(rules); i++)
+    if (jump_rule.flow != RPC_NULL)
     {
-        rpc_rte_free_flow_rule(iut_rpcs, rules[i]->attr,
-                               rules[i]->pattern, rules[i]->actions);
-        if (rules[i]->flow != RPC_NULL)
-        {
-            rpc_rte_flow_destroy(iut_rpcs, iut_port->if_info.if_index,
-                                 rules[i]->flow, NULL);
-        }
+        rpc_rte_flow_destroy(iut_rpcs, iut_port->if_info.if_index,
+                             jump_rule.flow, NULL);
     }
+    rpc_rte_flow_release_united_actions(iut_rpcs, jump_rule.actions);
+    if (jump_rule_actions_pmd != RPC_NULL)
+    {
+        rpc_rte_flow_tunnel_action_decap_release(iut_rpcs,
+                                                 ethdev_config_pf.port_id,
+                                                 jump_rule_actions_pmd,
+                                                 nb_jump_rule_actions_pmd, NULL);
+    }
+    rpc_rte_free_flow_rule(iut_rpcs, jump_rule.attr, jump_rule.pattern,
+                           jump_rule_actions_app);
+
+    if (decap_rule.flow != RPC_NULL)
+    {
+        rpc_rte_flow_destroy(iut_rpcs, iut_port->if_info.if_index,
+                             decap_rule.flow, NULL);
+    }
+    rpc_rte_flow_release_united_items(iut_rpcs, decap_rule.pattern);
+    if (decap_rule_items_pmd != RPC_NULL)
+    {
+        rpc_rte_flow_tunnel_item_release(iut_rpcs, ethdev_config_pf.port_id,
+                                         decap_rule_items_pmd,
+                                         nb_decap_rule_items_pmd, NULL);
+    }
+
+    rpc_rte_free_flow_rule(iut_rpcs, decap_rule.attr, decap_rule_items_app,
+                           decap_rule.actions);
 
     TEST_END;
 }

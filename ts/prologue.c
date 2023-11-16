@@ -198,18 +198,11 @@ configure_interface(cfg_net_t *net, cfg_net_node_t *node,
 
     agent = CFG_OID_GET_INST_NAME(oid, 1);
 
-    rc = cfg_get_instance_str(NULL, &pci_path, oid_str);
-    if (rc != 0)
-    {
-        ERROR("Failed to get TST PCI device path");
-        goto out;
-    }
-
-    rc = tapi_cfg_pci_get_net_if(pci_path, &interface);
+    rc = tapi_cfg_net_node_interface(oid_str, &interface);
     if (rc != 0)
     {
         if (TE_RC_GET_ERROR(rc) != TE_ENOENT)
-            ERROR("Failed to get network interface from the PCI device");
+            ERROR("Failed to get network interface by '%s'", oid_str);
         else
             rc = 0;
         goto out;

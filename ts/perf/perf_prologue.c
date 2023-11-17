@@ -95,8 +95,7 @@ bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
         goto out;
     }
 
-    rc = cfg_set_instance_fmt(CFG_VAL(STRING, tst_dpdk_driver), "%s/driver:",
-                              pci_device);
+    rc = tapi_cfg_pci_bind_driver(pci_device, tst_dpdk_driver);
     if (rc != 0)
     {
         ERROR("Failed to bind DPDK driver on TST agent");

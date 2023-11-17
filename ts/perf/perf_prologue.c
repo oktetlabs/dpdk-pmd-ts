@@ -24,11 +24,11 @@ static te_errno
 bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
                               const char *oid_str, cfg_oid *oid, void *cookie)
 {
-    cfg_handle *tst_pci_instances = NULL;
-    unsigned int n_tst_pci_instances = 0;
     char *tst_dpdk_driver = NULL;
     char *pci_instance = NULL;
+    char *pci_oid = NULL;
     const char *agent;
+    const char *iface;
     te_errno rc = 0;
 
     UNUSED(oid_str);
@@ -42,6 +42,7 @@ bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
     }
 
     agent = CFG_OID_GET_INST_NAME(oid, 1);
+    iface = CFG_OID_GET_INST_NAME(oid, 2);
 
     switch (node->type)
     {
@@ -55,22 +56,19 @@ bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
             goto out;
     }
 
-    rc = cfg_find_pattern_fmt(&n_tst_pci_instances, &tst_pci_instances,
-                "/agent:%s/hardware:/pci:/vendor:*/device:*/instance:*",
-                agent);
+    rc = tapi_cfg_pci_oid_by_net_if(agent, iface, &pci_oid);
     if (rc != 0)
     {
-        ERROR("Failed to find pci instances on TST agent");
+        ERROR("Failed to get PCI device function by interface '%s': %r",
+              iface, rc);
         goto out;
     }
 
-    if (n_tst_pci_instances != 1)
-    {
-        ERROR("Failed to bind DPDK driver on agent with %u PCI instances",
-              n_tst_pci_instances);
-        rc = TE_RC(TE_CONF_API, TE_EFAIL);
+    rc = tapi_cfg_pci_instance_by_addr(agent,
+                                       cfg_oid_str_get_inst_name(pci_oid, -1),
+                                       &pci_instance);
+    if (rc != 0)
         goto out;
-    }
 
     rc = cfg_get_instance_fmt(NULL, &tst_dpdk_driver,
                               "/local:%s/dpdk_driver:", agent);
@@ -80,14 +78,7 @@ bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
         goto out;
     }
 
-    rc = cfg_get_oid_str(tst_pci_instances[0], &pci_instance);
-    if (rc != 0)
-    {
-        ERROR("Failed to get PCI instance OID string");
-        goto out;
-    }
-
-    rc = tapi_cfg_pci_bind_driver(pci_instance, tst_dpdk_driver);
+    rc = tapi_cfg_pci_bind_driver(pci_oid, tst_dpdk_driver);
     if (rc != 0)
     {
         ERROR("Failed to bind DPDK driver on TST agent");
@@ -102,9 +93,9 @@ bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
     }
 
 out:
-    free(tst_pci_instances);
     free(tst_dpdk_driver);
     free(pci_instance);
+    free(pci_oid);
 
     return rc;
 }

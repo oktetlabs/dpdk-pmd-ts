@@ -14,7 +14,11 @@ teTsPipeline {
         string(name: 'dev_args', defaultValue: '',
                description: 'Arguments to be passed to PCI device on init'),
         string(name: 'eal_args', defaultValue: '',
-               description: 'Extra EAL arguments')
+               description: 'Extra EAL arguments'),
+        string(name: "dpdk_repo", defaultValue: '',
+               description: 'DPDK repository'),
+        string(name: "dpdk_rev", defaultValue: '',
+               description: 'DPDK revision')
     ]
 
     label = 'dpdk-ethdev-ts'
@@ -61,7 +65,8 @@ teTsPipeline {
     }
 
     preRunHook = {
-        teDPDK.checkout(ctx: teCtx)
+        teDPDK.checkout(ctx: teCtx, url: params.dpdk_repo,
+                        revision: params.dpdk_rev)
         env.RTE_SDK = teCtx.DPDK_SRC
     }
 

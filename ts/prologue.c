@@ -33,6 +33,7 @@
 #include "tapi_rpc_rte_eal.h"
 #include "tapi_sh_env.h"
 #include "tapi_cfg.h"
+#include "tapi_tags.h"
 
 #define VFIO_ENABLE_IOMMU_OID_FMT \
             "/agent:%s/module:vfio/parameter:enable_unsafe_noiommu_mode"
@@ -654,15 +655,17 @@ is_dpdk_rpcs(rcf_rpc_server *rpcs)
 /**
  * Read out packets queued by an DPDK interface.
  *
- * @param env  The test environment.
- * @param rpcs The RCP server.
- * @param port The DPDK interface.
+ * @param env           The test environment.
+ * @param rpcs          The RCP server.
+ * @param port          The DPDK interface.
+ * @param tags_prefix   TRC tags to add prefix or @c NULL.
  *
  * @retval The status code.
  */
 static te_errno
 clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
-                     const struct if_nameindex *port)
+                     const struct if_nameindex *port,
+                     const char *tags_prefix)
 {
     struct test_ethdev_config config;
     te_errno rc;
@@ -673,6 +676,22 @@ clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
     rc = test_prepare_ethdev(&config, TEST_ETHDEV_STARTED);
     if (rc != 0)
         return rc;
+
+    if (tags_prefix != NULL)
+    {
+        te_string   tag = TE_STRING_INIT;
+
+        if (config.dev_info.driver_name != NULL)
+        {
+            te_string_append(&tag, "%s%s", tags_prefix,
+                             config.dev_info.driver_name);
+            rc = tapi_tags_add_tag(te_string_value(&tag), NULL);
+            if (rc != 0)
+                return rc;
+        }
+
+        te_string_free(&tag);
+    }
 
     test_rx_clean_queue(rpcs, port->if_index, 0);
 
@@ -889,14 +908,14 @@ main(int argc, char **argv)
         TEST_VERDICT("Failed to initialise EAL interfaces: %r", rc);
 
     TEST_GET_IF(iut_port);
-    rc = clean_dpdk_interface(&env, iut_rpcs, iut_port);
+    rc = clean_dpdk_interface(&env, iut_rpcs, iut_port, "");
     if (rc != 0)
         TEST_VERDICT("Failed to clean the IUT interface: %r", rc);
 
     if (is_dpdk_rpcs(tst_rpcs))
     {
         TEST_GET_IF(tst_if);
-        rc = clean_dpdk_interface(&env, tst_rpcs, tst_if);
+        rc = clean_dpdk_interface(&env, tst_rpcs, tst_if, NULL);
         if (rc != 0)
             TEST_VERDICT("Failed to clean the TST interface: %r", rc);
     }

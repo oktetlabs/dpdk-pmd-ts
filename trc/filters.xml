@@ -2651,6 +2651,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2687,6 +2692,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -2733,6 +2743,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2775,6 +2790,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -4555,6 +4575,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -4589,6 +4614,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -4632,6 +4662,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -4671,6 +4706,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -5941,6 +5981,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -5975,6 +6020,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -6647,6 +6697,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6681,6 +6736,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -8279,6 +8339,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -8308,6 +8373,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -13767,13 +13837,155 @@
       </iter>
     </test>
     <test name="flow_rule_counters" type="script">
-      <objective>Check that COUNT actions are carried out correctly</objective>
+      <objective>Make sure that RTE flow API COUNT actions are carried out correctly</objective>
       <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype</arg>
+        <arg name="n_counters"/>
+        <arg name="field_path"/>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.pppoed</arg>
+        <arg name="n_counters"/>
+        <arg name="field_path"/>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.ethertype.pppoes</arg>
+        <arg name="n_counters"/>
+        <arg name="field_path"/>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
+      </iter>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="flow_rule_pattern"/>
         <arg name="n_counters"/>
-        <arg name="field_path"/>
+        <arg name="field_path">0.#eth.tagged.#tagged.vlan-id.#plain</arg>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern"/>
+        <arg name="n_counters"/>
+        <arg name="field_path">0.#eth.dst-addr.#plain</arg>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern"/>
+        <arg name="n_counters"/>
+        <arg name="field_path">2.#udp.dst-port.#plain</arg>
+        <notes/>
+        <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="flow_rule_pattern"/>
+        <arg name="n_counters"/>
+        <arg name="field_path">2.#tcp.dst-port.#plain</arg>
         <notes/>
         <results tags="pci-10ee-0100" key="WONTFIX HW-NO-VNIC-RX-COUNTERS" notes="SN1022 has no counters in VNIC Rx">
           <result value="SKIPPED">

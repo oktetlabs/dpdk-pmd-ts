@@ -1579,6 +1579,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1615,6 +1620,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
           </result>
         </results>
       </iter>
@@ -1655,6 +1665,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -1681,6 +1696,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
           </result>
         </results>
       </iter>
@@ -5015,6 +5035,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5034,6 +5059,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
           </result>
         </results>
       </iter>
@@ -5072,6 +5102,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5091,6 +5126,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
           </result>
         </results>
       </iter>
@@ -6192,6 +6232,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6216,6 +6261,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
           </result>
         </results>
       </iter>
@@ -6913,6 +6963,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6937,6 +6992,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
           </result>
         </results>
       </iter>
@@ -8555,6 +8615,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -8579,6 +8644,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
           </result>
         </results>
       </iter>

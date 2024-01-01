@@ -13878,6 +13878,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -13902,6 +13907,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -13930,6 +13940,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -13954,6 +13969,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-DMAC-ETHERTYPE" notes="net/i40e does not support filtering on destination MAC and EtherType together in FDIR mode">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
           </result>
         </results>
       </iter>
@@ -13987,6 +14007,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14011,6 +14036,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14039,6 +14069,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14063,6 +14098,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-DMAC-ETHERTYPE" notes="net/i40e does not support filtering on destination MAC and EtherType together in FDIR mode">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
           </result>
         </results>
       </iter>

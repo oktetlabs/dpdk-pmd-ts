@@ -3468,6 +3468,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3572,6 +3577,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -11731,6 +11741,11 @@
             <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -11836,6 +11851,11 @@
         <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
           <result value="SKIPPED">
             <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>
@@ -12848,6 +12868,11 @@
             <verdict>The tunnel type is unsupported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -12953,6 +12978,11 @@
         <results tags="pci-8086-159b" key="NO-GENEVE" notes="ice does not support GENEVE tunnels">
           <result value="SKIPPED">
             <verdict>The tunnel type is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
+          <result value="FAILED">
+            <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
       </iter>

@@ -2376,6 +2376,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2402,6 +2407,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -2437,6 +2447,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2463,6 +2478,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -2981,6 +3001,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3047,6 +3072,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3073,6 +3103,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -3108,6 +3143,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3134,6 +3174,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -3371,6 +3416,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3450,6 +3500,11 @@
         <results tags="vdev-failsafe&amp;rx-full-featured&amp;!pci-1924-0903&amp;!pci-1924-1903&amp;!pci-1924-0923&amp;!pci-1924-1923">
           <result value="SKIPPED">
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -3863,6 +3918,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3889,6 +3949,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -3957,6 +4022,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3983,6 +4053,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -4318,6 +4393,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -4342,6 +4422,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -4375,6 +4460,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -4399,6 +4489,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -5276,6 +5371,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5307,6 +5407,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5817,6 +5922,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5841,6 +5951,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -5874,6 +5989,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5898,6 +6018,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -6446,6 +6571,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6627,6 +6757,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6651,6 +6786,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -6741,6 +6881,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -6765,6 +6910,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -7217,6 +7367,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -7398,6 +7553,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -7422,6 +7582,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -7512,6 +7677,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -7536,6 +7706,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -8909,6 +9084,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -9085,6 +9265,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -9109,6 +9294,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -9199,6 +9389,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -9223,6 +9418,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -11250,6 +11450,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -11347,6 +11552,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -11442,6 +11652,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -11549,6 +11764,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -12367,6 +12587,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -12474,6 +12699,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count"/>
@@ -12569,6 +12799,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -12676,6 +12911,11 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -13439,6 +13679,11 @@
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -13501,6 +13746,11 @@
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">TRUE</arg>
@@ -13561,6 +13811,11 @@
         <results tags="pci-1924">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Action is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>
@@ -13802,6 +14057,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
     </test>
 
@@ -13927,6 +14187,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14016,6 +14281,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14105,6 +14375,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14212,6 +14487,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
           </result>
         </results>
       </iter>

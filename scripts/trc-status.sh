@@ -42,8 +42,10 @@ SN1022_EF100_TAGS+=(rx-datapath-ef100 tx-datapath-ef100)
 # Number of VFs should be greater than zero
 SN1022_EF100_TAGS+=(num_vfs:1)
 
+declare -a SN1022_EF100_OPTS2
+SN1022_EF100_OPTS2=("${OPTS2[@]}")
 for tag in "${SN1022_EF100_TAGS[@]}" ; do
-    OPTS2+=(-2 "${tag}")
+    SN1022_EF100_OPTS2+=(-2 "${tag}")
 done
 
 declare -a SN1022_EF100_STATUS_OPTS
@@ -52,7 +54,7 @@ SN1022_EF100_STATUS_OPTS+=(--1-name="Reference")
 SN1022_EF100_STATUS_OPTS+=("${OPTS1[@]}")
 SN1022_EF100_STATUS_OPTS+=(--2-name="SN1022")
 SN1022_EF100_STATUS_OPTS+=(--2-show-keys)
-SN1022_EF100_STATUS_OPTS+=("${OPTS2[@]}")
+SN1022_EF100_STATUS_OPTS+=("${SN1022_EF100_OPTS2[@]}")
 
 te-trc-diff \
     --html=SN1022-EF100-DPDK-${DPDK_VER}-full.html \
@@ -105,4 +107,39 @@ te-trc-diff \
     --html=SN1022-Virtio-Net-DPDK-${DPDK_VER}-short.html \
     --title="SN1022 Virtio-Net in DPDK ${DPDK_VER} short status" \
     "${SN1022_VNET_STATUS_OPTS[@]}" \
+    "${SHORT_EXCLUDE_OPTS[@]}"
+
+
+#
+# i40e status
+#
+
+declare -a I40E_TAGS
+I40E_TAGS+=(net_i40e pci-8086 pci-8086-1572 pci-8086-1583)
+# Number of VFs should be greater than zero
+I40E_TAGS+=(num_vfs:1)
+
+declare -a I40E_OPTS2
+I40E_OPTS2=("${OPTS2[@]}")
+for tag in "${I40E_TAGS[@]}" ; do
+    I40E_OPTS2+=(-2 "${tag}")
+done
+
+declare -a I40E_STATUS_OPTS
+I40E_STATUS_OPTS+=("${COMMON_OPTS[@]}")
+I40E_STATUS_OPTS+=(--1-name="Reference")
+I40E_STATUS_OPTS+=("${OPTS1[@]}")
+I40E_STATUS_OPTS+=(--2-name="i40e")
+I40E_STATUS_OPTS+=(--2-show-keys)
+I40E_STATUS_OPTS+=("${I40E_OPTS2[@]}")
+
+te-trc-diff \
+    --html=i40e-DPDK-${DPDK_VER}-full.html \
+    --title="i40e in DPDK ${DPDK_VER} status" \
+    "${I40E_STATUS_OPTS[@]}"
+
+te-trc-diff \
+    --html=i40e-DPDK-${DPDK_VER}-short.html \
+    --title="i40e in DPDK ${DPDK_VER} short status" \
+    "${I40E_STATUS_OPTS[@]}" \
     "${SHORT_EXCLUDE_OPTS[@]}"

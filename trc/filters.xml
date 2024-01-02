@@ -14981,13 +14981,29 @@
       </iter>
     </test>
     <test name="flow_rule_encap_on_egress" type="script">
-      <objective>Check that encapsulation actions on egress are carried out correctly</objective>
+      <objective>Check that flow API encap action on egress is carried out correctly</objective>
       <notes/>
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="tunnel_type"/>
         <arg name="flow_rule_pattern"/>
-        <arg name="encap_header"/>
+        <arg name="encap_header">{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 08'H,
+                    src-addr plain:'00 01 02 03 04 09'H
+                  },
+                  ip4:{
+                    dst-addr plain:'08 08 08 08'H,
+                    src-addr plain:'08 08 08 08'H
+                  },
+                  udp:{
+                    dst-port plain:4789,
+                    src-port plain:55761
+                  },
+                  vxlan:{
+                    vni plain:13
+                  }
+                }</arg>
         <arg name="count"/>
         <notes/>
         <results tags="pci-1924">
@@ -15003,6 +15019,55 @@
         <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="tunnel_type"/>
+        <arg name="flow_rule_pattern"/>
+        <arg name="encap_header">{
+                  eth:{
+                    dst-addr plain:'00 01 02 03 04 08'H,
+                    src-addr plain:'00 01 02 03 04 09'H
+                  },
+                  ip4:{
+                    dst-addr plain:'08 08 08 08'H,
+                    src-addr plain:'08 08 08 08'H
+                  },
+                  udp:{
+                    dst-port plain:4789,
+                    src-port plain:49152
+                  },
+                  vxlan:{
+                    vni plain:13
+                  }
+                }</arg>
+        <arg name="count"/>
+        <notes/>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
           </result>
         </results>
       </iter>

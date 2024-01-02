@@ -15096,6 +15096,11 @@
             <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-VXLAN-NO-INNER-ETH" notes="net/i40e does not support flow pattern wth VXLAN without inner ETH">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_rule_vlan_push" type="script">

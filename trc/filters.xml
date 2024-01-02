@@ -14088,6 +14088,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14110,6 +14115,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14130,6 +14140,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14155,6 +14170,11 @@
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
           <result value="FAILED">
             <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14216,6 +14236,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14238,6 +14263,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14258,6 +14288,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14334,6 +14369,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14354,6 +14394,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14428,6 +14473,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14448,6 +14498,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>
@@ -14532,6 +14587,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14557,6 +14617,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
           </result>
         </results>
       </iter>

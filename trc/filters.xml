@@ -6495,7 +6495,38 @@
       <iter result="PASSED">
         <arg name="count"/>
         <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
+        <arg name="promisc">FALSE</arg>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.unknown_ucast_dst_mac</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc">TRUE</arg>
         <arg name="isolated">FALSE</arg>
         <arg name="transfer">TRUE</arg>
         <arg name="env"/>
@@ -6526,7 +6557,38 @@
       <iter result="PASSED">
         <arg name="count"/>
         <arg name="ingress">TRUE</arg>
-        <arg name="promisc"/>
+        <arg name="promisc">FALSE</arg>
+        <arg name="isolated">FALSE</arg>
+        <arg name="transfer">TRUE</arg>
+        <arg name="env"/>
+        <arg name="flow_rule_pattern">VAR.flow_rule_pattern.unknown_mcast_dst_mac</arg>
+        <arg name="is_ip6_inner_frame"/>
+        <notes/>
+        <results tags="pci-1924">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086-159b" key="NO-FLOW_TRANSFER" notes="ice does not support transfer flow rules">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Only support ingress.</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="count"/>
+        <arg name="ingress">TRUE</arg>
+        <arg name="promisc">TRUE</arg>
         <arg name="isolated">FALSE</arg>
         <arg name="transfer">TRUE</arg>
         <arg name="env"/>

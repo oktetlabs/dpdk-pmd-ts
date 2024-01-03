@@ -14043,6 +14043,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1340" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
+          <result value="FAILED">
+            <verdict>Known but unexpected packets recevied</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -14077,6 +14082,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1340" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
+          <result value="FAILED">
+            <verdict>Known but unexpected packets recevied</verdict>
           </result>
         </results>
       </iter>

@@ -9325,6 +9325,12 @@
             <verdict>Unexpected checksum offload flags for the packet with bad checksums: expected RTE_MBUF_F_RX_L4_CKSUM_BAD VS obtained RTE_MBUF_F_RX_L4_CKSUM_UNKNOWN</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="IP6-RX_IP_CKSUM_GOOD" notes="net/i40e always report RX_IP_CKSUM_GOOD for IPv6 packets dispite of the fact that there is no checksum in IPv6 case">
+          <result value="FAILED">
+            <verdict>Unexpected checksum offload flags for the packet with good checksums: expected RTE_MBUF_F_RX_IP_CKSUM_UNKNOWN VS obtained RTE_MBUF_F_RX_IP_CKSUM_GOOD</verdict>
+            <verdict>Unexpected checksum offload flags for the packet with bad checksums: expected RTE_MBUF_F_RX_IP_CKSUM_UNKNOWN VS obtained RTE_MBUF_F_RX_IP_CKSUM_GOOD</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -9368,6 +9374,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="Driver doesn't set L4_CKSUM_BAD">
           <result value="FAILED">
             <verdict>Unexpected checksum offload flags for the packet with bad checksums: expected RTE_MBUF_F_RX_L4_CKSUM_BAD VS obtained RTE_MBUF_F_RX_L4_CKSUM_UNKNOWN</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="IP6-RX_IP_CKSUM_GOOD" notes="net/i40e always report RX_IP_CKSUM_GOOD for IPv6 packets dispite of the fact that there is no checksum in IPv6 case">
+          <result value="FAILED">
+            <verdict>Unexpected checksum offload flags for the packet with good checksums: expected RTE_MBUF_F_RX_IP_CKSUM_UNKNOWN VS obtained RTE_MBUF_F_RX_IP_CKSUM_GOOD</verdict>
+            <verdict>Unexpected checksum offload flags for the packet with bad checksums: expected RTE_MBUF_F_RX_IP_CKSUM_UNKNOWN VS obtained RTE_MBUF_F_RX_IP_CKSUM_GOOD</verdict>
           </result>
         </results>
       </iter>

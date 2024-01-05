@@ -1752,7 +1752,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1809,7 +1809,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1866,7 +1866,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1923,7 +1923,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -1980,7 +1980,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2037,7 +2037,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2094,7 +2094,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2151,7 +2151,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2208,7 +2208,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2265,7 +2265,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2322,7 +2322,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2379,7 +2379,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2436,7 +2436,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2493,7 +2493,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2550,7 +2550,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2607,7 +2607,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2664,7 +2664,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2721,7 +2721,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2778,7 +2778,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2835,7 +2835,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2892,7 +2892,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -2949,7 +2949,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -3006,7 +3006,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -3063,7 +3063,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -3120,7 +3120,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -3177,7 +3177,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -3234,7 +3234,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4644,7 +4644,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4701,7 +4701,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4758,7 +4758,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4815,7 +4815,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4872,7 +4872,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4929,7 +4929,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -4986,7 +4986,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5043,7 +5043,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5100,7 +5100,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5157,7 +5157,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5214,7 +5214,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5271,7 +5271,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5328,7 +5328,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5385,7 +5385,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5442,7 +5442,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5499,7 +5499,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5556,7 +5556,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5613,7 +5613,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5670,7 +5670,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5727,7 +5727,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5784,7 +5784,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5841,7 +5841,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5898,7 +5898,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -5955,7 +5955,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -6012,7 +6012,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -6069,7 +6069,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -6126,7 +6126,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -7433,7 +7433,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7456,7 +7456,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7479,7 +7479,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7507,7 +7507,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7535,7 +7535,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7563,7 +7563,7 @@
             <verdict>Packet larger than MTU is unexpectedly received</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="net/i40e does not allow to set MTU when device is started">
           <result value="FAILED">
             <verdict>rpc_rte_eth_dev_set_mtu() failed: RPC-EBUSY</verdict>
           </result>
@@ -7780,7 +7780,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7806,7 +7806,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7832,7 +7832,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7858,7 +7858,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7926,7 +7926,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7952,7 +7952,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7978,7 +7978,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8004,7 +8004,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8072,7 +8072,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8098,7 +8098,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8124,7 +8124,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8150,7 +8150,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8218,7 +8218,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8244,7 +8244,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8270,7 +8270,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8296,7 +8296,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8398,7 +8398,7 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+        <results tags="net_i40e" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
           <result value="PASSED">
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
@@ -8457,7 +8457,7 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+        <results tags="net_i40e" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
           <result value="PASSED">
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
@@ -8521,7 +8521,7 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
+        <results tags="net_i40e" key="WONTFIX I40E-RSS" notes="The offload is enabled unconditionally in MQ mode RSS">
           <result value="PASSED">
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
@@ -9073,7 +9073,7 @@
             <verdict>Rx scatter is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MTU-STARTED" notes="i40e does not allow to set MTU in started state">
+        <results tags="net_i40e" key="SET-MTU-STARTED" notes="i40e does not allow to set MTU in started state">
           <result value="FAILED">
             <verdict>rte_eth_dev_set_mtu() failed (-EBUSY)</verdict>
           </result>
@@ -9189,7 +9189,7 @@
             <verdict>Rx IP checksum offload is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+        <results tags="net_i40e" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -9249,7 +9249,7 @@
             <verdict>Rx IP checksum offload is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+        <results tags="net_i40e" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -9454,7 +9454,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+        <results tags="net_i40e" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -9580,7 +9580,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -9644,7 +9644,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -9683,7 +9683,7 @@
             <verdict>Rx IP checksum offload is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+        <results tags="net_i40e" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -9746,7 +9746,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
+        <results tags="net_i40e" key="RX-CKSUM-IPv4-ALWAYS" notes="net/i40e always fills in Rx checksum offload results for TCP/UDP-IPv4">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -9872,7 +9872,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -9936,7 +9936,7 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -10044,7 +10044,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>Known but unexpected packets recevied</verdict>
           </result>
@@ -10075,7 +10075,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>Known but unexpected packets recevied</verdict>
           </result>
@@ -10106,7 +10106,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>Known but unexpected packets recevied</verdict>
           </result>
@@ -10137,7 +10137,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>Known but unexpected packets recevied</verdict>
           </result>
@@ -10167,7 +10167,7 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
             <verdict>The packet(s) really hit the wire</verdict>
@@ -10194,7 +10194,7 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
             <verdict>The packet(s) really hit the wire</verdict>
@@ -10221,7 +10221,7 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
             <verdict>The packet(s) really hit the wire</verdict>
@@ -10248,7 +10248,7 @@
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
+        <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
           <result value="FAILED">
             <verdict>The inactive queue(s) accepted the packet(s) for Tx</verdict>
             <verdict>The packet(s) really hit the wire</verdict>
@@ -10272,7 +10272,7 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+        <results tags="net_i40e" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
           <result value="FAILED">
             <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
           </result>
@@ -10306,7 +10306,7 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+        <results tags="net_i40e" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10345,7 +10345,7 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+        <results tags="net_i40e" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
           <result value="FAILED">
             <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
           </result>
@@ -10384,7 +10384,7 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
+        <results tags="net_i40e" key="FLOW-ISOLATE" notes="net/i40e does not support rte_flow_isolate()">
           <result value="SKIPPED">
             <verdict>rte_flow_isolate() RPC is unavailable</verdict>
           </result>
@@ -10431,7 +10431,7 @@
             <verdict>Runtime Rx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
+        <results tags="net_i40e" key="ref://dpdk-bz/1110" notes="i40e runtime queue setup seems to be broken">
           <result value="FAILED">
             <verdict>Failed to start device with not setup Rx queue: RPC-EINVAL</verdict>
           </result>
@@ -10488,7 +10488,7 @@
             <verdict>Runtime Tx queue setup is not supported by the device</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1110" notes="i40e: runtime Rx/Tx queue setup is unusable">
+        <results tags="net_i40e" key="ref://dpdk-bz/1110" notes="i40e: runtime Rx/Tx queue setup is unusable">
           <result value="FAILED">
             <verdict>rte_eth_dev_start() failed: RPC-EINVAL</verdict>
           </result>
@@ -12348,7 +12348,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -12374,7 +12374,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -12400,7 +12400,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -12431,7 +12431,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -12546,7 +12546,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -12625,7 +12625,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -12704,7 +12704,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -12783,7 +12783,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -12862,7 +12862,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -12946,7 +12946,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13035,7 +13035,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13124,7 +13124,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13213,7 +13213,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13302,7 +13302,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13391,7 +13391,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13485,7 +13485,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13564,7 +13564,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13643,7 +13643,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13722,7 +13722,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13801,7 +13801,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13880,7 +13880,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -13964,7 +13964,7 @@
             <verdict>Extended statistic rx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide rx_pkts and rx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic rx_pkts is not supported</verdict>
             <verdict>Extended statistic rx_octets is not supported</verdict>
@@ -14058,7 +14058,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14148,7 +14148,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14238,7 +14238,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14328,7 +14328,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14418,7 +14418,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14508,7 +14508,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14598,7 +14598,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14688,7 +14688,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14778,7 +14778,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14868,7 +14868,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -14958,7 +14958,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15048,7 +15048,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15138,7 +15138,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15228,7 +15228,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15318,7 +15318,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15413,7 +15413,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15508,7 +15508,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15603,7 +15603,7 @@
             <verdict>Extended statistic tx_brdcst_pkts is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
+        <results tags="net_i40e" key="I40E-EXT-STATS" notes="i40e does not provide tx_pkts and tx_octets extended statistics">
           <result value="PASSED">
             <verdict>Extended statistic tx_pkts is not supported</verdict>
             <verdict>Extended statistic tx_octets is not supported</verdict>
@@ -15745,7 +15745,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-TEREDO" notes="Intel X710 with i40e supports VXLAN only">
+        <results tags="net_i40e" key="NO-TEREDO" notes="Intel X710 with i40e supports VXLAN only">
           <result value="SKIPPED">
             <verdict>The tunnel type is unsupported</verdict>
           </result>
@@ -15824,7 +15824,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-GENEVE" notes="Intel X710 with i40e supports VXLAN only">
+        <results tags="net_i40e" key="NO-GENEVE" notes="Intel X710 with i40e supports VXLAN only">
           <result value="SKIPPED">
             <verdict>The tunnel type is unsupported</verdict>
           </result>
@@ -17627,7 +17627,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -17693,7 +17693,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -17759,7 +17759,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -17825,7 +17825,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -17891,7 +17891,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -17959,7 +17959,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18027,7 +18027,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18095,7 +18095,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18163,7 +18163,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18231,7 +18231,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18297,7 +18297,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18363,7 +18363,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18429,7 +18429,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18495,7 +18495,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18563,7 +18563,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18631,7 +18631,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18699,7 +18699,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18767,7 +18767,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18835,7 +18835,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18900,7 +18900,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -18965,7 +18965,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19030,7 +19030,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19095,7 +19095,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19162,7 +19162,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19229,7 +19229,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19296,7 +19296,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -19363,7 +19363,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22565,7 +22565,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22631,7 +22631,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22697,7 +22697,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22763,7 +22763,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22829,7 +22829,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22897,7 +22897,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -22965,7 +22965,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23033,7 +23033,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23101,7 +23101,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23169,7 +23169,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23235,7 +23235,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23301,7 +23301,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23367,7 +23367,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23433,7 +23433,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23501,7 +23501,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23569,7 +23569,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23637,7 +23637,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23705,7 +23705,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23773,7 +23773,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23838,7 +23838,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23903,7 +23903,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -23968,7 +23968,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -24033,7 +24033,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -24100,7 +24100,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -24167,7 +24167,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -24234,7 +24234,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -24301,7 +24301,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -25881,7 +25881,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -25909,7 +25909,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -25932,7 +25932,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -25955,7 +25955,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -25978,7 +25978,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -26001,7 +26001,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -26024,7 +26024,7 @@
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
+        <results tags="net_i40e" key="SET-MC-ADDR-LIST" notes="net/i40e does not provide set_mc_addr_list driver operation">
           <result value="SKIPPED">
             <verdict>Set list of multicast addresses operation is not supported</verdict>
           </result>
@@ -26186,7 +26186,7 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+        <results tags="net_i40e" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
           <result value="FAILED">
             <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
@@ -26208,7 +26208,7 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+        <results tags="net_i40e" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
           <result value="FAILED">
             <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
@@ -26230,7 +26230,7 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+        <results tags="net_i40e" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
           <result value="FAILED">
             <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
@@ -26252,7 +26252,7 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+        <results tags="net_i40e" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
           <result value="FAILED">
             <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
@@ -26274,7 +26274,7 @@
             <verdict>Different info on state: STARTED</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
+        <results tags="net_i40e" key="ref://dpdk-bz/1132" notes="i40e for Intel X710 recommends ring size based on link speed which is updated on start">
           <result value="FAILED">
             <verdict>default_rxportconf's fields ring_size don't match</verdict>
             <verdict>Different info on state: STARTED</verdict>
@@ -26318,7 +26318,7 @@
             <verdict>Correct RSS configuration has been rejected on configuration stage</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="ref://dpdk-bz/1113" notes="i40e: device configure ignores RSS key in rx_adv_conf">
+        <results tags="net_i40e" key="ref://dpdk-bz/1113" notes="i40e: device configure ignores RSS key in rx_adv_conf">
           <result value="FAILED">
             <verdict>Bogus RSS key size has been accepted</verdict>
           </result>
@@ -26700,7 +26700,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26717,7 +26717,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26739,7 +26739,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26761,7 +26761,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26783,7 +26783,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26805,7 +26805,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26827,7 +26827,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -26849,7 +26849,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26872,7 +26872,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26895,7 +26895,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26918,7 +26918,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26941,7 +26941,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26964,7 +26964,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -26987,7 +26987,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -27010,7 +27010,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -27032,7 +27032,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -27126,7 +27126,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -27173,7 +27173,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -27210,7 +27210,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -27263,7 +27263,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -27675,7 +27675,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -27759,7 +27759,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -28196,7 +28196,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -28287,7 +28287,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -28562,7 +28562,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28594,7 +28594,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28626,7 +28626,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28658,7 +28658,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28690,7 +28690,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28722,7 +28722,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28754,7 +28754,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -28975,7 +28975,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -29012,7 +29012,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -29044,7 +29044,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -29108,7 +29108,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -29386,7 +29386,7 @@
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+        <results tags="net_i40e" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29419,7 +29419,7 @@
             <verdict>8 received packets match initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+        <results tags="net_i40e" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29447,7 +29447,7 @@
             <verdict>32 received packets match initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
+        <results tags="net_i40e" key="RX-DESCS-MIN" notes="net/i40e has minimum number of Rx descriptors 64">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29458,7 +29458,7 @@
         <arg name="template"/>
         <arg name="nb_rxd">64</arg>
         <notes/>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29491,7 +29491,7 @@
             <verdict>Received 64 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29524,7 +29524,7 @@
             <verdict>Received 192 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29579,7 +29579,7 @@
             <verdict>496 received packets match initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+        <results tags="net_i40e" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29611,7 +29611,7 @@
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+        <results tags="net_i40e" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29627,7 +29627,7 @@
             <verdict>Received 448 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29676,7 +29676,7 @@
             <verdict>1000 received packets match initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+        <results tags="net_i40e" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29692,7 +29692,7 @@
             <verdict>Received 960 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29718,7 +29718,7 @@
             <verdict>Received 1984 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29750,7 +29750,7 @@
             <verdict>Number of received packets matches effective number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29801,7 +29801,7 @@
             <verdict>4080 received packets match initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
+        <results tags="net_i40e" key="RX-DESCS-ALIGN" notes="net/i40e requires Rx descriptors number to be aligned">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29817,7 +29817,7 @@
             <verdict>Received 4032 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
+        <results tags="net_i40e" key="RX-DESCS-9-UNUSED" notes="net/i40e keeps 9 Rx descriptors unused">
           <result value="PASSED">
             <verdict>Received 9 packets less than initially requested number of Rx descriptors</verdict>
           </result>
@@ -29853,7 +29853,7 @@
             <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+        <results tags="net_i40e" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29879,7 +29879,7 @@
             <verdict>Received 8 packets less than initially requested number of Rx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+        <results tags="net_i40e" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29900,7 +29900,7 @@
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
+        <results tags="net_i40e" key="RX-DESCS-MAX" notes="net/i40e supports up to 4096 Rx descriptors">
           <result value="SKIPPED">
             <verdict>Rx queue set up failed due to violated descriptors limits</verdict>
           </result>
@@ -29961,7 +29961,7 @@
             <verdict>Get queue info isn't supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+        <results tags="net_i40e" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
           </result>
@@ -29983,7 +29983,7 @@
             <verdict>Get queue info isn't supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+        <results tags="net_i40e" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
           </result>
@@ -30005,7 +30005,7 @@
             <verdict>Get queue info isn't supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+        <results tags="net_i40e" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
           </result>
@@ -30064,7 +30064,7 @@
             <verdict>Sent 256 packets less than initially requested number of Tx descriptors</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
+        <results tags="net_i40e" key="TXD-SPACE-1" notes="intel/i40e keeps 1 TxD unused if ring size is a power of 2">
           <result value="PASSED">
             <verdict>Sent 1 packets less than initially requested number of Tx descriptors</verdict>
           </result>
@@ -30209,7 +30209,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30226,7 +30226,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30248,7 +30248,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -30271,7 +30271,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -30294,7 +30294,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30316,7 +30316,7 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -30368,7 +30368,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -30415,7 +30415,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -30452,7 +30452,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="FAILED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
             <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
@@ -30500,7 +30500,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -30695,7 +30695,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -30779,7 +30779,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -30946,7 +30946,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -31037,7 +31037,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -31155,7 +31155,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -31187,7 +31187,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -31273,7 +31273,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -31305,7 +31305,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
@@ -31342,7 +31342,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
+        <results tags="net_i40e" key="NO-RX-VLAN-WO-STRIPPING" notes="i40e does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for tagged packet when VLAN stripping is supported</verdict>
           </result>
@@ -31401,7 +31401,7 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
-        <results tags="pci-8086-1572|pci-8086-1583" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
+        <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE tunnels">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>

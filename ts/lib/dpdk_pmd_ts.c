@@ -1928,12 +1928,14 @@ test_ptype_from_pattern(const asn_value *pattern,
     int            l4_inner = 0, l4_outer = 0;
     uint32_t       pt_inner = 0;
     uint32_t       pt_tunnel = 0;
+    uint32_t       pt_tunnel_alt = 0;
     uint32_t       pt_outer = 0;
     uint32_t       pt = 0;
     te_bool        pt_inner_l2_supported = FALSE;
     te_bool        pt_inner_l3_supported = FALSE;
     te_bool        pt_inner_l4_supported = FALSE;
     te_bool        pt_tunnel_supported = FALSE;
+    te_bool        pt_tunnel_alt_supported = FALSE;
     te_bool        pt_outer_l2_supported = FALSE;
     te_bool        pt_outer_l3_supported = FALSE;
     te_bool        pt_outer_l4_supported = FALSE;
@@ -2034,6 +2036,7 @@ test_ptype_from_pattern(const asn_value *pattern,
     switch (tunnel_pdu_choice_tag) {
         case TE_PROTO_VXLAN:
             pt_tunnel = TARPC_RTE_PTYPE_TUNNEL_VXLAN;
+            pt_tunnel_alt = TARPC_RTE_PTYPE_TUNNEL_GRENAT;
             break;
 
         case TE_PROTO_GENEVE:
@@ -2047,9 +2050,15 @@ test_ptype_from_pattern(const asn_value *pattern,
                 rc = asn_get_subvalue(tunnel_pdu_choice, &key_nvgre,
                                       "opt-key.#nvgre");
                 if (rc == 0)
+                {
                     pt_tunnel = TARPC_RTE_PTYPE_TUNNEL_NVGRE;
+                    pt_tunnel_alt = TARPC_RTE_PTYPE_TUNNEL_GRENAT;
+                }
                 else if (rc == TE_EASNINCOMPLVAL)
+                {
                     pt_tunnel = TARPC_RTE_PTYPE_TUNNEL_GRE;
+                    pt_tunnel_alt = TARPC_RTE_PTYPE_TUNNEL_GRENAT;
+                }
 
                 rc = (rc == TE_EASNINCOMPLVAL) ? 0 : rc;
                 CHECK_RC(rc);
@@ -2062,6 +2071,7 @@ test_ptype_from_pattern(const asn_value *pattern,
     }
 
     pt_tunnel <<= TARPC_RTE_PTYPE_TUNNEL_OFFSET;
+    pt_tunnel_alt <<= TARPC_RTE_PTYPE_TUNNEL_OFFSET;
 
     pt_outer = 0;
     pt_outer |= (l2_outer << TARPC_RTE_PTYPE_L2_OFFSET);
@@ -2083,6 +2093,8 @@ test_ptype_from_pattern(const asn_value *pattern,
             pt_inner_l4_supported = TRUE;
         else if (supp[i] == (pt & TARPC_RTE_PTYPE_TUNNEL_MASK))
             pt_tunnel_supported = TRUE;
+        else if (supp[i] == pt_tunnel_alt)
+            pt_tunnel_alt_supported = TRUE;
         else if (supp[i] == (pt & TARPC_RTE_PTYPE_L2_MASK))
             pt_outer_l2_supported = TRUE;
         else if (supp[i] == (pt & TARPC_RTE_PTYPE_L3_MASK))
@@ -2123,8 +2135,11 @@ test_ptype_from_pattern(const asn_value *pattern,
 
     if (((pt & TARPC_RTE_PTYPE_TUNNEL_MASK) != 0) && !pt_tunnel_supported)
     {
-        WARN_VERDICT("Tunnel packet type is unsupported by the driver");
         pt &= ~TARPC_RTE_PTYPE_TUNNEL_MASK;
+        if (pt_tunnel_alt_supported)
+            pt |= pt_tunnel_alt;
+        else
+            WARN_VERDICT("Tunnel packet type is unsupported by the driver");
     }
 
     if (((pt & TARPC_RTE_PTYPE_L2_MASK) != 0) && !pt_outer_l2_supported)

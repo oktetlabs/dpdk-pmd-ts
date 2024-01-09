@@ -16064,6 +16064,11 @@
             <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16094,6 +16099,12 @@
             <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L2_ETHER, must be L2_ETHER_ARP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16120,6 +16131,14 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16144,6 +16163,14 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -16173,6 +16200,14 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16200,6 +16235,14 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16225,6 +16268,14 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -16280,6 +16331,17 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
             <verdict>Packet type is wrong</verdict>
@@ -16343,6 +16405,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16401,6 +16474,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16448,6 +16532,15 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -16501,6 +16594,15 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER_VLAN</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16551,6 +16653,15 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16598,6 +16709,15 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -16659,6 +16779,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16712,6 +16843,17 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
             <verdict>Packet type is wrong</verdict>
@@ -17474,6 +17616,13 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -19472,6 +19621,16 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -19524,6 +19683,16 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER_VLAN</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -19580,6 +19749,16 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -19632,6 +19811,16 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -19690,6 +19879,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -19744,6 +19945,18 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -19802,6 +20015,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -19858,6 +20083,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -19912,6 +20149,18 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20074,6 +20323,15 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20567,6 +20825,14 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -21139,6 +21405,14 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21163,6 +21437,14 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -21218,6 +21500,17 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
             <verdict>Packet type is wrong</verdict>
@@ -21281,6 +21574,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21339,6 +21643,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21386,6 +21701,15 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -21439,6 +21763,15 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER_VLAN</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21489,6 +21822,15 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21536,6 +21878,15 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -21597,6 +21948,17 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21650,6 +22012,17 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
             <verdict>Packet type is wrong</verdict>
@@ -21976,6 +22349,14 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -22412,6 +22793,13 @@
           <result value="FAILED">
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
@@ -24410,6 +24798,16 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24462,6 +24860,16 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER_VLAN</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -24518,6 +24926,16 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24570,6 +24988,16 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -24628,6 +25056,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24682,6 +25122,18 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_TCP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -24740,6 +25192,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24796,6 +25260,18 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -24850,6 +25326,18 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L3_UNKNOWN, must be L3_IPV6_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_GRENAT</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_UNKNOWN, must be INNER_L2_ETHER</verdict>
+            <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
+            <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25012,6 +25500,15 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -26878,6 +27375,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26899,6 +27402,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -26924,6 +27433,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26945,6 +27460,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -26970,6 +27491,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26993,6 +27520,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27014,6 +27547,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27059,6 +27598,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27239,6 +27784,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27392,6 +27943,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27407,6 +27964,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27426,6 +27989,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27441,6 +28010,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27460,6 +28035,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27477,6 +28058,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27492,6 +28079,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27521,6 +28114,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -27735,6 +28334,12 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28003,6 +28608,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28028,6 +28639,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28057,6 +28674,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28082,6 +28705,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28111,6 +28740,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28138,6 +28773,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28163,6 +28804,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28283,6 +28930,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28345,6 +28998,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28814,6 +29473,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28839,6 +29504,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28868,6 +29539,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28893,6 +29570,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -28922,6 +29605,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28949,6 +29638,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -28974,6 +29669,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -29104,6 +29805,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -29166,6 +29873,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -30277,6 +30990,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30298,6 +31017,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30343,6 +31068,12 @@
         <results tags="rx-datapath-ef100" key="NO-RX-VLAN-WO-STRIPPING" notes="sfc does not provide VLAN TCI without stripping">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30481,6 +31212,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30569,6 +31306,12 @@
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30584,6 +31327,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30613,6 +31362,12 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041">
           <result value="PASSED">
             <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
           </result>
         </results>
       </iter>
@@ -30755,6 +31510,12 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>RTE_MBUF_F_RX_VLAN flag is not set for double-tagged packet when VLAN stripping is supported</verdict>
+            <verdict>RTE_MBUF_F_RX_QINQ flag is not set for double-tagged packet when QinQ stripping is supported</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30888,6 +31649,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -30913,6 +31680,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -31033,6 +31806,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31095,6 +31874,12 @@
         <results tags="rx-datapath-ef100" key="NO-QINQ-STRIP" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -31242,6 +32027,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31267,6 +32058,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>
@@ -31397,6 +32194,12 @@
             <verdict>QinQ strip is requested but not available</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -31459,6 +32262,12 @@
         <results tags="rx-datapath-ef100" key="ref://amd-jira/DPDK-161" notes="Not supported by FW yet">
           <result value="SKIPPED">
             <verdict>QinQ strip is requested but not available</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="QINQ" notes="net/i40e does not support QINQ or TPID used by the test is not supported">
+          <result value="FAILED">
+            <verdict>1 unexpected packets received</verdict>
+            <verdict>Rx operation checks failed</verdict>
           </result>
         </results>
       </iter>

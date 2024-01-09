@@ -130,6 +130,7 @@ main(int argc, char *argv[])
         TEST_VERDICT("Bad status for the last usable descriptor, must be DONE");
 
     TEST_STEP("Verify reserved descriptors (if any)");
+    nb_txd_eff += txq_config.tx_rs_thresh;
     for (i = nb_txd_eff; i < nb_txd; ++i)
     {
         if (rpc_rte_eth_tx_descriptor_status(iut_rpcs,

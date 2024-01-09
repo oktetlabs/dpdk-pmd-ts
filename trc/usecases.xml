@@ -32684,6 +32684,11 @@
         <arg name="tx_tmpl"/>
         <arg name="flow_rule_pattern"/>
         <notes/>
+        <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
+          <result value="FAILED">
+            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          </result>
+        </results>
       </iter>
     </test>
   </iter>

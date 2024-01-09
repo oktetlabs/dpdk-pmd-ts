@@ -17183,6 +17183,14 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20217,6 +20225,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20269,6 +20284,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20388,6 +20410,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20442,6 +20471,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20500,6 +20536,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20554,6 +20597,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20612,6 +20662,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20668,6 +20725,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20721,6 +20785,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20772,6 +20842,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20888,6 +20964,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -20941,6 +21023,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -20998,6 +21086,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21051,6 +21145,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -21108,6 +21208,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21161,6 +21267,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25394,6 +25506,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25446,6 +25565,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25565,6 +25691,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25619,6 +25752,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25677,6 +25817,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25731,6 +25878,13 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25789,6 +25943,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25845,6 +26006,13 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -25896,6 +26064,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -25951,6 +26125,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26004,6 +26184,14 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type mismatch: got INNER_L2_ETHER, must be INNER_L2_UNKNOWN</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26055,6 +26243,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -26112,6 +26306,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26165,6 +26365,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>
@@ -26222,6 +26428,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26277,6 +26489,12 @@
             <verdict>Failed to add a tunnel UDP port</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -26330,6 +26548,12 @@
         <results tags="pci-1924-1a03|pci-1924-1b03" key="EF10-VF-NO-UDP-TUNNEL" notes="Tunnel UDP port configuration is not supported on EF10 VFs">
           <result value="FAILED">
             <verdict>Failed to add a tunnel UDP port</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-VXLAN-PTYPE-L4-OUTER" notes="net/i40e does not report outer L4 as UDP in VXLAN case">
+          <result value="FAILED">
+            <verdict>Packet type mismatch: got L4_UNKNOWN, must be L4_UDP</verdict>
+            <verdict>Packet type is wrong</verdict>
           </result>
         </results>
       </iter>

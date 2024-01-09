@@ -15881,6 +15881,11 @@
             <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15937,6 +15942,11 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -15961,6 +15971,11 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -15990,6 +16005,11 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16017,6 +16037,11 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16042,6 +16067,11 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -16917,6 +16947,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -16973,6 +17008,11 @@
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -17033,6 +17073,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -17083,6 +17128,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -17131,6 +17181,11 @@
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -17241,6 +17296,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -17299,6 +17359,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -17355,6 +17420,11 @@
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -21465,6 +21535,11 @@
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -21489,6 +21564,11 @@
           <result value="PASSED">
             <verdict>Layer 3 packet type is unsupported by the driver</verdict>
             <verdict>Layer 4 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -22198,6 +22278,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -22254,6 +22339,11 @@
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_FRAG</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -22314,6 +22404,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -22364,6 +22459,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -22412,6 +22512,11 @@
             <verdict>Inner layer 2 packet type is unsupported by the driver</verdict>
             <verdict>Packet type mismatch: got TUNNEL_UNKNOWN, must be TUNNEL_NVGRE</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>
@@ -22522,6 +22627,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -22580,6 +22690,11 @@
             <verdict>Packet type is wrong</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -22636,6 +22751,11 @@
             <verdict>Packet type mismatch: got INNER_L3_UNKNOWN, must be INNER_L3_IPV4_EXT_UNKNOWN</verdict>
             <verdict>Packet type mismatch: got INNER_L4_UNKNOWN, must be INNER_L4_UDP</verdict>
             <verdict>Packet type is wrong</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="RX-PTYPE-VLAN" notes="net/i40e does not report Rx packet type VLAN">
+          <result value="PASSED">
+            <verdict>Layer 2 packet type is unsupported by the driver</verdict>
           </result>
         </results>
       </iter>

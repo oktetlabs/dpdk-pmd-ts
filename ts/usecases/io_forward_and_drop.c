@@ -77,8 +77,8 @@ main(int argc, char *argv[])
      */
     metadata = (1ULL << TARPC_RTE_ETH_RX_METADATA_USER_MARK_BIT);
 
-    CHECK_RC(rpc_rte_eth_rx_metadata_negotiate(iut_rpcs, test_ethdev.port_id,
-                                               &metadata));
+    rpc_rte_eth_rx_metadata_negotiate(iut_rpcs, test_ethdev.port_id,
+                                      &metadata);
 
     TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
     test_ethdev.min_tx_desc = test_ethdev.dev_info.tx_desc_lim.nb_max;

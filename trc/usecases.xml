@@ -27190,7 +27190,7 @@
       </iter>
     </test>
     <test name="rx_intr" type="script">
-      <objective>Check Rx interrupt</objective>
+      <objective>The test requests Rx queue interrupts on device configuration then checks that Rx interrupts are triggered when enabled</objective>
       <notes/>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27231,6 +27231,11 @@
           <result value="FAILED">
             <verdict>Interrupt was disabled, kept armed and recevied</verdict>
             <verdict>Interrupt is not expected, but received</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1345" notes="net/i40e losses packet after Rx interrupt disable">
+          <result value="FAILED">
+            <verdict>There are no received packets</verdict>
           </result>
         </results>
       </iter>
@@ -27295,6 +27300,11 @@
             <verdict>Cannot bind to Rx queue interrupt: EPERM</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1346" notes="net/i40e does not report Rx interrupt disable for the second packet">
+          <result value="FAILED">
+            <verdict>Interrupt is enabled and expected, but not received</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27334,6 +27344,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="After device configure interrupt disable is only a hint to device">
           <result value="PASSED">
             <verdict>Interrupt was disabled, kept armed and recevied</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1345" notes="net/i40e losses packet after Rx interrupt disable">
+          <result value="FAILED">
+            <verdict>There are no received packets</verdict>
           </result>
         </results>
       </iter>
@@ -27378,6 +27393,11 @@
             <verdict>Interrupt is not expected, but received</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1345" notes="net/i40e losses packet after Rx interrupt disable">
+          <result value="FAILED">
+            <verdict>There are no received packets</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -27417,6 +27437,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="After device configure interrupt disable is only a hint to device">
           <result value="PASSED">
             <verdict>Interrupt was disabled, kept armed and recevied</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1345" notes="net/i40e losses packet after Rx interrupt disable">
+          <result value="FAILED">
+            <verdict>There are no received packets</verdict>
           </result>
         </results>
       </iter>
@@ -27544,6 +27569,11 @@
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="Interrupt is enabled on device configure, further calls to intr_enable is just a hint to device">
+          <result value="FAILED">
+            <verdict>Interrupt is not expected, but received</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="ref://dpdk-bz/1347" notes="net/i40e reports Rx interrupt just after enable">
           <result value="FAILED">
             <verdict>Interrupt is not expected, but received</verdict>
           </result>

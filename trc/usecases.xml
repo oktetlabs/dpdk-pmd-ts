@@ -32719,6 +32719,11 @@
             <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
           </result>
         </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support RTE flow API">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
       </iter>
     </test>
   </iter>

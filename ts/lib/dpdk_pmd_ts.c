@@ -4378,7 +4378,7 @@ test_setup_rss_configuration(tarpc_rss_hash_protos_t hf,
     };
     unsigned int i;
 
-    rss_conf->rss_key.rss_key_val = tapi_malloc(rss_key_sz);
+    rss_conf->rss_key.rss_key_val = tapi_malloc_or_null(rss_key_sz);
     rss_conf->rss_key.rss_key_len = rss_key_sz;
     rss_conf->rss_key_len = rss_key_sz;
     rss_conf->rss_hf = hf;
@@ -6304,7 +6304,7 @@ void
 test_rx_mq_rss_prepare(struct test_ethdev_config *ec,
                        tarpc_rss_hash_protos_t hash_protos)
 {
-    size_t key_sz = MAX(ec->dev_info.hash_key_size, RPC_RSS_HASH_KEY_LEN_DEF);
+    size_t key_sz = ec->dev_info.hash_key_size;
     struct tarpc_rte_eth_rss_conf *effective_conf;
     struct tarpc_rte_eth_rss_conf *initial_conf;
     struct test_rx_mq_rss *rss;
@@ -6324,14 +6324,14 @@ test_rx_mq_rss_prepare(struct test_ethdev_config *ec,
     if (initial_conf->rss_key_len != 0)
         TEST_FAIL("Cannot prepare Rx multi-queue RSS configuration twice");
 
-    initial_conf->rss_key.rss_key_val = tapi_malloc(key_sz);
+    initial_conf->rss_key.rss_key_val = tapi_malloc_or_null(key_sz);
     te_fill_buf(initial_conf->rss_key.rss_key_val, key_sz);
     initial_conf->rss_key.rss_key_len = key_sz;
     initial_conf->rss_key_len = key_sz;
     initial_conf->rss_hf = hash_protos;
 
     *effective_conf = *initial_conf;
-    effective_conf->rss_key.rss_key_val = tapi_malloc(key_sz);
+    effective_conf->rss_key.rss_key_val = tapi_malloc_or_null(key_sz);
     memcpy(effective_conf->rss_key.rss_key_val,
            initial_conf->rss_key.rss_key_val, key_sz);
 }

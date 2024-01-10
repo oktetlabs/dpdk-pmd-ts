@@ -100,8 +100,7 @@ main(int argc, char *argv[])
     CHECK_RC(test_get_rss_hf_by_tmpl(tmpl, &hash_functions));
     hash_functions &= ethdev_config.dev_info.flow_type_rss_offloads;
     test_setup_rss_configuration(hash_functions,
-                                 MAX(ethdev_config.dev_info.hash_key_size,
-                                     RPC_RSS_HASH_KEY_LEN_DEF),
+                                 ethdev_config.dev_info.hash_key_size,
                                  TRUE, rss_conf);
 
     TEST_STEP("Start the Ethernet device");

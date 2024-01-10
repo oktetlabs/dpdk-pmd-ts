@@ -979,13 +979,13 @@
                 <value>256</value>
                 <value>496</value>
                 <value>502</value>
-                <value>512</value>
+                <value reqs="I40E_UNSTABLE">512</value>
                 <value>1000</value>
-                <value>1024</value>
-                <value>2048</value>
-                <value>3584</value>
+                <value reqs="I40E_UNSTABLE">1024</value>
+                <value reqs="I40E_UNSTABLE">2048</value>
+                <value reqs="I40E_UNSTABLE">3584</value>
                 <value>4080</value>
-                <value>4096</value>
+                <value reqs="I40E_UNSTABLE">4096</value>
                 <value>8192</value>
                 <value>16384</value>
                 <value>32768</value>

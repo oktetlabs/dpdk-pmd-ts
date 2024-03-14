@@ -15650,6 +15650,17 @@
         <notes/>
       </iter>
     </test>
+    <test name="stats_reset" type="script">
+      <objective>Check the correctness of statistics reset</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="nb_pkts"/>
+        <arg name="payload_len"/>
+        <arg name="tmpl">VAR.tmpl.tst2iut.eth</arg>
+        <notes/>
+      </iter>
+    </test>
     <test name="rx_descriptor_status" type="script">
       <objective>Prove that Rx descriptor status callback readings are consistent</objective>
       <notes/>

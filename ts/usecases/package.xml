@@ -921,6 +921,23 @@
 
         <!--- @autogroup -->
         <run>
+            <script name="stats_reset"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="nb_pkts">
+                <value>[3,10]</value>
+            </arg>
+            <arg name="payload_len">
+                <value>[64,1500]</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
             <script name="rx_descriptor_status"/>
             <arg name="env">
                 <value ref="env.peer2peer"/>

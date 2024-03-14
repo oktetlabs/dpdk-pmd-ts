@@ -34,6 +34,7 @@ tests = [
     'set_default_mac_addr',
     'set_mc_addr_list',
     'set_mtu',
+    'stats_reset',
     'test_detach',
     'tunnel_udp_port_config',
     'tx_burst_simple',

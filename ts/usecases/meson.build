@@ -9,6 +9,7 @@ tests = [
     'dev_info_persistence',
     'dev_reconfigure',
     'flow_ctrl_get',
+    'flow_ctrl_set',
     'fw_version',
     'get_mtu',
     'io_forward_and_drop',

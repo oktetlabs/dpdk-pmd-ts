@@ -559,6 +559,193 @@
         </run>
 
         <!--- @autogroup -->
+        <run name="flow_ctrl_set_all">
+            <session track_conf="silent" track_conf_handdown="descendants">
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_mode">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_high_low_water">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water" list="water">
+                        <value>33280</value>
+                        <value>968</value>
+                        <value>10000</value>
+                    </arg>
+                    <arg name="low_water" list="water">
+                        <value>1024</value>
+                        <value>968</value>
+                        <value>2000</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_pause_time">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>0</value>
+                        <value>1024</value>
+                        <value>4096</value>
+                        <value>10240</value>
+                        <value>16386</value>
+                        <value>65535</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_send_xon">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>0</value>
+                        <value>1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_autoneg">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>0</value>
+                        <value>1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_mac_ctrl_frame_fwd">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>0</value>
+                        <value>1</value>
+                    </arg>
+                </run>
+
+            </session>
+        </run>
+
+        <!--- @autogroup -->
         <run>
             <script name="rx_scatter">
                 <req id="RX_SCATTER"/>

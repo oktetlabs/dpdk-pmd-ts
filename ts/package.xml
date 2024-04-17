@@ -28,6 +28,13 @@
             <value>STOPPED</value>
         </enum>
 
+        <enum name="ethdev_fc_conf.mode.all" global="true" description="Flow Control Modes of the Ethernet device">
+            <value>NONE</value>
+            <value>RX_PAUSE</value>
+            <value>TX_PAUSE</value>
+            <value>FULL</value>
+        </enum>
+
         <enum name="udp_tunnel_type.all" global="true" description="Types of the UDP tunnels">
             <value reqs="VXLAN">VXLAN</value>
             <value reqs="GENEVE">GENEVE</value>

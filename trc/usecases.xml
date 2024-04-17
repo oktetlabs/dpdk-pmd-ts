@@ -8374,6 +8374,102 @@
         </results>
       </iter>
     </test>
+    <test name="flow_ctrl_set_mode" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
+    <test name="flow_ctrl_set_high_low_water" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
+    <test name="flow_ctrl_set_pause_time" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
+    <test name="flow_ctrl_set_send_xon" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
+    <test name="flow_ctrl_set_autoneg" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
+    <test name="flow_ctrl_set_mac_ctrl_frame_fwd" type="script">
+      <objective>Set new status of the Ethernet link flow control for Ethernet device</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode"/>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="rss_hash_info" type="script">
       <objective>Test checks that ethdev writes right rss hash info to the packet</objective>
       <notes/>

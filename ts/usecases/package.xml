@@ -1254,6 +1254,26 @@
             <arg name="vlan_strip" type="boolean"/>
             <arg name="qinq_strip" type="boolean"/>
         </run>
+
+        <!--- @autogroup -->
+        <run>
+            <script name="vlan_filter"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.vlan.tcp4"/>
+                <value ref="tmpl.tst2iut.vlan.udp4"/>
+                <value ref="tmpl.tst2iut.vlan.eth"/>
+            </arg>
+            <arg name="nb_vlan_filters">
+                <value>1</value>
+                <value>3</value>
+                <value>5</value>
+                <value>64</value>
+            </arg>
+        </run>
+
         <!--- @autogroup -->
         <run name="io_forward_and_drop">
             <script name="io_forward_and_drop"/>

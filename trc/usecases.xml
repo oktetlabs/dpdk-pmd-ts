@@ -32716,6 +32716,16 @@
         </results>
       </iter>
     </test>
+    <test name="vlan_filter" type="script">
+      <objective>Check VLAN filtering offload</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="tmpl"/>
+        <arg name="nb_vlan_filters"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="io_forward_and_drop" type="script">
       <objective>Check that IO-forwarded packets do not erroneously bypass the flow engine</objective>
       <notes/>

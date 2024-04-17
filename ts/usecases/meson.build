@@ -43,6 +43,7 @@ tests = [
     'tx_multi_burst',
     'tx_stats',
     'update_rss_hash_conf',
+    'vlan_filter',
     'vlan_strip',
     'xstats_by_id',
     'xstats_dev_state',

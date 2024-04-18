@@ -41,6 +41,7 @@ tests = [
     'tx_descriptor_status',
     'tx_desc_nb',
     'tx_multi_burst',
+    'tx_pvid',
     'tx_stats',
     'update_rss_hash_conf',
     'vlan_filter',

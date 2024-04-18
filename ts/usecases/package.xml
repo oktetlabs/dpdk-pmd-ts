@@ -1275,6 +1275,79 @@
         </run>
 
         <!--- @autogroup -->
+        <run>
+            <script name="tx_pvid"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.tcp4"/>
+                <value ref="tmpl.tst2iut.vlan.udp4"/>
+            </arg>
+            <arg name="txmode_pvid" list="pvid">
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>-1</value>
+                <value>-1</value>
+                <value>-1</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+            </arg>
+            <arg name="txmode_prio" list="pvid">
+                <value>0</value>
+                <value>[1,7]</value>
+                <value>[0,7]</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>[0,7]</value>
+            </arg>
+            <arg name="txmode_cfi" list="pvid">
+                <value>0</value>
+                <value>0</value>
+                <value>1</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>[0,1]</value>
+            </arg>
+            <arg name="api_pvid" list="pvid">
+                <value>-1</value>
+                <value>-1</value>
+                <value>-1</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+                <value>[1,4095]</value>
+            </arg>
+            <arg name="api_prio" list="pvid">
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>[1,7]</value>
+                <value>[0,7]</value>
+                <value>0</value>
+                <value>[0,7]</value>
+            </arg>
+            <arg name="api_cfi" list="pvid">
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>0</value>
+                <value>1</value>
+                <value>0</value>
+                <value>[0,1]</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
         <run name="io_forward_and_drop">
             <script name="io_forward_and_drop"/>
             <arg name="env">

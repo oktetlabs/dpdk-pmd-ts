@@ -32726,6 +32726,21 @@
         <notes/>
       </iter>
     </test>
+    <test name="tx_pvid" type="script">
+      <objective>Check port based VLAN ID insertion support</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="tmpl"/>
+        <arg name="txmode_pvid"/>
+        <arg name="txmode_prio"/>
+        <arg name="txmode_cfi"/>
+        <arg name="api_pvid"/>
+        <arg name="api_prio"/>
+        <arg name="api_cfi"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="io_forward_and_drop" type="script">
       <objective>Check that IO-forwarded packets do not erroneously bypass the flow engine</objective>
       <notes/>

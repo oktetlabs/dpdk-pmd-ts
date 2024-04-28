@@ -73,14 +73,10 @@ main(int argc, char *argv[])
     struct test_pkt_addresses  inner_addrs = {
                                    .src_mac = (uint8_t *)"\x00\x00\x5e\x00\x03\x01",
                                    .dst_mac = (uint8_t *)"\x00\x00\x5e\x00\x03\x02",
-                                   .src_ip = test_rand_ip_addr(AF_INET6),
-                                   .dst_ip = test_rand_ip_addr(AF_INET6),
                                };
     struct test_pkt_addresses  outer_addrs = {
                                    .src_mac = (uint8_t *)"\x00\x00\x5e\x00\x03\x03",
                                    .dst_mac = (uint8_t *)"\x00\x00\x5e\x00\x03\x04",
-                                   .src_ip = test_rand_ip_addr(AF_INET6),
-                                   .dst_ip = test_rand_ip_addr(AF_INET6),
                                };
 
     rpc_rte_flow_action_p                switch_rule_act_count = RPC_NULL;
@@ -101,6 +97,7 @@ main(int argc, char *argv[])
     uint32_t                             nb_tunnel_rule_acts_pmd;
     rpc_rte_flow_p                       switch_rule = RPC_NULL;
     rpc_rte_flow_p                       tunnel_rule = RPC_NULL;
+    te_tad_protocols_t                   hdrs[TAPI_NDN_NLEVELS];
     uint32_t                             switch_rule_prio = 0;
     uint32_t                             tunnel_rule_prio = 0;
     asn_value                           *ingress_port_itm_ndn;
@@ -160,6 +157,33 @@ main(int argc, char *argv[])
                                                   switch_rule_ptrn_ndn,
                                                   &switch_rule_itms_app, &tmpl,
                                                   &match_fields);
+
+    TEST_STEP("Learn about protocol types present in the traffic template");
+    CHECK_RC(tapi_ndn_tmpl_classify(tmpl, hdrs));
+
+    TEST_STEP("Fill IP addresses in the traffic template where needed");
+    if (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4)
+    {
+        outer_addrs.dst_ip = test_rand_ip_addr(AF_INET);
+        outer_addrs.src_ip = test_rand_ip_addr(AF_INET);
+    }
+    else
+    {
+        outer_addrs.dst_ip = test_rand_ip_addr(AF_INET6);
+        outer_addrs.src_ip = test_rand_ip_addr(AF_INET6);
+    }
+
+    if (hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4)
+    {
+        inner_addrs.dst_ip = test_rand_ip_addr(AF_INET);
+        inner_addrs.src_ip = test_rand_ip_addr(AF_INET);
+    }
+    else
+    {
+        inner_addrs.dst_ip = test_rand_ip_addr(AF_INET6);
+        inner_addrs.src_ip = test_rand_ip_addr(AF_INET6);
+    }
+
     test_fill_in_tmpl_req_fields(tmpl, &outer_addrs, &inner_addrs);
 
     TEST_STEP("Since DST addresses are alien, enable promiscuous mode on IUT");

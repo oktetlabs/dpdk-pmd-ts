@@ -3190,7 +3190,7 @@ test_rand_ip_addr(int af)
     {
         do {
             SIN(addr)->sin_addr.s_addr = rand();
-        } while (IN_MULTICAST(SIN(addr)->sin_addr.s_addr));
+        } while (IN_MULTICAST(ntohl(SIN(addr)->sin_addr.s_addr)));
     }
     else if (af == AF_INET6)
     {

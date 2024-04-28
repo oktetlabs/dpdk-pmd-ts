@@ -174,8 +174,8 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_eth_gen_traffic_sniff_pattern(tst_host->ta, 0,
                                                 tst_if->if_name, tmpl, NULL,
                                                 &ptrn));
-    test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0,
-                                mbufs, TE_ARRAY_LEN(mbufs), 1, ptrn, TRUE);
+    CHECK_RC(test_rx_burst_match_pattern(iut_rpcs, tec.port_id, 0, mbufs,
+                                         TE_ARRAY_LEN(mbufs), 1, ptrn, TRUE));
 
     RPC_AWAIT_ERROR(iut_rpcs);
 

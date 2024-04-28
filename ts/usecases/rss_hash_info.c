@@ -128,9 +128,12 @@ main(int argc, char *argv[])
     TEST_STEP("Receive packets on port @p iut_port");
     received = 0;
     for (i = 0; i < nb_rx_queues && received < TE_ARRAY_LEN(mbufs); i++)
-        received += rpc_rte_eth_rx_burst(iut_rpcs, iut_port->if_index, i,
-                                         mbufs + received,
-                                         TE_ARRAY_LEN(mbufs) - received);
+    {
+        received += test_rx_burst_with_retries(iut_rpcs, iut_port->if_index, i,
+                                               mbufs + received,
+                                               TE_ARRAY_LEN(mbufs) - received,
+                                               1);
+    }
 
     CHECK_PACKETS_NUM(received, 1);
 

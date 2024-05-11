@@ -79,6 +79,7 @@
                 <value>1</value>
             </arg>
             <arg name="testpmd_command_loopback_mode">
+                <value>1</value>
                 <value>3</value>
                 <value>27</value>
                 <value>29</value>

@@ -31,6 +31,41 @@
         <arg name="testpmd_arg_rxfreet"/>
         <arg name="testpmd_arg_txfreet"/>
         <arg name="n_fwd_cores"/>
+        <arg name="testpmd_command_loopback_mode">1</arg>
+        <notes/>
+        <results tags="pci-15b3" key="WONTFIX LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03|pci-10ee-0100" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_tx_first"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <arg name="n_fwd_cores"/>
         <arg name="testpmd_command_loopback_mode">3</arg>
         <notes/>
         <results tags="pci-15b3" key="WONTFIX LOOPBACK-MODE">

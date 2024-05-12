@@ -21,6 +21,8 @@
 
 #include "te_string.h"
 #include "te_defs.h"
+#include "te_vector.h"
+#include "conf_api.h"
 
 #include "tapi_cfg_base.h"
 #include "tapi_cfg_if.h"
@@ -637,6 +639,48 @@ exit:
 }
 
 /**
+ * Populate loopback modes in CS tree based on environment variable
+ * TE_ENV_DPDK_IUT_LOOPBACK_MODES (space-separated).
+ *
+ * @return Status code.
+ */
+static te_errno
+populate_loopback_modes(void)
+{
+    const char *loopback_modes = getenv("TE_ENV_DPDK_IUT_LOOPBACK_MODES");
+    te_vec strvec = TE_VEC_INIT(char *);
+    const char * const *mode;
+    te_errno rc = 0;
+
+    if (loopback_modes == NULL)
+        goto done;
+
+    rc = te_vec_split_string(loopback_modes, &strvec, ' ', TRUE);
+    if (rc != 0)
+    {
+        ERROR("Failed to parse loopback modes string '%s': %r",
+              loopback_modes, rc);
+        goto done;
+    }
+
+    TE_VEC_FOREACH(&strvec, mode)
+    {
+        rc = cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
+                                  "/local:/dpdk:/iut_loopback_mode:%s",
+                                  *mode);
+        if (rc != 0)
+        {
+            ERROR("Failed to add loopback mode '%s': %r", *mode, rc);
+            goto done;
+        }
+    }
+
+done:
+    te_vec_deep_free(&strvec);
+    return rc;
+}
+
+/**
  * Check an RPC server controls DPDK interfaces.
  *
  * @param rpcs The RPC server.
@@ -877,6 +921,8 @@ main(int argc, char **argv)
     }
 
     CFG_WAIT_CHANGES;
+
+    CHECK_RC(populate_loopback_modes());
 
     CHECK_RC(rc = cfg_synchronize("/:", TRUE));
     CHECK_RC(rc = cfg_tree_print(NULL, TE_LL_RING, "/:"));

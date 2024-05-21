@@ -218,7 +218,8 @@ main(int argc, char *argv[])
 
     ethdev_config.nb_rx_queue = 1;
     ethdev_config.nb_tx_queue = nb_tx_queues;
-    ethdev_config.min_tx_desc = burst_size_per_txq;
+    ethdev_config.min_tx_desc =
+        test_get_min_tx_descs_by_nb_pkts(burst_size_per_txq);
 
     (void)test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                          &eth_conf);

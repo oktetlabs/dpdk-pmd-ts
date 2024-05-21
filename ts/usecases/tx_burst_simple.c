@@ -66,7 +66,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Initialize EAL, preparing of configured Ethernet device state");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
-    ethdev_config.min_tx_desc = nb_pkts;
+    ethdev_config.min_tx_desc = test_get_min_tx_descs_by_nb_pkts(nb_pkts);
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
     TEST_STEP("Prepare mbufs to be sent and pattern to match it by @p tmpl");

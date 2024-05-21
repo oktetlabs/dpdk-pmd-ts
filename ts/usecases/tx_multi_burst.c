@@ -79,7 +79,7 @@ main(int argc, char *argv[])
               "using @p nb_queues for set up transmit queues");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     ethdev_config.nb_tx_queue = nb_queues;
-    ethdev_config.min_tx_desc = nb_pkts;
+    ethdev_config.min_tx_desc = test_get_min_tx_descs_by_nb_pkts(nb_pkts);
 
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 

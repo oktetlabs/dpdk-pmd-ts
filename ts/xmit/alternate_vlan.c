@@ -166,7 +166,8 @@ main(int argc, char *argv[])
     CHECK_RC(test_mk_txmode_txconf(&ethdev_config, tx_offloads,
                                    &eth_conf.txmode, NULL));
 
-    ethdev_config.min_tx_desc = TEST_TX_PKTS_NUM;
+    ethdev_config.min_tx_desc =
+        test_get_min_tx_descs_by_nb_pkts(TEST_TX_PKTS_NUM);
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Obtain the source Ethernet address");

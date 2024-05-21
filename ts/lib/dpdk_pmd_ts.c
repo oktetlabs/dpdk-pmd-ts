@@ -5331,6 +5331,12 @@ test_get_extra_tx_descs_per_pkt(void)
 }
 
 unsigned int
+test_get_min_tx_descs_by_nb_pkts(unsigned int nb_pkts)
+{
+    return nb_pkts * (1 + test_get_extra_tx_descs_per_pkt());
+}
+
+unsigned int
 test_get_tso_payload_cutoff_barrier(unsigned int hdrs_len)
 {
     const char *path = "/local:/dpdk:/tso_cutoff_barrier:";

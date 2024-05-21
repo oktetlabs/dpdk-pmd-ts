@@ -1545,6 +1545,11 @@ extern void test_send_and_match_one_packet_custom_verdicts(rcf_rpc_server *rpcs,
 extern unsigned int test_get_extra_tx_descs_per_pkt(void);
 
 /**
+ * Get minimum number of Tx descriptors to send specified number of packets.
+ */
+extern unsigned int test_get_min_tx_descs_by_nb_pkts(unsigned int nb_pkts);
+
+/**
  * Get TSO payload cutoff barrier (i.e. without net headers length).
  *
  * @param hdrs_len      Net headers length.

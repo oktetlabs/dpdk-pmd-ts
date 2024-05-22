@@ -80,9 +80,9 @@ main(int argc, char *argv[])
     TEST_GET_LINK_ADDR(mcast_addr);
 
     TEST_STEP("Initialize EAL");
-    CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
-                                         &ethdev_config,
-                                         TEST_ETHDEV_INITIALIZED));
+    (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
+    ethdev_config.min_rx_desc = nb_pkts + 1;
+    CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Start the Ethernet device");
     ethdev_config.required_mtu = payload_len;

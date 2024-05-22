@@ -99,6 +99,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare @p ethdev_state Ethernet device state");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port,
                                &ethdev_config);
+    ethdev_config.min_rx_desc = MAX(nb_mc_addr, nb_mismatch_addr) + 1;
 
     CHECK_RC(test_prepare_ethdev(&ethdev_config, ethdev_state));
 

@@ -182,6 +182,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &tec);
+    tec.min_rx_desc = 2 /* tested packets */ + 1;
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Check the capabilities and adjust the expectations of checksum flags");

@@ -1881,7 +1881,8 @@ test_pt_by_ip6_pdu_choice(const asn_value *ipc,
 
     if (inner_ip6_ext_supported)
     {
-        if ((next_header == IPPROTO_UDP) || (next_header == IPPROTO_TCP))
+        if ((next_header == IPPROTO_UDP) || (next_header == IPPROTO_TCP) ||
+            (next_header == IPPROTO_GRE))
             *l3_inner = TARPC_RTE_PTYPE_INNER_L3_IPV6;
         else
             *l3_inner = TARPC_RTE_PTYPE_INNER_L3_IPV6_EXT;
@@ -1893,7 +1894,8 @@ test_pt_by_ip6_pdu_choice(const asn_value *ipc,
 
     if (outer_ip6_ext_supported)
     {
-        if ((next_header == IPPROTO_UDP) || (next_header == IPPROTO_TCP))
+        if ((next_header == IPPROTO_UDP) || (next_header == IPPROTO_TCP) ||
+            (next_header == IPPROTO_GRE))
             *l3_outer = TARPC_RTE_PTYPE_L3_IPV6;
         else
             *l3_outer = TARPC_RTE_PTYPE_L3_IPV6_EXT;

@@ -936,7 +936,8 @@ test_setup_ethdev_started(struct test_ethdev_config *test_ethdev_config)
 static void
 test_setup_ethdev_stopped(struct test_ethdev_config *test_ethdev_config)
 {
-    rpc_rte_eth_dev_stop(test_ethdev_config->rpcs, test_ethdev_config->port_id);
+    tapi_rpc_rte_eth_dev_stop(test_ethdev_config->rpcs,
+                              test_ethdev_config->port_id);
 }
 
 static void
@@ -964,7 +965,8 @@ test_rollback_ethdev_initialized(struct test_ethdev_config *test_ethdev_config)
 static void
 test_rollback_ethdev_configured(struct test_ethdev_config *test_ethdev_config)
 {
-    rpc_rte_eth_dev_stop(test_ethdev_config->rpcs, test_ethdev_config->port_id);
+    tapi_rpc_rte_eth_dev_stop(test_ethdev_config->rpcs,
+                              test_ethdev_config->port_id);
     rpc_rte_eth_dev_close(test_ethdev_config->rpcs, test_ethdev_config->port_id);
     test_ethdev_config->closed = TRUE;
 };
@@ -1022,7 +1024,8 @@ test_rollback_ethdev_tx_setup_done(struct test_ethdev_config *test_ethdev_config
 static void
 test_rollback_ethdev_started(struct test_ethdev_config *test_ethdev_config)
 {
-    rpc_rte_eth_dev_stop(test_ethdev_config->rpcs, test_ethdev_config->port_id);
+    tapi_rpc_rte_eth_dev_stop(test_ethdev_config->rpcs,
+                              test_ethdev_config->port_id);
 };
 
 static void
@@ -5841,7 +5844,7 @@ test_rte_af_packet_on_tst_if_release(rcf_rpc_server            *tst_rpcs,
     else if (rc != 0)
         TEST_FAIL("rpc_rte_eth_dev_get_port_by_name() failed: %r", -rc);
 
-    rpc_rte_eth_dev_stop(tst_rpcs, port_id);
+    tapi_rpc_rte_eth_dev_stop(tst_rpcs, port_id);
 
     CHECK_RC(rpc_rte_eal_hotplug_remove(tst_rpcs, "vdev", dn.ptr));
     te_string_free(&dn);

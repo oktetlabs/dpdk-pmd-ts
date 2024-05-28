@@ -119,7 +119,7 @@ main(int argc, char *argv[])
             RPC_AWAIT_ERROR(iut_rpcs);
             rc = rpc_rte_eth_dev_start(iut_rpcs, iut_port->if_index);
             if (rc == 0)
-                rpc_rte_eth_dev_stop(iut_rpcs, iut_port->if_index);
+                tapi_rpc_rte_eth_dev_stop(iut_rpcs, iut_port->if_index);
         }
     }
     if (rc != 0)

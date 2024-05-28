@@ -229,7 +229,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Stop and start the device again to make sure that the device can be "
               "stopped while some of its queues are not set up");
-    rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
+    tapi_rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
     rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
 
     TEST_STEP("Prepare @p tmpl for test");
@@ -320,7 +320,7 @@ main(int argc, char *argv[])
     TEST_STEP("Restart the device to start all Rx queues except @p rxq_runtime_setup_idx "
               "queue if @p deferred_start is @c TRUE. Also make sure that the current "
               "state of the queues does not cause device start and stop failures");
-    rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
+    tapi_rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
     rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
 
     TEST_STEP("Start the @p rxq_runtime_setup_idx queue if @p deferred_start is @c TRUE");

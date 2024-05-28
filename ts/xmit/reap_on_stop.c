@@ -275,7 +275,7 @@ main(int argc, char *argv[])
 cleanup:
     if (rpc_rte_eth_dev_is_valid_port(iut_rpcs, iut_port->if_index))
     {
-        rpc_rte_eth_dev_stop(iut_rpcs, iut_port->if_index);
+        tapi_rpc_rte_eth_dev_stop(iut_rpcs, iut_port->if_index);
         rpc_rte_eth_dev_close(iut_rpcs, iut_port->if_index);
     }
 

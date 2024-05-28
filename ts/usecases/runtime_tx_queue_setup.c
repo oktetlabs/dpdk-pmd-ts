@@ -155,7 +155,7 @@ main(int argc, char *argv[])
 
     TEST_STEP("Stop and start the device again to make sure that the device can be "
               "stopped while some of its queues are not set up");
-    rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
+    tapi_rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
     rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
 
     CHECK_RC(tapi_rpc_add_mac_as_octstring2kvpair(iut_rpcs, iut_port->if_index,
@@ -241,7 +241,7 @@ main(int argc, char *argv[])
                      "queues that were setup previously except for deferred start queues. "
                      "Also make sure that the current state of the "
                      "queues does not cause device start and stop failures");
-        rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
+        tapi_rpc_rte_eth_dev_stop(ec.rpcs, ec.port_id);
         rpc_rte_eth_dev_start(ec.rpcs, ec.port_id);
     }
 

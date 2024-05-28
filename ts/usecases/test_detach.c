@@ -47,7 +47,7 @@ main(int argc, char *argv[])
         TEST_VERDICT("The port is not reported as attached upon start");
 
     TEST_STEP("Stop the port @p iut_port");
-    rpc_rte_eth_dev_stop(iut_rpcs, tecp->port_id);
+    tapi_rpc_rte_eth_dev_stop(iut_rpcs, tecp->port_id);
 
     TEST_STEP("Close the port @p iut_port");
     rpc_rte_eth_dev_close(iut_rpcs, tecp->port_id);

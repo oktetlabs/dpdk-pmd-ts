@@ -8388,6 +8388,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_ctrl_set_high_low_water" type="script">
@@ -8404,6 +8424,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_ctrl_set_pause_time" type="script">
@@ -8420,6 +8460,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_ctrl_set_send_xon" type="script">
@@ -8436,6 +8496,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_ctrl_set_autoneg" type="script">
@@ -8452,6 +8532,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="flow_ctrl_set_mac_ctrl_frame_fwd" type="script">
@@ -8468,6 +8568,26 @@
         <arg name="autoneg"/>
         <arg name="mac_ctrl_frame_fwd"/>
         <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="rss_hash_info" type="script">

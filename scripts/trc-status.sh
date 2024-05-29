@@ -9,8 +9,8 @@
 
 source "$(dirname "$(which $0)")"/guess.sh
 
-DPDK_VER=v21.11
-DPDK_NUM=21110016
+DPDK_VER=v24.03
+DPDK_NUM=24030016
 
 declare -a COMMON_OPTS
 COMMON_OPTS+=(--db="${TE_TS_TRC_DB}")

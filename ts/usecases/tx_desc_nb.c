@@ -30,6 +30,7 @@
 
 #include "dpdk_pmd_test.h"
 #include "tapi_cfg_base.h"
+#include "tapi_cfg_if.h"
 
 #define TEST_PAYLOAD_LEN 128
 #define TEST_TXQ 0
@@ -59,6 +60,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_desc_lim      *tx_desc_lim;
     te_bool                             fail_test = FALSE;
     te_bool                             limits_violated;
+    int64_t                             tst_ring_sz;
 
     TEST_START;
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
@@ -167,6 +169,10 @@ main(int argc, char *argv[])
                      "been produced, but should be %d", count, nb_pkts);
     }
 
+    TEST_STEP("Bump Rx ring size to maximum on Tester side");
+    CHECK_RC(tapi_cfg_if_set_ring_size_to_max(tst_host->ta, tst_if->if_name,
+                                              true, &tst_ring_sz));
+
     CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
                                                 tst_if->if_name,
                                                 TAD_ETH_RECV_DEF,
@@ -194,11 +200,14 @@ main(int argc, char *argv[])
     TEST_STEP("Check that no extra packets are received on Tester");
     CHECK_RC(tapi_tad_csap_get_no_match_pkts(tst_host->ta, 0, rx_csap,
                                              &no_match_pkts));
-    if (no_match_pkts != 0)
-        TEST_VERDICT("%u not matching packets were received", no_match_pkts);
+    if ((int64_t)sent <= tst_ring_sz)
+    {
+        if (no_match_pkts != 0)
+            TEST_VERDICT("%u not matching packets were received", no_match_pkts);
 
-    TEST_STEP("Check that received and sent packet counts match");
-    CHECK_PACKETS_NUM(received, sent);
+        TEST_STEP("Check that received and sent packet counts match");
+        CHECK_PACKETS_NUM(received, sent);
+    }
 
     if (sent > nb_txd)
         TEST_VERDICT("Number of sent packets is greater than setup Tx ring size");

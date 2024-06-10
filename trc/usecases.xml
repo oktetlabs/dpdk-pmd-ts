@@ -8545,6 +8545,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-CTRL-HIGH-WATER-LIMITS" notes="i40e has limitations on high/low watermark values">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8607,6 +8612,11 @@
         <results tags="net_bonding">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-CTRL-HIGH-WATER-LIMITS" notes="i40e has limitations on high/low watermark values">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">

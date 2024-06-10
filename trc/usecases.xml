@@ -32732,13 +32732,34 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="tmpl"/>
-        <arg name="txmode_pvid"/>
+        <arg name="txmode_pvid">-1</arg>
+        <arg name="txmode_prio"/>
+        <arg name="txmode_cfi"/>
+        <arg name="api_pvid">[1,4095]</arg>
+        <arg name="api_prio"/>
+        <arg name="api_cfi"/>
+        <notes/>
+        <results tags="net_virtio" key="TX-PVID-API" notes="net/virtio does not support Tx PVID set API">
+          <result value="SKIPPED">
+            <verdict>Runtime Tx PVID set is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="tmpl"/>
+        <arg name="txmode_pvid">[1,4095]</arg>
         <arg name="txmode_prio"/>
         <arg name="txmode_cfi"/>
         <arg name="api_pvid"/>
         <arg name="api_prio"/>
         <arg name="api_cfi"/>
         <notes/>
+        <results tags="net_virtio" key="TX-PVID-TXMODE" notes="net/virtio silently ignores PVID set in Tx mode configuration">
+          <result value="FAILED">
+            <verdict>1 not matching packets were received</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="io_forward_and_drop" type="script">

@@ -1272,6 +1272,26 @@
 
         <!--- @autogroup -->
         <run>
+            <script name="rx_ring_wrap"/>
+            <arg name="env">
+                <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="template">
+                <value ref="tmpl.tst2iut.eth"/>
+            </arg>
+            <arg name="nb_rxd">
+                <value>32</value>
+                <value>64</value>
+                <value>512</value>
+            </arg>
+            <arg name="nb_wrap">
+                <value>1</value>
+                <value>3</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run>
             <script name="set_mc_addr_list"/>
             <arg name="env">
                 <value ref="env.peer2peer"/>

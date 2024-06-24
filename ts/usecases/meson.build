@@ -30,6 +30,7 @@ tests = [
     'rx_intr',
     'rx_offload_checksum',
     'rx_ptype',
+    'rx_ring_wrap',
     'rx_scatter',
     'rx_stats',
     'set_default_mac_addr',

@@ -27692,6 +27692,17 @@
         </results>
       </iter>
     </test>
+    <test name="rx_ring_wrap" type="script">
+      <objective>Make sure that driver can correctly refill Rx queue desc ring</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd"/>
+        <arg name="nb_wrap"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="set_mc_addr_list" type="script">
       <objective>Set the list of multicast addresses to filter on iut_port port</objective>
       <notes/>

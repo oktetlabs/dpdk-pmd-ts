@@ -46,7 +46,8 @@
         typeof(int64_val_) beg = (beg_);                                \
         typeof(int64_val_) end = (end_);                                \
                                                                         \
-        static_assert(sizeof(typeof(int64_val_)) == sizeof(int64_t));   \
+        _Static_assert(_Generic((int64_val_), int64_t: 1, default: 0),  \
+                       #int64_val_ " is not of type int64_t");          \
         if (val < beg || val > end)                                     \
         {                                                               \
             TEST_VERDICT(#int64_val_ " isn't in range of "              \

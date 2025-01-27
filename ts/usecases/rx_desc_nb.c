@@ -221,11 +221,13 @@ cleanup:
         rpc_rte_pktmbuf_free_array(iut_rpcs, mbufs, received);
     free(mbufs);
 
-    /*
-     * Try to read out sent packets to prevent providing them to the following
-     * tests.
-     */
-    test_rx_clean_queue(iut_rpcs, iut_port->if_index, TEST_RXQ);
+    if (ethdev_config.cur_state == TEST_ETHDEV_STARTED) {
+       /*
+        * Try to read out sent packets to prevent
+        * providing them to the following tests.
+        */
+        test_rx_clean_queue(iut_rpcs, iut_port->if_index, TEST_RXQ);
+    }
 
     TEST_END;
 }

@@ -7764,8 +7764,8 @@
               }
             }</value>
   </global>
-  <global name="flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan" global="true">
-            <value reqs="VXLAN">{
+  <global name="flow_rule_pattern.ip4.udp_dst.vsid.ifrm_dst_mac.vxlan">
+            <value>{
               eth:{
               },
               ip4:{
@@ -7781,8 +7781,8 @@
               }
             }</value>
   </global>
-  <global name="flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan" global="true">
-            <value reqs="VXLAN,OUTER_IP6">{
+  <global name="flow_rule_pattern.ip6.udp_dst.vsid.ifrm_dst_mac.vxlan">
+            <value>{
               eth:{
               },
               ip6:{
@@ -7805,8 +7805,8 @@
               }
             }</value>
   </global>
-  <global name="flow_rule_pattern.ip4.udp_dst.vsid.vxlan" global="true">
-            <value reqs="VXLAN">{
+  <global name="flow_rule_pattern.ip4.udp_dst.vsid.vxlan">
+            <value>{
               eth:{
               },
               ip4:{
@@ -7819,8 +7819,8 @@
               }
             }</value>
   </global>
-  <global name="flow_rule_pattern.ip6.udp_dst.vsid.vxlan" global="true">
-            <value reqs="VXLAN,OUTER_IP6">{
+  <global name="flow_rule_pattern.ip6.udp_dst.vsid.vxlan">
+            <value>{
               eth:{
               },
               ip6:{
@@ -7885,7 +7885,7 @@
             }</value>
   </global>
   <global name="flow_rule_pattern.ethertype.4tuple.vxlan">
-            <value reqs="VXLAN">{
+            <value>{
               eth:{
               },
               ip4:{

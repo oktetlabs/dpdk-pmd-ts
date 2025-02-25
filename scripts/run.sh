@@ -239,6 +239,9 @@ for opt ; do
             pscript="$(tsrigs_publish_get dpdk-ethdev-ts)"
             RUN_OPTS+=("--publish=${pscript}")
             ;;
+        --build-only)
+            export TE_TS_BUILD_ONLY="yes"
+            ;;&
         *)  RUN_OPTS+=("${opt}") ;;
     esac
     shift 1
@@ -299,6 +302,11 @@ fi
 
 # Add test suite default options after configuration specifics
 RUN_OPTS+=(--opts=opts.ts)
+
+# TRC tags are not required in the case of --build-only.
+if [[ -z "${TE_TS_BUILD_ONLY}" ]] ; then
+    RUN_OPTS+=(--opts=trc-opts.ts)
+fi
 
 MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TE_TS_RIGSDIR}${TE_TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
 

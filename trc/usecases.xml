@@ -10998,19 +10998,24 @@
         <arg name="n_rxq">3</arg>
         <arg name="tmpl"/>
         <notes/>
-        <results tags="pci-8086-1521">
+        <results tags="max_rx_queues&lt;3">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_e1000_igb">
           <result value="FAILED">
             <verdict>Deferred start has not been applied for RX queue</verdict>
+          </result>
+        </results>
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup RxQ: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="vdev-bonding">
           <result value="SKIPPED">
             <verdict>Rx queue start operation is not supported</verdict>
-          </result>
-        </results>
-        <results tags="max_rx_queues&lt;3">
-          <result value="SKIPPED">
-            <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -11029,19 +11034,24 @@
         <arg name="n_rxq">4</arg>
         <arg name="tmpl"/>
         <notes/>
-        <results tags="pci-8086-1521">
+        <results tags="max_rx_queues&lt;4">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_e1000_igb">
           <result value="FAILED">
             <verdict>Deferred start has not been applied for RX queue</verdict>
+          </result>
+        </results>
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup RxQ: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="vdev-bonding">
           <result value="SKIPPED">
             <verdict>Rx queue start operation is not supported</verdict>
-          </result>
-        </results>
-        <results tags="max_rx_queues&lt;4">
-          <result value="SKIPPED">
-            <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -11060,19 +11070,24 @@
         <arg name="n_rxq">7</arg>
         <arg name="tmpl"/>
         <notes/>
-        <results tags="pci-8086-1521">
+        <results tags="max_rx_queues&lt;7">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_e1000_igb">
           <result value="FAILED">
             <verdict>Deferred start has not been applied for RX queue</verdict>
+          </result>
+        </results>
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup RxQ: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="vdev-bonding">
           <result value="SKIPPED">
             <verdict>Rx queue start operation is not supported</verdict>
-          </result>
-        </results>
-        <results tags="max_rx_queues&lt;7">
-          <result value="SKIPPED">
-            <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -11091,19 +11106,24 @@
         <arg name="n_rxq">11</arg>
         <arg name="tmpl"/>
         <notes/>
-        <results tags="pci-8086-1521">
+        <results tags="max_rx_queues&lt;11">
+          <result value="SKIPPED">
+            <verdict>So many Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_e1000_igb">
           <result value="FAILED">
             <verdict>Deferred start has not been applied for RX queue</verdict>
+          </result>
+        </results>
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup RxQ: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="vdev-bonding">
           <result value="SKIPPED">
             <verdict>Rx queue start operation is not supported</verdict>
-          </result>
-        </results>
-        <results tags="max_rx_queues&lt;11">
-          <result value="SKIPPED">
-            <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
@@ -11136,9 +11156,19 @@
             <verdict>So many Tx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="net/virtio does not supported deferred TxQ start">
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_virtio" notes="net/virtio does not supported deferred TxQ start">
           <result value="FAILED">
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="net/virtio does not supported deferred TxQ start">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
@@ -11163,9 +11193,19 @@
             <verdict>So many Tx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="net/virtio does not supported deferred TxQ start">
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_virtio" notes="net/virtio does not supported deferred TxQ start">
           <result value="FAILED">
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="net/virtio does not supported deferred TxQ start">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
@@ -11190,9 +11230,19 @@
             <verdict>So many Tx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="net/virtio does not supported deferred TxQ start">
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_virtio" notes="net/virtio does not supported deferred TxQ start">
           <result value="FAILED">
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="net/virtio does not supported deferred TxQ start">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">
@@ -11217,9 +11267,19 @@
             <verdict>So many Tx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="net/virtio does not supported deferred TxQ start">
+        <results tags="net_e1000_igb">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="dpdk&lt;25030002&amp;net_virtio" notes="net/virtio does not supported deferred TxQ start">
           <result value="FAILED">
             <verdict>Failed to setup TxQ 0: EINVAL</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="net/virtio does not supported deferred TxQ start">
+          <result value="FAILED">
+            <verdict>Failed to setup TxQ 0: EOPNOTSUPP</verdict>
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1102" notes="i40e: enabling Rx/Tx queue deferred start has no effect">

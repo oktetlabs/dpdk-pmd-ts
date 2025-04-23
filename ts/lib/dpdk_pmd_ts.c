@@ -614,6 +614,7 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
 {
     uint16_t queue;
     uint16_t rx_descs = nb_rx_desc;
+    int rc;
 
     if (rx_descs == 0)
     {
@@ -639,9 +640,16 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
 
     for (queue = 0; queue < nb_rx_queue; queue++)
     {
-        rpc_rte_eth_rx_queue_setup(rpcs, port_id, queue, rx_descs, socket_id,
-                                   (rx_confs == NULL) ? NULL : rx_confs[queue],
-                                   *mp);
+        RPC_AWAIT_IUT_ERROR(rpcs);
+        rc = rpc_rte_eth_rx_queue_setup(rpcs, port_id, queue, rx_descs,
+                                        socket_id,
+                                        (rx_confs == NULL) ? NULL :
+                                            rx_confs[queue],
+                                        *mp);
+        if (rc != 0)
+        {
+            TEST_VERDICT("Failed to setup RxQ: %s", errno_rpc2str(-rc));
+        }
     }
 }
 

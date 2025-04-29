@@ -64,6 +64,7 @@ EOF
                             Use --vdev=net_af_xdp0 to request af_xdp device.
   --iut-dpdk-drv=<NAME>     DPDK-compatible driver to be used on IUT agent
   --tst-dpdk-drv=<NAME>     DPDK-compatible driver to be used on TST agent
+  --prevent-netdrv-autobind Prevent net driver autobinding to other PCI instances
 
   --no-meta                 Do not generate testing metadata
   --publish                 Publish testing logs to Bublik
@@ -229,6 +230,9 @@ for opt ; do
         --tst-dpdk-drv=*)
             tst_dpdk_driver="${opt#--tst-dpdk-drv=}"
             export TE_ENV_TST_DPDK_DRIVER=${tst_dpdk_driver}
+            ;;
+        --prevent-netdrv-autobind)
+            export TE_PREVENT_NETDRV_AUTOBIND=1
             ;;
         --no-meta)
             TE_RUN_META=no

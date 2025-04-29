@@ -10439,7 +10439,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03)">
+        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03|pci-1924-0c03)">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -10543,7 +10543,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03)">
+        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03|pci-1924-0c03)">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -10731,7 +10731,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03)">
+        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03|pci-1924-0c03)">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>
@@ -10835,7 +10835,7 @@
             <verdict>The operation to add a tunnel UDP port is unsupported</verdict>
           </result>
         </results>
-        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03)">
+        <results tags="rx-full-featured&amp;(pci-1924-0a03|pci-1924-0b03|pci-1924-0c03)">
           <result value="PASSED">
             <verdict>Rx checksum offload happened unexpectedly for the packet with good checksums</verdict>
             <verdict>Rx checksum offload happened unexpectedly for the packet with bad checksums</verdict>

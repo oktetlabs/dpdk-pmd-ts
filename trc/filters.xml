@@ -15641,6 +15641,11 @@
         <arg name="transfer">TRUE</arg>
         <arg name="ttl"/>
         <notes/>
+        <results tags="pci-1924&amp;!ef100" key="WONTFIX HW" notes="Only EF100 supports transfer flows">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: Transfer is not supported</verdict>
+          </result>
+        </results>
         <results tags="pci-1924&amp;rx-dpdk" key="WONTFIX FW" notes="FW variant does not support match pattern">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: The flow rule pattern is unsupported</verdict>

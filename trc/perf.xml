@@ -83,6 +83,11 @@
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
         </results>
+        <results tags="pci-1924-0c03" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
         <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
@@ -118,6 +123,11 @@
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>
         </results>
+        <results tags="pci-1924-0c03" key="WONTFIX HW-NO-LOOPBACK-MODE">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
         <results tags="pci-8086" key="WONTFIX LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
@@ -149,6 +159,11 @@
           </result>
         </results>
         <results tags="pci-1924-1903|pci-1924-1923|pci-1924-1a03|pci-1924-1b03">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
+          </result>
+        </results>
+        <results tags="pci-1924-0c03" key="WONTFIX HW-NO-LOOPBACK-MODE">
           <result value="SKIPPED">
             <verdict>Iteration skipped due to unsupported loopback mode by hardware</verdict>
           </result>

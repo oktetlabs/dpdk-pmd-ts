@@ -8560,6 +8560,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8590,6 +8595,11 @@
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8629,6 +8639,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8664,6 +8679,11 @@
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8703,6 +8723,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -8738,6 +8763,11 @@
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-HIGH-WATER-NOTSUP" notes="net/sfc does not support high/low watermark setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>

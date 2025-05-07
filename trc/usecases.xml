@@ -9554,7 +9554,7 @@
         <arg name="pause_time"/>
         <arg name="send_xon"/>
         <arg name="autoneg"/>
-        <arg name="mac_ctrl_frame_fwd"/>
+        <arg name="mac_ctrl_frame_fwd">0</arg>
         <notes/>
         <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
           <result value="SKIPPED">
@@ -9580,13 +9580,50 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="ethdev_state"/>
+        <arg name="mode">NONE</arg>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd">1</arg>
+        <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-PAUSE-NOTSUP" notes="net/sfc does not support pause time setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
         <arg name="mode">RX_PAUSE</arg>
         <arg name="high_water"/>
         <arg name="low_water"/>
         <arg name="pause_time"/>
         <arg name="send_xon"/>
         <arg name="autoneg"/>
-        <arg name="mac_ctrl_frame_fwd"/>
+        <arg name="mac_ctrl_frame_fwd">0</arg>
         <notes/>
         <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
           <result value="SKIPPED">
@@ -9617,13 +9654,55 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="ethdev_state"/>
+        <arg name="mode">RX_PAUSE</arg>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd">1</arg>
+        <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-CTRL-MODE-CURRENT" notes="i40e returns current mode on get, not requested">
+          <result value="FAILED">
+            <verdict>The current mode is NONE vs the expected RX_PAUSE</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-PAUSE-NOTSUP" notes="net/sfc does not support pause time setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
         <arg name="mode">TX_PAUSE</arg>
         <arg name="high_water"/>
         <arg name="low_water"/>
         <arg name="pause_time"/>
         <arg name="send_xon"/>
         <arg name="autoneg"/>
-        <arg name="mac_ctrl_frame_fwd"/>
+        <arg name="mac_ctrl_frame_fwd">0</arg>
         <notes/>
         <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
           <result value="SKIPPED">
@@ -9654,13 +9733,55 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="ethdev_state"/>
+        <arg name="mode">TX_PAUSE</arg>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd">1</arg>
+        <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-CTRL-MODE-CURRENT" notes="i40e returns current mode on get, not requested">
+          <result value="FAILED">
+            <verdict>The current mode is NONE vs the expected TX_PAUSE</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-PAUSE-NOTSUP" notes="net/sfc does not support pause time setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
         <arg name="mode">FULL</arg>
         <arg name="high_water"/>
         <arg name="low_water"/>
         <arg name="pause_time"/>
         <arg name="send_xon"/>
         <arg name="autoneg"/>
-        <arg name="mac_ctrl_frame_fwd"/>
+        <arg name="mac_ctrl_frame_fwd">0</arg>
         <notes/>
         <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
           <result value="SKIPPED">
@@ -9685,6 +9806,48 @@
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="ethdev_state"/>
+        <arg name="mode">FULL</arg>
+        <arg name="high_water"/>
+        <arg name="low_water"/>
+        <arg name="pause_time"/>
+        <arg name="send_xon"/>
+        <arg name="autoneg"/>
+        <arg name="mac_ctrl_frame_fwd">1</arg>
+        <notes/>
+        <results tags="net_af_xdp" key="WONTFIX AF_XDP-FLOW_CTRL" notes="The PMD does not support flow control">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_bonding">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-CTRL-MODE-CURRENT" notes="i40e returns current mode on get, not requested">
+          <result value="FAILED">
+            <verdict>The current mode is NONE vs the expected FULL</verdict>
+          </result>
+        </results>
+        <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
+          <result value="SKIPPED">
+            <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="net_sfc_efx" key="FLOW-CTRL-PAUSE-NOTSUP" notes="net/sfc does not support pause time setting">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_flow_ctrl_set() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>

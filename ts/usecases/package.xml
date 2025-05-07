@@ -623,7 +623,7 @@
                 </run>
 
                 <!--- @autogroup -->
-                <run name="flow_ctrl_set_pause_time">
+                <run name="flow_ctrl_set_zero_pause_time">
                     <script name="flow_ctrl_set"/>
                     <arg name="env">
                       <value ref="env.peer2peer"/>
@@ -638,6 +638,33 @@
                     </arg>
                     <arg name="pause_time">
                         <value>0</value>
+                    </arg>
+                    <arg name="send_xon">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="autoneg">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="mac_ctrl_frame_fwd">
+                        <value>-1</value>
+                    </arg>
+                </run>
+
+                <!--- @autogroup -->
+                <run name="flow_ctrl_set_pause_time">
+                    <script name="flow_ctrl_set"/>
+                    <arg name="env">
+                      <value ref="env.peer2peer"/>
+                    </arg>
+                    <arg name="ethdev_state" type="ethdev_state.all"/>
+                    <arg name="mode" type="ethdev_fc_conf.mode.all"/>
+                    <arg name="high_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="low_water">
+                        <value>-1</value>
+                    </arg>
+                    <arg name="pause_time">
                         <value>1024</value>
                         <value>4096</value>
                         <value>10240</value>

@@ -34273,6 +34273,11 @@
         <arg name="tmpl"/>
         <arg name="nb_vlan_filters"/>
         <notes/>
+        <results tags="net_sfc_efx" key="VLAN-FILTER-NOSUP" notes="net/sfc does not support VLAN filtering offload">
+          <result value="SKIPPED">
+            <verdict>VLAN filtering is not supported</verdict>
+          </result>
+        </results>
       </iter>
     </test>
     <test name="tx_pvid" type="script">

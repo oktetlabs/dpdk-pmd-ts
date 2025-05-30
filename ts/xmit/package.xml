@@ -763,6 +763,7 @@
 
         <run name="one_packet_with_dpdk_rx_all">
             <session track_conf="silent" track_conf_handdown="descendants">
+                <req id="DPDK_PEER"/>
                 <prologue>
                     <script name="one_packet_with_dpdk_rx_prologue"/>
                     <arg name="env" ref="env.peer2peer"/>

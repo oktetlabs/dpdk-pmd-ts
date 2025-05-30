@@ -1386,6 +1386,42 @@
         <arg name="testpmd_arg_burst"/>
         <arg name="testpmd_arg_txfreet"/>
         <notes/>
+        <results tags="dpdk&amp;net_sfc_efx&amp;tx-datapath-ef10_simple" notes="EF10 simple datapath does not support TSO">
+          <result value="SKIPPED">
+            <verdict>TSO is not supported</verdict>
+          </result>
+        </results>
+        <results tags="dpdk" key="DPDK-350" notes="testpmd patches to support TSO are not accepted upstream yet and require respin">
+          <result value="SKIPPED">
+            <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
+    <test name="testpmd_txonly_tso_multiseg" type="script">
+      <objective>Test dpdk-testpmd performance in Tx only mode with TSO</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_txonly_tso_mss"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+        <results tags="dpdk&amp;net_sfc_efx&amp;tx-datapath-ef10_simple" notes="EF10 simple datapath does not support segmentation">
+          <result value="SKIPPED">
+            <verdict>Iteration skipped due to unsupported multi seg offload</verdict>
+          </result>
+        </results>
         <results tags="dpdk" key="DPDK-350" notes="testpmd patches to support TSO are not accepted upstream yet and require respin">
           <result value="SKIPPED">
             <verdict>testpmd does not support '--txonly-tso-mss' option</verdict>

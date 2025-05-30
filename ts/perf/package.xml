@@ -173,12 +173,64 @@
                 <value>off</value>
             </arg>
             <arg name="testpmd_command_txpkts">
-                <value>54,1460</value>
                 <value>4096</value>
+                <value>29254</value>
+            </arg>
+            <arg name="testpmd_arg_txonly_tso_mss">
+                <value>1460</value>
+            </arg>
+            <arg name="testpmd_arg_txq" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="n_fwd_cores" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>4</value>
+            </arg>
+            <arg name="testpmd_arg_txd">
+                <value>512</value>
+            </arg>
+            <arg name="testpmd_arg_burst">
+                <value>32</value>
+                <value>64</value>
+            </arg>
+            <arg name="testpmd_arg_txfreet">
+                <value>0</value>
+            </arg>
+        </run>
+
+        <run name="testpmd_txonly_tso_multiseg">
+            <script name="testpmd_txonly"/>
+            <arg name="env">
+                <value ref="env.perf.peer2peer"/>
+            </arg>
+            <arg name="testpmd_arg_forward_mode">
+                <value>txonly</value>
+            </arg>
+            <arg name="testpmd_arg_stats_period">
+                <value>1</value>
+            </arg>
+            <arg name="testpmd_arg_no_lsc_interrupt">
+                <value>TRUE</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_txpkts">
+                <value>54,1460</value>
                 <value>54,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460,1460</value>
                 <value>54,2920,2920,2920,2920,2920,2920,2920,2920,2920,2920</value>
                 <value>54,4096,4096,4096,4096,4096,4096,4096,528</value>
-                <value>29254</value>
                 <value>54,4096,4096,4096,4096,4096,4096,4096,4096,4096,4096</value>
             </arg>
             <arg name="testpmd_arg_txonly_tso_mss">

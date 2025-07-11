@@ -78,7 +78,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare default config");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Initialize and configure the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     tx_desc_lim = &ethdev_config.dev_info.tx_desc_lim;
 
@@ -139,7 +139,7 @@ main(int argc, char *argv[])
         fail_test = TRUE;
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     ethdev_config.cur_state = TEST_ETHDEV_TX_SETUP_DONE;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 

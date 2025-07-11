@@ -61,7 +61,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     ethdev_config.nb_rx_queue = 1;
     ethdev_config.nb_tx_queue = 1 << 1;
@@ -73,6 +73,7 @@ main(int argc, char *argv[])
     if (ethdev_config.nb_tx_queue > ethdev_config.dev_info.max_tx_queues)
         TEST_SKIP("So many Tx queues are not supported");
 
+    TEST_STEP("Configure the Ethernet device and setup Rx its queues");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RX_SETUP_DONE));
 
     TEST_STEP("Setup the second Tx queue with default settings. Do it before the first "
@@ -110,7 +111,7 @@ main(int argc, char *argv[])
 
     ethdev_config.cur_state = TEST_ETHDEV_TX_SETUP_DONE;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Check that the first descriptor is unused");

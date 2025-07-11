@@ -180,7 +180,7 @@ main(int argc, char *argv[])
                                                    &fgi, &fbi, &l4i));
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &tec);
     tec.min_rx_desc = 2 /* tested packets */ + 1;
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_INITIALIZED));
@@ -286,7 +286,7 @@ main(int argc, char *argv[])
             tec.eth_conf->rxmode.offloads &= ~need_hw_cksum;
 
     }
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Configure tunnel UDP port number if need be");

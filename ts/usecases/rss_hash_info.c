@@ -75,7 +75,7 @@ main(int argc, char *argv[])
 
     test_ethdev_config.nb_rx_queue = nb_rx_queues;
 
-    TEST_STEP("Prepare TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Check maximum number of Rx queues");
@@ -104,7 +104,7 @@ main(int argc, char *argv[])
         }
     }
 
-    TEST_STEP("Prepare TEST_ETHDEV_STARTED state");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_STARTED));
 
 

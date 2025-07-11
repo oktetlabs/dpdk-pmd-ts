@@ -93,7 +93,7 @@ main(int argc, char *argv[])
     rc = asn_free_child(template_copy, PRIVATE, NDN_TMPL_ARGS);
     CHECK_RC((rc == TE_EASNINCOMPLVAL) ? 0 : rc);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config,
                                          TEST_ETHDEV_INITIALIZED));
@@ -111,17 +111,17 @@ main(int argc, char *argv[])
             (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state");
+    TEST_STEP("Configure the Ethernet device and setup its Rx queues");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RX_SETUP_DONE));
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_TX_SETUP_DONE state");
+    TEST_STEP("Setup the Ethernet device Tx queues");
     nb_txd = TE_ALIGN(BURST_SIZE, ethdev_config.dev_info.tx_desc_lim.nb_align);
     nb_txd = MAX(nb_txd, ethdev_config.dev_info.tx_desc_lim.nb_min);
     rpc_rte_eth_tx_queue_setup(iut_rpcs, iut_port->if_index, 0,
                                nb_txd, ethdev_config.socket_id, NULL);
     ethdev_config.cur_state = TEST_ETHDEV_TX_SETUP_DONE;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     nb_packets_to_send = ring_size_multiplier * nb_txd;
@@ -258,7 +258,7 @@ main(int argc, char *argv[])
         nb_packets_to_send -= nb_packets_sent;
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STOPPED state");
+    TEST_STEP("Stop the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STOPPED));
 
     TEST_STEP("Make sure that all the objects within the mempool are free");

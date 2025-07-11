@@ -132,7 +132,7 @@ main(int argc, char *argv[])
     tunnel.type = TARPC_RTE_TUNNEL_TYPE_VXLAN;
     tunnel.tun_id = random();
 
-    TEST_STEP("Prepare state TEST_ETHDEV_INITIALIZED");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &tec,
                                 TEST_ETHDEV_INITIALIZED);
 
@@ -147,7 +147,7 @@ main(int argc, char *argv[])
     else if (rc != 0 && rc != -TE_RC(TE_RPC, TE_EOPNOTSUPP))
         CHECK_RC(rc);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &tec,
                                 TEST_ETHDEV_STARTED);
 

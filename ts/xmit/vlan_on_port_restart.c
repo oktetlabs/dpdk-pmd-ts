@@ -76,7 +76,7 @@ main(int argc, char *argv[])
     TEST_GET_VLAN_ID_PARAM(vlan_id);
     TEST_GET_BOOL_PARAM(deferred_txq_start);
 
-    TEST_STEP("Initialize ethdev and obtain the device information");
+    TEST_STEP("Initialize the Ethernet device and obtain the device information");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
@@ -90,7 +90,7 @@ main(int argc, char *argv[])
         tx_offloads |= (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Configure the Ethernet device");
     CHECK_NOT_NULL(test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                                   &eth_conf));
     CHECK_RC(test_mk_txmode_txconf(&ethdev_config, tx_offloads,
@@ -104,7 +104,7 @@ main(int argc, char *argv[])
     eth_txconfp = &txconf;
     ethdev_config.tx_confs = &eth_txconfp;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Start the TxQ (if need be)");

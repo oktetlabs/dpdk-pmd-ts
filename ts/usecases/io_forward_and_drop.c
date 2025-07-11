@@ -67,7 +67,7 @@ main(int argc, char *argv[])
     TEST_GET_NDN_TRAFFIC_TEMPLATE(rx_tmpl);
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tx_tmpl);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_INITIALIZED");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &test_ethdev,
                                          TEST_ETHDEV_INITIALIZED));
 
@@ -83,7 +83,7 @@ main(int argc, char *argv[])
     if (rc != 0 && rc != -TE_RC(TE_RPC, TE_EOPNOTSUPP))
         TEST_FAIL("Rx metadata negotiate failed: %r", -rc);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     test_ethdev.min_tx_desc = test_ethdev.dev_info.tx_desc_lim.nb_max;
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_STARTED));
 

@@ -63,7 +63,7 @@ main(int argc, char *argv[])
     TEST_STEP("Prepare default config and mbuf pool");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &eth_conf);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_prepare_ethdev(&eth_conf, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Check Rx queue number of descriptors limitations");
@@ -74,7 +74,7 @@ main(int argc, char *argv[])
     TEST_SUBSTEP("Set Rx queue number of descriptors");
     eth_conf.min_rx_desc = nb_rxd;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&eth_conf, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Check number of descriptors in Rx queue info if supported");

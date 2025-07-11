@@ -190,7 +190,7 @@ main(int argc, char *argv[])
     TEST_GET_UINT_PARAM(burst_size_per_txq);
     TEST_GET_UINT_PARAM(nb_tx_queues);
 
-    TEST_STEP("Check maximum number of Tx queues");
+    TEST_STEP("Initialize the Ethernet device and check maximum number of Tx queues");
     if (!(MAX_NB_TX_QUEUES >= 0 && MAX_NB_TX_QUEUES >= nb_tx_queues &&
           MAX_BURST_SIZE_PER_TXQ >= 0 &&
           MAX_BURST_SIZE_PER_TXQ >= burst_size_per_txq))
@@ -214,7 +214,7 @@ main(int argc, char *argv[])
 
     tx_offloads |= (UINT64_C(1) << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
 
     ethdev_config.nb_rx_queue = 1;
     ethdev_config.nb_tx_queue = nb_tx_queues;

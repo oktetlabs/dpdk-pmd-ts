@@ -88,13 +88,13 @@ main(int argc, char *argv[])
     TEST_STEP("Probe the feature support on queue number 0");
     ethdev_config.tx_confs[0] = &tx_conf;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_RXTX_SETUP_DONE));
-    TEST_STEP("Rollback to @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Setup Tx queues once again");
     ethdev_config.tx_confs[0] = NULL;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
     ethdev_config.tx_confs[deferred_queue] = &tx_conf;
 
-    TEST_STEP("Start the Ethernet device");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Ensure that interface is UP on Tester side");

@@ -111,7 +111,7 @@ main(int argc, char *argv[])
     TEST_STEP("Learn about protocol types from the traffic template");
     CHECK_RC(tapi_ndn_tmpl_classify(tmpl, tmpl_protocols));
 
-    TEST_STEP("Prepare state TEST_ETHDEV_INITIALIZED");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_NOT_NULL(test_prepare_config_def_mk(&env, iut_rpcs, iut_port,
                                               &test_ethdev));
     CHECK_NOT_NULL(test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
@@ -223,10 +223,10 @@ main(int argc, char *argv[])
 
     CHECK_RC(rc);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_CONFIGURED");
+    TEST_STEP("Configure the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_CONFIGURED));
 
-    TEST_STEP("Prepare state TEST_ETHDEV_RX_SETUP_DONE");
+    TEST_STEP("Setup the Ethernet device Rx queues");
     mp_iut = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
                                              &test_ethdev.dev_info,
                                              TEST_PKTS_MEMPOOL_NAME,
@@ -341,13 +341,13 @@ main(int argc, char *argv[])
     if (nb_tx_desc > test_ethdev.dev_info.tx_desc_lim.nb_max)
         TEST_VERDICT("IUT: TxQ ring size is too large");
 
-    TEST_STEP("Prepare state TEST_ETHDEV_TX_SETUP_DONE");
+    TEST_STEP("Setup the Ethernet device Tx queues");
     CHECK_RC(rpc_rte_eth_tx_queue_setup(iut_rpcs, iut_port->if_index, 0,
                                         nb_tx_desc, test_ethdev.socket_id,
                                         test_ethdev.tx_confs[0]));
     test_ethdev.cur_state = TEST_ETHDEV_TX_SETUP_DONE;
 
-    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&test_ethdev, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Check mbuf segmentation vs limits");

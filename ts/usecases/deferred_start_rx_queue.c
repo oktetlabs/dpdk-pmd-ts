@@ -97,8 +97,7 @@ main(int argc, char *argv[])
 
     test_rx_mq_rss_prepare(&ethdev_config, hash_functions);
 
-    TEST_STEP("Lead the ethdev to state @c TEST_ETHDEV_CONFIGURED");
-
+    TEST_STEP("Configure the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
     deferred_queue = rand() % n_rxq;
@@ -109,7 +108,7 @@ main(int argc, char *argv[])
                                          sizeof(*ethdev_config.rx_confs));
     ethdev_config.rx_confs[deferred_queue] = &rx_conf;
 
-    TEST_STEP("Start the Ethernet device");
+    TEST_STEP("Setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Retrieve information about chosen RX queue and make sure that "

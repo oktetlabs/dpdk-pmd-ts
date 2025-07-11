@@ -143,7 +143,7 @@ main(int argc, char *argv[])
     test_vlan_push.vlan_id[1] = TEST_INT_PARAM(vlan_id_second);
     test_vlan_push.n_tags = (test_vlan_push.ethertype[1] != 0) ? 2 : 1;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Initialize, configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config, TEST_ETHDEV_STARTED));
 

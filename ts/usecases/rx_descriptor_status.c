@@ -59,7 +59,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Initialize and configure the Ethernet device");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
 
     /*
@@ -127,7 +127,7 @@ main(int argc, char *argv[])
 
     ethdev_config.cur_state = TEST_ETHDEV_RX_SETUP_DONE;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Setup Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Check that the first descriptor is exposed to the HW");

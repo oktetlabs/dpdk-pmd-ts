@@ -237,7 +237,7 @@ main(int argc, char *argv[])
     if (outer_ip_cksum_offload && !inner_ip_cksum_offload)
         inner_ip_cksum_offload = TRUE;
 
-    TEST_STEP("Prepare TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ec);
     (void)test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,
                                          &eth_conf);
@@ -441,7 +441,7 @@ main(int argc, char *argv[])
 
     CHECK_RC(rc);
 
-    TEST_STEP("Prepare TEST_ETHDEV_RX_SETUP_DONE state");
+    TEST_STEP("Configure the Ethernet device and setup its Rx queues");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
 
     mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
@@ -598,7 +598,7 @@ main(int argc, char *argv[])
         nb_tx_desc = ec.dev_info.tx_desc_lim.nb_max;
     }
 
-    TEST_STEP("Prepare TEST_ETHDEV_TX_SETUP_DONE state");
+    TEST_STEP("Setup Tx queue");
     rpc_rte_eth_tx_queue_setup(iut_rpcs, iut_port->if_index, 0,
                                nb_tx_desc, ec.socket_id,
                                ec.tx_confs[0]);
@@ -636,7 +636,7 @@ main(int argc, char *argv[])
                                                     m_eth_d_len));
     }
 
-    TEST_STEP("Prepare TEST_ETHDEV_STARTED state");
+    TEST_STEP("Start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Check mbuf segmentation vs limits");

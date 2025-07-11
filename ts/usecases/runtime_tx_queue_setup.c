@@ -109,7 +109,7 @@ main(int argc, char *argv[])
             txq_deferred_start[txq_deferred_start_ids[i]] = TRUE;
     }
 
-    TEST_STEP("Configure Ethernet device");
+    TEST_STEP("Configure the Ethernet device");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ec);
 
     ec.eth_conf = test_rpc_rte_eth_make_eth_conf(iut_rpcs, iut_port->if_index,

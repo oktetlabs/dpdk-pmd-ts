@@ -84,7 +84,7 @@ main(int argc, char *argv[])
                                          TEST_RTE_MEMPOOL_DEF_DATA_ROOM +
                                          TEST_PAYLOAD_LEN,
                                          ethdev_config.socket_id);
-    TEST_STEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+    TEST_STEP("Initialize and configure the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     rx_desc_lim = &ethdev_config.dev_info.rx_desc_lim;
 
@@ -145,7 +145,7 @@ main(int argc, char *argv[])
         fail_test = TRUE;
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Setup Tx queues, start the Ethernet device and wait for link up");
     ethdev_config.cur_state = TEST_ETHDEV_RX_SETUP_DONE;
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 

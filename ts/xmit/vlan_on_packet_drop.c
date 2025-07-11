@@ -83,7 +83,7 @@ main(int argc, char *argv[])
 
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state.");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities.");
     (void)test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &tec);
 
     tec.nb_rx_queue = 1;
@@ -116,7 +116,7 @@ main(int argc, char *argv[])
 
     CHECK_RC(rc);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_RX_SETUP_DONE state.");
+    TEST_STEP("Configure the Ethernet device.");
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_CONFIGURED));
 
     tec.mp = test_rte_pktmbuf_rx_pool_create(iut_rpcs, iut_port->if_index,
@@ -190,7 +190,7 @@ main(int argc, char *argv[])
                                                     m_eth_d_len));
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state.");
+    TEST_STEP("Start the Ethernet device and wait for link up.");
     CHECK_RC(test_prepare_ethdev(&tec, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Slice the first packet mbuf into as many segments as how many "

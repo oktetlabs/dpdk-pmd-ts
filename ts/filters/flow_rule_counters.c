@@ -107,7 +107,7 @@ main(int argc, char *argv[])
     flow_rule_patterns[0] = flow_rule_pattern;
     memset(&count_query, 0, sizeof(count_query));
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Initialize, configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
                                          &ethdev_config, TEST_ETHDEV_STARTED));
 

@@ -100,7 +100,7 @@ main(int argc, char *argv[])
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
     ethdev_config.nb_rx_queue = nb_rx_queues;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Check maximum number of Rx queues");
@@ -145,7 +145,7 @@ main(int argc, char *argv[])
         rss_key = rss_key_global;
         rss_hf = rss_conf_global.rss_hf;
 
-        TEST_SUBSTEP("Prepare @c TEST_ETHDEV_CONFIGURED state");
+        TEST_SUBSTEP("Configure the Ethernet device");
         CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
         /* The target configuration (no global RSS) clearing */
@@ -158,7 +158,7 @@ main(int argc, char *argv[])
         ethdev_config.cur_state = TEST_ETHDEV_INITIALIZED;
     }
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Change destination MAC to NIC MAC if it is present in pattern "

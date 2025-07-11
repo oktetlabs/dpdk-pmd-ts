@@ -64,7 +64,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    TEST_STEP("Initialize, configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &test_ethdev,
                                          TEST_ETHDEV_STARTED));
 

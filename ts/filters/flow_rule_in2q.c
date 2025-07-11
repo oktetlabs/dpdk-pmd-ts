@@ -159,7 +159,7 @@ main(int argc, char *argv[])
 
     ethdev_config.nb_rx_queue = TEST_NB_RX_QUEUES;
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_INITIALIZED state");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_INITIALIZED));
 
     TEST_STEP("Check maximum number of Rx queues");
@@ -170,7 +170,7 @@ main(int argc, char *argv[])
     if (isolated)
         tapi_rte_flow_isolate(iut_rpcs, iut_port->if_index, 1);
 
-    TEST_STEP("Prepare @c TEST_ETHDEV_STARTED state");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));
 
     TEST_STEP("Ensure that interface is UP on Tester side");

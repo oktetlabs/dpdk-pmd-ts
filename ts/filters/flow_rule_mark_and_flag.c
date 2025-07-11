@@ -93,7 +93,7 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(alien_addr);
     TEST_GET_UINT_PARAM(mark_value);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_INITIALIZED");
+    TEST_STEP("Initialize the Ethernet device to get its capabilities");
     test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &ethdev_config,
                                 TEST_ETHDEV_INITIALIZED);
 
@@ -151,7 +151,7 @@ main(int argc, char *argv[])
     else if (rc != 0 && rc != -TE_RC(TE_RPC, TE_EOPNOTSUPP))
         CHECK_RC(rc);
 
-    TEST_STEP("Prepare state TEST_ETHDEV_STARTED");
+    TEST_STEP("Configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");
     test_default_prepare_ethdev(&env, iut_rpcs, iut_port, &ethdev_config,
                                 TEST_ETHDEV_STARTED);
 

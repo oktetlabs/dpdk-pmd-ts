@@ -18,6 +18,7 @@
         -->
         <run name="one_packet_all">
             <session track_conf="silent" track_conf_handdown="descendants">
+                <objective>Check various Tx offloads when one packet is sent</objective>
                 <enum name="payload_len_pkt">
                     <value>0</value>
                     <value>1</value>
@@ -88,6 +89,7 @@
                 <run name="one_packet_ip4">
                     <session track_conf="silent"
                         track_conf_handdown="descendants">
+                        <objective>Check various Tx offloads when one IPv4 packet is sent</objective>
                         <enum name="segmentation_ip4_pkt">
                             <value>1*14, 2*20, 1*0xffff</value>
                             <value>1*14, 1*40, 1*0xffff</value>
@@ -135,6 +137,7 @@
                         <run name="one_packet_ip4">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check VLAN insertion and checksum offloads when one IPv4 packet without TSO is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -150,7 +153,9 @@
 
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip4_contig">
-                                    <script name="one_packet"/>
+                                    <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv4 packet in one memory segment is sent</objective>
+                                    </script>
                                     <arg name="segmentation">
                                         <value> </value>
                                     </arg>
@@ -159,6 +164,7 @@
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip4_seg">
                                     <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv4 packet in few memory segments is sent</objective>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
                                     <arg name="segmentation"
@@ -168,6 +174,7 @@
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip4_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv4 packet in many memory segments is sent</objective>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
                                     <arg name="segmentation"
@@ -179,6 +186,7 @@
                         <run name="tso_packet_ip4">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check TSO and VLAN insertion when one IPv4 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -195,6 +203,7 @@
 
                                 <run name="tso_packet_ip4_contig">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv4 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                     </script>
                                     <arg name="segmentation">
@@ -205,6 +214,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_seg">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv4 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
@@ -215,6 +225,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv4 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
@@ -228,6 +239,7 @@
                         <run name="tso_packet_ip4_encap_ip4">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv4 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -245,6 +257,7 @@
 
                                 <run name="tso_packet_ip4_encap_ip4_contig">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv4 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                     </script>
@@ -256,6 +269,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_encap_ip4_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv4 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -267,6 +281,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_encap_ip4_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv4 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -281,6 +296,7 @@
                         <run name="tso_packet_ip6_encap_ip4">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv4 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -299,6 +315,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip4_contig">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv4 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                     </script>
@@ -310,6 +327,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip4_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv4 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -321,6 +339,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip4_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv4 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -345,6 +364,7 @@
                 <run name="one_packet_ip6">
                     <session track_conf="silent"
                         track_conf_handdown="descendants">
+                        <objective>Check various offloads when one IPv6 packet is sent</objective>
                         <enum name="segmentation_ip6_pkt">
                             <value>1*14, 1*40, 1*20, 1*0xffff</value>
                             <value>1*14, 1*60, 1*0xffff</value>
@@ -392,6 +412,7 @@
                         <run name="one_packet_ip6">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check VLAN insertion and checksum offloads when one IPv6 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -409,7 +430,9 @@
 
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip6_contig">
-                                    <script name="one_packet"/>
+                                    <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv6 packet in one memory segment is sent</objective>
+                                    </script>
                                     <arg name="segmentation">
                                         <value> </value>
                                     </arg>
@@ -418,6 +441,7 @@
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip6_seg">
                                     <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv6 packet in few memory segments is sent</objective>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
                                     <arg name="segmentation"
@@ -427,6 +451,7 @@
                                 <!--- @autogroup -->
                                 <run name="one_packet_ip6_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check VLAN insertion and checksum offloads when one IPv6 packet in many memory segments is sent</objective>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
                                     <arg name="segmentation"
@@ -439,6 +464,7 @@
                         <run name="tso_packet_ip6">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check TSO and VLAN insertion when one IPv6 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -456,6 +482,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_contig">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv6 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                     </script>
                                     <arg name="segmentation">
@@ -466,6 +493,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_seg">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv6 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
@@ -476,6 +504,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check TSO and VLAN insertion when one IPv6 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TX_MULTI_SEG"/>
                                     </script>
@@ -489,6 +518,7 @@
                         <run name="tso_packet_ip4_encap_ip6">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv6 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -507,6 +537,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_encap_ip6_contig">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv6 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                     </script>
@@ -518,6 +549,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_encap_ip6_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv6 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -529,6 +561,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip4_encap_ip6_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv4-in-IPv6 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -543,6 +576,7 @@
                         <run name="tso_packet_ip6_encap_ip6">
                             <session track_conf="silent"
                                 track_conf_handdown="descendants">
+                                <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv6 packet is sent</objective>
                                 <arg name="env"/>
                                 <arg name="vlan_id"/>
                                 <arg name="tmpl">
@@ -561,6 +595,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip6_contig">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv6 packet in one memory segment is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                     </script>
@@ -572,6 +607,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip6_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv6 packet in few memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>
@@ -583,6 +619,7 @@
                                 <!--- @autogroup -->
                                 <run name="tso_packet_ip6_encap_ip6_many_seg">
                                     <script name="one_packet">
+                                        <objective>Check encapsulated TSO and VLAN insertion when one IPv6-in-IPv6 packet in many memory segments is sent</objective>
                                         <req id="TSO"/>
                                         <req id="TSO_ENCAP"/>
                                         <req id="TX_MULTI_SEG"/>

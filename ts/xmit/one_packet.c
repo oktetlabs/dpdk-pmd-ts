@@ -296,6 +296,8 @@ main(int argc, char *argv[])
         hdrs[TAPI_NDN_TUNNEL] != TE_PROTO_GENEVE)
         tunnel_aware = FALSE;
 
+    TEST_STEP("Update traffic template in accordance with device capabilities and offloads to be tested");
+
     if (hdrs[TAPI_NDN_TUNNEL] != TE_PROTO_INVALID && tso_segsz == 0)
     {
         if (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4 &&
@@ -304,12 +306,12 @@ main(int argc, char *argv[])
              (!tunnel_aware && inner_ip_cksum_offload &&
               inner_ip_cksum_offload_supported)))
         {
-            TEST_STEP("Spoil outer IP checksum in the traffic template");
+            TEST_SUBSTEP("Spoil outer IP checksum in the traffic template");
             CHECK_RC(tapi_ndn_tmpl_set_ip_cksum(tmpl, 0, TAPI_NDN_OUTER_L3));
         }
     }
 
-    TEST_STEP("Set outer L4 checksum to 0 in the traffic template if need be");
+    TEST_SUBSTEP("Set outer L4 checksum to 0 in the traffic template if need be");
     if (hdrs[TAPI_NDN_TUNNEL] != TE_PROTO_INVALID &&
         hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
     {
@@ -343,7 +345,7 @@ main(int argc, char *argv[])
         if (inner_ip_cksum_offload && inner_ip_cksum_offload_supported &&
             hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4)
         {
-            TEST_STEP("Spoil inner IP checksum in the traffic template");
+            TEST_SUBSTEP("Spoil inner IP checksum in the traffic template");
             CHECK_RC(tapi_ndn_tmpl_set_ip_cksum(tmpl, 0, TAPI_NDN_INNER_L3));
         }
 
@@ -352,7 +354,7 @@ main(int argc, char *argv[])
             bc = (hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4) ?
                  TE_IP4_UPPER_LAYER_CSUM_BAD : TE_IP6_UPPER_LAYER_CSUM_BAD;
 
-            TEST_STEP("Spoil inner L4 checksum in the traffic template");
+            TEST_SUBSTEP("Spoil inner L4 checksum in the traffic template");
             if (hdrs[TAPI_NDN_INNER_L4] == TE_PROTO_TCP)
             {
                 CHECK_RC(tapi_ndn_tmpl_set_tcp_cksum(tmpl, bc));
@@ -374,45 +376,46 @@ main(int argc, char *argv[])
         CHECK_RC(test_add_tunnel_udp_port_from_tmpl(&ec, tmpl, FALSE));
     }
 
+    TEST_STEP("Enable offloads to be tested");
     test_offloads = ec.eth_conf->txmode.offloads;
 
     if (vlan_id >= 0)
     {
-        TEST_STEP("Enable VLAN offload in the PMD");
+        TEST_SUBSTEP("Enable VLAN offload in the PMD");
         test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_VLAN_INSERT_BIT);
     }
 
     if (outer_ip_cksum_offload && outer_ip_cksum_offload_supported &&
         hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4)
     {
-        TEST_STEP("Enable outer IP checksum offload in the PMD");
+        TEST_SUBSTEP("Enable outer IP checksum offload in the PMD");
         test_offloads |= outer_ip_cksum_ol;
     }
 
     if (outer_udp_cksum_offload_supported &&
         hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP)
     {
-        TEST_STEP("Enable outer UDP checksum offload in the PMD");
+        TEST_SUBSTEP("Enable outer UDP checksum offload in the PMD");
         test_offloads |= outer_udp_cksum_ol;
     }
 
     if (inner_ip_cksum_offload && inner_ip_cksum_offload_supported &&
         hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4)
     {
-        TEST_STEP("Enable inner IP checksum offload in the PMD");
+        TEST_SUBSTEP("Enable inner IP checksum offload in the PMD");
         test_offloads |= inner_ip_cksum_ol;
     }
 
     if (l4_cksum_offload && inner_l4_cksum_offload_supported &&
         hdrs[TAPI_NDN_INNER_L4] != TE_PROTO_INVALID)
     {
-        TEST_STEP("Enable inner L4 checksum offload in the PMD");
+        TEST_SUBSTEP("Enable inner L4 checksum offload in the PMD");
         test_offloads |= inner_l4_cksum_ol;
     }
 
     if (tso_segsz > 0)
     {
-        TEST_STEP("Enable TSO in the PMD");
+        TEST_SUBSTEP("Enable TSO in the PMD");
         if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_VXLAN)
             test_offloads |= vxlan_tso;
         else if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_GENEVE)
@@ -423,7 +426,7 @@ main(int argc, char *argv[])
 
     if (segmentation.nb_seg_groups > 0)
     {
-        TEST_STEP("Enable multisegment mbuf support in the PMD");
+        TEST_SUBSTEP("Enable multisegment mbuf support in the PMD");
         test_offloads |= (1ULL << TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT);
     }
 
@@ -454,7 +457,9 @@ main(int argc, char *argv[])
     ec.mp = mp;
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_RX_SETUP_DONE));
 
-    TEST_STEP("Generate mbuf and a packet sample from the traffic template");
+    TEST_STEP("Prepare mbufs to transmit by traffic template and offloads to be tested");
+
+    TEST_SUBSTEP("Generate mbuf and a packet sample from the traffic template");
     tapi_rte_mk_mbufs_by_tmpl_get_pkts(iut_rpcs, tmpl, mp, &mbufs, &nb_mbufs,
                                        &pkts_by_tmpl, &nb_pkts_by_tmpl);
 
@@ -464,7 +469,7 @@ main(int argc, char *argv[])
 
     if (vlan_id >= 0)
     {
-        TEST_STEP("Add VLAN offload request to the mbuf");
+        TEST_SUBSTEP("Add VLAN offload request to the mbuf");
         m_ol_flags |= (1ULL << TARPC_RTE_MBUF_F_TX_VLAN);
         rpc_rte_pktmbuf_set_vlan_tci(iut_rpcs, m, (uint16_t)vlan_id);
     }
@@ -473,7 +478,7 @@ main(int argc, char *argv[])
     {
         if (tunnel_aware)
         {
-            TEST_STEP("Add outer offload flags for the outer frame to the mbuf");
+            TEST_SUBSTEP("Add outer offload flags for the outer frame to the mbuf");
 
             if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_VXLAN)
                 m_ol_flags |= (1ULL << TARPC_RTE_MBUF_F_TX_TUNNEL_VXLAN);
@@ -500,7 +505,7 @@ main(int argc, char *argv[])
         }
         else
         {
-            TEST_STEP("Reconcile inner header length fields in the mbuf so "
+            TEST_SUBSTEP("Reconcile inner header length fields in the mbuf so "
                       "that they refer to the outer header and fill zeros "
                       "in outer header length fields");
 
@@ -513,7 +518,7 @@ main(int argc, char *argv[])
             m_tx_ol.l4_len = (hdrs[TAPI_NDN_OUTER_L4] == TE_PROTO_UDP) ?
                              TAD_UDP_HDR_LEN : 0;
 
-            TEST_STEP("Add inner offload flags for the outer frame to the mbuf");
+            TEST_SUBSTEP("Add inner offload flags for the outer frame to the mbuf");
 
             if (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4)
             {
@@ -535,7 +540,7 @@ main(int argc, char *argv[])
 
     if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_INVALID || tunnel_aware)
     {
-        TEST_STEP("Add inner offload flags for the inner frame to the mbuf");
+        TEST_SUBSTEP("Add inner offload flags for the inner frame to the mbuf");
 
         if (hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4)
         {
@@ -560,7 +565,7 @@ main(int argc, char *argv[])
 
     if (tso_segsz > 0)
     {
-        TEST_STEP("Add TSO request to the mbuf");
+        TEST_SUBSTEP("Add TSO request to the mbuf");
         m_ol_flags |= (1ULL << TARPC_RTE_MBUF_F_TX_TCP_SEG);
         m_tx_ol.tso_segsz = tso_segsz;
     }
@@ -570,7 +575,7 @@ main(int argc, char *argv[])
 
     if (segmentation.nb_seg_groups > 0)
     {
-        TEST_STEP("Redistribute the packet data across multiple mbuf segments");
+        TEST_SUBSTEP("Redistribute the packet data across multiple mbuf segments");
         (void)rpc_rte_pktmbuf_redist(iut_rpcs, &m, segmentation.seg_groups,
                                      (uint8_t)segmentation.nb_seg_groups);
     }
@@ -668,19 +673,20 @@ main(int argc, char *argv[])
                                                 TAD_ETH_RECV_DEF,
                                                 tmpl, &rx_csap));
 
+    TEST_STEP("Update expected packet in accordance with offloads to be done");
     pkt = pkts_by_tmpl[0];
 
     if (vlan_id >= 0)
     {
-        TEST_STEP("Inject VLAN tag to the packet sample");
+        TEST_SUBSTEP("Inject VLAN tag to the packet sample");
         CHECK_RC(tapi_ndn_pkt_inject_vlan_tag(pkt, (uint16_t)vlan_id));
     }
 
     if (hdrs[TAPI_NDN_TUNNEL] != TE_PROTO_INVALID)
     {
-        TEST_STEP("Replace checksums in the outer frame of the packet sample "
-                  "with script values to demand that the checksums in the "
-                  "packet(s) received by peer be correct");
+        TEST_SUBSTEP("Replace checksums in the outer frame of the packet sample "
+                     "with script values to demand that the checksums in the "
+                     "packet(s) received by peer be correct");
         if (tunnel_aware)
         {
             if (hdrs[TAPI_NDN_OUTER_L3] == TE_PROTO_IP4 &&
@@ -728,9 +734,9 @@ main(int argc, char *argv[])
 
     if (hdrs[TAPI_NDN_TUNNEL] == TE_PROTO_INVALID || tunnel_aware)
     {
-        TEST_STEP("Replace checksums in the inner frame of the packet sample "
-                  "with script values to demand that the checksums in the "
-                  "packet(s) received by the peer be correct");
+        TEST_SUBSTEP("Replace checksums in the inner frame of the packet sample "
+                     "with script values to demand that the checksums in the "
+                     "packet(s) received by the peer be correct");
 
         if (hdrs[TAPI_NDN_INNER_L3] == TE_PROTO_IP4 &&
             ((tso_segsz != 0) || (inner_ip_cksum_offload &&
@@ -762,7 +768,7 @@ main(int argc, char *argv[])
             .payload_barrier = test_get_tso_payload_cutoff_barrier(m_hdrs_len),
         };
 
-        TEST_STEP("Conduct TSO edits for the packet sample");
+        TEST_SUBSTEP("Conduct TSO edits for the packet sample");
 
         CHECK_RC(tapi_ndn_superframe_gso(pkt, tso_segsz, &gso_conf,
                                          &gso_pkts, &nb_gso_pkts));
@@ -794,16 +800,16 @@ main(int argc, char *argv[])
 
         CHECK_RC(tapi_ndn_tso_pkts_edit(gso_pkts, nb_gso_pkts));
 
-        TEST_STEP("Prepare a traffic pattern from TSO packet samples");
+        TEST_SUBSTEP("Prepare a traffic pattern from TSO packet samples");
         CHECK_RC(tapi_ndn_pkts_to_ptrn(gso_pkts, nb_gso_pkts, &ptrn));
         nb_pkts_expected = nb_gso_pkts;
 
-        TEST_STEP("Mask TCP flag CWR in the first packet to handle it gracefully");
+        TEST_SUBSTEP("Mask TCP flag CWR in the first packet to handle it gracefully");
         test_cb_data.check_cwr = mask_tcp_cwr(ptrn);
     }
     else
     {
-        TEST_STEP("Prepare a traffic pattern from the packet sample");
+        TEST_SUBSTEP("Prepare a traffic pattern from the packet sample");
         CHECK_RC(tapi_ndn_pkts_to_ptrn(&pkt, 1, &ptrn));
         nb_pkts_expected = 1;
     }

@@ -151,6 +151,9 @@ main(int argc, char *argv[])
     TEST_STEP("Reset general stats statistics");
     rpc_rte_eth_stats_reset(iut_rpcs, iut_port->if_index);
 
+    TEST_STEP("Wait statistics update after reset");
+    MSLEEP(TEST_STATS_UPDATE_WAIT_MS);
+
     TEST_STEP("Check that general statistics are correct");
     rpc_rte_eth_stats_get(iut_rpcs, iut_port->if_index, &stats);
 

@@ -30,6 +30,7 @@
 
 #define TE_TEST_NAME "usecases/flow_ctrl_set"
 
+#include "tapi_cfg_if_flow_control.h"
 #include "dpdk_pmd_test.h"
 
 #define TEST_FC_CONF_SET_PARAM(dst_, cmp_val_, src_) \
@@ -103,9 +104,36 @@ get_string_from_enum(int val)
 
 static te_errno
 test_compare_fc_conf(const struct tarpc_rte_eth_fc_conf *cur,
-                     const struct tarpc_rte_eth_fc_conf *exp)
+                     const struct tarpc_rte_eth_fc_conf *cmp,
+                     te_bool expect_std_autoneg_outcome)
 {
+    struct tarpc_rte_eth_fc_conf exp_s = *cmp;
+    struct tarpc_rte_eth_fc_conf *exp = &exp_s;
     te_errno rc = 0;
+
+    if (exp->autoneg != 0 && expect_std_autoneg_outcome)
+    {
+        /*
+         * Assume the link partner has set 'autoneg=on, rx=on, tx=on', meaning
+         * it advertises only 'PAUSE' bit via the IEEE 802.3 Link Code Word, and
+         * adjust the expectation of the autonegotiation outcome accordingly.
+         */
+
+        if (exp->mode == TARPC_RTE_FC_RX_PAUSE)
+        {
+            /*
+             * Local NIC is set to advertise 'PAUSE | ASYM_DIR', meaning that
+             * both ends have 'PAUSE' bit set. This prioritises 'FULL' mode.
+             */
+            exp->mode = TARPC_RTE_FC_FULL;
+        }
+
+        if (exp->mode == TARPC_RTE_FC_TX_PAUSE)
+        {
+            /* Local NIC is set to advertise 'ASYM_DIR'. Mismatch => 'NONE'. */
+            exp->mode = TARPC_RTE_FC_NONE;
+        }
+    }
 
     if (cur->mode != exp->mode)
     {
@@ -193,10 +221,15 @@ main(int argc, char *argv[])
     int64_t                         send_xon;
     int64_t                         autoneg;
     int64_t                         mac_ctrl_frame_fwd;
+    tapi_env_host                   *tst_host = NULL;
+    const struct if_nameindex       *tst_if = NULL;
+    te_bool                         expect_std_autoneg_outcome;
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_GET_HOST(tst_host);
+    TEST_GET_IF(tst_if);
     TEST_GET_ETHDEV_STATE(ethdev_state);
     TEST_GET_TARPC_RTE_ETH_FC_MODE_TYPE_PARAM(mode);
     TEST_GET_INT64_PARAM(high_water);
@@ -212,6 +245,17 @@ main(int argc, char *argv[])
     TEST_CHECK_UINT64_IS_IN_BOOL3_RANGE(send_xon);
     TEST_CHECK_UINT64_IS_IN_BOOL3_RANGE(mac_ctrl_frame_fwd);
     TEST_CHECK_UINT64_IS_IN_BOOL3_RANGE(autoneg);
+
+    TEST_STEP("Set flow control on the partner to 'autoneg=on, rx=on, tx=on'");
+    CHECK_RC(tapi_cfg_if_fc_autoneg_set_local(tst_host->ta,
+                                              tst_if->if_name, 1));
+
+    CHECK_RC(tapi_cfg_if_fc_rx_set_local(tst_host->ta, tst_if->if_name, 1));
+    CHECK_RC(tapi_cfg_if_fc_tx_set_local(tst_host->ta, tst_if->if_name, 1));
+
+    ret = tapi_cfg_if_fc_commit(tst_host->ta, tst_if->if_name);
+    if (ret != 0)
+        TEST_VERDICT("Failed to initialise flow control on the partner");
 
     TEST_STEP("Initialize EAL, prepare @p ethdev_state Ethernet device state");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,
@@ -250,6 +294,18 @@ main(int argc, char *argv[])
     if (ret != 0)
         TEST_VERDICT("rte_eth_dev_flow_ctrl_set() failed: %r", -ret);
 
+    if (ethdev_state == TEST_ETHDEV_STARTED)
+    {
+        TEST_STEP("Await link renegotiation");
+        test_await_link_up(iut_rpcs, iut_port->if_index);
+
+        expect_std_autoneg_outcome = TRUE;
+    }
+    else
+    {
+        expect_std_autoneg_outcome = FALSE;
+    }
+
     TEST_STEP("Get flow control settings");
     RPC_AWAIT_IUT_ERROR(iut_rpcs);
     ret = rpc_rte_eth_dev_flow_ctrl_get(iut_rpcs, iut_port->if_index,
@@ -258,7 +314,8 @@ main(int argc, char *argv[])
         TEST_VERDICT("Failed to get flow control after set: %r", -ret);
 
     TEST_STEP("Compare flow control settings with written ones");
-    CHECK_RC(test_compare_fc_conf(&fc_conf_read, &fc_conf_write));
+    CHECK_RC(test_compare_fc_conf(&fc_conf_read, &fc_conf_write,
+                                  expect_std_autoneg_outcome));
 
     TEST_STEP("If device is already started, stop it");
     if (ethdev_state == TEST_ETHDEV_STARTED)
@@ -275,8 +332,22 @@ main(int argc, char *argv[])
         TEST_VERDICT("Failed to get flow control after start: %r", -ret);
 
     TEST_STEP("Compare obtained flow control settings vs previously obtained");
+    if (ethdev_state == TEST_ETHDEV_STARTED)
+    {
+        /*
+         * No change between 'fc_conf_read_after_start' and 'fc_conf_read' is
+         * expected; 'fc_conf_read' already reflects autonegotiation outcome,
+         * as it was read in STARTED state. Port restart shouldn't change it.
+         */
+        expect_std_autoneg_outcome = FALSE;
+    }
+    else
+    {
+        expect_std_autoneg_outcome = TRUE;
+    }
+
     CHECK_RC(test_compare_fc_conf(&fc_conf_read_after_start,
-                                  &fc_conf_read));
+                                  &fc_conf_read, expect_std_autoneg_outcome));
 
     TEST_SUCCESS;
 

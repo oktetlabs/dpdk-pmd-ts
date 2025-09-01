@@ -71,6 +71,10 @@ main(int argc, char *argv[])
     TEST_GET_UINT_PARAM(nb_txd);
     init_nb_txd = nb_txd;
 
+    TEST_STEP("Bump Rx ring size to maximum on Tester side");
+    CHECK_RC(tapi_cfg_if_set_ring_size_to_max(tst_host->ta, tst_if->if_name,
+                                              true, &tst_ring_sz));
+
     TEST_STEP("Prepare default config");
     test_prepare_config_def_mk(&env, iut_rpcs, iut_port, &ethdev_config);
 
@@ -168,10 +172,6 @@ main(int argc, char *argv[])
         TEST_VERDICT("Unexpected number of prepared mbufs: %d mbufs have "
                      "been produced, but should be %d", count, nb_pkts);
     }
-
-    TEST_STEP("Bump Rx ring size to maximum on Tester side");
-    CHECK_RC(tapi_cfg_if_set_ring_size_to_max(tst_host->ta, tst_if->if_name,
-                                              true, &tst_ring_sz));
 
     CHECK_RC(tapi_eth_based_csap_create_by_tmpl(tst_host->ta, 0,
                                                 tst_if->if_name,

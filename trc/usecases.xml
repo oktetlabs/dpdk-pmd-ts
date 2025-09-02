@@ -32744,6 +32744,11 @@
             <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
           </result>
         </results>
+        <results tags="tx-datapath-efx" key="TXQ-LIMIT">
+          <result value="PASSED">
+            <verdict>Sent 47 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -32779,6 +32784,11 @@
             <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
           </result>
         </results>
+        <results tags="tx-datapath-efx" key="TXQ-LIMIT">
+          <result value="PASSED">
+            <verdict>Sent 47 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -32789,6 +32799,16 @@
           <result value="PASSED">
             <verdict>Get queue info isn't supported</verdict>
             <verdict>Sent 1792 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-ef10_simple|tx-datapath-ef10" key="TXQ-LIMIT" notes="sfc has Tx queue limit because of event queue limit and space for unsolicited error and flush events">
+          <result value="PASSED">
+            <verdict>Sent 10 packets less than initially requested number of Tx descriptors</verdict>
+          </result>
+        </results>
+        <results tags="tx-datapath-efx" key="TXQ-LIMIT">
+          <result value="PASSED">
+            <verdict>Sent 47 packets less than initially requested number of Tx descriptors</verdict>
           </result>
         </results>
       </iter>

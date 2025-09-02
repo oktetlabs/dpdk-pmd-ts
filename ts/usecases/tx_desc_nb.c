@@ -32,7 +32,7 @@
 #include "tapi_cfg_base.h"
 #include "tapi_cfg_if.h"
 
-#define TEST_PAYLOAD_LEN 128
+#define TEST_PAYLOAD_LEN 256
 #define TEST_TXQ 0
 
 int

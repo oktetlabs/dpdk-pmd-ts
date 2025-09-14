@@ -34394,6 +34394,7 @@
         <arg name="fec_mode">RS</arg>
         <arg name="tmpl"/>
         <arg name="env"/>
+        <notes/>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">CONFIGURED</arg>
@@ -34401,6 +34402,7 @@
         <arg name="link_mode">10G</arg>
         <arg name="tmpl"/>
         <arg name="env"/>
+        <notes/>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">CONFIGURED</arg>
@@ -34434,6 +34436,7 @@
         <arg name="fec_mode">RS</arg>
         <arg name="tmpl"/>
         <arg name="env"/>
+        <notes/>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">STARTED</arg>
@@ -34441,6 +34444,7 @@
         <arg name="link_mode">10G</arg>
         <arg name="tmpl"/>
         <arg name="env"/>
+        <notes/>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">STARTED</arg>

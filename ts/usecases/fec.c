@@ -163,12 +163,12 @@ main(int argc, char *argv[])
     const char *fec_mode;
     asn_value *tmpl;
 
-    uint32_t mask_fec_sup = TEST_BIT2MASK(TARPC_RTE_ETH_FEC_AUTO_BIT);
     struct tarpc_rte_eth_fec_capa *caps = NULL;
     struct tarpc_rte_eth_conf eth_conf;
     struct tarpc_rte_eth_link el = {0};
     struct test_ethdev_config ec;
     rpc_rte_mbuf_p m = RPC_NULL;
+    uint32_t mask_fec_sup = 0;
     uint32_t mask_fec_sod;
     uint32_t mask_fec_cur;
     uint32_t mask_fec_req;
@@ -221,6 +221,9 @@ main(int argc, char *argv[])
 
     mask_fec_req = test_str2fec(fec_mode);
 
+    if (mask_fec_req & TEST_BIT2MASK(TARPC_RTE_ETH_FEC_AUTO_BIT))
+        goto skip_capability_check;
+
     TEST_STEP("Inspect speed FEC capabilites");
     RPC_AWAIT_ERROR(iut_rpcs);
     ret = rpc_rte_eth_fec_get_capability(iut_rpcs, iut_port->if_index, NULL, 0);
@@ -268,6 +271,7 @@ main(int argc, char *argv[])
         }
     }
 
+skip_capability_check:
     ec.skip_link_up_check = TRUE;
 
     TEST_STEP("Prepare state @p ethdev_state");

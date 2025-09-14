@@ -28280,7 +28280,31 @@
       <iter result="PASSED">
         <arg name="env"/>
         <arg name="template"/>
-        <arg name="nb_rxd"/>
+        <arg name="nb_rxd">32</arg>
+        <arg name="nb_wrap"/>
+        <notes/>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Requested number of Rx descriptors violates limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">64</arg>
+        <arg name="nb_wrap"/>
+        <notes/>
+        <results tags="rx-datapath-efx">
+          <result value="SKIPPED">
+            <verdict>Requested number of Rx descriptors violates limits</verdict>
+          </result>
+        </results>
+      </iter>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="template"/>
+        <arg name="nb_rxd">512</arg>
         <arg name="nb_wrap"/>
         <notes/>
       </iter>

@@ -255,7 +255,10 @@ main(int argc, char *argv[])
 
     ret = tapi_cfg_if_fc_commit(tst_host->ta, tst_if->if_name);
     if (ret != 0)
-        TEST_VERDICT("Failed to initialise flow control on the partner");
+    {
+        /* Not every NIC vendor supports this, so do not fail the test. */
+        ERROR("Failed to initialise flow control on the partner");
+    }
 
     TEST_STEP("Initialize EAL, prepare @p ethdev_state Ethernet device state");
     CHECK_RC(test_default_prepare_ethdev(&env, iut_rpcs, iut_port,

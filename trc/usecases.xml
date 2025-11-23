@@ -28283,6 +28283,11 @@
         <arg name="nb_rxd">32</arg>
         <arg name="nb_wrap"/>
         <notes/>
+        <results tags="net_i40e" key="RX-RING-MIN-64" notes="net/i40e supports minimum Rx ring size 64">
+          <result value="SKIPPED">
+            <verdict>Requested number of Rx descriptors violates limits</verdict>
+          </result>
+        </results>
         <results tags="rx-datapath-efx">
           <result value="SKIPPED">
             <verdict>Requested number of Rx descriptors violates limits</verdict>

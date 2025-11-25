@@ -252,7 +252,8 @@ for opt ; do
 done
 
 if test -n "${CFG}" ; then
-    IFS=: ; process_cfg ${CFG} ; IFS=
+    IFS=':' read -r -a cfg_parts <<< "${CFG}"
+    process_cfg "${cfg_parts[@]}"
 fi
 
 ##########################################################################

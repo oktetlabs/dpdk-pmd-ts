@@ -6024,29 +6024,13 @@ test_get_pci_fn_prop_inst(rcf_rpc_server *rpcs,
                           const struct if_nameindex *port,
                           char *prop, char **oid)
 {
-    char *vendor = NULL;
-    char *device = NULL;
     char *inst = tapi_malloc(CFG_OID_MAX);
-    te_errno rc;
 
-    rc = tapi_cfg_pci_get_pci_vendor_device(rpcs->ta, port->if_name,
-                                            &vendor, &device);
-    if (rc != 0)
-    {
-        ERROR("Failed to get vendor ID or device ID of %s on agent %s: %r",
-              port->if_name, rpcs->ta, rc);
-        goto out;
-    }
-
-    snprintf(inst, CFG_OID_MAX, "/local:%s/dpdk:/%s:pci_fn:%s:%s:",
-             rpcs->ta, prop, vendor, device);
+    snprintf(inst, CFG_OID_MAX, "/local:%s/dpdk:/%s:%s",
+             rpcs->ta, prop, port->if_name);
     *oid = inst;
 
-out:
-    free(vendor);
-    free(device);
-
-    return rc;
+    return 0;
 
 }
 

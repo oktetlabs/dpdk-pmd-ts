@@ -31,7 +31,7 @@
 
         <prologue>
             <script name="perf_prologue"/>
-            <arg name="env" ref="env.peer2peer"/>
+            <arg name="env" ref="env.perf.peer2peer"/>
         </prologue>
 
         <!--- @autogroup -->

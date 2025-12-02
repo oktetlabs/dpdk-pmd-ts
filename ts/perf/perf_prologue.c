@@ -109,7 +109,7 @@ int
 main(int argc, char **argv)
 {
     const char *extra_sfc_devargs = "stats_update_period_ms=0";
-    rcf_rpc_server *iut_rpcs = NULL;
+    rcf_rpc_server *iut_jobs_ctrl = NULL;
     tapi_env_host *iut_host = NULL;
     tapi_env_host *tst_host = NULL;
     const struct if_nameindex *iut_port = NULL;
@@ -122,7 +122,7 @@ main(int argc, char **argv)
     unsigned int i;
 
     TEST_START;
-    TEST_GET_PCO(iut_rpcs);
+    TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_HOST(iut_host);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
@@ -135,17 +135,19 @@ main(int argc, char **argv)
     CHECK_RC(cfg_add_instance_str("/local:/dpdk:/dev_args:pci_fn:1924::", NULL,
                                   CFG_VAL(STRING, extra_sfc_devargs)));
 
-    memset(&dev_info, 0, sizeof(dev_info));
-    rpc_rte_eth_dev_info_get(iut_rpcs, iut_port->if_index, &dev_info);
+    CHECK_RC(tapi_rte_eal_init(&env, iut_jobs_ctrl, 0, NULL));
 
-    CHECK_RC(test_add_pci_fn_prop(iut_rpcs, iut_port,
+    memset(&dev_info, 0, sizeof(dev_info));
+    rpc_rte_eth_dev_info_get(iut_jobs_ctrl, iut_port->if_index, &dev_info);
+
+    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
                                   "max_tx_queues", dev_info.max_tx_queues));
-    CHECK_RC(test_add_pci_fn_prop(iut_rpcs, iut_port,
+    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
                                   "max_rx_queues", dev_info.max_rx_queues));
 
-    CHECK_RC(test_add_pci_fn_prop(iut_rpcs, iut_port,
+    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
                                   "min_mtu", dev_info.min_mtu));
-    CHECK_RC(test_add_pci_fn_prop(iut_rpcs, iut_port,
+    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
                                   "max_mtu", dev_info.max_mtu));
 
     for (i = 0; i < rpc_dpdk_tx_offloads_num; i++)
@@ -168,15 +170,15 @@ main(int argc, char **argv)
         }
     }
 
-    rpc_rte_eth_macaddr_get(iut_rpcs, iut_port->if_index, &iut_mac);
+    rpc_rte_eth_macaddr_get(iut_jobs_ctrl, iut_port->if_index, &iut_mac);
     te_asprintf(&iut_mac_str, TE_PRINTF_MAC_FMT,
                 TE_PRINTF_MAC_VAL(iut_mac.addr_bytes));
     CHECK_NOT_NULL(iut_mac_str);
     CHECK_RC(cfg_add_instance_fmt(NULL, CFG_VAL(STRING, iut_mac_str),
                                   "/local:/dpdk:/mac:%s", TEST_ENV_IUT_PORT));
 
-    /* Deinitialize EAL on iut_rpcs */
-    CHECK_RC(tapi_rte_eal_fini(&env, iut_rpcs));
+    /* Deinitialize EAL on iut_jobs_ctrl */
+    CHECK_RC(tapi_rte_eal_fini(&env, iut_jobs_ctrl));
 
     /* Set RPC provider to default value on IUT (do not use DPDK RPC server) */
     CHECK_RC(cfg_set_instance_fmt(CFG_VAL(STRING, "ta_rpcs"),

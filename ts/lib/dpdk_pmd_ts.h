@@ -1296,37 +1296,53 @@ extern unsigned int test_get_template_header_length(rcf_rpc_server *rpcs,
  * Mark Tx offload as supported in local configuration tree to be
  * checked by tests.
  *
+ * @param[in]  rpcs              RPC server handle
+ * @param[in]  port              Network interface description
  * @param[in]  offload_bit       Bit of the offload to query
  *
  * @return Status code.
  */
-extern te_errno test_add_tx_offload_supported(unsigned long long offload_bit);
+extern te_errno test_add_tx_offload_supported(rcf_rpc_server *rpcs,
+                                              const struct if_nameindex *port,
+                                              unsigned long long offload_bit);
 
 /**
  * Mark Rx offload as supported in local configuration tree to be
  * checked by tests.
  *
+ * @param[in]  rpcs              RPC server handle
+ * @param[in]  port              Network interface description
  * @param[in]  offload_bit       Bit of the offload to query
  *
  * @return Status code.
  */
-extern te_errno test_add_rx_offload_supported(unsigned long long offload_bit);
+extern te_errno test_add_rx_offload_supported(rcf_rpc_server *rpcs,
+                                              const struct if_nameindex *port,
+                                              unsigned long long offload_bit);
 
 /**
  * Find out if a requested Tx offload is supported by looking into
  * configuration tree
  *
+ * @param[in]  rpcs              RPC server handle
+ * @param[in]  port              Network interface description
  * @param[in]  offload_bit       Bit of the offload to query
  */
-extern te_bool test_conf_tx_offload_supported(unsigned long long offload_bit);
+extern te_bool test_conf_tx_offload_supported(rcf_rpc_server *rpcs,
+                                              const struct if_nameindex *port,
+                                              unsigned long long offload_bit);
 
 /**
  * Find out if a requested Rx offload is supported by looking into
  * configuration tree
  *
+ * @param[in]  rpcs              RPC server handle
+ * @param[in]  port              Network interface description
  * @param[in]  offload_bit       Bit of the offload to query
  */
-extern te_bool test_conf_rx_offload_supported(unsigned long long offload_bit);
+extern te_bool test_conf_rx_offload_supported(rcf_rpc_server *rpcs,
+                                              const struct if_nameindex *port,
+                                              unsigned long long offload_bit);
 
 /**
  * Add a QUEUE action to an action list at specified index.

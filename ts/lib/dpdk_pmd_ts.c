@@ -4533,34 +4533,72 @@ test_get_template_header_length(rcf_rpc_server *rpcs, asn_value *tmpl,
     return tx_offload.l2_len + tx_offload.l3_len + tx_offload.l4_len;
 }
 
-te_errno
-test_add_tx_offload_supported(unsigned long long offload_bit)
+static te_errno
+test_add_port_offloads(rcf_rpc_server *rpcs,
+                       const struct if_nameindex *port)
 {
-    const char *offload_name = rpc_dpdk_offloads_tx_get_name(offload_bit);
+    te_errno rc = 0;
 
-    return cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
-                                "/local:/dpdk:/offloads:/dev:/tx:/supported:%s",
-                                offload_name);
+    if (cfg_find_fmt(NULL, "/local:%s/dpdk:/offloads:%s",
+                     rpcs->ta, port->if_name) != 0)
+    {
+        rc = cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
+                                  "/local:%s/dpdk:/offloads:%s",
+                                  rpcs->ta, port->if_name);
+        if (rc != 0)
+            return rc;
+    }
+
+    return rc;
 }
 
 te_errno
-test_add_rx_offload_supported(unsigned long long offload_bit)
+test_add_tx_offload_supported(rcf_rpc_server *rpcs,
+                              const struct if_nameindex *port,
+                              unsigned long long offload_bit)
 {
-    const char *offload_name = rpc_dpdk_offloads_rx_get_name(offload_bit);
+    const char *offload_name = rpc_dpdk_offloads_tx_get_name(offload_bit);
+    te_errno rc = test_add_port_offloads(rpcs, port);
+
+    if (rc != 0)
+        return rc;
 
     return cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
-                                "/local:/dpdk:/offloads:/dev:/rx:/supported:%s",
-                                offload_name);
+        "/local:%s/dpdk:/offloads:%s/dev:/tx:/supported:%s",
+        rpcs->ta, port->if_name, offload_name);
+}
+
+te_errno
+test_add_rx_offload_supported(rcf_rpc_server *rpcs,
+                              const struct if_nameindex *port,
+                              unsigned long long offload_bit)
+{
+    const char *offload_name = rpc_dpdk_offloads_rx_get_name(offload_bit);
+    te_errno rc = test_add_port_offloads(rpcs, port);
+
+    if (rc != 0)
+        return rc;
+
+    return cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
+        "/local:%s/dpdk:/offloads:%s/dev:/rx:/supported:%s",
+        rpcs->ta, port->if_name, offload_name);
 }
 
 te_bool
-test_conf_tx_offload_supported(unsigned long long offload_bit)
+test_conf_tx_offload_supported(rcf_rpc_server *rpcs,
+                               const struct if_nameindex *port,
+                               unsigned long long offload_bit)
 {
     te_errno rc;
     const char *offload_name = rpc_dpdk_offloads_tx_get_name(offload_bit);
 
-    rc = cfg_find_fmt(NULL, "/local:/dpdk:/offloads:/dev:/tx:/supported:%s",
-                      offload_name);
+    rc = cfg_find_fmt(NULL, "/local:%s/dpdk:/offloads:/dev:/tx:/supported:%s",
+                      rpcs->ta, offload_name);
+    if (rc == 0)
+        return TRUE;
+
+    rc = cfg_find_fmt(NULL, "/local:%s/dpdk:/offloads:%s/dev:/tx:/supported:%s",
+                      rpcs->ta, port->if_name, offload_name);
     if (rc != 0)
     {
         if (TE_RC_GET_ERROR(rc) != TE_ENOENT)
@@ -4576,13 +4614,20 @@ test_conf_tx_offload_supported(unsigned long long offload_bit)
 }
 
 te_bool
-test_conf_rx_offload_supported(unsigned long long offload_bit)
+test_conf_rx_offload_supported(rcf_rpc_server *rpcs,
+                               const struct if_nameindex *port,
+                               unsigned long long offload_bit)
 {
     te_errno rc;
     const char *offload_name = rpc_dpdk_offloads_rx_get_name(offload_bit);
 
-    rc = cfg_find_fmt(NULL, "/local:/dpdk:/offloads:/dev:/rx:/supported:%s",
-                      offload_name);
+    rc = cfg_find_fmt(NULL, "/local:%s/dpdk:/offloads:/dev:/rx:/supported:%s",
+                      rpcs->ta, offload_name);
+    if (rc == 0)
+        return TRUE;
+
+    rc = cfg_find_fmt(NULL, "/local:%s/dpdk:/offloads:%s/dev:/rx:/supported:%s",
+                      rpcs->ta, port->if_name, offload_name);
     if (rc != 0)
     {
         if (TE_RC_GET_ERROR(rc) != TE_ENOENT)

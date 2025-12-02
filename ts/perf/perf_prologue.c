@@ -21,6 +21,10 @@
 #include "tapi_test.h"
 #include "rpc_dpdk_offloads.h"
 
+/* Control environment binding manually */
+#undef TEST_START_SPECIFIC
+#define TEST_START_SPECIFIC
+
 static te_errno
 bind_dpdk_driver_on_tst_agent(cfg_net_t *net, cfg_net_node_t *node,
                               const char *oid_str, cfg_oid *oid, void *cookie)
@@ -109,6 +113,9 @@ int
 main(int argc, char **argv)
 {
     const char *extra_sfc_devargs = "stats_update_period_ms=0";
+
+    unsigned int env_id = 0;
+    const char *env_str;
     rcf_rpc_server *iut_jobs_ctrl = NULL;
     tapi_env_host *iut_host = NULL;
     tapi_env_host *tst_host = NULL;
@@ -122,6 +129,23 @@ main(int argc, char **argv)
     unsigned int i;
 
     TEST_START;
+
+    do {
+        te_string env_name = TE_STRING_INIT;
+
+        te_string_append(&env_name, "env%u", env_id++);
+        env_str = test_get_param(argc, argv, te_string_value(&env_name));
+        te_string_free(&env_name);
+
+        if (env_str == NULL)
+            TEST_FAIL("No env which could be bound");
+
+        memset(&env, 0, sizeof(env));
+        rc = tapi_env_get(env_str, &env);
+    } while (rc != 0);
+
+    CFG_WAIT_CHANGES;
+
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_HOST(iut_host);
     TEST_GET_HOST(tst_host);

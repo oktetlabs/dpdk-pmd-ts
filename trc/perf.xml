@@ -11,7 +11,7 @@
       <objective/>
       <notes/>
       <iter result="PASSED">
-        <arg name="env"/>
+        <arg name="env0"/>
         <notes/>
       </iter>
     </test>

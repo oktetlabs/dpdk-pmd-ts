@@ -17,6 +17,7 @@
 
 #include "tapi_cfg_cpu.h"
 #include "tapi_cfg_sys.h"
+#include "tapi_env.h"
 #include "tapi_test.h"
 #include "rpc_dpdk_offloads.h"
 
@@ -109,7 +110,8 @@ main(int argc, char **argv)
 {
     const char *extra_sfc_devargs = "stats_update_period_ms=0";
     rcf_rpc_server *iut_rpcs = NULL;
-    rcf_rpc_server *tst_rpcs = NULL;
+    tapi_env_host *iut_host = NULL;
+    tapi_env_host *tst_host = NULL;
     const struct if_nameindex *iut_port = NULL;
     struct tarpc_rte_eth_dev_info dev_info;
     const char *iut_job_control_rpcs = "iut_jobs_ctrl";
@@ -121,7 +123,8 @@ main(int argc, char **argv)
 
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
-    TEST_GET_PCO(tst_rpcs);
+    TEST_GET_HOST(iut_host);
+    TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
 
     /*
@@ -177,21 +180,21 @@ main(int argc, char **argv)
 
     /* Set RPC provider to default value on IUT (do not use DPDK RPC server) */
     CHECK_RC(cfg_set_instance_fmt(CFG_VAL(STRING, "ta_rpcs"),
-                                  "/agent:%s/rpcprovider:", iut_rpcs->ta));
+                                  "/agent:%s/rpcprovider:", iut_host->ta));
 
     /* Dismantle default CPU pre-allocation made by 'ts/prologue' */
-    CHECK_RC(tapi_cfg_get_all_threads(iut_rpcs->ta, &nb_cpus, &indices));
+    CHECK_RC(tapi_cfg_get_all_threads(iut_host->ta, &nb_cpus, &indices));
     for (i = 0; i < nb_cpus; ++i)
-        CHECK_RC(tapi_cfg_cpu_release_by_id(iut_rpcs->ta, &indices[i]));
+        CHECK_RC(tapi_cfg_cpu_release_by_id(iut_host->ta, &indices[i]));
     free(indices);
 
-    CHECK_RC(tapi_cfg_get_all_threads(tst_rpcs->ta, &nb_cpus, &indices));
+    CHECK_RC(tapi_cfg_get_all_threads(tst_host->ta, &nb_cpus, &indices));
     for (i = 0; i < nb_cpus; ++i)
-        CHECK_RC(tapi_cfg_cpu_release_by_id(tst_rpcs->ta, &indices[i]));
+        CHECK_RC(tapi_cfg_cpu_release_by_id(tst_host->ta, &indices[i]));
     free(indices);
 
     /* Create RPC server jobs control to avoid addition in each test */
-    CHECK_RC(rcf_rpc_server_create(iut_rpcs->ta, iut_job_control_rpcs, NULL));
+    CHECK_RC(rcf_rpc_server_create(iut_host->ta, iut_job_control_rpcs, NULL));
 
     CHECK_RC(tapi_cfg_net_foreach_node(bind_dpdk_driver_on_tst_agent, NULL));
 

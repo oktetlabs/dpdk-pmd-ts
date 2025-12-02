@@ -4533,6 +4533,26 @@ test_get_template_header_length(rcf_rpc_server *rpcs, asn_value *tmpl,
     return tx_offload.l2_len + tx_offload.l3_len + tx_offload.l4_len;
 }
 
+te_errno
+test_add_tx_offload_supported(unsigned long long offload_bit)
+{
+    const char *offload_name = rpc_dpdk_offloads_tx_get_name(offload_bit);
+
+    return cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
+                                "/local:/dpdk:/offloads:/dev:/tx:/supported:%s",
+                                offload_name);
+}
+
+te_errno
+test_add_rx_offload_supported(unsigned long long offload_bit)
+{
+    const char *offload_name = rpc_dpdk_offloads_rx_get_name(offload_bit);
+
+    return cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
+                                "/local:/dpdk:/offloads:/dev:/rx:/supported:%s",
+                                offload_name);
+}
+
 te_bool
 test_conf_tx_offload_supported(unsigned long long offload_bit)
 {

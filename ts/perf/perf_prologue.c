@@ -177,21 +177,13 @@ main(int argc, char **argv)
     for (i = 0; i < rpc_dpdk_tx_offloads_num; i++)
     {
         if (dev_info.tx_offload_capa & (1ULL << rpc_dpdk_tx_offloads[i].bit))
-        {
-            CHECK_RC(cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
-                        "/local:/dpdk:/offloads:/dev:/tx:/supported:%s",
-                        rpc_dpdk_tx_offloads[i].name));
-        }
+            CHECK_RC(test_add_tx_offload_supported(rpc_dpdk_tx_offloads[i].bit));
     }
 
     for (i = 0; i < rpc_dpdk_rx_offloads_num; i++)
     {
         if (dev_info.rx_offload_capa & (1ULL << rpc_dpdk_rx_offloads[i].bit))
-        {
-            CHECK_RC(cfg_add_instance_fmt(NULL, CFG_VAL(NONE, NULL),
-                        "/local:/dpdk:/offloads:/dev:/rx:/supported:%s",
-                        rpc_dpdk_rx_offloads[i].name));
-        }
+            CHECK_RC(test_add_rx_offload_supported(rpc_dpdk_rx_offloads[i].bit));
     }
 
     rpc_rte_eth_macaddr_get(iut_jobs_ctrl, iut_port->if_index, &iut_mac);

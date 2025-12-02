@@ -1293,6 +1293,26 @@ extern unsigned int test_get_template_header_length(rcf_rpc_server *rpcs,
                                                     rpc_rte_mempool_p mp);
 
 /**
+ * Mark Tx offload as supported in local configuration tree to be
+ * checked by tests.
+ *
+ * @param[in]  offload_bit       Bit of the offload to query
+ *
+ * @return Status code.
+ */
+extern te_errno test_add_tx_offload_supported(unsigned long long offload_bit);
+
+/**
+ * Mark Rx offload as supported in local configuration tree to be
+ * checked by tests.
+ *
+ * @param[in]  offload_bit       Bit of the offload to query
+ *
+ * @return Status code.
+ */
+extern te_errno test_add_rx_offload_supported(unsigned long long offload_bit);
+
+/**
  * Find out if a requested Tx offload is supported by looking into
  * configuration tree
  *

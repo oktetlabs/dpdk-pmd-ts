@@ -119,6 +119,7 @@ main(int argc, char **argv)
     rcf_rpc_server *iut_jobs_ctrl = NULL;
     tapi_env_host *iut_host = NULL;
     tapi_env_host *tst_host = NULL;
+    unsigned int iut_port_id = 0;
     const struct if_nameindex *iut_port = NULL;
     struct tarpc_rte_eth_dev_info dev_info;
     const char *iut_job_control_rpcs = "iut_jobs_ctrl";
@@ -144,12 +145,13 @@ main(int argc, char **argv)
         rc = tapi_env_get(env_str, &env);
     } while (rc != 0);
 
+    RING("Bound environment:\n%s", env_str);
+
     CFG_WAIT_CHANGES;
 
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_HOST(iut_host);
     TEST_GET_HOST(tst_host);
-    TEST_GET_IF(iut_port);
 
     /*
      * Make stats of SFC (Xilinx) NICs more consistent by removing update period
@@ -161,39 +163,53 @@ main(int argc, char **argv)
 
     CHECK_RC(tapi_rte_eal_init(&env, iut_jobs_ctrl, 0, NULL));
 
-    memset(&dev_info, 0, sizeof(dev_info));
-    rpc_rte_eth_dev_info_get(iut_jobs_ctrl, iut_port->if_index, &dev_info);
+    do {
+        te_string if_name = TE_STRING_INIT;
 
-    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
-                                  "max_tx_queues", dev_info.max_tx_queues));
-    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
-                                  "max_rx_queues", dev_info.max_rx_queues));
+        te_string_append(&if_name, "iut_port%u", iut_port_id++);
+        iut_port = tapi_env_get_if(&env, te_string_value(&if_name));
+        if (iut_port == NULL)
+        {
+            te_string_free(&if_name);
+            break;
+        }
 
-    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
-                                  "min_mtu", dev_info.min_mtu));
-    CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
-                                  "max_mtu", dev_info.max_mtu));
+        memset(&dev_info, 0, sizeof(dev_info));
+        rpc_rte_eth_dev_info_get(iut_jobs_ctrl, iut_port->if_index, &dev_info);
 
-    for (i = 0; i < rpc_dpdk_tx_offloads_num; i++)
-    {
-        if (dev_info.tx_offload_capa & (1ULL << rpc_dpdk_tx_offloads[i].bit))
-            CHECK_RC(test_add_tx_offload_supported(iut_jobs_ctrl, iut_port,
-                                                   rpc_dpdk_tx_offloads[i].bit));
-    }
+        CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
+                                      "max_tx_queues", dev_info.max_tx_queues));
+        CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
+                                      "max_rx_queues", dev_info.max_rx_queues));
 
-    for (i = 0; i < rpc_dpdk_rx_offloads_num; i++)
-    {
-        if (dev_info.rx_offload_capa & (1ULL << rpc_dpdk_rx_offloads[i].bit))
-            CHECK_RC(test_add_rx_offload_supported(iut_jobs_ctrl, iut_port,
-                                                   rpc_dpdk_rx_offloads[i].bit));
-    }
+        CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
+                                      "min_mtu", dev_info.min_mtu));
+        CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
+                                      "max_mtu", dev_info.max_mtu));
 
-    rpc_rte_eth_macaddr_get(iut_jobs_ctrl, iut_port->if_index, &iut_mac);
-    te_asprintf(&iut_mac_str, TE_PRINTF_MAC_FMT,
-                TE_PRINTF_MAC_VAL(iut_mac.addr_bytes));
-    CHECK_NOT_NULL(iut_mac_str);
-    CHECK_RC(cfg_add_instance_fmt(NULL, CFG_VAL(STRING, iut_mac_str),
-                                  "/local:/dpdk:/mac:%s", TEST_ENV_IUT_PORT));
+        for (i = 0; i < rpc_dpdk_tx_offloads_num; i++)
+        {
+            if (dev_info.tx_offload_capa & (1ULL << rpc_dpdk_tx_offloads[i].bit))
+                CHECK_RC(test_add_tx_offload_supported(iut_jobs_ctrl, iut_port,
+                                                       rpc_dpdk_tx_offloads[i].bit));
+        }
+
+        for (i = 0; i < rpc_dpdk_rx_offloads_num; i++)
+        {
+            if (dev_info.rx_offload_capa & (1ULL << rpc_dpdk_rx_offloads[i].bit))
+                CHECK_RC(test_add_rx_offload_supported(iut_jobs_ctrl, iut_port,
+                                                       rpc_dpdk_rx_offloads[i].bit));
+        }
+
+        rpc_rte_eth_macaddr_get(iut_jobs_ctrl, iut_port->if_index, &iut_mac);
+        te_asprintf(&iut_mac_str, TE_PRINTF_MAC_FMT,
+                    TE_PRINTF_MAC_VAL(iut_mac.addr_bytes));
+        CHECK_NOT_NULL(iut_mac_str);
+        CHECK_RC(cfg_add_instance_fmt(NULL, CFG_VAL(STRING, iut_mac_str),
+                                      "/local:/dpdk:/mac:%s",
+                                      te_string_value(&if_name)));
+        te_string_free(&if_name);
+    } while (TRUE);
 
     /* Deinitialize EAL on iut_jobs_ctrl */
     CHECK_RC(tapi_rte_eal_fini(&env, iut_jobs_ctrl));

@@ -12,6 +12,7 @@
       <notes/>
       <iter result="PASSED">
         <arg name="env0"/>
+        <arg name="env1"/>
         <notes/>
       </iter>
     </test>

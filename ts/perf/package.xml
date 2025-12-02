@@ -26,12 +26,32 @@
                 'tst_host'{
                     {'tst_jobs_ctrl':tester, if:'tst_port'}
                 }
+            },'iut_port0'='iut_port','tst_port0'='tst_port'</value>
+        </var>
+
+        <var name="env.perf.peer2peerX2" global="true">
+            <value>'net1':IUT{
+                'iut_host'{
+                    'iut_ps'{'iut_jobs_ctrl':tester, if:'iut_port0'}
+                },
+                'tst_host'{
+                    'tst_ps'{'tst_jobs_ctrl':tester, if:'tst_port0'}
+                }
+            },
+            'net2':IUT{
+                'iut_host'{
+                    'iut_ps'{if:'iut_port1'}
+                },
+                'tst_host'{
+                    'tst_ps'{if:'tst_port1'}
+                }
             }</value>
         </var>
 
         <prologue>
             <script name="perf_prologue"/>
-            <arg name="env0" ref="env.perf.peer2peer"/>
+            <arg name="env0" ref="env.perf.peer2peerX2"/>
+            <arg name="env1" ref="env.perf.peer2peer"/>
         </prologue>
 
         <!--- @autogroup -->

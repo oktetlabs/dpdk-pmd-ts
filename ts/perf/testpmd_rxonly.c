@@ -58,7 +58,6 @@ main(int argc, char *argv[])
     unsigned int packet_size;
     const char *txpkts;
     char *iut_mac;
-    cfg_val_type type = CVT_STRING;
     unsigned int max_rx_queues;
 
     te_kvpair_h *traffic_generator_params = NULL;
@@ -86,8 +85,8 @@ main(int argc, char *argv[])
 
     test_check_mtu(iut_jobs_ctrl, iut_port, packet_size);
 
-    CHECK_RC(cfg_get_instance_str(&type, &iut_mac,
-                                  "/local:/dpdk:/mac:" TEST_ENV_IUT_PORT));
+    CHECK_RC(cfg_get_string(&iut_mac, "/local:/dpdk:/mac:%s%u",
+                            TEST_ENV_IUT_PORT, 0));
     CHECK_RC(test_create_traffic_generator_params(tst_jobs_ctrl->ta,
                                     TAPI_DPDK_TESTPMD_ARG_PREFIX,
                                     TAPI_DPDK_TESTPMD_COMMAND_PREFIX,

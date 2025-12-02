@@ -50,7 +50,6 @@ main(int argc, char *argv[])
 
     te_kvpair_h *traffic_generator_params = NULL;
     char *iut_mac;
-    cfg_val_type type = CVT_STRING;
 
     te_meas_stats_t meas_stats_tx = {0};
     te_meas_stats_t meas_stats_rx = {0};
@@ -75,8 +74,8 @@ main(int argc, char *argv[])
                                     testpmd_arg_txfreet,
                                     &traffic_generator_params, &n_peer_cores));
 
-    CHECK_RC(cfg_get_instance_str(&type, &iut_mac,
-                                  "/local:/dpdk:/mac:" TEST_ENV_IUT_PORT));
+    CHECK_RC(cfg_get_string(&iut_mac, "/local:/dpdk:/mac:%s%u",
+                            TEST_ENV_IUT_PORT, 0));
     CHECK_RC(te_kvpair_add(traffic_generator_params,
                            TAPI_DPDK_TESTPMD_ARG_PREFIX "eth_peer",
                            "0,%s", iut_mac));

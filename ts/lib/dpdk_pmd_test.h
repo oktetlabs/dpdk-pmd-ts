@@ -21,6 +21,9 @@
 #include "tapi_rpc_rte_eal.h"
 #include "tapi_tad.h"
 
+/** Maximum number of IUT ports supported by multi-port tests */
+#define TEST_MAX_IUT_PORTS 2
+
 #ifndef TEST_START_VARS
 /**
  * Test suite specific variables of the test @b main() function.

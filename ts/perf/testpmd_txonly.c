@@ -37,7 +37,8 @@ main(int argc, char *argv[])
 {
     rcf_rpc_server *iut_jobs_ctrl = NULL;
     rcf_rpc_server *tst_jobs_ctrl = NULL;
-    const struct if_nameindex *iut_port = NULL;
+    const struct if_nameindex *iut_ifs[TEST_MAX_IUT_PORTS] = { NULL };
+    size_t n_ports = 0;
 
     tapi_dpdk_testpmd_job_t testpmd_job = {0};
     tapi_dpdk_testpmd_job_t testpmd_job_rx = {0};
@@ -50,20 +51,26 @@ main(int argc, char *argv[])
     unsigned int n_fwd_cores;
     unsigned int testpmd_arg_txq;
     uint64_t tx_offloads = 0;
-    unsigned int link_speed;
-    unsigned int link_speed_rx;
     int txpkts_len;
-    unsigned int max_tx_queues;
     unsigned int testpmd_arg_txonly_tso_mss;
     te_bool tso_requested;
     unsigned long rx_pkts;
     unsigned long rx_bytes;
+    size_t idx;
     int i;
 
-    te_meas_stats_t meas_stats_tx = {0};
-    te_meas_stats_t meas_stats_rx = {0};
+    unsigned int port;
+    unsigned int n_iut_ports = 0;
+    unsigned int n_tst_ports = 0;
+    unsigned int iut_ports[TEST_MAX_IUT_PORTS] = {};
+    unsigned int tst_ports[TEST_MAX_IUT_PORTS] = {};
+    unsigned int iut_link_speed[TEST_MAX_IUT_PORTS] = {};
+    unsigned int tst_link_speed[TEST_MAX_IUT_PORTS] = {};
+    te_meas_stats_t meas_stats_tx[TEST_MAX_IUT_PORTS] = {0};
+    te_meas_stats_t meas_stats_rx[TEST_MAX_IUT_PORTS] = {0};
 
     te_kvpair_h *rx_params = NULL;
+    te_string str = TE_STRING_INIT;
 
     te_bool dbells_supp;
     te_kvpair_h dbells_opt;
@@ -72,44 +79,54 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_PCO(tst_jobs_ctrl);
-    TEST_GET_IF(iut_port);
     TEST_GET_INT_LIST_PARAM(testpmd_command_txpkts, txpkts_len);
 
     n_fwd_cores = TEST_UINT_PARAM(n_fwd_cores);
     TEST_GET_UINT_PARAM(testpmd_arg_txq);
 
-    CHECK_RC(test_get_pci_fn_prop(iut_jobs_ctrl, iut_port,
-                                  "max_tx_queues", &max_tx_queues));
-    if (testpmd_arg_txq > max_tx_queues)
+    for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
     {
-        TEST_SKIP("So many Tx queues are not supported");
-    }
+        unsigned int max_tx_queues;
 
-    if (txpkts_len > 1)
-    {
-        if (!test_conf_tx_offload_supported(iut_jobs_ctrl, iut_port,
-                TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
+        te_string_reset(&str);
+        te_string_append(&str, TEST_ENV_IUT_PORT "%u", idx);
+        iut_ifs[idx] = tapi_env_get_if(&env, te_string_value(&str));
+        if (iut_ifs[idx] == NULL)
+            break;
+
+        CHECK_RC(test_get_pci_fn_prop(iut_jobs_ctrl, iut_ifs[idx],
+                                      "max_tx_queues", &max_tx_queues));
+        if (testpmd_arg_txq > max_tx_queues)
         {
-            TEST_SKIP("Iteration skipped due to unsupported multi seg offload");
+            TEST_SKIP("So many Tx queues are not supported");
         }
-        /*
-         * Enable MULTI_SEGS Tx offload.
-         * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_MULTI_SEGS is RTE_BIT64(15)
-         */
-        tx_offloads |= UINT64_C(1) << 15;
-    }
 
-    tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
-    if (tso_requested)
-    {
-        if (!test_conf_tx_offload_supported(iut_jobs_ctrl, iut_port,
-                TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT))
-            TEST_SKIP("TSO is not supported");
-        /*
-         * Enable TSO Tx offload.
-         * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_TCP_TSO is RTE_BIT64(5)
-         */
-        tx_offloads |= UINT64_C(1) << 5;
+        if (txpkts_len > 1)
+        {
+            if (!test_conf_tx_offload_supported(iut_jobs_ctrl, iut_ifs[idx],
+                    TARPC_RTE_ETH_TX_OFFLOAD_MULTI_SEGS_BIT))
+            {
+                TEST_SKIP("Iteration skipped due to unsupported multi seg offload");
+            }
+            /*
+             * Enable MULTI_SEGS Tx offload.
+             * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_MULTI_SEGS is RTE_BIT64(15)
+             */
+            tx_offloads |= UINT64_C(1) << 15;
+        }
+
+        tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
+        if (tso_requested)
+        {
+            if (!test_conf_tx_offload_supported(iut_jobs_ctrl, iut_ifs[idx],
+                    TARPC_RTE_ETH_TX_OFFLOAD_TCP_TSO_BIT))
+                TEST_SKIP("TSO is not supported");
+            /*
+             * Enable TSO Tx offload.
+             * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_TCP_TSO is RTE_BIT64(5)
+             */
+            tx_offloads |= UINT64_C(1) << 5;
+        }
     }
 
     if (tx_offloads != 0)
@@ -135,7 +152,8 @@ main(int argc, char *argv[])
                 packet_size += (unsigned int)testpmd_command_txpkts[i];
     }
 
-    test_check_mtu(iut_jobs_ctrl, iut_port, packet_size);
+    for (idx = 0; idx < n_ports; ++idx)
+        test_check_mtu(iut_jobs_ctrl, iut_ifs[idx], packet_size);
 
     TEST_STEP("Adjust testpmd parameters");
     /*
@@ -205,30 +223,45 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_dpdk_testpmd_start(&testpmd_job_rx));
 
     TEST_STEP("Retrieve link speed from running testpmd-s");
-    CHECK_RC(tapi_dpdk_testpmd_get_link_speed(&testpmd_job, &link_speed));
-    CHECK_RC(tapi_dpdk_testpmd_get_link_speed(&testpmd_job_rx, &link_speed_rx));
+    CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&testpmd_job,
+                                                         n_ports,
+                                                         &n_iut_ports,
+                                                         iut_ports,
+                                                         iut_link_speed));
+    CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&testpmd_job_rx,
+                                                         n_ports,
+                                                         &n_tst_ports,
+                                                         tst_ports,
+                                                         tst_link_speed));
 
     TEST_STEP("Initialize TST Rx and IUT Tx statistics");
-    CHECK_RC(te_meas_stats_init(&meas_stats_rx, TEST_MEAS_MAX_NUM_DATAPOINTS,
-                                TEST_MEAS_INIT_FLAGS,
-                                TEST_MEAS_MIN_NUM_DATAPOINTS,
-                                TEST_MEAS_REQUIRED_CV,
-                                TEST_MEAS_ALLOWED_SKIPS,
-                                TEST_MEAS_DEVIATION_COEFF));
-    CHECK_RC(te_meas_stats_init(&meas_stats_tx, TEST_MEAS_MAX_NUM_DATAPOINTS,
-                                TEST_MEAS_INIT_FLAGS,
-                                TEST_MEAS_MIN_NUM_DATAPOINTS,
-                                TEST_MEAS_REQUIRED_CV,
-                                TEST_MEAS_ALLOWED_SKIPS,
-                                TEST_MEAS_DEVIATION_COEFF));
+    for (port = 0; port < n_ports; ++port)
+    {
+        CHECK_RC(te_meas_stats_init(&meas_stats_rx[port],
+                                    TEST_MEAS_MAX_NUM_DATAPOINTS,
+                                    TEST_MEAS_INIT_FLAGS,
+                                    TEST_MEAS_MIN_NUM_DATAPOINTS,
+                                    TEST_MEAS_REQUIRED_CV,
+                                    TEST_MEAS_ALLOWED_SKIPS,
+                                    TEST_MEAS_DEVIATION_COEFF));
+        CHECK_RC(te_meas_stats_init(&meas_stats_tx[port],
+                                    TEST_MEAS_MAX_NUM_DATAPOINTS,
+                                    TEST_MEAS_INIT_FLAGS,
+                                    TEST_MEAS_MIN_NUM_DATAPOINTS,
+                                    TEST_MEAS_REQUIRED_CV,
+                                    TEST_MEAS_ALLOWED_SKIPS,
+                                    TEST_MEAS_DEVIATION_COEFF));
+    }
 
     TEST_STEP("Retrieve Rx stats from running testpmd");
-    CHECK_RC(tapi_dpdk_testpmd_get_stats(&testpmd_job_rx, NULL,
-                                         &meas_stats_rx));
+    CHECK_RC(tapi_dpdk_testpmd_get_stats_many_ports(&testpmd_job_rx, n_ports,
+                                                    &n_tst_ports, tst_ports,
+                                                    NULL, meas_stats_rx));
 
     TEST_STEP("Retrieve Tx stats from running testpmd");
-    CHECK_RC(tapi_dpdk_testpmd_get_stats(&testpmd_job, &meas_stats_tx,
-                                         NULL));
+    CHECK_RC(tapi_dpdk_testpmd_get_stats_many_ports(&testpmd_job, n_ports,
+                                                    &n_iut_ports, iut_ports,
+                                                    meas_stats_tx, NULL));
 
     if (tso_requested)
     {
@@ -240,25 +273,40 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Check and log measurement results");
-    if (meas_stats_rx.data.mean == 0 || meas_stats_tx.data.mean == 0)
-        TEST_VERDICT("Failure: zero Tx or Rx packets per second");
+    for (port = 0; port < n_ports; ++port)
+    {
+        if (meas_stats_rx[port].data.mean == 0 ||
+            meas_stats_tx[port].data.mean == 0)
+            TEST_VERDICT("Failure: zero Tx or Rx packets per second");
 
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx,
-                              packet_size, link_speed, "Tx");
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_rx,
-                              packet_size, link_speed_rx, "Rx");
+        te_string_reset(&str);
+        te_string_append(&str, "Tx%u", port);
+        tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx[port],
+                                  packet_size, iut_link_speed[port],
+                                  te_string_value(&str));
 
-    if (dbells_supp)
-        CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&testpmd_job, &meas_stats_tx));
+        te_string_reset(&str);
+        te_string_append(&str, "Rx%u", port);
+        tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_rx[port],
+                                  packet_size, tst_link_speed[port],
+                                  te_string_value(&str));
+
+        if (dbells_supp)
+            CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&testpmd_job, &meas_stats_tx[port]));
+    }
 
     TEST_SUCCESS;
 
 cleanup:
     tapi_dpdk_testpmd_destroy(&testpmd_job);
     tapi_dpdk_testpmd_destroy(&testpmd_job_rx);
-    te_meas_stats_free(&meas_stats_tx);
-    te_meas_stats_free(&meas_stats_rx);
+    for (port = 0; port < n_ports; ++port)
+    {
+        te_meas_stats_free(&meas_stats_tx[port]);
+        te_meas_stats_free(&meas_stats_rx[port]);
+    }
     te_kvpair_fini(rx_params);
+    te_string_free(&str);
 
     TEST_END;
 }

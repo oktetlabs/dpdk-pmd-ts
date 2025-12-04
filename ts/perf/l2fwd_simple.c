@@ -114,10 +114,10 @@ main(int argc, char *argv[])
         TEST_VERDICT("Failure: zero Rx or Tx packets per second");
 
     tapi_dpdk_stats_log_rates(TAPI_DPDK_L2FWD_NAME, &meas_stats_tx,
-                              packet_size, link_speed, "Tx");
+                              packet_size, link_speed, "FwdTx");
 
     tapi_dpdk_stats_log_rates(TAPI_DPDK_L2FWD_NAME, &meas_stats_rx,
-                              packet_size, link_speed, "Rx");
+                              packet_size, link_speed, "FwdRx");
 
     tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_tx,
                               packet_size, link_speed, "Tx");

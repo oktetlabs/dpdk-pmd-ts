@@ -2305,6 +2305,27 @@
       </iter>
     </test>
 
+    <test name="testpmd_dual_port_rxonly" type="script">
+      <objective>Test dpdk-testpmd performance in Rx only mode on two ports simultaneously</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size"/>
+        <arg name="testpmd_arg_rxq"/>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+    </test>
+
     <test name="l2fwd_simple" type="script">
       <objective>Test l2fwd perfomance</objective>
       <notes/>

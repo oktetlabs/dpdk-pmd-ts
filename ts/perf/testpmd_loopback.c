@@ -102,13 +102,7 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_dpdk_testpmd_get_link_speed(&testpmd_job, &link_speed));
 
     TEST_STEP("Initialize Tx and Rx statistics");
-    CHECK_RC(te_meas_stats_init(&meas_stats_tx, TEST_MEAS_MAX_NUM_DATAPOINTS,
-                                TEST_MEAS_INIT_FLAGS,
-                                TEST_MEAS_MIN_NUM_DATAPOINTS,
-                                TEST_MEAS_REQUIRED_CV,
-                                TEST_MEAS_ALLOWED_SKIPS,
-                                TEST_MEAS_DEVIATION_COEFF));
-
+    CHECK_RC(test_meas_stats_init(&meas_stats_tx));
     CHECK_RC(te_meas_stats_init(&meas_stats_rx, TEST_MEAS_MIN_NUM_DATAPOINTS,
                                 0, 0, 0, 0, 0));
 

@@ -201,20 +201,8 @@ main(int argc, char *argv[])
     TEST_STEP("Initialize IUT Rx and TST Tx statistics");
     for (port = 0; port < n_ports; ++port)
     {
-        CHECK_RC(te_meas_stats_init(&iut_stats_rx[port],
-                                    TEST_MEAS_MAX_NUM_DATAPOINTS,
-                                    TEST_MEAS_INIT_FLAGS,
-                                    TEST_MEAS_MIN_NUM_DATAPOINTS,
-                                    TEST_MEAS_REQUIRED_CV,
-                                    TEST_MEAS_ALLOWED_SKIPS,
-                                    TEST_MEAS_DEVIATION_COEFF));
-        CHECK_RC(te_meas_stats_init(&tst_stats_tx[port],
-                                    TEST_MEAS_MAX_NUM_DATAPOINTS,
-                                    TEST_MEAS_INIT_FLAGS,
-                                    TEST_MEAS_MIN_NUM_DATAPOINTS,
-                                    TEST_MEAS_REQUIRED_CV,
-                                    TEST_MEAS_ALLOWED_SKIPS,
-                                    TEST_MEAS_DEVIATION_COEFF));
+        CHECK_RC(test_meas_stats_init(&iut_stats_rx[port]));
+        CHECK_RC(test_meas_stats_init(&tst_stats_tx[port]));
     }
 
     TEST_STEP("Retrieve Rx stats from running testpmd");

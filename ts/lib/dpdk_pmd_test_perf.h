@@ -20,4 +20,19 @@
     (TE_MEAS_STATS_INIT_STAB_REQUIRED | TE_MEAS_STATS_INIT_SUMMARY_REQUIRED |  \
      TE_MEAS_STATS_INIT_IGNORE_ZEROS)
 
+/**
+ * Initialize measurements statistics with defaults.
+ */
+extern te_errno
+test_meas_stats_init(te_meas_stats_t *meas_stats)
+{
+    return te_meas_stats_init(meas_stats,
+                              TEST_MEAS_MAX_NUM_DATAPOINTS,
+                              TEST_MEAS_INIT_FLAGS,
+                              TEST_MEAS_MIN_NUM_DATAPOINTS,
+                              TEST_MEAS_REQUIRED_CV,
+                              TEST_MEAS_ALLOWED_SKIPS,
+                              TEST_MEAS_DEVIATION_COEFF);
+}
+
 #endif

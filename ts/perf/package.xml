@@ -514,9 +514,7 @@
 
         <!--- @autogroup -->
         <run>
-            <script name="l2fwd_simple">
-                <req id="TEST_HARNESS_CHECKUP"/>
-            </script>
+            <script name="l2fwd_simple"/>
             <arg name="env">
                 <value ref="env.perf.peer2peer"/>
             </arg>
@@ -536,7 +534,13 @@
                 <value>1</value>
             </arg>
             <arg name="packet_size">
-                <value>42</value>
+                <value reqs="TEST_HARNESS_CHECKUP">42</value>
+                <value>60</value>
+                <value>124</value>
+                <value>252</value>
+                <value>508</value>
+                <value>1020</value>
+                <value>1514</value>
             </arg>
         </run>
 

@@ -236,25 +236,33 @@ main(int argc, char *argv[])
             TEST_VERDICT("Failure: zero Tx or Rx packets per second");
 
         te_string_reset(&str);
-        te_string_append(&str, "FwdRx%u", port);
+        te_string_append(&str, "FwdRx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &iut_stats_rx[port],
                                   packet_size, iut_link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
-        te_string_append(&str, "FwdTx%u", port);
+        te_string_append(&str, "FwdTx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &iut_stats_tx[port],
                                   packet_size, iut_link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
-        te_string_append(&str, "Rx%u", port);
+        te_string_append(&str, "Rx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_rx[port],
                                   packet_size, tst_link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
-        te_string_append(&str, "Tx%u", port);
+        te_string_append(&str, "Tx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_tx[port],
                                   packet_size, tst_link_speed[port],
                                   te_string_value(&str));
@@ -266,6 +274,16 @@ main(int argc, char *argv[])
             CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&iut_testpmd_job,
                                                    &iut_stats_tx[port]));
         }
+    }
+
+    if (n_ports > 1)
+    {
+        tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
+                                       iut_stats_rx, packet_size,
+                                       iut_link_speed, "FwdRx");
+        tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
+                                       iut_stats_tx, packet_size,
+                                       iut_link_speed, "FwdTx");
     }
 
     TEST_SUCCESS;

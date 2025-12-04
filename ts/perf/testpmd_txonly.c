@@ -268,19 +268,30 @@ main(int argc, char *argv[])
             TEST_VERDICT("Failure: zero Tx or Rx packets per second");
 
         te_string_reset(&str);
-        te_string_append(&str, "Tx%u", port);
+        te_string_append(&str, "Tx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx[port],
                                   packet_size, iut_link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
-        te_string_append(&str, "Rx%u", port);
+        te_string_append(&str, "Rx");
+        if (n_ports > 1)
+            te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_rx[port],
                                   packet_size, tst_link_speed[port],
                                   te_string_value(&str));
 
         if (dbells_supp)
             CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&testpmd_job, &meas_stats_tx[port]));
+    }
+
+    if (n_ports > 1)
+    {
+        tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
+                                       meas_stats_tx, packet_size,
+                                       iut_link_speed, "Tx");
     }
 
     TEST_SUCCESS;

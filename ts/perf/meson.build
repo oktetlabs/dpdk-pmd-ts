@@ -4,6 +4,7 @@
 tests = [
     'l2fwd_simple',
     'perf_prologue',
+    'testpmd_fwd',
     'testpmd_loopback',
     'testpmd_rxonly',
     'testpmd_txonly',

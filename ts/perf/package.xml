@@ -457,6 +457,62 @@
         </run>
 
         <!--- @autogroup -->
+        <run name="testpmd_dual_port_fwd">
+            <script name="testpmd_fwd">
+                <req id="DPDK_PEER"/>
+                <objective>Test dpdk-testpmd performance in IO forwarding mode on two ports simultaneously</objective>
+            </script>
+            <arg name="env">
+                <value ref="env.perf.peer2peerX2"/>
+            </arg>
+            <arg name="generator_mode">
+                <value>flowgen</value>
+            </arg>
+            <arg name="testpmd_arg_forward_mode">
+                <value>io</value>
+            </arg>
+            <arg name="testpmd_arg_stats_period">
+                <value>1</value>
+            </arg>
+            <arg name="testpmd_arg_no_lsc_interrupt">
+                <value>TRUE</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="packet_size">
+                <value>60</value>
+                <value>124</value>
+                <value>252</value>
+                <value>508</value>
+                <value>1020</value>
+                <value>1514</value>
+                <value>9014</value>
+            </arg>
+            <arg name="testpmd_arg_rxq" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="n_cores" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="testpmd_arg_burst">
+                <value>32</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
         <run>
             <script name="l2fwd_simple">
                 <req id="TEST_HARNESS_CHECKUP"/>

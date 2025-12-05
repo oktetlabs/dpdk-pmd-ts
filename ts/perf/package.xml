@@ -30,7 +30,7 @@
         </var>
 
         <var name="env.perf.peer2peerX2" global="true">
-            <value>'net1':IUT{
+            <value reqs="TWO_PARALLEL_LINKS">'net1':IUT{
                 'iut_host'{
                     'iut_ps'{'iut_jobs_ctrl':tester, if:'iut_port0'}
                 },

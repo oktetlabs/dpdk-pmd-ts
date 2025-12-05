@@ -18,6 +18,7 @@
 #include "tapi_cfg_cpu.h"
 #include "tapi_cfg_sys.h"
 #include "tapi_env.h"
+#include "tapi_reqs.h"
 #include "tapi_test.h"
 #include "rpc_dpdk_offloads.h"
 
@@ -134,7 +135,7 @@ main(int argc, char **argv)
     do {
         te_string env_name = TE_STRING_INIT;
 
-        te_string_append(&env_name, "env%u", env_id++);
+        te_string_append(&env_name, "env%u", env_id);
         env_str = test_get_param(argc, argv, te_string_value(&env_name));
         te_string_free(&env_name);
 
@@ -143,6 +144,17 @@ main(int argc, char **argv)
 
         memset(&env, 0, sizeof(env));
         rc = tapi_env_get(env_str, &env);
+        if (TE_RC_GET_ERROR(rc) == TE_EENV)
+        {
+            /* Rely on the fact that env0 has TWO_PARALLEL_LINKS requirement */
+            if (env_id == 0)
+            {
+                /* Skip tests which require two parallel links */
+                CHECK_RC(tapi_reqs_modify("!TWO_PARALLEL_LINKS"));
+            }
+        }
+
+        env_id++;
     } while (rc != 0);
 
     RING("Bound environment:\n%s", env_str);

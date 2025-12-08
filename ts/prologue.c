@@ -578,13 +578,7 @@ prepare_af_xdp(rcf_rpc_server  *rpcs)
         goto exit;
     }
 
-    rc = te_string_append(&iface_oid, "/agent:%s/interface:%s",
-                          rpcs->ta, iface);
-    if (rc != 0)
-    {
-        ERROR("Cannot make OID of linux net interface of IUT");
-        goto exit;
-    }
+    te_string_append(&iface_oid, "/agent:%s/interface:%s", rpcs->ta, iface);
 
     rc = cfg_add_instance_fmt(NULL, CVT_STRING, iface_oid.ptr,
                               "/agent:%s/rsrc:%s", rpcs->ta, iface);

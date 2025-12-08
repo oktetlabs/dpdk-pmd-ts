@@ -41,9 +41,9 @@ rx_ol_cksum_diff_flags_to_str(uint64_t expected_flags, uint64_t obtained_flags,
         do {                                                                \
             uint64_t tarpc_flag = TARPC_##_flag;                            \
             if ((expected_flags & _mask) == tarpc_flag)                     \
-                CHECK_RC(te_string_append(expected_flags_res, #_flag));     \
+                te_string_append(expected_flags_res, #_flag);               \
             if ((obtained_flags & _mask) == tarpc_flag)                     \
-                CHECK_RC(te_string_append(obtained_flags_res, #_flag));     \
+                te_string_append(obtained_flags_res, #_flag);               \
         } while(0)
 
     #define TEST_IP_CKSUM(_flag) \
@@ -67,8 +67,8 @@ rx_ol_cksum_diff_flags_to_str(uint64_t expected_flags, uint64_t obtained_flags,
     {
         if (ip_mismatch)
         {
-            CHECK_RC(te_string_append(expected_flags_res, ","));
-            CHECK_RC(te_string_append(obtained_flags_res, ","));
+            te_string_append(expected_flags_res, ",");
+            te_string_append(obtained_flags_res, ",");
         }
         TEST_L4_CKSUM(RTE_MBUF_F_RX_L4_CKSUM_NONE);
         TEST_L4_CKSUM(RTE_MBUF_F_RX_L4_CKSUM_BAD);

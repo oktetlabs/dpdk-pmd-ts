@@ -69,9 +69,8 @@ check_patterns_match_consistency(struct matched_patterns *mp)
         qid = QUEUE_ID(i);
 
         te_string_free(&pack_info);
-        CHECK_RC(te_string_append(&pack_info,
-                                  "Packet number %u in queue %u ",
-                                  pkt_in_burst, qid));
+        te_string_append(&pack_info, "Packet number %u in queue %u ",
+                         pkt_in_burst, qid);
 
         recv_nb = mp->patterns_recv_nb[i];
         if (recv_nb == 0)

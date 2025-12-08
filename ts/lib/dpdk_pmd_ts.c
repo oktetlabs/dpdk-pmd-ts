@@ -5568,17 +5568,11 @@ test_build_representor_dev_arg(unsigned int n_rep, const unsigned int *rep_ids,
 {
     te_string result = TE_STRING_INIT;
     unsigned int i;
-    te_errno rc;
 
     for (i = 0; i < n_rep; i++)
     {
-        rc = te_string_append(&result, "%s%u%s", i == 0 ? "representor=[" : "",
-                              rep_ids[i], i == (n_rep - 1) ? "]" : "");
-        if (rc != 0)
-        {
-            te_string_free(&result);
-            return rc;
-        }
+        te_string_append(&result, "%s%u%s", i == 0 ? "representor=[" : "",
+                         rep_ids[i], i == (n_rep - 1) ? "]" : "");
     }
 
     *dev_arg = result.ptr;
@@ -5777,50 +5771,49 @@ test_create_traffic_receiver_params(const char *arg_prefix,
     te_kvpair_init(result);
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "rxq"));
+    te_string_append(&buf, "%s%s", arg_prefix, "rxq");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "%u", rxq));
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "txq"));
+    te_string_append(&buf, "%s%s", arg_prefix, "txq");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "%u", rxq));
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "stats_period"));
+    te_string_append(&buf, "%s%s", arg_prefix, "stats_period");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "1"));
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "forward_mode"));
+    te_string_append(&buf, "%s%s", arg_prefix, "forward_mode");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "rxonly"));
 
     /* This forces testpmd to wait some time for link up before start */
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "no_lsc_interrupt"));
+    te_string_append(&buf, "%s%s", arg_prefix, "no_lsc_interrupt");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "TRUE"));
 
     /* Flow control is turned off to not limit transmitter performance */
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s",
-                              command_prefix, "flow_ctrl_autoneg"));
+    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_autoneg");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_rx"));
+    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_rx");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
 
     te_string_reset(&buf);
-    CHECK_RC(te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_tx"));
+    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_tx");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
 
     if (tapi_dpdk_mtu_by_pkt_size(packet_size, &mtu))
     {
         te_string_reset(&buf);
-        CHECK_RC(te_string_append(&buf, "%s%s", command_prefix, "mtu"));
+        te_string_append(&buf, "%s%s", command_prefix, "mtu");
         CHECK_RC(te_kvpair_add(result, buf.ptr, "%u", mtu));
     }
     if (tapi_dpdk_mbuf_size_by_pkt_size(packet_size, &mbuf_size))
     {
         te_string_reset(&buf);
-        CHECK_RC(te_string_append(&buf, "%s%s", arg_prefix, "mbuf_size"));
+        te_string_append(&buf, "%s%s", arg_prefix, "mbuf_size");
         CHECK_RC(te_kvpair_add(result, buf.ptr, "%u", mbuf_size));
     }
 
@@ -5847,7 +5840,7 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
     struct tarpc_rte_eth_conf dc = {0};
     rpc_rte_mempool_p         mp;
 
-    CHECK_RC(te_string_append(&dn, "net_af_packet%u", tst_if->if_index));
+    te_string_append(&dn, "net_af_packet%u", tst_if->if_index);
 
     /* Derive device-specific argument values. */
     framecnt = te_round_up_pow2(nb_frames);
@@ -5860,9 +5853,8 @@ test_rte_af_packet_on_tst_if_deploy(rcf_rpc_server            *tst_rpcs,
     if (ring_size < (int64_t)nb_frames)
         TEST_SKIP("TST will unlikely manage to receive that many packets");
 
-    CHECK_RC(te_string_append(&da,
-                              "iface=%s,framesz=%zu,blocksz=%zu,framecnt=%u",
-                              tst_if->if_name, framesz, blocksz, framecnt));
+    te_string_append(&da, "iface=%s,framesz=%zu,blocksz=%zu,framecnt=%u",
+                     tst_if->if_name, framesz, blocksz, framecnt);
 
     CHECK_RC(rpc_rte_eal_hotplug_add(tst_rpcs, "vdev", dn.ptr, da.ptr));
     te_string_free(&da);
@@ -5912,7 +5904,7 @@ test_rte_af_packet_on_tst_if_release(rcf_rpc_server            *tst_rpcs,
     uint16_t  port_id;
     te_errno  rc;
 
-    CHECK_RC(te_string_append(&dn, "net_af_packet%u", tst_if->if_index));
+    te_string_append(&dn, "net_af_packet%u", tst_if->if_index);
 
     RPC_AWAIT_IUT_ERROR(tst_rpcs);
     rc = rpc_rte_eth_dev_get_port_by_name(tst_rpcs, dn.ptr, &port_id);

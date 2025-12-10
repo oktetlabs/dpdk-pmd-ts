@@ -81,5 +81,10 @@ test -z "${TE_TS_CONFDIR}" -a -d "${TE_TS_TOPDIR}/conf" \
 test -z "${TE_TS_TRC_DB}" -a -e "${TE_TS_TOPDIR}/trc/top.xml" \
     && TE_TS_TRC_DB="${TE_TS_TOPDIR}/trc/top.xml"
 
+if [[ -z "${TE_TS_RIGS_TRC_DB}" && -n "${TE_TS_RIGSDIR}" ]] ; then
+    ts_rigs_trc_db="${TE_TS_RIGSDIR}/suites/dpdk-ethdev-ts/trc/top.xml"
+    [[ ! -e "${ts_rigs_trc_db}" ]] || TE_TS_RIGS_TRC_DB="${ts_rigs_trc_db}"
+fi
+
 test -z "${TE_TS_SRC}" -a -d "${TE_TS_TOPDIR}/ts" \
     && export TE_TS_SRC="${TE_TS_TOPDIR}/ts"

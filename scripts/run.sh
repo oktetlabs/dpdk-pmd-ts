@@ -316,6 +316,7 @@ fi
 MY_OPTS+=(--conf-dirs="${TE_TS_CONFDIR}:${TE_TS_RIGSDIR}${TE_TS_RIGSDIR:+:}${SF_TS_CONFDIR}")
 
 MY_OPTS+=(--trc-db="${TE_TS_TRC_DB}")
+[[ -z "${TE_TS_RIGS_TRC_DB}" ]] || MY_OPTS+=(--trc-db="${TE_TS_RIGS_TRC_DB}")
 MY_OPTS+=(--trc-comparison=normalised)
 MY_OPTS+=(--trc-html=trc-brief.html)
 MY_OPTS+=(--trc-no-expected)

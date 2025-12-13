@@ -6,6 +6,7 @@
  */
 
 /** @defgroup usecases-io_forward_and_drop IO forward + flow rule check
+ * @ingroup usecases
  * @{
  *
  * @objective Check that IO-forwarded packets do not erroneously bypass the flow engine

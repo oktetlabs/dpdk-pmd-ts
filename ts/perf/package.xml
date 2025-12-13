@@ -9,7 +9,7 @@
     <req id="PERF"/>
 
     <session track_conf="silent" track_conf_handdown="descendants">
-        <!--- @autogroupprefix perf- -->
+        <!--- @autogroupall dpdk_pmd_params -->
         <var name="env.perf.iut_only" global="true">
             <value>'net':IUT{
                 'iut_host'{
@@ -18,6 +18,7 @@
             }</value>
         </var>
 
+        <!--- @autogroupall dpdk_pmd_params -->
         <var name="env.perf.peer2peer" global="true">
             <value>'net':IUT{
                 'iut_host'{
@@ -48,6 +49,7 @@
             }</value>
         </var>
 
+        <!--- @autogroupprefix perf- -->
         <prologue>
             <script name="perf_prologue"/>
             <arg name="env0" ref="env.perf.peer2peerX2"/>

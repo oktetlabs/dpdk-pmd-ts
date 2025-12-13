@@ -12,6 +12,7 @@ do_default=true
 do_pdf=false
 do_html=false
 rst_override_dir=""
+doc_language=""
 
 help() {
     cat <<EOF
@@ -19,7 +20,7 @@ Tool is used to generate documentation for the dpdk-ethdev-ts test suite.
 
 It's based on doxygen and doxyrest.
 
-Usage: ./$0 [--help] [--debug] [--html] [--pdf] [--rst-override-generated=DIR]
+Usage: ./$0 [--help] [--debug] [--html] [--pdf] [--rst-override-generated=DIR] [--lang=LANG]
 
 Options:
     --html: generate html documentation (default)
@@ -27,6 +28,7 @@ Options:
     --debug: enable debug mode
     --rst-override-generated=DIR: copy contents of DIR into 
                                   ts/doc/generated/rst after doxyrest
+    --lang=LANG: set Sphinx document language (e.g. en, ru)
     --help: show this help message
 EOF
 }
@@ -50,6 +52,9 @@ for opt ; do
             ;;
         --rst_override_generated=*|--rst-override-generated=*)
             rst_override_dir="${opt#*=}"
+            ;;
+        --lang=*|--language=*)
+            doc_language="${opt#*=}"
             ;;
         *)
             echo "Unknown option: $opt" >&2
@@ -107,6 +112,11 @@ if $do_html; then
     SPHINX_BUILD_OPTS=(
         -j auto                     # use cpu count
         -q                          # be quite: warn and error only
+    )
+    if [ -n "$doc_language" ]; then
+        SPHINX_BUILD_OPTS+=( -D "language=$doc_language" )
+    fi
+    SPHINX_BUILD_OPTS+=(
         ts/doc                      # input
         ts/doc/generated/html       # output
     )
@@ -121,7 +131,12 @@ if $do_pdf; then
         --authors-strip \
         ts/doc/generated/rst/group_*.rst
 
-    make -C ${TS_TOPDIR}/ts/doc latexpdf
+    if [ -n "$doc_language" ]; then
+        PDF_SPHINXOPTS="-D language=$doc_language"
+    else
+        PDF_SPHINXOPTS=""
+    fi
+    make -C ${TS_TOPDIR}/ts/doc latexpdf SPHINXOPTS="$PDF_SPHINXOPTS"
 
     # Note, the name depends on conf.py!
     echo Open: $(realpath ts/doc/generated/latex/dpdk_ethdev_test_suite.pdf)

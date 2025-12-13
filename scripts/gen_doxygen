@@ -13,6 +13,9 @@ do_pdf=false
 do_html=false
 rst_override_dir=""
 doc_language=""
+manual_override_dir=""
+DOC_SRC_DIR="ts/doc"
+TMP_DOC_SRC_DIR=""
 
 help() {
     cat <<EOF
@@ -20,7 +23,7 @@ Tool is used to generate documentation for the dpdk-ethdev-ts test suite.
 
 It's based on doxygen and doxyrest.
 
-Usage: ./$0 [--help] [--debug] [--html] [--pdf] [--rst-override-generated=DIR] [--lang=LANG]
+Usage: ./$0 [--help] [--debug] [--html] [--pdf] [--rst-override-generated=DIR] [--rst-override-manual=DIR] [--lang=LANG]
 
 Options:
     --html: generate html documentation (default)
@@ -28,6 +31,7 @@ Options:
     --debug: enable debug mode
     --rst-override-generated=DIR: copy contents of DIR into 
                                   ts/doc/generated/rst after doxyrest
+    --rst-override-manual=DIR: override manual sources (index.rst; manual/*.rst -> ts/doc/dox_resources)
     --lang=LANG: set Sphinx document language (e.g. en, ru)
     --help: show this help message
 EOF
@@ -52,6 +56,9 @@ for opt ; do
             ;;
         --rst_override_generated=*|--rst-override-generated=*)
             rst_override_dir="${opt#*=}"
+            ;;
+        --rst_override_manual=*|--rst-override-manual=*)
+            manual_override_dir="${opt#*=}"
             ;;
         --lang=*|--language=*)
             doc_language="${opt#*=}"
@@ -103,6 +110,35 @@ if [ -n "$rst_override_dir" ]; then
     cp -a "$rst_override_dir"/. ts/doc/generated/rst/
 fi
 
+# If manual overrides are specified, prepare a temporary doc source tree
+if [ -n "$manual_override_dir" ]; then
+    if [ ! -d "$manual_override_dir" ]; then
+        echo "rst_override_manual directory does not exist: $manual_override_dir" >&2
+        exit 4
+    fi
+    TMP_DOC_SRC_DIR="$(mktemp -d -t docsrc.XXXXXXXX)" || {
+        echo "Failed to create temporary doc source directory" >&2
+        exit 5
+    }
+    # Copy the whole docs tree into temp to avoid touching git-tracked files
+    cp -a ts/doc/. "${TMP_DOC_SRC_DIR}/"
+    # Override index.rst if provided
+    if [ -f "${manual_override_dir}/index.rst" ]; then
+        cp -a "${manual_override_dir}/index.rst" "${TMP_DOC_SRC_DIR}/index.rst"
+    fi
+    # Override dox_resources/*.rst from manual/*.rst
+    if [ -d "${manual_override_dir}/resources" ]; then
+        mkdir -p "${TMP_DOC_SRC_DIR}/dox_resources"
+        for f in "${manual_override_dir}"/resources/*.rst; do
+            [ -e "$f" ] || continue
+            cp -a "$f" "${TMP_DOC_SRC_DIR}/dox_resources/$(basename "$f")"
+        done
+    fi
+    DOC_SRC_DIR="${TMP_DOC_SRC_DIR}"
+else
+    DOC_SRC_DIR="$PWD/ts/doc"
+fi
+
 if $do_default; then
     do_html=true
     do_pdf=false
@@ -117,7 +153,7 @@ if $do_html; then
         SPHINX_BUILD_OPTS+=( -D "language=$doc_language" )
     fi
     SPHINX_BUILD_OPTS+=(
-        ts/doc                      # input
+        "$DOC_SRC_DIR"              # input
         ts/doc/generated/html       # output
     )
 
@@ -131,15 +167,17 @@ if $do_pdf; then
         --authors-strip \
         ts/doc/generated/rst/group_*.rst
 
-    if [ -n "$doc_language" ]; then
-        PDF_SPHINXOPTS="-D language=$doc_language"
-    else
-        PDF_SPHINXOPTS=""
-    fi
-    make -C ${TS_TOPDIR}/ts/doc latexpdf SPHINXOPTS="$PDF_SPHINXOPTS"
+    if [ -n "$doc_language" ]; then PDF_SPHINXOPTS="-D language=$doc_language"; else PDF_SPHINXOPTS=""; fi
+    # Build PDF using Sphinx Makefile while pointing SOURCEDIR to our (possibly temporary) source tree
+    make -C "${TS_TOPDIR}/ts/doc" latexpdf SPHINXOPTS="$PDF_SPHINXOPTS" SOURCEDIR="$DOC_SRC_DIR"
 
     # Note, the name depends on conf.py!
     echo Open: $(realpath ts/doc/generated/latex/dpdk_ethdev_test_suite.pdf)
+fi
+
+# Cleanup temporary source dir if used
+if [ -n "$TMP_DOC_SRC_DIR" ] && [ -d "$TMP_DOC_SRC_DIR" ]; then
+    rm -rf "$TMP_DOC_SRC_DIR"
 fi
 
 popd >/dev/null

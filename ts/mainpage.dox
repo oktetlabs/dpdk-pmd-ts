@@ -1,0 +1,9 @@
+/**
+
+@defgroup dpdk_pmd DPDK PMD Tests Description
+
+*/
+
+/**
+ * @defgroup dpdk_pmd_params Common test parameters
+ */

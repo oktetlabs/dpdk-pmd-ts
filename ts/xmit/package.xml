@@ -85,7 +85,6 @@
                     </arg>
                 </run>
 
-                <!--- @autogroup -->
                 <run name="one_packet_ip4">
                     <session track_conf="silent"
                         track_conf_handdown="descendants">
@@ -1206,4 +1205,3 @@
         </run>
     </session>
 </package>
-

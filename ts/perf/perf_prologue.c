@@ -137,7 +137,6 @@ main(int argc, char **argv)
 
         te_string_append(&env_name, "env%u", env_id);
         env_str = test_get_param(argc, argv, te_string_value(&env_name));
-        te_string_free(&env_name);
 
         if (env_str == NULL)
             TEST_FAIL("No env which could be bound");
@@ -146,14 +145,38 @@ main(int argc, char **argv)
         rc = tapi_env_get(env_str, &env);
         if (TE_RC_GET_ERROR(rc) == TE_EENV)
         {
-            /* Rely on the fact that env0 has TWO_PARALLEL_LINKS requirement */
-            if (env_id == 0)
+            switch (env_id)
             {
-                /* Skip tests which require two parallel links */
-                CHECK_RC(tapi_reqs_modify("!TWO_PARALLEL_LINKS"));
+                case 0:
+                    /*
+                     * Rely on the fact that env0 has FOUR_PARALLEL_LINKS
+                     * requirement.
+                     */
+                    /* Skip tests which require four parallel links */
+                    CHECK_RC(tapi_reqs_modify("!FOUR_PARALLEL_LINKS"));
+                    break;
+
+                case 1:
+                    /*
+                     * Rely on the fact that env1 has TWO_PARALLEL_LINKS
+                     * requirement.
+                     */
+                    /* Skip tests which require two parallel links */
+                    CHECK_RC(tapi_reqs_modify("!TWO_PARALLEL_LINKS"));
+                    break;
+
+                case 2:
+                    /* Nothing to do */
+                    break;
+
+                default:
+                    WARN("Unexpected environment '%s' to adjust requirements",
+                         te_string_value(&env_name));
+                    break;
             }
         }
 
+        te_string_free(&env_name);
         env_id++;
     } while (rc != 0);
 

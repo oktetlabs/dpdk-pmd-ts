@@ -13,6 +13,7 @@
       <iter result="PASSED">
         <arg name="env0"/>
         <arg name="env1"/>
+        <arg name="env2"/>
         <notes/>
       </iter>
     </test>
@@ -1388,6 +1389,26 @@
         <notes/>
       </iter>
     </test>
+    <test name="testpmd_four_port_txonly" type="script">
+       <objective>Test dpdk-testpmd performance in Tx only mode on four ports simultaneously</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="testpmd_command_txpkts"/>
+        <arg name="testpmd_arg_txq"/>
+        <arg name="n_fwd_cores"/>
+        <arg name="testpmd_arg_txd"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_txfreet"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="testpmd_txonly_tso" type="script">
       <objective>Test dpdk-testpmd performance in Tx only mode with TSO</objective>
       <notes/>
@@ -2325,6 +2346,26 @@
         <notes/>
       </iter>
     </test>
+    <test name="testpmd_four_port_rxonly" type="script">
+      <objective>Test dpdk-testpmd performance in Rx only mode on four ports simultaneously</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size"/>
+        <arg name="testpmd_arg_rxq"/>
+        <arg name="n_rx_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <arg name="testpmd_arg_rxfreet"/>
+        <notes/>
+      </iter>
+    </test>
 
     <test name="testpmd_dual_port_fwd" type="script">
       <objective>Test dpdk-testpmd performance in IO forward mode on two ports simultaneously</objective>
@@ -2345,7 +2386,25 @@
         <notes/>
       </iter>
     </test>
-
+    <test name="testpmd_four_port_fwd" type="script">
+      <objective>Test dpdk-testpmd performance in IO forward mode on four ports simultaneously</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="generator_mode"/>
+        <arg name="testpmd_arg_forward_mode"/>
+        <arg name="testpmd_arg_stats_period"/>
+        <arg name="testpmd_arg_no_lsc_interrupt"/>
+        <arg name="testpmd_command_flow_ctrl_autoneg"/>
+        <arg name="testpmd_command_flow_ctrl_rx"/>
+        <arg name="testpmd_command_flow_ctrl_tx"/>
+        <arg name="packet_size"/>
+        <arg name="testpmd_arg_rxq"/>
+        <arg name="n_cores"/>
+        <arg name="testpmd_arg_burst"/>
+        <notes/>
+      </iter>
+    </test>
     <test name="l2fwd_simple" type="script">
       <objective>Test l2fwd perfomance</objective>
       <notes/>

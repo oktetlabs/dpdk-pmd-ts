@@ -22,7 +22,7 @@
 #include "tapi_tad.h"
 
 /** Maximum number of IUT ports supported by multi-port tests */
-#define TEST_MAX_IUT_PORTS 2
+#define TEST_MAX_IUT_PORTS 4
 
 #ifndef TEST_START_VARS
 /**

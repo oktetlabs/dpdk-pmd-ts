@@ -49,11 +49,47 @@
             }</value>
         </var>
 
+        <var name="env.perf.peer2peerX4" global="true">
+            <value reqs="FOUR_PARALLEL_LINKS">'net1':IUT{
+                'iut_host'{
+                    'iut_ps'{'iut_jobs_ctrl':tester, if:'iut_port0'}
+                },
+                'tst_host'{
+                    'tst_ps'{'tst_jobs_ctrl':tester, if:'tst_port0'}
+                }
+            },
+            'net2':IUT{
+                'iut_host'{
+                    'iut_ps'{if:'iut_port1'}
+                },
+                'tst_host'{
+                    'tst_ps'{if:'tst_port1'}
+                }
+            },
+            'net3':IUT{
+                'iut_host'{
+                    'iut_ps'{if:'iut_port2'}
+                },
+                'tst_host'{
+                    'tst_ps'{if:'tst_port2'}
+                }
+            },
+            'net4':IUT{
+                'iut_host'{
+                    'iut_ps'{if:'iut_port3'}
+                },
+                'tst_host'{
+                    'tst_ps'{if:'tst_port3'}
+                }
+            }</value>
+        </var>
+
         <!--- @autogroupprefix perf- -->
         <prologue>
             <script name="perf_prologue"/>
-            <arg name="env0" ref="env.perf.peer2peerX2"/>
-            <arg name="env1" ref="env.perf.peer2peer"/>
+            <arg name="env0" ref="env.perf.peer2peerX4"/>
+            <arg name="env1" ref="env.perf.peer2peerX2"/>
+            <arg name="env2" ref="env.perf.peer2peer"/>
         </prologue>
 
         <!--- @autogroup -->
@@ -212,6 +248,59 @@
                 <value>2</value>
                 <value>4</value>
                 <value>4</value>
+            </arg>
+            <arg name="testpmd_arg_txd">
+                <value>512</value>
+            </arg>
+            <arg name="testpmd_arg_burst">
+                <value>32</value>
+            </arg>
+            <arg name="testpmd_arg_txfreet">
+                <value>0</value>
+            </arg>
+        </run>
+
+        <run name="testpmd_four_port_txonly">
+            <script name="testpmd_txonly">
+                <objective>Test dpdk-testpmd performance in Tx only mode on four ports simultaneously</objective>
+            </script>
+            <arg name="env">
+                <value ref="env.perf.peer2peerX4"/>
+            </arg>
+            <arg name="testpmd_arg_forward_mode">
+                <value>txonly</value>
+            </arg>
+            <arg name="testpmd_arg_stats_period">
+                <value>1</value>
+            </arg>
+            <arg name="testpmd_arg_no_lsc_interrupt">
+                <value>TRUE</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
+                <value>off</value>
+            </arg>
+            <arg name="testpmd_command_txpkts">
+                <value>60</value>
+                <value>1514</value>
+                <value>9014</value>
+            </arg>
+            <arg name="testpmd_arg_txq" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="n_fwd_cores" list="cores">
+                <value>4</value>
+                <value>4</value>
+                <value>8</value>
+                <value>8</value>
             </arg>
             <arg name="testpmd_arg_txd">
                 <value>512</value>
@@ -459,6 +548,64 @@
         </run>
 
         <!--- @autogroup -->
+        <run name="testpmd_four_port_rxonly">
+            <script name="testpmd_rxonly">
+                <req id="DPDK_PEER"/>
+                <objective>Test dpdk-testpmd performance in Rx only mode on four ports simultaneously</objective>
+            </script>
+            <arg name="env">
+                <value ref="env.perf.peer2peerX4"/>
+            </arg>
+            <arg name="generator_mode">
+                <value>txonly</value>
+            </arg>
+            <arg name="testpmd_arg_forward_mode">
+                <value>rxonly</value>
+            </arg>
+            <arg name="testpmd_arg_stats_period">
+                <value>1</value>
+            </arg>
+            <arg name="testpmd_arg_no_lsc_interrupt">
+                <value>TRUE</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
+                <value>off</value>
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
+                <value>off</value>
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
+                <value>off</value>
+                <value>on</value>
+            </arg>
+            <arg name="packet_size">
+                <value>60</value>
+                <value>1514</value>
+                <value>9014</value>
+            </arg>
+            <arg name="testpmd_arg_rxq" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="n_rx_cores" list="cores">
+                <value>4</value>
+                <value>4</value>
+                <value>8</value>
+                <value>8</value>
+            </arg>
+            <arg name="testpmd_arg_burst">
+                <value>32</value>
+            </arg>
+            <arg name="testpmd_arg_rxfreet">
+                <value>0</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
         <run name="testpmd_dual_port_fwd">
             <script name="testpmd_fwd">
                 <req id="DPDK_PEER"/>
@@ -507,6 +654,62 @@
                 <value>1</value>
                 <value>2</value>
                 <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="testpmd_arg_burst">
+                <value>32</value>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
+        <run name="testpmd_four_port_fwd">
+            <script name="testpmd_fwd">
+                <req id="DPDK_PEER"/>
+                <objective>Test dpdk-testpmd performance in IO forwarding mode on four ports simultaneously</objective>
+            </script>
+            <arg name="env">
+                <value ref="env.perf.peer2peerX4"/>
+            </arg>
+            <arg name="generator_mode">
+                <value>flowgen</value>
+            </arg>
+            <arg name="testpmd_arg_forward_mode">
+                <value>io</value>
+            </arg>
+            <arg name="testpmd_arg_stats_period">
+                <value>1</value>
+            </arg>
+            <arg name="testpmd_arg_no_lsc_interrupt">
+                <value>TRUE</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
+                <value>on</value>
+            </arg>
+            <arg name="packet_size">
+                <value>60</value>
+                <value>124</value>
+                <value>252</value>
+                <value>508</value>
+                <value>1020</value>
+                <value>1514</value>
+                <value>9014</value>
+            </arg>
+            <arg name="testpmd_arg_rxq" list="cores">
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+                <value>8</value>
+            </arg>
+            <arg name="n_cores" list="cores">
+                <value>4</value>
+                <value>4</value>
+                <value>8</value>
                 <value>8</value>
             </arg>
             <arg name="testpmd_arg_burst">

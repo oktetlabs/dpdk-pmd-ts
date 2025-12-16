@@ -244,10 +244,10 @@
                 <value>8</value>
             </arg>
             <arg name="n_fwd_cores" list="cores">
-                <value>1</value>
                 <value>2</value>
                 <value>4</value>
                 <value>4</value>
+                <value>8</value>
             </arg>
             <arg name="testpmd_arg_txd">
                 <value>512</value>
@@ -534,8 +534,8 @@
                 <value>8</value>
             </arg>
             <arg name="n_rx_cores" list="cores">
-                <value>1</value>
                 <value>2</value>
+                <value>4</value>
                 <value>4</value>
                 <value>8</value>
             </arg>
@@ -651,8 +651,8 @@
                 <value>8</value>
             </arg>
             <arg name="n_cores" list="cores">
-                <value>1</value>
                 <value>2</value>
+                <value>4</value>
                 <value>4</value>
                 <value>8</value>
             </arg>

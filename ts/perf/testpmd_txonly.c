@@ -219,8 +219,8 @@ main(int argc, char *argv[])
         CHECK_RC(tapi_dpdk_attach_rx_pkts_bytes_filters(&testpmd_job_rx));
     }
 
-    CHECK_RC(tapi_dpdk_testpmd_start(&testpmd_job));
     CHECK_RC(tapi_dpdk_testpmd_start(&testpmd_job_rx));
+    CHECK_RC(tapi_dpdk_testpmd_start(&testpmd_job));
 
     TEST_STEP("Retrieve link speed from running testpmd-s");
     CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&testpmd_job,

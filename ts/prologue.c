@@ -332,7 +332,7 @@ load_required_modules(const char *ta, void *cookie)
 
         free(driver);
 
-        if (rc != 0)
+        if (rc != 0 && rc != TE_RC(TE_TA_UNIX, TE_EFAIL))
             return rc;
     }
 

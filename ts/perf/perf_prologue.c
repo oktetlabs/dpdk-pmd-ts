@@ -15,6 +15,7 @@
 
 #include "dpdk_pmd_test.h"
 
+#include "rcf_rpc.h"
 #include "tapi_cfg_cpu.h"
 #include "tapi_cfg_sys.h"
 #include "tapi_env.h"
@@ -124,6 +125,8 @@ main(int argc, char **argv)
     const struct if_nameindex *iut_port = NULL;
     struct tarpc_rte_eth_dev_info dev_info;
     const char *iut_job_control_rpcs = "iut_jobs_ctrl";
+    const char *iut_rpcs_name = "iut_rpcs";
+    rcf_rpc_server *iut_rpcs = NULL;
     struct tarpc_ether_addr iut_mac;
     char *iut_mac_str = NULL;
     tapi_cpu_index_t *indices = NULL;
@@ -184,9 +187,17 @@ main(int argc, char **argv)
 
     CFG_WAIT_CHANGES;
 
-    TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_HOST(iut_host);
     TEST_GET_HOST(tst_host);
+
+    rc = rcf_rpc_server_get(iut_host->ta, iut_rpcs_name, NULL,
+            RCF_RPC_SERVER_GET_EXISTING | RCF_RPC_SERVER_GET_REUSE, &iut_rpcs);
+    if (rc == 0)
+        CHECK_RC(rcf_rpc_server_destroy(iut_rpcs));
+    else if (TE_RC_GET_ERROR(rc) != TE_ENOENT)
+        TEST_FAIL("Failed to get '%s' RPC server: %r", iut_rpcs_name, rc);
+
+    TEST_GET_PCO(iut_jobs_ctrl);
 
     /*
      * Make stats of SFC (Xilinx) NICs more consistent by removing update period

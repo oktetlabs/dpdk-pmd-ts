@@ -691,19 +691,43 @@ is_dpdk_rpcs(rcf_rpc_server *rpcs)
 }
 
 /**
+ * Add DPDK-specific TRC tags.
+ *
+ * @param rpcs          The RPC server.
+ * @param port          The DPDK interface.
+ *
+ * @retval The status code.
+ */
+static te_errno
+add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
+{
+    struct tarpc_rte_eth_dev_info dev_info = {};
+    te_errno rc;
+
+    rpc_rte_eth_dev_info_get(rpcs, port->if_index, &dev_info);
+
+    if (dev_info.driver_name != NULL)
+    {
+        rc = tapi_tags_add_tag(dev_info.driver_name, NULL);
+        if (rc != 0)
+            return rc;
+    }
+
+    return 0;
+}
+
+/**
  * Read out packets queued by an DPDK interface.
  *
  * @param env           The test environment.
  * @param rpcs          The RCP server.
  * @param port          The DPDK interface.
- * @param tags_prefix   TRC tags to add prefix or @c NULL.
  *
  * @retval The status code.
  */
 static te_errno
 clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
-                     const struct if_nameindex *port,
-                     const char *tags_prefix)
+                     const struct if_nameindex *port)
 {
     struct test_ethdev_config config;
     te_errno rc;
@@ -714,22 +738,6 @@ clean_dpdk_interface(tapi_env *env, rcf_rpc_server *rpcs,
     rc = test_prepare_ethdev(&config, TEST_ETHDEV_STARTED);
     if (rc != 0)
         return rc;
-
-    if (tags_prefix != NULL)
-    {
-        te_string   tag = TE_STRING_INIT;
-
-        if (config.dev_info.driver_name != NULL)
-        {
-            te_string_append(&tag, "%s%s", tags_prefix,
-                             config.dev_info.driver_name);
-            rc = tapi_tags_add_tag(te_string_value(&tag), NULL);
-            if (rc != 0)
-                return rc;
-        }
-
-        te_string_free(&tag);
-    }
 
     test_rx_clean_queue(rpcs, port->if_index, 0);
 
@@ -948,14 +956,18 @@ main(int argc, char **argv)
         TEST_VERDICT("Failed to initialise EAL interfaces: %r", rc);
 
     TEST_GET_IF(iut_port);
-    rc = clean_dpdk_interface(&env, iut_rpcs, iut_port, "");
+    rc = clean_dpdk_interface(&env, iut_rpcs, iut_port);
     if (rc != 0)
         TEST_VERDICT("Failed to clean the IUT interface: %r", rc);
+
+    rc = add_dpdk_tags(iut_rpcs, iut_port);
+    if (rc != 0)
+        TEST_VERDICT("Failed to add DPDK-specific TRC tags for IUT: %r", rc);
 
     if (is_dpdk_rpcs(tst_rpcs))
     {
         TEST_GET_IF(tst_if);
-        rc = clean_dpdk_interface(&env, tst_rpcs, tst_if, NULL);
+        rc = clean_dpdk_interface(&env, tst_rpcs, tst_if);
         if (rc != 0)
             TEST_VERDICT("Failed to clean the TST interface: %r", rc);
     }

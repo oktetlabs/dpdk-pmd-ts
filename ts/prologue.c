@@ -702,6 +702,7 @@ static te_errno
 add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
 {
     struct tarpc_rte_eth_dev_info dev_info = {};
+    char *tag_value;
     te_errno rc;
 
     rpc_rte_eth_dev_info_get(rpcs, port->if_index, &dev_info);
@@ -709,6 +710,28 @@ add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
     if (dev_info.driver_name != NULL)
     {
         rc = tapi_tags_add_tag(dev_info.driver_name, NULL);
+        if (rc != 0)
+            return rc;
+    }
+
+    if (dev_info.max_rx_queues != 0)
+    {
+        tag_value = te_string_fmt("%u", dev_info.max_rx_queues);
+
+        rc = tapi_tags_add_tag("max_rx_queues", tag_value);
+        free(tag_value);
+
+        if (rc != 0)
+            return rc;
+    }
+
+    if (dev_info.max_tx_queues != 0)
+    {
+        tag_value = te_string_fmt("%u", dev_info.max_tx_queues);
+
+        rc = tapi_tags_add_tag("max_tx_queues", tag_value);
+        free(tag_value);
+
         if (rc != 0)
             return rc;
     }

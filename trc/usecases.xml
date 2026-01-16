@@ -34611,6 +34611,11 @@
             <verdict>Failed to bring link up (taget FEC mode)</verdict>
           </result>
         </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">CONFIGURED</arg>
@@ -34624,6 +34629,11 @@
             <verdict>No support for querying speed FEC capabilities</verdict>
           </result>
         </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">CONFIGURED</arg>
@@ -34635,6 +34645,11 @@
         <results tags="pci-8086-1572" key="FEC" notes="Intel X710 10GbE does not support FEC">
           <result value="SKIPPED">
             <verdict>No support for querying speed FEC capabilities</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
           </result>
         </results>
       </iter>
@@ -34653,6 +34668,11 @@
         <results tags="pci-1924" notes="RS is not meant for 10G">
           <result value="SKIPPED">
             <verdict>No support for the target link + FEC mode</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
           </result>
         </results>
       </iter>
@@ -34673,6 +34693,11 @@
             <verdict>Failed to bring link up (taget FEC mode)</verdict>
           </result>
         </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">STARTED</arg>
@@ -34686,6 +34711,11 @@
             <verdict>No support for querying speed FEC capabilities</verdict>
           </result>
         </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="ethdev_state">STARTED</arg>
@@ -34697,6 +34727,11 @@
         <results tags="pci-8086-1572" key="FEC" notes="Intel X710 10GbE does not support FEC">
           <result value="SKIPPED">
             <verdict>No support for querying speed FEC capabilities</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
           </result>
         </results>
       </iter>
@@ -34715,6 +34750,11 @@
         <results tags="pci-1924" notes="RS is not meant for 10G">
           <result value="SKIPPED">
             <verdict>No support for the target link + FEC mode</verdict>
+          </result>
+        </results>
+        <results tags="net_virtio" notes="VirtIO PMD does not support FEC">
+          <result value="SKIPPED">
+            <verdict>No support for querying current FEC mode</verdict>
           </result>
         </results>
       </iter>

@@ -8403,6 +8403,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8438,6 +8443,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8477,6 +8487,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8512,6 +8527,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8555,6 +8575,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8590,6 +8615,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8634,6 +8664,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8674,6 +8709,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8718,6 +8758,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8758,6 +8803,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8801,6 +8851,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8836,6 +8891,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8875,6 +8935,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8910,6 +8975,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -8947,6 +9017,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -8987,6 +9062,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9031,6 +9111,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9071,6 +9156,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9114,6 +9204,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9146,6 +9241,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9188,6 +9288,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9223,6 +9328,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9267,6 +9377,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9302,6 +9417,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9346,6 +9466,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9381,6 +9506,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9424,6 +9554,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9459,6 +9594,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9498,6 +9638,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9533,6 +9678,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9571,6 +9721,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9603,6 +9758,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9645,6 +9805,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9680,6 +9845,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9724,6 +9894,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9759,6 +9934,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
@@ -9803,6 +9983,11 @@
             <verdict>Flow control get operation is not supported</verdict>
           </result>
         </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
+          </result>
+        </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
@@ -9838,6 +10023,11 @@
         <results tags="net_ice" key="NO-FLOW-CTRL" notes="ice does not support rte_eth_dev_flow_ctrl_get()">
           <result value="SKIPPED">
             <verdict>Flow control get operation is not supported</verdict>
+          </result>
+        </results>
+        <results tags="peer-qemu-virtio-net" notes="VirtIO device does not support flow control operations">
+          <result value="SKIPPED">
+            <verdict>Flow control operations are not supported on partner</verdict>
           </result>
         </results>
         <results tags="net_virtio" notes="VirtIO PMD does not support flow control get operation">

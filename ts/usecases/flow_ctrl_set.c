@@ -247,8 +247,12 @@ main(int argc, char *argv[])
     TEST_CHECK_UINT64_IS_IN_BOOL3_RANGE(autoneg);
 
     TEST_STEP("Set flow control on the partner to 'autoneg=on, rx=on, tx=on'");
-    CHECK_RC(tapi_cfg_if_fc_autoneg_set_local(tst_host->ta,
-                                              tst_if->if_name, 1));
+    rc = tapi_cfg_if_fc_autoneg_set_local(tst_host->ta, tst_if->if_name, 1);
+    if (TE_RC_GET_ERROR(rc) == TE_ENOENT)
+        TEST_SKIP("Flow control operations are not supported on partner");
+
+    if (rc != 0)
+        TEST_VERDICT("Failed to set flow control on Tester: %r", rc);
 
     CHECK_RC(tapi_cfg_if_fc_rx_set_local(tst_host->ta, tst_if->if_name, 1));
     CHECK_RC(tapi_cfg_if_fc_tx_set_local(tst_host->ta, tst_if->if_name, 1));

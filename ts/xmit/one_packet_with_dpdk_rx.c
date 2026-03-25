@@ -404,6 +404,11 @@ main(int argc, char *argv[])
     port_id_rx = test_rte_af_packet_on_tst_if_deploy(tst_rpcs, tst_if,
                                                      m_rx_size_max, nb_rx_exp);
 
+    TEST_STEP("Ensure that interface is UP on Tester side");
+    CHECK_RC(tapi_cfg_base_if_await_link_up(tst_host->ta, tst_if->if_name,
+                                            TEST_LINK_UP_MAX_CHECKS,
+                                            TEST_LINK_UP_WAIT_MS, 0));
+
     TEST_STEP("Squeeze out garbage packets possibly captured by RTE af_packet");
     (void)rpc_rte_eth_rx_burst(tst_rpcs, port_id_rx, 0, rx_burst_garbage,
                                TE_ARRAY_LEN(rx_burst_garbage));

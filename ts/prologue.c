@@ -701,9 +701,12 @@ is_dpdk_rpcs(rcf_rpc_server *rpcs)
 static te_errno
 add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
 {
+    static const size_t fw_version_size = 128;
     struct tarpc_rte_eth_dev_info dev_info = {};
+    char *fw_version = NULL;
     char *tag_value;
     te_errno rc;
+    int ret;
 
     rpc_rte_eth_dev_info_get(rpcs, port->if_index, &dev_info);
 
@@ -736,7 +739,21 @@ add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
             return rc;
     }
 
-    return 0;
+    fw_version = TE_ALLOC(fw_version_size);
+    ret = rpc_rte_eth_dev_fw_version_get(rpcs, port->if_index, fw_version,
+                                         fw_version_size);
+    if (ret > 0)
+    {
+        free(fw_version);
+        fw_version = TE_ALLOC(ret);
+        ret = rpc_rte_eth_dev_fw_version_get(rpcs, port->if_index,
+                                             fw_version, ret);
+    }
+    if (ret == 0)
+        rc = tapi_tags_add_tag("fw_version", fw_version);
+
+    free(fw_version);
+    return rc;
 }
 
 /**

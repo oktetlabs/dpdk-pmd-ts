@@ -28,6 +28,7 @@ tests = [
     'rx_desc_nb',
     'rx_descriptor_status',
     'rx_intr',
+    'rx_intr_multi_queue',
     'rx_offload_checksum',
     'rx_ptype',
     'rx_ring_wrap',

@@ -28968,6 +28968,40 @@
         </results>
       </iter>
     </test>
+    <test name="rx_intr_multi_queue" type="script">
+      <objective>Check that Rx interrupts can be controlled independently for different Rx queues</objective>
+      <notes/>
+      <iter result="PASSED">
+        <arg name="env"/>
+        <arg name="tmpl"/>
+        <notes/>
+        <results tags="max_rx_queues&lt;2">
+          <result value="SKIPPED">
+            <verdict>Two Rx queues are not supported</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS is required to target Rx queues</verdict>
+          </result>
+        </results>
+        <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
+          <result value="SKIPPED">
+            <verdict>RSS is required to target Rx queues</verdict>
+          </result>
+        </results>
+        <results tags="vdev-failsafe">
+          <result value="SKIPPED">
+            <verdict>RSS redirection table update is not supported</verdict>
+          </result>
+        </results>
+        <results tags="uio_pci_generic|igb_uio" key="WONTFIX" notes="UIO drivers do not support many interrupts">
+          <result value="FAILED">
+            <verdict>Cannot bind Rx queue 0 interrupt: EPERM</verdict>
+          </result>
+        </results>
+      </iter>
+    </test>
     <test name="rx_intr" type="script">
       <objective>The test requests Rx queue interrupts on device configuration then checks that Rx interrupts are triggered when enabled</objective>
       <notes/>

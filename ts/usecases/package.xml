@@ -1427,6 +1427,19 @@
         </run>
 
         <!--- @autogroup -->
+        <run>
+            <script name="rx_intr_multi_queue">
+                <req id="RSS"/>
+            </script>
+            <arg name="env">
+              <value ref="env.peer2peer"/>
+            </arg>
+            <arg name="tmpl">
+                <value ref="tmpl.tst2iut.udp4"/>
+            </arg>
+        </run>
+
+        <!--- @autogroup -->
         <run name="vlan_strip_ip4">
             <script name="vlan_strip"/>
             <arg name="env">

@@ -89,13 +89,13 @@ main(int argc, char *argv[])
                                           n_peer_cores,
                                           &prop, traffic_generator_params,
                                           &tst_testpmd_job));
-    TEST_STEP("Start L2fwd application");
-    CHECK_RC(tapi_dpdk_l2fwd_start(&l2fwd_job));
+    TEST_STEP("Start peer l2fwd and wait for its ports to start");
+    CHECK_RC(test_start_l2fwd_await_ports_started(&l2fwd_job, 1));
 
-    TEST_STEP("Start traffic generator");
+    TEST_STEP("Start reporting testpmd");
     CHECK_RC(tapi_dpdk_testpmd_start(&tst_testpmd_job));
 
-    TEST_STEP("Retrieve link speed from running testpmd");
+    TEST_STEP("Retrieve link speed from reporting testpmd");
     CHECK_RC(tapi_dpdk_testpmd_get_link_speed(&tst_testpmd_job, &link_speed));
 
     TEST_STEP("Initialize Tx and Rx statistics");

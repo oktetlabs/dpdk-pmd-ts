@@ -49,8 +49,7 @@ main(int argc, char *argv[])
     unsigned int n_tst_ports = 0;
     unsigned int iut_ports[TEST_MAX_IUT_PORTS] = {};
     unsigned int tst_ports[TEST_MAX_IUT_PORTS] = {};
-    unsigned int iut_link_speed[TEST_MAX_IUT_PORTS];
-    unsigned int tst_link_speed[TEST_MAX_IUT_PORTS];
+    unsigned int link_speed[TEST_MAX_IUT_PORTS];
     te_meas_stats_t iut_stats_rx[TEST_MAX_IUT_PORTS] = {0};
     te_meas_stats_t iut_stats_tx[TEST_MAX_IUT_PORTS] = {0};
     te_meas_stats_t tst_stats_rx[TEST_MAX_IUT_PORTS] = {0};
@@ -188,20 +187,16 @@ main(int argc, char *argv[])
         CHECK_RC(tapi_dpdk_attach_dbells_filter_tx(&iut_testpmd_job));
     }
 
-    CHECK_RC(tapi_dpdk_testpmd_start(&iut_testpmd_job));
-    CHECK_RC(tapi_dpdk_testpmd_start(&tst_testpmd_job));
+    TEST_STEP("Start peer and reporting testpmd jobs");
+    CHECK_RC(test_start_testpmd_pair_for_link_report(
+                 &tst_testpmd_job, &iut_testpmd_job));
 
-    TEST_STEP("Retrieve link speed from running testpmd-s");
+    TEST_STEP("Retrieve link speed from reporting testpmd");
     CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&iut_testpmd_job,
                                                          n_ports,
                                                          &n_iut_ports,
                                                          iut_ports,
-                                                         iut_link_speed));
-    CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&tst_testpmd_job,
-                                                         n_ports,
-                                                         &n_tst_ports,
-                                                         tst_ports,
-                                                         tst_link_speed));
+                                                         link_speed));
 
     TEST_STEP("Initialize IUT Rx and TST Tx statistics");
     for (port = 0; port < n_ports; ++port)
@@ -240,7 +235,7 @@ main(int argc, char *argv[])
         if (n_ports > 1)
             te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &iut_stats_rx[port],
-                                  packet_size, iut_link_speed[port],
+                                  packet_size, link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
@@ -248,7 +243,7 @@ main(int argc, char *argv[])
         if (n_ports > 1)
             te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &iut_stats_tx[port],
-                                  packet_size, iut_link_speed[port],
+                                  packet_size, link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
@@ -256,7 +251,7 @@ main(int argc, char *argv[])
         if (n_ports > 1)
             te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_rx[port],
-                                  packet_size, tst_link_speed[port],
+                                  packet_size, link_speed[port],
                                   te_string_value(&str));
 
         te_string_reset(&str);
@@ -264,7 +259,7 @@ main(int argc, char *argv[])
         if (n_ports > 1)
             te_string_append(&str, "%u", port);
         tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_tx[port],
-                                  packet_size, tst_link_speed[port],
+                                  packet_size, link_speed[port],
                                   te_string_value(&str));
 
         if (dbells_supp)
@@ -280,10 +275,10 @@ main(int argc, char *argv[])
     {
         tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
                                        iut_stats_rx, packet_size,
-                                       iut_link_speed, "FwdRx");
+                                       link_speed, "FwdRx");
         tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
                                        iut_stats_tx, packet_size,
-                                       iut_link_speed, "FwdTx");
+                                       link_speed, "FwdTx");
     }
 
     TEST_SUCCESS;

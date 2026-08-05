@@ -4642,6 +4642,29 @@ test_conf_rx_offload_supported(rcf_rpc_server *rpcs,
     return TRUE;
 }
 
+te_errno
+test_add_rss_offloads(rcf_rpc_server *rpcs,
+                      const struct if_nameindex *port,
+                      uint64_t rss_offloads)
+{
+    return cfg_add_instance_fmt(NULL, CFG_VAL(UINT64, rss_offloads),
+                                "/local:%s/dpdk:/rss_offloads:%s",
+                                rpcs->ta, port->if_name);
+}
+
+te_errno
+test_get_rss_offloads(rcf_rpc_server *rpcs,
+                      const struct if_nameindex *port,
+                      uint64_t *rss_offloads)
+{
+    if (rss_offloads == NULL)
+        return TE_RC(TE_TAPI, TE_EINVAL);
+
+    return cfg_get_uint64(rss_offloads,
+                          "/local:%s/dpdk:/rss_offloads:%s",
+                          rpcs->ta, port->if_name);
+}
+
 void
 test_mk_pattern_and_tmpl_by_flow_rule_pattern(rcf_rpc_server *rpcs,
                                      const asn_value *flow_rule_pattern,

@@ -82,10 +82,14 @@ main(int argc, char *argv[])
 
     n_fwd_cores = TEST_UINT_PARAM(n_fwd_cores);
     TEST_GET_UINT_PARAM(testpmd_arg_txq);
+    tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
 
     for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
     {
+        const struct if_nameindex *tst_if;
         unsigned int max_tx_queues;
+        uint64_t rss_offloads;
+        uint64_t rss_type;
 
         te_string_reset(&str);
         te_string_append(&str, TEST_ENV_IUT_PORT "%u", idx);
@@ -114,7 +118,6 @@ main(int argc, char *argv[])
             tx_offloads |= UINT64_C(1) << 15;
         }
 
-        tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
         if (tso_requested)
         {
             if (!test_conf_tx_offload_supported(iut_jobs_ctrl, iut_ifs[idx],
@@ -125,6 +128,22 @@ main(int argc, char *argv[])
              * TODO avoid hardcodes: RTE_ETH_TX_OFFLOAD_TCP_TSO is RTE_BIT64(5)
              */
             tx_offloads |= UINT64_C(1) << 5;
+        }
+
+        te_string_reset(&str);
+        te_string_append(&str, "tst_port%zu", idx);
+        tst_if = tapi_env_get_if(&env, te_string_value(&str));
+        if (tst_if == NULL)
+            TEST_FAIL("No TST port corresponding to IUT port %zu", idx);
+
+        rss_type = tso_requested ? TEST_ETH_RSS_NONFRAG_IPV4_TCP :
+                                   TEST_ETH_RSS_NONFRAG_IPV4_UDP;
+        CHECK_RC(test_get_rss_offloads(tst_jobs_ctrl, tst_if,
+                                       &rss_offloads));
+        if ((rss_offloads & rss_type) == 0)
+        {
+            TEST_SKIP("IPv4 %s RSS is not supported on TST",
+                      tso_requested ? "TCP" : "UDP");
         }
     }
 
@@ -188,7 +207,7 @@ main(int argc, char *argv[])
             TEST_SKIP("testpmd does not support '--txonly-tso-mss' option");
     }
 
-    /* This enables RSS that makes tester more likely to receive all traffic */
+    /* Generate multiple flows for distribution across receiver queues. */
     CHECK_RC(te_kvpair_add(&test_params, "testpmd_arg_txonly_multi_flow",
                            "TRUE"));
 
@@ -197,10 +216,24 @@ main(int argc, char *argv[])
                                              TEST_TESTPMD_RX_QUEUES_NUM,
                                              packet_size, &rx_params));
 
+    if (!tso_requested)
+    {
+        /* Multi-flow txonly varies UDP source port for non-TSO traffic. */
+        CHECK_RC(te_kvpair_add(rx_params, "testpmd_arg_rss_udp", "TRUE"));
+    }
+
     TEST_STEP("Create testpmd jobs");
     CHECK_RC(tapi_dpdk_create_testpmd_job(tst_jobs_ctrl, &env,
                                           TEST_TESTPMD_RX_CPUS_NUM, &prop,
                                           rx_params, &testpmd_job_rx));
+
+    if (tso_requested)
+    {
+        /* Configure IPv4 TCP RSS after the receiver ports have started. */
+        te_string_replace(&testpmd_job_rx.cmdline_start, 0, 0,
+                          "port config all rss ipv4-tcp\n");
+    }
+
     CHECK_RC(tapi_dpdk_create_testpmd_job(iut_jobs_ctrl, &env, n_fwd_cores,
                                           &prop, &test_params, &testpmd_job));
 

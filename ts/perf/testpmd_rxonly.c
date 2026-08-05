@@ -83,6 +83,7 @@ main(int argc, char *argv[])
     for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
     {
         unsigned int max_rx_queues;
+        uint64_t rss_offloads;
 
         te_string_reset(&str);
         te_string_append(&str, TEST_ENV_IUT_PORT "%u", idx);
@@ -95,6 +96,14 @@ main(int argc, char *argv[])
         if (testpmd_arg_rxq > max_rx_queues)
         {
             TEST_SKIP("So many Rx queues are not supported");
+        }
+
+        if (testpmd_arg_rxq > 1 && strcmp(generator_mode, "txonly") == 0)
+        {
+            CHECK_RC(test_get_rss_offloads(iut_jobs_ctrl, iut_ifs[idx],
+                                           &rss_offloads));
+            if ((rss_offloads & TEST_ETH_RSS_NONFRAG_IPV4_UDP) == 0)
+                TEST_SKIP("IPv4 UDP RSS is not supported on IUT");
         }
 
         test_check_mtu(iut_jobs_ctrl, iut_ifs[idx], packet_size);
@@ -146,6 +155,13 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Adjust testpmd parameters");
+    if (testpmd_arg_rxq > 1 && strcmp(generator_mode, "txonly") == 0)
+    {
+        /* Multi-flow txonly varies UDP source port. */
+        CHECK_RC(te_kvpair_add(&test_params, "testpmd_arg_rss_udp",
+                               "TRUE"));
+    }
+
     /*
      * Set number of TxQs equal to the number of RxQs to
      * enable all specified forwarding cores.

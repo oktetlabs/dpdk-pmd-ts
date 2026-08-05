@@ -1345,6 +1345,32 @@ extern te_bool test_conf_rx_offload_supported(rcf_rpc_server *rpcs,
                                               unsigned long long offload_bit);
 
 /**
+ * Cache RSS offloads supported by a port in local configuration tree.
+ *
+ * @param[in] rpcs          RPC server handle
+ * @param[in] port          Network interface description
+ * @param[in] rss_offloads  Supported RSS offloads
+ *
+ * @return Status code.
+ */
+extern te_errno test_add_rss_offloads(rcf_rpc_server *rpcs,
+                                      const struct if_nameindex *port,
+                                      uint64_t rss_offloads);
+
+/**
+ * Get cached RSS offloads supported by a port.
+ *
+ * @param[in]  rpcs          RPC server handle
+ * @param[in]  port          Network interface description
+ * @param[out] rss_offloads  Cached RSS offloads
+ *
+ * @return Status code.
+ */
+extern te_errno test_get_rss_offloads(rcf_rpc_server *rpcs,
+                                      const struct if_nameindex *port,
+                                      uint64_t *rss_offloads);
+
+/**
  * Add a QUEUE action to an action list at specified index.
  *
  * @param[inout]  ndn_actions   Action list

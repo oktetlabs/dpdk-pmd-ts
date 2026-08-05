@@ -22,6 +22,7 @@
 #include "tapi_reqs.h"
 #include "tapi_test.h"
 #include "rpc_dpdk_offloads.h"
+#include "dpdk_pmd_test_perf.h"
 
 /* Control environment binding manually */
 #undef TEST_START_SPECIFIC
@@ -119,14 +120,20 @@ main(int argc, char **argv)
     unsigned int env_id = 0;
     const char *env_str;
     rcf_rpc_server *iut_jobs_ctrl = NULL;
+    rcf_rpc_server *tst_jobs_ctrl = NULL;
     tapi_env_host *iut_host = NULL;
     tapi_env_host *tst_host = NULL;
     unsigned int iut_port_id = 0;
+    unsigned int tst_port_id = 0;
     const struct if_nameindex *iut_port = NULL;
+    const struct if_nameindex *tst_port = NULL;
     struct tarpc_rte_eth_dev_info dev_info;
     const char *iut_job_control_rpcs = "iut_jobs_ctrl";
     const char *iut_rpcs_name = "iut_rpcs";
     rcf_rpc_server *iut_rpcs = NULL;
+    cfg_val_type cvt = CVT_STRING;
+    char *tst_rpcprovider = NULL;
+    bool tst_rpcprovider_changed = false;
     struct tarpc_ether_addr iut_mac;
     char *iut_mac_str = NULL;
     tapi_cpu_index_t *indices = NULL;
@@ -134,6 +141,13 @@ main(int argc, char **argv)
     unsigned int i;
 
     TEST_START;
+
+    /*
+     * Bind TST ports before obtaining the environment so that it records
+     * them as PCI functions rather than interfaces removed by the binding.
+     */
+    CHECK_RC(tapi_cfg_net_foreach_node(bind_dpdk_driver_on_tst_agent, NULL));
+    CFG_WAIT_CHANGES;
 
     do {
         te_string env_name = TE_STRING_INIT;
@@ -198,6 +212,7 @@ main(int argc, char **argv)
         TEST_FAIL("Failed to get '%s' RPC server: %r", iut_rpcs_name, rc);
 
     TEST_GET_PCO(iut_jobs_ctrl);
+    TEST_GET_PCO(tst_jobs_ctrl);
 
     /*
      * Make stats of SFC (Xilinx) NICs more consistent by removing update period
@@ -232,6 +247,9 @@ main(int argc, char **argv)
                                       "min_mtu", dev_info.min_mtu));
         CHECK_RC(test_add_pci_fn_prop(iut_jobs_ctrl, iut_port,
                                       "max_mtu", dev_info.max_mtu));
+        CHECK_RC(test_add_rss_offloads(
+                     iut_jobs_ctrl, iut_port,
+                     dev_info.flow_type_rss_offloads));
 
         for (i = 0; i < rpc_dpdk_tx_offloads_num; i++)
         {
@@ -260,6 +278,41 @@ main(int argc, char **argv)
     /* Deinitialize EAL on iut_jobs_ctrl */
     CHECK_RC(tapi_rte_eal_fini(&env, iut_jobs_ctrl));
 
+    CHECK_RC(cfg_get_instance_fmt(&cvt, &tst_rpcprovider,
+                                  "/agent:%s/rpcprovider:",
+                                  tst_jobs_ctrl->ta));
+    CHECK_RC(cfg_set_instance_fmt(CFG_VAL(STRING, "dpdkrpc"),
+                                  "/agent:%s/rpcprovider:",
+                                  tst_jobs_ctrl->ta));
+    tst_rpcprovider_changed = true;
+    CHECK_RC(rcf_rpc_server_restart(tst_jobs_ctrl));
+
+    CHECK_RC(tapi_rte_eal_init(&env, tst_jobs_ctrl, 0, NULL));
+
+    do {
+        te_string if_name = TE_STRING_INIT;
+
+        te_string_append(&if_name, "tst_port%u", tst_port_id++);
+        tst_port = tapi_env_get_if(&env, te_string_value(&if_name));
+        te_string_free(&if_name);
+        if (tst_port == NULL)
+            break;
+
+        memset(&dev_info, 0, sizeof(dev_info));
+        rpc_rte_eth_dev_info_get(tst_jobs_ctrl, tst_port->if_index, &dev_info);
+        CHECK_RC(test_add_rss_offloads(
+                     tst_jobs_ctrl, tst_port,
+                     dev_info.flow_type_rss_offloads));
+    } while (true);
+
+    CHECK_RC(tapi_rte_eal_fini(&env, tst_jobs_ctrl));
+
+    CHECK_RC(cfg_set_instance_fmt(CFG_VAL(STRING, tst_rpcprovider),
+                                  "/agent:%s/rpcprovider:",
+                                  tst_jobs_ctrl->ta));
+    CHECK_RC(rcf_rpc_server_restart(tst_jobs_ctrl));
+    tst_rpcprovider_changed = false;
+
     /* Set RPC provider to default value on IUT (do not use DPDK RPC server) */
     CHECK_RC(cfg_set_instance_fmt(CFG_VAL(STRING, "ta_rpcs"),
                                   "/agent:%s/rpcprovider:", iut_host->ta));
@@ -278,16 +331,25 @@ main(int argc, char **argv)
     /* Create RPC server jobs control to avoid addition in each test */
     CHECK_RC(rcf_rpc_server_create(iut_host->ta, iut_job_control_rpcs, NULL));
 
-    CHECK_RC(tapi_cfg_net_foreach_node(bind_dpdk_driver_on_tst_agent, NULL));
-
-    CFG_WAIT_CHANGES;
-
     CHECK_RC(rc = cfg_synchronize("/:", TRUE));
     CHECK_RC(rc = cfg_tree_print(NULL, TE_LL_RING, "/:"));
 
     TEST_SUCCESS;
 
 cleanup:
+    if (tst_rpcprovider_changed)
+    {
+        te_errno restore_rc;
+
+        restore_rc = cfg_set_instance_fmt(CFG_VAL(STRING, tst_rpcprovider),
+                                          "/agent:%s/rpcprovider:",
+                                          tst_jobs_ctrl->ta);
+        if (restore_rc == 0)
+            restore_rc = rcf_rpc_server_restart(tst_jobs_ctrl);
+        if (restore_rc != 0)
+            ERROR("Failed to restore TST RPC provider: %r", restore_rc);
+    }
+    free(tst_rpcprovider);
 
     TEST_END;
 }

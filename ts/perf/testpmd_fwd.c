@@ -192,11 +192,10 @@ main(int argc, char *argv[])
                  &tst_testpmd_job, &iut_testpmd_job));
 
     TEST_STEP("Retrieve link speed from reporting testpmd");
-    CHECK_RC(tapi_dpdk_testpmd_get_link_speed_many_ports(&iut_testpmd_job,
-                                                         n_ports,
-                                                         &n_iut_ports,
-                                                         iut_ports,
-                                                         link_speed));
+    rc = tapi_dpdk_testpmd_get_link_speed_many_ports(
+             &iut_testpmd_job, n_ports, &n_iut_ports, iut_ports,
+             link_speed);
+    test_check_testpmd_link_speed_result(rc, "IUT");
 
     TEST_STEP("Initialize IUT Rx and TST Tx statistics");
     for (port = 0; port < n_ports; ++port)

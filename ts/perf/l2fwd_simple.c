@@ -96,7 +96,8 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_dpdk_testpmd_start(&tst_testpmd_job));
 
     TEST_STEP("Retrieve link speed from reporting testpmd");
-    CHECK_RC(tapi_dpdk_testpmd_get_link_speed(&tst_testpmd_job, &link_speed));
+    rc = tapi_dpdk_testpmd_get_link_speed(&tst_testpmd_job, &link_speed);
+    test_check_testpmd_link_speed_result(rc, "TST");
 
     TEST_STEP("Initialize Tx and Rx statistics");
     CHECK_RC(test_meas_stats_init(&meas_stats_tx));

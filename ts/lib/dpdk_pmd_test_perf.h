@@ -13,6 +13,7 @@
 
 #include "tapi_dpdk.h"
 #include "tapi_l2fwd.h"
+#include "tapi_test.h"
 
 #define TEST_MEAS_MAX_NUM_DATAPOINTS 60
 #define TEST_MEAS_MIN_NUM_DATAPOINTS 10
@@ -22,6 +23,24 @@
 #define TEST_MEAS_INIT_FLAGS                                                \
     (TE_MEAS_STATS_INIT_STAB_REQUIRED | TE_MEAS_STATS_INIT_SUMMARY_REQUIRED |  \
      TE_MEAS_STATS_INIT_IGNORE_ZEROS)
+
+/**
+ * Convert expected testpmd link-speed errors to test verdicts.
+ *
+ * @param rc            Result of a testpmd link-speed request.
+ * @param side          Endpoint name for verdicts.
+ */
+static inline void
+test_check_testpmd_link_speed_result(te_errno rc, const char *side)
+{
+    if (TE_RC_GET_ERROR(rc) == TE_ENETDOWN)
+        TEST_VERDICT("%s testpmd reported at least one link as down", side);
+    if (TE_RC_GET_ERROR(rc) == TE_ENODATA)
+        TEST_VERDICT("%s testpmd reported an unknown link speed", side);
+    if (TE_RC_GET_ERROR(rc) == TE_ETIMEDOUT)
+        TEST_VERDICT("%s testpmd startup link report is incomplete", side);
+    CHECK_RC(rc);
+}
 
 /**
  * Start a pair of testpmd jobs in an order suitable for link reporting.

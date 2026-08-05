@@ -12,7 +12,62 @@
 #include "te_config.h"
 
 #include "dpdk_pmd_test_perf.h"
+#include "tapi_dpdk_stats.h"
 #include "tapi_test.h"
+
+static void
+test_require_usable_rate(const te_meas_stats_t *meas_stats,
+                         const char *prefix)
+{
+    const te_meas_stats_data_t *data;
+    const char *rate_name = prefix == NULL ? "Rate" : prefix;
+
+    data = tapi_dpdk_stats_get_rate_data(meas_stats);
+    if (data == NULL || data->num_datapoints == 0)
+        TEST_VERDICT("%s: no rate measurements available", rate_name);
+
+    if (!isfinite(data->mean))
+        TEST_VERDICT("%s: packet rate is not finite", rate_name);
+
+    if (data->mean < 1.0)
+        TEST_VERDICT("%s: packet rate is below 1 PPS", rate_name);
+}
+
+te_errno
+test_report_port_rate(const char *tool, const te_meas_stats_t *meas_stats,
+                      unsigned int packet_size, unsigned int link_speed,
+                      const char *prefix, unsigned int port, size_t n_ports)
+{
+    te_string rate_name = TE_STRING_INIT;
+    const char *name = prefix;
+    te_errno rc;
+
+    if (n_ports > 1)
+    {
+        te_string_append(&rate_name, "%s%u", prefix, port);
+        name = te_string_value(&rate_name);
+    }
+
+    test_require_usable_rate(meas_stats, name);
+    rc = tapi_dpdk_stats_log_rates(tool, meas_stats, packet_size,
+                                   link_speed, name);
+
+    te_string_free(&rate_name);
+    return rc;
+}
+
+te_errno
+test_report_loopback_rate(const te_meas_stats_t *tx_stats,
+                          const te_meas_stats_t *rx_stats,
+                          unsigned int packet_size,
+                          unsigned int link_speed)
+{
+    test_require_usable_rate(tx_stats, "Tx");
+    test_require_usable_rate(rx_stats, "Rx");
+
+    return tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, tx_stats,
+                                     packet_size, link_speed, NULL);
+}
 
 static te_errno
 start_testpmd_await_port_start_attempts(tapi_dpdk_testpmd_job_t *job)

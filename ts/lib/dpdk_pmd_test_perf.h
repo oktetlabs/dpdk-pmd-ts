@@ -66,4 +66,47 @@ test_meas_stats_init(te_meas_stats_t *meas_stats)
                               TEST_MEAS_DEVIATION_COEFF);
 }
 
+/**
+ * Report rate statistics for a test port.
+ *
+ * A usable rate has a non-empty selected sample and a finite mean of at
+ * least 1 PPS. The port index is included in the rate name for multi-port
+ * tests.
+ *
+ * @param tool          Measurement tool name.
+ * @param meas_stats    Measurement statistics.
+ * @param packet_size   Packet size in bytes.
+ * @param link_speed    Link speed in Mbps.
+ * @param prefix        Rate name prefix (must not be @c NULL).
+ * @param port          Port index.
+ * @param n_ports       Number of tested ports.
+ *
+ * @return Status code.
+ */
+extern te_errno test_report_port_rate(const char *tool,
+                                      const te_meas_stats_t *meas_stats,
+                                      unsigned int packet_size,
+                                      unsigned int link_speed,
+                                      const char *prefix,
+                                      unsigned int port,
+                                      size_t n_ports);
+
+/**
+ * Report testpmd loopback rate statistics.
+ *
+ * Tx is the performance result. Both Tx and Rx must have usable rate
+ * samples.
+ *
+ * @param tx_stats      Tx measurement statistics.
+ * @param rx_stats      Rx measurement statistics.
+ * @param packet_size   Packet size in bytes.
+ * @param link_speed    Link speed in Mbps.
+ *
+ * @return Status code.
+ */
+extern te_errno test_report_loopback_rate(const te_meas_stats_t *tx_stats,
+                                          const te_meas_stats_t *rx_stats,
+                                          unsigned int packet_size,
+                                          unsigned int link_speed);
+
 #endif

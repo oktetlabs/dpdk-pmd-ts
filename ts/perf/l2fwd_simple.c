@@ -110,17 +110,12 @@ main(int argc, char *argv[])
     CHECK_RC(tapi_dpdk_testpmd_get_stats(&tst_testpmd_job, &tst_stats_tx,
                                          NULL));
 
-    if (meas_stats_tx.data.mean == 0 || meas_stats_rx.data.mean == 0)
-        TEST_VERDICT("Failure: zero Rx or Tx packets per second");
-
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_L2FWD_NAME, &meas_stats_tx,
-                              packet_size, link_speed, "FwdTx");
-
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_L2FWD_NAME, &meas_stats_rx,
-                              packet_size, link_speed, "FwdRx");
-
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &tst_stats_tx,
-                              packet_size, link_speed, "Tx");
+    CHECK_RC(test_report_port_rate(TAPI_DPDK_L2FWD_NAME, &meas_stats_tx,
+                                   packet_size, link_speed, "FwdTx", 0, 1));
+    CHECK_RC(test_report_port_rate(TAPI_DPDK_L2FWD_NAME, &meas_stats_rx,
+                                   packet_size, link_speed, "FwdRx", 0, 1));
+    CHECK_RC(test_report_port_rate(TAPI_DPDK_TESTPMD_NAME, &tst_stats_tx,
+                                   packet_size, link_speed, "Tx", 0, 1));
 
     TEST_SUCCESS;
 

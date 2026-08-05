@@ -291,25 +291,12 @@ main(int argc, char *argv[])
     TEST_STEP("Check and log measurement results");
     for (port = 0; port < n_ports; ++port)
     {
-        if (meas_stats_rx[port].data.mean == 0 ||
-            meas_stats_tx[port].data.mean == 0)
-            TEST_VERDICT("Failure: zero Tx or Rx packets per second");
-
-        te_string_reset(&str);
-        te_string_append(&str, "Tx");
-        if (n_ports > 1)
-            te_string_append(&str, "%u", port);
-        tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx[port],
-                                  packet_size, link_speed[port],
-                                  te_string_value(&str));
-
-        te_string_reset(&str);
-        te_string_append(&str, "Rx");
-        if (n_ports > 1)
-            te_string_append(&str, "%u", port);
-        tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_rx[port],
-                                  packet_size, link_speed[port],
-                                  te_string_value(&str));
+        CHECK_RC(test_report_port_rate(
+                     TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx[port], packet_size,
+                     link_speed[port], "Tx", port, n_ports));
+        CHECK_RC(test_report_port_rate(
+                     TAPI_DPDK_TESTPMD_NAME, &meas_stats_rx[port], packet_size,
+                     link_speed[port], "Rx", port, n_ports));
 
         if (dbells_supp)
             CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&testpmd_job, &meas_stats_tx[port]));
@@ -317,9 +304,10 @@ main(int argc, char *argv[])
 
     if (n_ports > 1)
     {
-        tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME, n_ports,
-                                       meas_stats_tx, packet_size,
-                                       link_speed, "Tx");
+        CHECK_RC(tapi_dpdk_stats_log_aggr_rates(TAPI_DPDK_TESTPMD_NAME,
+                                                n_ports, meas_stats_tx,
+                                                packet_size, link_speed,
+                                                "Tx"));
     }
 
     TEST_SUCCESS;

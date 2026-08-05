@@ -111,11 +111,8 @@ main(int argc, char *argv[])
                                          &meas_stats_rx));
 
     TEST_STEP("Check and log measurement results");
-    if (meas_stats_tx.data.mean == 0 || meas_stats_rx.data.mean == 0)
-        TEST_VERDICT("Failure: zero Rx or Tx packets per second");
-
-    tapi_dpdk_stats_log_rates(TAPI_DPDK_TESTPMD_NAME, &meas_stats_tx,
-                              packet_size, link_speed, NULL);
+    CHECK_RC(test_report_loopback_rate(&meas_stats_tx, &meas_stats_rx,
+                                       packet_size, link_speed));
 
     if (dbells_supp)
         CHECK_RC(tapi_dpdk_stats_log_tx_dbells(&testpmd_job, &meas_stats_tx));

@@ -159,14 +159,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
             </arg>
             <arg name="testpmd_command_txpkts">
                 <value>42</value>
@@ -223,14 +217,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
             </arg>
             <arg name="testpmd_command_txpkts">
                 <value>60</value>
@@ -276,14 +264,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
             </arg>
             <arg name="testpmd_command_txpkts">
                 <value>60</value>
@@ -327,14 +309,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
             </arg>
             <arg name="testpmd_command_txpkts">
                 <value>4096</value>
@@ -381,14 +357,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
             </arg>
             <arg name="testpmd_command_txpkts">
                 <value>54,1460</value>
@@ -444,17 +414,9 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
+                <value>TRUE</value>
             </arg>
             <arg name="packet_size">
                 <value>42</value>
@@ -510,17 +472,9 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
+                <value>TRUE</value>
             </arg>
             <arg name="packet_size">
                 <value>60</value>
@@ -568,17 +522,9 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>off</value>
-                <value>on</value>
+            <arg name="flow_control">
+                <value>FALSE</value>
+                <value>TRUE</value>
             </arg>
             <arg name="packet_size">
                 <value>60</value>
@@ -626,14 +572,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>on</value>
+            <arg name="flow_control">
+                <value>TRUE</value>
             </arg>
             <arg name="packet_size">
                 <value>60</value>
@@ -682,14 +622,8 @@
             <arg name="testpmd_arg_no_lsc_interrupt">
                 <value>TRUE</value>
             </arg>
-            <arg name="testpmd_command_flow_ctrl_autoneg" list="flow_ctrl">
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_rx" list="flow_ctrl">
-                <value>on</value>
-            </arg>
-            <arg name="testpmd_command_flow_ctrl_tx" list="flow_ctrl">
-                <value>on</value>
+            <arg name="flow_control">
+                <value>TRUE</value>
             </arg>
             <arg name="packet_size">
                 <value>60</value>

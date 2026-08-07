@@ -10,6 +10,7 @@
  *
  * @objective Test dpdk-testpmd performance in Tx only mode
  *
+ * @param flow_control    Whether to use flow control
  *
  * @type performance
  *
@@ -54,6 +55,7 @@ main(int argc, char *argv[])
     int txpkts_len;
     unsigned int testpmd_arg_txonly_tso_mss;
     te_bool tso_requested;
+    bool flow_control;
     unsigned long rx_pkts;
     unsigned long rx_bytes;
     size_t idx;
@@ -83,6 +85,7 @@ main(int argc, char *argv[])
     n_fwd_cores = TEST_UINT_PARAM(n_fwd_cores);
     TEST_GET_UINT_PARAM(testpmd_arg_txq);
     tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
+    TEST_GET_BOOL_PARAM(flow_control);
 
     for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
     {
@@ -221,6 +224,10 @@ main(int argc, char *argv[])
         /* Multi-flow txonly varies UDP source port for non-TSO traffic. */
         CHECK_RC(te_kvpair_add(rx_params, "testpmd_arg_rss_udp", "TRUE"));
     }
+
+    TEST_STEP("Configure flow control");
+    CHECK_RC(test_configure_flow_ctrl(flow_control, &test_params,
+                                      rx_params));
 
     TEST_STEP("Create testpmd jobs");
     CHECK_RC(tapi_dpdk_create_testpmd_job(tst_jobs_ctrl, &env,

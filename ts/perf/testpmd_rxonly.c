@@ -10,6 +10,7 @@
  *
  * @objective Test dpdk-testpmd performance in rxonly mode
  *
+ * @param flow_control    Whether to use flow control
  *
  * @type performance
  *
@@ -62,6 +63,7 @@ main(int argc, char *argv[])
     unsigned int mbuf_size;
     unsigned int mtu;
     unsigned int packet_size;
+    bool flow_control;
     const char *txpkts;
     size_t idx;
 
@@ -78,6 +80,7 @@ main(int argc, char *argv[])
     TEST_GET_UINT_PARAM(testpmd_arg_rxq);
     TEST_GET_UINT_PARAM(n_rx_cores);
     TEST_GET_UINT_PARAM(packet_size);
+    TEST_GET_BOOL_PARAM(flow_control);
     txpkts = TEST_STRING_PARAM(packet_size);
 
     for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
@@ -119,6 +122,10 @@ main(int argc, char *argv[])
                                     TEST_TESTPMD_TX_GENERATOR_TXFREET,
                                     &traffic_generator_params,
                                     &n_tx_cores));
+
+    TEST_STEP("Configure flow control");
+    CHECK_RC(test_configure_flow_ctrl(flow_control, &test_params,
+                                      traffic_generator_params));
 
     for (port = 0; port < n_ports; ++port)
     {

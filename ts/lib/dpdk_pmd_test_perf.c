@@ -15,6 +15,51 @@
 #include "tapi_dpdk_stats.h"
 #include "tapi_test.h"
 
+static te_errno
+test_add_flow_ctrl_params(te_kvpair_h *params, const char *value)
+{
+    te_errno rc;
+
+    rc = te_kvpair_add(params,
+                       TAPI_DPDK_TESTPMD_COMMAND_PREFIX "flow_ctrl_rx",
+                       "%s", value);
+    if (rc != 0)
+        return rc;
+
+    return te_kvpair_add(params,
+                         TAPI_DPDK_TESTPMD_COMMAND_PREFIX "flow_ctrl_tx",
+                         "%s", value);
+}
+
+te_errno
+test_configure_flow_ctrl(bool enable, te_kvpair_h *iut_params,
+                         te_kvpair_h *peer_params)
+{
+    const char *rx_key =
+        TAPI_DPDK_TESTPMD_COMMAND_PREFIX "flow_ctrl_rx";
+    const char *tx_key =
+        TAPI_DPDK_TESTPMD_COMMAND_PREFIX "flow_ctrl_tx";
+    const char *value = enable ? "on" : "off";
+    te_errno rc;
+
+    if (iut_params == NULL || peer_params == NULL)
+        return TE_RC(TE_TAPI, TE_EINVAL);
+
+    if (te_kvpairs_get(iut_params, rx_key) != NULL ||
+        te_kvpairs_get(iut_params, tx_key) != NULL ||
+        te_kvpairs_get(peer_params, rx_key) != NULL ||
+        te_kvpairs_get(peer_params, tx_key) != NULL)
+    {
+        return TE_RC(TE_TAPI, TE_EEXIST);
+    }
+
+    rc = test_add_flow_ctrl_params(iut_params, value);
+    if (rc != 0)
+        return rc;
+
+    return test_add_flow_ctrl_params(peer_params, value);
+}
+
 static void
 test_require_usable_rate(const te_meas_stats_t *meas_stats,
                          const char *prefix)

@@ -5814,19 +5814,6 @@ test_create_traffic_receiver_params(const char *arg_prefix,
     te_string_append(&buf, "%s%s", arg_prefix, "no_lsc_interrupt");
     CHECK_RC(te_kvpair_add(result, buf.ptr, "TRUE"));
 
-    /* Flow control is turned off to not limit transmitter performance */
-    te_string_reset(&buf);
-    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_autoneg");
-    CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
-
-    te_string_reset(&buf);
-    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_rx");
-    CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
-
-    te_string_reset(&buf);
-    te_string_append(&buf, "%s%s", command_prefix, "flow_ctrl_tx");
-    CHECK_RC(te_kvpair_add(result, buf.ptr, "%s", "off"));
-
     if (tapi_dpdk_mtu_by_pkt_size(packet_size, &mtu))
     {
         te_string_reset(&buf);

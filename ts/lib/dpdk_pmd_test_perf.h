@@ -25,6 +25,19 @@
      TE_MEAS_STATS_INIT_IGNORE_ZEROS)
 
 /**
+ * Configure flow control on a pair of testpmd instances.
+ *
+ * @param enable        Whether to enable flow control.
+ * @param iut_params    IUT testpmd parameters to update.
+ * @param peer_params   Peer testpmd parameters to update.
+ *
+ * @return Status code
+ */
+extern te_errno test_configure_flow_ctrl(bool enable,
+                                         te_kvpair_h *iut_params,
+                                         te_kvpair_h *peer_params);
+
+/**
  * Convert expected testpmd link-speed errors to test verdicts.
  *
  * @param rc            Result of a testpmd link-speed request.

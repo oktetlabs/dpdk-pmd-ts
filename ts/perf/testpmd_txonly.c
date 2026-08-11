@@ -284,6 +284,8 @@ main(int argc, char *argv[])
         TEST_STEP("Check TSO correctness in the sense of packets size");
         CHECK_RC(tapi_dpdk_get_last_rx_pkts_bytes(&testpmd_job_rx, &rx_pkts,
                                                   &rx_bytes));
+        if (rx_pkts == 0)
+            TEST_VERDICT("No packets were received for the TSO sanity check");
         if ((rx_bytes / rx_pkts) > packet_size)
             TEST_VERDICT("Sanity check of TSO on Rx side failed");
     }

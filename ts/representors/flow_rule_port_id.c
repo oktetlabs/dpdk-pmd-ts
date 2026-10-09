@@ -12,8 +12,6 @@
  * @objective Make sure that RTE flow API PORT ID action
  *            is carried out correctly
  *
- * @param tmpl              Packet template
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -65,6 +63,7 @@ main(int argc, char *argv[])
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(tmpl, "Packet template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
 
     test_prepare_config_def_mk(&env, iut_rpcs, &iut_port->if_info,

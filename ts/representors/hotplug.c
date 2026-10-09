@@ -11,10 +11,6 @@
  *
  * @objective Test port representors hotplug add and remove
  *
- * @param tmpl              Packet template
- * @param remove_port       If @c TRUE, remove PF before hotplugging it with
- *                          representors; otherwise don't do that
- *
  * @type representor
  *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
@@ -58,7 +54,10 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
     TEST_GET_LINK_ADDR(iut_alien_mac);
+    TEST_PARAM_DOC(tmpl, "Packet template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(remove_port,
+        "If @c TRUE, remove PF before hotplugging it with representors; otherwise don't do that");
     TEST_GET_BOOL_PARAM(remove_port);
 
     trsc_net = test_transceiver_net_init(tst_host->ta, tst_if->if_name);

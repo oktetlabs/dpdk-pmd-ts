@@ -12,13 +12,6 @@
  * @objective Make sure that offloading traffic to a virtual function
  *            works with RTE flow API
  *
- * @param flow_rule_pattern     Flow Rule pattern
- * @param count                 Count offloaded packets if @c TRUE
- * @param use_dpdk_driver       Use DPDK driver on VF if @c TRUE,
- *                              use kernel driver otherwise
- * @param nb_pkts               Number of offloaded packets to send
- * @param iut_client            @c TRUE - IUT is client, @c FALSE - IUT is server
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -89,10 +82,17 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
 
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow Rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
+    TEST_PARAM_DOC(use_dpdk_driver,
+        "Use DPDK driver on VF if @c TRUE, use kernel driver otherwise");
     TEST_GET_BOOL_PARAM(use_dpdk_driver);
+    TEST_PARAM_DOC(count, "Count offloaded packets if @c TRUE");
     TEST_GET_BOOL_PARAM(count);
+    TEST_PARAM_DOC(iut_client,
+        "@c TRUE - IUT is client, @c FALSE - IUT is server");
     TEST_GET_BOOL_PARAM(iut_client);
+    TEST_PARAM_DOC(nb_pkts, "Number of offloaded packets to send");
     TEST_GET_UINT_PARAM(nb_pkts);
 
     test_prepare_config_def_mk(&env, iut_rpcs, &iut_port->if_info,

@@ -12,13 +12,6 @@
  * @objective Make sure that offloading traffic to a virtual function
  *            works with RTE flow API
  *
- * @param encap_tunnel_type         Encapsulation tunnel type
- * @param jump_flow_rule_pattern    Flow Rule pattern with jump action
- * @param decap_flow_rule_pattern   Flow Rule pattern in the group to which
- *                                  traffic from the @p jump_flow_rule_pattern
- *                                  is directed. Contains decap action
- * @param nb_pkts                   Number of offloaded packets to send
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -117,9 +110,15 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
 
+    TEST_PARAM_DOC(jump_flow_rule_pattern,
+        "Flow Rule pattern with jump action");
     TEST_GET_NDN_RTE_FLOW_PATTERN(jump_flow_rule_pattern);
+    TEST_PARAM_DOC(decap_flow_rule_pattern,
+        "Flow Rule pattern in the group to which traffic from the @p jump_flow_rule_pattern is directed. Contains decap action");
     TEST_GET_NDN_RTE_FLOW_PATTERN(decap_flow_rule_pattern);
+    TEST_PARAM_DOC(nb_pkts, "Number of offloaded packets to send");
     TEST_GET_UINT_PARAM(nb_pkts);
+    TEST_PARAM_DOC(encap_tunnel_type, "Encapsulation tunnel type");
     TEST_GET_TUNNEL_TYPE(encap_tunnel_type);
 
     memset(&jump_rule, 0, sizeof(jump_rule));

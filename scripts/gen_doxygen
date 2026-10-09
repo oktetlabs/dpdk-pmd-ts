@@ -90,6 +90,19 @@ if ! which $SPHINX_BUILD_BIN >/dev/null; then
     exit -2
 fi
 
+# Scenarios are extracted from the C sources through libclang.  Without the
+# Python bindings the filter falls back to the old awk one and the pages
+# come out flat, which is easy to miss: doxygen ignores filter failures, and
+# the fallback says so once per source file among the rest of the output.
+# The documentation is still worth building without them, so only warn.
+if ! python3 -c "from clang import cindex" >/dev/null 2>&1; then
+    echo "Note: the python3 libclang bindings are missing, so test" >&2
+    echo "      scenarios will be documented flat: steps lose the" >&2
+    echo "      conditions and loops guarding them, and substeps do not" >&2
+    echo "      nest. Install them with:" >&2
+    echo " $ apt install python3-clang     # or: pip install libclang" >&2
+fi
+
 pushd ${TS_TOPDIR} >/dev/null
 
 # Choose Doxyfile, optionally overriding FILTER_PATTERNS to disable xml2dox
@@ -102,8 +115,8 @@ if ! $use_xml2dox; then
     cp "$DOXYFILE" "$DOXYFILE_TMP"
     cat >>"$DOXYFILE_TMP" <<'EOF'
 
-# Overridden by gen_doxygen: disable xml2dox, keep c2dox
-FILTER_PATTERNS        = *.c="${TE_BASE}/scripts/c2dox"
+# Overridden by gen_doxygen: disable xml2dox, keep the C filter
+FILTER_PATTERNS        = *.c="${TE_BASE}/scripts/c2dox_ast"
 EOF
     DOXYFILE="$DOXYFILE_TMP"
 fi

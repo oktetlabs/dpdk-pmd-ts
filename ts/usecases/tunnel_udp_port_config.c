@@ -11,10 +11,6 @@
  *
  * @objective Check that tunnel UDP port could be added and deleted correctly
  *
- * @param ethdev_state Ethernet device state
- * @param tunnel_type  Tunnel type
- * @param nb_entries   The number of UDP port entries
- *
  * @type use case
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -50,8 +46,11 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(ethdev_state, "Ethernet device state");
     TEST_GET_ETHDEV_STATE(ethdev_state);
+    TEST_PARAM_DOC(tunnel_type, "Tunnel type");
     TEST_GET_TUNNEL_TYPE(tunnel_type);
+    TEST_PARAM_DOC(nb_entries, "The number of UDP port entries");
     TEST_GET_UINT_PARAM(nb_entries);
 
     TEST_STEP("Prepare @p ethdev_state state");

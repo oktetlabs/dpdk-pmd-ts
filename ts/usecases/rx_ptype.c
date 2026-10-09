@@ -12,8 +12,6 @@
  * @objective Make sure that traffic classification
  *            is carried out properly by the driver
  *
- * @param tmpl Traffic template
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -51,6 +49,7 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);

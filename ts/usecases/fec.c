@@ -11,12 +11,6 @@
  *
  * @objective Verify setting FEC mode and link transitions associated with that
  *
- * @param env          Network environment configuration (@c env.peer2peer)
- * @param ethdev_state Ethdev state when FEC should be configured
- * @param link_mode    Speed and duplex to configure
- * @param fec_mode     Target mode to configure
- * @param tmpl         Traffic template
- *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@arknetworks.am>
  * @author Ivan Malov <Ivan.Malov@arknetworks.am>
  *
@@ -179,15 +173,21 @@ main(int argc, char *argv[])
 
 
     TEST_START;
+    TEST_PARAM_DOC(env,
+        "Network environment configuration (@c env.peer2peer)");
 
     TEST_GET_HOST(tst_host);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(ethdev_state, "Ethdev state when FEC should be configured");
     TEST_GET_ETHDEV_STATE(ethdev_state);
+    TEST_PARAM_DOC(link_mode, "Speed and duplex to configure");
     TEST_GET_STRING_PARAM(link_mode);
+    TEST_PARAM_DOC(fec_mode, "Target FEC mode to configure");
     TEST_GET_STRING_PARAM(fec_mode);
 
 

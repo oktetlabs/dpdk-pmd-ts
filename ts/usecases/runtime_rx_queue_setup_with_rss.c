@@ -12,13 +12,6 @@
  * @objective Setup Rx queue when device is started, perform the check
  *            using RSS
  *
- * @param tmpl                      Traffic template
- * @param nb_rxq                    Rx queue count
- * @param rxq_runtime_setup_idx     Index of the queue that will be setup and
- *                                  started at run time
- * @param deferred_start            Does the runtime setup queue need to be
- *                                  marked as deferred
- *
  * @type use case
  *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
@@ -168,9 +161,15 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
     TEST_GET_ADDR(tst_rpcs, tst_addr);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(nb_rxq, "Rx queue count");
     TEST_GET_UINT_PARAM(nb_rxq);
+    TEST_PARAM_DOC(rxq_runtime_setup_idx,
+        "Index of the queue that will be set up and started at run time");
     TEST_GET_UINT_PARAM(rxq_runtime_setup_idx);
+    TEST_PARAM_DOC(deferred_start,
+        "Whether the queue set up at run time should be marked as deferred");
     TEST_GET_BOOL_PARAM(deferred_start);
 
     TEST_STEP("Configure the Ethernet device");

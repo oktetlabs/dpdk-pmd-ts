@@ -11,10 +11,6 @@
  *
  * @objective Check VLAN strip offload
  *
- * @param vlan_strip            Test with VLAN strip offload enabled
- * @param qinq_strip            Test with QinQ strip offload enabled
- * @param tmpl                  Traffic template
- *
  * @type use case
  *
  * @author Dilshod Urazov <Dilshod.Urazov@oktetlabs.ru>
@@ -94,8 +90,13 @@ main(int argc, char *argv[])
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(vlan_strip,
+        "Whether to test with VLAN strip offload enabled");
     TEST_GET_BOOL_PARAM(vlan_strip);
+    TEST_PARAM_DOC(qinq_strip,
+        "Whether to test with QinQ strip offload enabled");
     TEST_GET_BOOL_PARAM(qinq_strip);
 
     TEST_STEP("Initialize EAL");

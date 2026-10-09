@@ -11,10 +11,6 @@
  *
  * @objective Make sure that driver can correctly refill Rx queue desc ring
  *
- * @param template      Traffic template
- * @param nb_rxd        Rx descriptors number
- * @param nb_wrap       Number of ring refilling
- *
  * @type use case
  *
  * @author Daniil Byshenko <Daniil.Byshenko@oktetlabs.ru>
@@ -54,10 +50,13 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_rxd, "Rx descriptors number");
     TEST_GET_UINT_PARAM(nb_rxd);
+    TEST_PARAM_DOC(nb_wrap, "Number of ring refilling");
     TEST_GET_UINT_PARAM(nb_wrap);
 
     TEST_STEP("Prepare default config and mbuf pool");

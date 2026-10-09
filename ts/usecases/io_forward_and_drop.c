@@ -11,10 +11,6 @@
  *
  * @objective Check that IO-forwarded packets do not erroneously bypass the flow engine
  *
- * @param rx_tmpl               Traffic template to be sent from Tester and received on IUT
- * @param tx_tmpl               Traffic template to be sent from IUT and received on Tester
- * @param flow_rule_pattern     Flow rule pattern
- *
  * @author Pavel Martynov <Pavel.Martynov@arknetworks.am>
  *
  * @par Scenario:
@@ -64,8 +60,13 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
+    TEST_PARAM_DOC(rx_tmpl,
+        "Traffic template to be sent from Tester and received on IUT");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(rx_tmpl);
+    TEST_PARAM_DOC(tx_tmpl,
+        "Traffic template to be sent from IUT and received on Tester");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tx_tmpl);
 
     TEST_STEP("Initialize the Ethernet device to get its capabilities");

@@ -13,17 +13,6 @@
  *            that RSS configuration are applied and all queues
  *            could transmit packets.
  *
- * @param rx_tmpl               Rx traffic template
- * @param tx_tmpl               Tx traffic template
- * @param nb_rx_queue           The number of Rx queues
- * @param nb_tx_queue           The number of Tx queues
- * @param nb_rx_queue_reconf    The number of Rx queues after
- *                              reconfiguring
- * @param nb_tx_queue_reconf    The number of Tx queues after
- *                              reconfiguring
- * @param all_queues_reconf     Re-setup all Rx and Tx queues if
- *                              @c TRUE, otherwise only new queues
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -79,12 +68,22 @@ main(int argc, char *argv[])
     TEST_GET_ADDR(tst_rpcs, tst_addr);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_rx_queue, "The number of Rx queues");
     TEST_GET_UINT_PARAM(nb_rx_queue);
+    TEST_PARAM_DOC(nb_tx_queue, "The number of Tx queues");
     TEST_GET_UINT_PARAM(nb_tx_queue);
+    TEST_PARAM_DOC(nb_rx_queue_reconf,
+        "The number of Rx queues after reconfiguring");
     TEST_GET_UINT_PARAM(nb_rx_queue_reconf);
+    TEST_PARAM_DOC(nb_tx_queue_reconf,
+        "The number of Tx queues after reconfiguring");
     TEST_GET_UINT_PARAM(nb_tx_queue_reconf);
+    TEST_PARAM_DOC(rx_tmpl, "Rx traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(rx_tmpl);
+    TEST_PARAM_DOC(tx_tmpl, "Tx traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tx_tmpl);
+    TEST_PARAM_DOC(all_queues_reconf,
+        "Re-setup all Rx and Tx queues if @c TRUE, otherwise only new queues");
     TEST_GET_BOOL_PARAM(all_queues_reconf);
 
     TEST_STEP("Check maximum number of Rx/Tx queues");

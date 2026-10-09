@@ -12,14 +12,6 @@
  * @objective Test checks work of RX scatter function with
  *            different buffer sizes
  *
- * @param enable_scatter        Test with Rx scatter offload enabled
- * @param rx_buf_size           The size of RTE mbuf data buffer
- * @param payload_size          The size of payload data of packet
- * @param packet_headers_size   Sufficient size for headers of all
- *                              package layers
- * @param max_extra_size        The maximum extra size added to
- *                              packet payload
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -73,12 +65,23 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(rx_buf_size, "The size of RTE mbuf data buffer");
     TEST_GET_INT_PARAM(rx_buf_size);
+    TEST_PARAM_DOC(payload_size, "The size of payload data of packet");
     TEST_GET_INT_PARAM(payload_size);
+    TEST_PARAM_DOC(max_extra_size,
+        "The maximum extra size added to packet payload");
     TEST_GET_INT_PARAM(max_extra_size);
+    TEST_PARAM_DOC(packet_headers_size,
+        "Sufficient size for headers of all package layers");
     TEST_GET_INT_PARAM(packet_headers_size);
+    TEST_PARAM_DOC(pre_rxq_setup_mtu,
+        "MTU to set on IUT before Rx queue setup");
     TEST_GET_UINT_PARAM(pre_rxq_setup_mtu);
+    TEST_PARAM_DOC(enable_scatter,
+        "Whether to test with Rx scatter offload enabled");
     TEST_GET_BOOL_PARAM(enable_scatter);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);

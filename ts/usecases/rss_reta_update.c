@@ -11,9 +11,6 @@
  *
  * @objective Update the Redirection Table of RSS
  *
- * @param tmpl            The template of packet
- * @param nb_rx_queues    The number of RX queues
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -66,7 +63,9 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_ADDR(tst_rpcs, tst_addr);
     TEST_GET_ADDR(iut_rpcs, iut_addr);
+    TEST_PARAM_DOC(nb_rx_queues, "The number of Rx queues");
     TEST_GET_UINT_PARAM(nb_rx_queues);
+    TEST_PARAM_DOC(tmpl, "The template of packet");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);

@@ -11,8 +11,6 @@
  *
  * @objective Get MTU test
  *
- * @param ethdev_state     The state of Ethernet device
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -38,6 +36,7 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
 
     TEST_STEP("Initialize EAL, preparing of @p ethdev_state Ethernet device state");

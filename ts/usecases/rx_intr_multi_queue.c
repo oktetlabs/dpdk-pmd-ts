@@ -12,8 +12,6 @@
  * @objective Check that Rx interrupts can be controlled independently
  *            for different Rx queues
  *
- * @param tmpl Traffic template
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <denis.pryazhennikov@oktetlabs.ru>
@@ -207,6 +205,7 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
 
     port_id = iut_port->if_index;

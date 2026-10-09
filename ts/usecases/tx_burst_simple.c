@@ -11,10 +11,6 @@
  *
  * @objective Transmit packets using @p tmpl from the TX queue
  *
- * @param tmpl         Traffic template
- * @param nb_pkts      Number of packets for sending
- * @param payload_len  Length of payload
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -56,12 +52,15 @@ main(int argc, char *argv[])
     unsigned int                        m_eth_d_len;
 
     TEST_START;
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_pkts, "Number of packets for sending");
     TEST_GET_UINT_PARAM(nb_pkts);
+    TEST_PARAM_DOC(payload_len, "Length of payload");
     TEST_GET_UINT_PARAM(payload_len);
 
     TEST_STEP("Initialize EAL, preparing of configured Ethernet device state");

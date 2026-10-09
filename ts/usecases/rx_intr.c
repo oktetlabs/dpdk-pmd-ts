@@ -12,8 +12,6 @@
  * @objective The test requests Rx queue interrupts on device configuration
  *            then checks that Rx interrupts are triggered when enabled
  *
- * @param tmpl  Traffic template
- *
  * @type use case
  *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
@@ -102,7 +100,15 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(scenario,
+        "Comma-separated list of scenario steps to perform in order:",
+        "- `intr_enable`: enable interrupt on the target Rx queue",
+        "- `intr_disable`: disable interrupt on the target Rx queue",
+        "- `send_packet`: transmit a packet from the Tester",
+        "- `receive_packet`: check that the packet is received on the target queue",
+        "- `check_intr`: check whether an interrupt is caused as expected");
     TEST_GET_STRING_LIST_PARAM(scenario, scen_args);
 
     TEST_STEP("Prepare initialized Ethernet device state");

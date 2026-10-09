@@ -11,14 +11,6 @@
  *
  * @objective Check port based VLAN ID insertion support
  *
- * @param tmpl                  Traffic template
- * @param txmode_pvid           VLAN ID to set PVID using ethdev configuration
- * @param txmode_prio           VLAN priority to set using ethdev configuration
- * @param txmode_cfi            VLAN CFI to set using ethdev configuration
- * @param api_pvid              VLAN ID to set PVID using RTE API
- * @param api_prio              VLAN priority field to set using RTE API
- * @param api_cfi               VLAN CFI field to set using RTE API
- *
  * @type use case
  *
  * @author Daniil Byshenko <daniil.byshenko@oktetlabs.ru>
@@ -131,16 +123,25 @@ main(int argc, char *argv[])
     unsigned int                    api_cfi;
 
     TEST_START;
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(txmode_pvid,
+        "VLAN ID to set PVID using ethdev configuration");
     TEST_GET_VLAN_ID_PARAM(txmode_pvid);
+    TEST_PARAM_DOC(txmode_prio,
+        "VLAN priority to set using ethdev configuration");
     TEST_GET_UINT_PARAM(txmode_prio);
+    TEST_PARAM_DOC(txmode_cfi, "VLAN CFI to set using ethdev configuration");
     TEST_GET_UINT_PARAM(txmode_cfi);
+    TEST_PARAM_DOC(api_pvid, "VLAN ID to set PVID using RTE API");
     TEST_GET_VLAN_ID_PARAM(api_pvid);
+    TEST_PARAM_DOC(api_prio, "VLAN priority field to set using RTE API");
     TEST_GET_UINT_PARAM(api_prio);
+    TEST_PARAM_DOC(api_cfi, "VLAN CFI field to set using RTE API");
     TEST_GET_UINT_PARAM(api_cfi);
 
     TEST_STEP("Initialize EAL");

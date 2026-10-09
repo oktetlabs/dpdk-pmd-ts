@@ -11,8 +11,6 @@
  *
  * @objective Make sure that FW version could be retrieved successfully
  *
- * @param ethdev_state         Ethernet device state
- *
  * @type use case
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -52,6 +50,7 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(ethdev_state, "Ethernet device state");
     TEST_GET_ETHDEV_STATE(ethdev_state);
 
     TEST_STEP("Initialize EAL and start the @p iut_port");

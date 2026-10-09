@@ -12,9 +12,6 @@
  * @objective Deferred start of random RX queue and checking that
  *            it works properly
  *
- * @param tmpl         Traffic template
- * @param n_rxq        The number of RX queues
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -74,7 +71,9 @@ main(int argc, char *argv[])
     TEST_GET_IF(tst_if);
     TEST_GET_ADDR(iut_rpcs, iut_addr);
     TEST_GET_ADDR(tst_rpcs, tst_addr);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(n_rxq, "The number of Rx queues");
     TEST_GET_UINT_PARAM(n_rxq);
 
     TEST_STEP("Prepare @p n_rxq RX queues and set deffered flag randomly");

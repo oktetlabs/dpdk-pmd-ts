@@ -11,9 +11,6 @@
  *
  * @objective Check VLAN filter offload
  *
- * @param tmpl              Traffic template
- * @param nb_vlan_filters   The number of VLAN IDs for filtering
- *
  * @type use case
  *
  * @author Daniil Byshenko <daniil.byshenko@oktetlabs.ru>
@@ -130,9 +127,11 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_vlan_filters, "The number of VLAN IDs for filtering");
     TEST_GET_UINT_PARAM(nb_vlan_filters);
 
     if (nb_vlan_filters > NB_VLAN_FILTERS_MAX)

@@ -11,8 +11,6 @@
  *
  * @objective Verify that xstat names and values could be retrieved by IDs
  *
- * @param template Traffic template
- *
  * @type use case
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -55,6 +53,7 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);

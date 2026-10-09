@@ -11,9 +11,6 @@
  *
  * @objective Make sure that valid Rx checksum flags are put into mbufs
  *
- * @param tmpl        Traffic template
- * @param rx_ol_cksum Rx checksum offload toggle
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -155,7 +152,9 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(rx_ol_cksum, "Whether to enable Rx checksum offload");
     TEST_GET_BOOL_PARAM(rx_ol_cksum);
 
     TEST_STEP("Make a copy of the template to be used for bad checksum testing");

@@ -11,10 +11,6 @@
  *
  * @objective Check correct work of all-multicast mode
  *
- * @param ethdev_state       The state of Ethernet device
- * @param is_all_mcast_mode  Enable all-multicast if @c TRUE,
- *                           otherwise disable it
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -58,12 +54,16 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(bcast_addr);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(is_all_mcast_mode,
+        "Enable all-multicast if @c TRUE, otherwise disable it");
     TEST_GET_BOOL_PARAM(is_all_mcast_mode);
 
     TEST_STEP("Initialize EAL, preparing of @p ethdev_state Ethernet device state");

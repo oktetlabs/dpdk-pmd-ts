@@ -12,14 +12,6 @@
  * @objective Setup Rx queue when device is started, perform the check
  *            using flow API
  *
- * @param isolated                  Isolated mode toggle
- * @param flow_rule_pattern         Flow rule
- * @param nb_rxq                    Rx queue count
- * @param rxq_runtime_setup_ids     Indices of queues that will be setup and
- *                                  started at run time
- * @param deferred_start            Should the queues that setup at run time
- *                                  be marked as deferred
- *
  * @type use case
  *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
@@ -93,15 +85,22 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(isolated, "Whether to enable flow isolated mode");
     TEST_GET_BOOL_PARAM(isolated);
+    TEST_PARAM_DOC(deferred_start,
+        "Whether the queues that are set up at run time should be marked as deferred");
     TEST_GET_BOOL_PARAM(deferred_start);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(tst_alien_mac);
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
     TEST_GET_ADDR_NO_PORT(alien_addr);
+    TEST_PARAM_DOC(nb_rxq, "Rx queue count");
     TEST_GET_UINT_PARAM(nb_rxq);
+    TEST_PARAM_DOC(rxq_runtime_setup_ids,
+        "Indices of queues that will be set up and started at run time");
     TEST_GET_INT_LIST_PARAM(rxq_runtime_setup_ids, nb_rxq_runtime_setup);
 
     /* Prepare test parameters */

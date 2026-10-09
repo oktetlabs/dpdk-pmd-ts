@@ -13,11 +13,6 @@
  * @objective Set new status of the Ethernet link flow control for
  *            Ethernet device
  *
- * @param ethdev_state      The state of Ethernet device
- * @param fc_mode           The Flow Control mode of Ethernet device
- * @param fc_conf_elem      The Flow Control configuration element of
- *                          Ethernet device to iterate
- *
  * @type use case
  *
  * @author Daniil Byshenko <daniil.byshenko@oktetlabs.ru>
@@ -230,13 +225,32 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
+    TEST_PARAM_DOC(mode,
+        "The Flow Control mode to set:",
+        "- `NONE`: flow control disabled",
+        "- `RX_PAUSE`: Rx pause frames enabled",
+        "- `TX_PAUSE`: Tx pause frames enabled",
+        "- `FULL`: flow control enabled in both directions");
     TEST_GET_TARPC_RTE_ETH_FC_MODE_TYPE_PARAM(mode);
+    TEST_PARAM_DOC(high_water,
+        "High water mark of Rx flow control, or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(high_water);
+    TEST_PARAM_DOC(low_water,
+        "Low water mark of Rx flow control, or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(low_water);
+    TEST_PARAM_DOC(pause_time,
+        "Pause frame transmit time, or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(pause_time);
+    TEST_PARAM_DOC(send_xon,
+        "Whether to send XON frames (@c 0 or @c 1), or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(send_xon);
+    TEST_PARAM_DOC(autoneg,
+        "Flow control autonegotiation (@c 0 or @c 1), or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(autoneg);
+    TEST_PARAM_DOC(mac_ctrl_frame_fwd,
+        "Forwarding of MAC control frames (@c 0 or @c 1), or @c -1 to leave the element unchanged");
     TEST_GET_INT64_PARAM(mac_ctrl_frame_fwd);
 
     TEST_CHECK_UINT64_IS_IN_UNDEF_UINT32_RANGE(high_water);

@@ -13,13 +13,6 @@
  *
  * @type use case
  *
- * @param nb_txq                        Tx queue count
- * @param tmpl                          Traffic template
- * @param txq_runtime_setup_ids         Indices of queues that will be setup
- *                                      and started at run time
- * @param txq_deferred_start_ids        Indices of queues that will be started
- *                                      at run time
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * Make sure that it is possible to setup a Tx queue when the Ethernet device
@@ -75,9 +68,15 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_txq, "Tx queue count");
     TEST_GET_UINT_PARAM(nb_txq);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(txq_runtime_setup_ids,
+        "Indices of queues that will be set up and started at run time");
     TEST_GET_INT_LIST_PARAM(txq_runtime_setup_ids, nb_txq_runtime_setup);
+    TEST_PARAM_DOC(txq_deferred_start_ids,
+        "Indices of queues that will be started at run time");
     TEST_GET_INT_LIST_PARAM(txq_deferred_start_ids, nb_txq_deferred_start);
 
     TEST_STEP("Check runtime Tx queue setup capability");

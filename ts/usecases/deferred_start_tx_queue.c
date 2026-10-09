@@ -11,9 +11,6 @@
  *
  * @objective Deferred start TX queue and checking that it works properly
  *
- * @param tmpl         Traffic template
- * @param n_rxq        The number of TX queues
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -62,7 +59,9 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(n_txq, "The number of Tx queues");
     TEST_GET_UINT_PARAM(n_txq);
 
     TEST_STEP("Check maximum number of Tx queues");

@@ -12,9 +12,6 @@
  * @objective Test checks that ethdev writes right rss hash info
  *            to the packet
  *
- * @param enable_offload Toggle for RSS hash offload
- * @param nb_rx_queues     The number of RX queues
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -60,8 +57,11 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(nb_rx_queues, "The number of Rx queues");
     TEST_GET_INT_PARAM(nb_rx_queues);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(enable_offload, "Whether to enable RSS hash offload");
     TEST_GET_BOOL_PARAM(enable_offload);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);

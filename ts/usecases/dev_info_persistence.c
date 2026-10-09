@@ -13,8 +13,6 @@
  * @objective The test gets dev_info in initialized state and
  *            then check that it remains the same in all other states
  *
- * @param ethdev_state     The state of Ethernet device
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -41,6 +39,7 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(init_ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(init_ethdev_state);
 
 

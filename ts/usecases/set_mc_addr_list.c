@@ -12,10 +12,6 @@
  * @objective Set the list of multicast addresses to filter on
  *            @p iut_port port
  *
- * @param tmpl              Traffic template
- * @param add_mc_addr_list  List of multicast MAC addresses to add
- *                          (format: comma-separated list of MACs)
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -90,9 +86,15 @@ main(int argc, char *argv[])
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(mc_addr_list,
+        "List of multicast MAC addresses to add (format: comma-separated list of MACs)");
     TEST_GET_OCTET_STRING_LIST_PARAM(mc_addr_list, nb_mc_addr, ETHER_ADDR_LEN);
+    TEST_PARAM_DOC(mismatch_addr_list,
+        "List of multicast MAC addresses which are not added and must not be received (format: comma-separated list of MACs)");
     TEST_GET_OCTET_STRING_LIST_PARAM(mismatch_addr_list, nb_mismatch_addr,
                                      ETHER_ADDR_LEN);
 

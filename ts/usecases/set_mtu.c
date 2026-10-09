@@ -11,10 +11,6 @@
  *
  * @objective Set MTU of IUT
  *
- * @param mtu            MTU on IUT
- * @param excess_mtu     The excess of the MTU value
- * @param ethdev_state   The state of Ethernet device
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -55,11 +51,15 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(mtu, "MTU on IUT");
     TEST_GET_INT_PARAM(mtu);
+    TEST_PARAM_DOC(excess_mtu, "The excess of the MTU value");
     TEST_GET_INT_PARAM(excess_mtu);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
 
     TEST_STEP("Initialize EAL, configure @p iut_port to provide 1 Rx queue "

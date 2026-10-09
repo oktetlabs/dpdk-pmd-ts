@@ -11,11 +11,6 @@
  *
  * @objective Transmit packet(s) using @p tmpl from the several TX queues
  *
- * @param tmpl         Traffic template
- * @param payload_len  The payload length
- * @param nb_queues    Number of transmit queues
- * @param nb_pkts      Number of packets for sending from each queue
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -59,13 +54,17 @@ main(int argc, char *argv[])
     unsigned int                        i;
 
     TEST_START;
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_queues, "Number of transmit queues");
     TEST_GET_UINT_PARAM(nb_queues);
+    TEST_PARAM_DOC(nb_pkts, "Number of packets for sending from each queue");
     TEST_GET_UINT_PARAM(nb_pkts);
+    TEST_PARAM_DOC(payload_len, "The payload length");
     TEST_GET_UINT_PARAM(payload_len);
 
     TEST_STEP("Check maximum number of Tx queues");

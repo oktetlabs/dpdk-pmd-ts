@@ -11,11 +11,6 @@
  *
  * @objective Examine xstats values in different device state
  *
- * @param ethdev_state              The state of Ethernet device
- * @param payload_len               Payload length
- * @param template                  Traffic template
- * @param traffic_direction_rx      Traffic direction
- *
  * @type use case
  *
  * @author Ivan Ilchenko <Ivan.Ilchenko@oktetlabs.ru>
@@ -165,9 +160,14 @@ main(int argc, char *argv[])
     int                                 i;
 
     TEST_START;
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
+    TEST_PARAM_DOC(traffic_direction_rx,
+        "Traffic direction: @c TRUE for Rx, @c FALSE for Tx");
     TEST_GET_BOOL_PARAM(traffic_direction_rx);
+    TEST_PARAM_DOC(payload_len, "Payload length");
     TEST_GET_UINT_PARAM(payload_len);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);

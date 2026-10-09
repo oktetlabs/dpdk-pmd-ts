@@ -11,9 +11,6 @@
  *
  * @objective Query Redirection Table of RSS
  *
- * @param nb_rx_queues     The number of RX queues
- * @param ethdev_state     The state of Ethernet device
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -45,7 +42,9 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(nb_rx_queues, "The number of Rx queues");
     TEST_GET_INT_PARAM(nb_rx_queues);
+    TEST_PARAM_DOC(ethdev_state, "The state of Ethernet device");
     TEST_GET_ETHDEV_STATE(ethdev_state);
 
     TEST_STEP("Prepare Ethernet device configuration");

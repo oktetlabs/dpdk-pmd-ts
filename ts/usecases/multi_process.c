@@ -11,9 +11,6 @@
  *
  * @objective Check multi-process support
  *
- * @param rx_tmpl   Traffic template to be sent from Tester and received on IUT
- * @param tx_tmpl   Traffic template to be sent from IUT and received on Tester
- *
  * @type use case
  *
  * @author Andrew Rybchenko <Andrew.Rybchenko@oktetlabs.ru>
@@ -63,7 +60,11 @@ main(int argc, char *argv[])
     TEST_GET_IF(tst_if);
     TEST_GET_ADDR(iut_rpcs, iut_addr);
     TEST_GET_ADDR(tst_rpcs, tst_addr);
+    TEST_PARAM_DOC(rx_tmpl,
+        "Traffic template to be sent from Tester and received on IUT");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(rx_tmpl);
+    TEST_PARAM_DOC(tx_tmpl,
+        "Traffic template to be sent from IUT and received on Tester");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tx_tmpl);
 
     TEST_STEP("Start the Ethernet device");

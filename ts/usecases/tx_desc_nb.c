@@ -11,9 +11,6 @@
  *
  * @objective Given some descriptor count, verify queue setup and packet transmit
  *
- * @param template      Traffic template
- * @param nb_txd        Tx descriptors number
- *
  * @type use case
  *
  * @author Ivan Ilchenko <Ivan.Ilchenko@oktetlabs.ru>
@@ -63,11 +60,13 @@ main(int argc, char *argv[])
     int64_t                             tst_ring_sz;
 
     TEST_START;
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_txd, "Tx descriptors number");
     TEST_GET_UINT_PARAM(nb_txd);
     init_nb_txd = nb_txd;
 

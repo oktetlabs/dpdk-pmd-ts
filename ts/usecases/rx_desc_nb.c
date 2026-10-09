@@ -11,9 +11,6 @@
  *
  * @objective Given some descriptor count, verify queue setup and packet reception
  *
- * @param template      Traffic template
- * @param nb_rxd        Rx descriptors number
- *
  * @type use case
  *
  * @author Ivan Ilchenko <Ivan.Ilchenko@oktetlabs.ru>
@@ -62,9 +59,11 @@ main(int argc, char *argv[])
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(nb_rxd, "Rx descriptors number");
     TEST_GET_UINT_PARAM(nb_rxd);
     if (nb_rxd > TEST_MAX_NB_RXD)
         TEST_VERDICT("%u exceeded test maximum Rx descriptors %d", nb_rxd,

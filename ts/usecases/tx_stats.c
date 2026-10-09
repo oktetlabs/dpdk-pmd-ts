@@ -11,10 +11,6 @@
  *
  * @objective Check the correctness of Tx statistics
  *
- * @param tmpl          Traffic template
- * @param nb_pkts       The number of packets
- * @param payload_len   Payload length
- *
  * @type use case
  *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
@@ -77,8 +73,11 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_rpcs);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(nb_pkts, "The number of packets");
     TEST_GET_UINT_PARAM(nb_pkts);
+    TEST_PARAM_DOC(payload_len, "Payload length");
     TEST_GET_UINT_PARAM(payload_len);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);

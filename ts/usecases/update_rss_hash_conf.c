@@ -11,10 +11,6 @@
  *
  * @objective Update the RSS hash configuration
  *
- * @param tmpl              The template of packet
- * @param nb_rx_queues      The number of RX queues
- * @param rss_hash_protos   Bitmask of RSS hash protocols
- *
  * @type use case
  *
  * @author Denis Pryazhennikov <Denis.Pryazhennikov@oktetlabs.ru>
@@ -75,8 +71,11 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_ADDR(iut_rpcs, tst_addr);
     TEST_GET_ADDR(tst_rpcs, iut_addr);
+    TEST_PARAM_DOC(nb_rx_queues, "The number of Rx queues");
     TEST_GET_UINT_PARAM(nb_rx_queues);
+    TEST_PARAM_DOC(tmpl, "The template of packet");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(rss_hash_protos, "Bitmask of RSS hash protocols");
     TEST_GET_RSS_HASH_PROTOS(rss_hash_protos);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);

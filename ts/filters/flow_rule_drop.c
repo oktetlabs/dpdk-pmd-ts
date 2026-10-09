@@ -11,16 +11,6 @@
  *
  * @objective Make sure that RTE flow API DROP action is carried out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param transfer              Set transfer attribute to flow rule if @c TRUE
- * @param count                 Count dropped packets if @c TRUE
- * @param promisc               Test with promiscuous mode enabled if @c TRUE
- * @param ingress               Test flow rule ingress if @c TRUE, egress if
- *                              @c FALSE
- * @param isolated              Test with isolated flow mode if @c TRUE
- * @param is_ip6_inner_frame    Create test packets with IPv6 inner PDU if
- *                              @c TRUE, IPv4 if @c FALSE
- *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -86,6 +76,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);
@@ -93,11 +84,19 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
     TEST_GET_LINK_ADDR(mcast_addr);
+    TEST_PARAM_DOC(count, "Count dropped packets if @c TRUE");
     TEST_GET_BOOL_PARAM(count);
+    TEST_PARAM_DOC(transfer, "Set transfer attribute to flow rule if @c TRUE");
     TEST_GET_BOOL_PARAM(transfer);
+    TEST_PARAM_DOC(promisc, "Test with promiscuous mode enabled if @c TRUE");
     TEST_GET_BOOL_PARAM(promisc);
+    TEST_PARAM_DOC(ingress,
+        "Test flow rule ingress if @c TRUE, egress if @c FALSE");
     TEST_GET_BOOL_PARAM(ingress);
+    TEST_PARAM_DOC(isolated, "Test with isolated flow mode if @c TRUE");
     TEST_GET_BOOL_PARAM(isolated);
+    TEST_PARAM_DOC(is_ip6_inner_frame,
+        "Create test packets with IPv6 inner PDU if @c TRUE, IPv4 if @c FALSE");
     TEST_GET_BOOL_PARAM(is_ip6_inner_frame);
 
     TEST_STEP("Initialize EAL");

@@ -11,8 +11,6 @@
  *
  * @objective Make sure that RTE flow API action engine can reflect Rx traffic
  *
- * @param flow_rule_pattern Flow rule pattern
- *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -58,6 +56,7 @@ main(int argc, char *argv[])
 
     TEST_START;
 
+    TEST_PARAM_DOC(flow_pattern_ndn, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_pattern_ndn);
     TEST_GET_HOST(tst_host);
     TEST_GET_PCO(iut_rpcs);

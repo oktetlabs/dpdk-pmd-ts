@@ -11,18 +11,6 @@
  *
  * @objective Check that flow API VLAN tag push action is carried out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param ingress               Test flow rule ingress if @c TRUE, egress if
- *                              @c FALSE
- * @param ethertype_first       Ethertype of the first VLAN tag to be pushed
- * @param ethertype_second      Ethertype of the second VLAN tag to be pushed,
- *                              @c 0 means do not push the second VLAN tag
- * @param vlan_id_first         VLAN ID of the first VLAN tag to be pushed,
- *                              negative value means not specified
- * @param vlan_id_second        VLAN ID of the second VLAN tag to be pushed,
- *                              negative value means not specified
- * @param count                 Count packets if @c TRUE
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -129,17 +117,29 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
+    TEST_PARAM_DOC(ingress,
+        "Test flow rule ingress if @c TRUE, egress if @c FALSE");
     TEST_GET_BOOL_PARAM(ingress);
+    TEST_PARAM_DOC(count, "Count packets if @c TRUE");
     TEST_GET_BOOL_PARAM(count);
+    TEST_PARAM_DOC(ethertype_first,
+        "Ethertype of the first VLAN tag to be pushed");
     test_vlan_push.ethertype[0] = TEST_UINT_PARAM(ethertype_first);
+    TEST_PARAM_DOC(ethertype_second,
+        "Ethertype of the second VLAN tag to be pushed, @c 0 means do not push the second VLAN tag");
     test_vlan_push.ethertype[1] = TEST_UINT_PARAM(ethertype_second);
+    TEST_PARAM_DOC(vlan_id_first,
+        "VLAN ID of the first VLAN tag to be pushed, negative value means not specified");
     test_vlan_push.vlan_id[0] = TEST_INT_PARAM(vlan_id_first);
+    TEST_PARAM_DOC(vlan_id_second,
+        "VLAN ID of the second VLAN tag to be pushed, negative value means not specified");
     test_vlan_push.vlan_id[1] = TEST_INT_PARAM(vlan_id_second);
     test_vlan_push.n_tags = (test_vlan_push.ethertype[1] != 0) ? 2 : 1;
 

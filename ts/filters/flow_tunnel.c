@@ -11,11 +11,6 @@
  *
  * @objective Verify basic tunnel offload operability
  *
- * @param  tunnel_rule_ptrn_ndn  TUNNEL rule match pattern
- * @param  switch_rule_ptrn_ndn  SWITCH rule match pattern
- * @param  tunnel_rule_do_count  Add action COUNT to the TUNNEL rule
- * @param  switch_rule_do_count  Add action COUNT to the SWITCH rule
- *
  * @note  @b LIMITATIONS:
  *        - @p switch_rule_ptrn_ndn must include all of @p tunnel_rule_ptrn_ndn
  *        - Only VXLAN is supported for now: use appropriate patterns
@@ -119,9 +114,15 @@ main(int argc, char *argv[])
 
     TEST_START;
 
+    TEST_PARAM_DOC(switch_rule_ptrn_ndn, "SWITCH rule match pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(switch_rule_ptrn_ndn);
+    TEST_PARAM_DOC(tunnel_rule_ptrn_ndn, "TUNNEL rule match pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(tunnel_rule_ptrn_ndn);
+    TEST_PARAM_DOC(switch_rule_do_count,
+        "Add action COUNT to the SWITCH rule");
     TEST_GET_BOOL_PARAM(switch_rule_do_count);
+    TEST_PARAM_DOC(tunnel_rule_do_count,
+        "Add action COUNT to the TUNNEL rule");
     TEST_GET_BOOL_PARAM(tunnel_rule_do_count);
 
     TEST_GET_HOST(tst_host);

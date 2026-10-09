@@ -11,15 +11,6 @@
  *
  * @objective Test multiple count actions in a flow rule
  *
- * @param ingress               Test flow rule ingress if @c TRUE, egress if
- *                              @c FALSE
- * @param promisc               Test with promiscuous mode enabled if @c TRUE
- * @param isolated              Test with isolated flow mode if @c TRUE
- * @param transfer              Set transfer attribute to flow rule if @c TRUE
- * @param flow_rule_pattern     Flow rule pattern
- * @param counter_ids           List of IDs of counters to create for the flow
- *                              rule
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * Test flow rule with multiple count actions.
@@ -104,16 +95,24 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
+    TEST_PARAM_DOC(transfer, "Set transfer attribute to flow rule if @c TRUE");
     TEST_GET_BOOL_PARAM(transfer);
+    TEST_PARAM_DOC(promisc, "Test with promiscuous mode enabled if @c TRUE");
     TEST_GET_BOOL_PARAM(promisc);
+    TEST_PARAM_DOC(ingress,
+        "Test flow rule ingress if @c TRUE, egress if @c FALSE");
     TEST_GET_BOOL_PARAM(ingress);
+    TEST_PARAM_DOC(isolated, "Test with isolated flow mode if @c TRUE");
     TEST_GET_BOOL_PARAM(isolated);
+    TEST_PARAM_DOC(counter_ids,
+        "List of IDs of counters to create for the flow rule");
     TEST_GET_INT_LIST_PARAM(counter_ids, n_counter_ids);
 
     count_actions = tapi_calloc(n_counter_ids, sizeof(*count_actions));

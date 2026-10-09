@@ -11,11 +11,6 @@
  *
  * @objective Check that flow API encap action on egress is carried out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param encap_header          Header of encapsulated packet
- * @param tunnel_type           Type of tunnel
- * @param count                 Count encapsulated packets if @c TRUE
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -94,13 +89,17 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
+    TEST_PARAM_DOC(encap_header, "Header of encapsulated packet");
     TEST_GET_NDN_RTE_FLOW_PATTERN(encap_header);
+    TEST_PARAM_DOC(tunnel_type, "Type of tunnel");
     TEST_GET_TUNNEL_TYPE(tunnel_type);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
+    TEST_PARAM_DOC(count, "Count encapsulated packets if @c TRUE");
     TEST_GET_BOOL_PARAM(count);
 
     TEST_STEP("Initialize, configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");

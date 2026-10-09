@@ -11,10 +11,6 @@
  *
  * @objective Make sure that RTE flow API RSS action is carried out correctly
  *
- * @param flow_rule_rss A flow rule featuring RSS action
- * @param isolated      Isolated mode toggle
- * @param promiscuous   Promiscuous mode toggle
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -80,8 +76,11 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_rss, "A flow rule featuring RSS action");
     TEST_GET_NDN_RTE_FLOW_RULE(flow_rule_rss);
+    TEST_PARAM_DOC(isolated, "Isolated mode toggle");
     TEST_GET_BOOL_PARAM(isolated);
+    TEST_PARAM_DOC(promiscuous, "Promiscuous mode toggle");
     TEST_GET_BOOL_PARAM(promiscuous);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);

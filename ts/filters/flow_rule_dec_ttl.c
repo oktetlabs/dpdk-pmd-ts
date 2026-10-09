@@ -11,10 +11,6 @@
  *
  * @objective Check that flow API DEC_TTL action is executed correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param transfer              Set transfer attribute to flow rule if @c TRUE
- * @param ttl                   Basic TTL value
- *
  * @author Pavel Martynov <Pavel.Martynov@arknetworks.am>
  *
  * @par Scenario:
@@ -77,6 +73,7 @@ main(int argc, char *argv[])
 
     TEST_START;
 
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_HOST(tst_host);
     TEST_GET_PCO(iut_rpcs);
@@ -87,7 +84,9 @@ main(int argc, char *argv[])
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
+    TEST_PARAM_DOC(transfer, "Set transfer attribute to flow rule if @c TRUE");
     TEST_GET_BOOL_PARAM(transfer);
+    TEST_PARAM_DOC(ttl, "Basic TTL value");
     TEST_GET_INT_PARAM(ttl);
 
     TEST_STEP("Initialize, configure, setup Rx/Tx queues, start the Ethernet device and wait for link up");

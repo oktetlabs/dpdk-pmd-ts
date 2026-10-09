@@ -12,10 +12,6 @@
  * @objective Verify Flow API by adding a filter and inspecting
  *            the inbound traffic
  *
- * @param flow_rule_in2q    Flow rule
- * @param isolated          Isolated mode toggle
- * @param promisc           Test with promiscuous mode enabled if @c TRUE
- *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -93,9 +89,14 @@ main(int argc, char *argv[])
     TEST_GET_PCO(tst_rpcs);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(isolated, "Isolated mode toggle");
     TEST_GET_BOOL_PARAM(isolated);
+    TEST_PARAM_DOC(promisc, "Test with promiscuous mode enabled if @c TRUE");
     TEST_GET_BOOL_PARAM(promisc);
+    TEST_PARAM_DOC(is_ip6_inner_frame,
+        "Create test packets with IPv6 inner PDU if @c TRUE, IPv4 if @c FALSE");
     TEST_GET_BOOL_PARAM(is_ip6_inner_frame);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);

@@ -12,9 +12,6 @@
  * @objective Make sure that RTE flow API VLAN ID matching
  *            is carried out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern that must have VLAN ID match
- * @param promisc               Test with promiscuous mode enabled if @c TRUE
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -125,12 +122,15 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern,
+        "Flow rule pattern that must have VLAN ID match");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_lladdr);
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
     TEST_GET_ADDR_NO_PORT(alien_addr);
+    TEST_PARAM_DOC(promisc, "Test with promiscuous mode enabled if @c TRUE");
     TEST_GET_BOOL_PARAM(promisc);
 
 

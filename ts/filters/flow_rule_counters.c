@@ -12,11 +12,6 @@
  * @objective Make sure that RTE flow API COUNT actions are
  *            carried out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param n_counters            Number of counters
- * @param field_path            ASN.1 path to a field in the pattern
- *                              to change to make additional patterns
- *
  * @author Igor Romanov <Igor.Romanov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -94,6 +89,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);
@@ -101,7 +97,10 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
     TEST_GET_ADDR_NO_PORT(alien_addr);
+    TEST_PARAM_DOC(n_counters, "Number of counters");
     TEST_GET_UINT_PARAM(n_counters);
+    TEST_PARAM_DOC(field_path,
+        "ASN.1 path to a field in the pattern to change to make additional patterns");
     TEST_GET_STRING_PARAM(field_path);
 
     flow_rule_patterns[0] = flow_rule_pattern;

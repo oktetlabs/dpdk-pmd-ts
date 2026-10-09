@@ -12,10 +12,6 @@
  * @objective Make sure that RTE flow API MARK and FLAG actions are carried
  *            out correctly
  *
- * @param flow_rule_pattern     Flow rule pattern
- * @param flow_rule_actions     Flow rule actions
- * @param mark_value            MARK id value
- *
  * @author Roman Zhukov <Roman.Zhukov@oktetlabs.ru>
  *
  * @par Scenario:
@@ -83,7 +79,9 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(flow_rule_pattern, "Flow rule pattern");
     TEST_GET_NDN_RTE_FLOW_PATTERN(flow_rule_pattern);
+    TEST_PARAM_DOC(flow_rule_actions, "Flow rule actions");
     TEST_GET_NDN_RTE_FLOW_ACTIONS(flow_rule_actions);
     TEST_GET_LINK_ADDR(iut_alien_mac);
     TEST_GET_LINK_ADDR(tst_alien_mac);
@@ -91,6 +89,7 @@ main(int argc, char *argv[])
     TEST_GET_ADDR_NO_PORT(iut_addr);
     TEST_GET_ADDR_NO_PORT(tst_addr);
     TEST_GET_ADDR_NO_PORT(alien_addr);
+    TEST_PARAM_DOC(mark_value, "MARK id value");
     TEST_GET_UINT_PARAM(mark_value);
 
     TEST_STEP("Initialize the Ethernet device to get its capabilities");

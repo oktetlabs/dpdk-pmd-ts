@@ -10,7 +10,6 @@
  *
  * @objective Test dpdk-testpmd performance in rxonly mode
  *
- * @param flow_control    Whether to use flow control
  *
  * @type performance
  *
@@ -76,10 +75,17 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_PCO(tst_jobs_ctrl);
+    TEST_PARAM_DOC(generator_mode,
+        "Forwarding mode of testpmd generating traffic on TST");
     TEST_GET_STRING_PARAM(generator_mode);
+    TEST_PARAM_DOC(testpmd_arg_rxq,
+        "Number of Rx queues per port on IUT (testpmd option `--rxq`); the number of Tx queues is set equal to it");
     TEST_GET_UINT_PARAM(testpmd_arg_rxq);
+    TEST_PARAM_DOC(n_rx_cores, "Number of CPU cores for testpmd on IUT");
     TEST_GET_UINT_PARAM(n_rx_cores);
+    TEST_PARAM_DOC(packet_size, "Size of packets generated on TST");
     TEST_GET_UINT_PARAM(packet_size);
+    TEST_PARAM_DOC(flow_control, "Whether to use flow control");
     TEST_GET_BOOL_PARAM(flow_control);
     txpkts = TEST_STRING_PARAM(packet_size);
 
@@ -188,6 +194,16 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Create testpmd job to run rxonly on IUT");
+    TEST_PARAM_DOC(testpmd_arg_forward_mode,
+        "Forwarding mode of testpmd on IUT (testpmd option `--forward-mode`)");
+    TEST_PARAM_DOC(testpmd_arg_stats_period,
+        "Period in seconds of testpmd statistics display (testpmd option `--stats-period`)");
+    TEST_PARAM_DOC(testpmd_arg_no_lsc_interrupt,
+        "Whether to disable link status change interrupt (testpmd option `--no-lsc-interrupt`)");
+    TEST_PARAM_DOC(testpmd_arg_burst,
+        "Number of packets per burst (testpmd option `--burst`)");
+    TEST_PARAM_DOC(testpmd_arg_rxfreet,
+        "Free threshold of Rx rings, @c 0 means driver default (testpmd option `--rxfreet`)");
     CHECK_RC(tapi_dpdk_create_testpmd_job(iut_jobs_ctrl, &env, n_rx_cores,
                                           &prop, &test_params,
                                           &iut_testpmd_job));

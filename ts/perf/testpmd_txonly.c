@@ -10,7 +10,6 @@
  *
  * @objective Test dpdk-testpmd performance in Tx only mode
  *
- * @param flow_control    Whether to use flow control
  *
  * @type performance
  *
@@ -80,11 +79,19 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_PCO(tst_jobs_ctrl);
+    TEST_PARAM_DOC(testpmd_command_txpkts,
+        "Comma-separated list of segment lengths of transmitted packets, set by testpmd command `set txpkts`");
     TEST_GET_INT_LIST_PARAM(testpmd_command_txpkts, txpkts_len);
 
+    TEST_PARAM_DOC(n_fwd_cores, "Number of CPU cores for testpmd on IUT");
     n_fwd_cores = TEST_UINT_PARAM(n_fwd_cores);
+    TEST_PARAM_DOC(testpmd_arg_txq,
+        "Number of Tx queues per port on IUT (testpmd option `--txq`); the number of Rx queues is set equal to it");
     TEST_GET_UINT_PARAM(testpmd_arg_txq);
+    TEST_PARAM_DOC(testpmd_arg_txonly_tso_mss,
+        "TSO MSS of packets transmitted in txonly mode (testpmd option `--txonly-tso-mss`); if specified, TSO Tx offload is enabled");
     tso_requested = TEST_HAS_PARAM(testpmd_arg_txonly_tso_mss);
+    TEST_PARAM_DOC(flow_control, "Whether to use flow control");
     TEST_GET_BOOL_PARAM(flow_control);
 
     for (idx = 0; idx < TE_ARRAY_LEN(iut_ifs); ++idx, ++n_ports)
@@ -241,6 +248,18 @@ main(int argc, char *argv[])
                           "port config all rss ipv4-tcp\n");
     }
 
+    TEST_PARAM_DOC(testpmd_arg_forward_mode,
+        "Forwarding mode of testpmd on IUT (testpmd option `--forward-mode`)");
+    TEST_PARAM_DOC(testpmd_arg_stats_period,
+        "Period in seconds of testpmd statistics display (testpmd option `--stats-period`)");
+    TEST_PARAM_DOC(testpmd_arg_no_lsc_interrupt,
+        "Whether to disable link status change interrupt (testpmd option `--no-lsc-interrupt`)");
+    TEST_PARAM_DOC(testpmd_arg_txd,
+        "Number of Tx ring descriptors (testpmd option `--txd`)");
+    TEST_PARAM_DOC(testpmd_arg_burst,
+        "Number of packets per burst (testpmd option `--burst`)");
+    TEST_PARAM_DOC(testpmd_arg_txfreet,
+        "Free threshold of Tx rings, @c 0 means driver default (testpmd option `--txfreet`)");
     CHECK_RC(tapi_dpdk_create_testpmd_job(iut_jobs_ctrl, &env, n_fwd_cores,
                                           &prop, &test_params, &testpmd_job));
 

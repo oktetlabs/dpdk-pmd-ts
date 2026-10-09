@@ -57,8 +57,13 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_IF(iut_port);
+    TEST_PARAM_DOC(testpmd_command_txpkts,
+        "Comma-separated list of segment lengths of transmitted packets, set by testpmd command `set txpkts`");
     TEST_GET_INT_LIST_PARAM(testpmd_command_txpkts, txpkts_len);
+    TEST_PARAM_DOC(n_fwd_cores, "Number of CPU cores for testpmd on IUT");
     n_fwd_cores = TEST_UINT_PARAM(n_fwd_cores);
+    TEST_PARAM_DOC(testpmd_command_loopback_mode,
+        "Driver-specific loopback mode, set by testpmd command `port config all loopback`; the iteration is skipped if IUT does not support it");
     loopback_mode = TEST_INT_PARAM(testpmd_command_loopback_mode);
 
     rc = cfg_find_fmt(NULL, "/local:/dpdk:/iut_loopback_mode:%d",
@@ -86,6 +91,22 @@ main(int argc, char *argv[])
     }
 
     TEST_STEP("Create testpmd job");
+    TEST_PARAM_DOC(testpmd_arg_forward_mode,
+        "Forwarding mode of testpmd on IUT (testpmd option `--forward-mode`)");
+    TEST_PARAM_DOC(testpmd_arg_tx_first,
+        "Whether to start forwarding by sending a burst of packets first (testpmd option `--tx-first`)");
+    TEST_PARAM_DOC(testpmd_arg_stats_period,
+        "Period in seconds of testpmd statistics display (testpmd option `--stats-period`)");
+    TEST_PARAM_DOC(testpmd_arg_no_lsc_interrupt,
+        "Whether to disable link status change interrupt (testpmd option `--no-lsc-interrupt`)");
+    TEST_PARAM_DOC(testpmd_arg_txd,
+        "Number of Tx ring descriptors (testpmd option `--txd`)");
+    TEST_PARAM_DOC(testpmd_arg_burst,
+        "Number of packets per burst (testpmd option `--burst`)");
+    TEST_PARAM_DOC(testpmd_arg_rxfreet,
+        "Free threshold of Rx rings, @c 0 means driver default (testpmd option `--rxfreet`)");
+    TEST_PARAM_DOC(testpmd_arg_txfreet,
+        "Free threshold of Tx rings, @c 0 means driver default (testpmd option `--txfreet`)");
     CHECK_RC(tapi_dpdk_create_testpmd_job(iut_jobs_ctrl, &env, n_fwd_cores,
                                           &prop, &test_params, &testpmd_job));
 

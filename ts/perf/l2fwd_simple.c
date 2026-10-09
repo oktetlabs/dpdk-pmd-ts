@@ -58,11 +58,21 @@ main(int argc, char *argv[])
     TEST_START;
     TEST_GET_PCO(iut_jobs_ctrl);
     TEST_GET_PCO(tst_jobs_ctrl);
+    TEST_PARAM_DOC(generator_mode,
+        "Forwarding mode of testpmd generating traffic on TST");
     TEST_GET_STRING_PARAM(generator_mode);
+    TEST_PARAM_DOC(testpmd_arg_txd,
+        "Number of Tx ring descriptors of the traffic generator on TST");
     TEST_GET_UINT_PARAM(testpmd_arg_txd);
+    TEST_PARAM_DOC(testpmd_arg_burst,
+        "Number of packets per burst of the traffic generator on TST");
     TEST_GET_UINT_PARAM(testpmd_arg_burst);
+    TEST_PARAM_DOC(testpmd_arg_txfreet,
+        "Free threshold of Tx rings of the traffic generator on TST");
     TEST_GET_UINT_PARAM(testpmd_arg_txfreet);
+    TEST_PARAM_DOC(n_l2fwd_fwd_cores, "Number of CPU cores for l2fwd on IUT");
     TEST_GET_UINT_PARAM(n_l2fwd_fwd_cores);
+    TEST_PARAM_DOC(packet_size, "Size of packets generated on TST");
     TEST_GET_UINT_PARAM(packet_size);
     txpkts = TEST_STRING_PARAM(packet_size);
 

@@ -11,10 +11,6 @@
  *
  * @objective Make sure that VLAN offloads on a TxQ have no impact on the others
  *
- * @param template              Traffic template
- * @param burst_size_per_txq    The number of packets to pass on each TxQ
- * @param nb_tx_queues          The number of Tx queues
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -185,8 +181,12 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
+    TEST_PARAM_DOC(burst_size_per_txq,
+        "The number of packets to pass on each TxQ");
     TEST_GET_UINT_PARAM(burst_size_per_txq);
+    TEST_PARAM_DOC(nb_tx_queues, "The number of Tx queues");
     TEST_GET_UINT_PARAM(nb_tx_queues);
 
     TEST_STEP("Initialize the Ethernet device and check maximum number of Tx queues");

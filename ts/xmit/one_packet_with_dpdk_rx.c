@@ -11,16 +11,6 @@
  *
  * @objective Evaluate transmit operation correctness by sending one packet
  *
- * @param tmpl               Traffic template
- * @param pld_size           Payload size
- * @param vlan               VLAN offload: VLAN ID (ON) or @c -1 (OFF)
- * @param outer_ip_cksum     Outer IP checksum offload toggle
- * @param outer_udp_cksum    Outer UDP checksum offload toggle
- * @param innermost_ip_cksum Innermost IP checksum offload toggle
- * @param innermost_l4_cksum Innermost L4 checksum offload toggle
- * @param tso                TSO: segment size (ON) or @c 0 (OFF)
- * @param segmentation       Mbuf segmentation pattern or an empty line
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -98,14 +88,23 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(segmentation, "Mbuf segmentation pattern or an empty line");
     TEST_GET_MBUF_SEG_PTRN_PARAM(segmentation);
+    TEST_PARAM_DOC(innermost_ip_cksum, "Innermost IP checksum offload toggle");
     TEST_GET_BOOL_PARAM(innermost_ip_cksum);
+    TEST_PARAM_DOC(innermost_l4_cksum, "Innermost L4 checksum offload toggle");
     TEST_GET_BOOL_PARAM(innermost_l4_cksum);
+    TEST_PARAM_DOC(outer_udp_cksum, "Outer UDP checksum offload toggle");
     TEST_GET_BOOL_PARAM(outer_udp_cksum);
+    TEST_PARAM_DOC(outer_ip_cksum, "Outer IP checksum offload toggle");
     TEST_GET_BOOL_PARAM(outer_ip_cksum);
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(pld_size, "Payload size");
     TEST_GET_UINT_PARAM(pld_size);
+    TEST_PARAM_DOC(vlan, "VLAN offload: VLAN ID (ON) or @c -1 (OFF)");
     TEST_GET_VLAN_ID_PARAM(vlan);
+    TEST_PARAM_DOC(tso, "TSO: segment size (ON) or @c 0 (OFF)");
     TEST_GET_UINT_PARAM(tso);
 
     TEST_STEP("Learn about protocol types from the traffic template");

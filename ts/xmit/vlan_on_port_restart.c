@@ -13,10 +13,6 @@
  *            if a port restart takes place between two packet bursts with the
  *            same VLAN TCI set in the mbufs before and after the port restart
  *
- * @param template              Traffic template
- * @param vlan_id               VLAN ID or @c -1 (disable)
- * @param deferred_txq_start    Use deferred start for the TxQ
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -72,8 +68,11 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
+    TEST_PARAM_DOC(vlan_id, "VLAN ID or @c -1 (disable)");
     TEST_GET_VLAN_ID_PARAM(vlan_id);
+    TEST_PARAM_DOC(deferred_txq_start, "Use deferred start for the TxQ");
     TEST_GET_BOOL_PARAM(deferred_txq_start);
 
     TEST_STEP("Initialize the Ethernet device and obtain the device information");

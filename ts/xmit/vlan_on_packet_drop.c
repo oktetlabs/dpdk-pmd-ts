@@ -11,8 +11,6 @@
  *
  * @objective Check that VLAN offload is not broken by previous packet drop
  *
- * @param tmpl Traffic template
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -81,6 +79,7 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
 
     TEST_STEP("Initialize the Ethernet device to get its capabilities.");

@@ -12,11 +12,6 @@
  * @objective Make sure that VLAN ID alternation performed by means of sending
  *            couples of mbufs with different VLAN IDs is carried out properly
  *
- * @param template              Traffic template
- * @param payload_len           Payload length, bytes
- * @param vlan_id_first         VLAN ID (1st packet) or @c -1 (disable)
- * @param vlan_id_second        VLAN ID (2nd packet) or @c -1 (disable)
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -140,9 +135,13 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
+    TEST_PARAM_DOC(payload_len, "Payload length, bytes");
     TEST_GET_UINT_PARAM(payload_len);
+    TEST_PARAM_DOC(vlan_id_first, "VLAN ID (1st packet) or @c -1 (disable)");
     TEST_GET_VLAN_ID_PARAM(vlan_id_first);
+    TEST_PARAM_DOC(vlan_id_second, "VLAN ID (2nd packet) or @c -1 (disable)");
     TEST_GET_VLAN_ID_PARAM(vlan_id_second);
 
     TEST_STEP("Initialize ethdev and obtain the device information");

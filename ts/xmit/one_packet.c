@@ -11,14 +11,6 @@
  *
  * @objective Make sure that a packet can be sent correctly
  *
- * @param tmpl                   Traffic template
- * @param payload_len            Payload length
- * @param inner_ip_cksum_offload Inner or no-tunnel IP checksum offload toggle
- * @param l4_cksum_offload       L4 checksum offload toggle
- * @param vlan_id                VLAN offload: VLAN ID (ON) or @c -1 (OFF)
- * @param tso_segsz              TSO: segment size > @c 0 (ON) or @c 0 (OFF)
- * @param segmentation           Mbuf segmentation pattern or an empty line
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -224,13 +216,21 @@ main(int argc, char *argv[])
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
 
+    TEST_PARAM_DOC(tmpl, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(tmpl);
+    TEST_PARAM_DOC(payload_len, "Payload length");
     TEST_GET_UINT_PARAM(payload_len);
     outer_ip_cksum_offload = TRUE; /* No dedicated parameter yet. */
+    TEST_PARAM_DOC(inner_ip_cksum_offload,
+        "Inner or no-tunnel IP checksum offload toggle");
     TEST_GET_BOOL_PARAM(inner_ip_cksum_offload);
+    TEST_PARAM_DOC(l4_cksum_offload, "L4 checksum offload toggle");
     TEST_GET_BOOL_PARAM(l4_cksum_offload);
+    TEST_PARAM_DOC(vlan_id, "VLAN offload: VLAN ID (ON) or @c -1 (OFF)");
     TEST_GET_VLAN_ID_PARAM(vlan_id);
+    TEST_PARAM_DOC(tso_segsz, "TSO: segment size > @c 0 (ON) or @c 0 (OFF)");
     TEST_GET_UINT_PARAM(tso_segsz);
+    TEST_PARAM_DOC(segmentation, "Mbuf segmentation pattern or an empty line");
     TEST_GET_MBUF_SEG_PTRN_PARAM(segmentation);
 
     TEST_STEP("Reconcile interdependent test parameters");

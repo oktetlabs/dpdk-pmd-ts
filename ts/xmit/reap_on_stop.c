@@ -12,19 +12,6 @@
  * @objective Make sure that PMD is able to free all remaining mbufs
  *            connected with any of descriptors pending on port stop
  *
- * @param template             Traffic template
- * @param multi_mempool        If @c TRUE, multiple mempools will be
- *                             created for building mbuf chains from
- *                             randomly sized segments pulled out of
- *                             those pools provided that the feature
- *                             is supported by the transmit datapath
- * @param update_refcnt        Pktmbuf reference counter toggle used
- *                             to activate reap operation check with
- *                             respect to packets which shall not be
- *                             released upon a Tx burst or port stop
- * @param ring_size_multiplier An integer multiplier of Tx ring size
- *                             used to compute the number of packets
- *
  * @type conformance
  *
  * @author Ivan Malov <Ivan.Malov@oktetlabs.ru>
@@ -76,9 +63,16 @@ main(int argc, char *argv[])
     TEST_GET_HOST(tst_host);
     TEST_GET_IF(iut_port);
     TEST_GET_IF(tst_if);
+    TEST_PARAM_DOC(template, "Traffic template");
     TEST_GET_NDN_TRAFFIC_TEMPLATE(template);
+    TEST_PARAM_DOC(multi_mempool,
+        "If @c TRUE, multiple mempools will be created for building mbuf chains from randomly sized segments pulled out of those pools provided that the feature is supported by the transmit datapath");
     TEST_GET_BOOL_PARAM(multi_mempool);
+    TEST_PARAM_DOC(update_refcnt,
+        "Pktmbuf reference counter toggle used to activate reap operation check with respect to packets which shall not be released upon a Tx burst or port stop");
     TEST_GET_BOOL_PARAM(update_refcnt);
+    TEST_PARAM_DOC(ring_size_multiplier,
+        "An integer multiplier of Tx ring size used to compute the number of packets");
     TEST_GET_UINT_PARAM(ring_size_multiplier);
 
     template_copy = asn_copy_value(template);

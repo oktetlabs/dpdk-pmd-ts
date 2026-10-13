@@ -1,0 +1,12 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* (c) Copyright 2026 OKTET Labs. All rights reserved. */
+
+/*
+ * The theme drops the bottom margin of the last paragraph in a table
+ * cell but not of a list, which leaves an empty line after parameter
+ * descriptions that end with a list.
+ */
+.rst-content table.docutils td > ul:last-child,
+.rst-content table.docutils td > ol:last-child {
+    margin-bottom: 0;
+}

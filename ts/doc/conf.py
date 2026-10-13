@@ -53,5 +53,8 @@ html_theme_options = {
     'collapse_navigation': False,
 }
 
+html_static_path = ['static']
+html_css_files = ['custom.css']
+
 extensions += ['doxyrest', 'cpplexer']
 

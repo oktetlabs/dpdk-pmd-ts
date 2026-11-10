@@ -604,6 +604,42 @@ test_rte_pktmbuf_rx_pool_create(rcf_rpc_server                *rpcs,
                                         data_room_size, socket_id);
 }
 
+/*
+ * Fill Rx queue configuration with the device info default one,
+ * overriding Rx free threshold if it is configured in
+ * /local:/dpdk:/rx_free_thresh: instance. Absence of the instance or
+ * its zero value disables the override.
+ *
+ * Returns TRUE if the override is applied and the filled configuration
+ * should be used instead of NULL one.
+ */
+static bool
+test_fill_default_rx_conf(struct tarpc_rte_eth_dev_info *dev_info,
+                          struct tarpc_rte_eth_rxconf *rxconf)
+{
+    const char *path = "/local:/dpdk:/rx_free_thresh:";
+    uint16_t    rx_free_thresh;
+    te_errno    rc;
+
+    rc = cfg_get_uint16(&rx_free_thresh, "%s", path);
+    if (rc != 0)
+    {
+        if (TE_RC_GET_ERROR(rc) == TE_ENOENT)
+            rx_free_thresh = 0;
+        else
+            TEST_VERDICT("Failed to get '%s': %r", path, rc);
+    }
+
+    memcpy(rxconf, &dev_info->default_rxconf, sizeof(*rxconf));
+
+    if (rx_free_thresh == 0)
+        return false;
+
+    rxconf->rx_free_thresh = rx_free_thresh;
+
+    return true;
+}
+
 static void
 tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                          struct tarpc_rte_eth_dev_info *dev_info,
@@ -612,6 +648,8 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                          struct tarpc_rte_eth_rxconf **rx_confs,
                          rpc_rte_mempool_p *mp)
 {
+    struct tarpc_rte_eth_rxconf local_rxconf;
+    struct tarpc_rte_eth_rxconf *rx_conf = NULL;
     uint16_t queue;
     uint16_t rx_descs = nb_rx_desc;
     int rc;
@@ -638,12 +676,18 @@ tapi_rte_setup_rx_queues(rcf_rpc_server *rpcs,
                       TEST_RTE_MEMPOOL_DEF_DATA_ROOM,
                   socket_id);
 
+    if (rx_confs == NULL &&
+        test_fill_default_rx_conf(dev_info, &local_rxconf))
+    {
+        rx_conf = &local_rxconf;
+    }
+
     for (queue = 0; queue < nb_rx_queue; queue++)
     {
         RPC_AWAIT_IUT_ERROR(rpcs);
         rc = rpc_rte_eth_rx_queue_setup(rpcs, port_id, queue, rx_descs,
                                         socket_id,
-                                        (rx_confs == NULL) ? NULL :
+                                        (rx_confs == NULL) ? rx_conf :
                                             rx_confs[queue],
                                         *mp);
         if (rc != 0)

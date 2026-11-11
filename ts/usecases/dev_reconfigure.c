@@ -36,6 +36,8 @@ main(int argc, char *argv[])
     const struct if_nameindex              *tst_if    = NULL;
 
     struct test_ethdev_config               test_ethdev_config;
+    struct tarpc_rte_eth_rxconf             rx_conf;
+    struct tarpc_rte_eth_rxconf            *rx_confp = NULL;
     uint16_t                                queue, queue_first, queue_last;
     uint16_t                                nb_rx_queue;
     uint16_t                                nb_tx_queue;
@@ -133,6 +135,9 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_CONFIGURED));
 
+    if (test_fill_default_rx_conf(&test_ethdev_config.dev_info, &rx_conf))
+        rx_confp = &rx_conf;
+
     TEST_STEP("Setup all Rx and Tx queues if @p all_queues_reconf is @c TRUE, "
               "otherwise setup only those queues that were not setup before");
     queue_first = all_queues_reconf ? 0 : nb_rx_queue;
@@ -145,7 +150,7 @@ main(int argc, char *argv[])
                                    test_ethdev_config.dev_info.rx_desc_lim.nb_min,
                                    test_ethdev_config.socket_id,
                                    (test_ethdev_config.rx_confs == NULL) ?
-                                   NULL : test_ethdev_config.rx_confs[queue],
+                                   rx_confp : test_ethdev_config.rx_confs[queue],
                                    test_ethdev_config.mp);
     }
 

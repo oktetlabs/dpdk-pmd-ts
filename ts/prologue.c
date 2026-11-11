@@ -740,6 +740,7 @@ add_dpdk_tags(rcf_rpc_server *rpcs, const struct if_nameindex *port)
     }
 
     fw_version = TE_ALLOC(fw_version_size);
+    RPC_AWAIT_IUT_ERROR(rpcs);
     ret = rpc_rte_eth_dev_fw_version_get(rpcs, port->if_index, fw_version,
                                          fw_version_size);
     if (ret > 0)

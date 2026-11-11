@@ -42,6 +42,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_dev_info           dev_info;
 
     struct tarpc_rte_eth_rxconf             rx_conf;
+    struct tarpc_rte_eth_rxconf            *rx_confp = NULL;
     asn_value                              *flow_rule_pattern = RPC_NULL;
     asn_value                              *flow_rule_pattern_copy = RPC_NULL;
     asn_value                              *tmpl_match;
@@ -153,6 +154,9 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
 
+    if (test_fill_default_rx_conf(&ec.dev_info, &rx_conf))
+        rx_confp = &rx_conf;
+
     TEST_STEP("Setup the queues that are not in @p rxq_runtime_setup_ids");
     for (i = 0; i < nb_rxq; i++)
     {
@@ -160,7 +164,7 @@ main(int argc, char *argv[])
         {
             rpc_rte_eth_rx_queue_setup(ec.rpcs, ec.port_id, i,
                                        ec.dev_info.rx_desc_lim.nb_min,
-                                       ec.socket_id, NULL, ec.mp);
+                                       ec.socket_id, rx_confp, ec.mp);
 
             /*
              * Add the index of the queue to started queues because the queue
@@ -222,7 +226,6 @@ main(int argc, char *argv[])
                                                  &tmpls_mismatch_nb));
 
     TEST_STEP("Repeat following steps for all @p rxq_runtime_setup_ids");
-    memcpy(&rx_conf, &ec.dev_info.default_rxconf, sizeof(rx_conf));
     rx_conf.rx_deferred_start = 1;
 
     i = 0;
@@ -290,7 +293,8 @@ main(int argc, char *argv[])
         rpc_rte_eth_rx_queue_setup(ec.rpcs, ec.port_id, new_queue,
                                    ec.dev_info.rx_desc_lim.nb_min,
                                    ec.socket_id,
-                                   deferred_start ? &rx_conf : NULL, ec.mp);
+                                   deferred_start ? &rx_conf : rx_confp,
+                                   ec.mp);
 
         TEST_STEP("Restart the device to start all Rx queues that were setup previously "
                   "except deferred start queues. Also make sure that the current state "

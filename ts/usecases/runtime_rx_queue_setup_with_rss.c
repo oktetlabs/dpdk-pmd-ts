@@ -125,6 +125,7 @@ main(int argc, char *argv[])
     struct tarpc_rte_eth_dev_info           dev_info;
 
     struct tarpc_rte_eth_rxconf             rx_conf;
+    struct tarpc_rte_eth_rxconf            *rx_confp = NULL;
     const struct tarpc_rte_eth_rss_conf    *rss_conf;
     struct tarpc_rte_eth_rss_reta_entry64  *reta_conf;
     struct tarpc_rte_eth_rss_reta_entry64  *reta_conf_tmp;
@@ -208,6 +209,9 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&ec, TEST_ETHDEV_CONFIGURED));
 
+    if (test_fill_default_rx_conf(&ec.dev_info, &rx_conf))
+        rx_confp = &rx_conf;
+
 
     TEST_STEP("Setup the queues that were not marked for runtime setup");
     for (i = 0; i < nb_rxq; i++)
@@ -216,7 +220,7 @@ main(int argc, char *argv[])
         {
             rpc_rte_eth_rx_queue_setup(ec.rpcs, ec.port_id, i,
                                        ec.dev_info.rx_desc_lim.nb_min,
-                                       ec.socket_id, NULL, ec.mp);
+                                       ec.socket_id, rx_confp, ec.mp);
         }
     }
 
@@ -309,7 +313,6 @@ main(int argc, char *argv[])
     asn_free_value(ptrn_symm);
 
     TEST_STEP("Setup the @p rxq_runtime_setup_idx queue");
-    memcpy(&rx_conf, &ec.dev_info.default_rxconf, sizeof(rx_conf));
     rx_conf.rx_deferred_start = deferred_start ? 1 : 0;
 
     rpc_rte_eth_rx_queue_setup(ec.rpcs, ec.port_id, rxq_runtime_setup_idx,

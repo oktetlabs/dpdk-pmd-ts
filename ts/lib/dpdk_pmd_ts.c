@@ -613,7 +613,7 @@ test_rte_pktmbuf_rx_pool_create(rcf_rpc_server                *rpcs,
  * Returns TRUE if the override is applied and the filled configuration
  * should be used instead of NULL one.
  */
-static bool
+bool
 test_fill_default_rx_conf(struct tarpc_rte_eth_dev_info *dev_info,
                           struct tarpc_rte_eth_rxconf *rxconf)
 {

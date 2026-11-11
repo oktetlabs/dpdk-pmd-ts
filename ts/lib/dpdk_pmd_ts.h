@@ -717,6 +717,23 @@ extern rpc_rte_mempool_p test_rte_pktmbuf_rx_pool_create(
                                 uint16_t                       data_room_size,
                                 int                            socket_id);
 
+/**
+ * Fill Rx queue configuration with the device info default one,
+ * overriding Rx free threshold if it is configured in
+ * /local:/dpdk:/rx_free_thresh: instance. Absence of the instance or
+ * its zero value disables the override.
+ *
+ * @param dev_info     device info with the default Rx conf
+ * @param rxconf       location for the Rx conf to fill
+ *
+ * @return true if the override is applied and the filled conf should
+ *         be used instead of NULL one; false if no override is
+ *         configured (the conf is filled with the default one anyway)
+ */
+extern bool test_fill_default_rx_conf(
+                                struct tarpc_rte_eth_dev_info *dev_info,
+                                struct tarpc_rte_eth_rxconf *rxconf);
+
 /** Wrapper for @b tapi_rpc_rte_eth_make_eth_conf(), with test workarounds */
 extern struct tarpc_rte_eth_conf *test_rpc_rte_eth_make_eth_conf(
                                           rcf_rpc_server             *rpcs,

@@ -48,6 +48,8 @@ main(int argc, char *argv[])
     uint16_t                               packet_headers_size;
 
     struct test_ethdev_config              test_ethdev_config;
+    struct tarpc_rte_eth_rxconf            rx_conf;
+    struct tarpc_rte_eth_rxconf           *rx_confp = NULL;
     uint64_t                               offload;
     char                                  *offload_name;
     struct tarpc_rte_eth_conf              eth_conf;
@@ -145,6 +147,9 @@ main(int argc, char *argv[])
 
     CHECK_RC(test_prepare_ethdev(&test_ethdev_config, TEST_ETHDEV_CONFIGURED));
 
+    if (test_fill_default_rx_conf(&test_ethdev_config.dev_info, &rx_conf))
+        rx_confp = &rx_conf;
+
     TEST_STEP("Set MTU according to @p pre_rxq_setup_mtu");
     rpc_rte_eth_dev_get_mtu(iut_rpcs, iut_port->if_index, &iut_mtu);
 
@@ -180,7 +185,7 @@ main(int argc, char *argv[])
     RPC_AWAIT_IUT_ERROR(test_ethdev_config.rpcs);
     rc = rpc_rte_eth_rx_queue_setup(test_ethdev_config.rpcs,
                                     test_ethdev_config.port_id, 0, nb_rx_desc,
-                                    test_ethdev_config.socket_id, NULL,
+                                    test_ethdev_config.socket_id, rx_confp,
                                     test_ethdev_config.mp);
     if (rx_buf_size < test_ethdev_config.dev_info.min_rx_bufsize)
     {

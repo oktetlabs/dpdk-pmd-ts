@@ -44,6 +44,8 @@ main(int argc, char *argv[])
 
     asn_value                      *template = NULL;
     struct test_ethdev_config       ethdev_config;
+    struct tarpc_rte_eth_rxconf     rx_conf;
+    struct tarpc_rte_eth_rxconf    *rx_confp = NULL;
     rpc_rte_mempool_p               mp;
     unsigned int                    received = 0;
     unsigned int                    nb_rxd;
@@ -87,11 +89,15 @@ main(int argc, char *argv[])
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
     rx_desc_lim = &ethdev_config.dev_info.rx_desc_lim;
 
+    if (test_fill_default_rx_conf(&ethdev_config.dev_info, &rx_conf))
+        rx_confp = &rx_conf;
+
     TEST_STEP("Set up Rx queue with specified number of Rx descriptors");
     limits_violated = test_desc_nb_violates_limits(nb_rxd, rx_desc_lim);
     RPC_AWAIT_ERROR(iut_rpcs);
     rc = rpc_rte_eth_rx_queue_setup(iut_rpcs, iut_port->if_index, TEST_RXQ,
-                                    nb_rxd, ethdev_config.socket_id, NULL, mp);
+                                    nb_rxd, ethdev_config.socket_id, rx_confp,
+                                    mp);
     if (rc != 0)
     {
         if (limits_violated && rc == -TE_RC(TE_RPC, TE_EINVAL))

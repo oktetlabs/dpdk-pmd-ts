@@ -50,6 +50,8 @@ main(int argc, char *argv[])
 
     struct test_ethdev_config              ethdev_config;
     struct tarpc_rte_eth_rxq_info          rx_qinfo;
+    struct tarpc_rte_eth_rxconf            rx_conf_default;
+    struct tarpc_rte_eth_rxconf           *rx_confp = NULL;
     struct tarpc_rte_eth_rxconf            rx_conf;
     unsigned int                           n_rxq;
     unsigned int                           deferred_queue;
@@ -99,13 +101,17 @@ main(int argc, char *argv[])
     TEST_STEP("Configure the Ethernet device");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_CONFIGURED));
 
+    if (test_fill_default_rx_conf(&ethdev_config.dev_info, &rx_conf_default))
+        rx_confp = &rx_conf_default;
+
     deferred_queue = rand() % n_rxq;
-    memcpy(&rx_conf, &ethdev_config.dev_info.default_rxconf, sizeof(rx_conf));
+    memcpy(&rx_conf, &rx_conf_default, sizeof(rx_conf));
     rx_conf.rx_deferred_start = 1;
 
     ethdev_config.rx_confs = tapi_calloc(n_rxq,
                                          sizeof(*ethdev_config.rx_confs));
-    ethdev_config.rx_confs[deferred_queue] = &rx_conf;
+    for (i = 0; i < n_rxq; ++i)
+        ethdev_config.rx_confs[i] = (i == deferred_queue) ? &rx_conf : rx_confp;
 
     TEST_STEP("Setup Rx/Tx queues, start the Ethernet device and wait for link up");
     CHECK_RC(test_prepare_ethdev(&ethdev_config, TEST_ETHDEV_STARTED));

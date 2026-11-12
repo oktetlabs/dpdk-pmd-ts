@@ -7780,7 +7780,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7806,7 +7806,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7832,7 +7832,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7858,7 +7858,7 @@
             <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7926,7 +7926,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7952,7 +7952,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -7978,7 +7978,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8004,7 +8004,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8072,7 +8072,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8098,7 +8098,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8124,7 +8124,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8150,7 +8150,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8218,7 +8218,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8244,7 +8244,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8270,7 +8270,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -8296,7 +8296,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
           <result value="FAILED">
             <verdict>RETA has been filled incorrectly.</verdict>
           </result>
@@ -14094,7 +14094,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -14120,7 +14120,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -14146,7 +14146,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>
@@ -14177,7 +14177,7 @@
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
         </results>
-        <results tags="net_i40e" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
+        <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
           <result value="FAILED">
             <verdict>The RETA was changed after the port restarting</verdict>
           </result>

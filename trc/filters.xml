@@ -1580,8 +1580,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1623,8 +1623,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1666,8 +1666,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1699,8 +1699,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1747,8 +1747,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1790,8 +1790,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1828,8 +1828,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1871,8 +1871,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1909,8 +1909,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -1952,8 +1952,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2006,8 +2006,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2044,8 +2044,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2087,8 +2087,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2125,8 +2125,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2168,8 +2168,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2206,8 +2206,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2246,6 +2246,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-OUTER-VID" notes="net/i40e does not support flow pattern item ETH with outer VID">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2292,6 +2297,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-OUTER-VID" notes="net/i40e does not support flow pattern item ETH with outer VID">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2321,8 +2331,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2349,8 +2359,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2387,8 +2397,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2420,8 +2430,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2458,8 +2468,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2491,8 +2501,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2533,6 +2543,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-IP4" notes="net/i40e does not support flow pattern item ETH with IPv4 EtherType">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2564,6 +2579,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2599,6 +2619,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -2762,8 +2787,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2805,8 +2830,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2854,8 +2879,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -2903,8 +2928,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3012,8 +3037,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3049,6 +3074,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="env"/>
@@ -3083,8 +3113,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3116,8 +3146,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3154,8 +3184,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3187,8 +3217,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3240,8 +3270,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3341,8 +3371,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3437,8 +3467,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3523,8 +3553,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3624,8 +3654,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3735,8 +3765,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="GENEVE" notes="net/i40e does not support GENEVE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3831,8 +3861,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3944,8 +3974,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -3977,8 +4007,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4048,8 +4078,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4081,8 +4111,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4164,6 +4194,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-IP6" notes="net/i40e does not support flow pattern item ETH with IPv6 EtherType">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4251,8 +4286,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-RSS-QUEUES-WITH-PATTERN" notes="net/i40e does not support RSS queues specification when pattern is specified">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: RSS Queues not supported when pattern specified</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4288,8 +4323,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-RSS-QUEUES-WITH-PATTERN" notes="net/i40e does not support RSS queues specification when pattern is specified">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: RSS Queues not supported when pattern specified</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4352,8 +4387,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-RSS-QUEUES-WITH-PATTERN" notes="net/i40e does not support RSS queues specification when pattern is specified">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: RSS Queues not supported when pattern specified</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4379,8 +4414,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-RSS-QUEUES-WITH-PATTERN" notes="net/i40e does not support RSS queues specification when pattern is specified">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: RSS Queues not supported when pattern specified</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4419,8 +4454,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4450,8 +4485,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4486,8 +4521,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4517,8 +4552,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4615,8 +4650,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4641,8 +4676,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4796,8 +4831,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4837,8 +4872,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4883,8 +4918,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4929,8 +4964,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -4967,6 +5002,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-IP4" notes="net/i40e does not support flow pattern item ETH with IPv4 EtherType">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5005,6 +5045,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-IP4" notes="net/i40e does not support flow pattern item ETH with IPv4 EtherType">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5039,6 +5084,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-OUTER-VID" notes="net/i40e does not support flow pattern item ETH with outer VID">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5080,6 +5130,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-ETH-OUTER-VID" notes="net/i40e does not support flow pattern item ETH with outer VID">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5124,8 +5179,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5175,8 +5230,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5216,8 +5271,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5242,8 +5297,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5283,8 +5338,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5309,8 +5364,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5407,8 +5462,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5443,8 +5498,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5478,6 +5533,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5509,6 +5569,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5538,6 +5603,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5571,6 +5641,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5602,6 +5677,11 @@
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
           </result>
         </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
+          </result>
+        </results>
       </iter>
       <iter result="PASSED">
         <arg name="count">FALSE</arg>
@@ -5631,6 +5711,11 @@
         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO PMD does not support RTE flow API yet">
           <result value="SKIPPED">
             <verdict>'rte_flow_validate' operation failed: Function not implemented</verdict>
+          </result>
+        </results>
+        <results tags="net_i40e" key="FLOW-PATTERN-IP-PROTO" notes="net/i40e does not support flow pattern item with IP proto">
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5670,8 +5755,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5706,8 +5791,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5809,8 +5894,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5845,8 +5930,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5886,8 +5971,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5922,8 +6007,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5958,8 +6043,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -5989,8 +6074,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6025,8 +6110,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6056,8 +6141,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6097,8 +6182,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6133,8 +6218,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6174,8 +6259,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6210,8 +6295,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6245,8 +6330,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6281,8 +6366,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6322,8 +6407,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6363,8 +6448,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6394,8 +6479,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6425,8 +6510,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6456,8 +6541,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6487,8 +6572,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6518,8 +6603,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6549,8 +6634,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6580,8 +6665,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6611,8 +6696,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6642,8 +6727,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6673,8 +6758,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6704,8 +6789,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6740,8 +6825,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6771,8 +6856,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6802,8 +6887,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6833,8 +6918,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6864,8 +6949,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6895,8 +6980,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6926,8 +7011,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6957,8 +7042,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -6988,8 +7073,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7019,8 +7104,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7050,8 +7135,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7081,8 +7166,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7112,8 +7197,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7143,8 +7228,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7179,8 +7264,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7220,8 +7305,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7261,8 +7346,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7292,8 +7377,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7323,8 +7408,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7354,8 +7439,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7385,8 +7470,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7416,8 +7501,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7447,8 +7532,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7478,8 +7563,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7509,8 +7594,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7540,8 +7625,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7576,8 +7661,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7607,8 +7692,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7638,8 +7723,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7669,8 +7754,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7700,8 +7785,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7731,8 +7816,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7762,8 +7847,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7793,8 +7878,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7824,8 +7909,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7855,8 +7940,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7886,8 +7971,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7917,8 +8002,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -7948,8 +8033,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -8972,8 +9057,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9008,8 +9093,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9091,8 +9176,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-2TAGS" notes="net/i40e does not support flow pattern with 2 VLAN tags">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9122,8 +9207,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9153,8 +9238,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9184,8 +9269,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-DMAC-MASK" notes="net/i40e does not support flow pattern item ETH with destination MAC mask">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid MAC_addr mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9215,8 +9300,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9272,8 +9357,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9329,8 +9414,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9360,8 +9445,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9391,8 +9476,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9422,8 +9507,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9453,8 +9538,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9484,8 +9569,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9515,8 +9600,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9546,8 +9631,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9577,8 +9662,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9608,8 +9693,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9639,8 +9724,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -9670,8 +9755,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11408,8 +11493,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11439,8 +11524,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11470,8 +11555,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11586,8 +11671,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11688,8 +11773,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11790,8 +11875,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -11902,8 +11987,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12014,8 +12099,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12116,8 +12201,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-NO-DMAC" notes="net/i40e requires tunnel filters to have destination MAC matching in both outer and inner headers">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ether spec/mask</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12218,8 +12303,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-NO-DMAC" notes="net/i40e requires tunnel filters to have destination MAC matching in both outer and inner headers">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ether spec/mask</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12330,8 +12415,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12636,8 +12721,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12748,8 +12833,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12860,8 +12945,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -12962,8 +13047,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13074,8 +13159,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13176,8 +13261,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-NO-DMAC" notes="net/i40e requires tunnel filters to have destination MAC matching in both outer and inner headers">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ether spec/mask</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13278,8 +13363,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-NO-DMAC" notes="net/i40e requires tunnel filters to have destination MAC matching in both outer and inner headers">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ether spec/mask</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13390,8 +13475,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13502,8 +13587,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13798,8 +13883,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13839,8 +13924,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-TUNNEL-PF-VF-ONLY" notes="net/i40e requires tunnel filters PF or VF action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13870,8 +13955,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -13937,8 +14022,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14004,8 +14089,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14044,8 +14129,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1340" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>Known but unexpected packets recevied</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14085,8 +14170,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="ref://dpdk-bz/1340" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>Known but unexpected packets recevied</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14116,8 +14201,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14142,8 +14227,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14172,8 +14257,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14204,8 +14289,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14231,8 +14316,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14258,8 +14343,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14283,13 +14368,13 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14320,8 +14405,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14352,8 +14437,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14379,8 +14464,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14406,8 +14491,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14433,8 +14518,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14458,8 +14543,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14485,8 +14570,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14512,8 +14597,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14537,8 +14622,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14562,8 +14647,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14589,8 +14674,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14616,8 +14701,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14641,8 +14726,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14671,8 +14756,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14703,8 +14788,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14735,8 +14820,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-FLAG-MARK-QUEUE" notes="net/i40e does not support action QUEUE after FLAG/MARK">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14765,8 +14850,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-NO-ETH" notes="net/i40e does not support flow pattern without item ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14796,8 +14881,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14823,8 +14908,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14850,8 +14935,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-PPPOE" notes="net/i40e does not support flow pattern item PPPOE">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14877,8 +14962,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14904,8 +14989,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14931,8 +15016,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-DMAC" notes="net/i40e does not support flow pattern with destination MAC in L2 case">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14958,8 +15043,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-COUNT" notes="net/i40e does not support actioun COUNT">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -14985,8 +15070,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: L2 and L3 input set are exclusive.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15012,8 +15097,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15039,8 +15124,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15066,8 +15151,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15114,8 +15199,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15158,8 +15243,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15189,8 +15274,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-VXLAN-NO-INNER-ETH" notes="net/i40e does not support flow pattern wth VXLAN without inner ETH">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Unsupported pattern</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15229,8 +15314,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15260,8 +15345,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15291,8 +15376,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15322,8 +15407,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-DMAC-ETHERTYPE" notes="net/i40e does not support filtering on destination MAC and EtherType together in FDIR mode">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15358,8 +15443,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Not supported action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15389,8 +15474,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15420,8 +15505,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-VLAN-PUSH" notes="net/i40e does not support VLAN push action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15451,8 +15536,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-DMAC-ETHERTYPE" notes="net/i40e does not support filtering on destination MAC and EtherType together in FDIR mode">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid input set</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15525,8 +15610,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-ETH-NO-ETHERTYPE" notes="net/i40e does not support flow pattern item ETH without EtherType">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid type mask.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15560,8 +15645,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15595,8 +15680,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-PATTERN-L2-L3" notes="net/i40e does not support flow pattern with L2 and L3 together">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15625,8 +15710,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-REPRESENTED-PORT" notes="net/i40e does not support represented port action, but diagnostics is strange">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid ETH item</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>
@@ -15657,8 +15742,8 @@
           </result>
         </results>
         <results tags="net_i40e" key="FLOW-DEC-TTL" notes="net/i40e does not support TTL decrement action">
-          <result value="FAILED">
-            <verdict>'rte_flow_validate' operation failed: Invalid action.</verdict>
+          <result value="SKIPPED">
+            <verdict>'rte_flow_validate' operation failed: No flow engine could handle the requested flow</verdict>
           </result>
         </results>
       </iter>

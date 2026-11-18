@@ -7770,9 +7770,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7796,9 +7801,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7822,9 +7832,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7848,9 +7863,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7874,9 +7894,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7895,9 +7920,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table query failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -7921,9 +7951,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -7947,9 +7982,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -7973,9 +8013,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -7999,9 +8044,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8025,9 +8075,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8046,9 +8101,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8067,9 +8127,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8093,9 +8158,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8119,9 +8189,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8145,9 +8220,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8171,9 +8251,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8192,9 +8277,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8213,9 +8303,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8239,9 +8334,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8265,9 +8365,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8291,9 +8396,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does initialize RSS RETA on configure">
@@ -8317,9 +8427,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -8338,9 +8453,14 @@
             <verdict>RSS redirection table query not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -10056,10 +10176,13 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED"/>
         </results>
         <results tags="pci-1924&amp;(rx-datapath-ef10|rx-datapath-efx|rx-datapath-ef10_essb)&amp;dpdk&lt;20110000">
           <result value="PASSED">
@@ -10115,10 +10238,13 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED"/>
         </results>
         <results tags="pci-1924&amp;(rx-datapath-ef10|rx-datapath-efx|rx-datapath-ef10_essb)&amp;dpdk&lt;20110000">
           <result value="PASSED">
@@ -10179,10 +10305,13 @@
             <verdict>RSS offload flag is set when offload is disabled</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED"/>
         </results>
         <results tags="pci-1924&amp;(rx-datapath-ef10|rx-datapath-efx|rx-datapath-ef10_essb)&amp;dpdk&lt;20110000">
           <result value="PASSED">
@@ -10262,9 +10391,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10283,9 +10417,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10304,9 +10443,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10325,9 +10469,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10346,9 +10495,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10367,9 +10521,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10409,9 +10568,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10430,9 +10594,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10451,9 +10620,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10472,9 +10646,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10493,9 +10672,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -10514,9 +10698,14 @@
             <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="SKIPPED">
+            <verdict>RSS hash config get not supported</verdict>
           </result>
         </results>
       </iter>
@@ -11642,10 +11831,15 @@
         <arg name="nb_rx_queues">1</arg>
         <arg name="tmpl"/>
         <notes/>
-         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+         <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
           </result>
+         </results>
+         <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+           <result value="FAILED">
+             <verdict>Query RSS RETA operation failed</verdict>
+           </result>
          </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
          <result value="FAILED">
@@ -11663,9 +11857,14 @@
             <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -11679,9 +11878,14 @@
             <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -11695,9 +11899,14 @@
             <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12255,9 +12464,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -12292,9 +12506,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12324,9 +12543,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12351,9 +12575,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12383,9 +12612,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12410,9 +12644,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12442,9 +12681,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12469,9 +12713,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12501,9 +12750,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12528,9 +12782,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12560,9 +12819,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12587,9 +12851,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12609,9 +12878,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12641,9 +12915,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12673,9 +12952,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12700,9 +12984,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12732,9 +13021,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12759,9 +13053,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12791,9 +13090,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12818,9 +13122,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12850,9 +13159,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12877,9 +13191,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12909,9 +13228,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12936,9 +13260,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12958,9 +13287,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -12990,9 +13324,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13022,9 +13361,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13049,9 +13393,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13081,9 +13430,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13108,9 +13462,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13140,9 +13499,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13167,9 +13531,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13199,9 +13568,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13226,9 +13600,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13258,9 +13637,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13285,9 +13669,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13307,9 +13696,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13339,9 +13733,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13371,9 +13770,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13398,9 +13802,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13430,9 +13839,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13457,9 +13871,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13489,9 +13908,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13516,9 +13940,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13548,9 +13977,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13575,9 +14009,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13607,9 +14046,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13634,9 +14078,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13661,9 +14110,14 @@
             <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13698,9 +14152,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13735,9 +14194,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13767,9 +14231,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13804,9 +14273,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13836,9 +14310,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13873,9 +14352,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13905,9 +14389,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13942,9 +14431,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -13974,9 +14468,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -14011,9 +14510,14 @@
             <verdict>Packet RSS hash is not zero as expected</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -14043,9 +14547,14 @@
             <verdict>RSS hash configuration get operation is not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
       </iter>
@@ -14063,9 +14572,14 @@
             <verdict>RSS redirection table update not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>RSS redirection table update failed: EINVAL</verdict>
           </result>
         </results>
         <results tags="vdev-af_xdp" key="WONTFIX AF_XDP-RSS" notes="The PMD does not support RSS">
@@ -14089,9 +14603,14 @@
             <verdict>RSS redirection table update not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
@@ -14115,9 +14634,14 @@
             <verdict>RSS redirection table update not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
@@ -14141,9 +14665,14 @@
             <verdict>RSS redirection table update not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
@@ -14172,9 +14701,14 @@
             <verdict>So many Rx queues are not supported</verdict>
           </result>
         </results>
-        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS">
+        <results tags="dpdk&lt;26110002&amp;(pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041)" notes="VirtIO does not support RSS">
           <result value="FAILED">
             <verdict>rte_eth_dev_configure() failed: RPC-EOPNOTSUPP</verdict>
+          </result>
+        </results>
+        <results tags="pci-1af4-1000|pci-1af4-1041|pci-1bf4-1000|pci-1bf4-1041" notes="VirtIO does not support RSS; ethdev rejects or ignores RSS request on configure since DPDK 26.11-rc2">
+          <result value="FAILED">
+            <verdict>rte_eth_dev_configure() failed: RPC-EINVAL</verdict>
           </result>
         </results>
         <results tags="net_i40e&amp;dpdk&lt;26110001" key="ref://dpdk-bz/1127" notes="i40e does retain RSS RETA on restart">
